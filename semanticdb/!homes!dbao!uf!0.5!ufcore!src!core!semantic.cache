@@ -1,0 +1,30 @@
+;; Object core/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "core/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CXXFLAGS" variable (:default-value ("-fno-strict-aliasing")) nil [1 36])
+            ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/ufcore/inc" "-I/home/y/include" "-DOSMAJOR=$(shell yinst platform OSMAJOR)" "-DPIPE_NOT_EFD")) nil [36 163])
+            ("AM_LDFLAGS" variable (:default-value ("-ldl" "-lssl" "-lcrypto")) nil [164 198])
+            ("source_files" variable (:default-value ("UFSwapContext.S" "ConfRefresherUF.C" "UF.C" "UFConf.C" "UFConnectionPoolImpl.C" "UFIOImpl.H" "UFIO.C" "UFDiskIOImpl.H" "UFDiskIO.C" "condUFIO.C" "UFSIO.C" "UFPC.C" "UFServerImpl.H" "UFServer.C" "UFStats.C" "UFAres.C" "UFStatSystem.C" "SSLMultiCert.C" "UFSSL.C" "UFThreadManager.C" "UFJobRunner.C" "UFConfImpl.C" "UFConfContainer.C" "UFConfManager.C" "UFConfManagerImpl.H" "UFConfManagerImpl.C" "UFProfiler.C" "MemoryTrack.C")) nil [199 693])
+            ("lib_LTLIBRARIES" variable (:default-value ("libufcore.la")) nil [694 772])
+            ("libufcore_la_SOURCES" variable (:default-value ("$(source_files)")) nil [772 811])
+            ("libufcore_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [811 852])
+            ("libufmemstat_la_SOURCES" variable (:default-value ("MemoryTrackStat.C")) nil [852 896])
+            ("libufmemfull_la_SOURCES" variable (:default-value ("MemoryTrackFull.C")) nil [896 940])
+            ("libufcore_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [940 1012])
+            ("libufcore_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [1012 1088])
+            ("libufcore_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [1088 1134]))          
+    :file "Makefile.am"
+    :pointmax 1134
+    :fsize 1133
+    :lastmodtime '(20622 62380)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!ufcore!src!core!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

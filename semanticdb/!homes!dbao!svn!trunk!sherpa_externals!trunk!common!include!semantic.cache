@@ -1,0 +1,876 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables (list 
+   (semanticdb-table "data.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("DHT_DATA_H" variable (:constant-flag t) nil [150 160])
+            ("iostream" include (:system-flag t) nil [162 181])
+            ("map" include (:system-flag t) nil [182 196])
+            ("vector" include (:system-flag t) nil [197 214])
+            ("iterator" include (:system-flag t) nil [215 234])
+            ("stdexcept" include (:system-flag t) nil [235 255])
+            ("sstream" include (:system-flag t) nil [256 274])
+            ("json_object" type
+               (:prototype t
+                :type "struct")
+                nil [425 444])
+            ("string" include (:system-flag t) nil [445 462])
+            ("sys/types.h" include (:system-flag t) nil [463 485])
+            ("DHT" type
+               (:members 
+                  ( ("Structure" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2350 2366])
+                    ("Null" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2369 2380])
+                    ("DataTypes" type
+                       (:members 
+                          ( ("None" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2800 2805])
+                            ("StringType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2810 2821])
+                            ("Int32Type" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2826 2836])
+                            ("DoubleType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2841 2852])
+                            ("ObjectType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2857 2868])
+                            ("ArrayType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2873 2883])
+                            ("DateTimeType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2888 2901])
+                            ("BooleanType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2906 2918])
+                            ("NullType" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2923 2935]))                          
+                        :type "enum")
+                        (reparse-symbol namespacesubparts) [2779 2936])
+                    ("DataException" type
+                       (:typedef ("std::logic_error" type (:type "class") nil nil)
+                        :superclasses "std::logic_error"
+                        :type "typedef")
+                        (reparse-symbol namespacesubparts) [2940 2979])
+                    ("Data" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3400 3407])
+                            ("ArrayVector" type
+                               (:typedef ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Data" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "std::vector"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3412 3450])
+                            ("ObjectMap" type
+                               (:typedef ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("Data" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil)
+                                :superclasses "std::map"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [3455 3501])
+                            ("ReturnCode" type
+                               (:members 
+                                  ( ("OK" variable
+                                       (:constant-flag t
+                                        :default-value (3565 3566)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [3557 3566])
+                                    ("ERROR" variable
+                                       (:constant-flag t
+                                        :default-value (3582 3584)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [3574 3584]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [3533 3591])
+                            ("null" variable
+                               (:typemodifiers ("static")
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3630 3647])
+                            ("Data" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3687 3694])
+                            ("Data" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("dt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Data" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3786 3801]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3781 3802])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("dt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Data" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3908 3923]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3891 3924])
+                            ("Data" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4034 4057]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4029 4058])
+                            ("Data" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [4212 4228]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4207 4229])
+                            ("Data" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("num" variable
+                                       (:constant-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4346 4364]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4341 4365])
+                            ("Data" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("num" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [4476 4493]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4471 4494])
+                            ("Data" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:constant-flag t
+                                        :type ("time_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4617 4635]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4612 4636])
+                            ("Data" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("b" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [4744 4757]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4739 4758])
+                            ("Data" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("n" variable
+                                       (:constant-flag t
+                                        :type ("Null" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [4860 4873]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [4855 4874])
+                            ("int32_t" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :type "int")
+                                (reparse-symbol classsubparts) [4889 4927])
+                            ("time_t" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :type "int")
+                                (reparse-symbol classsubparts) [4992 5029])
+                            ("Null" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :type "int")
+                                (reparse-symbol classsubparts) [5092 5127])
+                            ("getType" function
+                               (:prototype-flag t
+                                :type ("DataTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5530 5556])
+                            ("remove" function
+                               (:prototype-flag t
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [5733 5748])
+                            ("remove" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6043 6066]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [6031 6067])
+                            ("isSet" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [6308 6327])
+                            ("clear" function
+                               (:prototype-flag t
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [6383 6397])
+                            ("isNull" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [6500 6520])
+                            ("fromJson" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6714 6737]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [6701 6760])
+                            ("toJson" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [6963 6980]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [6952 7009])
+                            ("[]" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :operator-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7106 7129]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7088 7152])
+                            ("find" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [7873 7896]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [7856 7903])
+                            ("find" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :arguments 
+                                  ( ("key1" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8474 8498])
+                                    ("key2" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8520 8544])
+                                    ("key3" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8566 8591])
+                                    ("key4" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [8617 8642]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [8457 8653])
+                            ("find" function
+                               (:prototype-flag t
+                                :pointer 1
+                                :constant-flag t
+                                :arguments 
+                                  ( ("keys" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9219 9256]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9202 9263])
+                            ("[]" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :operator-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [9354 9370]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9336 9393])
+                            ("[]" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :operator-flag t
+                                :arguments 
+                                  ( ("num" variable
+                                       (:constant-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9484 9502]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9466 9525])
+                            ("<<" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :operator-flag t
+                                :typemodifiers ("friend")
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9637 9655])
+                                    ("_data" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Data" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [9656 9674]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [9604 9697])
+                            ("Data" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [9702 9710])
+                            ("parseJsonObject" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :arguments 
+                                  ( ("json_obj" variable
+                                       (:pointer 1
+                                        :type ("json_object" type
+                                             (:prototype t
+                                              :type "struct")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [9955 9984]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [9935 10007])
+                            ("private" label nil (reparse-symbol classsubparts) [10011 10019])
+                            ("structure" variable
+                               (:pointer 1
+                                :type ("Structure" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [10024 10045])
+                            ("parseJsonString" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10266 10289]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [10246 10312])
+                            ("parseJsonObject" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :arguments 
+                                  ( ("dt" variable
+                                       (:reference 1
+                                        :type ("Data" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [10767 10776])
+                                    ("json_obj" variable
+                                       (:pointer 1
+                                        :type ("json_object" type
+                                             (:prototype t
+                                              :type "struct")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [10777 10806])
+                                    ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [10807 10817]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [10747 10840])
+                            ("parseDataObject" function
+                               (:prototype-flag t
+                                :throws ("DataException")
+                                :pointer 1
+                                :arguments 
+                                  ( ("dt" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Data" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [11167 11182])
+                                    ("depth" variable (:type "int") (reparse-symbol arg-sub-list) [11183 11193]))                                  
+                                :type ("json_object" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [11131 11222])
+                            ("isEmpty" function
+                               (:prototype-flag t
+                                :type "bool")
+                                (reparse-symbol classsubparts) [11396 11417]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3385 11423]))                  
+                :type "namespace")
+                nil [2331 11427]))          
+    :file "data.h"
+    :pointmax 11436
+    :fsize 11435
+    :lastmodtime '(20476 37422)
+    :unmatched-syntax '((string 8643 . 8645) (punctuation 8641 . 8642) (string 8592 . 8594) (punctuation 8590 . 8591) (punctuation 5477 . 5478) (semantic-list 5462 . 5477) (THROW 5456 . 5461) (semantic-list 5453 . 5455) (punctuation 5451 . 5452) (symbol 5441 . 5450) (OPERATOR 5432 . 5440) (punctuation 5426 . 5427) (semantic-list 5411 . 5426) (THROW 5405 . 5410) (semantic-list 5402 . 5404) (punctuation 5400 . 5401) (symbol 5388 . 5399) (OPERATOR 5379 . 5387) (punctuation 5373 . 5374) (semantic-list 5358 . 5373) (THROW 5352 . 5357) (CONST 5346 . 5351) (semantic-list 5343 . 5345) (punctuation 5341 . 5342) (symbol 5331 . 5340) (CONST 5325 . 5330) (OPERATOR 5316 . 5324) (punctuation 5310 . 5311) (semantic-list 5295 . 5310) (THROW 5289 . 5294) (CONST 5283 . 5288) (semantic-list 5280 . 5282) (punctuation 5278 . 5279) (symbol 5266 . 5277) (CONST 5260 . 5265) (OPERATOR 5251 . 5259) (punctuation 5245 . 5246) (semantic-list 5230 . 5245) (THROW 5224 . 5229) (CONST 5218 . 5223) (semantic-list 5215 . 5217) (punctuation 5214 . 5215) (symbol 5208 . 5214) (punctuation 5207 . 5208) (punctuation 5206 . 5207) (symbol 5203 . 5206) (CONST 5197 . 5202) (OPERATOR 5188 . 5196) (punctuation 5182 . 5183) (semantic-list 5167 . 5182) (THROW 5161 . 5166) (CONST 5155 . 5160) (semantic-list 5152 . 5154) (punctuation 5151 . 5152) (CHAR 5147 . 5151) (CONST 5141 . 5146) (OPERATOR 5132 . 5140) (OPERATOR 5083 . 5091) (punctuation 5077 . 5078) (semantic-list 5062 . 5077) (THROW 5056 . 5061) (CONST 5050 . 5055) (semantic-list 5047 . 5049) (BOOL 5043 . 5047) (OPERATOR 5034 . 5042) (OPERATOR 4983 . 4991) (punctuation 4977 . 4978) (semantic-list 4962 . 4977) (THROW 4956 . 4961) (CONST 4950 . 4955) (semantic-list 4947 . 4949) (DOUBLE 4941 . 4947) (OPERATOR 4932 . 4940) (OPERATOR 4880 . 4888))
+    :lexical-table 
+        '(("DHT_DATA_H")
+          )
+
+    )
+   (semanticdb-table "structure.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("DHT_STRUCTURE_H" variable (:constant-flag t) nil [33 48])
+            ("iostream" include (:system-flag t) nil [50 69])
+            ("map" include (:system-flag t) nil [70 84])
+            ("vector" include (:system-flag t) nil [85 102])
+            ("string" include (:system-flag t) nil [103 120])
+            ("iterator" include (:system-flag t) nil [121 140])
+            ("data.h" include nil nil [141 158])
+            ("DHT" type
+               (:members 
+                  ( ("Structure" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [219 226])
+                            ("<<" function
+                               (:operator-flag t
+                                :typemodifiers ("friend")
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [263 281])
+                                    ("structure" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Structure" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [318 345]))                                  
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [231 402])
+                            ("<" function
+                               (:operator-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("structure" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("Structure" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [430 457]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [407 552])
+                            ("printOn" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [578 596]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [557 621])
+                            ("getType" function
+                               (:typemodifiers ("virtual")
+                                :type ("DataTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [626 676])
+                            ("clone" function
+                               (:pure-virtual-flag t
+                                :prototype-flag t
+                                :pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Structure" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [681 720])
+                            ("Structure" function
+                               (:destructor-flag t
+                                :typemodifiers ("virtual")
+                                :type "void")
+                                (reparse-symbol classsubparts) [725 749]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [199 754])
+                    ("Null" type
+                       (:superclasses 
+                          ( ("Structure" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [803 810])
+                            ("getType" function
+                               (:typemodifiers ("virtual")
+                                :type ("DataTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [815 869])
+                            ("clone" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Structure" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [874 949])
+                            ("get" function
+                               (:constant-flag t
+                                :type ("Null" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [954 994]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [770 999])
+                    ("String" type
+                       (:superclasses 
+                          ( ("Structure" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1050 1057])
+                            ("String" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1069 1092]))                                  
+                                :type ("String" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1062 1109])
+                            ("String" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("str" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [1121 1137]))                                  
+                                :type ("String" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1114 1154])
+                            ("printOn" function
+                               (:arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1172 1190]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1159 1214])
+                            ("<" function
+                               (:operator-flag t
+                                :typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("str" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("String" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1242 1260]))                                  
+                                :type "bool")
+                                (reparse-symbol classsubparts) [1219 1307])
+                            ("getType" function
+                               (:typemodifiers ("virtual")
+                                :type ("DataTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1312 1368])
+                            ("clone" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Structure" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1373 1450])
+                            ("get" function
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1455 1503])
+                            ("private" label nil (reparse-symbol classsubparts) [1506 1514])
+                            ("_data" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1519 1537]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1015 1542])
+                    ("Int32" type
+                       (:superclasses 
+                          ( ("Structure" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1582 1590])
+                            ("Int32" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("num" variable
+                                       (:constant-flag t
+                                        :type ("int32_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1603 1621]))                                  
+                                :type ("Int32" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1597 1637])
+                            ("printOn" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1665 1683]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1644 1707])
+                            ("clone" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Structure" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1714 1792])
+                            ("getType" function
+                               (:typemodifiers ("virtual")
+                                :type ("DataTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1799 1854])
+                            ("get" function (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1861 1898])
+                            ("private" label nil (reparse-symbol classsubparts) [1903 1911])
+                            ("_data" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1918 1932]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1546 1937])
+                    ("Double" type
+                       (:superclasses 
+                          ( ("Structure" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1978 1986])
+                            ("Double" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("num" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2001 2018]))                                  
+                                :type ("Double" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1994 2034])
+                            ("printOn" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2062 2080]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2041 2104])
+                            ("clone" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Structure" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2111 2190])
+                            ("getType" function
+                               (:typemodifiers ("virtual")
+                                :type ("DataTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2197 2253])
+                            ("get" function (:type "double") (reparse-symbol classsubparts) [2260 2296])
+                            ("private" label nil (reparse-symbol classsubparts) [2302 2310])
+                            ("_data" variable (:type "double") (reparse-symbol classsubparts) [2317 2330]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [1941 2335])
+                    ("DateTime" type
+                       (:superclasses 
+                          ( ("Structure" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2393 2400])
+                            ("DateTime" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("time" variable
+                                       (:constant-flag t
+                                        :type ("time_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2416 2434]))                                  
+                                :type ("DateTime" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2407 2452])
+                            ("printOn" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2480 2498]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2459 2522])
+                            ("clone" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Structure" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2529 2610])
+                            ("getType" function
+                               (:typemodifiers ("virtual")
+                                :type ("DataTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2617 2675])
+                            ("get" function (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2682 2718])
+                            ("private" label nil (reparse-symbol classsubparts) [2723 2731])
+                            ("_data" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2738 2751]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2354 2756])
+                    ("Boolean" type
+                       (:superclasses 
+                          ( ("Structure" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [2798 2806])
+                            ("Boolean" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("b" variable
+                                       (:constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [2822 2837]))                                  
+                                :type ("Boolean" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2814 2851])
+                            ("printOn" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2879 2897]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2858 2921])
+                            ("clone" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Structure" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2928 3008])
+                            ("getType" function
+                               (:typemodifiers ("virtual")
+                                :type ("DataTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3015 3072])
+                            ("get" function (:type "bool") (reparse-symbol classsubparts) [3079 3113])
+                            ("private" label nil (reparse-symbol classsubparts) [3119 3127])
+                            ("_data" variable (:type "double") (reparse-symbol classsubparts) [3134 3147]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [2760 3152])
+                    ("Object" type
+                       (:superclasses 
+                          ( ("Structure" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3205 3212])
+                            ("printOn" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3240 3258]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3219 3285])
+                            ("getType" function
+                               (:typemodifiers ("virtual")
+                                :type ("DataTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3293 3349])
+                            ("clone" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Structure" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3356 3435])
+                            ("get" function (:type ("Data::ObjectMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3443 3498])
+                            ("private" label nil (reparse-symbol classsubparts) [3503 3511])
+                            ("_data" variable (:type ("Data::ObjectMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3518 3540]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3168 3545])
+                    ("Array" type
+                       (:superclasses 
+                          ( ("Structure" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [3596 3603])
+                            ("printOn" function
+                               (:typemodifiers ("virtual")
+                                :arguments 
+                                  ( ("out" variable
+                                       (:reference 1
+                                        :type ("std::ostream" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3631 3649]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [3610 3675])
+                            ("getType" function
+                               (:typemodifiers ("virtual")
+                                :type ("DataTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3683 3738])
+                            ("clone" function
+                               (:pointer 1
+                                :typemodifiers ("virtual")
+                                :type ("Structure" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3745 3823])
+                            ("get" function
+                               (:arguments 
+                                  ( ("key" variable
+                                       (:constant-flag t
+                                        :type ("size_t" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3841 3858]))                                  
+                                :type ("Data" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [3831 4001])
+                            ("get" function (:type ("Data::ArrayVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4009 4078])
+                            ("get" function (:type ("Data::ArrayVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4086 4143])
+                            ("private" label nil (reparse-symbol classsubparts) [4149 4157])
+                            ("_data" variable (:type ("Data::ArrayVector" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4164 4188]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [3560 4193]))                  
+                :type "namespace")
+                nil [160 4195]))          
+    :file "structure.h"
+    :pointmax 4204
+    :fsize 4203
+    :lastmodtime '(20476 37422)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DHT_STRUCTURE_H")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svn!trunk!sherpa_externals!trunk!common!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

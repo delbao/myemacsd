@@ -1,0 +1,368 @@
+;; Object ydht/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ydht/"
+  :tables (list 
+   (semanticdb-table "Ydht_tc_cmd.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("com.yahoo.dtf.actions.ydht" package nil nil [1 36])
+            ("com.yahoo.dtf.actions.Action" include nil nil [38 74])
+            ("com.yahoo.dtf.exception.DTFException" include nil nil [75 119])
+            ("com.yahoo.dtf.exception.ParseException" include nil nil [120 166])
+            ("com.yahoo.dtf.exception.YDHTException" include nil nil [167 212])
+            ("com.yahoo.dtf.json.JSONException" include nil nil [213 253])
+            ("com.yahoo.dtf.json.JSONObject" include nil nil [254 291])
+            ("com.yahoo.dtf.recorder.Event" include nil nil [292 328])
+            ("com.yahoo.dtf.util.Dht_tc_cmd" include nil nil [329 366])
+            ("Ydht_tc_cmd" type
+               (:typemodifiers ("public")
+                :superclasses "Action"
+                :members 
+                  ( ("tc" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2471 2496])
+                    ("cmd" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2737 2763])
+                    ("table" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2889 2917])
+                    ("tablet" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3041 3070])
+                    ("regions" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3200 3230])
+                    ("master_region" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3393 3429])
+                    ("owner" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3546 3574])
+                    ("appid" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3687 3715])
+                    ("identity" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3901 3932])
+                    ("permission" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [4051 4084])
+                    ("hashbits" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [4202 4233])
+                    ("onFailure" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [4745 4777])
+                    ("storage_engine" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [4905 4942])
+                    ("remote_router_list" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [5101 5142])
+                    ("expected_retcode" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [5323 5362])
+                    ("isMultiRegion" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [5477 5513])
+                    ("whichSU" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [5641 5671])
+                    ("bad_region" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [5792 5825])
+                    ("good_region" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [5948 5982])
+                    ("tablet_name" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [6104 6138])
+                    ("table_type" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [6270 6303])
+                    ("time_stamp" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [6421 6454])
+                    ("execute" function
+                       (:throws ("DTFException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6465 9831])
+                    ("getTc" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [9837 9926])
+                    ("setTc" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("tc" variable (:type "String") (reparse-symbol formal_parameters) [9950 9959]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9932 9990])
+                    ("getCmd" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [9996 10087])
+                    ("setCmd" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("cmd" variable (:type "String") (reparse-symbol formal_parameters) [10112 10122]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10093 10155])
+                    ("getTable" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [10161 10256])
+                    ("setTable" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("table" variable (:type "String") (reparse-symbol formal_parameters) [10283 10295]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10262 10332])
+                    ("getTablet" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [10338 10435])
+                    ("setTablet" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("tablet" variable (:type "String") (reparse-symbol formal_parameters) [10463 10476]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10441 10515])
+                    ("getRegions" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [10521 10620])
+                    ("setRegions" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("regions" variable (:type "String") (reparse-symbol formal_parameters) [10649 10663]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10626 10704])
+                    ("getMaster_region" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [10710 10821])
+                    ("setMaster_region" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("master_region" variable (:type "String") (reparse-symbol formal_parameters) [10856 10876]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10827 10929])
+                    ("getOwner" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [10935 11030])
+                    ("setOwner" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("owner" variable (:type "String") (reparse-symbol formal_parameters) [11057 11069]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11036 11106])
+                    ("getAppid" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [11112 11207])
+                    ("setAppid" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("appid" variable (:type "String") (reparse-symbol formal_parameters) [11234 11246]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11213 11283])
+                    ("getIdentity" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [11293 11395])
+                    ("setIdentity" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("identity" variable (:type "String") (reparse-symbol formal_parameters) [11429 11444]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11405 11488])
+                    ("getPermission" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [11498 11603])
+                    ("setPermission" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("permission" variable (:type "String") (reparse-symbol formal_parameters) [11639 11656]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11613 11704])
+                    ("getHashbits" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [11710 11811])
+                    ("setHashbits" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("hashbits" variable (:type "String") (reparse-symbol formal_parameters) [11841 11856]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11817 11899])
+                    ("getOnFailure" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [11905 12008])
+                    ("setOnFailure" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("onFailure" variable (:type "String") (reparse-symbol formal_parameters) [12039 12055]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12014 12100])
+                    ("getStorage_engine" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12106 12219])
+                    ("setStorage_engine" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("storage_engine" variable (:type "String") (reparse-symbol formal_parameters) [12255 12276]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12225 12331])
+                    ("getRemote_router_list" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12334 12446])
+                    ("setRemote_router_list" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("remote_router_list" variable (:type "String") (reparse-symbol formal_parameters) [12483 12508]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12449 12562])
+                    ("getExpected_retcode" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12565 12673])
+                    ("setExpected_retcode" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("expected_retcode" variable (:type "String") (reparse-symbol formal_parameters) [12708 12731]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12676 12781])
+                    ("getIsMultiRegion" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [12786 12897])
+                    ("setIsMultiRegion" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("isMultiRegion" variable (:type "String") (reparse-symbol formal_parameters) [12932 12952]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [12903 13005])
+                    ("getWhichSU" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [13015 13114])
+                    ("setWhichSU" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("whichSU" variable (:type "String") (reparse-symbol formal_parameters) [13143 13157]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13120 13198])
+                    ("getGood_region" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [13208 13315])
+                    ("setGood_region" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("good_region" variable (:type "String") (reparse-symbol formal_parameters) [13348 13366]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13321 13415])
+                    ("getBad_region" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [13425 13530])
+                    ("setBad_region" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("bad_region" variable (:type "String") (reparse-symbol formal_parameters) [13562 13579]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13536 13626])
+                    ("getTime_stamp" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [13636 13741])
+                    ("setTime_stamp" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("time_stamp" variable (:type "String") (reparse-symbol formal_parameters) [13773 13790]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13747 13837])
+                    ("getTablet_name" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [13847 13954])
+                    ("setTablet_name" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("tablet_name" variable (:type "String") (reparse-symbol formal_parameters) [13987 14005]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13960 14054])
+                    ("getTable_type" function
+                       (:throws ("ParseException")
+                        :typemodifiers ("public")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [14059 14164])
+                    ("setTable_type" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("table_type" variable (:type "String") (reparse-symbol formal_parameters) [14196 14213]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [14170 14260]))                  
+                :type "class")
+                nil [2311 14262]))          
+    :file "Ydht_tc_cmd.java"
+    :pointmax 14263
+    :fsize 14262
+    :lastmodtime '(20449 26594)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svn!trunk!dht!test!ydht-dtf!src!java!com!yahoo!dtf!actions!ydht!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

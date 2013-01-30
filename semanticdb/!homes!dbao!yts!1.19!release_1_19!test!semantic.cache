@@ -1,0 +1,1393 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("1.2" "foreign" "no-installman" "no-installinfo")) nil [1 61])
+            ("INCLUDES" variable (:default-value ("@TBD_1_INCDIR@")) nil [62 88])
+            ("INCLUDES" variable (:default-value ("@TBD_2_INCDIR@")) nil [88 115])
+            ("INCLUDES" variable (:default-value ("@TBD_3_INCDIR@")) nil [115 142])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/common/include")) nil [142 185])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/libinktomi++")) nil [185 226])
+            ("INCLUDES" variable (:default-value ("-I$(top_builddir)/f_pkg/misc/perl5.6.1/include")) nil [227 286])
+            ("LIBS" variable (:default-value ("@TBD_1_LDADD@" "@TBD_2_LDADD@" "@TBD_3_LDADD@")) nil [287 337])
+            ("noinst_PROGRAMS" variable (:default-value ("proc_manager")) nil [338 396])
+            ("proc_manager_SOURCES" variable (:default-value ("proc_manager.cc" "log_sender.cc" "raf_cmd.cc" "sio_buffer.cc" "sio_loop.cc" "sio_raf_server.cc" "test_utils.cc")) nil [397 585])
+            ("proc_manager_LDFLAGS" variable (:default-value ("@EXTRA_CXX_LDFLAGS@")) nil [586 629])
+            ("proc_manager_LDADD" variable (:default-value ("$(top_builddir)/libinktomi++/libinktomi++.a" "@LIBSOCKET@" "@LIBNSL@" "@LIBRESOLV@" "@LIBRT@" "@LIBTHREAD4INK@" "-lm" "@LIBDL@")) nil [629 781])
+            ("test_log_collate_SOURCES" variable (:default-value ("test_log_collate.cc" "log_sender.cc" "raf_cmd.cc" "sio_buffer.cc" "sio_loop.cc" "sio_raf_server.cc" "test_utils.cc")) nil [783 977])
+            ("test_log_collate_LDFLAGS" variable (:default-value ("@EXTRA_CXX_LDFLAGS@")) nil [978 1025])
+            ("test_log_collate_LDADD" variable (:default-value ("$(top_builddir)/libinktomi++/libinktomi++.a" "@LIBSOCKET@" "@LIBNSL@" "@LIBRESOLV@" "@LIBRT@" "@LIBTHREAD4INK@" "-lm" "@LIBDL@")) nil [1025 1185])
+            ("test_exec_SOURCES" variable (:default-value ("test_exec.cc" "raf_cmd.cc" "remote_start.cc" "sio_buffer.cc" "sio_loop.cc" "test_interp_glue_wrap.c" "test_exec_perl.c" "test_group.cc" "test_results.cc" "test_utils.cc")) nil [1186 1443])
+            ("test_exec_LDFLAGS" variable (:default-value ("@EXTRA_CXX_LDFLAGS@")) nil [1444 1484])
+            ("test_exec_LDADD" variable (:default-value ("$(top_builddir)/libinktomi++/libinktomi++.a" "-L/usr/local/lib" "$(top_builddir)/f_pkg/misc/perl5.6.1/lib/DynaLoader.a" "-L$(top_builddir)/f_pkg/misc/perl5.6.1/lib" "-lperl" "@LIBSOCKET@" "@LIBNSL@" "@LIBRESOLV@" "@LIBRT@" "@LIBTCL@" "@LIBDL@" "@LIBTHREAD4INK@" "@LIBCRYPT@" "-lm" "@LIBGCC@")) nil [1484 1821])
+            ("test_interp_glue_wrap.c" function (:arguments ("test_interp_glue.i" "test_interp_glue.h")) nil [1822 1946])
+            ("pkg_ts" function nil nil [1947 2145])
+            ("install-exec-local" function (:arguments ("proc_manager" "test_exec" "test_log_collate")) nil [2146 3233])
+            ("clean-local" function nil nil [3234 3341]))          
+    :file "Makefile.am"
+    :pointmax 3342
+    :fsize 3341
+    :lastmodtime '(20632 41260)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "test_exec.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_inktomiplus_h_" variable (:constant-flag t) nil [464 479])
+            ("netdb.h" include (:system-flag t) nil [481 499])
+            ("ink_args.h" include nil nil [501 522])
+            ("ink_snprintf.h" include nil nil [523 548])
+            ("ink_hrtime.h" include nil nil [549 572])
+            ("Diags.h" include nil nil [573 591])
+            ("Tokenizer.h" include nil nil [592 614])
+            ("InkTime.h" include nil nil [615 635])
+            ("sio_buffer.h" include nil nil [637 660])
+            ("sio_loop.h" include nil nil [661 682])
+            ("raf_cmd.h" include nil nil [683 703])
+            ("rafencode.h" include nil nil [704 726])
+            ("remote_start.h" include nil nil [727 752])
+            ("test_exec.h" include nil nil [753 775])
+            ("test_utils.h" include nil nil [776 799])
+            ("test_group.h" include nil nil [800 823])
+            ("test_results.h" include nil nil [824 849])
+            ("test_interp_glue.h" include nil nil [851 880])
+            ("SIZE_32K" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type "int")
+                nil [898 932])
+            ("ud_info" variable
+               (:pointer 1
+                :type ("UserDirInfo" type (:type "class") nil nil))
+                nil [948 969])
+            ("run_results" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("TestRunResults" type (:type "class") nil nil))
+                nil [970 1005])
+            ("log_collator_pid" variable (:type ("pid_t" type (:type "class") nil nil)) nil [1006 1034])
+            ("log_viewer_pid" variable (:type ("pid_t" type (:type "class") nil nil)) nil [1035 1061])
+            ("log_viewer_pipe_fd" variable (:type "int") nil [1062 1090])
+            ("log_collator_port" variable (:type "int") nil [1091 1118])
+            ("log_collator_fd" variable (:type "int") nil [1119 1144])
+            ("log_file_fd" variable (:type "int") nil [1145 1166])
+            ("kill_sig_received" variable (:type "int") nil [1167 1194])
+            ("kill_in_progress" variable (:type "int") nil [1195 1220])
+            ("rcs_full_id" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [1221 1311])
+            ("rcs_id" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [1312 1360])
+            ("diags" variable
+               (:pointer 1
+                :type ("Diags" type (:type "class") nil nil))
+                nil [1361 1381])
+            ("cur_script_path" variable
+               (:dereference 1
+                :type "char")
+                nil [1382 1415])
+            ("control_port" variable (:type "int") nil [1438 1463])
+            ("cmd_timeout" variable (:type "int") nil [1464 1485])
+            ("manual_startup" variable (:type "int") nil [1486 1509])
+            ("launch_log_viewer" variable (:type "int") nil [1510 1536])
+            ("show_version" variable (:type "int") nil [1537 1558])
+            ("post_to_tinderbox" variable (:type "int") nil [1559 1585])
+            ("save_results" variable (:type "int") nil [1586 1607])
+            ("kill_wait" variable (:type "int") nil [1608 1626])
+            ("error_tags" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1627 1656])
+            ("action_tags" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1657 1687])
+            ("stuff_path" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1688 1730])
+            ("package_dir" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1731 1774])
+            ("defs_file" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1775 1821])
+            ("defs_dir" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1822 1858])
+            ("defs_add" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1859 1891])
+            ("test_script" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1892 1935])
+            ("lib_dir" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1936 1983])
+            ("script_dir" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [1984 2025])
+            ("log_file" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [2026 2066])
+            ("log_parser_dir" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [2067 2112])
+            ("log_parser_bin" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [2113 2168])
+            ("perl_args" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [2169 2202])
+            ("script_args" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [2203 2238])
+            ("test_uniquer" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [2239 2276])
+            ("test_group" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [2277 2310])
+            ("test_group_file" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type "char")
+                nil [2311 2365])
+            ("tinderbox_machine" variable
+               (:dereference 1
+                :type "char")
+                nil [2366 2416])
+            ("tinderbox_tree" variable
+               (:dereference 1
+                :type "char")
+                nil [2417 2461])
+            ("save_results_dir" variable
+               (:dereference 1
+                :type "char")
+                nil [2462 2532])
+            ("save_results_url" variable
+               (:dereference 1
+                :type "char")
+                nil [2533 2615])
+            ("build_id" variable
+               (:dereference 1
+                :type "char")
+                nil [2616 2640])
+            ("argument_descriptions" variable
+               (:dereference 1
+                :type ("ArgumentDescription" type (:type "class") nil nil))
+                nil [2642 5124])
+            ("n_argument_descriptions" variable (:type "int") nil [5125 5183])
+            ("host_list" variable
+               (:typemodifiers ("static")
+                :type ("DLL" type
+                     (:template-specifier 
+                        ( ("HostRecord" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [5185 5218])
+            ("instance_list" variable
+               (:typemodifiers ("static")
+                :type ("DLL" type
+                     (:template-specifier 
+                        ( ("InstanceRecord" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [5219 5260])
+            ("substitution_hash" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("InkHashTable" type (:type "class") nil nil))
+                nil [5261 5307])
+            ("TE_output_log_line" function
+               (:arguments 
+                  ( ("start" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5334 5352])
+                    ("end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5353 5369])
+                    ("iname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5373 5391])
+                    ("stream_id" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5392 5414]))                  
+                :type "void")
+                nil [5310 6455])
+            ("TE_log_line_va" function
+               (:arguments 
+                  ( ("level" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6477 6495])
+                    ("format_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6496 6519])
+                    ("ap" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6520 6531]))                  
+                :type "void")
+                nil [6457 6751])
+            ("TE_Status" function
+               (:arguments 
+                  ( ("format_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6768 6791])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [6792 6796]))                  
+                :type "void")
+                nil [6753 7030])
+            ("TE_Note" function
+               (:arguments 
+                  ( ("format_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7045 7068])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [7069 7073]))                  
+                :type "void")
+                nil [7032 7303])
+            ("TE_Warning" function
+               (:arguments 
+                  ( ("format_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7321 7344])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [7345 7349]))                  
+                :type "void")
+                nil [7305 7585])
+            ("TE_Error" function
+               (:arguments 
+                  ( ("format_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7601 7624])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [7625 7629]))                  
+                :type "void")
+                nil [7587 7861])
+            ("TE_Fatal" function
+               (:arguments 
+                  ( ("format_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7877 7900])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [7901 7905]))                  
+                :type "void")
+                nil [7863 8227])
+            ("InstanceRecord" function
+               (:constructor-flag t
+                :parent "InstanceRecord"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8261 8278]))                  
+                :type ("InstanceRecord" type (:type "class") nil nil))
+                nil [8230 8420])
+            ("InstanceRecord" function
+               (:destructor-flag t
+                :parent "InstanceRecord"
+                :type "void")
+                nil [8422 8543])
+            ("add_port_binding" function
+               (:parent "InstanceRecord"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8583 8600])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8601 8619]))                  
+                :type "void")
+                nil [8545 9076])
+            ("get_port_binding" function
+               (:pointer 1
+                :parent "InstanceRecord"
+                :constant-flag t
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9123 9140]))                  
+                :type "char")
+                nil [9078 9324])
+            ("find_instance_rec" function
+               (:pointer 1
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9365 9382]))                  
+                :type ("InstanceRecord" type (:type "class") nil nil))
+                nil [9331 9568])
+            ("HostRecord" function
+               (:constructor-flag t
+                :parent "HostRecord"
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9594 9611]))                  
+                :type ("HostRecord" type (:type "class") nil nil))
+                nil [9571 9845])
+            ("HostRecord" function
+               (:destructor-flag t
+                :parent "HostRecord"
+                :type "void")
+                nil [9847 10088])
+            ("start" function
+               (:parent "HostRecord"
+                :type "int")
+                nil [10090 11852])
+            ("lookup_package" function
+               (:pointer 1
+                :parent "HostRecord"
+                :constant-flag t
+                :arguments 
+                  ( ("pkg_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11893 11914]))                  
+                :type "char")
+                nil [11854 12105])
+            ("update_package_entry" function
+               (:parent "HostRecord"
+                :arguments 
+                  ( ("pkg_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12145 12166])
+                    ("new_pkg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12167 12187])
+                    ("new_pkg_len" variable (:type "int") (reparse-symbol arg-sub-list) [12188 12204]))                  
+                :type "void")
+                nil [12107 12626])
+            ("get_id_str" function
+               (:pointer 1
+                :parent "HostRecord"
+                :type "char")
+                nil [12651 12809])
+            ("create_host_rec" function
+               (:pointer 1
+                :arguments 
+                  ( ("hostname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12840 12861]))                  
+                :type ("HostRecord" type (:type "class") nil nil))
+                nil [12812 13060])
+            ("find_host_rec" function
+               (:pointer 1
+                :arguments 
+                  ( ("hostname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13089 13110]))                  
+                :type ("HostRecord" type (:type "class") nil nil))
+                nil [13063 13295])
+            ("UserDirInfo" function
+               (:constructor-flag t
+                :parent "UserDirInfo"
+                :type ("UserDirInfo" type (:type "class") nil nil))
+                nil [13297 13596])
+            ("UserDirInfo" function
+               (:destructor-flag t
+                :parent "UserDirInfo"
+                :type "void")
+                nil [13598 14349])
+            ("find_local_package" function
+               (:pointer 1
+                :arguments 
+                  ( ("pkg_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14493 14514])
+                    ("arch" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14515 14532]))                  
+                :type "char")
+                nil [14468 15640])
+            ("send_file" function
+               (:arguments 
+                  ( ("to_fd" variable (:type "int") (reparse-symbol arg-sub-list) [15656 15666])
+                    ("from_fd" variable (:type "int") (reparse-symbol arg-sub-list) [15667 15679])
+                    ("bytes" variable (:type "int") (reparse-symbol arg-sub-list) [15680 15690])
+                    ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15698 15719])
+                    ("to_id" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15720 15738]))                  
+                :type "int")
+                nil [15642 16537])
+            ("push_package" function
+               (:arguments 
+                  ( ("hrec" variable
+                       (:pointer 1
+                        :type ("HostRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16556 16573])
+                    ("pkg_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16574 16595])
+                    ("pkg_filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16599 16624])
+                    ("pkg_filepath" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16625 16650]))                  
+                :type "int")
+                nil [16539 18548])
+            ("do_package_management" function
+               (:arguments 
+                  ( ("hrec" variable
+                       (:pointer 1
+                        :type ("HostRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18576 18593])
+                    ("pkg_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [18594 18615]))                  
+                :type "int")
+                nil [18550 19777])
+            ("sigalrm_handler" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [19817 19825]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [19796 19826])
+            ("C" extern (:members 
+              ( ("sigalrm_handler" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [19817 19825]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [19796 19826]))              ) nil [19779 19828])
+            ("safe_sleep" function
+               (:arguments 
+                  ( ("mseconds" variable (:type "int") (reparse-symbol arg-sub-list) [20093 20106]))                  
+                :type "void")
+                nil [20077 21828])
+            ("do_raf" function
+               (:arguments 
+                  ( ("hrec" variable
+                       (:pointer 1
+                        :type ("HostRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21841 21858])
+                    ("request" variable
+                       (:pointer 1
+                        :type ("RafCmd" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21859 21875])
+                    ("response" variable
+                       (:pointer 1
+                        :type ("RafCmd" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21876 21893]))                  
+                :type "int")
+                nil [21830 22271])
+            ("do_raf" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [22284 22291])
+                    ("request" variable
+                       (:pointer 1
+                        :type ("RafCmd" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22292 22308])
+                    ("response" variable
+                       (:pointer 1
+                        :type ("RafCmd" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22309 22326]))                  
+                :type "int")
+                nil [22273 22715])
+            ("pm_base_cmd" function
+               (:arguments 
+                  ( ("hrec" variable
+                       (:pointer 1
+                        :type ("HostRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22733 22750])
+                    ("request" variable
+                       (:pointer 1
+                        :type ("RafCmd" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22751 22767])
+                    ("response" variable
+                       (:pointer 1
+                        :type ("RafCmd" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22770 22787])
+                    ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22788 22804])
+                    ("instance_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22807 22833])
+                    ("args" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22834 22846]))                  
+                :type "int")
+                nil [22717 23629])
+            ("find_or_setup_host" function
+               (:pointer 1
+                :arguments 
+                  ( ("host_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23662 23684])
+                    ("instance_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [23685 23711]))                  
+                :type ("HostRecord" type (:type "class") nil nil))
+                nil [23631 24394])
+            ("pm_create_instance" function
+               (:arguments 
+                  ( ("instance_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24419 24445])
+                    ("host_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24446 24468])
+                    ("args" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24469 24481]))                  
+                :type "int")
+                nil [24396 26409])
+            ("pm_start_instance" function
+               (:arguments 
+                  ( ("instance_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26433 26459])
+                    ("args" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [26460 26472]))                  
+                :type "int")
+                nil [26411 27336])
+            ("pm_stop_instance" function
+               (:arguments 
+                  ( ("instance_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [27359 27385])
+                    ("args" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [27386 27398]))                  
+                :type "int")
+                nil [27338 27828])
+            ("pm_destroy_instance" function
+               (:arguments 
+                  ( ("instance_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [27854 27880])
+                    ("args" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [27881 27893]))                  
+                :type "int")
+                nil [27830 28397])
+            ("alloc_and_sprintf" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("d" variable (:type "int") (reparse-symbol arg-sub-list) [28508 28514]))                  
+                :type "char")
+                nil [28477 28609])
+            ("pm_run_internal" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("host_rec" variable
+                       (:pointer 1
+                        :type ("HostRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28640 28661])
+                    ("binary" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [28662 28681])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [28682 28699])
+                    ("master_instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [28708 28736])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [28737 28749]))                  
+                :type "char")
+                nil [28611 30045])
+            ("pm_run_slave" function
+               (:pointer 1
+                :arguments 
+                  ( ("master_instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30066 30094])
+                    ("binary" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30095 30114])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30115 30132])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [30133 30145]))                  
+                :type "char")
+                nil [30047 30474])
+            ("pm_run" function
+               (:pointer 1
+                :arguments 
+                  ( ("hostname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30489 30510])
+                    ("binary" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30511 30530])
+                    ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30531 30548])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [30549 30561]))                  
+                :type "char")
+                nil [30476 30884])
+            ("add_to_log" function
+               (:arguments 
+                  ( ("log_line" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [30902 30923]))                  
+                :type "int")
+                nil [30887 31095])
+            ("pm_alloc_port" function
+               (:arguments 
+                  ( ("hostname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31115 31136]))                  
+                :type "int")
+                nil [31097 31865])
+            ("set_log_parser" function
+               (:arguments 
+                  ( ("instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31886 31907])
+                    ("parser" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31908 31927]))                  
+                :type "int")
+                nil [31867 32288])
+            ("get_var_value" function
+               (:pointer 1
+                :arguments 
+                  ( ("var" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32310 32326]))                  
+                :type "char")
+                nil [32290 32677])
+            ("set_var_value" function
+               (:arguments 
+                  ( ("var" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32697 32713])
+                    ("var_value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32714 32736]))                  
+                :type "int")
+                nil [32679 33359])
+            ("construct_instance_file_path" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("irec" variable
+                       (:pointer 1
+                        :type ("InstanceRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [33516 33537])
+                    ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [33538 33555]))                  
+                :type "char")
+                nil [33474 34045])
+            ("construct_script_file_path" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [34200 34217]))                  
+                :type "char")
+                nil [34160 34530])
+            ("set_cur_script_path" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("default_script_dir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [34565 34596])
+                    ("script_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [34597 34621]))                  
+                :type "void")
+                nil [34533 35067])
+            ("put_instance_file_raw" function
+               (:arguments 
+                  ( ("instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [35095 35116])
+                    ("relative_path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [35117 35143])
+                    ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [35149 35165]))                  
+                :type "int")
+                nil [35069 37399])
+            ("put_instance_file_subs" function
+               (:arguments 
+                  ( ("instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [37428 37449])
+                    ("relative_path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [37450 37476])
+                    ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [37483 37499]))                  
+                :type "int")
+                nil [37401 40330])
+            ("query_process_int" function
+               (:arguments 
+                  ( ("instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40559 40580])
+                    ("field" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [40581 40599])
+                    ("result" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [40600 40612]))                  
+                :type "int")
+                nil [40537 41306])
+            ("is_instance_alive" function
+               (:arguments 
+                  ( ("instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [41330 41351]))                  
+                :type "int")
+                nil [41308 41578])
+            ("wait_for_instance_death" function
+               (:arguments 
+                  ( ("instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [41608 41629])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [41630 41645]))                  
+                :type "int")
+                nil [41580 42993])
+            ("wait_for_server_port" function
+               (:arguments 
+                  ( ("instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [43021 43042])
+                    ("port_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [43043 43064])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [43065 43080]))                  
+                :type "int")
+                nil [42996 45422])
+            ("get_instance_file" function
+               (:pointer 1
+                :arguments 
+                  ( ("instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45448 45469])
+                    ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [45470 45487]))                  
+                :type "char")
+                nil [45424 49211])
+            ("stat_instance_file" function
+               (:pointer 2
+                :arguments 
+                  ( ("instance" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [49239 49260])
+                    ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [49261 49278]))                  
+                :type "char")
+                nil [49213 50304])
+            ("build_raf_err_argv" function
+               (:pointer 2
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("err_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [50489 50509]))                  
+                :type "char")
+                nil [50456 50704])
+            ("raf_host_port" function
+               (:pointer 2
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [50859 50875])
+                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [50876 50885])
+                    ("raf_cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [50893 50913])
+                    ("raf_args" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [50914 50930]))                  
+                :type "char")
+                nil [50831 52458])
+            ("raf_instance" function
+               (:pointer 2
+                :arguments 
+                  ( ("instance_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [52480 52506])
+                    ("raf_cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [52507 52527])
+                    ("raf_args" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [52528 52544]))                  
+                :type "char")
+                nil [52460 53230])
+            ("raf_proc_manager" function
+               (:pointer 2
+                :arguments 
+                  ( ("instance_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [53256 53282])
+                    ("raf_cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [53283 53303])
+                    ("raf_args" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [53304 53320]))                  
+                :type "char")
+                nil [53232 53876])
+            ("stop_and_destroy_all_instances" function (:type "void") nil [53878 54475])
+            ("shutdown_proc_managers" function (:type "void") nil [54477 54901])
+            ("shutdown_log_collator" function (:type "void") nil [54903 56021])
+            ("SUB_MOD_IP_ADDR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type "int")
+                nil [56023 56062])
+            ("output_substitution" function
+               (:arguments 
+                  ( ("output_buffer" variable
+                       (:pointer 1
+                        :type ("sio_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56136 56162])
+                    ("modifier_str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [56163 56188])
+                    ("sub_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [56193 56214])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [56215 56233])
+                    ("value_len" variable (:type "int") (reparse-symbol arg-sub-list) [56234 56248]))                  
+                :type "int")
+                nil [56112 57688])
+            ("do_single_substitution" function
+               (:arguments 
+                  ( ("sub_name_start" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [57718 57745])
+                    ("sub_name_end" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [57752 57777])
+                    ("output_buffer" variable
+                       (:pointer 1
+                        :type ("sio_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57784 57810])
+                    ("output_warnings" variable (:type "int") (reparse-symbol arg-sub-list) [57817 57837]))                  
+                :type "int")
+                nil [57691 60400])
+            ("do_substitutions" function
+               (:arguments 
+                  ( ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [60424 60440])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [60441 60449])
+                    ("output" variable
+                       (:pointer 1
+                        :type ("sio_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60450 60469])
+                    ("errors_ptr" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [60477 60493]))                  
+                :type "int")
+                nil [60403 62005])
+            ("do_subs_and_replace" function
+               (:arguments 
+                  ( ("src" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [62031 62042])
+                    ("errors" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [62043 62055]))                  
+                :type "int")
+                nil [62007 62377])
+            ("add_def" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [62392 62409])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [62410 62422]))                  
+                :type "void")
+                nil [62379 62765])
+            ("process_cmd_line_defs" function (:type "void") nil [62767 63320])
+            ("set_internal_defs" function (:type "void") nil [63322 63437])
+            ("process_defs_line" function
+               (:arguments 
+                  ( ("defs_buf" variable
+                       (:pointer 1
+                        :type ("sio_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [63663 63684])
+                    ("line_end" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [63685 63700])
+                    ("line_num" variable (:type "int") (reparse-symbol arg-sub-list) [63701 63714]))                  
+                :type "int")
+                nil [63641 65310])
+            ("load_defs_file" function (:type "int") nil [65312 66902])
+            ("my_test_script" function (:type "void") nil [66904 67178])
+            ("read_log_parser_results" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [67208 67215])
+                    ("results" variable
+                       (:pointer 1
+                        :type ("TestResult" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [67216 67236]))                  
+                :type "int")
+                nil [67180 68045])
+            ("run_log_parser" function
+               (:arguments 
+                  ( ("results" variable
+                       (:pointer 1
+                        :type ("TestResult" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [68066 68086])
+                    ("output_file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [68087 68111])
+                    ("test_case_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [68117 68144])
+                    ("html_output" variable (:type "bool") (reparse-symbol arg-sub-list) [68145 68162]))                  
+                :type "int")
+                nil [68047 70416])
+            ("start_log_file" function (:type "int") nil [70418 70743])
+            ("stop_log_file" function (:type "void") nil [70745 70843])
+            ("send_log_collator_roll" function
+               (:arguments 
+                  ( ("test_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [70872 70894]))                  
+                :type "int")
+                nil [70845 71740])
+            ("roll_log_file" function
+               (:arguments 
+                  ( ("test_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [71760 71782]))                  
+                :type "int")
+                nil [71742 71956])
+            ("start_log_viewer" function (:type "int") nil [71959 73775])
+            ("start_log_collator" function (:type "int") nil [73777 76291])
+            ("remove_dir" function
+               (:arguments 
+                  ( ("dir_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [76308 76329]))                  
+                :type "int")
+                nil [76293 77142])
+            ("run_perl" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [77175 77187]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [77161 77188])
+            ("C" extern (:members 
+              ( ("run_perl" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("argv" variable
+                           (:pointer 2
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [77175 77187]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [77161 77188]))              ) nil [77144 77190])
+            ("prep_and_run_perl" function
+               (:arguments 
+                  ( ("test_script_arg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [77216 77244])
+                    ("script_args_in" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [77254 77276]))                  
+                :type "void")
+                nil [77193 78401])
+            ("prep_and_run_log_parser" function
+               (:arguments 
+                  ( ("tr" variable
+                       (:pointer 1
+                        :type ("TestResult" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [78432 78447])
+                    ("test_case_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [78448 78475]))                  
+                :type "void")
+                nil [78403 78678])
+            ("find_and_run_tests" function (:type "void") nil [78680 80443])
+            ("write_message_to_log_viewer" function
+               (:arguments 
+                  ( ("write_buf" variable
+                       (:pointer 1
+                        :type ("sio_buffer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [80479 80501]))                  
+                :type "void")
+                nil [80446 80777])
+            ("notify_viewer_new_test" function
+               (:arguments 
+                  ( ("test_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [80807 80829]))                  
+                :type "void")
+                nil [80779 81216])
+            ("notify_viewer_log_roll" function
+               (:arguments 
+                  ( ("test_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [81246 81268]))                  
+                :type "void")
+                nil [81218 81565])
+            ("notify_viewer_done" function (:type "void") nil [81567 81853])
+            ("setup_user_and_dir_info" function
+               (:pointer 1
+                :type ("UserDirInfo" type (:type "class") nil nil))
+                nil [81855 83797])
+            ("setup_port_stuff" function
+               (:arguments 
+                  ( ("ur" variable
+                       (:pointer 1
+                        :type ("UserDirInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [83821 83837]))                  
+                :type "void")
+                nil [83799 84089])
+            ("sigchld_received" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [84091 84123])
+            ("children_reaped" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [84124 84155])
+            ("exit_signal_handler" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [84707 84715]))                  )
+                (reparse-symbol extern-c-contents) [84682 84749])
+            ("sigalrm_handler" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [84607 84615]))                  )
+                (reparse-symbol extern-c-contents) [84586 84676])
+            ("sigchld_handler" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [84195 84203]))                  )
+                (reparse-symbol extern-c-contents) [84174 84580])
+            ("C" extern (:members 
+              ( ("sigchld_handler" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [84195 84203]))                      )
+                    (reparse-symbol extern-c-contents) [84174 84580])
+                ("sigalrm_handler" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [84607 84615]))                      )
+                    (reparse-symbol extern-c-contents) [84586 84676])
+                ("exit_signal_handler" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [84707 84715]))                      )
+                    (reparse-symbol extern-c-contents) [84682 84749]))              ) nil [84157 84751])
+            ("setup_signals" function (:type "void") nil [84754 85527])
+            ("reap_and_kill_child" function
+               (:arguments 
+                  ( ("child_pid" variable (:type ("pid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [85555 85571])
+                    ("exit_status" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [85572 85589]))                  
+                :type ("pid_t" type (:type "class") nil nil))
+                nil [85529 86212])
+            ("reap_child" function
+               (:arguments 
+                  ( ("pid" variable (:type ("pid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [86232 86242])
+                    ("status" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [86243 86255])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [86256 86271]))                  
+                :type ("pid_t" type (:type "class") nil nil))
+                nil [86215 87887])
+            ("init_dir_stuff" function (:type "void") nil [87889 90081])
+            ("check_and_process_kill_signal" function (:type "void") nil [90083 90234])
+            ("process_kill_signal" function (:type "void") nil [90236 90516])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [90527 90536])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [90537 90549]))                  
+                :type "int")
+                nil [90518 92099]))          
+    :file "test_exec.cc"
+    :pointmax 92101
+    :fsize 92100
+    :lastmodtime '(20632 41260)
+    :unmatched-syntax '((punctuation 77190 . 77191) (punctuation 56109 . 56110) (number 56108 . 56109) (punctuation 56106 . 56107) (punctuation 56105 . 56106) (number 56101 . 56104) (punctuation 56099 . 56100) (symbol 56080 . 56098) (INT 56076 . 56079) (CONST 56070 . 56075) (STATIC 56063 . 56069))
+    :lexical-table 
+        '(("_inktomiplus_h_")
+          )
+
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

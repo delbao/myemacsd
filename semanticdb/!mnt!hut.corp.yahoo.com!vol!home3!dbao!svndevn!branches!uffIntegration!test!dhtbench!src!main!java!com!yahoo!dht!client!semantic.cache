@@ -1,0 +1,354 @@
+;; Object client/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "client/"
+  :tables (list 
+   (semanticdb-table "MySQLRequest.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("com.yahoo.dht.client" package nil nil [1 30])
+            ("com.mysql.jdbc.Driver" include nil nil [32 61])
+            ("com.yahoo.dht.client.exception.DhtClientException" include nil nil [62 119])
+            ("com.yahoo.dht.Request" include nil nil [120 149])
+            ("net.sf.json.JSONObject" include nil nil [150 180])
+            ("java.sql.*" include nil nil [182 200])
+            ("java.util.HashSet" include nil nil [201 226])
+            ("java.util.Properties" include nil nil [227 255])
+            ("java.util.Queue" include nil nil [256 279])
+            ("java.util.Set" include nil nil [280 301])
+            ("java.util.concurrent.ConcurrentLinkedQueue" include nil nil [302 352])
+            ("java.util.logging.Logger" include nil nil [353 385])
+            ("MySQLRequest" type
+               (:typemodifiers ("public")
+                :interfaces ("Request")
+                :members 
+                  ( ("DDL" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [539 712])
+                    ("url" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [717 736])
+                    ("connProps" variable
+                       (:typemodifiers ("private")
+                        :type "Properties")
+                        (reparse-symbol class_member_declaration) [741 770])
+                    ("logger" variable
+                       (:typemodifiers ("private")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [908 973])
+                    ("init" function
+                       (:typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [979 1166])
+                    ("delete" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [1202 1218])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [1220 1237]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1183 2038])
+                    ("multiGet" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [2111 2127])
+                            ("recordNames" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [2160 2180]))                          
+                        :type "JSONObject")
+                        (reparse-symbol class_member_declaration) [2084 2297])
+                    ("get" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [2386 2402])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [2404 2421]))                          
+                        :type "JSONObject")
+                        (reparse-symbol class_member_declaration) [2364 3562])
+                    ("set" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [3585 3601])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [3603 3620])
+                            ("data" variable (:type "JSONObject") (reparse-symbol formal_parameters) [3622 3637]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3569 3720])
+                    ("set" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [3742 3758])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [3760 3777])
+                            ("data" variable (:type "JSONObject") (reparse-symbol formal_parameters) [3779 3794])
+                            ("updateFirst" variable (:type "boolean") (reparse-symbol formal_parameters) [3796 3815]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3726 5340])
+                    ("confirmTable" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("private" "synchronized")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [5403 5419]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5364 6832])
+                    ("getConnection" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :type "Connection")
+                        (reparse-symbol class_member_declaration) [6838 7203])
+                    ("returnConnection" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("c" variable (:type "Connection") (reparse-symbol formal_parameters) [7238 7250]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7209 7278]))                  
+                :type "class")
+                nil [488 7280]))          
+    :file "MySQLRequest.java"
+    :pointmax 7281
+    :fsize 7280
+    :lastmodtime '(20614 58463)
+    :unmatched-syntax '((DOT 2431 . 2432) (IDENTIFIER 2423 . 2429) (DOT 2430 . 2431) (DOT 2190 . 2191) (IDENTIFIER 2182 . 2188) (DOT 2189 . 2190) (SEMICOLON 902 . 903) (PAREN_BLOCK 900 . 902) (GT 899 . 900) (LT 888 . 889) (NEW 863 . 866) (EQ 861 . 862) (GT 856 . 857) (LT 845 . 846) (SEMICOLON 826 . 827) (PAREN_BLOCK 824 . 826) (GT 823 . 824) (LT 816 . 817) (NEW 805 . 808) (EQ 803 . 804) (GT 794 . 795) (PRIVATE 776 . 783) (LT 787 . 788))
+    )
+   (semanticdb-table "UDBRequest.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("com.yahoo.dht.client" package nil nil [1 30])
+            ("com.yahoo.dht.Request" include nil nil [32 61])
+            ("com.yahoo.dht.client.exception.DhtClientException" include nil nil [62 119])
+            ("net.sf.json.JSONObject" include nil nil [120 150])
+            ("yjava.datastore.udb.*" include nil nil [151 180])
+            ("java.util.*" include nil nil [182 201])
+            ("UDBRequest" type
+               (:typemodifiers ("public")
+                :interfaces ("Request")
+                :superclasses "MultiRequest"
+                :members 
+                  ( ("emptyResult" variable
+                       (:typemodifiers ("static" "final")
+                        :type "JSONObject")
+                        (reparse-symbol class_member_declaration) [273 328])
+                    ("REASON" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [448 499])
+                    ("FIELD_PREFIX" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [504 553])
+                    ("tableNameKey" variable
+                       (:typemodifiers ("static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [558 616])
+                    ("tableNameKeys" variable
+                       (:dereference 1
+                        :typemodifiers ("static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [621 676])
+                    ("init" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [682 734])
+                    ("delete" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [759 775])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [777 794]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [740 2573])
+                    ("get" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [2601 2617])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [2619 2636]))                          
+                        :type "JSONObject")
+                        (reparse-symbol class_member_declaration) [2579 4976])
+                    ("set" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [4998 5014])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [5016 5033])
+                            ("data" variable (:type "JSONObject") (reparse-symbol formal_parameters) [5035 5050]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4982 6661])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [6691 6704]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6667 7086]))                  
+                :type "class")
+                nil [203 7088]))          
+    :file "UDBRequest.java"
+    :pointmax 7089
+    :fsize 7088
+    :lastmodtime '(20614 58463)
+    :unmatched-syntax '((DOT 2646 . 2647) (IDENTIFIER 2638 . 2644) (DOT 2645 . 2646))
+    )
+   (semanticdb-table "YDHTRequest.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("com.yahoo.dht.client" package nil nil [1 30])
+            ("com.yahoo.dht.Request" include nil nil [32 61])
+            ("com.yahoo.dht.client.exception.*" include nil nil [62 102])
+            ("com.yahoo.yjava.yca.CertDatabase" include nil nil [103 143])
+            ("net.sf.json.JSONException" include nil nil [144 177])
+            ("net.sf.json.JSONObject" include nil nil [178 208])
+            ("net.sf.json.JSONArray" include nil nil [209 238])
+            ("org.apache.commons.httpclient.Header" include nil nil [239 283])
+            ("org.apache.commons.httpclient.HttpClient" include nil nil [284 332])
+            ("org.apache.commons.httpclient.HttpException" include nil nil [333 384])
+            ("org.apache.commons.httpclient.MultiThreadedHttpConnectionManager" include nil nil [385 457])
+            ("org.apache.commons.httpclient.methods.GetMethod" include nil nil [458 513])
+            ("org.apache.commons.httpclient.methods.PostMethod" include nil nil [514 570])
+            ("org.apache.commons.httpclient.methods.StringRequestEntity" include nil nil [571 636])
+            ("org.apache.commons.httpclient.params.HttpConnectionManagerParams" include nil nil [637 709])
+            ("org.apache.commons.httpclient.protocol.Protocol" include nil nil [710 765])
+            ("java.io.IOException" include nil nil [767 794])
+            ("YDHTRequest" type
+               (:typemodifiers ("public")
+                :interfaces ("Request")
+                :members 
+                  ( ("YCA_HEADER" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1251 1309])
+                    ("YDHT_PATH" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1314 1375])
+                    ("connectionManager" variable
+                       (:typemodifiers ("private")
+                        :type "MultiThreadedHttpConnectionManager")
+                        (reparse-symbol class_member_declaration) [1381 1442])
+                    ("httpClient" variable
+                       (:typemodifiers ("private")
+                        :type "HttpClient")
+                        (reparse-symbol class_member_declaration) [1447 1477])
+                    ("certDatabase" variable
+                       (:typemodifiers ("private")
+                        :type "CertDatabase")
+                        (reparse-symbol class_member_declaration) [1482 1516])
+                    ("ycaAppId" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1522 1546])
+                    ("ycaHeaderValEnv" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1551 1589])
+                    ("YDHTRequest" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [1595 1624])
+                    ("init" function
+                       (:throws ("UnknownException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("ycaAppId" variable (:type "String") (reparse-symbol formal_parameters) [1648 1663]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1630 2255])
+                    ("setMaxTotalConnections" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("maxTotalConnections" variable (:type "int") (reparse-symbol formal_parameters) [2346 2369]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2311 2647])
+                    ("setConnectionTimeout" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("connection_timeout" variable (:type "int") (reparse-symbol formal_parameters) [2735 2757]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2702 2846])
+                    ("setSocketTimeout" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("so_timeout" variable (:type "int") (reparse-symbol formal_parameters) [2922 2936]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2893 3009])
+                    ("setHostConfiguration" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("hostName" variable (:type "String") (reparse-symbol formal_parameters) [3129 3144])
+                            ("port" variable (:type "int") (reparse-symbol formal_parameters) [3146 3154])
+                            ("protocol" variable (:type "String") (reparse-symbol formal_parameters) [3156 3171]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3096 3257])
+                    ("getYcaHeader" function
+                       (:throws ("UnknownException")
+                        :typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [3361 3737])
+                    ("init" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3743 4069])
+                    ("delete" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [4317 4333])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [4335 4352]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4298 5573])
+                    ("multiGet" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [5671 5687])
+                            ("recordNames" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [5720 5740]))                          
+                        :type "JSONObject")
+                        (reparse-symbol class_member_declaration) [5644 10918])
+                    ("get" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [11331 11347])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [11349 11366]))                          
+                        :type "JSONObject")
+                        (reparse-symbol class_member_declaration) [11309 13051])
+                    ("set" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [13367 13383])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [13385 13402])
+                            ("data" variable (:type "JSONObject") (reparse-symbol formal_parameters) [13404 13419]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [13351 16114])
+                    ("validate" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("jSONObject" variable (:type "JSONObject") (reparse-symbol formal_parameters) [16492 16513])
+                            ("responseBody" variable (:type "String") (reparse-symbol formal_parameters) [16515 16534])
+                            ("message" variable (:type "String") (reparse-symbol formal_parameters) [16536 16550]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [16463 18856]))                  
+                :type "class")
+                nil [1200 18858]))          
+    :file "YDHTRequest.java"
+    :pointmax 18859
+    :fsize 18858
+    :lastmodtime '(20614 58463)
+    :unmatched-syntax '((DOT 11376 . 11377) (IDENTIFIER 11368 . 11374) (DOT 11375 . 11376) (DOT 5750 . 5751) (IDENTIFIER 5742 . 5748) (DOT 5749 . 5750))
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndevn!branches!uffIntegration!test!dhtbench!src!main!java!com!yahoo!dht!client!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

@@ -1,0 +1,106 @@
+;; Object util/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "util/"
+  :tables (list 
+   (semanticdb-table "CSQETestListener.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("com.yahoo.sherpa.qa.util" package nil nil [1 34])
+            ("org.apache.log4j.Logger" include nil nil [36 67])
+            ("org.testng.IInvokedMethod" include nil nil [68 101])
+            ("org.testng.IInvokedMethodListener" include nil nil [102 143])
+            ("org.testng.ITestContext" include nil nil [144 175])
+            ("org.testng.ITestListener" include nil nil [176 208])
+            ("org.testng.ITestResult" include nil nil [209 239])
+            ("org.testng.Reporter" include nil nil [240 267])
+            ("org.testng.SkipException" include nil nil [268 300])
+            ("com.yahoo.sherpa.qa.util.CSQE" include nil nil [302 339])
+            ("CSQETestListener" type
+               (:typemodifiers ("public")
+                :interfaces ("ITestListener" "IInvokedMethodListener")
+                :members 
+                  ( ("obj" variable
+                       (:typemodifiers ("private" "static")
+                        :type "CSQE")
+                        (reparse-symbol class_member_declaration) [424 455])
+                    ("suiteName" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [457 487])
+                    ("xmlTestName" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [489 521])
+                    ("logger" variable
+                       (:typemodifiers ("private" "final")
+                        :type "Logger")
+                        (reparse-symbol class_member_declaration) [523 597])
+                    ("onTestStart" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("result" variable (:type "ITestResult") (reparse-symbol formal_parameters) [637 655]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [613 664])
+                    ("onTestSuccess" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("result" variable (:type "ITestResult") (reparse-symbol formal_parameters) [704 722]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [678 918])
+                    ("onTestFailure" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("result" variable (:type "ITestResult") (reparse-symbol formal_parameters) [958 976]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [932 1241])
+                    ("onTestSkipped" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("result" variable (:type "ITestResult") (reparse-symbol formal_parameters) [1281 1299]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1255 1518])
+                    ("onTestFailedButWithinSuccessPercentage" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("result" variable (:type "ITestResult") (reparse-symbol formal_parameters) [1583 1601]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1532 1647])
+                    ("onStart" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("context" variable (:type "ITestContext") (reparse-symbol formal_parameters) [1681 1701]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1661 2197])
+                    ("onFinish" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("context" variable (:type "ITestContext") (reparse-symbol formal_parameters) [2232 2252]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2211 2298])
+                    ("beforeInvocation" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("method" variable (:type "IInvokedMethod") (reparse-symbol formal_parameters) [2342 2363])
+                            ("result" variable (:type "ITestResult") (reparse-symbol formal_parameters) [2365 2383]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2313 2615])
+                    ("afterInvocation" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("method" variable (:type "IInvokedMethod") (reparse-symbol formal_parameters) [2657 2678])
+                            ("testResult" variable (:type "ITestResult") (reparse-symbol formal_parameters) [2680 2702]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2629 2741]))                  
+                :type "class")
+                nil [341 2746]))          
+    :file "CSQETestListener.java"
+    :pointmax 2747
+    :fsize 2746
+    :lastmodtime '(20545 26123)
+    :unmatched-syntax '((punctuation 2618 . 2619) (punctuation 2302 . 2303) (punctuation 2200 . 2201) (punctuation 1650 . 1651) (punctuation 1521 . 1522) (punctuation 1244 . 1245) (punctuation 921 . 922) (punctuation 667 . 668) (punctuation 602 . 603))
+    )
+   )
+  :file "!homes!dbao!svn!trunk!test!sherpa_testng!src!main!java!com!yahoo!sherpa!qa!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,337 @@
+;; Object dht/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dht/"
+  :tables (list 
+   (semanticdb-table "BrokerHandler.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__BROKER_HANDLER_H" variable (:constant-flag t) nil [95 113])
+            ("dht/FwCode.h" include nil nil [115 138])
+            ("dht/EventHandler.h" include nil nil [139 168])
+            ("dht/BrokerSubscriber.h" include nil nil [169 202])
+            ("Message" type
+               (:prototype t
+                :type "class")
+                nil [204 218])
+            ("BrokerHandler" type
+               (:superclasses 
+                  ( ("EventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("UnitTestBrokerHandler" friend nil (reparse-symbol classsubparts) [268 302])
+                    ("public" label nil (reparse-symbol classsubparts) [305 312])
+                    ("BrokerHandler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("BrokerHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [352 368])
+                    ("BrokerHandler" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [412 429])
+                    ("initHandler" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("msgSubscriber" variable
+                               (:pointer 1
+                                :type ("BrokerSubscriber" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [975 1007])
+                            ("myRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1045 1074]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [942 1075])
+                    ("cleanupHandler" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1186 1208])
+                    ("private" label nil (reparse-symbol classsubparts) [1655 1663])
+                    ("init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2032 2062]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2006 2063])
+                    ("handleEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("events" variable (:type "int") (reparse-symbol arg-sub-list) [2518 2542])
+                            ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2580 2608])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2646 2671]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2485 2672])
+                    ("handleTimer" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3044 3072])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3110 3135]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3011 3136])
+                    ("myAddIOEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3458 3487])
+                            ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [3488 3495]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3424 3496])
+                    ("myRemoveIOEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3779 3808]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3742 3809])
+                    ("private" label nil (reparse-symbol classsubparts) [3817 3825])
+                    ("msgSubscriber_" variable
+                       (:pointer 1
+                        :type ("BrokerSubscriber" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3830 3864])
+                    ("healthCheckTime_ms_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3893 3922])
+                    ("ioEventInPlace_" variable (:type "bool") (reparse-symbol classsubparts) [3984 4005])
+                    ("currentFd_" variable (:type "int") (reparse-symbol classsubparts) [4064 4079])
+                    ("regionName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4142 4166]))                  
+                :type "class")
+                nil [220 4204]))          
+    :file "BrokerHandler.h"
+    :pointmax 4364
+    :fsize 4363
+    :lastmodtime '(20545 26160)
+    :unmatched-syntax '((punctuation 302 . 303))
+    :lexical-table 
+        '(("__BROKER_HANDLER_H")
+          )
+
+    )
+   (semanticdb-table "EventHandler.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__EVENT_HANDLER_H" variable (:constant-flag t) nil [161 178])
+            ("dht/FwCode.h" include nil nil [180 203])
+            ("map" include (:system-flag t) nil [204 218])
+            ("EventContext" type
+               (:prototype t
+                :type "struct")
+                nil [220 240])
+            ("EventDispatcher" type
+               (:prototype t
+                :type "class")
+                nil [241 264])
+            ("EventHandler" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [324 331])
+                    ("EventHandler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [371 386])
+                    ("EventHandler" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [431 455])
+                    ("init" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [729 757]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [695 760])
+                    ("cleanup" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [920 943])
+                    ("handleEvent" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("events" variable (:type "int") (reparse-symbol arg-sub-list) [1582 1606])
+                            ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1652 1680])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1726 1751]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1541 1782])
+                    ("handleTimer" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2373 2401])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2447 2472]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2332 2503])
+                    ("private" label nil (reparse-symbol classsubparts) [2510 2518])
+                    ("EventHandler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2616 2636]))                          
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2603 2637])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2770 2790]))                          
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2745 2791])
+                    ("EventDispatcher" friend nil (reparse-symbol classsubparts) [2875 2903])
+                    ("EventHandlerTester" friend nil (reparse-symbol classsubparts) [2909 2940])
+                    ("ev_context_map_t" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("int" type nil nil nil)
+                                  ("EventContext" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [2946 3000])
+                    ("evContexts_" variable (:type ("ev_context_map_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3005 3037])
+                    ("timer_context_map_t" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("void" type (:pointer 1) nil nil)
+                                  ("EventContext" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [3042 3101])
+                    ("timerContexts_" variable (:type ("timer_context_map_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3106 3141]))                  
+                :type "class")
+                nil [302 3144]))          
+    :file "EventHandler.h"
+    :pointmax 3153
+    :fsize 3152
+    :lastmodtime '(20545 26160)
+    :unmatched-syntax '((punctuation 2940 . 2941) (punctuation 2903 . 2904))
+    :lexical-table 
+        '(("__EVENT_HANDLER_H")
+          )
+
+    )
+   (semanticdb-table "DaemonProcess.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__DAEMON_PROCESS_H" variable (:constant-flag t) nil [163 181])
+            ("dht/FwCode.h" include nil nil [183 206])
+            ("EventDispatcher" type
+               (:prototype t
+                :type "class")
+                nil [208 230])
+            ("EventHandler" type
+               (:prototype t
+                :type "class")
+                nil [231 250])
+            ("DaemonProcess" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [419 426])
+                    ("DaemonProcess" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("DaemonProcess" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [466 482])
+                    ("DaemonProcess" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [620 637])
+                    ("init" function
+                       (:prototype-flag t
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [883 911])
+                    ("addHandler" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("handler" variable
+                               (:pointer 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1240 1262]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1208 1263])
+                    ("removeHandler" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("handler" variable
+                               (:pointer 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1679 1701]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1644 1702])
+                    ("run" function
+                       (:prototype-flag t
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2216 2243])
+                    ("cleanup" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2404 2419])
+                    ("private" label nil (reparse-symbol classsubparts) [2426 2434])
+                    ("dispatcher_" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2439 2469]))                  
+                :type "class")
+                nil [396 2494]))          
+    :file "DaemonProcess.h"
+    :pointmax 2503
+    :fsize 2502
+    :lastmodtime '(20545 26160)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__DAEMON_PROCESS_H")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svn!trunk!framework!daemon!include!dht!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

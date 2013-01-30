@@ -1,0 +1,269 @@
+;; Object uff_plugin_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "uff_plugin_test/"
+  :tables (list 
+   (semanticdb-table "UFResponseTest.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UFResponseAPI.h" include nil nil [1 27])
+            ("UFBaseStub.h" include nil nil [28 51])
+            ("PluginStorage.h" include nil nil [52 78])
+            ("UFTest.h" include nil nil [80 99])
+            ("cppunit/TestFixture.h" include (:system-flag t) nil [100 132])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [133 177])
+            ("cppunit/TestCase.h" include (:system-flag t) nil [178 207])
+            ("cppunit/extensions/TestFactoryRegistry.h" include (:system-flag t) nil [208 259])
+            ("cppunit/TextTestRunner.h" include (:system-flag t) nil [260 295])
+            ("cppunit/ui/text/TestRunner.h" include (:system-flag t) nil [296 335])
+            ("cppunit/TestRunner.h" include (:system-flag t) nil [336 367])
+            ("cppunit/XmlOutputter.h" include (:system-flag t) nil [368 401])
+            ("cppunit/TextOutputter.h" include (:system-flag t) nil [402 436])
+            ("cppunit/TestListener.h" include (:system-flag t) nil [437 470])
+            ("cppunit/TestResult.h" include (:system-flag t) nil [471 502])
+            ("cppunit/BriefTestProgressListener.h" include (:system-flag t) nil [503 549])
+            ("cppunit/portability/Stream.h" include (:system-flag t) nil [550 589])
+            ("baseStub" variable
+               (:pointer 1
+                :typemodifiers ("extern")
+                :type ("UFBaseStub" type (:type "class") nil nil))
+                nil [591 619])
+            ("CppUnit" using (:type ("CppUnit" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [621 645])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [646 666])
+            ("HTTPUtil" using (:type ("HTTPUtil" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [667 692])
+            ("UFResponseTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [746 753])
+                    ("ufResponse" variable
+                       (:pointer 1
+                        :type ("UFResponse" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [758 781])
+                    ("foo" variable
+                       (:pointer 1
+                        :type ("Foo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [786 795])
+                    ("testStorage" variable
+                       (:pointer 1
+                        :type ("PluginStorage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [800 827])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [833 1043])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [1049 1146])
+                    ("testInitialize" function (:type "void") (reparse-symbol classsubparts) [1156 1376])
+                    ("testSetContext" function (:type "void") (reparse-symbol classsubparts) [1382 1658])
+                    ("testGetContext" function (:type "void") (reparse-symbol classsubparts) [1664 1851])
+                    ("testSetHeaderValue" function (:type "void") (reparse-symbol classsubparts) [1860 2021])
+                    ("testGetHttpStatus" function (:type "void") (reparse-symbol classsubparts) [2031 2232])
+                    ("testSetFollowRedirect" function (:type "void") (reparse-symbol classsubparts) [2238 2372])
+                    ("testSetReturnBody" function (:type "void") (reparse-symbol classsubparts) [2378 2566])
+                    ("testSetErrorBody" function (:type "void") (reparse-symbol classsubparts) [2572 2769])
+                    ("testSetReturnStatus" function (:type "void") (reparse-symbol classsubparts) [2775 3133])
+                    ("testSetHeaderValueInsert" function (:type "void") (reparse-symbol classsubparts) [3139 3310])
+                    ("testSetOrReplaceHeaderValue" function (:type "void") (reparse-symbol classsubparts) [3316 3496])
+                    ("testReplaceHeaderValue" function (:type "void") (reparse-symbol classsubparts) [3502 3755])
+                    ("testRemoveHeaderValue" function (:type "void") (reparse-symbol classsubparts) [3762 3987])
+                    ("testGetHeaderValue" function (:type "void") (reparse-symbol classsubparts) [3994 4302])
+                    ("testIsHeaderEqual" function (:type "void") (reparse-symbol classsubparts) [4317 4698])
+                    ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("UFResponseTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4725 4740]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4706 4741])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSetContext" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4795 4810]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4782 4811])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSetHeaderValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4865 4884]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4852 4885])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSetHeaderValueInsert" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4903 4928]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4890 4929])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSetOrReplaceHeaderValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4947 4975]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4934 4976])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testRemoveHeaderValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4994 5016]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4981 5017])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testReplaceHeaderValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5035 5058]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5022 5059])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetHeaderValue" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5077 5096]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5064 5097])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testIsHeaderEqual" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5115 5133]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5102 5134])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetHttpStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5152 5170]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5139 5171])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSetFollowRedirect" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5189 5211]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5176 5212])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSetReturnBody" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5230 5248]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5217 5249])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSetErrorBody" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5267 5284]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5254 5285])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSetReturnStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5303 5323]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5290 5324])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [5329 5354]))                  
+                :type "class")
+                nil [694 5357])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("UFResponseTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5391 5406]))                  
+                :type "int")
+                nil [5359 5407])
+            ("main" function (:type "int") nil [5410 5461]))          
+    :file "UFResponseTest.cc"
+    :pointmax 5463
+    :fsize 5462
+    :lastmodtime '(20550 21243)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "UFTest.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cppunit/TestFixture.h" include (:system-flag t) nil [1 33])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [34 78])
+            ("cppunit/TestCase.h" include (:system-flag t) nil [79 108])
+            ("cppunit/extensions/TestFactoryRegistry.h" include (:system-flag t) nil [109 160])
+            ("cppunit/TextTestRunner.h" include (:system-flag t) nil [161 196])
+            ("cppunit/ui/text/TestRunner.h" include (:system-flag t) nil [197 236])
+            ("cppunit/TestRunner.h" include (:system-flag t) nil [237 268])
+            ("cppunit/XmlOutputter.h" include (:system-flag t) nil [269 302])
+            ("cppunit/TextOutputter.h" include (:system-flag t) nil [303 337])
+            ("cppunit/TestListener.h" include (:system-flag t) nil [338 371])
+            ("cppunit/TestResult.h" include (:system-flag t) nil [372 403])
+            ("cppunit/BriefTestProgressListener.h" include (:system-flag t) nil [404 450])
+            ("cppunit/portability/Stream.h" include (:system-flag t) nil [451 490])
+            ("ostream" include (:system-flag t) nil [491 509])
+            ("XMLOUTPUTDIR" variable (:constant-flag t) nil [519 531])
+            ("CppUnit" using (:type ("CppUnit" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [545 569])
+            ("UFTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [620 627])
+                    ("runTest" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("testNameOrig" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [656 689]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [637 1953]))                  
+                :type "class")
+                nil [571 1957]))          
+    :file "UFTest.h"
+    :pointmax 1959
+    :fsize 1958
+    :lastmodtime '(20550 21243)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("XMLOUTPUTDIR" . ((string "\"XMLOUTPUT\"" 532 . 543)))
+          )
+
+    )
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("SRCTOP" variable (:default-value ("$(CURDIR)/../../..")) nil [1 30])
+            ("$(CFG)/Make.defs" include nil nil [190 215])
+            ("$(SRCTOP)/build/Makefile.defs" include nil nil [215 253])
+            ("USE_OSE" variable (:default-value ("no")) nil [257 278])
+            ("LIB_NAME" variable (:default-value ("UFCommonTest")) nil [279 310])
+            ("EXETARGET" variable (:default-value ("UFResponseTest" "UFRequestTest" "PluginStorageTest")) nil [311 377])
+            ("FW_INCLUDES" variable (:default-value ("-I../../../framework/base/include" "-I../../../framework/zookeeper/mt/include")) nil [381 500])
+            ("WARN" variable (:default-value ("-Werror" "-Wall")) nil [503 536])
+            ("CXXFLAGS" variable (:default-value ("-O0" "-g" "-DUNIT_TEST")) nil [548 583])
+            ("LINC" variable (:default-value ("-I/home/y/include" "-I../uff_plugin_stub/" "-I../src/uff_common/" "-I../../src/" "-I../../include")) nil [584 693])
+            ("LLDLIBS" variable (:default-value ("-L../uff_plugin_stub/" "-L../src/uff_common/" "-L../../../src/" "-L/usr/local/lib" "-L/home/y/lib")) nil [694 805])
+            ("LLDLIBS" variable (:default-value ("-lUFCommonStub_p")) nil [1046 1082])
+            ("LLDLIBS" variable (:default-value ("-lUFCommon_p")) nil [1082 1114])
+            ("LLDLIBS" variable (:default-value ("-lUFCommonStub")) nil [1119 1153])
+            ("LLDLIBS" variable (:default-value ("-lUFCommon")) nil [1153 1183])
+            ("LLDLIBS" variable (:default-value ("-Wl,-Bdynamic" "-lufconf" "-lufcore" "-lufhttpparser" "-lufhttpremap" "-lufstateserver" "-lufutil" "-lcppunit" "-lz" "-lysys")) nil [1190 1317])
+            ("LRUN_PATH" variable (:default-value ("$(addsuffix /$(OBJDIR),$(FW_LIBS_LOC))")) nil [1321 1379])
+            ("LRUN_PATH" variable (:default-value ("../uff_plugin_stub/$(OBJDIR)" "../src/uff_common/$(OBJDIR)" "../../src/$(OBJDIR)" "/home/y/lib")) nil [1379 1530])
+            ("$(CFG)/Make.rules" include nil nil [1655 1681])
+            ("$(SRCTOP)/build/Makefile.rules" include nil nil [1681 1720])
+            ("$(SRCTOP)/build/Makefile.ut" include nil nil [1720 1756])
+            ("test" function (:arguments ("$(OEXE)" "$(ORUN)")) nil [1816 1840]))          
+    :file "Makefile"
+    :pointmax 1860
+    :fsize 1859
+    :lastmodtime '(20614 11791)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!router!uff_plugin!uff_plugin_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

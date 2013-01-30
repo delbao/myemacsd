@@ -1,0 +1,29 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)" "-I$(top_srcdir)/ufcache/mem/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc")) nil [1 141])
+            ("pkglibexecdir" variable (:default-value ("$(libexecdir)/$(PACKAGE)")) nil [142 183])
+            ("pkglibexec_LTLIBRARIES" variable (:default-value ("libufmemcache.la")) nil [183 244])
+            ("source_files" variable (:default-value ("CacheMgmt.C" "CacheObject.C" "CachePartitionStorage.C")) nil [244 311])
+            ("libufmemcache_la_SOURCES" variable (:default-value ("$(source_files)")) nil [312 355])
+            ("libufmemcache_la_LIBADD" variable (:default-value ("$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [355 478])
+            ("libufmemcache_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [479 524])
+            ("libufmemcache_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [524 600])
+            ("libufmemcache_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [600 680])
+            ("libufmemcache_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [680 730])
+            ("libufcache_p_la_LIBADD" variable (:default-value ("$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [730 856]))          
+    :file "Makefile.am"
+    :pointmax 856
+    :fsize 855
+    :lastmodtime '(20625 28925)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!ufcache!mem!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

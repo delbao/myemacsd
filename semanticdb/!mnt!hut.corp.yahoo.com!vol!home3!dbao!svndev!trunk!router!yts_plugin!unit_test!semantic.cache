@@ -1,0 +1,454 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("SRCTOP" variable (:default-value ("$(shell pwd)/../../..")) nil [1 33])
+            ("$(CFG)/Make.defs" include nil nil [79 104])
+            ("$(SRCTOP)/build/Makefile.defs" include nil nil [104 142])
+            ("USE_OSE" variable (:default-value ("no")) nil [143 161])
+            ("FILTER_OUT_THESE_TESTS" variable nil nil [161 188])
+            ("EXETARGET" variable (:default-value ("$(patsubst %.cc,%,$(filter-out $(FILTER_OUT_THESE_TESTS),$(wildcard Test*.cc)))")) nil [188 284])
+            ("EXCLUDE_TESTS" variable nil nil [284 300])
+            ("LIB_NAME" variable (:default-value ("dhtroutertestHelper")) nil [301 339])
+            ("SHARED_OBJS" variable (:default-value ("INKFake")) nil [339 388])
+            ("CXXSRC" variable (:default-value ("$(addsuffix .cc, $(SHARED_OBJS) )")) nil [388 439])
+            ("FW_INCLUDES" variable (:default-value ("-I../../../framework/base/include" "-I../../../framework/zookeeper/mt/include")) nil [440 559])
+            ("LINC" variable (:default-value ("-I/home/y/include" "-I../src" "-I../../src" "-I/usr/include" "-I/usr/local/include" "$(FW_INCLUDES)")) nil [559 664])
+            ("LINC" variable (:default-value ("-I/home/y/include/yicu")) nil [691 730])
+            ("FW_LIBS_LOC" variable (:default-value ("$(SRCTOP)/framework/base/src")) nil [808 856])
+            ("FW_LIBS_LOC" variable (:default-value ("$(SRCTOP)/framework/zookeeper/mt/src")) nil [856 912])
+            ("LRUN_PATH" variable (:default-value ("$(addsuffix /$(OBJDIR),$(FW_LIBS_LOC))")) nil [913 971])
+            ("LLDLIBS" variable (:default-value ("$(addprefix -L,$(FW_LIBS_LOC))")) nil [1007 1053])
+            ("LLDLIBS" variable (:default-value ("-L/home/y/lib" "-L../src" "-L../../src" "-L/usr/local/lib" "-lcurl" "-lcppunit" "-ldl" "-lycore++" "-lmdbm" "-lymonsb" "-lyconfig" "-ldhtZkMT" "-ldhtZkMTCore" "-ldhtFrameworkBase" "-ldhtFwTestPreload" "-lytsSherpaPlugin")) nil [1053 1516])
+            ("LLDLIBS" variable (:default-value ("-l$(LIB_NAME)_p" "-lDhtRouter_p")) nil [1536 1626])
+            ("LLDLIBS" variable (:default-value ("-l$(LIB_NAME)" "-lDhtRouter")) nil [1631 1716])
+            ("LRUN_PATH" variable (:default-value ("../src/$(OBJDIR)" "../../src/$(OBJDIR)" "$(OBJDIR)")) nil [1755 1821])
+            ("WARN" variable (:default-value ("-Werror" "-Wall")) nil [1861 1894])
+            ("LCLEAN" variable (:default-value ("*.valout*" "*~" "_start_yca_client_certs")) nil [1894 1950])
+            ("OPTFLAG" variable (:default-value ("-ggdb")) nil [2003 2019])
+            ("OPTFLAG" variable (:default-value ("-O2")) nil [2051 2066])
+            ("CXXFLAGS" variable (:default-value ("-O0" "-g" "-DUNIT_TEST")) nil [2108 2139])
+            ("UNIT_TEST_SETTINGS" variable (:default-value ("ROOT=.")) nil [2146 2176])
+            ("$(CFG)/Make.rules" include nil nil [2177 2203])
+            ("$(SRCTOP)/build/Makefile.rules" include nil nil [2203 2242])
+            ("$(SRCTOP)/build/Makefile.ut" include nil nil [2242 2278])
+            ("GCOV_REPORT_DEPS" variable nil nil [2489 2507])
+            ("test" function (:arguments ("$(OEXE)" "$(ORUN)")) nil [2508 2536])
+            ("valcheck" function (:arguments ("$(OVAL)")) nil [2536 2556])
+            ("test" function (:arguments ("$(OEXE)" "$(ORUN)")) nil [2557 2580])
+            ("_start_yca_client_certs" function (:arguments ("yinst" "start" "yca_client_certs")) nil [2581 2635]))          
+    :file "Makefile"
+    :pointmax 2636
+    :fsize 2635
+    :lastmodtime '(20550 21241)
+    :unmatched-syntax '((symbol 74 . 77) (symbol 67 . 73) (bol 67 . 67) (symbol 43 . 66) (punctuation 41 . 42) (punctuation 40 . 41) (symbol 33 . 36) (bol 33 . 33))
+    )
+   (semanticdb-table "INKFake.hh"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__INK_FAKE_H__" variable (:constant-flag t) nil [248 262])
+            ("InkAPI.h" include nil nil [264 283])
+            ("string" include (:system-flag t) nil [284 301])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [303 323])
+            ("FakeINKHttpTxn" type
+               (:prototype t
+                :type "class")
+                nil [341 362])
+            ("FakeINKUtils" type
+               (:typemodifiers ("extern" "\"C\"")
+                :type "class"
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [599 606])
+                    ("TXN_FAIL_CLIENT_REQ_GET" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("INKHttpTxn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [611 659])
+                    ("TXN_FAIL_SERVER_REQ_GET" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("INKHttpTxn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [717 765])
+                    ("TXN_SIMULATE_FWDOP_DHT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("INKHttpTxn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [823 870])
+                    ("TXN_SIMULATE_FWDOP_DOT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("INKHttpTxn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [953 1000])
+                    ("TXN_DEFAULT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("INKHttpTxn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1058 1094])
+                    ("FWDOP_DHT_REMOTE_OP" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1153 1192])
+                    ("FWDOP_DOT_REMOTE_OP" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1197 1236])
+                    ("FWDOP_REMOTE_REGION" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1241 1280])
+                    ("FWDOP_LOCAL_REGION" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1285 1323])
+                    ("clear" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1329 1349])
+                    ("fakeINKLastError" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1442 1482])
+                    ("fakeINKDebug" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1487 1523])
+                    ("fakeINKHttpTxnErrorBodyGet" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("length" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1574 1586]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [1528 1587])
+                    ("fakeINKServerSetState" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("state" variable (:type ("INKServerState" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1642 1663]))                          
+                        :type ("INKReturnCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1606 1664])
+                    ("fakeINKVerifyMimeField" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("fieldName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2197 2221])
+                            ("fieldValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2222 2247])
+                            ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [2248 2256]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2162 2257])
+                    ("fakeINKHttpTxnGetHttpRetStatus" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("INKHttpStatus" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2613 2667])
+                    ("fakeINKHttpTxnGetHttpRetBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3008 3060])
+                    ("setHttpType" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("type" variable (:type ("INKHttpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3093 3110]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3069 3128])
+                    ("txn_" variable
+                       (:typemodifiers ("static")
+                        :type ("FakeINKHttpTxn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3435 3462])
+                    ("hdrStatus_" variable
+                       (:typemodifiers ("static")
+                        :type ("INKHttpStatus" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3654 3686])
+                    ("hdrReason_" variable
+                       (:typemodifiers ("static")
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3691 3716])
+                    ("type_" variable
+                       (:typemodifiers ("static")
+                        :type ("INKHttpType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3721 3746])
+                    ("urlPath_" variable
+                       (:typemodifiers ("static")
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3938 3961])
+                    ("urlQuery_" variable
+                       (:typemodifiers ("static")
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3966 3990])
+                    ("urlHost_" variable
+                       (:typemodifiers ("static")
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3995 4018]))                  )
+                (reparse-symbol extern-c-contents) [574 4023])
+            ("C" extern (:members 
+              ( ("FakeINKUtils" type
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "class"
+                    :members 
+                      ( ("public" label nil (reparse-symbol classsubparts) [599 606])
+                        ("TXN_FAIL_CLIENT_REQ_GET" variable
+                           (:typemodifiers ("static")
+                            :constant-flag t
+                            :type ("INKHttpTxn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [611 659])
+                        ("TXN_FAIL_SERVER_REQ_GET" variable
+                           (:typemodifiers ("static")
+                            :constant-flag t
+                            :type ("INKHttpTxn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [717 765])
+                        ("TXN_SIMULATE_FWDOP_DHT" variable
+                           (:typemodifiers ("static")
+                            :constant-flag t
+                            :type ("INKHttpTxn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [823 870])
+                        ("TXN_SIMULATE_FWDOP_DOT" variable
+                           (:typemodifiers ("static")
+                            :constant-flag t
+                            :type ("INKHttpTxn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [953 1000])
+                        ("TXN_DEFAULT" variable
+                           (:typemodifiers ("static")
+                            :constant-flag t
+                            :type ("INKHttpTxn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [1058 1094])
+                        ("FWDOP_DHT_REMOTE_OP" variable
+                           (:pointer 1
+                            :typemodifiers ("static")
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol classsubparts) [1153 1192])
+                        ("FWDOP_DOT_REMOTE_OP" variable
+                           (:pointer 1
+                            :typemodifiers ("static")
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol classsubparts) [1197 1236])
+                        ("FWDOP_REMOTE_REGION" variable
+                           (:pointer 1
+                            :typemodifiers ("static")
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol classsubparts) [1241 1280])
+                        ("FWDOP_LOCAL_REGION" variable
+                           (:pointer 1
+                            :typemodifiers ("static")
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol classsubparts) [1285 1323])
+                        ("clear" function
+                           (:prototype-flag t
+                            :typemodifiers ("static")
+                            :type "void")
+                            (reparse-symbol classsubparts) [1329 1349])
+                        ("fakeINKLastError" function
+                           (:prototype-flag t
+                            :typemodifiers ("static")
+                            :constant-flag t
+                            :type ("string" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [1442 1482])
+                        ("fakeINKDebug" function
+                           (:prototype-flag t
+                            :typemodifiers ("static")
+                            :constant-flag t
+                            :type ("string" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [1487 1523])
+                        ("fakeINKHttpTxnErrorBodyGet" function
+                           (:prototype-flag t
+                            :pointer 1
+                            :typemodifiers ("static")
+                            :constant-flag t
+                            :arguments 
+                              ( ("length" variable
+                                   (:pointer 1
+                                    :type "int")
+                                    (reparse-symbol arg-sub-list) [1574 1586]))                              
+                            :type "char")
+                            (reparse-symbol classsubparts) [1528 1587])
+                        ("fakeINKServerSetState" function
+                           (:prototype-flag t
+                            :arguments 
+                              ( ("state" variable (:type ("INKServerState" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1642 1663]))                              
+                            :type ("INKReturnCode" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [1606 1664])
+                        ("fakeINKVerifyMimeField" function
+                           (:prototype-flag t
+                            :typemodifiers ("static")
+                            :arguments 
+                              ( ("fieldName" variable
+                                   (:reference 1
+                                    :constant-flag t
+                                    :type ("string" type (:type "class") nil nil))
+                                    (reparse-symbol arg-sub-list) [2197 2221])
+                                ("fieldValue" variable
+                                   (:reference 1
+                                    :constant-flag t
+                                    :type ("string" type (:type "class") nil nil))
+                                    (reparse-symbol arg-sub-list) [2222 2247])
+                                ("idx" variable (:type "int") (reparse-symbol arg-sub-list) [2248 2256]))                              
+                            :type "bool")
+                            (reparse-symbol classsubparts) [2162 2257])
+                        ("fakeINKHttpTxnGetHttpRetStatus" function
+                           (:prototype-flag t
+                            :typemodifiers ("static")
+                            :type ("INKHttpStatus" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [2613 2667])
+                        ("fakeINKHttpTxnGetHttpRetBody" function
+                           (:prototype-flag t
+                            :typemodifiers ("static")
+                            :constant-flag t
+                            :type ("string" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [3008 3060])
+                        ("setHttpType" function
+                           (:typemodifiers ("static")
+                            :arguments 
+                              ( ("type" variable (:type ("INKHttpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3093 3110]))                              
+                            :type "void")
+                            (reparse-symbol classsubparts) [3069 3128])
+                        ("txn_" variable
+                           (:typemodifiers ("static")
+                            :type ("FakeINKHttpTxn" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [3435 3462])
+                        ("hdrStatus_" variable
+                           (:typemodifiers ("static")
+                            :type ("INKHttpStatus" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [3654 3686])
+                        ("hdrReason_" variable
+                           (:typemodifiers ("static")
+                            :type ("string" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [3691 3716])
+                        ("type_" variable
+                           (:typemodifiers ("static")
+                            :type ("INKHttpType" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [3721 3746])
+                        ("urlPath_" variable
+                           (:typemodifiers ("static")
+                            :type ("string" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [3938 3961])
+                        ("urlQuery_" variable
+                           (:typemodifiers ("static")
+                            :type ("string" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [3966 3990])
+                        ("urlHost_" variable
+                           (:typemodifiers ("static")
+                            :type ("string" type (:type "class") nil nil))
+                            (reparse-symbol classsubparts) [3995 4018]))                      )
+                    (reparse-symbol extern-c-contents) [574 4023]))              ) nil [532 4045])
+            ("FakeINKHttpTxn" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4203 4210])
+                    ("MimeField" type
+                       (:typedef ("pair" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil)
+                                  ("vector" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "pair"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4213 4261])
+                    ("MimeFieldVec" type
+                       (:typedef ("vector" type
+                             (:template-specifier 
+                                ( ("MimeField" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "vector"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4264 4304])
+                    ("MimeFieldItr" type
+                       (:typedef ("MimeFieldVec::iterator" type (:type "class") nil nil)
+                        :superclasses "MimeFieldVec::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4307 4351])
+                    ("FakeINKHttpTxn" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("FakeINKHttpTxn" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4355 4372])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4375 4388])
+                    ("setUrl" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("url" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4494 4512]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4482 4513])
+                    ("retStatus_" variable (:type ("INKHttpStatus" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4518 4543])
+                    ("retBody_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4546 4562])
+                    ("enabled_" variable (:type "bool") (reparse-symbol classsubparts) [4566 4580])
+                    ("followRedirect" variable (:type "int") (reparse-symbol classsubparts) [4654 4673])
+                    ("timeout" variable (:type "int") (reparse-symbol classsubparts) [4676 4688])
+                    ("scheme_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4841 4856])
+                    ("user_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4859 4872])
+                    ("pwd_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4875 4887])
+                    ("host_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4890 4903])
+                    ("port_" variable (:type "int") (reparse-symbol classsubparts) [4906 4916])
+                    ("path_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4919 4932])
+                    ("params_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4935 4950])
+                    ("query_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4953 4967])
+                    ("fragment_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4970 4987])
+                    ("args_" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("void" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4993 5013])
+                    ("mimeFields_" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("MimeField" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5066 5097]))                  
+                :type "class")
+                nil [4180 5241]))          
+    :file "INKFake.hh"
+    :pointmax 5404
+    :fsize 5403
+    :lastmodtime '(20550 21241)
+    :unmatched-syntax '((symbol 1599 . 1605) (STATIC 1592 . 1598) (string 371 . 512) (symbol 365 . 370) (punctuation 364 . 365))
+    :lexical-table 
+        '(("__INK_FAKE_H__")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndev!trunk!router!yts_plugin!unit_test!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

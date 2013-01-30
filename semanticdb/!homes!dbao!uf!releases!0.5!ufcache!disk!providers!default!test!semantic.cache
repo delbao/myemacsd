@@ -1,0 +1,36 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("check_PROGRAMS" variable (:default-value ("testdefaultdiskstore")) nil [53 350])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [382 408])
+            ("LDADD" variable (:default-value ("$(top_builddir)/ufcache/disk/api/libufdiskcache_p.la" "$(top_builddir)/ufcache/disk/store/src/libufdiskstore_p.la" "$(top_builddir)/ufcache/disk/providers/default/src/libufdefaultdiskstore_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [408 720])
+            ("AM_CXXFLAGS" variable (:default-value ("-Wconversion")) nil [721 748])
+            ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)" "-I$(top_srcdir)/ufcache/disk/inc" "-I$(top_srcdir)/ufcache/disk/store/inc" "-I$(top_srcdir)/ufcache/disk/providers/default/inc" "-I$(top_srcdir)/ufcore/src" "-I$(top_srcdir)/ufcore/inc")) nil [749 980])
+            ("AM_LDFLAGS" variable (:default-value ("-lcppunit" "-laio")) nil [981 1010])
+            ("testdefaultdiskstore_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDefaultStoreFactory.C")) nil [1011 1108])
+            ("testdefaultprovider_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDefaultProvider.C")) nil [1108 1200])
+            ("testdefaultdiskentry_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDefaultDiskStoreEntry.C")) nil [1200 1299])
+            ("testaiofile_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testAIOFile.C")) nil [1299 1375])
+            ("testcachestorage_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDiskCacheStorage.C")) nil [1375 1465])
+            ("testcacheconf_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDiskCacheConf.C")) nil [1465 1549])
+            ("testdefaultstorescavenger_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDefaultStoreScavenger.C")) nil [1549 1653])
+            ("testdiskobjectmanager_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDiskObjectManager.C")) nil [1653 1749])
+            ("testcachepartitiondigest_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testCachePartitionDigest.C")) nil [1749 1851])
+            ("testufsemaphore_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFSemaphore.C")) nil [1851 1935])
+            ("testcachestats_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDiskCacheStats.C")) nil [1935 2021])
+            ("testcoldobjectsmanager_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testColdObjectsManager.C")) nil [2021 2119]))          
+    :file "Makefile.am"
+    :pointmax 2119
+    :fsize 2118
+    :lastmodtime '(20625 28923)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!ufcache!disk!providers!default!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

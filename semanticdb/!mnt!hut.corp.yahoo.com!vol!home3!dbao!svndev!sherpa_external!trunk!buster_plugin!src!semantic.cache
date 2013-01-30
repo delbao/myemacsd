@@ -1,0 +1,620 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "RecordData.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__RECORD_DATA_H" variable (:constant-flag t) nil [115 130])
+            ("map" include (:system-flag t) nil [132 146])
+            ("string" include (:system-flag t) nil [147 164])
+            ("vector" include (:system-flag t) nil [165 182])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [183 214])
+            ("json/json.h" include (:system-flag t) nil [215 237])
+            ("BrokerInputsValidator" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [298 305])
+                    ("BrokerInputsValidator" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("BrokerInputsValidator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [310 334])
+                    ("BrokerInputsValidator" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [339 364])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [370 383])
+                    ("setGotYdht" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [422 431]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [406 432])
+                    ("gotYdht" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [437 458])
+                    ("setGotPrevRecords" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [486 495]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [463 496])
+                    ("gotPrevRecords" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [501 529])
+                    ("setGotNotificationPayload" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [565 574]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [534 575])
+                    ("gotNotificationPayload" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [580 616])
+                    ("setGotRequiredFields" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [647 656]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [621 657])
+                    ("gotRequiredFields" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [662 693])
+                    ("private" label nil (reparse-symbol classsubparts) [696 704])
+                    ("gotYdht_" variable (:type "bool") (reparse-symbol classsubparts) [710 724])
+                    ("gotPrevRecords_" variable (:type "bool") (reparse-symbol classsubparts) [729 750])
+                    ("gotNotificationPayload_" variable (:type "bool") (reparse-symbol classsubparts) [755 784])
+                    ("gotRequiredFields_" variable (:type "bool") (reparse-symbol classsubparts) [789 813]))                  
+                :type "class")
+                nil [268 817])
+            ("JsonInputsString" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1016 1023])
+                    ("JsonInputsString" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("JsonInputsString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1028 1047])
+                    ("JsonInputsString" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1052 1072])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1078 1091])
+                    ("setString" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("strptr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1112 1131])
+                            ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1132 1143]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1097 1144])
+                    ("setStrPtr" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("strptr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1164 1183]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1149 1184])
+                    ("setLength" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1204 1215]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1189 1216])
+                    ("setJsonObj" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jsonStr" variable
+                               (:pointer 1
+                                :type ("json_object" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1237 1258]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1221 1259])
+                    ("toString" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1264 1293])
+                    ("private" label nil (reparse-symbol classsubparts) [1295 1303])
+                    ("strobj_" variable
+                       (:pointer 1
+                        :type ("json_object" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1308 1332])
+                    ("strPtr_" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1430 1454])
+                    ("strLen_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1500 1524])
+                    ("useJsonC_" variable (:type "bool") (reparse-symbol classsubparts) [1571 1597]))                  
+                :type "class")
+                nil [991 1671])
+            ("BrokerInputsField" type
+               (:prototype t
+                :type "class")
+                nil [1673 1697])
+            ("BrokerInputsFieldPtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("BrokerInputsField" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::shared_ptr"
+                :type "typedef")
+                nil [1699 1765])
+            ("MapStrFields" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("BrokerInputsFieldPtr" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [1766 1832])
+            ("MapStrFieldsPtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("MapStrFields" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::shared_ptr"
+                :type "typedef")
+                nil [1833 1889])
+            ("MapStrFieldsMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("MapStrFieldsPtr" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [1890 1954])
+            ("BrokerInputsField" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2023 2030])
+                    ("BrokerInputsField" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("BrokerInputsField" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2035 2055])
+                    ("BrokerInputsField" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2060 2081])
+                    ("create" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("BrokerInputsFieldPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2087 2124])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2130 2143])
+                    ("getValue" function
+                       (:prototype-flag t
+                        :type ("JsonInputsString" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2166 2195])
+                    ("getValueStr" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2200 2232])
+                    ("setTimestamp" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2255 2278]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2237 2279])
+                    ("getTimestamp" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2284 2324])
+                    ("setIncrement" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2347 2360]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2329 2361])
+                    ("getIncrement" function
+                       (:prototype-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2366 2396])
+                    ("setExpireTime" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2420 2433]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2401 2434])
+                    ("getExpireTime" function
+                       (:prototype-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2439 2470])
+                    ("setValueExists" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [2520 2529]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2500 2530])
+                    ("valueExists" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2535 2560])
+                    ("setValueIsNull" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [2585 2594]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2565 2595])
+                    ("valueIsNull" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2600 2625])
+                    ("setTimestampExists" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [2654 2663]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2630 2664])
+                    ("timestampExists" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2669 2698])
+                    ("setIncrementExists" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [2727 2736]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2703 2737])
+                    ("incrementExists" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2742 2771])
+                    ("setExpireExists" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [2797 2806]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2776 2807])
+                    ("expireExists" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2812 2838])
+                    ("private" label nil (reparse-symbol classsubparts) [2839 2847])
+                    ("value_" variable (:type ("JsonInputsString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2853 2877])
+                    ("timestamp_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2882 2910])
+                    ("increment_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2919 2947])
+                    ("expiretime_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2952 2981])
+                    ("valueExists_" variable (:type "bool") (reparse-symbol classsubparts) [3011 3041])
+                    ("valueIsNull_" variable (:type "bool") (reparse-symbol classsubparts) [3046 3076])
+                    ("timestampExists_" variable (:type "bool") (reparse-symbol classsubparts) [3081 3115])
+                    ("incrementExists_" variable (:type "bool") (reparse-symbol classsubparts) [3120 3154])
+                    ("expireExists_" variable (:type "bool") (reparse-symbol classsubparts) [3159 3190]))                  
+                :type "class")
+                nil [1997 3193])
+            ("BrokerMetadata" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3255 3262])
+                    ("BrokerMetadata" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("BrokerMetadata" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3267 3284])
+                    ("BrokerMetadata" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3289 3307])
+                    ("setIntMeta" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3329 3352])
+                            ("val" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3353 3366]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3313 3367])
+                    ("setStrMeta" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3388 3411])
+                            ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3412 3435]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3372 3436])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3442 3455])
+                    ("gotExpireTime" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3461 3488])
+                    ("gotSeqId" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3493 3515])
+                    ("gotExpiryTimestamp" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3520 3552])
+                    ("gotDeleteTimestamp" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3557 3589])
+                    ("gotTombstone" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3594 3620])
+                    ("isTombstone" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3625 3650])
+                    ("gotModTime" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3655 3679])
+                    ("gotMinorConflict" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3684 3714])
+                    ("gotMajorConflict" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3719 3749])
+                    ("getSeqId" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3755 3791])
+                    ("getExpireTime" function
+                       (:prototype-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3796 3827])
+                    ("getExpiryTimestamp" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3832 3878])
+                    ("getDeleteTimestamp" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3883 3929])
+                    ("getTombstone" function
+                       (:prototype-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3934 3964])
+                    ("getMinorConflict" function
+                       (:prototype-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3969 4003])
+                    ("getMajorConflict" function
+                       (:prototype-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4008 4042])
+                    ("getModTime" function
+                       (:prototype-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4047 4075])
+                    ("private" label nil (reparse-symbol classsubparts) [4077 4085])
+                    ("metaIntMap_" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("uint32_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4091 4138])
+                    ("metaStrMap_" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4143 4190])
+                    ("gotStrMapKey" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4214 4237]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4196 4244])
+                    ("gotIntMapKey" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4267 4290]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4249 4297])
+                    ("getStrMapData" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4340 4363]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4307 4370])
+                    ("getIntMapData" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4398 4421]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4375 4428]))                  
+                :type "class")
+                nil [3232 4432])
+            ("BrokerInputsRecord" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4899 4906])
+                    ("BrokerInputsRecord" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("BrokerInputsRecord" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4911 4932])
+                    ("BrokerInputsRecord" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4937 4959])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4965 4978])
+                    ("clearFields" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fields" variable
+                               (:reference 1
+                                :type ("MapStrFieldsPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5000 5024]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4983 5025])
+                    ("setGotMetadata" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [5068 5077]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5048 5078])
+                    ("gotMetadata" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5083 5108])
+                    ("setGotFields" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type "bool") (reparse-symbol arg-sub-list) [5131 5140]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5113 5141])
+                    ("gotFields" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5146 5169])
+                    ("setSource" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5194 5217]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5179 5218])
+                    ("getSource" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5223 5260])
+                    ("getMetadata" function
+                       (:prototype-flag t
+                        :type ("BrokerMetadata" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5265 5295])
+                    ("getMetadata" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("BrokerMetadata" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5300 5342])
+                    ("getFieldsMap" function
+                       (:prototype-flag t
+                        :type ("MapStrFieldsMap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5347 5379])
+                    ("getFieldsMap" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("MapStrFieldsMap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5384 5428])
+                    ("getFieldsArray" function
+                       (:prototype-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5433 5476])
+                    ("getFieldsArray" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5481 5536])
+                    ("private" label nil (reparse-symbol classsubparts) [5538 5546])
+                    ("metadata_" variable (:type ("BrokerMetadata" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5552 5580])
+                    ("fieldsMap_" variable (:type ("MapStrFieldsMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5609 5638])
+                    ("fieldsArray_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5725 5763])
+                    ("source_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5800 5826])
+                    ("gotMetadata_" variable (:type "bool") (reparse-symbol classsubparts) [5914 5945])
+                    ("gotFields_" variable (:type "bool") (reparse-symbol classsubparts) [5950 5979]))                  
+                :type "class")
+                nil [4872 5982])
+            ("VecBrokerRecordPtr" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("BrokerInputsRecord" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [5983 6045]))          
+    :file "RecordData.h"
+    :pointmax 6241
+    :fsize 6240
+    :lastmodtime '(20550 21458)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__RECORD_DATA_H")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndev!sherpa_external!trunk!buster_plugin!src!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

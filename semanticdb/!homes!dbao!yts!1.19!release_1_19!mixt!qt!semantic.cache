@@ -1,0 +1,98 @@
+;; Object qt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "qt/"
+  :tables (list 
+   (semanticdb-table "Main.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("InkAPIWrapper.h" include nil nil [1 27])
+            ("MixtAPIInternal.h" include nil nil [29 57])
+            ("MixtAPIPrivate.h" include nil nil [58 85])
+            ("MixtDebugLog.h" include nil nil [87 112])
+            ("SMUtilsMixt.h" include nil nil [113 137])
+            ("RTSPAcceptor.h" include nil nil [139 164])
+            ("HTTPDispatchRTSP.h" include nil nil [165 194])
+            ("HTTPAcceptorQT.h" include nil nil [195 222])
+            ("MIXT-version.h" include nil nil [225 250])
+            ("DEBUG_TAG" variable (:constant-flag t) nil [277 286])
+            ("g_MixtAPIPrivate" variable
+               (:pointer 1
+                :type ("MixtAPIPrivate" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [300 340])
+            ("RTSP_PORT" variable (:constant-flag t) nil [397 406])
+            ("ConfigMixt.h" include nil nil [493 516])
+            ("IServerMixt.h" include nil nil [517 541])
+            ("g_mixtConfig" variable
+               (:pointer 1
+                :type ("MixtConfig" type (:type "class") nil nil))
+                nil [542 574])
+            ("create_server" function
+               (:pointer 1
+                :arguments 
+                  ( ("id" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [602 614])
+                    ("m" variable
+                       (:pointer 1
+                        :type ("IMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [615 625])
+                    ("c" variable
+                       (:pointer 1
+                        :type ("IStateMixt" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [633 647]))                  
+                :type ("IServerMixt" type (:type "class") nil nil))
+                nil [575 662])
+            ("create_mixt_packet" function
+               (:pointer 1
+                :type ("MixtPacket" type
+                     (:prototype t
+                      :type "class")
+                      nil nil))
+                nil [663 717])
+            ("mixt_get_media_type" function
+               (:pointer 1
+                :type "char")
+                nil [718 763])
+            ("g_client_id_" variable (:type ("vink32" type (:type "class") nil nil)) nil [766 790])
+            ("INKPluginInit" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [828 837])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [838 857]))                  )
+                (reparse-symbol extern-c-contents) [809 1843])
+            ("C" extern (:members 
+              ( ("INKPluginInit" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [828 837])
+                        ("argv" variable
+                           (:pointer 1
+                            :dereference 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [838 857]))                      )
+                    (reparse-symbol extern-c-contents) [809 1843]))              ) nil [792 1845]))          
+    :file "Main.cc"
+    :pointmax 1846
+    :fsize 1845
+    :lastmodtime '(20632 41356)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DEBUG_TAG" . ((string "\"rtsp-main\"" 287 . 298)))
+          ("RTSP_PORT" . ((number "35278" 407 . 412)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!mixt!qt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,542 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "BrokerMessage.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/BrokerMessage.h" include nil nil [60 90])
+            ("dht/UtilityBuffer.h" include nil nil [91 121])
+            ("dht/CompressionUtils.h" include nil nil [122 155])
+            ("dht/LogUtils.h" include nil nil [156 181])
+            ("log4cxx/logger.h" include (:system-flag t) nil [182 209])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cxx::LoggerPtr" type (:type "class") nil nil))
+                nil [211 302])
+            ("BrokerMessage::API_VERSION" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [590 641])
+            ("BrokerMessage::HEADER_API_VERSION" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [713 794])
+            ("BrokerMessage::HEADER_BAD_REGION" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [795 878])
+            ("BrokerMessage::HEADER_CLIENT_APP_ID" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [879 961])
+            ("BrokerMessage::HEADER_CHECKSUM" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [962 1045])
+            ("BrokerMessage::HEADER_COMPRESSED" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1046 1129])
+            ("BrokerMessage::HEADER_COPY_REGIONS" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1130 1213])
+            ("BrokerMessage::HEADER_DESTINATION_REGION" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1214 1297])
+            ("BrokerMessage::HEADER_DESTINATION_SU" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1298 1380])
+            ("BrokerMessage::HEADER_GOOD_REGION" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1381 1464])
+            ("BrokerMessage::HEADER_INDEX_RECORD" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1465 1548])
+            ("BrokerMessage::HEADER_INDEX_TABLE" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1549 1632])
+            ("BrokerMessage::HEADER_IS_MAJOR_OVERRIDE" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1633 1717])
+            ("BrokerMessage::HEADER_NEW_JSON_PARSER" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1718 1801])
+            ("BrokerMessage::HEADER_NOTIFICATION" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1802 1885])
+            ("BrokerMessage::HEADER_NOTIFICATION_PAYLOAD" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1886 1969])
+            ("BrokerMessage::HEADER_OVERRIDE_ISSUE_TIMESTAMP" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1970 2054])
+            ("BrokerMessage::HEADER_PUBLISHER_REGION" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2055 2138])
+            ("BrokerMessage::HEADER_PUBLISH_TIME" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2139 2222])
+            ("BrokerMessage::HEADER_PUBLISHER" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2223 2305])
+            ("BrokerMessage::HEADER_RECIPIENTS" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2306 2389])
+            ("BrokerMessage::HEADER_RECORD" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2390 2472])
+            ("BrokerMessage::HEADER_REPUBLISH" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2473 2557])
+            ("BrokerMessage::HEADER_RESTORE_ID" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2558 2642])
+            ("BrokerMessage::HEADER_SEQUENCE_ID" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2647 2729])
+            ("BrokerMessage::HEADER_SNAPSHOT_ID" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2730 2813])
+            ("BrokerMessage::HEADER_SPLIT_ID" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2814 2897])
+            ("BrokerMessage::HEADER_SPLIT_COORDINATOR" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2902 2985])
+            ("BrokerMessage::HEADER_SPLIT_POINT" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2986 3069])
+            ("BrokerMessage::HEADER_SPLIT_LIST_OF_REGIONS" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3070 3153])
+            ("BrokerMessage::HEADER_IS_PROXY_EOT" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3154 3237])
+            ("BrokerMessage::HEADER_USE_SSL" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3238 3320])
+            ("BrokerMessage::HEADER_OBSERVED_META" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3321 3405])
+            ("BrokerMessage::HEADER_SOURCE_SU" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3406 3488])
+            ("BrokerMessage::HEADER_IS_STUB" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3489 3572])
+            ("BrokerMessage::HEADER_SU_TO_ACTIVATE" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3573 3656])
+            ("BrokerMessage::HEADER_TABLE" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3657 3739])
+            ("BrokerMessage::HEADER_TABLET" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3740 3822])
+            ("BrokerMessage::HEADER_TRIGGER" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3823 3906])
+            ("BrokerMessage::HEADER_USER_INPUT" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3907 3990])
+            ("BrokerMessage::HEADER_UNCERTAIN_RECORD_MARK_COUNTER" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3991 4074])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [4076 4096])
+            ("getHdrNames" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("hdrNames" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4131 4170]))                  
+                :type "void")
+                nil [4098 6040])
+            ("getHdrDescriptor" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("desc" variable
+                       (:reference 1
+                        :type ("HeaderDescriptor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6080 6104]))                  
+                :type "void")
+                nil [6042 8946])
+            ("BrokerMessage::CONFLICT_RESOLUTION" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [8948 9025])
+            ("BrokerMessage::MASTERED_BAD_CONFLICT" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [9026 9107])
+            ("BrokerMessage::MERGING_MAJOR_CONFLICT" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [9108 9191])
+            ("BrokerMessage::TRUE_STR" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [9193 9244])
+            ("BrokerMessage::FALSE_STR" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [9245 9298])
+            ("BrokerMessage" function
+               (:constructor-flag t
+                :parent "BrokerMessage"
+                :type ("BrokerMessage" type (:type "class") nil nil))
+                nil [9300 9429])
+            ("BrokerMessage" function
+               (:constructor-flag t
+                :parent "BrokerMessage"
+                :arguments 
+                  ( ("bmsg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9461 9487]))                  
+                :type ("BrokerMessage" type (:type "class") nil nil))
+                nil [9431 9536])
+            ("BrokerMessage" function
+               (:destructor-flag t
+                :parent "BrokerMessage"
+                :type "void")
+                nil [9538 9574])
+            ("copy" function
+               (:pointer 1
+                :parent "BrokerMessage"
+                :type ("BrokerMessage" type (:type "class") nil nil))
+                nil [9576 9660])
+            ("isApiVersion1OrHigher" function
+               (:parent "BrokerMessage"
+                :type "bool")
+                nil [9662 9873])
+            ("attachBody" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9907 9917])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9918 9930])
+                    ("shouldOwn" variable (:type "bool") (reparse-symbol arg-sub-list) [9931 9946])
+                    ("compressionUtils" variable
+                       (:reference 1
+                        :type ("CompressionUtils" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9947 9983])
+                    ("testHookCompFailEnabled" variable (:type "bool") (reparse-symbol arg-sub-list) [9984 10013]))                  
+                :type "void")
+                nil [9875 11969])
+            ("checksumCompare" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("compareWith" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12024 12045]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [11971 12556])
+            ("deserializeBody" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12611 12628])
+                    ("bodySize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12629 12645])
+                    ("overallSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12646 12667]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [12558 12752])
+            ("deserializeBody" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12807 12824])
+                    ("bodySize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12825 12841])
+                    ("overallSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12842 12863])
+                    ("shouldCopy" variable (:type "bool") (reparse-symbol arg-sub-list) [12864 12880]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [12754 12999])
+            ("isApiVersion2OrHigher" function
+               (:parent "BrokerMessage"
+                :type "bool")
+                nil [13001 13249])
+            ("getTable" function
+               (:parent "BrokerMessage"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [13251 13357])
+            ("setTable" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("table" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13388 13413]))                  
+                :type "void")
+                nil [13359 13514])
+            ("getIndexTable" function
+               (:parent "BrokerMessage"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [13516 13633])
+            ("setIndexTable" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("index_table" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13669 13700]))                  
+                :type "void")
+                nil [13635 13820])
+            ("getIndexRecord" function
+               (:parent "BrokerMessage"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [13822 13941])
+            ("setIndexRecord" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("index_record" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13978 14010]))                  
+                :type "void")
+                nil [13943 14133])
+            ("getTablet" function
+               (:parent "BrokerMessage"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [14135 14242])
+            ("setTablet" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14274 14300]))                  
+                :type "void")
+                nil [14244 14404])
+            ("getRecord" function
+               (:parent "BrokerMessage"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [14406 14514])
+            ("setRecord" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("record" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14546 14572]))                  
+                :type "void")
+                nil [14516 14676])
+            ("getTopic" function
+               (:parent "BrokerMessage"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [14678 14750])
+            ("setTopic" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("topic" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14781 14805]))                  
+                :type "void")
+                nil [14752 14829])
+            ("getPublisher" function
+               (:parent "BrokerMessage"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [14831 14943])
+            ("setPublisher" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("publisher" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14978 15007]))                  
+                :type "void")
+                nil [14945 15121])
+            ("getPublishTime" function
+               (:parent "BrokerMessage"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [15123 15241])
+            ("setPublishTime" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("hextimestring" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15279 15312]))                  
+                :type "void")
+                nil [15243 15436])
+            ("setMessageId" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("smsgId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15488 15514]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [15438 15557])
+            ("getMessageId" function
+               (:parent "BrokerMessage"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [15559 15652])
+            ("clearInternal" function
+               (:parent "BrokerMessage"
+                :type "void")
+                nil [15654 15711])
+            ("clear" function
+               (:parent "BrokerMessage"
+                :type "void")
+                nil [15713 15865])
+            ("setRecipients" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("recipients" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15902 15933]))                  
+                :type "void")
+                nil [15867 16020])
+            ("getRecipients" function
+               (:parent "BrokerMessage"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [16022 16124])
+            ("getTrigger" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("trigger" variable
+                       (:reference 1
+                        :type ("MessageTrigger" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16174 16198]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [16126 16753])
+            ("setTrigger" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("trigger" variable
+                       (:constant-flag t
+                        :type ("MessageTrigger" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16787 16816]))                  
+                :type "void")
+                nil [16755 16932])
+            ("setTabletSplitInfo" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("splitId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16974 17001])
+                    ("coordinator" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17001 17032])
+                    ("splitPoint" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17052 17082])
+                    ("listOfRegions" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17082 17115]))                  
+                :type "void")
+                nil [16934 17497])
+            ("<<" function
+               (:operator-flag t
+                :arguments 
+                  ( ("ostr" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17524 17543])
+                    ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17543 17568]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [17499 17737])
+            ("decompressBodyAndChecksum" function
+               (:parent "BrokerMessage"
+                :arguments 
+                  ( ("compressionUtils" variable
+                       (:reference 1
+                        :type ("CompressionUtils" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17802 17838])
+                    ("testHookDecompFailEnabled" variable (:type "bool") (reparse-symbol arg-sub-list) [17839 17870]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [17739 19291]))          
+    :file "BrokerMessage.cc"
+    :pointmax 19479
+    :fsize 19478
+    :lastmodtime '(20686 55964)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svn!sherpa_externals!trunk!fwcore!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

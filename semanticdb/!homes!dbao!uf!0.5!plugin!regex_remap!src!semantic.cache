@@ -1,0 +1,28 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_LDFLAGS" variable (:default-value ("-lpcre")) nil [1 21])
+            ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc")) nil [21 179])
+            ("source_files" variable (:default-value ("RegexRemap.C" "RegexRemapPlugin.H" "RegexRemapPlugin.C")) nil [180 258])
+            ("pkglibexecdir" variable (:default-value ("$(libexecdir)/$(PACKAGE)")) nil [259 300])
+            ("pkglibexec_LTLIBRARIES" variable (:default-value ("libufregexremap.la")) nil [300 365])
+            ("libufregexremap_la_SOURCES" variable (:default-value ("$(source_files)")) nil [367 412])
+            ("libufregexremap_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [413 460])
+            ("libufregexremap_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [460 538])
+            ("libufregexremap_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [538 620])
+            ("libufregexremap_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [620 672]))          
+    :file "Makefile.am"
+    :pointmax 672
+    :fsize 671
+    :lastmodtime '(20622 62404)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!plugin!regex_remap!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

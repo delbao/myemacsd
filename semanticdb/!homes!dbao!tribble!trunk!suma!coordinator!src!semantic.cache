@@ -1,0 +1,81 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "coordinator_publish.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("unistd.h" include (:system-flag t) nil [246 265])
+            ("cstdio" include (:system-flag t) nil [266 283])
+            ("string" include (:system-flag t) nil [284 301])
+            ("iostream" include (:system-flag t) nil [302 321])
+            ("TribbleClient.h" include (:system-flag t) nil [323 349])
+            ("topic" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [351 383])
+            ("filename" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [384 419])
+            ("config" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [420 453])
+            ("usage" function
+               (:arguments 
+                  ( ("progname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [558 579]))                  
+                :type "void")
+                nil [546 724])
+            ("parseCommandLine" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [854 863])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [864 876]))                  
+                :type "void")
+                nil [831 1624])
+            ("getFileContents" function
+               (:arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1799 1820])
+                    ("result" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1821 1841]))                  
+                :type "void")
+                nil [1777 2177])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2214 2223])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2224 2236]))                  
+                :type "int")
+                nil [2204 2805]))          
+    :file "coordinator_publish.cc"
+    :pointmax 2806
+    :fsize 2805
+    :lastmodtime '(20642 41081)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!tribble!trunk!suma!coordinator!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

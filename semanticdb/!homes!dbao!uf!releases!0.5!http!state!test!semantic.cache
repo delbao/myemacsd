@@ -1,0 +1,663 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/state/src" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc")) nil [1 192])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [249 275])
+            ("check_PROGRAMS" variable (:default-value ("testConnectToServer")) nil [336 510])
+            ("testHTTPCache_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestHTTPCache.C")) nil [641 729])
+            ("testCharBasedUFDO_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestCharBasedUFDO.C")) nil [730 827])
+            ("testConnectToServer_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestConnectToServer.C")) nil [828 929])
+            ("testConnectMethod_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestConnectMethod.C")) nil [930 1027])
+            ("testPipeLineReq_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestPipeLineReq.C")) nil [1028 1120])
+            ("testReadRequestHeader_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestReadRequestHeader.C")) nil [1121 1225])
+            ("testTunnelClientRequestBody_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestTunnelClientRequestBody.C")) nil [1226 1342])
+            ("AM_LDFLAGS" variable (:default-value ("-lcppunit")) nil [1344 1367])
+            ("LDADD" variable (:default-value ("$(top_builddir)/http/state/src/libufhttpstate_p.la")) nil [1367 1426]))          
+    :file "Makefile.am"
+    :pointmax 1426
+    :fsize 1425
+    :lastmodtime '(20625 28877)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "mock_UFHTTPTxnObject.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UF_STAT_SYSTEM_H" variable (:constant-flag t) nil [9 25])
+            ("uf/stateserver/UFHTTPTxnObject.H" include (:system-flag t) nil [26 69])
+            ("uf/httpparser/HTTPRequest.H" include (:system-flag t) nil [70 108])
+            ("uf/core/UFIO.H" include (:system-flag t) nil [109 134])
+            ("uf/stateserver/UFSM.H" include (:system-flag t) nil [135 167])
+            ("string" include (:system-flag t) nil [168 185])
+            ("parseUInt64_t" function
+               (:parent "TextUtils"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [246 260])
+                    ("u" variable
+                       (:reference 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [261 273])
+                    ("i" variable (:type "int") (reparse-symbol arg-sub-list) [274 280]))                  
+                :type "bool")
+                nil [216 300])
+            ("MockUFProducerData" type
+               (:superclasses 
+                  ( ("UFProducerData" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("MockUFProducerData" function
+                       (:constructor-flag t
+                        :type ("MockUFProducerData" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [354 447]))                  
+                :type "struct")
+                nil [302 450])
+            ("MockUFProducer" type
+               (:superclasses 
+                  ( ("UFProducer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("MockUFProducer" function
+                       (:constructor-flag t
+                        :type ("MockUFProducer" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [497 567])
+                    ("getConsumerCount" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [570 606])
+                    ("addConsumer" function
+                       (:arguments 
+                          ( ("ufc" variable
+                               (:pointer 1
+                                :type ("UFConsumer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [626 642]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [609 658])
+                    ("removeConsumer" function
+                       (:arguments 
+                          ( ("ufc" variable
+                               (:pointer 1
+                                :type ("UFConsumer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [681 697]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [661 713])
+                    ("updateConsumers" function
+                       (:arguments 
+                          ( ("ufpd" variable
+                               (:pointer 1
+                                :type ("UFProducerData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [739 760])
+                            ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [761 768]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [716 781])
+                    ("removeAllConsumers" function (:type "void") (reparse-symbol classsubparts) [784 811])
+                    ("waitForConsumer" function
+                       (:arguments 
+                          ( ("maxData" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [836 851])
+                            ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [852 860]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [815 879])
+                    ("consumersHaveEnoughData" function
+                       (:arguments 
+                          ( ("maxData" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [911 926])
+                            ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [927 934]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [882 949])
+                    ("wakeWaitingProducer" function
+                       (:arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [977 985]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [952 990]))                  
+                :type "struct")
+                nil [452 993])
+            ("MockUFConsumer" type
+               (:superclasses 
+                  ( ("UFConsumer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1039 1046])
+                    ("pop" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1049 1065])
+                    ("_ufpd" variable
+                       (:pointer 1
+                        :type ("MockUFProducerData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1068 1094])
+                    ("public" label nil (reparse-symbol classsubparts) [1096 1103])
+                    ("MockUFConsumer" function
+                       (:constructor-flag t
+                        :type ("MockUFConsumer" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [1106 1213])
+                    ("getMyType" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1216 1253])
+                    ("hasData" function
+                       (:arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1269 1277]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1256 1295])
+                    ("waitForData" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1326 1334])
+                            ("numRemaining" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1338 1360])
+                            ("timeToWait" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1364 1386]))                          
+                        :type ("UFProducerData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1298 1474]))                  
+                :type "struct")
+                nil [995 1477])
+            ("MockUFIOScheduler" type
+               (:superclasses 
+                  ( ("UFIOScheduler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("rpoll" function
+                       (:arguments 
+                          ( ("ufioList" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("UFIO" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1544 1571])
+                            ("to" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1572 1587]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1530 1681])
+                    ("setupForConnect" function
+                       (:arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1704 1715])
+                            ("to" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1716 1731]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1683 1752])
+                    ("setupForAccept" function
+                       (:arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1774 1785])
+                            ("to" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1786 1801]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1754 1822])
+                    ("setupForRead" function
+                       (:arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1842 1853])
+                            ("to" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1854 1869]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1824 1889])
+                    ("setupForWrite" function
+                       (:arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1910 1921])
+                            ("to" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1922 1937]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1891 1957])
+                    ("closeConnection" function
+                       (:arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1980 1991]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1959 2008])
+                    ("removeReadFromScheduler" function
+                       (:arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2039 2050]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2010 2067])
+                    ("removeWriteFromScheduler" function
+                       (:arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2099 2110]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2069 2128])
+                    ("waitForEvents" function
+                       (:arguments 
+                          ( ("timeToWait" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2149 2171]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2130 2174])
+                    ("count" variable
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [2176 2193]))                  
+                :type "struct")
+                nil [1479 2196])
+            ("MockUFIOScheduler::count" variable (:type "int") nil [2198 2229])
+            ("getUFIOS" function
+               (:pointer 1
+                :parent "UFIOScheduler"
+                :arguments 
+                  ( ("tid" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2270 2284]))                  
+                :type ("UFIOScheduler" type (:type "class") nil nil))
+                nil [2231 2376])
+            ("UFHttpStats" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2399 2406])
+                    ("current_origin_server_connections" variable
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [2408 2453])
+                    ("total_origin_server_connections" variable
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [2455 2498]))                  
+                :type "class")
+                nil [2378 2502])
+            ("UFHttpStats::current_origin_server_connections" variable (:type "int") nil [2503 2556])
+            ("UFHttpStats::total_origin_server_connections" variable (:type "int") nil [2557 2608])
+            ("UFStatSystem" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2632 2639])
+                    ("increment" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("stat_num" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2663 2681])
+                            ("stat_val" variable (:type ("ssize_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2682 2700]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2641 2704]))                  
+                :type "class")
+                nil [2610 2707])
+            ("increment" function
+               (:parent "UFStatSystem"
+                :arguments 
+                  ( ("stat_num" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2738 2756])
+                    ("stat_val" variable (:type ("ssize_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2757 2774]))                  
+                :type "bool")
+                nil [2709 2853])
+            ("MockUFSM" type
+               (:superclasses 
+                  ( ("UFSM" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2888 2895])
+                    ("MockUFSM" function
+                       (:constructor-flag t
+                        :type ("MockUFSM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2899 2956])
+                    ("getSmId" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2960 3052])
+                    ("setStateList" function
+                       (:arguments 
+                          ( ("stateList" variable (:type ("ListPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3074 3092]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3056 3158])
+                    ("setData" function
+                       (:arguments 
+                          ( ("mydata" variable
+                               (:pointer 1
+                                :type ("UFPluginData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3177 3198]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3163 3259])
+                    ("executeStates" function (:type "void") (reparse-symbol classsubparts) [3264 3351]))                  
+                :type "class")
+                nil [2855 3354])
+            ("MockUF" type
+               (:superclasses 
+                  ( ("UF" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("run" function (:type "void") (reparse-symbol classsubparts) [3385 3456])
+                    ("createUF" function
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3459 3534]))                  
+                :type "class")
+                nil [3356 3538])
+            ("MockUFIO" type
+               (:superclasses 
+                  ( ("UFIO" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3573 3580])
+                    ("MockUFIO" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3594 3601])
+                            ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [3601 3608]))                          
+                        :type ("MockUFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3585 3677])
+                    ("write" function
+                       (:arguments 
+                          ( ("input" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3696 3721])
+                            ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3722 3742]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3682 3825])
+                    ("setReadMarkedActive" function
+                       (:arguments 
+                          ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [3856 3866]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3831 3932])
+                    ("getReadMarkedActive" function (:type "bool") (reparse-symbol classsubparts) [3938 4054])
+                    ("read" function
+                       (:arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4073 4083])
+                            ("nbyte" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4084 4097])
+                            ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4098 4118]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4060 4200])
+                    ("write" function
+                       (:arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4220 4230])
+                            ("nbyte" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4231 4244])
+                            ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4245 4265]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4206 4348]))                  
+                :type "class")
+                nil [3540 4351])
+            ("MockUFHTTPConf" type
+               (:superclasses 
+                  ( ("UFHTTPConf" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4398 4405])
+                    ("MockUFHTTPConf" function
+                       (:constructor-flag t
+                        :type ("MockUFHTTPConf" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4408 4636])
+                    ("getOriginServerConnectTimeout" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [4640 4761])
+                    ("getClientTimeout" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [4765 4872])
+                    ("public" label nil (reparse-symbol classsubparts) [4876 4883])
+                    ("timeout" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [4886 4899])
+                    ("timeoutS" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [4902 4916]))                  
+                :type "class")
+                nil [4354 4919])
+            ("MockUFConnectionPool" type
+               (:superclasses 
+                  ( ("UFConnectionPool" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4977 4984])
+                    ("MockUFConnectionPool" function
+                       (:constructor-flag t
+                        :type ("MockUFConnectionPool" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4988 5094])
+                    ("getConnection" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("groupName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5127 5156]))                          
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5099 5224])
+                    ("getConnection" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("groupName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5249 5278])
+                            ("secure" variable (:type "bool") (reparse-symbol arg-sub-list) [5278 5290])
+                            ("connectTimeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5290 5316])
+                            ("reconnectIntervalBetweenConnectFailure" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5316 5362])
+                            ("maxSimultaneousConnsToHost" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5364 5398])
+                            ("numAttemptsToGetConFromConPool" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5400 5438]))                          
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5229 5551])
+                    ("public" label nil (reparse-symbol classsubparts) [5554 5561])
+                    ("ptr" variable
+                       (:pointer 1
+                        :type ("MockUFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5565 5579])
+                    ("uf" variable (:type ("MockUF" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5583 5593]))                  
+                :type "class")
+                nil [4921 5596])
+            ("MockUFHTTPTxnObject" type
+               (:superclasses 
+                  ( ("UFHTTPTxnObject" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [5654 5661])
+                    ("MockUFHTTPTxnObject" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("of" variable (:type "bool") (reparse-symbol arg-sub-list) [5688 5697])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5698 5704]))                          
+                        :type ("MockUFHTTPTxnObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5668 6698])
+                    ("getConnPool" function
+                       (:pointer 1
+                        :type ("UFConnectionPool" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6705 6827])
+                    ("getServerRequest" function (:type ("HTTPRequest" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6834 6965])
+                    ("getUFHTTPConf" function
+                       (:pointer 1
+                        :type ("UFHTTPConf" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6972 7091])
+                    ("getUFSM" function
+                       (:pointer 1
+                        :type ("UFSM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7098 7195])
+                    ("getClientUFIO" function
+                       (:pointer 1
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7202 7366])
+                    ("getServerUFIO" function
+                       (:pointer 1
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7373 7483])
+                    ("getClientRequest" function
+                       (:constant-flag t
+                        :type ("HTTPRequest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7490 7628])
+                    ("setServerUFIO" function
+                       (:arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7654 7665]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7635 7730])
+                    ("setKeepAliveClientConnection" function
+                       (:arguments 
+                          ( ("KA" variable (:type "bool") (reparse-symbol arg-sub-list) [7771 7779]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7737 7859])
+                    ("setKeepAliveServerConnection" function
+                       (:arguments 
+                          ( ("KA" variable (:type "bool") (reparse-symbol arg-sub-list) [7900 7908]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7866 7988])
+                    ("setNextState" function
+                       (:arguments 
+                          ( ("state" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [8013 8031]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7995 8095])
+                    ("setResponseDataSource" function
+                       (:arguments 
+                          ( ("responseDataSource" variable
+                               (:pointer 1
+                                :type ("ResponseDataSource" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8129 8168]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8102 8244])
+                    ("releaseOriginServerConnection" function
+                       (:arguments 
+                          ( ("v" variable (:type "bool") (reparse-symbol arg-sub-list) [8286 8293]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8251 8374])
+                    ("setUFSM" function
+                       (:arguments 
+                          ( ("ufsm" variable
+                               (:pointer 1
+                                :type ("UFSM" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8394 8405]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8381 8464])
+                    ("clientRequestReset" function (:type "void") (reparse-symbol classsubparts) [8471 8566])
+                    ("originServerRequestReset" function (:type "void") (reparse-symbol classsubparts) [8573 8680])
+                    ("getRequestBufList" function (:type ("list" type
+                         (:template-specifier 
+                            ( ("char" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [8687 8809])
+                    ("getExtraClientRequest" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("offset" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8844 8860])
+                            ("size" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8860 8873]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [8816 8965])
+                    ("getUFFilterProducer" function
+                       (:pointer 1
+                        :type ("UFProducer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8972 9098])
+                    ("getUFFilterConsumer" function
+                       (:pointer 1
+                        :type ("UFConsumer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9105 9231])
+                    ("getUF" function
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9238 9324])
+                    ("getClientParseResult" function (:type ("ParseResult" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9331 9468])
+                    ("private" label nil (reparse-symbol classsubparts) [9471 9479])
+                    ("_mconnpool" variable
+                       (:pointer 1
+                        :type ("MockUFConnectionPool" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9486 9519])
+                    ("_mhttpserverreq" variable (:type ("HTTPRequest" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9526 9554])
+                    ("_mhttpclientreq" variable (:type ("HTTPRequest" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9561 9589])
+                    ("_mhttpconf" variable
+                       (:pointer 1
+                        :type ("MockUFHTTPConf" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9596 9623])
+                    ("_mufsm" variable
+                       (:pointer 1
+                        :type ("MockUFSM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9630 9647])
+                    ("_mufio" variable
+                       (:pointer 1
+                        :type ("MockUFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9654 9671])
+                    ("_mufioS" variable
+                       (:pointer 1
+                        :type ("MockUFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9678 9696])
+                    ("_mufpro" variable
+                       (:pointer 1
+                        :type ("MockUFProducer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9703 9727])
+                    ("_mufcon" variable
+                       (:pointer 1
+                        :type ("MockUFConsumer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9734 9758])
+                    ("olst" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("char" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [9765 9783])
+                    ("off" variable (:type "bool") (reparse-symbol classsubparts) [9790 9799])
+                    ("_uf" variable
+                       (:pointer 1
+                        :type ("MockUF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9806 9818]))                  
+                :type "class")
+                nil [5599 9822]))          
+    :file "mock_UFHTTPTxnObject.H"
+    :pointmax 9823
+    :fsize 9822
+    :lastmodtime '(20625 28877)
+    :unmatched-syntax '((punctuation 5696 . 5697) (number 5438 . 5439) (punctuation 5437 . 5438) (number 5398 . 5399) (punctuation 5397 . 5398) (number 5362 . 5363) (punctuation 5361 . 5362) (number 4267 . 4268) (punctuation 4266 . 4267) (punctuation 4264 . 4265) (number 4120 . 4121) (punctuation 4119 . 4120) (punctuation 4117 . 4118) (number 3744 . 3745) (punctuation 3743 . 3744) (punctuation 3741 . 3742) (number 2701 . 2702) (punctuation 2699 . 2700) (number 1939 . 1940) (punctuation 1938 . 1939) (punctuation 1936 . 1937) (number 1871 . 1872) (punctuation 1870 . 1871) (punctuation 1868 . 1869) (number 1803 . 1804) (punctuation 1802 . 1803) (punctuation 1800 . 1801) (number 1733 . 1734) (punctuation 1732 . 1733) (punctuation 1730 . 1731) (number 1589 . 1590) (punctuation 1588 . 1589) (punctuation 1586 . 1587) (number 1386 . 1387) (punctuation 1385 . 1386) (number 1361 . 1362) (punctuation 1359 . 1360) (number 1335 . 1336) (punctuation 1333 . 1334) (number 1278 . 1279) (punctuation 1276 . 1277) (number 986 . 987) (punctuation 984 . 985) (number 861 . 862) (punctuation 859 . 860))
+    :lexical-table 
+        '(("UF_STAT_SYSTEM_H")
+          )
+
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!http!state!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

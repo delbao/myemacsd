@@ -1,0 +1,169 @@
+;; Object utility/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utility/"
+  :tables (list 
+   (semanticdb-table "enable_if.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_UTILITY_ENABLE_IF_HPP" variable (:constant-flag t) nil [484 511])
+            ("boost/config.hpp" include nil nil [513 540])
+            ("boost" type
+               (:members 
+                  ( ("enable_if_c" type
+                       (:members 
+                          ( ("type" type
+                               (:typedef ("T" type (:type "class") nil nil)
+                                :superclasses "T"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [790 805]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [765 810])
+                    ("enable_if_c" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :template-specifier 
+                          ( ("false" type nil nil nil)
+                            ("T" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [814 867])
+                    ("enable_if" type
+                       (:superclasses 
+                          ( ("enable_if_c" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [912 969])
+                    ("lazy_enable_if_c" type
+                       (:template 
+                          ( ("bool" type nil nil nil)
+                            ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("T::type" type (:type "class") nil nil)
+                                :superclasses "T::type"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1032 1062]))                          )
+                        (reparse-symbol namespacesubparts) [973 1067])
+                    ("lazy_enable_if_c" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :template-specifier 
+                          ( ("false" type nil nil nil)
+                            ("T" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1071 1129])
+                    ("lazy_enable_if" type
+                       (:template 
+                          ( ("Cond" type (:type "class") nil nil)
+                            ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :superclasses 
+                          ( ("lazy_enable_if_c" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1133 1234])
+                    ("disable_if_c" type
+                       (:members 
+                          ( ("type" type
+                               (:typedef ("T" type (:type "class") nil nil)
+                                :superclasses "T"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1301 1316]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1275 1321])
+                    ("disable_if_c" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :template-specifier 
+                          ( ("true" type nil nil nil)
+                            ("T" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1325 1378])
+                    ("disable_if" type
+                       (:superclasses 
+                          ( ("disable_if_c" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1423 1482])
+                    ("lazy_disable_if_c" type
+                       (:template 
+                          ( ("bool" type nil nil nil)
+                            ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("T::type" type (:type "class") nil nil)
+                                :superclasses "T::type"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1546 1576]))                          )
+                        (reparse-symbol namespacesubparts) [1486 1581])
+                    ("lazy_disable_if_c" type
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :template-specifier 
+                          ( ("true" type nil nil nil)
+                            ("T" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1585 1643])
+                    ("lazy_disable_if" type
+                       (:template 
+                          ( ("Cond" type (:type "class") nil nil)
+                            ("T" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :superclasses 
+                          ( ("lazy_disable_if_c" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1647 1750]))                  
+                :type "namespace")
+                nil [707 1753]))          
+    :file "enable_if.hpp"
+    :pointmax 3101
+    :fsize 3100
+    :lastmodtime '(18399 46987)
+    :unmatched-syntax '((punctuation 1418 . 1419) (VOID 1414 . 1418) (punctuation 1412 . 1413) (symbol 1410 . 1411) (CLASS 1404 . 1409) (punctuation 1402 . 1403) (symbol 1398 . 1402) (CLASS 1392 . 1397) (punctuation 1391 . 1392) (TEMPLATE 1382 . 1390) (punctuation 1271 . 1272) (VOID 1267 . 1271) (punctuation 1265 . 1266) (symbol 1263 . 1264) (CLASS 1257 . 1262) (punctuation 1255 . 1256) (symbol 1254 . 1255) (BOOL 1249 . 1253) (punctuation 1248 . 1249) (TEMPLATE 1239 . 1247) (punctuation 907 . 908) (VOID 903 . 907) (punctuation 901 . 902) (symbol 899 . 900) (CLASS 893 . 898) (punctuation 891 . 892) (symbol 887 . 891) (CLASS 881 . 886) (punctuation 880 . 881) (TEMPLATE 871 . 879) (punctuation 761 . 762) (VOID 757 . 761) (punctuation 755 . 756) (symbol 753 . 754) (CLASS 747 . 752) (punctuation 745 . 746) (symbol 744 . 745) (BOOL 739 . 743) (punctuation 738 . 739) (TEMPLATE 729 . 737))
+    :lexical-table 
+        '(("BOOST_UTILITY_ENABLE_IF_HPP")
+          )
+
+    )
+   (semanticdb-table "addressof.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_UTILITY_ADDRESSOF_HPP" variable (:constant-flag t) nil [405 432])
+            ("boost/config.hpp" include (:system-flag t) nil [434 462])
+            ("boost/detail/workaround.hpp" include (:system-flag t) nil [463 502])
+            ("boost/type_traits/add_pointer.hpp" include (:system-flag t) nil [546 592])
+            ("boost" type
+               (:members 
+                  ( ("addressof" function
+                       (:arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [902 907]))                          
+                        :type ("type" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [847 1014]))                  
+                :type "namespace")
+                nil [602 1017]))          
+    :file "addressof.hpp"
+    :pointmax 1057
+    :fsize 1056
+    :lastmodtime '(18399 46987)
+    :unmatched-syntax '((punctuation 846 . 847) (punctuation 845 . 846) (punctuation 844 . 845) (symbol 843 . 844) (punctuation 842 . 843) (symbol 831 . 842) (TYPENAME 822 . 830) (punctuation 820 . 821) (symbol 819 . 820) (TYPENAME 810 . 818) (punctuation 809 . 810) (TEMPLATE 800 . 808))
+    :lexical-table 
+        '(("BOOST_UTILITY_ADDRESSOF_HPP")
+          )
+
+    )
+   )
+  :file "!usr!include!boost!utility!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

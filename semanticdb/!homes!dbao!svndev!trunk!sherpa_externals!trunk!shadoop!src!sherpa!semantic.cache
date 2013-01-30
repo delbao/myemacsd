@@ -1,0 +1,250 @@
+;; Object sherpa/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sherpa/"
+  :tables (list 
+   (semanticdb-table "FileWriter.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("sherpa" package nil nil [38 53])
+            ("java.io.BufferedReader" include nil nil [55 85])
+            ("java.io.BufferedWriter" include nil nil [86 116])
+            ("java.io.FileReader" include nil nil [117 143])
+            ("java.io.IOException" include nil nil [144 171])
+            ("java.io.InputStreamReader" include nil nil [172 205])
+            ("java.io.OutputStreamWriter" include nil nil [206 240])
+            ("java.io.Reader" include nil nil [241 263])
+            ("java.io.UnsupportedEncodingException" include nil nil [264 308])
+            ("java.util.ArrayList" include nil nil [309 336])
+            ("org.apache.commons.logging.Log" include nil nil [338 376])
+            ("org.apache.commons.logging.LogFactory" include nil nil [377 422])
+            ("org.apache.hadoop.fs.FSDataInputStream" include nil nil [423 469])
+            ("org.apache.hadoop.fs.FSDataOutputStream" include nil nil [470 517])
+            ("org.apache.hadoop.fs.FileSystem" include nil nil [518 557])
+            ("org.apache.hadoop.fs.FileUtil" include nil nil [558 595])
+            ("org.apache.hadoop.fs.Path" include nil nil [596 629])
+            ("org.apache.hadoop.mapred.FileOutputFormat" include nil nil [630 679])
+            ("org.apache.hadoop.mapred.JobConf" include nil nil [680 720])
+            ("org.apache.hadoop.mapred.RunningJob" include nil nil [721 764])
+            ("FileWriter" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("LOG" variable
+                       (:typemodifiers ("public" "static" "final")
+                        :type "Log")
+                        (reparse-symbol class_member_declaration) [795 861])
+                    ("retryErrorDir" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [863 919])
+                    ("detailedErrorDir" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [921 984])
+                    ("retryErrorSuffix" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [986 1052])
+                    ("detailedErrorSuffix" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1116 1188])
+                    ("fs" variable
+                       (:typemodifiers ("private" "static")
+                        :type "FileSystem")
+                        (reparse-symbol class_member_declaration) [1190 1219])
+                    ("scFile" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1221 1273])
+                    ("scText" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1275 1329])
+                    ("scSuffix" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1331 1380])
+                    ("offsetFile" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1382 1432])
+                    ("offsetSuffix" variable
+                       (:typemodifiers ("private" "static" "final")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1434 1500])
+                    ("workOutputPath" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [1615 1627]))                          
+                        :type "Path")
+                        (reparse-symbol class_member_declaration) [1580 1684])
+                    ("outputPath" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [1769 1781]))                          
+                        :type "Path")
+                        (reparse-symbol class_member_declaration) [1738 1834])
+                    ("tempLocationName" function
+                       (:typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [2085 2097]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [2046 2358])
+                    ("getErrorRetryLogOutputStream" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [2424 2436]))                          
+                        :type "FSDataOutputStream")
+                        (reparse-symbol class_member_declaration) [2362 2813])
+                    ("getErrorDetailedLogOutputStream" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [2882 2894]))                          
+                        :type "FSDataOutputStream")
+                        (reparse-symbol class_member_declaration) [2817 3443])
+                    ("writeToStream" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("stream" variable (:type "FSDataOutputStream") (reparse-symbol formal_parameters) [3516 3541])
+                            ("output" variable (:type "String") (reparse-symbol formal_parameters) [3543 3556]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3483 3860])
+                    ("extractJobName" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("taskName" variable (:type "String") (reparse-symbol formal_parameters) [4053 4068]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [4017 4805])
+                    ("copyTempToPermanent" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [4933 4945])
+                            ("tempSuffix" variable (:type "String") (reparse-symbol formal_parameters) [4947 4964])
+                            ("permPrefix" variable (:type "String") (reparse-symbol formal_parameters) [4966 4983]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4894 5780])
+                    ("moveErrorRetryFileToPermanent" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [5896 5908]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [5847 5976])
+                    ("moveErrorDetailedFileToPermanent" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [6095 6107]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6043 6181])
+                    ("getFileSize" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [6283 6295])
+                            ("file" variable (:type "String") (reparse-symbol formal_parameters) [6297 6308]))                          
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [6252 6525])
+                    ("mergeFiles" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [6639 6651])
+                            ("rj" variable (:type "RunningJob") (reparse-symbol formal_parameters) [6653 6666])
+                            ("fileName" variable (:type "String") (reparse-symbol formal_parameters) [6668 6683])
+                            ("mergeSuffix" variable (:type "String") (reparse-symbol formal_parameters) [6685 6703]))                          
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [6609 7586])
+                    ("record" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [7666 7678])
+                            ("fileName" variable (:type "String") (reparse-symbol formal_parameters) [7680 7695])
+                            ("text" variable (:type "String") (reparse-symbol formal_parameters) [7697 7708]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [7640 8197])
+                    ("mergeRetryErrorFiles" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [8303 8315])
+                            ("rj" variable (:type "RunningJob") (reparse-symbol formal_parameters) [8317 8330]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [8261 8622])
+                    ("mergeDetailedErrorFiles" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [8671 8683])
+                            ("rj" variable (:type "RunningJob") (reparse-symbol formal_parameters) [8685 8698]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [8626 9020])
+                    ("recordShortCircuit" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [9112 9124]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9074 9162])
+                    ("mergeShortCircuitFiles" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [9313 9325])
+                            ("rj" variable (:type "RunningJob") (reparse-symbol formal_parameters) [9327 9340]))                          
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [9271 9395])
+                    ("recordOffset" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [9509 9521])
+                            ("offsetText" variable (:type "String") (reparse-symbol formal_parameters) [9523 9540]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9477 9586])
+                    ("mergeOffsetFiles" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [9664 9676])
+                            ("rj" variable (:type "RunningJob") (reparse-symbol formal_parameters) [9678 9691]))                          
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [9626 9913])
+                    ("deleteDir" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [9985 9997])
+                            ("dir" variable (:type "String") (reparse-symbol formal_parameters) [9999 10009]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9956 10405])
+                    ("deleteSCDir" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [10479 10491]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10448 10524])
+                    ("deleteOffsetDir" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [10595 10607]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [10560 10644])
+                    ("offsetComplete" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [10997 11009])
+                            ("file" variable (:type "String") (reparse-symbol formal_parameters) [11011 11022])
+                            ("offset" variable (:type "String") (reparse-symbol formal_parameters) [11024 11037]))                          
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [10960 11766])
+                    ("getFileStream" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("conf" variable (:type "JobConf") (reparse-symbol formal_parameters) [11872 11884])
+                            ("file" variable (:type "String") (reparse-symbol formal_parameters) [11886 11897]))                          
+                        :type "FSDataInputStream")
+                        (reparse-symbol class_member_declaration) [11826 12108]))                  
+                :type "class")
+                nil [766 12110]))          
+    :file "FileWriter.java"
+    :pointmax 12111
+    :fsize 12110
+    :lastmodtime '(20427 311)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!sherpa_externals!trunk!shadoop!src!sherpa!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

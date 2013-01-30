@@ -1,0 +1,2762 @@
+;; Object core/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "core/"
+  :tables (list 
+   (semanticdb-table "UFIOScheduler.C"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("uf/core/UFIOScheduler.H" include nil nil [1 35])
+            ("uf/core/UFScheduler.H" include nil nil [36 68])
+            ("pthread.h" include (:system-flag t) nil [69 89])
+            ("uf/util/OStreamLogger.H" include nil nil [90 124])
+            ("UFIOScheduler::_tfiosscheduler" variable (:type ("ThreadFiberIOSchedulerMap" type (:type "class") nil nil)) nil [126 183])
+            ("UFIOScheduler::_ufiosHasBeenSetup" variable
+               (:default-value "false;"
+                :type "bool")
+                nil [184 231])
+            ("getThreadKey" function
+               (:typemodifiers ("static")
+                :type ("pthread_key_t" type (:type "class") nil nil))
+                nil [233 529])
+            ("UFIOScheduler::_keyToIdentifySchedulerOnThread" variable
+               (:default-value "getThreadKey()"
+                :type ("pthread_key_t" type (:type "class") nil nil))
+                nil [531 609])
+            ("UFIOScheduler" function
+               (:constructor-flag t
+                :parent "UFIOScheduler"
+                :type ("UFIOScheduler" type (:type "class") nil nil))
+                nil [611 734])
+            ("UFIOScheduler" function
+               (:destructor-flag t
+                :parent "UFIOScheduler"
+                :type "void")
+                nil [735 808])
+            ("findAndCreateUFIO" function
+               (:pointer 1
+                :parent "UFIOScheduler"
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [849 856])
+                    ("createUFIO" variable (:type "bool") (reparse-symbol arg-sub-list) [857 873]))                  
+                :type ("UFIO" type (:type "class") nil nil))
+                nil [810 1880])
+            ("getUFIOS" function
+               (:pointer 1
+                :parent "UFIOScheduler"
+                :arguments 
+                  ( ("tid" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1921 1935]))                  
+                :type ("UFIOScheduler" type (:type "class") nil nil))
+                nil [1882 2641])
+            ("registerUFIO" function
+               (:parent "UFIOScheduler"
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [2676 2683])
+                    ("ufio" variable
+                       (:pointer 1
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2684 2695]))                  
+                :type "void")
+                nil [2643 3054])
+            ("unregisterUFIO" function
+               (:parent "UFIOScheduler"
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [3091 3098]))                  
+                :type "bool")
+                nil [3056 3650]))          
+    :file "UFIOScheduler.C"
+    :pointmax 3652
+    :fsize 3651
+    :lastmodtime '(20629 53834)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "UFIO.C"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UFIOImpl.H" include nil nil [1 22])
+            ("uf/core/UFIOScheduler.H" include nil nil [23 57])
+            ("uf/core/UFIO.H" include (:system-flag t) nil [58 83])
+            ("uf/core/UFSIO.H" include (:system-flag t) nil [84 110])
+            ("uf/core/UFConnectionPool.H" include (:system-flag t) nil [111 148])
+            ("uf/core/UFStatSystem.H" include (:system-flag t) nil [149 182])
+            ("sys/socket.h" include (:system-flag t) nil [183 206])
+            ("sys/time.h" include (:system-flag t) nil [208 229])
+            ("uf/util/OStreamLogger.H" include (:system-flag t) nil [231 265])
+            ("uf/util/ConnectionUtil.H" include (:system-flag t) nil [266 301])
+            ("UFSchedulerImpl.H" include nil nil [302 330])
+            ("stdint.h" include (:system-flag t) nil [332 351])
+            ("unistd.h" include (:system-flag t) nil [352 371])
+            ("stdlib.h" include (:system-flag t) nil [372 391])
+            ("sys/types.h" include (:system-flag t) nil [392 414])
+            ("sys/socket.h" include (:system-flag t) nil [415 438])
+            ("sys/time.h" include (:system-flag t) nil [439 460])
+            ("netinet/in.h" include (:system-flag t) nil [461 484])
+            ("arpa/inet.h" include (:system-flag t) nil [485 507])
+            ("iostream" include (:system-flag t) nil [508 527])
+            ("unistd.h" include (:system-flag t) nil [528 547])
+            ("fcntl.h" include (:system-flag t) nil [548 566])
+            ("errno.h" include (:system-flag t) nil [567 585])
+            ("string" include (:system-flag t) nil [586 603])
+            ("string.h" include (:system-flag t) nil [604 623])
+            ("dlfcn.h" include (:system-flag t) nil [624 642])
+            ("real_recvmsg" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [1142 1199])
+            ("real_recvfrom" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [1050 1137])
+            ("real_sendmsg" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [982 1045])
+            ("real_sendto" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [881 977])
+            ("real_connect" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [809 876])
+            ("real_write" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [749 804])
+            ("real_read" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [696 744])
+            ("real_close" variable
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :functionpointer-flag t)
+                (reparse-symbol extern-c-contents) [661 691])
+            ("C" extern (:members 
+              ( ("real_close" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [661 691])
+                ("real_read" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [696 744])
+                ("real_write" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [749 804])
+                ("real_connect" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [809 876])
+                ("real_sendto" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [881 977])
+                ("real_sendmsg" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [982 1045])
+                ("real_recvfrom" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [1050 1137])
+                ("real_recvmsg" variable
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :functionpointer-flag t)
+                    (reparse-symbol extern-c-contents) [1142 1199]))              ) nil [644 1201])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1203 1223])
+            ("UFIOImpl::m_defaultTimeout" variable
+               (:default-value "UFIO_DEFAULT_TIMEOUT;"
+                :type "int")
+                nil [1225 1279])
+            ("ipPortInfo" variable (:type ("IPPortPairs" type (:type "class") nil nil)) nil [1280 1303])
+            ("UFIO" function
+               (:constructor-flag t
+                :parent "UFIO"
+                :arguments 
+                  ( ("in" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1316 1331]))                  
+                :type ("UFIO" type (:type "class") nil nil))
+                nil [1305 1378])
+            ("=" function
+               (:operator-flag t
+                :parent "UFIO"
+                :arguments 
+                  ( ("in" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1402 1417]))                  
+                :type ("UFIO" type (:type "class") nil nil))
+                nil [1380 1482])
+            ("setRemoteIP" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("newRemoteIP" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1507 1538]))                  
+                :type "void")
+                nil [1484 1582])
+            ("setLocalIP" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("newRemoteIP" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1605 1636]))                  
+                :type "void")
+                nil [1583 1679])
+            ("getRemoteIP" function
+               (:parent "UFIO"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1680 1761])
+            ("getRemotePort" function
+               (:parent "UFIO"
+                :type "unsigned int")
+                nil [1763 1842])
+            ("getLocalIP" function
+               (:parent "UFIO"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1844 1923])
+            ("getLocalPort" function
+               (:parent "UFIO"
+                :type "unsigned int")
+                nil [1925 2002])
+            ("getImpl" function
+               (:pointer 1
+                :parent "UFIO"
+                :type ("UFIOImpl" type (:type "class") nil nil))
+                nil [2004 2061])
+            ("UFIO" function
+               (:destructor-flag t
+                :parent "UFIO"
+                :type "void")
+                nil [2063 2143])
+            ("setupForAccept" function
+               (:parent "UFIO"
+                :type "void")
+                nil [2145 2216])
+            ("setupForConnect" function
+               (:parent "UFIO"
+                :type "void")
+                nil [2217 2290])
+            ("preClose" function
+               (:parent "UFIO"
+                :type "void")
+                nil [2291 2350])
+            ("postClose" function
+               (:parent "UFIO"
+                :type "void")
+                nil [2351 2412])
+            ("setType" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("type" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2432 2456]))                  
+                :type "void")
+                nil [2413 2491])
+            ("getType" function
+               (:parent "UFIO"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2492 2560])
+            ("getCliAddr" function
+               (:pointer 1
+                :parent "UFIO"
+                :type ("sockaddr_storage" type (:type "class") nil nil))
+                nil [2561 2643])
+            ("UFIO" function
+               (:constructor-flag t
+                :parent "UFIO"
+                :arguments 
+                  ( ("uf" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2655 2662])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [2663 2670]))                  
+                :type ("UFIO" type (:type "class") nil nil))
+                nil [2644 2719])
+            ("setReadMarkedActive" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [2752 2762]))                  
+                :type "void")
+                nil [2721 2807])
+            ("setWriteMarkedActive" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [2840 2850]))                  
+                :type "void")
+                nil [2808 2896])
+            ("getReadMarkedActive" function
+               (:parent "UFIO"
+                :type "bool")
+                nil [2897 2980])
+            ("getWriteMarkedActive" function
+               (:parent "UFIO"
+                :type "bool")
+                nil [2981 3066])
+            ("getReadWatch" function
+               (:parent "UFIO"
+                :type "bool")
+                nil [3068 3137])
+            ("setReadWatch" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [3162 3172]))                  
+                :type "void")
+                nil [3138 3210])
+            ("getWriteWatch" function
+               (:parent "UFIO"
+                :type "bool")
+                nil [3212 3283])
+            ("setWriteWatch" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [3309 3319]))                  
+                :type "void")
+                nil [3284 3358])
+            ("setWriteUF" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("uf" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3382 3389]))                  
+                :type "void")
+                nil [3360 3431])
+            ("setReadUF" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("uf" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3454 3461]))                  
+                :type "void")
+                nil [3433 3502])
+            ("close" function
+               (:parent "UFIO"
+                :type "bool")
+                nil [3504 3557])
+            ("setFd" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [3575 3582])
+                    ("makeNonBlocking" variable (:type "bool") (reparse-symbol arg-sub-list) [3583 3604])
+                    ("closePrevious" variable (:type "bool") (reparse-symbol arg-sub-list) [3605 3624]))                  
+                :type "bool")
+                nil [3558 3693])
+            ("UFIO::RECV_SOCK_BUF" variable
+               (:default-value "57344"
+                :type "int")
+                nil [3695 3727])
+            ("UFIO::SEND_SOCK_BUF" variable
+               (:default-value "57344"
+                :type "int")
+                nil [3728 3760])
+            ("UFIO::USE_IPV6" variable
+               (:default-value "true;"
+                :type "bool")
+                nil [3761 3788])
+            ("getErrno" function
+               (:parent "UFIO"
+                :type "unsigned int")
+                nil [3789 3858])
+            ("getUFIOScheduler" function
+               (:pointer 1
+                :parent "UFIO"
+                :type ("UFIOScheduler" type (:type "class") nil nil))
+                nil [3859 3938])
+            ("setupConnectionToAccept" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("i_a" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3973 3989])
+                    ("port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [4025 4049])
+                    ("backlog" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [4085 4112])
+                    ("makeSockNonBlocking" variable (:type "bool") (reparse-symbol arg-sub-list) [4147 4172]))                  
+                :type "int")
+                nil [3939 4604])
+            ("accept" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("ufiotChooser" variable
+                       (:pointer 1
+                        :type ("UFIOAcceptThreadChooser" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4625 4663])
+                    ("ufLocation" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [4682 4712])
+                    ("port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [4731 4755])
+                    ("startingArgs" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4774 4793])
+                    ("stackPtr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4812 4827])
+                    ("stackSize" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4846 4869])
+                    ("secure" variable (:type "bool") (reparse-symbol arg-sub-list) [4888 4900]))                  
+                :type "void")
+                nil [4607 5009])
+            ("setCliAddr" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :type ("sockaddr_storage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5033 5057]))                  
+                :type "void")
+                nil [5011 5095])
+            ("setLocalPort" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("port" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5121 5139]))                  
+                :type "void")
+                nil [5097 5177])
+            ("setRemotePort" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("port" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5204 5222]))                  
+                :type "void")
+                nil [5179 5261])
+            ("readLine" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5286 5296])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5297 5306])
+                    ("delim" variable (:type "char") (reparse-symbol arg-sub-list) [5307 5318]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [5263 5369])
+            ("readLine" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("out" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5394 5411])
+                    ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5412 5421])
+                    ("delim" variable (:type "char") (reparse-symbol arg-sub-list) [5422 5433]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [5371 5484])
+            ("setErrno" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("err" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5506 5523]))                  
+                :type "void")
+                nil [5486 5556])
+            ("read" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5577 5587])
+                    ("totalBytes" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5588 5606])
+                    ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5607 5626]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [5558 5756])
+            ("write" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5778 5798])
+                    ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5799 5818]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [5758 5940])
+            ("write" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5962 5978])
+                    ("totalBytes" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5979 5997])
+                    ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5998 6017]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [5942 6149])
+            ("connect" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6170 6198])
+                    ("addrlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6219 6237])
+                    ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6258 6277]))                  
+                :type "bool")
+                nil [6151 6408])
+            ("sendto" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6427 6443])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6444 6455])
+                    ("to" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6456 6482])
+                    ("tolen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6483 6499])
+                    ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6500 6519]))                  
+                :type "int")
+                nil [6410 6583])
+            ("sendmsg" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("msghdr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6603 6628])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [6648 6658])
+                    ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6677 6696]))                  
+                :type "int")
+                nil [6585 6752])
+            ("recvfrom" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6773 6783])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6804 6815])
+                    ("from" variable
+                       (:pointer 1
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6836 6858])
+                    ("fromlen" variable
+                       (:pointer 1
+                        :type ("socklen_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6878 6897])
+                    ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6918 6937]))                  
+                :type "int")
+                nil [6754 7007])
+            ("recvmsg" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :type ("msghdr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7027 7046])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [7066 7076])
+                    ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7095 7114]))                  
+                :type "int")
+                nil [7009 7170])
+            ("setSleepInfo" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("si" variable
+                       (:pointer 1
+                        :type ("UFSleepInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7196 7212]))                  
+                :type "void")
+                nil [7172 7248])
+            ("getSleepInfo" function
+               (:pointer 1
+                :parent "UFIO"
+                :type ("UFSleepInfo" type (:type "class") nil nil))
+                nil [7249 7326])
+            ("getLastEpollFlag" function
+               (:parent "UFIO"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [7328 7410])
+            ("setLastEpollFlag" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("flags" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7439 7455]))                  
+                :type "void")
+                nil [7411 7498])
+            ("setUFIOScheduler" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("ufios" variable
+                       (:pointer 1
+                        :type ("UFIOScheduler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7527 7548]))                  
+                :type "void")
+                nil [7499 7583])
+            ("getFd" function
+               (:parent "UFIO"
+                :type "int")
+                nil [7585 7639])
+            ("getWriteUF" function
+               (:pointer 1
+                :parent "UFIO"
+                :type ("UF" type (:type "class") nil nil))
+                nil [7640 7704])
+            ("getReadUF" function
+               (:pointer 1
+                :parent "UFIO"
+                :type ("UF" type (:type "class") nil nil))
+                nil [7705 7767])
+            ("ufCreateThreadWithIO" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("tid" variable
+                       (:pointer 1
+                        :type ("pthread_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7800 7815])
+                    ("ufsToStartWith" variable
+                       (:pointer 1
+                        :type ("UFList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7816 7839]))                  
+                :type "void")
+                nil [7768 7900])
+            ("writev" function
+               (:parent "UFIO"
+                :arguments 
+                  ( ("iov" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("iovec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7923 7947])
+                    ("iov_size" variable (:type "int") (reparse-symbol arg-sub-list) [7948 7961])
+                    ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7962 7981]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [7902 8039])
+            ("close" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [10775 10782]))                  )
+                (reparse-symbol extern-c-contents) [10765 11448])
+            ("connect" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [10414 10421])
+                    ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10422 10450])
+                    ("addrlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10451 10469]))                  )
+                (reparse-symbol extern-c-contents) [10402 10763])
+            ("sendmsg" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [10070 10077])
+                    ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("msghdr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10078 10103])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [10104 10114]))                  )
+                (reparse-symbol extern-c-contents) [10054 10400])
+            ("sendto" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [9582 9589])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9590 9606])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9607 9618])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [9619 9629])
+                    ("dest_addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9630 9663])
+                    ("addrlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9664 9682]))                  )
+                (reparse-symbol extern-c-contents) [9567 10052])
+            ("recvmsg" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [9248 9255])
+                    ("msg" variable
+                       (:pointer 1
+                        :type ("msghdr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9256 9275])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [9276 9286]))                  )
+                (reparse-symbol extern-c-contents) [9232 9565])
+            ("recvfrom" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [8781 8788])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8789 8799])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8800 8811])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [8812 8822])
+                    ("src_addr" variable
+                       (:pointer 1
+                        :type ("sockaddr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8823 8849])
+                    ("addrlen" variable
+                       (:pointer 1
+                        :type ("socklen_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8850 8869]))                  )
+                (reparse-symbol extern-c-contents) [8764 9230])
+            ("write" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [8415 8422])
+                    ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8423 8439])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8440 8453]))                  )
+                (reparse-symbol extern-c-contents) [8401 8763])
+            ("read" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("ssize_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [8068 8075])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8076 8086])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8087 8100]))                  )
+                (reparse-symbol extern-c-contents) [8055 8399])
+            ("C" extern (:members 
+              ( ("read" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [8068 8075])
+                        ("buf" variable
+                           (:pointer 1
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [8076 8086])
+                        ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8087 8100]))                      )
+                    (reparse-symbol extern-c-contents) [8055 8399])
+                ("write" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [8415 8422])
+                        ("buf" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [8423 8439])
+                        ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8440 8453]))                      )
+                    (reparse-symbol extern-c-contents) [8401 8763])
+                ("recvfrom" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [8781 8788])
+                        ("buf" variable
+                           (:pointer 1
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [8789 8799])
+                        ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8800 8811])
+                        ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [8812 8822])
+                        ("src_addr" variable
+                           (:pointer 1
+                            :type ("sockaddr" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol arg-sub-list) [8823 8849])
+                        ("addrlen" variable
+                           (:pointer 1
+                            :type ("socklen_t" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [8850 8869]))                      )
+                    (reparse-symbol extern-c-contents) [8764 9230])
+                ("recvmsg" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [9248 9255])
+                        ("msg" variable
+                           (:pointer 1
+                            :type ("msghdr" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol arg-sub-list) [9256 9275])
+                        ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [9276 9286]))                      )
+                    (reparse-symbol extern-c-contents) [9232 9565])
+                ("sendto" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [9582 9589])
+                        ("buf" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "void")
+                            (reparse-symbol arg-sub-list) [9590 9606])
+                        ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9607 9618])
+                        ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [9619 9629])
+                        ("dest_addr" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("sockaddr" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol arg-sub-list) [9630 9663])
+                        ("addrlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9664 9682]))                      )
+                    (reparse-symbol extern-c-contents) [9567 10052])
+                ("sendmsg" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type ("ssize_t" type (:type "class") nil nil)
+                    :arguments 
+                      ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [10070 10077])
+                        ("msg" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("msghdr" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol arg-sub-list) [10078 10103])
+                        ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [10104 10114]))                      )
+                    (reparse-symbol extern-c-contents) [10054 10400])
+                ("connect" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [10414 10421])
+                        ("addr" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type ("sockaddr" type
+                                 (:prototype t
+                                  :type "struct")
+                                  nil nil))
+                            (reparse-symbol arg-sub-list) [10422 10450])
+                        ("addrlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10451 10469]))                      )
+                    (reparse-symbol extern-c-contents) [10402 10763])
+                ("close" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "int"
+                    :arguments 
+                      ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [10775 10782]))                      )
+                    (reparse-symbol extern-c-contents) [10765 11448]))              ) nil [8041 11451]))          
+    :file "UFIO.C"
+    :pointmax 11452
+    :fsize 11451
+    :lastmodtime '(20629 53834)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "UFIOImpl.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UFIOIMPL_H" variable (:constant-flag t) nil [28 38])
+            ("uf/core/UFIO.H" include (:system-flag t) nil [40 65])
+            ("uf/core/UFIOScheduler.H" include nil nil [66 100])
+            ("UFIO_DEFAULT_TIMEOUT" variable
+               (:constant-flag t
+                :default-value "(10*1000*1000)"
+                :type "int")
+                nil [102 148])
+            ("UFIOImpl" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [166 173])
+                    ("UFIOScheduler" friend nil (reparse-symbol classsubparts) [178 204])
+                    ("EpollUFIOScheduler" friend nil (reparse-symbol classsubparts) [210 241])
+                    ("_remoteIP" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [248 286])
+                    ("_cli_addr" variable
+                       (:pointer 1
+                        :type ("sockaddr_storage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [291 329])
+                    ("_remotePort" variable (:type "unsigned int") (reparse-symbol classsubparts) [334 374])
+                    ("_localIP" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [379 416])
+                    ("_localPort" variable (:type "unsigned int") (reparse-symbol classsubparts) [421 460])
+                    ("_markedWriteActive" variable (:type "bool") (reparse-symbol classsubparts) [465 512])
+                    ("_markedReadActive" variable (:type "bool") (reparse-symbol classsubparts) [517 563])
+                    ("_readwatch" variable (:type "bool") (reparse-symbol classsubparts) [568 607])
+                    ("_writewatch" variable (:type "bool") (reparse-symbol classsubparts) [612 652])
+                    ("_fd" variable (:type "int") (reparse-symbol classsubparts) [657 689])
+                    ("_errno" variable (:type "unsigned int") (reparse-symbol classsubparts) [694 729])
+                    ("_readUF" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [734 770])
+                    ("_writeUF" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [775 812])
+                    ("_ufios" variable
+                       (:pointer 1
+                        :type ("UFIOScheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [817 852])
+                    ("_type" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [857 891])
+                    ("_sleepInfo" variable
+                       (:pointer 1
+                        :type ("UFSleepInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [896 935])
+                    ("_lastEpollFlag" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [940 983])
+                    ("m_defaultTimeout" variable
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [988 1016])
+                    ("UFIOImpl" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1031 1042])
+                            ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1043 1050])
+                            ("fd" variable
+                               (:default-value "-1"
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1051 1062]))                          
+                        :type ("UFIOImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1022 1064])
+                    ("UFIOImpl" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1069 1089])
+                    ("isSetup" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("makeNonBlocking" variable
+                               (:default-value "true)"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1107 1135]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1094 1136])
+                    ("setupConnectionToAccept" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("interface_addr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1198 1225])
+                            ("port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [1246 1270])
+                            ("backlog" variable
+                               (:default-value "16000"
+                                :type "unsigned short int")
+                                (reparse-symbol arg-sub-list) [1291 1325])
+                            ("makeSockNonBlocking" variable
+                               (:default-value "true)"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1347 1379]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1142 1380])
+                    ("accept" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ufiotChooser" variable
+                               (:pointer 1
+                                :type ("UFIOAcceptThreadChooser" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1406 1444])
+                            ("ufLocation" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [1469 1499])
+                            ("port" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [1524 1548])
+                            ("startingArgs" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1573 1592])
+                            ("stackPtr" variable
+                               (:pointer 1
+                                :default-value "0"
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1617 1635])
+                            ("stackSize" variable
+                               (:default-value "0"
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [1661 1687])
+                            ("secure" variable
+                               (:default-value "0"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1713 1728]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1386 1730])
+                    ("connect" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("addr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("sockaddr" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1757 1785])
+                            ("addrlen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1786 1804])
+                            ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1805 1824]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1736 1825])
+                    ("readLine" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1847 1857])
+                            ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1858 1867])
+                            ("delim" variable
+                               (:default-value "'\\n'"
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1868 1883]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1830 1885])
+                    ("readLine" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("out" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1907 1924])
+                            ("n" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1925 1934])
+                            ("delim" variable
+                               (:default-value "'\\n'"
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1935 1950]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1890 1952])
+                    ("read" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1978 1988])
+                            ("nbyte" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1989 2002])
+                            ("timeout" variable
+                               (:default-value "-1"
+                                :type ("TIME_IN_US" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2003 2026]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1957 2028])
+                    ("write" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("input" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2055 2080])
+                            ("timeout" variable
+                               (:default-value "-1"
+                                :type ("TIME_IN_US" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2081 2104]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2033 2106])
+                    ("write" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2133 2149])
+                            ("nbyte" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2150 2163])
+                            ("timeout" variable
+                               (:default-value "-1"
+                                :type ("TIME_IN_US" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2164 2187]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2111 2189])
+                    ("writev" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("iov" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("iovec" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2217 2241])
+                            ("iov_size" variable (:type "int") (reparse-symbol arg-sub-list) [2242 2255])
+                            ("timeout" variable
+                               (:default-value "-1"
+                                :type ("TIME_IN_US" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2256 2279]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2194 2281])
+                    ("sendto" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("msg" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2305 2321])
+                            ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2337 2348])
+                            ("to" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("sockaddr" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2364 2390])
+                            ("tolen" variable (:type ("socklen_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2406 2422])
+                            ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2438 2457]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2286 2458])
+                    ("sendmsg" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("msg" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("msghdr" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2483 2508])
+                            ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [2525 2535])
+                            ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2552 2571]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2463 2572])
+                    ("recvfrom" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2598 2608])
+                            ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2626 2637])
+                            ("from" variable
+                               (:pointer 1
+                                :type ("sockaddr" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2655 2677])
+                            ("fromlen" variable
+                               (:pointer 1
+                                :type ("socklen_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2695 2714])
+                            ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2732 2751]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2577 2752])
+                    ("recvmsg" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("msg" variable
+                               (:pointer 1
+                                :type ("msghdr" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2777 2796])
+                            ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [2813 2823])
+                            ("timeout" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2840 2859]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2757 2860])
+                    ("close" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2865 2886])
+                    ("setFd" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [2902 2909])
+                            ("makeNonBlocking" variable
+                               (:default-value "true,"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2910 2938])
+                            ("closePrevious" variable
+                               (:default-value "true)"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2939 2965]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2891 2966])
+                    ("setReadUF" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2986 2993]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2971 2994])
+                    ("setWriteUF" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3015 3022]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2999 3023])
+                    ("setWakeUpTimeInSleepList" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("wakeUpTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3058 3080]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3028 3081])
+                    ("getWakeUpTimeInSleepList" function
+                       (:prototype-flag t
+                        :type ("TIME_IN_US" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3086 3124])
+                    ("setUFIOScheduler" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ufios" variable
+                               (:pointer 1
+                                :type ("UFIOScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3151 3172]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3129 3173])
+                    ("getErrno" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [3178 3208])
+                    ("getFd" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3213 3231])
+                    ("getReadUF" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3236 3258])
+                    ("getWriteUF" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3263 3286])
+                    ("setRemoteIP" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("newRemoteIP" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3308 3339]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3291 3340])
+                    ("getRemoteIP" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3345 3384])
+                    ("setRemotePort" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("port" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3408 3426]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3389 3427])
+                    ("getRemotePort" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [3432 3467])
+                    ("setCliAddr" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("input" variable
+                               (:pointer 1
+                                :type ("sockaddr_storage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3488 3512]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3472 3513])
+                    ("getLocalIP" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3518 3556])
+                    ("setLocalIP" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ip" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3577 3599]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3561 3600])
+                    ("setLocalPort" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("port" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3624 3642]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3606 3643])
+                    ("getLocalPort" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [3648 3682])
+                    ("getUFIOScheduler" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("UFIOScheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3687 3727])
+                    ("setupForAccept" function (:type "void") (reparse-symbol classsubparts) [3732 3765])
+                    ("setupForConnect" function (:type "void") (reparse-symbol classsubparts) [3771 3805])
+                    ("preClose" function (:type "void") (reparse-symbol classsubparts) [3810 3837])
+                    ("postClose" function (:type "void") (reparse-symbol classsubparts) [3842 3870])
+                    ("setType" function
+                       (:arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3889 3913]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3876 3931])
+                    ("ufCreateThreadWithIO" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("tid" variable
+                               (:pointer 1
+                                :type ("pthread_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3969 3984])
+                            ("ufsToStartWith" variable
+                               (:pointer 1
+                                :type ("UFList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3985 4008]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3936 4009])
+                    ("setReadMarkedActive" function
+                       (:arguments 
+                          ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [4039 4049]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4014 4079])
+                    ("setWriteMarkedActive" function
+                       (:arguments 
+                          ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [4111 4121]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4085 4152])
+                    ("protected" label nil (reparse-symbol classsubparts) [4155 4165])
+                    ("_readLineBuf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [4170 4211])
+                    ("_readLineBufPos" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4216 4260])
+                    ("_readLineBufSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4265 4310])
+                    ("UFIOImpl" function
+                       (:constructor-flag t
+                        :type ("UFIOImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4316 4350])
+                    ("reset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4355 4368])
+                    ("_ufio" variable
+                       (:pointer 1
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4374 4408])
+                    ("_wakeUpTimeInSleepList" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4413 4453])
+                    ("private" label nil (reparse-symbol classsubparts) [4454 4462])
+                    ("UFIOImpl" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("UFIOImpl" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4476 4492]))                          
+                        :type ("UFIOImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4467 4493])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("UFIOImpl" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4518 4534]))                          
+                        :type ("UFIOImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4498 4535]))                  
+                :type "class")
+                nil [149 4538])
+            ("setWriteUF" function
+               (:parent "UFIOImpl"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("uf" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4573 4580]))                  
+                :type "void")
+                nil [4540 4642])
+            ("setReadUF" function
+               (:parent "UFIOImpl"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("uf" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4675 4682]))                  
+                :type "void")
+                nil [4643 4742]))          
+    :file "UFIOImpl.H"
+    :pointmax 4751
+    :fsize 4750
+    :lastmodtime '(20629 53834)
+    :unmatched-syntax '((punctuation 3765 . 3766) (punctuation 241 . 242) (punctuation 204 . 205))
+    :lexical-table 
+        '(("UFIOIMPL_H")
+          )
+
+    )
+   (semanticdb-table "UFSchedulerImpl.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UF_SCHEDULERIMPL_H" variable (:constant-flag t) nil [36 54])
+            ("uf/core/UFScheduler.H" include (:system-flag t) nil [56 88])
+            ("UFProfiler.H" include (:system-flag t) nil [89 112])
+            ("LockFreeQueue.H" include nil nil [113 139])
+            ("PROFILER_CALL" variable (:constant-flag t) nil [149 162])
+            ("PROFILER_START" variable (:constant-flag t) nil [218 232])
+            ("PROFILER_STOP" variable (:constant-flag t) nil [297 310])
+            ("UFIOS_PROFILER_BEGIN" variable (:constant-flag t) nil [372 392])
+            ("UFIOS_PROFILER_END" variable (:constant-flag t) nil [481 499])
+            ("UFIO_PROFILER_BEGIN" variable (:constant-flag t) nil [586 605])
+            ("UFIO_PROFILER_END" variable (:constant-flag t) nil [693 710])
+            ("UF_DBGFLAG_PROFILE_CTX_SWITCH" variable
+               (:constant-flag t
+                :default-value "(1<<0)"
+                :type "int")
+                nil [789 838])
+            ("UF_DBGFLAG_UFIOS_PERF_TUNING" variable
+               (:constant-flag t
+                :default-value "(1<<1)"
+                :type "int")
+                nil [839 887])
+            ("UF_DBGFLAG_OPTIMIZE_SCHEDULER" variable
+               (:constant-flag t
+                :default-value "(1<<2)"
+                :type "int")
+                nil [888 937])
+            ("UF_DBGFLAG_OPTIMIZE_SCHEDULER_MULT" variable
+               (:constant-flag t
+                :default-value "(1<<3)"
+                :type "int")
+                nil [938 992])
+            ("MAX_UFS_NOMINATION_COUNT" variable
+               (:constant-flag t
+                :default-value "100000"
+                :type "int")
+                nil [994 1036])
+            ("UFSchedulerImpl" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1061 1068])
+                    ("UFSchedulerImpl" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("sch" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1089 1106]))                          
+                        :type ("UFSchedulerImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1073 1107])
+                    ("UFSchedulerImpl" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1112 1131])
+                    ("runScheduler" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1137 1157])
+                    ("addFiberToScheduler" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1323 1330])
+                            ("tid" variable
+                               (:default-value "0"
+                                :type ("pthread_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1385 1402])
+                            ("bNewUF" variable
+                               (:default-value "false)"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1467 1487]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1298 1488])
+                    ("addFiberToScheduler" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ufList" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("UFList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1626 1647])
+                            ("tid" variable
+                               (:default-value "0"
+                                :type ("pthread_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1678 1695])
+                            ("bNewUF" variable
+                               (:default-value "false)"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1727 1747]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1601 1748])
+                    ("getUF" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1828 1840])
+                    ("getRunningFiberOnThisThread" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1916 1950])
+                    ("getMainContext" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("ucontext_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1956 1985])
+                    ("setSpecific" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("args" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2007 2018]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1990 2019])
+                    ("getSpecific" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2024 2050])
+                    ("getAmtToSleep" function
+                       (:prototype-flag t
+                        :type ("TIME_IN_US" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2055 2088])
+                    ("setAmtToSleep" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("time" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2112 2128]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2093 2129])
+                    ("shouldExit" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2134 2158])
+                    ("setExitJustMe" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("exit" variable
+                               (:default-value "true)"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2182 2199]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2163 2200])
+                    ("getActiveRunningListSize" function
+                       (:prototype-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2205 2245])
+                    ("getUFsWaitingForNomination" function
+                       (:prototype-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2250 2292])
+                    ("getRunningThread" function (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2297 2348])
+                    ("getRunCounter" function
+                       (:prototype-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2353 2385])
+                    ("getEarliestWakeUpFromSleep" function
+                       (:prototype-flag t
+                        :type ("TIME_IN_US" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2390 2437])
+                    ("setEarliestWakeUpFromSleep" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("time" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2475 2491]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2442 2492])
+                    ("getWaitInfo" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("UFWaitInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2497 2523])
+                    ("releaseWaitInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ufsi" variable
+                               (:pointer 1
+                                :type ("UFWaitInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2549 2566]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2528 2567])
+                    ("incrementUFsWaitingOnSpinLock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("count" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2607 2626]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2572 2627])
+                    ("getUFsWaitingOnSpinLock" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [2632 2671])
+                    ("decrementUFsWaitingOnSpinLock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("count" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2711 2730]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2676 2731])
+                    ("setIORunnerUF" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ioRunnerUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2755 2770]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2736 2771])
+                    ("getIORunnerUF" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2776 2797])
+                    ("printCurrentStats" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2802 2827])
+                    ("getNotifyArgs" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2832 2854])
+                    ("setNotifyArgs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2923 2930]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2904 2931])
+                    ("setNotifyFunc" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2955 2975]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2936 2984])
+                    ("getSleepList" function
+                       (:prototype-flag t
+                        :type ("MapTimeUF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2989 3015])
+                    ("setBailWhenNoActiveUFs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [3144 3149]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3116 3150])
+                    ("getBailWhenNoActiveUFs" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3155 3185])
+                    ("_trackUFs" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3260 3298])
+                    ("_exit" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3303 3337])
+                    ("_inThreadedMode" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3342 3386])
+                    ("_mutexToCheckFiberSchedulerMap" variable
+                       (:typemodifiers ("static")
+                        :type ("pthread_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3391 3450])
+                    ("_threadUFSchedulerMap" variable
+                       (:typemodifiers ("static")
+                        :type ("ThreadUFSchedulerMap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3455 3506])
+                    ("_toDieBy" variable
+                       (:typemodifiers ("static")
+                        :type ("time_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3511 3536])
+                    ("getUFScheduler" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("tid" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3577 3591]))                          
+                        :type ("UFScheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3542 3592])
+                    ("ufCreateThread" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("tid" variable
+                               (:pointer 1
+                                :type ("pthread_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3624 3639])
+                            ("ufsToStartWith" variable
+                               (:pointer 1
+                                :type ("UFList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3640 3663]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3597 3664])
+                    ("m_debugFlags" variable
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [3670 3694])
+                    ("ufProfileStart" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("operation" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3726 3750]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3699 3751])
+                    ("ufProfileStop" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [3756 3784])
+                    ("getProfileString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("ufScheduler" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3820 3845]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3789 3846])
+                    ("ufiosProfileBegin" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("ufScheduler" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3881 3906]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3851 3907])
+                    ("ufiosProfileEnd" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("ufScheduler" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3940 3965]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3912 3966])
+                    ("ufioProfileBegin" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("ufScheduler" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4000 4025]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3971 4026])
+                    ("ufioProfileEnd" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("ufScheduler" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4058 4083]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4031 4084])
+                    ("ctxSwitchPre" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("switchingUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4114 4130])
+                            ("pHandle" variable
+                               (:pointer 1
+                                :type ("UFProfiler::ProfileStack" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4131 4165]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4089 4166])
+                    ("ctxSwitchPost" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("switchingUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4197 4213])
+                            ("pHandle" variable
+                               (:pointer 1
+                                :type ("UFProfiler::ProfileStack" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4214 4248]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4171 4249])
+                    ("createNewUFStack" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("parentUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4303 4316]))                          
+                        :type ("UFProfiler::UFCallStack" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4254 4317])
+                    ("releaseUFStack" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("ufScheduler" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4349 4374])
+                            ("pStack" variable
+                               (:pointer 1
+                                :type ("UFProfiler::UFCallStack" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4374 4406]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4322 4407])
+                    ("getCallStackString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("ufScheduler" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4443 4468])
+                            ("callStackString" variable
+                               (:reference 1
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4469 4493])
+                            ("args" variable
+                               (:pointer 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4494 4515]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4412 4516])
+                    ("incrementUFIOSleep" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("ufScheduler" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4552 4577])
+                            ("thisTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4578 4598])
+                            ("sleepTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4599 4620])
+                            ("expSleepTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4621 4645]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4521 4646])
+                    ("incrementCompletedConn" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4686 4693]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4651 4694])
+                    ("addUFToSchedulerNoLock" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("ufScheduler" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4734 4759])
+                            ("newUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4760 4770]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4699 4771])
+                    ("addUFToSchedulerNoLock" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("ufScheduler" variable
+                               (:pointer 1
+                                :type ("UFScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4811 4836])
+                            ("ufList" variable
+                               (:reference 1
+                                :type ("list" type
+                                     (:template-specifier 
+                                        ( ("UF" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4837 4855]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4776 4856])
+                    ("m_pUFProfiler" variable
+                       (:pointer 1
+                        :type ("UFProfiler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4861 4887])
+                    ("getUFValidState" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4914 4921]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4893 4922])
+                    ("private" label nil (reparse-symbol classsubparts) [4924 4932])
+                    ("_runCounter" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4937 4977])
+                    ("_currentFiber" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4982 5024])
+                    ("_mainContext" variable (:type ("ucontext_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5029 5070])
+                    ("_activeRunningList" variable (:type ("UFDeque" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5165 5212])
+                    ("_nominateToAddToActiveRunningList" variable (:type ("UFDeque" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5266 5328])
+                    ("_mutexToNominateToActiveList" variable (:type ("pthread_mutex_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5333 5390])
+                    ("_condToNominateToActiveList" variable (:type ("pthread_cond_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5395 5451])
+                    ("_earliestWakeUpFromSleep" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5456 5509])
+                    ("_amtToSleep" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5554 5594])
+                    ("_specific" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [5635 5673])
+                    ("_tid" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5678 5711])
+                    ("notifyUF" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [5716 5732])
+                    ("_availableWaitInfo" variable (:type ("std::deque" type
+                         (:template-specifier 
+                            ( ("UFWaitInfo" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5737 5784])
+                    ("_stillAliveList" variable (:type ("std::set" type
+                         (:template-specifier 
+                            ( ("UF" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5789 5833])
+                    ("_validUFList" variable (:type ("std::set" type
+                         (:template-specifier 
+                            ( ("UF" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5863 5904])
+                    ("_mutexToValidUFList" variable (:type ("UFMutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5944 5992])
+                    ("_ufsWaitingOnSpinLock" variable (:type "unsigned int") (reparse-symbol classsubparts) [6035 6070])
+                    ("_ioRunnerUF" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6075 6091])
+                    ("_sch" variable
+                       (:pointer 1
+                        :type ("UFScheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6093 6112])
+                    ("private" label nil (reparse-symbol classsubparts) [6114 6122])
+                    ("addFiberToSelf" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6147 6154]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6127 6155])
+                    ("addFiberToAnotherThread" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ufList" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("UFList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6189 6210])
+                            ("tid" variable (:type ("pthread_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6211 6225])
+                            ("bNewUF" variable (:type "bool") (reparse-symbol arg-sub-list) [6226 6238]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6160 6239])
+                    ("addUFToSchedulerNoLock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("newUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6272 6282]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6244 6283])
+                    ("addUFToSchedulerNoLock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ufList" variable
+                               (:reference 1
+                                :type ("list" type
+                                     (:template-specifier 
+                                        ( ("UF" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6316 6334]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6288 6335])
+                    ("setUFValidState" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("uf" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6362 6369])
+                            ("bValidSetting" variable (:type "bool") (reparse-symbol arg-sub-list) [6369 6388]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6341 6389])
+                    ("_notifyFunc" variable
+                       (:functionpointer-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [6519 6548])
+                    ("_notifyArgs" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [6553 6573])
+                    ("_exitJustMe" variable (:type "bool") (reparse-symbol classsubparts) [6578 6597])
+                    ("_bailWhenNoActiveUFs" variable (:type "bool") (reparse-symbol classsubparts) [6602 6630])
+                    ("_sleepList" variable (:type ("MapTimeUF" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6657 6696])
+                    ("UFSchedulerImpl" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("UFSchedulerImpl" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6718 6741]))                          
+                        :type ("UFSchedulerImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6702 6742])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("UFSchedulerImpl" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6774 6797]))                          
+                        :type ("UFSchedulerImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6747 6798])
+                    ("m_nominationQueue" variable
+                       (:pointer 1
+                        :type ("LockFreeQueue" type
+                             (:template-specifier 
+                                ( ("UF" type (:pointer 1) nil nil)
+                                  ("MAX_UFS_NOMINATION_COUNT" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [6803 6866]))                  
+                :type "class")
+                nil [1037 6869])
+            ("setUFValidState" function
+               (:parent "UFSchedulerImpl"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("uf" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6996 7003])
+                    ("bValidSetting" variable (:type "bool") (reparse-symbol arg-sub-list) [7004 7023]))                  
+                :type "void")
+                nil [6951 7382])
+            ("getUFValidState" function
+               (:parent "UFSchedulerImpl"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("uf" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7509 7516]))                  
+                :type "bool")
+                nil [7464 7713]))          
+    :file "UFSchedulerImpl.H"
+    :pointmax 7722
+    :fsize 7721
+    :lastmodtime '(20629 53834)
+    :unmatched-syntax '((semantic-list 2975 . 2982) (semantic-list 2961 . 2975))
+    :lexical-table 
+        '(("PROFILER_START" (spp-arg-list ("x") 232 . 235) . 
+              ((IF "if" 236 . 238) (semantic-list "(UFProfiler::m_profilerEnabled)" 238 . 269) (symbol "ufProfileStart" 271 . 285) (semantic-list "(x)" 285 . 288)))
+          ("UFIOS_PROFILER_BEGIN" (spp-arg-list ("ufs") 392 . 397) . 
+              ((IF "if" 398 . 400) (semantic-list "(UFProfiler::m_profilerEnabled)" 400 . 431) (symbol "UFSchedulerImpl" 433 . 448) (punctuation ":" 448 . 449) (punctuation ":" 449 . 450) (symbol "ufiosProfileBegin" 450 . 467) (semantic-list "(ufs)" 467 . 472)))
+          ("UFIO_PROFILER_BEGIN" (spp-arg-list ("ufs") 605 . 610) . 
+              ((IF "if" 611 . 613) (semantic-list "(UFProfiler::m_profilerEnabled)" 613 . 644) (symbol "UFSchedulerImpl" 646 . 661) (punctuation ":" 661 . 662) (punctuation ":" 662 . 663) (symbol "ufioProfileBegin" 663 . 679) (semantic-list "(ufs)" 679 . 684)))
+          ("UFIO_PROFILER_END" (spp-arg-list ("ufs") 710 . 715) . 
+              ((IF "if" 716 . 718) (semantic-list "(UFProfiler::m_profilerEnabled)" 718 . 749) (symbol "UFSchedulerImpl" 751 . 766) (punctuation ":" 766 . 767) (punctuation ":" 767 . 768) (symbol "ufioProfileEnd" 768 . 782) (semantic-list "(ufs)" 782 . 787)))
+          ("UF_SCHEDULERIMPL_H")
+          ("PROFILER_STOP" (spp-arg-list nil 310 . 312) . 
+              ((IF "if" 313 . 315) (semantic-list "(UFProfiler::m_profilerEnabled)" 315 . 346) (symbol "ufProfileStop" 348 . 361) (semantic-list "()" 361 . 363)))
+          ("PROFILER_CALL" (spp-arg-list ("call") 162 . 168) . 
+              ((IF "if" 169 . 171) (semantic-list "(m_pUFProfiler)" 171 . 186) (symbol "m_pUFProfiler" 188 . 201) (punctuation "-" 201 . 202) (punctuation ">" 202 . 203) (symbol "call" 203 . 207) (semantic-list "()" 207 . 209)))
+          ("UFIOS_PROFILER_END" (spp-arg-list ("ufs") 499 . 504) . 
+              ((IF "if" 505 . 507) (semantic-list "(UFProfiler::m_profilerEnabled)" 507 . 538) (symbol "UFSchedulerImpl" 540 . 555) (punctuation ":" 555 . 556) (punctuation ":" 556 . 557) (symbol "ufiosProfileEnd" 557 . 572) (semantic-list "(ufs)" 572 . 577)))
+          )
+
+    )
+   (semanticdb-table "UFProfiler.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__UFPROFILER_H__" variable (:constant-flag t) nil [34 50])
+            ("string" include (:system-flag t) nil [51 68])
+            ("sys/time.h" include (:system-flag t) nil [69 90])
+            ("sys/resource.h" include (:system-flag t) nil [91 116])
+            ("uf/core/UF.H" include (:system-flag t) nil [117 140])
+            ("map" include (:system-flag t) nil [141 155])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [156 176])
+            ("AT_CLKTCK" variable (:constant-flag t) nil [204 213])
+            ("NOTE_NOT_FOUND" variable (:constant-flag t) nil [265 279])
+            ("MAX_PROFILE_SECTIONS" variable
+               (:constant-flag t
+                :default-value "512"
+                :type "int")
+                nil [284 319])
+            ("UFProfiler" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [340 347])
+                    ("UFProfiler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("UFProfiler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [352 365])
+                    ("ProfileSection" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [401 408])
+                            ("ProfileSection" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("ProfileSection" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [417 434])
+                            ("ProfileSection" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("sectionName" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [458 484]))                                  
+                                :type ("ProfileSection" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [443 485])
+                            ("beginProfile" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [494 514])
+                            ("endProfile" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [523 541])
+                            ("beginProfile" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("r_start" variable
+                                       (:reference 1
+                                        :type ("rusage" type
+                                             (:prototype t
+                                              :type "struct")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [568 591]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [550 592])
+                            ("endProfile" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("r_current" variable
+                                       (:reference 1
+                                        :type ("rusage" type
+                                             (:prototype t
+                                              :type "struct")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [617 642]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [601 643])
+                            ("m_sectionName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [653 674])
+                            ("sectionOpen" variable (:type "bool") (reparse-symbol classsubparts) [683 700])
+                            ("m_startUserTime" variable (:type "unsigned long") (reparse-symbol classsubparts) [709 739])
+                            ("m_startSysTime" variable (:type "unsigned long") (reparse-symbol classsubparts) [748 777])
+                            ("m_totalUserTime" variable (:type "unsigned long") (reparse-symbol classsubparts) [786 816])
+                            ("m_totalSysTime" variable (:type "unsigned long") (reparse-symbol classsubparts) [825 854])
+                            ("m_currentUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [864 880]))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [370 887])
+                    ("ProfileStack" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [922 929])
+                            ("ProfileStack" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("ProfileStack" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [938 953])
+                            ("m_profilesInUse" variable (:type "int") (reparse-symbol classsubparts) [962 982])
+                            ("m_profileIndexStack" variable
+                               (:dereference 1
+                                :type "int")
+                                (reparse-symbol classsubparts) [991 1019]))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [893 1026])
+                    ("UFCallStack" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1061 1068])
+                            ("UFCallStack" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("UFCallStack" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1077 1091])
+                            ("UFCallStack" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1100 1115])
+                            ("storeCallStack" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1124 1146])
+                            ("clearCallStack" function
+                               (:prototype-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1155 1177])
+                            ("printCallStack" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("callStackString" variable
+                                       (:reference 1
+                                        :type ("string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1206 1230])
+                                    ("args" variable
+                                       (:pointer 1
+                                        :type ("vector" type
+                                             (:template-specifier 
+                                                ( ("string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1231 1252]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1186 1253])
+                            ("printCallStack" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1282 1289])
+                                    ("args" variable
+                                       (:pointer 1
+                                        :type ("vector" type
+                                             (:template-specifier 
+                                                ( ("string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1290 1311]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1262 1312])
+                            ("m_callStackArray" variable
+                               (:pointer 2
+                                :type "void")
+                                (reparse-symbol classsubparts) [1321 1345])
+                            ("m_depthAvailable" variable (:type "int") (reparse-symbol classsubparts) [1354 1375])
+                            ("m_prev" variable
+                               (:pointer 1
+                                :type ("UFCallStack" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1385 1405])
+                            ("m_next" variable
+                               (:pointer 1
+                                :type ("UFCallStack" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1414 1434])
+                            ("m_parentUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1443 1458]))                          
+                        :type "class")
+                        (reparse-symbol classsubparts) [1032 1465])
+                    ("m_profileSections" variable
+                       (:dereference 1
+                        :type ("ProfileSection" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1471 1526])
+                    ("m_profileMap" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("string" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1532 1562])
+                    ("ufsStart" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1568 1584])
+                    ("ufsUpdateTick" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sleepListSize" variable (:type "int") (reparse-symbol arg-sub-list) [1608 1626]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1589 1627])
+                    ("ctxSwitchPre" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1632 1652])
+                    ("ctxSwitchPost" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1657 1678])
+                    ("ctxSwitchPre" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1701 1709])
+                            ("profileHandle" variable
+                               (:pointer 1
+                                :type ("UFProfiler::ProfileStack" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1710 1750]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1683 1751])
+                    ("ctxSwitchPost" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1775 1783])
+                            ("profileHandle" variable
+                               (:pointer 1
+                                :type ("UFProfiler::ProfileStack" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1784 1824]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1756 1825])
+                    ("incrementUFCount" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1830 1854])
+                    ("toString" function
+                       (:prototype-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1859 1877])
+                    ("printCallStacks" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callStackString" variable
+                               (:reference 1
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1903 1927])
+                            ("args" variable
+                               (:pointer 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1928 1949]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1882 1950])
+                    ("printCallStacks" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1976 1983]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1955 1984])
+                    ("getCpuUsage" function
+                       (:prototype-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [1989 2010])
+                    ("beginProfile" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("pUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2054 2062])
+                            ("operation" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2063 2087])
+                            ("profileHandle" variable
+                               (:pointer 1
+                                :type ("ProfileStack" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2087 2115]))                          
+                        :type ("UFProfiler::ProfileStack" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2015 2116])
+                    ("endProfile" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("pUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2158 2166])
+                            ("profileHandle" variable
+                               (:pointer 1
+                                :type ("UFProfiler::ProfileStack" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2167 2207]))                          
+                        :type ("UFProfiler::ProfileStack" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2121 2208])
+                    ("setStartTime" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("startTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2231 2252]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2213 2253])
+                    ("incrementUFIOSleep" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("thisTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2282 2302])
+                            ("value" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2303 2320])
+                            ("expSleepTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2321 2345]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2258 2346])
+                    ("setUFsWaiting" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("waitingCount" variable (:type "int") (reparse-symbol arg-sub-list) [2370 2387]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2351 2388])
+                    ("m_ufsUserTime" variable (:type "unsigned long") (reparse-symbol classsubparts) [2394 2422])
+                    ("m_ufsSysTime" variable (:type "unsigned long") (reparse-symbol classsubparts) [2429 2456])
+                    ("m_ctxUserTime" variable (:type "unsigned long") (reparse-symbol classsubparts) [2463 2491])
+                    ("m_ctxSysTime" variable (:type "unsigned long") (reparse-symbol classsubparts) [2496 2523])
+                    ("m_preSwitchUserTime" variable (:type "unsigned long") (reparse-symbol classsubparts) [2529 2563])
+                    ("m_preSwitchSysTime" variable (:type "unsigned long") (reparse-symbol classsubparts) [2568 2601])
+                    ("m_ufsBeginTimeUser" variable (:type "unsigned long") (reparse-symbol classsubparts) [2606 2639])
+                    ("m_ufsBeginTimeSys" variable (:type "unsigned long") (reparse-symbol classsubparts) [2644 2676])
+                    ("m_lastTicks" variable (:type "unsigned long long") (reparse-symbol classsubparts) [2682 2713])
+                    ("m_lastUsage" variable (:type "unsigned long long") (reparse-symbol classsubparts) [2718 2749])
+                    ("m_ufiosProfile" variable
+                       (:pointer 1
+                        :type ("ProfileSection" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2754 2785])
+                    ("m_ufioProfile" variable
+                       (:pointer 1
+                        :type ("ProfileSection" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2790 2820])
+                    ("m_lastCpuProfileTime" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [2825 2861])
+                    ("m_tid" variable (:type ("pid_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2866 2878])
+                    ("m_ufCount" variable (:type "int") (reparse-symbol classsubparts) [2883 2897])
+                    ("m_ufCountCompleted" variable (:type "int") (reparse-symbol classsubparts) [2902 2925])
+                    ("m_firstUFCompletedTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2930 2964])
+                    ("m_headStack" variable
+                       (:pointer 1
+                        :type ("UFCallStack" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2969 2994])
+                    ("createNewCallStack" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("parentUF" variable
+                               (:pointer 1
+                                :type ("UF" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3031 3044]))                          
+                        :type ("UFCallStack" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2999 3045])
+                    ("releaseCallStack" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("pStack" variable
+                               (:pointer 1
+                                :type ("UFCallStack" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3072 3092]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3050 3093])
+                    ("incrementCompletedConn" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3098 3128])
+                    ("m_ufioSleepTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3134 3161])
+                    ("m_timeNow" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3166 3187])
+                    ("m_startTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3192 3215])
+                    ("m_lastMemUsed" variable (:type "double") (reparse-symbol classsubparts) [3220 3241])
+                    ("m_sleepTimeCount" variable (:type "int") (reparse-symbol classsubparts) [3246 3267])
+                    ("m_sleepListSize" variable (:type "int") (reparse-symbol classsubparts) [3272 3292])
+                    ("m_waitingListSize" variable (:type "int") (reparse-symbol classsubparts) [3297 3319])
+                    ("m_maxWaitingListSize" variable (:type "int") (reparse-symbol classsubparts) [3324 3349])
+                    ("m_avgWaitingListFactor" variable (:type "double") (reparse-symbol classsubparts) [3354 3384])
+                    ("m_lastSleepTime" variable (:type ("TIME_IN_US" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3389 3416])
+                    ("m_hertzValue" variable
+                       (:typemodifiers ("static")
+                        :type "unsigned long long")
+                        (reparse-symbol classsubparts) [3423 3462])
+                    ("m_profilerEnabled" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3467 3497])
+                    ("m_backTraceEnabled" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3502 3533])
+                    ("m_backTraceDepth" variable
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [3538 3566]))                  
+                :type "class")
+                nil [321 3569]))          
+    :file "UFProfiler.H"
+    :pointmax 3578
+    :fsize 3577
+    :lastmodtime '(20629 53834)
+    :unmatched-syntax '((punctuation 854 . 855) (punctuation 854 . 855))
+    :lexical-table 
+        '(("NOTE_NOT_FOUND" . ((number "42" 280 . 282)))
+          ("__UFPROFILER_H__")
+          ("AT_CLKTCK" . ((number "17" 220 . 222)))
+          )
+
+    )
+   (semanticdb-table "LockFreeQueue.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__LOCK_FREE_QUEUE_H__" variable (:constant-flag t) nil [39 60])
+            ("iostream" include (:system-flag t) nil [61 80])
+            ("list" include (:system-flag t) nil [81 96])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [97 117])
+            ("LockFreeQueue" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type nil nil nil))                  
+                :type "class"
+                :members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [167 175])
+                    ("m_tailIndex" variable
+                       (:typemodifiers ("volatile")
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [180 214])
+                    ("m_headIndex" variable
+                       (:typemodifiers ("volatile")
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [219 253])
+                    ("m_entryList" variable
+                       (:dereference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [258 277])
+                    ("public" label nil (reparse-symbol classsubparts) [278 285])
+                    ("LockFreeQueue" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("LockFreeQueue" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [290 306])
+                    ("getQueueMax" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [311 329])
+                    ("getItemCount" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [334 353])
+                    ("isFull" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [358 372])
+                    ("readEntry" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("retVal" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [392 402]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [377 403])
+                    ("writeEntry" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("val" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [424 430]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [408 431])
+                    ("writeEntry" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("entryList" variable
+                               (:reference 1
+                                :type ("list" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [452 471]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [436 472]))                  )
+                nil [119 475])
+            ("LockFreeQueue" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type nil nil nil))                  
+                :type ("LockFreeQueue" type (:type "class") nil nil)
+                :parent "LockFreeQueue"
+                :constructor-flag t)
+                nil [477 584])
+            ("getQueueMax" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type nil nil nil))                  
+                :type "int"
+                :parent "LockFreeQueue")
+                nil [586 667])
+            ("getItemCount" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type nil nil nil))                  
+                :type "int"
+                :parent "LockFreeQueue")
+                nil [669 964])
+            ("isFull" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type nil nil nil))                  
+                :type "bool"
+                :parent "LockFreeQueue")
+                nil [966 1230])
+            ("writeEntry" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type nil nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("val" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1294 1300]))                  
+                :parent "LockFreeQueue")
+                nil [1232 1478])
+            ("writeEntry" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type nil nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("entryList" variable
+                       (:reference 1
+                        :type ("list" type
+                             (:template-specifier 
+                                ( ("T" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1543 1562]))                  
+                :parent "LockFreeQueue")
+                nil [1481 1939])
+            ("readEntry" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil)
+                    ("int" type nil nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("retVal" variable
+                       (:reference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2003 2013]))                  
+                :parent "LockFreeQueue")
+                nil [1942 2206]))          
+    :file "LockFreeQueue.H"
+    :pointmax 2215
+    :fsize 2214
+    :lastmodtime '(20629 53834)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__LOCK_FREE_QUEUE_H__")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!uf!1.0_11621!ufcore!src!core!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

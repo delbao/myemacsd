@@ -1,0 +1,28 @@
+;; Object util/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "util/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc")) nil [1 85])
+            ("lib_LTLIBRARIES" variable (:default-value ("libufhttputil.la")) nil [114 168])
+            ("source_files" variable (:default-value ("Util.C")) nil [169 196])
+            ("libufhttputil_la_SOURCES" variable (:default-value ("$(source_files)")) nil [196 239])
+            ("libufhttputil_la_LIBADD" variable (:default-value ("$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [239 485])
+            ("libufhttputil_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [485 530])
+            ("libufhttputil_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [530 606])
+            ("libufhttputil_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [606 686])
+            ("libufhttputil_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [686 736])
+            ("libufhttputil_p_la_LIBADD" variable (:default-value ("$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/http/component/src/parser/libufhttpparser_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [736 992]))          
+    :file "Makefile.am"
+    :pointmax 992
+    :fsize 991
+    :lastmodtime '(20622 62376)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!http!component!src!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

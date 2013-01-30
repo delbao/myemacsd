@@ -1,0 +1,24 @@
+;; Object pub/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pub/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/plugin/common/inc")) nil [1 195])
+            ("pkglibexecdir" variable (:default-value ("$(libexecdir)/$(PACKAGE)")) nil [196 237])
+            ("pkglibexec_LTLIBRARIES" variable (:default-value ("libufhttppushpub.la")) nil [237 282])
+            ("libufhttppushpub_la_SOURCES" variable (:default-value ("PushYahooPubFilter.H" "PushYahooPubFilter.C" "PushYahooPubUF.H" "PushYahooPubUF.C" "PushYahooPubRetryUF.H" "PushYahooPubRetryUF.C" "PushPubFilter.H" "PushPubFilter.C")) nil [282 496])
+            ("libufhttppushpub_la_LDFLAGS" variable (:default-value ("-ljsoncpp" "-lynetdblib" "-lpthread" "$(AM_LDFLAGS)")) nil [497 573])
+            ("libufhttppushpub_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/util/libufhttputil.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la" "$(top_builddir)/plugin/push/util/libufhttppushutil.la" "$(top_builddir)/plugin/push/conf/libufhttppushconf.la" "$(top_builddir)/plugin/common/src/libufcommon.la")) nil [573 1126]))          
+    :file "Makefile.am"
+    :pointmax 1126
+    :fsize 1125
+    :lastmodtime '(20622 62393)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!plugin!push!pub!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,65 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "CConn.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("log4cpp/Category.hh" include (:system-flag t) nil [1 31])
+            ("defines.h" include nil nil [32 52])
+            ("CConn.h" include nil nil [53 71])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [73 93])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [155 245])
+            ("CConn" function
+               (:constructor-flag t
+                :parent "CConn"
+                :arguments 
+                  ( ("appid" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [261 274])
+                    ("port" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [275 287]))                  
+                :type ("CConn" type (:type "class") nil nil))
+                nil [247 352])
+            ("CConn" function
+               (:destructor-flag t
+                :parent "CConn"
+                :type "void")
+                nil [354 406])
+            ("init" function
+               (:parent "CConn"
+                :type "int")
+                nil [453 916])
+            ("responseWriter" function
+               (:parent "CConn"
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1166 1176])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1177 1189])
+                    ("nmemb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1190 1203])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1204 1215]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [1136 1671])
+            ("statusCheck" function
+               (:parent "CConn"
+                :type "int")
+                nil [1771 3136]))          
+    :file "CConn.cc"
+    :pointmax 3328
+    :fsize 3327
+    :lastmodtime '(20328 58313)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!dht!controller!src!failover_daemon!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

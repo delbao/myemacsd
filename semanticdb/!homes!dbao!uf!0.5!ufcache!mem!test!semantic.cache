@@ -1,0 +1,25 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("check_PROGRAMS" variable (:default-value ("testufmemcache")) nil [53 89])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [89 115])
+            ("LDADD" variable (:default-value ("$(top_builddir)/ufcache/mem/src/libufmemcache_p.la" "$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/http/component/src/remap/libufhttpremap_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [115 404])
+            ("AM_CXXFLAGS" variable (:default-value ("-Wconversion")) nil [405 432])
+            ("AM_CPPFLAGS" variable (:default-value ("-DUFF_0_5_BRANCH" "-I$(top_srcdir)" "-I$(top_srcdir)/ufcache/mem/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc")) nil [433 594])
+            ("AM_LDFLAGS" variable (:default-value ("-lcppunit")) nil [595 618])
+            ("testufmemcache_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFMemCache.C")) nil [619 710]))          
+    :file "Makefile.am"
+    :pointmax 710
+    :fsize 709
+    :lastmodtime '(20622 62392)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!ufcache!mem!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

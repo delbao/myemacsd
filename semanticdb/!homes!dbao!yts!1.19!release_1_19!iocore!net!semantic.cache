@@ -1,0 +1,1145 @@
+;; Object net/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "net/"
+  :tables (list 
+   (semanticdb-table "UnixNetAccept.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("P_Net.h" include nil nil [1 19])
+            ("ROUNDUP" variable (:constant-flag t) nil [66 73])
+            ("dummy_volatile" variable
+               (:typemodifiers ("volatile")
+                :type "int")
+                nil [165 197])
+            ("accept_till_done" variable (:type "int") nil [198 223])
+            ("safe_delay" function
+               (:arguments 
+                  ( ("msec" variable (:type "int") (reparse-symbol arg-sub-list) [241 250]))                  
+                :type "void")
+                nil [225 288])
+            ("send_throttle_message" function
+               (:arguments 
+                  ( ("na" variable
+                       (:pointer 1
+                        :type ("NetAccept" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [453 468]))                  
+                :type "int")
+                nil [427 1235])
+            ("net_accept" function
+               (:arguments 
+                  ( ("na" variable
+                       (:pointer 1
+                        :type ("NetAccept" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1306 1321])
+                    ("ep" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1322 1331])
+                    ("blockable" variable (:type "bool") (reparse-symbol arg-sub-list) [1332 1347]))                  
+                :type "int")
+                nil [1291 3306])
+            ("net_accept_main_blocking" function
+               (:arguments 
+                  ( ("na" variable
+                       (:pointer 1
+                        :type ("NetAccept" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3452 3467])
+                    ("e" variable
+                       (:pointer 1
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3468 3478])
+                    ("blockable" variable (:type "bool") (reparse-symbol arg-sub-list) [3479 3494]))                  
+                :type "int")
+                nil [3423 4807])
+            ("allocateThread" function
+               (:pointer 1
+                :parent "NetAccept"
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5001 5013]))                  
+                :type ("UnixNetVConnection" type (:type "class") nil nil))
+                nil [4955 5184])
+            ("freeThread" function
+               (:parent "NetAccept"
+                :arguments 
+                  ( ("vc" variable
+                       (:pointer 1
+                        :type ("UnixNetVConnection" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5213 5237])
+                    ("t" variable
+                       (:pointer 1
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5238 5250]))                  
+                :type "void")
+                nil [5186 5387])
+            ("getEtype" function
+               (:parent "NetAccept"
+                :type ("EventType" type (:type "class") nil nil))
+                nil [5496 5550])
+            ("init_accept_loop" function
+               (:parent "NetAccept"
+                :type "void")
+                nil [5690 6088])
+            ("init_accept" function
+               (:parent "NetAccept"
+                :arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6410 6422]))                  
+                :type "void")
+                nil [6382 6772])
+            ("init_accept_per_thread" function
+               (:parent "NetAccept"
+                :type "void")
+                nil [6775 7945])
+            ("do_listen" function
+               (:parent "NetAccept"
+                :arguments 
+                  ( ("non_blocking" variable (:type "bool") (reparse-symbol arg-sub-list) [7973 7991]))                  
+                :type "int")
+                nil [7948 8706])
+            ("do_blocking_accept" function
+               (:parent "NetAccept"
+                :arguments 
+                  ( ("master_na" variable
+                       (:pointer 1
+                        :type ("NetAccept" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8743 8765])
+                    ("t" variable
+                       (:pointer 1
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8766 8778]))                  
+                :type "int")
+                nil [8709 11002])
+            ("acceptEvent" function
+               (:parent "NetAccept"
+                :arguments 
+                  ( ("event" variable (:type "int") (reparse-symbol arg-sub-list) [11032 11042])
+                    ("ep" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [11043 11052]))                  
+                :type "int")
+                nil [11005 12526])
+            ("acceptFastEvent" function
+               (:parent "NetAccept"
+                :arguments 
+                  ( ("event" variable (:type "int") (reparse-symbol arg-sub-list) [12560 12570])
+                    ("ep" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12571 12580]))                  
+                :type "int")
+                nil [12529 17869])
+            ("acceptLoopEvent" function
+               (:parent "NetAccept"
+                :arguments 
+                  ( ("event" variable (:type "int") (reparse-symbol arg-sub-list) [17903 17913])
+                    ("e" variable
+                       (:pointer 1
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17914 17924]))                  
+                :type "int")
+                nil [17872 18129])
+            ("NetAccept" function
+               (:constructor-flag t
+                :parent "NetAccept"
+                :type ("NetAccept" type (:type "class") nil nil))
+                nil [18166 18310])
+            ("cancel" function
+               (:parent "NetAccept"
+                :type "void")
+                nil [18440 18507]))          
+    :file "UnixNetAccept.cc"
+    :pointmax 18508
+    :fsize 18507
+    :lastmodtime '(20632 41267)
+    :unmatched-syntax '((punctuation 163 . 164) (semantic-list 150 . 163) (semantic-list 119 . 149) (INT 115 . 118) (TYPEDEF 107 . 114))
+    :lexical-table 
+        '(("ROUNDUP" (spp-arg-list ("x" "y") 73 . 79) . ((semantic-list "((((x)+((y)-1))/(y))*(y))" 80 . 105)))
+          )
+
+    )
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("1.2" "foreign" "no-installman" "no-installinfo")) nil [55 115])
+            ("INCLUDES" variable (:default-value ("@TBD_1_INCDIR@")) nil [116 142])
+            ("INCLUDES" variable (:default-value ("@TBD_2_INCDIR@")) nil [142 169])
+            ("INCLUDES" variable (:default-value ("@TBD_3_INCDIR@")) nil [169 196])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/eventsystem")) nil [196 243])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/cache")) nil [243 284])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/aio")) nil [284 323])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/utils")) nil [323 364])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/cluster")) nil [364 407])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/hostdb")) nil [407 449])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/dns")) nil [449 488])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/common/include")) nil [488 531])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/librecords")) nil [531 570])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/libinktomi++")) nil [570 611])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy")) nil [611 645])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/hdrs")) nil [645 684])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2")) nil [684 724])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/preparse")) nil [724 773])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/utils")) nil [773 819])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/web2")) nil [819 864])
+            ("DEFS" variable (:default-value ("@IOCORE_MODULARIZED_DEFS@")) nil [865 899])
+            ("noinst_LIBRARIES" variable (:default-value ("libinknet.a")) nil [900 931])
+            ("SSL_SRC" variable (:default-value ("SSLNetVConnection.cc" "SSLCertLookup.cc" "SSLNet.cc" "SSLUnixNet.cc" "SSLConfig.cc")) nil [932 1057])
+            ("libinknet_a_SOURCES" variable (:default-value ("Net.cc" "UnixNetProcessor.cc" "UnixNetAccept.cc" "UnixNetVConnection.cc" "UnixConnection.cc" "UnixNet.cc" "NetVConnection.cc" "Connection.cc" "UnixNetPages.cc" "Socks.cc" "NetConfig.cc" "UDPIOEvent.cc" "UnixUDPNet.cc" "UnixUDPConnection.cc" "NetVCTest.cc" "Inline.cc" "DetailedLog.cc" "$(SSL_SRC)")) nil [1058 1488]))          
+    :file "Makefile.am"
+    :pointmax 1489
+    :fsize 1488
+    :lastmodtime '(20632 41267)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "P_Net.h"
+    :file "P_Net.h"
+    :fsize 3356
+    :lastmodtime '(20632 41267)
+    )
+   (semanticdb-table "UnixNetProcessor.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("P_Net.h" include nil nil [1 19])
+            ("use_accept_thread" variable (:type "int") nil [100 126])
+            ("net_connection_number" variable (:type "int") nil [129 159])
+            ("net_next_connection_number" function (:type "unsigned int") nil [160 347])
+            ("accept" function
+               (:pointer 1
+                :parent "NetProcessor"
+                :arguments 
+                  ( ("cont" variable
+                       (:pointer 1
+                        :type ("Continuation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [381 401])
+                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [424 433])
+                    ("frequent_accept" variable (:type "bool") (reparse-symbol arg-sub-list) [455 476])
+                    ("accept_ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [499 522])
+                    ("callback_on_open" variable (:type "bool") (reparse-symbol arg-sub-list) [544 566])
+                    ("listen_socket_in" variable (:type ("SOCKET" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [588 613])
+                    ("accept_pool_size" variable (:type "int") (reparse-symbol arg-sub-list) [635 657])
+                    ("accept_only" variable (:type "bool") (reparse-symbol arg-sub-list) [679 696])
+                    ("bound_sockaddr" variable
+                       (:pointer 1
+                        :type ("sockaddr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [718 744])
+                    ("bound_sockaddr_size" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [766 792])
+                    ("recv_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [814 831])
+                    ("send_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [853 870])
+                    ("sockopt_flags" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [892 920])
+                    ("etype" variable (:type ("EventType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [942 958]))                  
+                :type ("Action" type (:type "class") nil nil))
+                nil [349 2243])
+            ("accept_only" variable (:type "int") nil [2592 2604])
+            ("Debug" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("port" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3307 3312])
+                    ("" variable (:type ("recv_bufsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3312 3325])
+                    ("" variable (:type ("send_bufsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3325 3338])
+                    ("" variable (:type ("sockopt_flags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3338 3352]))                  
+                :type "int")
+                nil [3189 3353])
+            ("accept_internal" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("cont" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3406 3411])
+                    ("" variable (:type ("fd" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3412 3415])
+                    ("" variable (:type ("port" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3416 3421])
+                    ("" variable (:type ("bound_sockaddr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3433 3448])
+                    ("" variable (:type ("bound_sockaddr_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3459 3479])
+                    ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3490 3495])
+                    ("" variable (:type ("net_accept" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3506 3517])
+                    ("" variable (:type ("recv_bufsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3529 3542])
+                    ("" variable (:type ("send_bufsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3554 3567])
+                    ("" variable (:type ("sockopt_flags" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3604 3618])
+                    ("" variable (:type ("incoming_ip_to_bind_saddr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3651 3677])
+                    ("" variable (:type ("callback_on_open" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3688 3705])
+                    ("" variable (:type ("etype" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3716 3722]))                  
+                :type "int")
+                nil [3390 3723])
+            ("setEtype" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("etype" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4452 4458]))                  
+                :type "int")
+                nil [4442 4459])
+            ("na" variable
+               (:pointer 1
+                :type ("NetAccept" type (:type "class") nil nil))
+                nil [4462 4498])
+            ("thread" variable
+               (:pointer 1
+                :type ("EThread" type (:type "class") nil nil))
+                nil [4502 4535])
+            ("mutex" variable
+               (:pointer 1
+                :type ("ProxyMutex" type (:type "class") nil nil))
+                nil [4538 4572])
+            ("NET_INCREMENT_DYN_STAT" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("net_accepts_currently_open_stat" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4598 4630]))                  
+                :type "int")
+                nil [4575 4631])
+            ("port" variable (:type "int") nil [4638 4650])
+            ("accept_fn" variable (:type "int") nil [4657 4672])
+            ("fd" variable (:type "int") nil [4686 4694])
+            ("accept_ip" variable (:type "int") nil [4708 4730])
+            ("action_" variable (:type "int") nil [4737 4774])
+            ("action_" variable (:type "int") nil [4782 4797])
+            ("server" variable (:type "int") nil [4813 4834])
+            ("callback_on_open" variable (:type "int") nil [4841 4877])
+            ("recv_bufsize" variable (:type "int") nil [4884 4912])
+            ("send_bufsize" variable (:type "int") nil [4919 4947])
+            ("sockopt_flags" variable (:type "int") nil [4954 4984])
+            ("etype" variable (:type "int") nil [4991 5005])
+            ("mutex" variable (:type "int") nil [5038 5058])
+            ("safe_getsockname" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("na" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5323 5326])
+                    ("" variable (:type ("server" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5327 5334])
+                    ("" variable (:type ("fd" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5334 5337])
+                    ("" variable (:type ("bound_sockaddr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5338 5353])
+                    ("" variable (:type ("bound_sockaddr_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5354 5374]))                  
+                :type "int")
+                nil [5306 5375])
+            ("accept_timeout" variable (:type "int") nil [5522 5545])
+            ("IOCORE_ReadConfigInteger" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("accept_timeout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5573 5588]))                  
+                :type "int")
+                nil [5548 5634])
+            ("action_" variable (:type "int") nil [5775 5783])
+            ("mutex" variable
+               (:pointer 1
+                :type ("ProxyMutex" type (:type "class") nil nil))
+                nil [5971 6003])
+            ("t" variable
+               (:pointer 1
+                :type ("EThread" type (:type "class") nil nil))
+                nil [6006 6041])
+            ("vc" variable
+               (:pointer 1
+                :type ("UnixNetVConnection" type (:type "class") nil nil))
+                nil [6044 6088])
+            ("options" variable (:type "int") nil [6108 6123])
+            ("opt" variable (:type "int") nil [6135 6154])
+            ("_interface" variable (:type "int") nil [6164 6188])
+            ("setEtype" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("opt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6311 6315])
+                    ("" variable (:type ("etype" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6316 6322]))                  
+                :type "int")
+                nil [6301 6323])
+            ("fast" variable (:type "bool") nil [6329 6479])
+            ("is_thread" function
+               (:prototype-flag t
+                :type "int")
+                nil [9528 9540])
+            ("mutex" variable
+               (:pointer 1
+                :type ("ProxyMutex" type (:type "class") nil nil))
+                nil [9617 9649])
+            ("t" variable
+               (:pointer 1
+                :type ("EThread" type (:type "class") nil nil))
+                nil [9652 9687])
+            ("vc" variable
+               (:pointer 1
+                :type ("UnixNetVConnection" type (:type "class") nil nil))
+                nil [9755 9798])
+            ("_interface" variable (:type "int") nil [9805 9829])
+            ("options" variable (:type "int") nil [9849 9864])
+            ("opt" variable (:type "int") nil [9876 9895])
+            ("id" variable (:type "int") nil [9902 9936])
+            ("submit_time" variable (:type "int") nil [10014 10045])
+            ("setSSLClientConnection" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10083 10088]))                  
+                :type "int")
+                nil [10059 10089])
+            ("ip" variable (:type "int") nil [10096 10104])
+            ("port" variable (:type "int") nil [10111 10123])
+            ("action_" variable (:type "int") nil [10130 10145])
+            ("thread" variable (:type "int") nil [10152 10163])
+            ("nh" variable (:type "int") nil [10170 10193])
+            ("mutex" variable (:type "int") nil [10226 10240])
+            ("res" variable (:type "int") nil [10392 10404])
+            ("res" variable (:type "int") nil [10428 10478])
+            ("res" variable (:type "int") nil [10490 10552])
+            ("check_emergency_throttle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10662 10665])
+                    ("" variable (:type ("con" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10666 10670]))                  
+                :type "int")
+                nil [10637 10671])
+            ("eptr" variable
+               (:pointer 1
+                :type ("epoll_data_ptr" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [10742 10770])
+            ("eptr" variable (:type "int") nil [10773 10843])
+            ("type" variable (:type "int") nil [10852 10878])
+            ("vc" variable (:type "int") nil [10892 10900])
+            ("ep" variable (:type "int") nil [10908 10918])
+            ("ev" variable (:type ("epoll_event" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [10922 10944])
+            ("memset" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("ev" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10955 10958]))                  
+                :type "int")
+                nil [10947 10988])
+            ("EPOLLET" variable (:type "int") nil [11024 11032])
+            ("ptr" variable (:type "int") nil [11043 11054])
+            ("pd" variable
+               (:pointer 1
+                :type ("PollDescriptor" type (:type "class") nil nil))
+                nil [11058 11101])
+            ("res" variable (:type "int") nil [11105 11166])
+            ("Debug" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11423 11426])
+                    ("" variable (:type ("con" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11427 11431])
+                    ("" variable (:type ("fd" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11431 11434]))                  
+                :type "int")
+                nil [11340 11435])
+            ("epoll_addto_read_wait_list" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11484 11487]))                  
+                :type "int")
+                nil [11456 11488])
+            ("Debug" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11575 11578])
+                    ("" variable (:type ("con" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11579 11583])
+                    ("" variable (:type ("fd" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11583 11586]))                  
+                :type "int")
+                nil [11491 11587])
+            ("epoll_addto_write_wait_list" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11637 11640]))                  
+                :type "int")
+                nil [11608 11641])
+            ("SET_CONTINUATION_HANDLER" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11670 11673])
+                    ("" variable (:type ("UnixNetVConnection::mainEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11692 11722]))                  
+                :type "int")
+                nil [11645 11723])
+            ("ink_assert" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11738 11741])
+                    ("" variable (:type ("inactivity_timeout_in" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11742 11764]))                  
+                :type "int")
+                nil [11726 11765])
+            ("ink_assert" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11780 11783])
+                    ("" variable (:type ("active_timeout_in" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11784 11802]))                  
+                :type "int")
+                nil [11768 11803])
+            ("XTIME" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("printf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11812 11843]))                  
+                :type "int")
+                nil [11806 11845])
+            ("avc" variable
+               (:pointer 1
+                :type "int")
+                nil [11848 11858])
+            ("ACTION_RESULT_DONE" variable (:type "int") nil [11868 11887])
+            ("vc" variable
+               (:pointer 1
+                :type ("UnixNetVConnection" type (:type "class") nil nil))
+                nil [11938 11961])
+            ("action_" variable (:type ("Action" type (:type "class") nil nil)) nil [11964 11979])
+            ("buf" variable
+               (:pointer 1
+                :type ("MIOBuffer" type (:type "class") nil nil))
+                nil [11982 11997])
+            ("reader" variable
+               (:pointer 1
+                :type ("IOBufferReader" type (:type "class") nil nil))
+                nil [12000 12023])
+            ("connect_status" variable (:type "int") nil [12026 12045])
+            ("recursion" variable (:type "int") nil [12048 12062])
+            ("timeout" variable (:type ("ink_hrtime" type (:type "class") nil nil)) nil [12065 12084])
+            ("handle_connect" function
+               (:arguments 
+                  ( ("event" variable (:type "int") (reparse-symbol arg-sub-list) [12107 12117])
+                    ("e" variable
+                       (:pointer 1
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12118 12127]))                  
+                :type "int")
+                nil [12088 14042])
+            ("connect_s" function
+               (:pointer 1
+                :arguments 
+                  ( ("cont" variable
+                       (:pointer 1
+                        :type ("Continuation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14064 14084])
+                    ("ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [14085 14101])
+                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [14102 14111])
+                    ("_interface" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [14118 14142])
+                    ("_timeout" variable (:type "int") (reparse-symbol arg-sub-list) [14143 14156])
+                    ("opt" variable
+                       (:pointer 1
+                        :type ("NetVCOptions" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14163 14182]))                  
+                :type ("Action" type (:type "class") nil nil))
+                nil [14046 14486])
+            ("recursion" function (:type "int") nil [14567 14704])
+            ("CheckConnect" function
+               (:destructor-flag t
+                :type "void")
+                nil [14708 14804])
+            ("Debug" function
+               (:prototype-flag t
+                :type "int")
+                nil [14964 15015])
+            ("c" variable
+               (:pointer 1
+                :type ("CheckConnect" type (:type "class") nil nil))
+                nil [15018 15071])
+            ("connect_s" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("cont" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15094 15099])
+                    ("" variable (:type ("ip" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15100 15103])
+                    ("" variable (:type ("port" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15104 15109])
+                    ("" variable (:type ("_interface" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15110 15121])
+                    ("" variable (:type ("timeout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15122 15130])
+                    ("" variable (:type ("opt" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15131 15135]))                  
+                :type "int")
+                nil [15084 15136])
+            ("PollCont" type
+               (:prototype t
+                :type "struct")
+                nil [15143 15159])
+            ("epoll_enabled" variable (:type "int") nil [15196 15215])
+            ("etype" variable (:type ("EventType" type (:type "class") nil nil)) nil [15218 15243])
+            ("netHandler_offset" variable (:type "int") nil [15246 15310])
+            ("pollCont_offset" variable (:type "int") nil [15313 15375])
+            ("epollCont_offset" variable (:type "int") nil [15378 15441])
+            ("IOCORE_ReadConfigInteger" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("epoll_enabled" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15470 15484]))                  
+                :type "int")
+                nil [15445 15519])
+            ("epoll_enabled" variable (:type "int") nil [15775 15793])
+            ("setEtype" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("etype" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15867 15873]))                  
+                :type "int")
+                nil [15858 15874])
+            ("n_netthreads" variable (:type "int") nil [15956 16012])
+            ("netthreads" variable (:type "int") nil [16015 16062])
+            ("incoming_ip_to_bind_saddr" variable (:type "int") nil [16256 16315])
+            ("incoming_ip_to_bind_saddr" variable (:type "int") nil [16327 16357])
+            ("d" variable (:type ("RecData" type (:type "class") nil nil)) nil [16362 16372])
+            ("rec_int" variable (:type "int") nil [16377 16389])
+            ("change_net_connections_throttle" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16425 16430])
+                    ("" variable (:type ("RECD_INT" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16431 16440])
+                    ("" variable (:type ("d" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16441 16443])
+                    ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16444 16449]))                  
+                :type "int")
+                nil [16393 16450])
+            ("THREAD_FREE" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("vc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18228 18231])
+                    ("" variable (:type ("netVCAllocator" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18232 18247])
+                    ("" variable (:type ("t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18248 18250]))                  
+                :type "int")
+                nil [18216 18251])
+            ("NetProcessor::socks_conf_stuff" variable
+               (:pointer 1
+                :type ("socks_conf_struct" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [18514 18578])
+            ("NetProcessor::accept_mss" variable (:type "int") nil [18579 18612])
+            ("unix_netProcessor" variable (:type ("UnixNetProcessor" type (:type "class") nil nil)) nil [18614 18649])
+            ("netProcessor" variable (:type ("NetProcessor" type (:type "class") nil nil)) nil [18650 18697]))          
+    :file "UnixNetProcessor.cc"
+    :pointmax 17692
+    :fsize 18697
+    :lastmodtime '(20632 41267)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "P_UnixNetProcessor.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__UNIXNETPROCESSOR_H__" variable (:constant-flag t) nil [40 62])
+            ("I_Net.h" include nil nil [63 81])
+            ("P_NetAccept.h" include nil nil [82 106])
+            ("UnixNetVConnection" type
+               (:prototype t
+                :type "struct")
+                nil [108 134])
+            ("UnixNetProcessor" type
+               (:superclasses 
+                  ( ("NetProcessor" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [353 360])
+                    ("accept_internal" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cont" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [403 423])
+                            ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [433 440])
+                            ("port" variable (:type "int") (reparse-symbol arg-sub-list) [449 458])
+                            ("bound_sockaddr" variable
+                               (:pointer 1
+                                :type ("sockaddr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [467 493])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [494 499])
+                            ("bound_sockaddr_size" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [508 534])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [535 540])
+                            ("frequent_accept" variable (:type "bool") (reparse-symbol arg-sub-list) [549 571])
+                            ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [572 577])
+                            ("fn" variable (:type ("AcceptFunctionPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [586 608])
+                            ("" variable (:type ("net_accept" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [609 620])
+                            ("recv_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [629 647])
+                            ("send_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [688 706])
+                            ("sockopt_flags" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [746 775])
+                            ("accept_ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [787 811])
+                            ("" variable (:type ("INADDR_ANY" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [812 823])
+                            ("callback_on_open" variable (:type "bool") (reparse-symbol arg-sub-list) [832 855])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [856 862])
+                            ("etype" variable (:type ("EventType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [871 888])
+                            ("" variable (:type ("ET_NET" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [889 896]))                          
+                        :type ("Action" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [369 897])
+                    ("connect_re_internal" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("cont" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [936 956])
+                            ("ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [962 980])
+                            ("port" variable (:type "int") (reparse-symbol arg-sub-list) [986 1006])
+                            ("_interface" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1011 1038])
+                            ("options" variable
+                               (:pointer 1
+                                :type ("NetVCOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1046 1070])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1071 1076]))                          
+                        :type ("Action" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [902 1077])
+                    ("connect" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("cont" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1103 1124])
+                            ("vc" variable
+                               (:pointer 2
+                                :type ("UnixNetVConnection" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1130 1154])
+                            ("ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1159 1177])
+                            ("port" variable (:type "int") (reparse-symbol arg-sub-list) [1183 1203])
+                            ("_interface" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1208 1234])
+                            ("opt" variable
+                               (:pointer 1
+                                :type ("NetVCOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1239 1259])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1260 1265]))                          
+                        :type ("Action" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1081 1266])
+                    ("setEtype" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("etype" variable
+                               (:reference 1
+                                :type ("EventType" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1409 1426]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1387 1444])
+                    ("allocateThread" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("t" variable
+                               (:pointer 1
+                                :type ("EThread" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1654 1665]))                          
+                        :type ("UnixNetVConnection" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1610 1666])
+                    ("freeThread" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("vc" variable
+                               (:pointer 1
+                                :type ("UnixNetVConnection" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1695 1718])
+                            ("t" variable
+                               (:pointer 1
+                                :type ("EThread" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1719 1730]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1670 1731])
+                    ("createNetAccept" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("NetAccept" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1734 1771])
+                    ("start" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("number_of_net_threads" variable (:type "int") (reparse-symbol arg-sub-list) [1793 1820]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1775 1849])
+                    ("throttle_error_message" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1853 1883])
+                    ("accept_thread_event" variable
+                       (:pointer 1
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1886 1914])
+                    ("accepts_on_thread" variable (:type ("AtomicSLL" type
+                         (:template-specifier 
+                            ( ("NetAccept" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1917 1956])
+                    ("accept_epoll_fd" variable (:type "int") (reparse-symbol classsubparts) [1960 1980])
+                    ("netHandler_offset" variable (:type ("ink_off_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2053 2081])
+                    ("pollCont_offset" variable (:type ("ink_off_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2084 2110])
+                    ("epollCont_offset" variable (:type ("ink_off_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2113 2140])
+                    ("n_netthreads" variable (:type "int") (reparse-symbol classsubparts) [2185 2202])
+                    ("netthreads" variable
+                       (:pointer 2
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2205 2226])
+                    ("incoming_ip_to_bind" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2230 2256])
+                    ("incoming_ip_to_bind_saddr" variable (:type "int") (reparse-symbol classsubparts) [2259 2289])
+                    ("epoll_enabled" variable (:type "int") (reparse-symbol classsubparts) [2295 2313]))                  
+                :type "struct")
+                nil [303 2318])
+            ("connect_re" function
+               (:pointer 1
+                :parent "NetProcessor"
+                :arguments 
+                  ( ("cont" variable
+                       (:pointer 1
+                        :type ("Continuation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2371 2391])
+                    ("ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2397 2415])
+                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [2421 2441])
+                    ("_interface" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2446 2472])
+                    ("opts" variable
+                       (:pointer 1
+                        :type ("NetVCOptions" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2477 2497]))                  
+                :type ("Action" type (:type "class") nil nil))
+                nil [2332 2597])
+            ("unix_netProcessor" variable
+               (:typemodifiers ("extern")
+                :type ("UnixNetProcessor" type (:type "class") nil nil))
+                nil [2602 2644])
+            ("initialize_thread_for_net" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("thread" variable
+                       (:pointer 1
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2854 2871])
+                    ("thread_index" variable (:type "int") (reparse-symbol arg-sub-list) [2871 2888]))                  
+                :type "void")
+                nil [2816 2889])
+            ("initialize_eventfd" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("thread" variable
+                       (:pointer 1
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2921 2938]))                  
+                :type "void")
+                nil [2890 2939]))          
+    :file "P_UnixNetProcessor.h"
+    :pointmax 2971
+    :fsize 2965
+    :lastmodtime '(20632 41267)
+    :unmatched-syntax '((symbol 2321 . 2331) (number 1821 . 1822) (punctuation 1819 . 1820) (punctuation 1444 . 1445) (punctuation 1258 . 1259) (punctuation 1069 . 1070) (number 1039 . 1040) (punctuation 1037 . 1038) (punctuation 887 . 888) (punctuation 854 . 855) (punctuation 810 . 811) (number 776 . 777) (punctuation 774 . 775) (number 707 . 708) (punctuation 705 . 706) (number 648 . 649) (punctuation 646 . 647) (punctuation 607 . 608) (punctuation 570 . 571) (punctuation 533 . 534) (punctuation 492 . 493))
+    :lexical-table 
+        '(("__UNIXNETPROCESSOR_H__")
+          )
+
+    )
+   (semanticdb-table "I_Net.h"
+    :file "I_Net.h"
+    :fsize 2808
+    :lastmodtime '(20632 41267)
+    )
+   (semanticdb-table "P_NetAccept.h"
+    :file "P_NetAccept.h"
+    :fsize 2798
+    :lastmodtime '(20632 41267)
+    )
+   (semanticdb-table "I_NetProcessor.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__I_NETPROCESSOR_H__" variable (:constant-flag t) nil [442 462])
+            ("I_EventSystem.h" include nil nil [464 490])
+            ("I_Socks.h" include nil nil [491 511])
+            ("socks_conf_struct" type
+               (:prototype t
+                :type "struct")
+                nil [512 537])
+            ("NET_CONNECT_TIMEOUT" variable (:constant-flag t) nil [546 565])
+            ("NetVCOptions" type
+               (:prototype t
+                :type "class")
+                nil [745 764])
+            ("NetProcessor" type
+               (:superclasses 
+                  ( ("Processor" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [970 977])
+                    ("accept" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cont" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3272 3292])
+                            ("port" variable (:type "int") (reparse-symbol arg-sub-list) [3298 3318])
+                            ("frequent_accept" variable (:type "bool") (reparse-symbol arg-sub-list) [3323 3359])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3360 3366])
+                            ("accept_ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3416 3452])
+                            ("" variable (:type ("INADDR_ANY" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3453 3464])
+                            ("callback_on_open" variable (:type "bool") (reparse-symbol arg-sub-list) [3469 3505])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3506 3512])
+                            ("listen_socket_in" variable (:type ("SOCKET" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3544 3580])
+                            ("" variable (:type ("NO_FD" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3581 3587])
+                            ("accept_pool_size" variable (:type "int") (reparse-symbol arg-sub-list) [3616 3652])
+                            ("" variable (:type ("ACCEPTEX_POOL_SIZE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3653 3672])
+                            ("accept_only" variable (:type "bool") (reparse-symbol arg-sub-list) [3688 3724])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3725 3731])
+                            ("bound_sockaddr" variable
+                               (:pointer 1
+                                :type ("sockaddr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3750 3786])
+                            ("bound_sockaddr_size" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3810 3846])
+                            ("recv_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [3870 3906])
+                            ("send_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [3922 3958])
+                            ("sockopt_flag" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [3966 4002])
+                            ("etype" variable (:type ("EventType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4010 4046])
+                            ("" variable (:type ("ET_NET" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4047 4059]))                          
+                        :type ("Action" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3243 4060])
+                    ("main_accept" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("cont" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6292 6312])
+                            ("listen_socket_in" variable (:type ("SOCKET" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6320 6352])
+                            ("port" variable (:type "int") (reparse-symbol arg-sub-list) [6360 6380])
+                            ("bound_sockaddr" variable
+                               (:pointer 1
+                                :type ("sockaddr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6387 6423])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6424 6429])
+                            ("bound_sockaddr_size" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [6436 6472])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6473 6478])
+                            ("accept_only" variable (:type "bool") (reparse-symbol arg-sub-list) [6485 6521])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6522 6528])
+                            ("recv_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [6535 6571])
+                            ("send_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [6581 6617])
+                            ("sockopt_flag" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [6627 6663])
+                            ("etype" variable (:type ("EventType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6673 6709])
+                            ("" variable (:type ("ET_NET" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6710 6717])
+                            ("callback_on_open" variable (:type "bool") (reparse-symbol arg-sub-list) [6724 6760])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6761 6801]))                          
+                        :type ("Action" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6256 6802])
+                    ("connect_re" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("cont" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8002 8023])
+                            ("ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8029 8046])
+                            ("port" variable (:type "int") (reparse-symbol arg-sub-list) [8052 8064])
+                            ("_interface" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [8069 8095])
+                            ("options" variable
+                               (:pointer 1
+                                :type ("NetVCOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8103 8128])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8129 8134]))                          
+                        :type ("Action" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7977 8135])
+                    ("connect_s" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("cont" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9449 9469])
+                            ("ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [9475 9491])
+                            ("port" variable (:type "int") (reparse-symbol arg-sub-list) [9496 9505])
+                            ("_interface" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [9511 9536])
+                            ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [9544 9557])
+                            ("opts" variable
+                               (:pointer 1
+                                :type ("NetVCOptions" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9583 9604])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9605 9610]))                          
+                        :type ("Action" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9425 9611])
+                    ("start" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("number_of_net_threads" variable (:type "int") (reparse-symbol arg-sub-list) [9874 9901]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [9856 9932])
+                    ("NetProcessor" function
+                       (:constructor-flag t
+                        :type ("NetProcessor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9978 9996])
+                    ("NetProcessor" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [10041 10067])
+                    ("accept_mss" variable
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [10138 10160])
+                    ("socks_conf_stuff" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :type ("socks_conf_struct" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10858 10901])
+                    ("private" label nil (reparse-symbol classsubparts) [10904 10912])
+                    ("stop" function
+                       (:typemodifiers ("virtual")
+                        :type "int")
+                        (reparse-symbol classsubparts) [11092 11193])
+                    ("NetProcessor" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("NetProcessor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11348 11369]))                          
+                        :type ("NetProcessor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11335 11370])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("NetProcessor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11400 11421]))                          
+                        :type ("NetProcessor" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11373 11422]))                  
+                :type "class")
+                nil [929 11425])
+            ("netProcessor" variable (:type ("NetProcessor" type (:type "class") nil nil)) nil [11735 11762]))          
+    :file "I_NetProcessor.h"
+    :pointmax 12081
+    :fsize 12080
+    :lastmodtime '(20632 41267)
+    :unmatched-syntax '((symbol 11724 . 11734) (EXTERN 11717 . 11723) (punctuation 10067 . 10068) (punctuation 9996 . 9997) (number 9902 . 9903) (punctuation 9900 . 9901) (punctuation 9603 . 9604) (semantic-list "(30*1000)" 9558 . 9577) (punctuation 9556 . 9557) (number 9537 . 9538) (punctuation 9535 . 9536) (punctuation 8127 . 8128) (number 8096 . 8097) (punctuation 8094 . 8095) (symbol 7966 . 7976) (punctuation 6759 . 6760) (punctuation 6708 . 6709) (number 6664 . 6665) (punctuation 6662 . 6663) (number 6618 . 6619) (punctuation 6616 . 6617) (number 6572 . 6573) (punctuation 6570 . 6571) (punctuation 6520 . 6521) (punctuation 6471 . 6472) (punctuation 6422 . 6423) (punctuation 4045 . 4046) (number 4003 . 4004) (punctuation 4001 . 4002) (number 3959 . 3960) (punctuation 3957 . 3958) (number 3907 . 3908) (punctuation 3905 . 3906) (number 3847 . 3848) (punctuation 3845 . 3846) (number 3787 . 3788) (punctuation 3785 . 3786) (punctuation 3723 . 3724) (punctuation 3651 . 3652) (punctuation 3579 . 3580) (punctuation 3504 . 3505) (punctuation 3451 . 3452) (punctuation 3358 . 3359) (symbol 3232 . 3242))
+    :lexical-table 
+        '(("__I_NETPROCESSOR_H__")
+          ("NET_CONNECT_TIMEOUT" . ((semantic-list "(30*1000)" 566 . 575)))
+          )
+
+    )
+   (semanticdb-table "I_Socks.h"
+    :file "I_Socks.h"
+    :fsize 1197
+    :lastmodtime '(20632 41267)
+    )
+   (semanticdb-table "Connection.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ink_unused.h" include nil nil [305 328])
+            ("__TIME__" variable (:type "int") nil [465 474])
+            ("ink_platform.h" include nil nil [502 527])
+            ("P_Net.h" include nil nil [529 547])
+            ("SET_TCP_NO_DELAY" variable (:constant-flag t) nil [557 573])
+            ("SET_NO_LINGER" variable (:constant-flag t) nil [582 595])
+            ("FIRST_RANDOM_PORT" variable (:constant-flag t) nil [713 730])
+            ("LAST_RANDOM_PORT" variable (:constant-flag t) nil [752 768])
+            ("ROUNDUP" variable (:constant-flag t) nil [792 799])
+            ("get_listen_backlog" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [856 861]))                  
+                :type "int")
+                nil [833 999])
+            ("Connection" function
+               (:constructor-flag t
+                :parent "Connection"
+                :type ("Connection" type (:type "class") nil nil))
+                nil [1022 1110])
+            ("Connection" function
+               (:destructor-flag t
+                :parent "Connection"
+                :type "void")
+                nil [1113 1153])
+            ("accept" function
+               (:parent "Server"
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Connection" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1175 1190]))                  
+                :type "int")
+                nil [1156 1841])
+            ("close" function
+               (:parent "Connection"
+                :type "int")
+                nil [1844 2065])
+            ("fast_connect" function
+               (:parent "Connection"
+                :arguments 
+                  ( ("ip" variable
+                       (:constant-flag t
+                        :type "unsigned int")
+                        (reparse-symbol arg-sub-list) [2097 2119])
+                    ("port" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2120 2135])
+                    ("opt" variable
+                       (:pointer 1
+                        :type ("NetVCOptions" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2136 2155])
+                    ("socketFd" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2156 2265]))                  
+                :type "int")
+                nil [2068 4856])
+            ("connect" function
+               (:parent "Connection"
+                :arguments 
+                  ( ("ip" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4883 4899])
+                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [4900 4909])
+                    ("non_blocking_connect" variable (:type "bool") (reparse-symbol arg-sub-list) [4930 4956])
+                    ("use_tcp" variable (:type "bool") (reparse-symbol arg-sub-list) [4957 4970])
+                    ("non_blocking" variable (:type "bool") (reparse-symbol arg-sub-list) [4971 4989])
+                    ("bind_random_port" variable (:type "bool") (reparse-symbol arg-sub-list) [4990 5012]))                  
+                :type "int")
+                nil [4859 7133])
+            ("setup_fd_for_listen" function
+               (:parent "Server"
+                :arguments 
+                  ( ("non_blocking" variable (:type "bool") (reparse-symbol arg-sub-list) [7168 7186])
+                    ("recv_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [7187 7204])
+                    ("send_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [7205 7222]))                  
+                :type "int")
+                nil [7136 9520])
+            ("listen" function
+               (:parent "Server"
+                :arguments 
+                  ( ("port_number" variable (:type "int") (reparse-symbol arg-sub-list) [9542 9558])
+                    ("non_blocking" variable (:type "bool") (reparse-symbol arg-sub-list) [9559 9577])
+                    ("recv_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [9578 9595])
+                    ("send_bufsize" variable (:type "int") (reparse-symbol arg-sub-list) [9596 9613]))                  
+                :type "int")
+                nil [9523 12424]))          
+    :file "Connection.cc"
+    :pointmax 12425
+    :fsize 12424
+    :lastmodtime '(20632 41267)
+    :unmatched-syntax '((punctuation 999 . 1000) (string 461 . 464) (symbol 452 . 460) (string 373 . 451) (punctuation 371 . 372) (semantic-list 368 . 370) (symbol 348 . 368) (symbol 341 . 347) (CHAR 336 . 340) (STATIC 329 . 335))
+    :lexical-table 
+        '(("SET_NO_LINGER")
+          ("ROUNDUP" (spp-arg-list ("x" "y") 799 . 805) . ((semantic-list "((((x)+((y)-1))/(y))*(y))" 806 . 831)))
+          ("SET_TCP_NO_DELAY")
+          ("LAST_RANDOM_PORT" . ((number "32000" 777 . 782)))
+          ("FIRST_RANDOM_PORT" . ((number "16000" 738 . 743)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!iocore!net!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

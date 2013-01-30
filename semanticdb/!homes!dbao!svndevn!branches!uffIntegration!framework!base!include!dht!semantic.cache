@@ -1,0 +1,511 @@
+;; Object dht/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dht/"
+  :tables (list 
+   (semanticdb-table "RouterTransport.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__ROUTERTRANSPORT_H__" variable (:constant-flag t) nil [98 119])
+            ("dht/ServerTransport.h" include nil nil [121 153])
+            ("dht/FwCode.h" include nil nil [154 177])
+            ("dht/ActionMonitor.h" include nil nil [178 208])
+            ("boost/scoped_array.hpp" include (:system-flag t) nil [209 242])
+            ("vector" include (:system-flag t) nil [243 260])
+            ("EncryptBufferAutoPtr" type
+               (:typedef ("boost::scoped_array" type
+                     (:template-specifier 
+                        ( ("char" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::scoped_array"
+                :type "typedef")
+                nil [288 343])
+            ("RouterTransport" type
+               (:superclasses 
+                  ( ("ServerTransport" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [512 519])
+                    ("RouterTransport" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("appId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [575 600])
+                            ("useForwardCompression" variable (:type "bool") (reparse-symbol arg-sub-list) [601 628]))                          
+                        :type ("RouterTransport" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [559 629])
+                    ("RouterTransport" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [669 696])
+                    ("encrypt" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("input" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [958 976])
+                            ("inputSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [977 994])
+                            ("keydbKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1018 1040])
+                            ("outputBuffer" variable
+                               (:reference 1
+                                :type ("EncryptBufferAutoPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1064 1100])
+                            ("outputLength" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1124 1146]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [939 1147])
+                    ("decrypt" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("encryptedBody" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1556 1590])
+                            ("keydbKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1614 1636])
+                            ("decryptedBody" variable
+                               (:reference 1
+                                :type ("EncryptBufferAutoPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1660 1697])
+                            ("decryptedBodyLen" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1721 1747]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1537 1748])
+                    ("forwardStorageOperation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("remoteRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2563 2596])
+                            ("url" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2625 2649])
+                            ("body" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2678 2703])
+                            ("myRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2732 2761])
+                            ("commandPrefix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2790 2824])
+                            ("clientCert" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2853 2884])
+                            ("responseBody" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2913 2940])
+                            ("aMonitor" variable
+                               (:reference 1
+                                :type ("ActionMonitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2969 2993]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2506 2994])
+                    ("forwardStorageOperation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("remoteRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3848 3881])
+                            ("url" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3910 3934])
+                            ("bodyBuf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3963 3984])
+                            ("bodyLen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4013 4028])
+                            ("myRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4057 4086])
+                            ("commandPrefix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4115 4149])
+                            ("clientCert" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4178 4209])
+                            ("responseBody" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4238 4265])
+                            ("aMonitor" variable
+                               (:reference 1
+                                :type ("ActionMonitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4294 4318]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3791 4319])
+                    ("forwardEncryptedStorageOperation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("remoteRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5530 5563])
+                            ("urlForRemoteSU" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5601 5636])
+                            ("urlForRouter" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5674 5707])
+                            ("urlIsHashBased" variable (:type "bool") (reparse-symbol arg-sub-list) [5745 5765])
+                            ("body" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5803 5828])
+                            ("myRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5866 5895])
+                            ("commandPrefix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5933 5967])
+                            ("clientCert" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6005 6036])
+                            ("keydbKey" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [6074 6096])
+                            ("ttlSec" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6134 6150])
+                            ("responseBody" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6188 6215])
+                            ("aMonitor" variable
+                               (:reference 1
+                                :type ("ActionMonitor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6253 6277]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5463 6278])
+                    ("forwardGetSyncOperation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("remoteRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6951 6984])
+                            ("url" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7013 7037])
+                            ("myRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7066 7095])
+                            ("commandPrefix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7124 7158])
+                            ("responseBody" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7187 7214]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6893 7215])
+                    ("forwardCopyMark" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7865 7891])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7912 7939])
+                            ("snapshotID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7960 7991])
+                            ("destSU" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8012 8039])
+                            ("copyDestRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8060 8095])
+                            ("useSSLForCopy" variable (:type "bool") (reparse-symbol arg-sub-list) [8116 8135])
+                            ("forwardRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8156 8190]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7816 8191])
+                    ("forwardCancelCopy" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("snapshotID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8593 8624])
+                            ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8648 8674])
+                            ("forwardRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8698 8732]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8541 8733])
+                    ("COMMAND_OP" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8790 8826])
+                    ("RECORD_OP" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8831 8866])
+                    ("ADMIN_OP" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8871 8905])
+                    ("forwardDrainFlip" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8953 8979])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8997 9024])
+                            ("restoreId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9042 9072])
+                            ("allRegions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [9090 9133])
+                            ("destRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9151 9182]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8911 9183])
+                    ("forwardGetSync" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9231 9257])
+                            ("record" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9277 9304])
+                            ("seqId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9324 9350])
+                            ("myRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9370 9399])
+                            ("destRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9419 9450])
+                            ("responseBody" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9470 9497]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9191 9498])
+                    ("getRegionToForwardToHeader" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9504 9546])
+                    ("processFtrLoadTablet" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10104 10129])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10155 10181])
+                            ("backupId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10207 10235])
+                            ("restoreId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10261 10290])
+                            ("importId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10316 10344])
+                            ("suRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10370 10398])
+                            ("suName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10424 10450])
+                            ("bsRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10476 10504]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10058 10505])
+                    ("private" label nil (reparse-symbol classsubparts) [10507 10515])
+                    ("prepareForwardOperation" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("url" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10569 10593])
+                            ("remoteRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10622 10655])
+                            ("myRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10684 10713])
+                            ("clientCert" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10742 10773])
+                            ("responseBody" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10802 10829]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10520 10830])
+                    ("rtAppId_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10835 10856])
+                    ("useForwardCompression_" variable (:type "bool") (reparse-symbol classsubparts) [10907 10935]))                  
+                :type "class")
+                nil [463 10996]))          
+    :file "RouterTransport.h"
+    :pointmax 11221
+    :fsize 11220
+    :lastmodtime '(20614 60058)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__ROUTERTRANSPORT_H__")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndevn!branches!uffIntegration!framework!base!include!dht!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,80 @@
+;; Object conf/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "conf/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/http/component/inc")) nil [1 122])
+            ("lib_LTLIBRARIES" variable (:default-value ("libufconf.la")) nil [151 197])
+            ("source_files" variable (:default-value ("UFHTTPConf.C" "UFStateServerConf.C")) nil [197 253])
+            ("libufconf_la_SOURCES" variable (:default-value ("$(source_files)")) nil [253 292])
+            ("libufconf_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [292 333])
+            ("libufconf_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [333 405])
+            ("libufconf_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [405 481])
+            ("libufconf_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [481 527])
+            ("libufconf_p_la_LIBADD" variable (:default-value ("$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [527 653]))          
+    :file "Makefile.am"
+    :pointmax 653
+    :fsize 652
+    :lastmodtime '(20625 28886)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "UFHTTPConf.C"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("uf/conf/UFHTTPConf.H" include (:system-flag t) nil [1 32])
+            ("uf/util/Log.H" include (:system-flag t) nil [33 57])
+            ("DEFAULT_SERVER_NAME" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type ("string" type (:type "class") nil nil))
+                nil [60 138])
+            ("UFHTTPConf" function
+               (:constructor-flag t
+                :parent "UFHTTPConf"
+                :arguments 
+                  ( ("confFile" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [163 186]))                  
+                :type ("UFHTTPConf" type (:type "class") nil nil))
+                nil [140 222])
+            ("clear" function
+               (:parent "UFHTTPConf"
+                :type "void")
+                nil [224 2379])
+            ("cache" function
+               (:parent "UFHTTPConf"
+                :arguments 
+                  ( ("conf_key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2404 2432])
+                    ("conf_val" variable
+                       (:pointer 1
+                        :type ("ConfValueBase" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2433 2457]))                  
+                :type "void")
+                nil [2381 8100])
+            ("setViaString" function
+               (:parent "UFHTTPConf"
+                :type "void")
+                nil [8102 9190])
+            ("setServerHeaderValue" function
+               (:parent "UFHTTPConf"
+                :type "void")
+                nil [9192 9914]))          
+    :file "UFHTTPConf.C"
+    :pointmax 9915
+    :fsize 9914
+    :lastmodtime '(20625 28886)
+    :unmatched-syntax '((string 94 . 136))
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!http!component!src!conf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

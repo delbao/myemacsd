@@ -1,0 +1,26 @@
+;; Object examples/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "examples/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("foreign" "nostdinc")) nil [1006 1042])
+            ("EXTRA_DIST" variable (:default-value ("README" "Makefile.example" "Makefile.inc" "Makefile.m32" "Makefile.netware" "makefile.dj" "$(COMPLICATED_EXAMPLES)")) nil [1043 1162])
+            ("INCLUDES" variable (:default-value ("-I$(top_builddir)/include/curl" "-I$(top_builddir)/include" "-I$(top_srcdir)/include")) nil [1660 1783])
+            ("LIBDIR" variable (:default-value ("$(top_builddir)/lib")) nil [1784 1813])
+            ("AM_CPPFLAGS" variable (:default-value ("-DCURL_NO_OLDIES")) nil [1814 1845])
+            ("AM_CPPFLAGS" variable (:default-value ("-DCURL_STATICLIB")) nil [1938 1970])
+            ("LDADD" variable (:default-value ("$(LIBDIR)/libcurl.la")) nil [1992 2021])
+            ("Makefile.inc" include nil nil [2098 2119]))          
+    :file "Makefile.am"
+    :pointmax 2143
+    :fsize 2142
+    :lastmodtime '(20631 43692)
+    :unmatched-syntax '((semantic-list 2126 . 2142) (punctuation 2125 . 2126) (punctuation 2123 . 2124) (symbol 2120 . 2123) (bol 2120 . 2120))
+    )
+   )
+  :file "!homes!dbao!curl-master!docs!examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

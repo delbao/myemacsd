@@ -1,0 +1,24 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_LDFLAGS" variable (:default-value ("-lz" "-lysys" "-lmdbm")) nil [1 32])
+            ("AM_CPPFLAGS" variable (:default-value ("-DPIPE_NOT_EFD" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc/")) nil [32 209])
+            ("lib_LTLIBRARIES" variable (:default-value ("libuf_header_rewrite.la")) nil [210 252])
+            ("source_files" variable (:default-value ("Condition.C" "ConditionAccess.C" "ConditionDBM.C" "ConditionHeader.C" "ConditionPath.C" "ConditionQuery.C" "ConditionRandom.C" "ConditionStatus.C" "ConditionUrl.C" "factory.C" "Matcher.C" "Operator.C" "OperatorAddHeader.C" "OperatorRMHeader.C" "OperatorSetDestination.C" "OperatorSetRedirect.C" "OperatorSetStatus.C" "OperatorSetStatusReason.C" "OperatorSetTimeoutOut.C" "Parser.C" "RegexHelper.C" "Resources.C" "RuleSet.C" "Statement.C" "HeaderRewriteConf.C" "HdrRwPlugin.C" "HdrRwReadReq.C" "HdrRwReadResp.C" "HdrRwSendReq.C" "HdrRwSendResp.C")) nil [253 875])
+            ("libuf_header_rewrite_la_SOURCES" variable (:default-value ("$(source_files)")) nil [876 926])
+            ("libuf_header_rewrite_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver.la" "$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [926 1305]))          
+    :file "Makefile.am"
+    :pointmax 1306
+    :fsize 1305
+    :lastmodtime '(20629 53847)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!plugin!uf_header_rewrite!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

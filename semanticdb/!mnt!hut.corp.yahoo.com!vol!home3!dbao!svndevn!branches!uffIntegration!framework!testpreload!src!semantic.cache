@@ -1,0 +1,1465 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "TestBase.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/TestBase.h" include nil nil [60 85])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [86 130])
+            ("cppunit/extensions/TestFactoryRegistry.h" include (:system-flag t) nil [131 182])
+            ("cppunit/ui/text/TestRunner.h" include (:system-flag t) nil [183 222])
+            ("cppunit/TestListener.h" include (:system-flag t) nil [223 256])
+            ("cppunit/BriefTestProgressListener.h" include (:system-flag t) nil [257 303])
+            ("cppunit/TestResult.h" include (:system-flag t) nil [304 335])
+            ("cppunit/TestFailure.h" include (:system-flag t) nil [336 368])
+            ("cppunit/XmlOutputter.h" include (:system-flag t) nil [369 402])
+            ("fstream" include (:system-flag t) nil [403 421])
+            ("ENV_VAR_MODE" variable (:constant-flag t) nil [432 444])
+            ("ENV_VALUE_XML" variable (:constant-flag t) nil [474 487])
+            ("TestBase::s_xmlmode" variable
+               (:default-value "false;"
+                :type "bool")
+                nil [495 528])
+            ("TestBase" function
+               (:constructor-flag t
+                :parent "TestBase"
+                :type ("TestBase" type (:type "class") nil nil))
+                nil [530 555])
+            ("TestBase" function
+               (:destructor-flag t
+                :parent "TestBase"
+                :type "void")
+                nil [557 583])
+            ("setUp" function
+               (:parent "TestBase"
+                :type "void")
+                nil [585 612])
+            ("tearDown" function
+               (:parent "TestBase"
+                :type "void")
+                nil [614 644])
+            ("runme" function
+               (:parent "TestBase"
+                :arguments 
+                  ( ("suite" variable
+                       (:pointer 1
+                        :type ("CppUnit::TestSuite" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [667 694])
+                    ("testNameOrig" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [695 728]))                  
+                :type "int")
+                nil [646 1735]))          
+    :file "TestBase.cc"
+    :pointmax 1923
+    :fsize 1922
+    :lastmodtime '(20614 58611)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("ENV_VAR_MODE" . ((string "\"dht_unit_test_mode\"" 445 . 465)))
+          ("ENV_VALUE_XML" . ((string "\"xml\"" 488 . 493)))
+          )
+
+    )
+   (semanticdb-table "test_wrappers.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sys/select.h" include (:system-flag t) nil [204 227])
+            ("yapache/httpd.h" include (:system-flag t) nil [229 255])
+            ("yapache/http_protocol.h" include (:system-flag t) nil [256 290])
+            ("yapache/http_main.h" include (:system-flag t) nil [291 321])
+            ("yapache/http_log.h" include (:system-flag t) nil [322 351])
+            ("iostream" include (:system-flag t) nil [353 372])
+            ("mdbm.h" include (:system-flag t) nil [373 390])
+            ("dlfcn.h" include (:system-flag t) nil [391 409])
+            ("dht/test_wrappers.h" include nil nil [410 440])
+            ("yca/yca.h" include (:system-flag t) nil [441 461])
+            ("proxyio.h" include (:system-flag t) nil [462 482])
+            ("stdexcept" include (:system-flag t) nil [483 503])
+            ("unicode/uregex.h" include (:system-flag t) nil [504 531])
+            ("tribble/TribbleClient.h" include (:system-flag t) nil [532 566])
+            ("ycfn/ycfn.h" include (:system-flag t) nil [567 589])
+            ("dht_test_tribble_" variable
+               (:default-value "{
+    true,
+    true,
+    tribble::ReturnCode::TRIBBLE_OK,
+    tribble::ReturnCode::TRIBBLE_OK,
+    tribble::ReturnCode::TRIBBLE_OK,
+    tribble::ReturnCode::TRIBBLE_OK,
+    tribble::ReturnCode::TRIBBLE_OK,
+    tribble::ReturnCode::TRIBBLE_OK,
+    tribble::ReturnCode::TRIBBLE_OK,
+    0 }"
+                :type ("dht_test_tribble" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [728 1061])
+            ("s_tribbleHandler" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :default-value "NULL;"
+                :type ("tribble::MessageHandler" type (:type "class") nil nil))
+                nil [1063 1120])
+            ("tribble" type
+               (:members 
+                  ( ("TribbleClient" function
+                       (:constructor-flag t
+                        :parent "TribbleClient"
+                        :arguments 
+                          ( ("confFile" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1176 1197]))                          
+                        :type ("TribbleClient" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1147 1233])
+                    ("TribbleClient" function
+                       (:destructor-flag t
+                        :parent "TribbleClient"
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [1239 1278])
+                    ("publish" function
+                       (:parent "TribbleClient"
+                        :arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1324 1349])
+                            ("data" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1394 1418]))                          
+                        :type ("ReturnCode::Code" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1284 1470])
+                    ("subscribe" function
+                       (:parent "TribbleClient"
+                        :arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1518 1543]))                          
+                        :type ("ReturnCode::Code" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1476 1595])
+                    ("unsubscribe" function
+                       (:parent "TribbleClient"
+                        :arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1645 1670]))                          
+                        :type ("ReturnCode::Code" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1601 1724])
+                    ("isSubscribed" function
+                       (:parent "TribbleClient"
+                        :arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1763 1788]))                          
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [1730 1823])
+                    ("startDelivery" function
+                       (:parent "TribbleClient"
+                        :arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1875 1900])
+                            ("handler" variable
+                               (:reference 1
+                                :type ("MessageHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1951 1975]))                          
+                        :type ("ReturnCode::Code" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1829 2066])
+                    ("stopDelivery" function
+                       (:parent "TribbleClient"
+                        :arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2117 2142]))                          
+                        :type ("ReturnCode::Code" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2072 2195])
+                    ("getFD" function
+                       (:parent "TribbleClient"
+                        :arguments 
+                          ( ("fd" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [2239 2247]))                          
+                        :type ("ReturnCode::Code" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2201 2315])
+                    ("receive" function
+                       (:parent "TribbleClient"
+                        :arguments 
+                          ( ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [2361 2373]))                          
+                        :type ("ReturnCode::Code" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2321 2597])
+                    ("getTimeoutMS" function
+                       (:parent "TribbleClient"
+                        :type "unsigned int")
+                        (reparse-symbol namespacesubparts) [2820 2900])
+                    ("setTimeoutMS" function
+                       (:parent "TribbleClient"
+                        :arguments 
+                          ( ("timeoutMS" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2939 2962]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2906 3024])
+                    ("isValid" function
+                       (:parent "TribbleClient"
+                        :type "bool")
+                        (reparse-symbol namespacesubparts) [3030 3113])
+                    ("publish" function
+                       (:parent "TribbleClient"
+                        :arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3159 3184])
+                            ("pData" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3229 3247])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3292 3304]))                          
+                        :type ("ReturnCode::Code" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [3119 3356]))                  
+                :type "namespace")
+                nil [1122 3359])
+            ("dht_test_mdbm_" variable
+               (:default-value "{ false, 0, 0 }"
+                :type ("dht_test_mdbm" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3495 3549])
+            ("mdbm_lock" function
+               (:arguments 
+                  ( ("db" variable
+                       (:pointer 1
+                        :type ("MDBM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3565 3574]))                  
+                :type "int")
+                nil [3551 3824])
+            ("mdbm_unlock" function
+               (:arguments 
+                  ( ("db" variable
+                       (:pointer 1
+                        :type ("MDBM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3842 3851]))                  
+                :type "int")
+                nil [3826 4113])
+            ("mdbm_delete_str" function
+               (:arguments 
+                  ( ("db" variable
+                       (:pointer 1
+                        :type ("MDBM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4135 4144])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4145 4161]))                  
+                :type "int")
+                nil [4115 4422])
+            ("mdbm_delete" function
+               (:arguments 
+                  ( ("db" variable
+                       (:pointer 1
+                        :type ("MDBM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4440 4449])
+                    ("key" variable (:type ("datum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4450 4460]))                  
+                :type "int")
+                nil [4424 4695])
+            ("mdbm_fetch_r" function
+               (:arguments 
+                  ( ("db" variable
+                       (:pointer 1
+                        :type ("MDBM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4714 4723])
+                    ("key" variable
+                       (:pointer 1
+                        :type ("datum" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4724 4735])
+                    ("val" variable
+                       (:pointer 1
+                        :type ("datum" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4736 4747])
+                    ("iter" variable
+                       (:pointer 1
+                        :type ("MDBM_ITER" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4748 4764]))                  
+                :type "int")
+                nil [4697 5061])
+            ("mdbm_store_str" function
+               (:arguments 
+                  ( ("db" variable
+                       (:pointer 1
+                        :type ("MDBM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5082 5091])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5092 5108])
+                    ("val" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5109 5125])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [5126 5136]))                  
+                :type "int")
+                nil [5063 5444])
+            ("mdbm_store" function
+               (:arguments 
+                  ( ("db" variable
+                       (:pointer 1
+                        :type ("MDBM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5461 5470])
+                    ("key" variable (:type ("datum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5471 5481])
+                    ("val" variable (:type ("datum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5482 5492])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [5493 5503]))                  
+                :type "int")
+                nil [5446 5771])
+            ("dht_test_ycfn_" variable
+               (:default-value "{false, YC_SUCCESS, 0, 0}"
+                :type ("dht_test_ycfn" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [5906 5970])
+            ("ycfnMaxCiphertextLen" function
+               (:arguments 
+                  ( ("in_len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6000 6014]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [5972 6278])
+            ("ycfnAES256EncryptSignY64" function
+               (:arguments 
+                  ( ("in" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [6310 6335])
+                    ("in_len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6336 6350])
+                    ("key_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6376 6398])
+                    ("out_buf" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [6399 6423])
+                    ("out_buflen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6449 6467])
+                    ("extra_sign_data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [6493 6531])
+                    ("extra_sign_datalen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6557 6583]))                  
+                :type "int")
+                nil [6280 7839])
+            ("ycfnMaxPlaintextLen" function
+               (:arguments 
+                  ( ("in" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [7869 7894]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [7841 8177])
+            ("ycfnDecryptSignY64" function
+               (:arguments 
+                  ( ("in" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [8203 8228])
+                    ("in_len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8229 8243])
+                    ("key_name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8263 8285])
+                    ("out_buf" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [8286 8310])
+                    ("out_buflen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8330 8348])
+                    ("actual_out_len" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8349 8373])
+                    ("extra_sign_data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [8393 8431])
+                    ("extra_sign_datalen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8451 8477]))                  
+                :type "int")
+                nil [8179 9761])
+            ("dht_test_apache" function
+               (:constructor-flag t
+                :parent "dht_test_apache"
+                :type ("dht_test_apache" type (:type "class") nil nil))
+                nil [10062 10109])
+            ("clear" function
+               (:parent "dht_test_apache"
+                :type "void")
+                nil [10111 10529])
+            ("dht_test_apache_" variable (:type ("dht_test_apache" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [10531 10571])
+            ("ap_set_content_length" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10599 10614])
+                    ("len" variable (:type "long") (reparse-symbol arg-sub-list) [10615 10624]))                  
+                :type "int")
+                nil [10573 10897])
+            ("ap_setup_client_block" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10925 10940])
+                    ("read_policy" variable (:type "int") (reparse-symbol arg-sub-list) [10941 10957]))                  
+                :type "int")
+                nil [10899 11246])
+            ("ap_should_client_block" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11275 11290]))                  
+                :type "int")
+                nil [11248 11560])
+            ("ap_kill_timeout" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11583 11598]))                  
+                :type "void")
+                nil [11562 11786])
+            ("ap_reset_timeout" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11810 11825]))                  
+                :type "void")
+                nil [11788 12016])
+            ("ap_rwrite" function
+               (:arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [12032 12048])
+                    ("nbyte" variable (:type "int") (reparse-symbol arg-sub-list) [12049 12059])
+                    ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12060 12075]))                  
+                :type "int")
+                nil [12018 12438])
+            ("ap_soft_timeout" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12461 12472])
+                    ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12473 12488]))                  
+                :type "void")
+                nil [12440 12676])
+            ("ap_send_http_header" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12703 12718]))                  
+                :type "void")
+                nil [12678 12918])
+            ("ap_get_client_block" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12945 12960])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [12961 12971])
+                    ("bufsiz" variable (:type "int") (reparse-symbol arg-sub-list) [12972 12983]))                  
+                :type "long")
+                nil [12920 14101])
+            ("setHeader" function
+               (:parent "dht_test_apache"
+                :arguments 
+                  ( ("hdr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14136 14152])
+                    ("value" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14153 14171]))                  
+                :type "void")
+                nil [14103 14202])
+            ("unsetHeader" function
+               (:parent "dht_test_apache"
+                :arguments 
+                  ( ("hdr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14239 14255]))                  
+                :type "void")
+                nil [14204 14284])
+            ("clearHeaders" function
+               (:parent "dht_test_apache"
+                :type "void")
+                nil [14286 14349])
+            ("ap_table_get" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("tab" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("table" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14377 14394])
+                    ("which" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14395 14413]))                  
+                :type "char")
+                nil [14351 14923])
+            ("ap_table_set" function
+               (:arguments 
+                  ( ("tab" variable
+                       (:pointer 1
+                        :type ("table" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14943 14954])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14955 14971])
+                    ("val" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [14972 14988]))                  
+                :type "void")
+                nil [14925 15561])
+            ("ap_table_unset" function
+               (:arguments 
+                  ( ("tab" variable
+                       (:pointer 1
+                        :type ("table" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15583 15594])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [15595 15611]))                  
+                :type "void")
+                nil [15563 15991])
+            ("ap_child_terminate" function
+               (:arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16017 16032]))                  
+                :type "void")
+                nil [15993 16277])
+            ("ap_log_error" function
+               (:arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16297 16314])
+                    ("line" variable (:type "int") (reparse-symbol arg-sub-list) [16315 16324])
+                    ("level" variable (:type "int") (reparse-symbol arg-sub-list) [16325 16335])
+                    ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("server_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16354 16374])
+                    ("fmt" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16375 16391])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [16392 16396]))                  
+                :type "void")
+                nil [16279 16770])
+            ("ap_table_do" function
+               (:arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [16789 16800])
+                    ("rec" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16855 16865])
+                    ("t" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("table" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16866 16881])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [16881 16885]))                  
+                :type "void")
+                nil [16772 16912])
+            ("dhtTestYca_" variable
+               (:default-value "{true, false, false, YCA_OK, \"abcdefg\",
+                                 vector<char*>(1, \"fake_cert_appid\")}"
+                :type ("dhtTestYca" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [17046 17188])
+            ("yca_open_cert_db" function
+               (:pointer 1
+                :type ("yca_cert_db" type (:type "class") nil nil))
+                nil [17279 17414])
+            ("yca_init" function
+               (:pointer 1
+                :type ("yca_ctx_t" type (:type "class") nil nil))
+                nil [17416 17536])
+            ("yca_cert_init" function
+               (:pointer 1
+                :arguments 
+                  ( ("cert" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17565 17582]))                  
+                :type ("yca_cert_t" type (:type "class") nil nil))
+                nil [17538 17623])
+            ("yca_cert_get_appid" function
+               (:pointer 1
+                :arguments 
+                  ( ("ycert" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("yca_cert_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17657 17681]))                  
+                :type "char")
+                nil [17625 17732])
+            ("yca_cert_get_client_appid" function
+               (:pointer 1
+                :arguments 
+                  ( ("ycert" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("yca_cert_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17882 17906])
+                    ("trusted_router_callback" variable (:type "int") (reparse-symbol arg-sub-list) [17912 17963])
+                    ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17970 17978]))                  
+                :type "char")
+                nil [17838 18259])
+            ("yca_cert_get_client_cert" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("ycert" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("yca_cert_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18305 18329])
+                    ("trusted_router_callback" variable (:type "int") (reparse-symbol arg-sub-list) [18355 18459])
+                    ("p" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [18486 18494]))                  
+                :type ("yca_cert_t" type (:type "class") nil nil))
+                nil [18261 18802])
+            ("yca_cert_validity_check" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("yca_ctx_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18833 18848])
+                    ("ycert" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("yca_cert_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18849 18873])
+                    ("addr" variable
+                       (:constant-flag t
+                        :type ("in_addr" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18898 18924]))                  
+                :type "int")
+                nil [18805 18976])
+            ("yca_cert_destroy" function
+               (:arguments 
+                  ( ("ycert" variable
+                       (:pointer 1
+                        :type ("yca_cert_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18999 19017]))                  
+                :type "int")
+                nil [18978 19035])
+            ("yca_get_cert" function
+               (:pointer 1
+                :arguments 
+                  ( ("db" variable
+                       (:pointer 1
+                        :type ("yca_cert_db" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19056 19072])
+                    ("appId" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19072 19090]))                  
+                :type "char")
+                nil [19037 19212])
+            ("yca_append_cert" function
+               (:pointer 1
+                :arguments 
+                  ( ("oldCert" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19237 19257])
+                    ("db" variable
+                       (:pointer 1
+                        :type ("yca_cert_db" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19257 19273])
+                    ("appId" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19273 19291]))                  
+                :type "char")
+                nil [19214 19853])
+            ("yca_destroy" function
+               (:arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type ("yca_ctx_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19871 19886]))                  
+                :type "int")
+                nil [19855 19904])
+            ("yca_close_cert_db" function
+               (:arguments 
+                  ( ("db" variable
+                       (:pointer 1
+                        :type ("yca_cert_db" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19928 19944]))                  
+                :type "int")
+                nil [19906 19962])
+            ("dhtTestCurl_" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20123 20129]))                  
+                :type ("dhtTestCurl" type (:type "class") nil nil))
+                nil [20098 20130])
+            ("curl_easy_init" function
+               (:pointer 1
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [20153 20158]))                  
+                :type ("CURL" type (:type "class") nil nil))
+                nil [20132 20184])
+            ("curl_easy_setopt" function
+               (:arguments 
+                  ( ("curl" variable
+                       (:pointer 1
+                        :type ("CURL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20212 20223])
+                    ("option" variable (:type ("CURLoption" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20224 20242])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [20243 20247]))                  
+                :type ("CURLcode" type (:type "class") nil nil))
+                nil [20186 21081])
+            ("curl_easy_perform" function
+               (:arguments 
+                  ( ("curl" variable
+                       (:pointer 1
+                        :type ("CURL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21110 21121]))                  
+                :type ("CURLcode" type (:type "class") nil nil))
+                nil [21083 21338])
+            ("curl_easy_cleanup" function
+               (:arguments 
+                  ( ("curl" variable
+                       (:pointer 1
+                        :type ("CURL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21363 21374]))                  
+                :type "void")
+                nil [21340 21394])
+            ("curl_easy_getinfo" function
+               (:arguments 
+                  ( ("curl" variable
+                       (:pointer 1
+                        :type ("CURL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21423 21434])
+                    ("info" variable (:type ("CURLINFO" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21435 21449])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [21450 21454]))                  
+                :type ("CURLcode" type (:type "class") nil nil))
+                nil [21396 21987])
+            ("curl_easy_reset" function
+               (:arguments 
+                  ( ("curl" variable
+                       (:pointer 1
+                        :type ("CURL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22010 22021]))                  
+                :type "void")
+                nil [21989 22056])
+            ("curl_slist_append" function
+               (:pointer 1
+                :arguments 
+                  ( ("header" variable
+                       (:pointer 1
+                        :type ("curl_slist" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22096 22123])
+                    ("c" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [22124 22138]))                  
+                :type ("curl_slist" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [22058 22459])
+            ("curl_slist_free_all" function
+               (:arguments 
+                  ( ("header" variable
+                       (:pointer 1
+                        :type ("curl_slist" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [22486 22512]))                  
+                :type "void")
+                nil [22461 22553])
+            ("curl_easy_strerror" function
+               (:pointer 1
+                :constant-flag t
+                :arguments 
+                  ( ("" variable (:type ("CURLcode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22586 22595]))                  
+                :type "char")
+                nil [22555 22626])
+            ("curl_global_init" function
+               (:arguments 
+                  ( ("flags" variable (:type "long") (reparse-symbol arg-sub-list) [22654 22665]))                  
+                :type ("CURLcode" type (:type "class") nil nil))
+                nil [22628 22690])
+            ("curl_multi_add_handle" function
+               (:arguments 
+                  ( ("multi_handle" variable
+                       (:pointer 1
+                        :type ("CURLM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22725 22746])
+                    ("easy_handle" variable
+                       (:pointer 1
+                        :type ("CURL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22747 22765]))                  
+                :type ("CURLMcode" type (:type "class") nil nil))
+                nil [22692 22827])
+            ("curl_multi_perform" function
+               (:arguments 
+                  ( ("multi_handle" variable
+                       (:pointer 1
+                        :type ("CURLM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22859 22880])
+                    ("running_handles" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [22882 22904]))                  
+                :type ("CURLMcode" type (:type "class") nil nil))
+                nil [22829 23063])
+            ("curl_multi_info_read" function
+               (:pointer 1
+                :arguments 
+                  ( ("multi_handle" variable
+                       (:pointer 1
+                        :type ("CURL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23096 23115])
+                    ("msg_in_queue" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [23116 23134]))                  
+                :type ("CURLMsg" type (:type "class") nil nil))
+                nil [23065 23382])
+            ("curl_multi_remove_handle" function
+               (:arguments 
+                  ( ("multi_handle" variable
+                       (:pointer 1
+                        :type ("CURLM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23419 23439])
+                    ("easy_handle" variable
+                       (:pointer 1
+                        :type ("CURL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23440 23458]))                  
+                :type ("CURLMcode" type (:type "class") nil nil))
+                nil [23384 23520])
+            ("curl_multi_fdset" function
+               (:arguments 
+                  ( ("multi_handle" variable
+                       (:pointer 1
+                        :type ("CURLM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23549 23569])
+                    ("read_fd_set" variable
+                       (:pointer 1
+                        :type ("fd_set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23578 23598])
+                    ("write_fd_set" variable
+                       (:pointer 1
+                        :type ("fd_set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23607 23628])
+                    ("exc_fd_set" variable
+                       (:pointer 1
+                        :type ("fd_set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23637 23656])
+                    ("max_fd" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [23665 23677]))                  
+                :type ("CURLMcode" type (:type "class") nil nil))
+                nil [23522 23771])
+            ("curl_multi_init" function
+               (:pointer 1
+                :type ("CURLM" type (:type "class") nil nil))
+                nil [23773 23833])
+            ("select" function
+               (:arguments 
+                  ( ("nfds" variable (:type "int") (reparse-symbol arg-sub-list) [23846 23855])
+                    ("rfds" variable
+                       (:pointer 1
+                        :type ("fd_set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23856 23869])
+                    ("wfds" variable
+                       (:pointer 1
+                        :type ("fd_set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23870 23883])
+                    ("efds" variable
+                       (:pointer 1
+                        :type ("fd_set" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23900 23913])
+                    ("tv" variable
+                       (:pointer 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23915 23934]))                  
+                :type "int")
+                nil [23835 24157])
+            ("curl_multi_cleanup" function
+               (:arguments 
+                  ( ("multi_handle" variable
+                       (:pointer 1
+                        :type ("CURLM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24189 24210]))                  
+                :type ("CURLMcode" type (:type "class") nil nil))
+                nil [24159 24259])
+            ("dht_test_shmproxy_" variable
+               (:default-value "{false, 0, NULL, 0, NULL, 0, 0, 0, 0, 0}"
+                :type ("dht_test_shmproxy" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [24398 24485])
+            ("ypi_joinproxygroupk" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable (:type ("PROXYMODE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24515 24527])
+                    ("pgroup" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [24528 24541])
+                    ("keylow" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [24542 24564])
+                    ("keyhigh" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [24565 24588])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [24589 24599]))                  
+                :type ("PGROUP" type (:type "class") nil nil))
+                nil [24487 24957])
+            ("ypi_joinproxygroupk" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable (:type ("PROXYMODE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24987 24999])
+                    ("pgroup" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [25000 25019])
+                    ("keylow" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [25020 25042])
+                    ("keyhigh" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [25043 25066])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [25067 25077]))                  
+                :type ("PGROUP" type (:type "class") nil nil))
+                nil [24959 25442])
+            ("ypi_joinproxygroup" function
+               (:pointer 1
+                :arguments 
+                  ( ("p" variable (:type ("PROXYMODE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [25471 25483])
+                    ("pgroup" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [25484 25503])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [25504 25514]))                  
+                :type ("PGROUP" type (:type "class") nil nil))
+                nil [25444 25800])
+            ("ypi_handlesigusr2" function
+               (:arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25825 25836])
+                    ("enable" variable (:type "bool") (reparse-symbol arg-sub-list) [25837 25849]))                  
+                :type "void")
+                nil [25802 26083])
+            ("ypi_leaveproxygroup" function
+               (:arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26110 26120]))                  
+                :type "void")
+                nil [26085 26327])
+            ("ypi_getsegsize" function
+               (:arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26348 26359]))                  
+                :type "int")
+                nil [26329 26585])
+            ("ypi_getrecvbuft" function
+               (:arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26607 26619])
+                    ("msg" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [26620 26632])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("YPI_MSGINFO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26633 26651])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [26652 26662])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [26663 26675]))                  
+                :type "int")
+                nil [26587 27163])
+            ("ypi_releaserecvbuf" function
+               (:arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27189 27201]))                  
+                :type "bool")
+                nil [27165 27539])
+            ("ypi_getsendbuf" function
+               (:pointer 1
+                :arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27562 27574])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [27575 27583]))                  
+                :type "void")
+                nil [27541 28012])
+            ("ypi_releasesendbuf" function
+               (:arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28038 28050]))                  
+                :type "bool")
+                nil [28014 28388])
+            ("ypi_sendproxybuf" function
+               (:arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28412 28424])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [28425 28433])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("YPI_MSGINFO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [28434 28453])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [28454 28464]))                  
+                :type "bool")
+                nil [28390 29111])
+            ("ypi_sendproxybufk" function
+               (:arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29136 29148])
+                    ("key" variable (:type ("ushort" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29149 29160])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [29161 29169])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("YPI_MSGINFO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29170 29188])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [29189 29199]))                  
+                :type "bool")
+                nil [29113 29908])
+            ("ypi_sendproxymsg" function
+               (:arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29932 29943])
+                    ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [29944 29960])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [29961 29969])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("YPI_MSGINFO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [29970 29988])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [30011 30021])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [30022 30034]))                  
+                :type "bool")
+                nil [29910 30523])
+            ("ypi_sendproxymsgk" function
+               (:arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30548 30559])
+                    ("key" variable (:type ("ushort" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [30560 30571])
+                    ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [30572 30588])
+                    ("len" variable (:type "int") (reparse-symbol arg-sub-list) [30589 30597])
+                    ("info" variable
+                       (:pointer 1
+                        :type ("YPI_MSGINFO" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [30621 30639])
+                    ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [30640 30650])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [30651 30663]))                  
+                :type "bool")
+                nil [30525 31214])
+            ("ypi_pgvalid" function
+               (:arguments 
+                  ( ("pg" variable
+                       (:pointer 1
+                        :type ("PGROUP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [31233 31244]))                  
+                :type "bool")
+                nil [31216 31449])
+            ("dht_test_fileio_" variable
+               (:default-value "{ false, false }"
+                :type ("dht_test_fileio" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [31588 31647])
+            ("fake_fopen" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31674 31696])
+                    ("mode" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31697 31715])
+                    ("real_sym" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31716 31737]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [31649 31973])
+            ("fopen64" function
+               (:pointer 1
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [31990 32012])
+                    ("mode" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32013 32031]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [31975 32085])
+            ("fopen" function
+               (:pointer 1
+                :arguments 
+                  ( ("filename" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32100 32122])
+                    ("mode" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32123 32141]))                  
+                :type ("FILE" type (:type "class") nil nil))
+                nil [32087 32193])
+            ("fgets" function
+               (:pointer 1
+                :arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [32208 32216])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [32217 32223])
+                    ("stream" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [32224 32238]))                  
+                :type "char")
+                nil [32195 32680])
+            ("dht_test_system_" variable
+               (:default-value "{ false, NULL, false, 0, 
+                                            NULL, NULL, {0, 0}, 0, 
+                                            false, 0, false, 0}"
+                :type ("dht_test_system" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [32818 33018])
+            ("gethostname" function
+               (:arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [33098 33109])
+                    ("namelen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33110 33125]))                  
+                :type "int")
+                nil [33082 33515])
+            ("chown" function
+               (:arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [33527 33544])
+                    ("owner" variable (:type ("uid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33545 33557])
+                    ("group" variable (:type ("gid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [33558 33570]))                  
+                :type "int")
+                nil [33517 33829])
+            ("fork" function (:type "int") nil [33831 34038])
+            ("execv" function
+               (:arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [34050 34067])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [34068 34087]))                  
+                :type "int")
+                nil [34040 34633])
+            ("getFakeTime" function
+               (:parent "dht_test_system"
+                :arguments 
+                  ( ("tv" variable
+                       (:reference 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [34670 34690]))                  
+                :type "void")
+                nil [34635 34847])
+            ("ysys_time" function (:type ("time_t" type (:type "class") nil nil)) nil [34849 35111])
+            ("time" function
+               (:arguments 
+                  ( ("t" variable
+                       (:pointer 1
+                        :type ("time_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [35125 35135]))                  
+                :type ("time_t" type (:type "class") nil nil))
+                nil [35113 35425])
+            ("ysys_get_usec" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [35461 35466]))                  
+                :type "unsigned long long")
+                nil [35427 35814])
+            ("ysys_gettimeofday" function
+               (:arguments 
+                  ( ("tp" variable
+                       (:pointer 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [35840 35859]))                  
+                :type "void")
+                nil [35816 36262])
+            ("getpid" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [36277 36282]))                  
+                :type ("pid_t" type (:type "class") nil nil))
+                nil [36264 36488])
+            ("kill" function
+               (:arguments 
+                  ( ("pid" variable (:type ("pid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [36499 36509])
+                    ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [36510 36518]))                  
+                :type "int")
+                nil [36490 36737])
+            ("dht_test_uchar_" variable
+               (:default-value "{ U_ZERO_ERROR, U_ZERO_ERROR,
+                                          U_ZERO_ERROR, U_ZERO_ERROR,
+                                          U_ZERO_ERROR, U_ZERO_ERROR }"
+                :type ("dht_test_uchar" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [36873 37084])
+            ("ucnv_open_3_8" function
+               (:pointer 1
+                :arguments 
+                  ( ("name" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [37112 37129])
+                    ("err" variable
+                       (:pointer 1
+                        :type ("UErrorCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37130 37146]))                  
+                :type ("UConverter" type (:type "class") nil nil))
+                nil [37086 37474])
+            ("unorm_normalize_3_8" function
+               (:arguments 
+                  ( ("source" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("UChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37504 37524])
+                    ("sourceLength" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37525 37546])
+                    ("mode" variable (:type ("UNormalizationMode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37570 37594])
+                    ("options" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37595 37611])
+                    ("result" variable
+                       (:pointer 1
+                        :type ("UChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37635 37649])
+                    ("resultLength" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [37650 37671])
+                    ("status" variable
+                       (:pointer 1
+                        :type ("UErrorCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [37695 37714]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [37476 38466])
+            ("ucnv_fromUChars_3_8" function
+               (:arguments 
+                  ( ("cnv" variable
+                       (:pointer 1
+                        :type ("UConverter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38496 38512])
+                    ("dest" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [38536 38547])
+                    ("destCapacity" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38548 38569])
+                    ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("UChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38593 38610])
+                    ("srcLength" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [38611 38629])
+                    ("pErrorCode" variable
+                       (:pointer 1
+                        :type ("UErrorCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [38653 38676]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [38468 39356])
+            ("ucnv_toUChars_3_8" function
+               (:arguments 
+                  ( ("cnv" variable
+                       (:pointer 1
+                        :type ("UConverter" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39384 39400])
+                    ("dest" variable
+                       (:pointer 1
+                        :type ("UChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39423 39435])
+                    ("destCapacity" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39436 39457])
+                    ("src" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [39480 39496])
+                    ("srcLength" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [39497 39515])
+                    ("pErrorCode" variable
+                       (:pointer 1
+                        :type ("UErrorCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [39538 39561]))                  
+                :type ("int32_t" type (:type "class") nil nil))
+                nil [39358 40255])
+            ("uregex_setText_3_8" function
+               (:arguments 
+                  ( ("regexp" variable
+                       (:pointer 1
+                        :type ("URegularExpression" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40281 40308])
+                    ("text" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("UChar" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40333 40351])
+                    ("textLength" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [40352 40371])
+                    ("status" variable
+                       (:pointer 1
+                        :type ("UErrorCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40396 40415]))                  
+                :type "void")
+                nil [40257 40954])
+            ("uregex_matches_3_8" function
+               (:arguments 
+                  ( ("regexp" variable
+                       (:pointer 1
+                        :type ("URegularExpression" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [40981 41008])
+                    ("startIndex" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [41034 41053])
+                    ("status" variable
+                       (:pointer 1
+                        :type ("UErrorCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [41079 41098]))                  
+                :type ("UBool" type (:type "class") nil nil))
+                nil [40956 41620]))          
+    :file "test_wrappers.cc"
+    :pointmax 41900
+    :fsize 41899
+    :lastmodtime '(20614 58611)
+    :unmatched-syntax '((semantic-list 18382 . 18459) (semantic-list 17939 . 17963) (semantic-list 16800 . 16836) (semantic-list 16793 . 16800))
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndevn!branches!uffIntegration!framework!testpreload!src!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

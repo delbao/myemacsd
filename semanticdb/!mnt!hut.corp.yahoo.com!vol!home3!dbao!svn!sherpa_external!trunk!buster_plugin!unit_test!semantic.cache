@@ -1,0 +1,86 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables (list 
+   (semanticdb-table "TestHelper.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__TEST_HELPER_H_" variable (:constant-flag t) nil [34 50])
+            ("dht/StringUtilsCore.h" include (:system-flag t) nil [52 84])
+            ("x_global_me_x" variable
+               (:typemodifiers ("extern")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [154 187])
+            ("ME" variable (:constant-flag t) nil [196 198])
+            ("x_global_log" variable
+               (:typemodifiers ("extern")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [353 385])
+            ("TEST_LOG" variable (:constant-flag t) nil [394 402])
+            ("TestHelper" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [594 601])
+                    ("TestHelper" function
+                       (:constructor-flag t
+                        :type ("TestHelper" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [606 621])
+                    ("TestHelper" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [627 643])
+                    ("public" label nil (reparse-symbol classsubparts) [647 654])
+                    ("makeBadUtf8" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [660 693])
+                    ("makeFourByteUtf8" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [699 737])
+                    ("getDefaultTabletName" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("orderedTable" variable
+                               (:default-value "false)"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [783 809]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [743 810])
+                    ("getDefaultRegion" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [816 854])
+                    ("validateNotificationSyntax" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("outmsg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [899 925]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [860 926]))                  
+                :type "class")
+                nil [574 929]))          
+    :file "TestHelper.h"
+    :pointmax 961
+    :fsize 960
+    :lastmodtime '(20550 20333)
+    :unmatched-syntax '((punctuation 643 . 644) (punctuation 621 . 622))
+    :lexical-table 
+        '(("TEST_LOG" (spp-arg-list ("xmsg") 402 . 408) . ((semantic-list "(x_global_log.clear(), x_global_log.append(__FILE__ \"::\").append(StringUtilsCore::toString(__LINE__)).append(\":\").append(xmsg), std::cout<<x_global_log<<std::endl)" 409 . 572)))
+          ("__TEST_HELPER_H_")
+          ("ME" . ((semantic-list "(x_global_me_x.clear(), x_global_me_x.append(__FILE__ \"::\").append(__FUNCTION__).append(\"():\").append(StringUtilsCore::toString(__LINE__)).append(\": \"))" 199 . 351)))
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svn!sherpa_external!trunk!buster_plugin!unit_test!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

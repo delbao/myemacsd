@@ -1,0 +1,1180 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Certificate.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/Certificate.h" include nil nil [60 88])
+            ("dht/SectionConfig.h" include nil nil [89 119])
+            ("Certificate::HEADER_NAME" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [121 183])
+            ("Certificate" function
+               (:constructor-flag t
+                :parent "Certificate"
+                :arguments 
+                  ( ("appId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [210 235]))                  
+                :type ("Certificate" type (:type "class") nil nil))
+                nil [185 383])
+            ("Certificate" function
+               (:destructor-flag t
+                :parent "Certificate"
+                :type "void")
+                nil [385 417])
+            ("appId" function
+               (:parent "Certificate"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [419 488])
+            ("get" function
+               (:parent "Certificate"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [597 603])
+                    ("" variable (:type ("certificate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [604 616]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [559 777])
+            ("get" function
+               (:parent "Certificate"
+                :arguments 
+                  ( ("certificate" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [818 843]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [779 1011])
+            ("appendToStr" function
+               (:parent "Certificate"
+                :arguments 
+                  ( ("certificate" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1060 1085]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1013 1253])
+            ("appendToCert" function
+               (:parent "Certificate"
+                :arguments 
+                  ( ("oldCert" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1302 1322])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1322 1328])
+                    ("" variable (:type ("newcert" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1329 1337]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1255 1494])
+            ("appendToCert" function
+               (:parent "Certificate"
+                :arguments 
+                  ( ("oldCert" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1543 1570])
+                    ("newCert" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1570 1591]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1496 1789]))          
+    :file "Certificate.cc"
+    :pointmax 1977
+    :fsize 1976
+    :lastmodtime '(20614 58615)
+    :unmatched-syntax '((punctuation 1327 . 1328) (punctuation 602 . 603))
+    )
+   (semanticdb-table "SherpaTransport.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/SherpaTransport.h" include nil nil [60 92])
+            ("dht/FwCode.h" include nil nil [93 116])
+            ("dht/JsonObject.h" include nil nil [117 144])
+            ("dht/SchemaNames.h" include nil nil [145 173])
+            ("dht/LogUtils.h" include nil nil [174 199])
+            ("dht/FwTestHooks.h" include (:system-flag t) nil [200 228])
+            ("dht/ActionContext.h" include (:system-flag t) nil [229 259])
+            ("string" include (:system-flag t) nil [261 278])
+            ("map" include (:system-flag t) nil [279 293])
+            ("boost/any.hpp" include (:system-flag t) nil [295 319])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [321 341])
+            ("SherpaTransport::URI_PREFIX" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [343 408])
+            ("MAXREDIRS" variable
+               (:constant-flag t
+                :type "int")
+                nil [409 434])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [480 575])
+            ("isInt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [647 673]))                  
+                :type "bool")
+                nil [636 674])
+            ("isBool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [687 713]))                  
+                :type "bool")
+                nil [675 714])
+            ("isDouble" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [729 755]))                  
+                :type "bool")
+                nil [715 756])
+            ("isString" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [771 797]))                  
+                :type "bool")
+                nil [757 798])
+            ("SherpaTransport" function
+               (:constructor-flag t
+                :parent "SherpaTransport"
+                :type ("SherpaTransport" type (:type "class") nil nil))
+                nil [800 945])
+            ("SherpaTransport" function
+               (:destructor-flag t
+                :parent "SherpaTransport"
+                :type "void")
+                nil [947 987])
+            ("init" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("host" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1034 1058])
+                    ("appId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1059 1084])
+                    ("useSSL" variable
+                       (:constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1090 1108])
+                    ("timeoutMsecs" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1108 1130])
+                    ("idleTimeoutSeconds" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1130 1158]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [990 1391])
+            ("destroy" function
+               (:parent "SherpaTransport"
+                :type "void")
+                nil [1394 1462])
+            ("setImpl" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1511 1535])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1550 1572])
+                    ("ydht" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1587 1607])
+                    ("recursionCount" variable (:type "int") (reparse-symbol arg-sub-list) [1622 1641])
+                    ("uri" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1656 1674]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1464 3413])
+            ("setWithRetries" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("connSetting" variable (:type ("ConnectionSetting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3469 3499])
+                    ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3504 3533])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3534 3561])
+                    ("fields" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MapStrStr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3567 3591])
+                    ("webRc" variable
+                       (:reference 1
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3591 3620])
+                    ("seqId" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3625 3649]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [3415 4381])
+            ("getSherpaTransport" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("transport" variable
+                       (:reference 1
+                        :type ("SherpaTransportAutoPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4441 4475])
+                    ("connSetting" variable
+                       (:reference 1
+                        :type ("ConnectionSetting" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4476 4507]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [4383 4824])
+            ("setWithRetries" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("connSetting" variable (:type ("ConnectionSetting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4884 4914])
+                    ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4915 4944])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4945 4972])
+                    ("fields" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MapStrAny" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4978 5002])
+                    ("webRc" variable
+                       (:reference 1
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5003 5032])
+                    ("seqId" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5037 5061]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [4830 5792])
+            ("setWithRetries" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("connSetting" variable (:type ("ConnectionSetting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5848 5878])
+                    ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5883 5912])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5913 5940])
+                    ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5945 5969])
+                    ("response" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5969 5993])
+                    ("webRc" variable
+                       (:reference 1
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5998 6027])
+                    ("recursionCount" variable (:type "int") (reparse-symbol arg-sub-list) [6032 6051])
+                    ("uri" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6052 6075]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5794 6845])
+            ("set" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6890 6914])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6926 6948])
+                    ("fields" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MapStrAny" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6960 6984])
+                    ("seqId" variable
+                       (:constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6995 7014]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [6847 8453])
+            ("set" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8498 8522])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8534 8556])
+                    ("fields" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MapStrStr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8568 8592])
+                    ("seqId" variable
+                       (:constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8603 8622]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [8455 9267])
+            ("set" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9312 9341])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9341 9368])
+                    ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9373 9397])
+                    ("response" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9398 9422])
+                    ("recursionCount" variable (:type "int") (reparse-symbol arg-sub-list) [9427 9446])
+                    ("uri" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9447 9470]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [9269 10558])
+            ("getWithRetries" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("connSetting" variable (:type ("ConnectionSetting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10614 10644])
+                    ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10649 10678])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10679 10706])
+                    ("jsonRecord" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10712 10736])
+                    ("webRc" variable
+                       (:reference 1
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10737 10766]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [10560 11495])
+            ("getWithRetries" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("connSetting" variable (:type ("ConnectionSetting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11551 11581])
+                    ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11582 11611])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11612 11639])
+                    ("json" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11644 11664])
+                    ("webRc" variable
+                       (:reference 1
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11665 11694]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [11497 12418])
+            ("get" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12463 12487])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12499 12521])
+                    ("jsonRecord" variable
+                       (:reference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12533 12552]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [12420 13179])
+            ("get" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13224 13253])
+                    ("recordName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13254 13284])
+                    ("response" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13289 13313]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [13181 13927])
+            ("parseURL" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13977 14002])
+                    ("protocol" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14003 14025])
+                    ("hostNPort" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14026 14049])
+                    ("uri" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14060 14077]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [13929 14486])
+            ("remove" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14534 14563])
+                    ("recordName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14564 14594])
+                    ("response" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14602 14626]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [14488 15221])
+            ("OrderedScanContinuation" function
+               (:constructor-flag t
+                :parent "SherpaTransport::OrderedScanContinuation"
+                :type ("OrderedScanContinuation" type (:type "class") nil nil))
+                nil [15224 15458])
+            ("orderedScan" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("uriPath" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15530 15557])
+                    ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15558 15582])
+                    ("response" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15583 15607])
+                    ("recursionCount" variable (:type "int") (reparse-symbol arg-sub-list) [15620 15639]))                  
+                :type ("SherpaTransport::OrderedScanContinuation" type (:type "class") nil nil))
+                nil [15459 19666])
+            ("enableAutoRedirect" function
+               (:parent "SherpaTransport"
+                :type "void")
+                nil [19668 19741])
+            ("disableAutoRedirect" function
+               (:parent "SherpaTransport"
+                :type "void")
+                nil [19743 19818])
+            ("isRetryMechanismRequired" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("frc" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19877 19902]))                  
+                :type "bool")
+                nil [19820 20179])
+            ("setHeader" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20314 20344])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20355 20386]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [20265 20456])
+            ("isInt" function
+               (:arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20566 20593]))                  
+                :type "bool")
+                nil [20555 20639])
+            ("isBool" function
+               (:arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20653 20680]))                  
+                :type "bool")
+                nil [20641 20727])
+            ("isDouble" function
+               (:arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20743 20770]))                  
+                :type "bool")
+                nil [20729 20819])
+            ("isString" function
+               (:arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20835 20862]))                  
+                :type "bool")
+                nil [20821 20927]))          
+    :file "SherpaTransport.cc"
+    :pointmax 21080
+    :fsize 21079
+    :lastmodtime '(20614 58615)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "RouterTransport.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/RouterTransport.h" include (:system-flag t) nil [147 179])
+            ("dht/LogUtils.h" include (:system-flag t) nil [180 205])
+            ("dht/WebConstants.h" include (:system-flag t) nil [206 235])
+            ("dht/FwTestHooks.h" include (:system-flag t) nil [236 264])
+            ("dht/ActionContext.h" include (:system-flag t) nil [265 295])
+            ("dht/ProcessContext.h" include (:system-flag t) nil [296 327])
+            ("dht/Stats.h" include (:system-flag t) nil [328 350])
+            ("boost/scoped_array.hpp" include (:system-flag t) nil [351 384])
+            ("dht/JsonObject.h" include (:system-flag t) nil [385 412])
+            ("dht/URLBuilder.h" include (:system-flag t) nil [413 440])
+            ("ycfn/ycfn.h" include (:system-flag t) nil [442 464])
+            ("ForwardEncryption.h" include nil nil [466 496])
+            ("RouterTransport::COMMAND_OP" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [498 563])
+            ("RouterTransport::RECORD_OP" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [564 638])
+            ("RouterTransport::ADMIN_OP" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [639 703])
+            ("COPY_MARK" variable (:constant-flag t) nil [713 722])
+            ("DRAIN_FLIP" variable (:constant-flag t) nil [754 764])
+            ("LOAD_TABLET" variable (:constant-flag t) nil [806 817])
+            ("CANCEL_COPY" variable (:constant-flag t) nil [855 866])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [894 989])
+            ("RouterTransport" function
+               (:constructor-flag t
+                :parent "RouterTransport"
+                :arguments 
+                  ( ("appId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1025 1050])
+                    ("useForwardCompression" variable (:type "bool") (reparse-symbol arg-sub-list) [1051 1078]))                  
+                :type ("RouterTransport" type (:type "class") nil nil))
+                nil [991 1156])
+            ("RouterTransport" function
+               (:destructor-flag t
+                :parent "RouterTransport"
+                :type "void")
+                nil [1158 1198])
+            ("encrypt" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1231 1249])
+                    ("inputSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1250 1267])
+                    ("keydbKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1268 1290])
+                    ("outputBuffer" variable
+                       (:reference 1
+                        :type ("EncryptBufferAutoPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1299 1335])
+                    ("outputLength" variable
+                       (:reference 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1344 1366]))                  
+                :type "int")
+                nil [1201 1710])
+            ("localencrypt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1753 1771])
+                    ("inputSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1772 1789])
+                    ("keydbKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1790 1812])
+                    ("outputBuffer" variable
+                       (:reference 1
+                        :type ("EncryptBufferAutoPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1826 1862])
+                    ("outputLength" variable
+                       (:reference 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1876 1898]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1712 2538])
+            ("decrypt" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("encryptedBody" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2570 2604])
+                    ("keydbKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2605 2627])
+                    ("decryptedBody" variable
+                       (:reference 1
+                        :type ("EncryptBufferAutoPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2636 2673])
+                    ("decryptedBodyLen" variable
+                       (:reference 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2674 2700]))                  
+                :type "int")
+                nil [2540 3267])
+            ("localdecrypt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("encryptedBody" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3592 3626])
+                    ("keydbKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3627 3649])
+                    ("resultStr" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3663 3687])
+                    ("decryptedBody" variable
+                       (:reference 1
+                        :type ("EncryptBufferAutoPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3701 3738])
+                    ("decryptedBodyLen" variable
+                       (:reference 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3739 3765])
+                    ("urlForRouter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3779 3812])
+                    ("durationMsecs" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3813 3836]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [3551 4851])
+            ("forwardStorageOperation" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("remoteRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5466 5499])
+                    ("url" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5524 5548])
+                    ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5573 5598])
+                    ("myRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5623 5652])
+                    ("commandPrefix" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5677 5711])
+                    ("clientCert" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5736 5767])
+                    ("responseBody" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5792 5819])
+                    ("aMonitor" variable
+                       (:reference 1
+                        :type ("ActionMonitor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5844 5868]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5403 6086])
+            ("forwardStorageOperation" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("remoteRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6151 6184])
+                    ("url" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6209 6233])
+                    ("bodyBuf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6258 6279])
+                    ("bodyLen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6304 6319])
+                    ("myRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6344 6373])
+                    ("commandPrefix" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6398 6432])
+                    ("clientCert" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6457 6488])
+                    ("responseBody" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6513 6540])
+                    ("aMonitor" variable
+                       (:reference 1
+                        :type ("ActionMonitor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6565 6589]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [6088 7718])
+            ("forwardEncryptedStorageOperation" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("remoteRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8855 8888])
+                    ("urlForRemoteSU" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8922 8957])
+                    ("urlForRouter" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8991 9024])
+                    ("urlIsHashBased" variable (:type "bool") (reparse-symbol arg-sub-list) [9058 9078])
+                    ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9112 9137])
+                    ("myRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9171 9200])
+                    ("commandPrefix" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9234 9268])
+                    ("clientCert" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9302 9333])
+                    ("keydbKey" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9367 9389])
+                    ("ttlSec" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9423 9439])
+                    ("responseBody" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9473 9500])
+                    ("aMonitor" variable
+                       (:reference 1
+                        :type ("ActionMonitor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9534 9558]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [8783 14743])
+            ("forwardCopyMark" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("table" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14801 14827])
+                    ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14844 14871])
+                    ("snapshotID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14888 14919])
+                    ("destSU" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14936 14963])
+                    ("copyDestRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14980 15015])
+                    ("useSSL" variable (:type "bool") (reparse-symbol arg-sub-list) [15032 15044])
+                    ("forwardRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15061 15095]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [14746 16777])
+            ("forwardCancelCopy" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("snapshotID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16837 16868])
+                    ("table" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16888 16914])
+                    ("forwardRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16934 16968]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [16779 18451])
+            ("forwardDrainFlip" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("table" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18509 18535])
+                    ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18553 18580])
+                    ("restoreId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18598 18628])
+                    ("allRegions" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [18646 18689])
+                    ("destRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18707 18738]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [18453 20295])
+            ("forwardGetSync" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("table" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20351 20377])
+                    ("record" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20393 20420])
+                    ("seqId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20436 20462])
+                    ("myRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20478 20507])
+                    ("destRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20523 20554])
+                    ("responseBody" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20555 20582]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [20297 21255])
+            ("forwardGetSyncOperation" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("remoteRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21320 21353])
+                    ("url" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21378 21402])
+                    ("myRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21427 21456])
+                    ("commandPrefix" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21481 21515])
+                    ("responseBody" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21540 21567]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [21257 22583])
+            ("processFtrLoadTablet" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("table" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22645 22670])
+                    ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22692 22718])
+                    ("backupId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22740 22768])
+                    ("restoreId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22790 22819])
+                    ("importId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22841 22869])
+                    ("suRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22891 22919])
+                    ("suName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22941 22967])
+                    ("bsRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22989 23017]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [22585 23691])
+            ("getRegionToForwardToHeader" function
+               (:parent "RouterTransport"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [23693 23815])
+            ("prepareForwardOperation" function
+               (:parent "RouterTransport"
+                :arguments 
+                  ( ("url" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23880 23904])
+                    ("remoteRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23929 23962])
+                    ("myRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [23987 24016])
+                    ("clientCert" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24041 24072])
+                    ("responseBody" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [24097 24124]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [23817 25291]))          
+    :file "RouterTransport.cc"
+    :pointmax 25444
+    :fsize 25443
+    :lastmodtime '(20614 60059)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DRAIN_FLIP" . ((string "\"/admin/V1/initiate_drain_flip/\"" 765 . 797)))
+          ("LOAD_TABLET" . ((string "\"/admin/V1/ftr_load_tablet/\"" 818 . 846)))
+          ("COPY_MARK" . ((string "\"/ctrl/V1/copy_mark/\"" 723 . 744)))
+          ("CANCEL_COPY" . ((string "\"/ctrl/V1/copy_complete/\"" 867 . 892)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndevn!branches!uffIntegration!framework!base!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

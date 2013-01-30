@@ -1,0 +1,205 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "ZkSTBase.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sys/time.h" include (:system-flag t) nil [189 210])
+            ("errno.h" include (:system-flag t) nil [211 229])
+            ("string.h" include (:system-flag t) nil [230 249])
+            ("zookeeper/zookeeper.h" include (:system-flag t) nil [251 283])
+            ("ysys/time.h" include (:system-flag t) nil [285 307])
+            ("dht/CrCode.h" include (:system-flag t) nil [309 332])
+            ("dht/LogUtils.h" include (:system-flag t) nil [333 358])
+            ("dht/ZkHandleBase.h" include (:system-flag t) nil [359 388])
+            ("dht/ZkSTBase.h" include (:system-flag t) nil [389 414])
+            ("dht/ZkCallback.h" include (:system-flag t) nil [415 442])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [444 538])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [540 560])
+            ("getTimeMsecs" function
+               (:typemodifiers ("static")
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [562 631])
+            ("zkWatcher" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("zh" variable
+                       (:pointer 1
+                        :type ("zhandle_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [655 669])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [670 679])
+                    ("state" variable (:type "int") (reparse-symbol arg-sub-list) [680 690])
+                    ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [691 708])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [709 719]))                  
+                :type "void")
+                nil [633 819])
+            ("../../common/ZkEventString.inc" include nil nil [844 885])
+            ("../../common/ZkStateString.inc" include nil nil [910 951])
+            ("ZkSTBase" function
+               (:constructor-flag t
+                :parent "ZkSTBase"
+                :arguments 
+                  ( ("hostList" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [973 1002])
+                    ("chroot" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1003 1030])
+                    ("cert" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1031 1056]))                  
+                :type ("ZkSTBase" type (:type "class") nil nil))
+                nil [953 1103])
+            ("ZkSTBase" function
+               (:destructor-flag t
+                :parent "ZkSTBase"
+                :type "void")
+                nil [1105 1152])
+            ("zkHandleClear" function
+               (:parent "ZkSTBase"
+                :type "void")
+                nil [1154 1388])
+            ("init" function
+               (:parent "ZkSTBase"
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [1390 1583])
+            ("mainWatcher" function
+               (:parent "ZkSTBase"
+                :arguments 
+                  ( ("zh" variable
+                       (:pointer 1
+                        :type ("zhandle_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1613 1627])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [1628 1637])
+                    ("state" variable (:type "int") (reparse-symbol arg-sub-list) [1638 1648])
+                    ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1649 1666]))                  
+                :type "void")
+                nil [1585 1919])
+            ("setDefaultZkTimeout" function
+               (:parent "ZkSTBase"
+                :arguments 
+                  ( ("tv" variable
+                       (:reference 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1957 1977]))                  
+                :type "void")
+                nil [1921 2084])
+            ("getInterest" function
+               (:parent "ZkSTBase"
+                :arguments 
+                  ( ("fd" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2130 2139])
+                    ("mask" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [2140 2151])
+                    ("tv" variable
+                       (:reference 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2152 2172]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [2086 4923])
+            ("process" function
+               (:parent "ZkSTBase"
+                :arguments 
+                  ( ("mask" variable (:type "int") (reparse-symbol arg-sub-list) [4965 4974]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [4925 6603])
+            ("zkHandleInit" function
+               (:parent "ZkSTBase"
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [6605 7903])
+            ("adjustSelectWaitTime" function
+               (:parent "ZkSTBase"
+                :arguments 
+                  ( ("tv" variable
+                       (:reference 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8022 8042])
+                    ("remainingMs" variable (:type "int") (reparse-symbol arg-sub-list) [8043 8059]))                  
+                :type "void")
+                nil [7985 8539])
+            ("adjustRemainingMs" function
+               (:parent "ZkSTBase"
+                :arguments 
+                  ( ("remainingMs" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [8796 8814])
+                    ("startMs" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8815 8832]))                  
+                :type "void")
+                nil [8762 9257])
+            ("connected" function
+               (:parent "ZkSTBase"
+                :type "void")
+                nil [9259 9447])
+            ("isHandleOk" function
+               (:parent "ZkSTBase"
+                :type "bool")
+                nil [9449 9642])
+            ("execute" function
+               (:parent "ZkSTBase"
+                :arguments 
+                  ( ("op" variable
+                       (:pointer 1
+                        :type ("ZkCallback" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9979 9995])
+                    ("msecs" variable (:type "int") (reparse-symbol arg-sub-list) [9996 10006]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [9939 10844])
+            ("executeInternal" function
+               (:parent "ZkSTBase"
+                :arguments 
+                  ( ("op" variable
+                       (:pointer 1
+                        :type ("ZkCallback" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10894 10910])
+                    ("msecs" variable (:type "int") (reparse-symbol arg-sub-list) [10911 10921]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [10846 13432]))          
+    :file "ZkSTBase.cc"
+    :pointmax 13585
+    :fsize 13584
+    :lastmodtime '(20427 302)
+    :unmatched-syntax '((punctuation 908 . 909) (punctuation 907 . 908) (symbol 899 . 907) (symbol 892 . 898) (punctuation 891 . 892) (punctuation 890 . 891) (symbol 887 . 890) (punctuation 842 . 843) (punctuation 841 . 842) (symbol 833 . 841) (symbol 826 . 832) (punctuation 825 . 826) (punctuation 824 . 825) (symbol 821 . 824))
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!sherpa_externals!trunk!fwcore!zookeeper!st!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

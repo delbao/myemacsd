@@ -1,0 +1,251 @@
+;; Object dht/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dht/"
+  :tables (list 
+   (semanticdb-table "WebCode.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__WEB_CODE__H" variable (:constant-flag t) nil [90 103])
+            ("string" include (:system-flag t) nil [105 122])
+            ("WebCode" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [418 425])
+                    ("ResponseCode" type
+                       (:typedef ("int")
+                        :superclasses "int"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [430 455])
+                    ("Success" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [461 501])
+                    ("MovedPermanently" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [506 555])
+                    ("Redirect" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [560 601])
+                    ("ForwardToOtherRegion" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [607 660])
+                    ("BadRequest" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [666 709])
+                    ("Authorized" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [714 757])
+                    ("Forbidden" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [762 804])
+                    ("OperationNotFound" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [833 883])
+                    ("AuthNeeded" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [888 931])
+                    ("TableNotFound" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [936 982])
+                    ("RecordNotFound" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [987 1034])
+                    ("UnknownJsonKey" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1039 1086])
+                    ("UnknownField" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1091 1136])
+                    ("TabletNotFound" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1141 1188])
+                    ("InvalidData" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1194 1238])
+                    ("AlreadyExists" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1354 1400])
+                    ("TestSetFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1410 1456])
+                    ("TestDeleteFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1461 1510])
+                    ("TestGetFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1515 1561])
+                    ("BadState" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1690 1731])
+                    ("DeleteAliasNotAllowed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1736 1790])
+                    ("InternalServerError" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1796 1848])
+                    ("OperationFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2053 2101])
+                    ("OperationRunning" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2106 2155])
+                    ("OperationPaused" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2160 2208])
+                    ("OperationReady" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2213 2260])
+                    ("StoreFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2267 2311])
+                    ("RetrieveFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2316 2363])
+                    ("DeleteFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2368 2413])
+                    ("DeadLock" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2418 2459])
+                    ("ServerNotReady" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2517 2564])
+                    ("StoreUncertain" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2619 2666])
+                    ("DeleteUncertain" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2671 2719])
+                    ("RemoteServiceUnavailable" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2725 2782])
+                    ("SystemBusy" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2787 2830])
+                    ("DeleteAliasFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2904 2954])
+                    ("ServiceDown" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3199 3243])
+                    ("GlobalSuccessLocalFailure" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3248 3306])
+                    ("TooManyForwards" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3311 3359])
+                    ("TransientFailure" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3546 3595])
+                    ("PartialSuccess" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3844 3891])
+                    ("RetryLater" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4160 4203])
+                    ("getMessage" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("rc" variable (:type ("ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4309 4325]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4279 4326]))                  
+                :type "class")
+                nil [402 4330]))          
+    :file "WebCode.h"
+    :pointmax 4340
+    :fsize 4339
+    :lastmodtime '(20671 47430)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__WEB_CODE__H")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svn!sherpa_external!old_trunk!fwcore!include!dht!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,546 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables (list 
+   (semanticdb-table "testEnqueueRestoreTaskHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [1 45])
+            ("iostream" include (:system-flag t) nil [46 65])
+            ("yax/osutil.h" include (:system-flag t) nil [66 89])
+            ("EnqueueRestoreTaskHandler.h" include (:system-flag t) nil [90 128])
+            ("EnqueueRestoreTaskRequest.h" include (:system-flag t) nil [129 167])
+            ("EnqueueRestoreTaskResponse.h" include (:system-flag t) nil [168 207])
+            ("dht/test_wrappers.h" include (:system-flag t) nil [208 238])
+            ("dump.h" include nil nil [239 256])
+            ("TcTestBase.h" include nil nil [257 280])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [281 301])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [302 385])
+            ("TestEnqueueRestoreTaskHandler" type
+               (:superclasses 
+                  ( ("TcTestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestEnqueueRestoreTaskHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [467 497]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [448 498])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testWithValidParams" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [516 536]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [503 537])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testInvalidRequests" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [555 575]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [542 576])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [581 606])
+                    ("public" label nil (reparse-symbol classsubparts) [608 615])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [713 1195])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [1205 1267])
+                    ("tryHandler" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("resp" variable
+                               (:reference 1
+                                :type ("EnqueueRestoreTaskResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1321 1354])
+                            ("tableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1355 1379])
+                            ("backupId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1380 1403]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1277 1705])
+                    ("testWithValidParams" function (:type "void") (reparse-symbol classsubparts) [1715 3187])
+                    ("testInvalidRequests" function (:type "void") (reparse-symbol classsubparts) [3202 3556])
+                    ("testPreamble" function (:type "void") (reparse-symbol classsubparts) [3645 3676])
+                    ("private" label nil (reparse-symbol classsubparts) [3678 3686])
+                    ("emptyOrderedScanResponse" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3691 3728])
+                    ("recordNotFoundResponse" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3733 3768])
+                    ("okResponse" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3773 3796])
+                    ("backupId" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3801 3822])
+                    ("tableName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3827 3849]))                  
+                :type "class")
+                nil [386 3852])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3863 3872])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3873 3885]))                  
+                :type "int")
+                nil [3854 4038]))          
+    :file "testEnqueueRestoreTaskHandler.cc"
+    :pointmax 4040
+    :fsize 4039
+    :lastmodtime '(20328 58309)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "TcTestBase.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("TC_TEST_BASE_H" variable (:constant-flag t) nil [32 46])
+            ("PstoreMySQL.h" include nil nil [48 72])
+            ("Dispatcher.h" include nil nil [73 96])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [97 141])
+            ("PstoreMySQL.h" include (:system-flag t) nil [142 166])
+            ("TcTestUtils.h" include nil nil [167 191])
+            ("Headers" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [193 244])
+            ("TcTestBase" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [294 301])
+                    ("setUp" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [306 319])
+                    ("resetDb" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [324 339])
+                    ("testPreamble" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [344 364])
+                    ("private" label nil (reparse-symbol classsubparts) [365 373]))                  
+                :type "class")
+                nil [245 376]))          
+    :file "TcTestBase.h"
+    :pointmax 386
+    :fsize 385
+    :lastmodtime '(20328 58309)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TC_TEST_BASE_H")
+          )
+
+    )
+   (semanticdb-table "testGetRegionsHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [1 45])
+            ("iostream" include (:system-flag t) nil [46 65])
+            ("yax/osutil.h" include (:system-flag t) nil [66 89])
+            ("GetRegionsHandler.h" include (:system-flag t) nil [90 120])
+            ("GetRegionsRequest.h" include (:system-flag t) nil [121 151])
+            ("GetRegionsResponse.h" include (:system-flag t) nil [152 183])
+            ("TcTestBase.h" include nil nil [184 207])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [208 228])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [229 312])
+            ("TestGetRegionsHandler" type
+               (:superclasses 
+                  ( ("TcTestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestGetRegionsHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [386 408]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [367 409])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testBasic" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [427 437]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [414 438])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testRegionNames" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [456 472]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [443 473])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [478 503])
+                    ("public" label nil (reparse-symbol classsubparts) [505 512])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [517 536])
+                    ("RegionMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil)
+                                  ("RegionOutStruct" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [546 599])
+                    ("dump" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("resp" variable
+                               (:reference 1
+                                :type ("GetRegionsResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [780 805]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [759 1038])
+                    ("tryHandler" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("resp" variable
+                               (:reference 1
+                                :type ("GetRegionsResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1097 1122]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1053 1413])
+                    ("testBasic" function (:type "void") (reparse-symbol classsubparts) [1423 1652])
+                    ("testRegionNames" function (:type "void") (reparse-symbol classsubparts) [1662 3553])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [3568 3776])
+                    ("testPreamble" function (:type "void") (reparse-symbol classsubparts) [3874 3905]))                  
+                :type "class")
+                nil [313 3908])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3919 3928])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3929 3941]))                  
+                :type "int")
+                nil [3910 4086]))          
+    :file "testGetRegionsHandler.cc"
+    :pointmax 4088
+    :fsize 4087
+    :lastmodtime '(20328 58309)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "testPstoreBase.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("TEST_PSTORE_BASE_H" variable (:constant-flag t) nil [36 54])
+            ("PstoreMySQL.h" include nil nil [56 80])
+            ("Dispatcher.h" include nil nil [81 104])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [105 149])
+            ("PstoreMySQL.h" include (:system-flag t) nil [150 174])
+            ("Headers" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [176 227])
+            ("TestPstoreBase" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [281 288])
+                    ("setUp" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [293 306])
+                    ("resetDb" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [311 326])
+                    ("countRows" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [346 371]))                          
+                        :type ("uint" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [331 372])
+                    ("testPreamble" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [378 398])
+                    ("disp_" variable
+                       (:pointer 1
+                        :type ("Dispatcher" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [404 422])
+                    ("pstore_" variable
+                       (:pointer 1
+                        :type ("PstoreMySQL" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [427 448])
+                    ("private" label nil (reparse-symbol classsubparts) [449 457]))                  
+                :type "class")
+                nil [228 460]))          
+    :file "testPstoreBase.h"
+    :pointmax 470
+    :fsize 469
+    :lastmodtime '(20328 58309)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TEST_PSTORE_BASE_H")
+          )
+
+    )
+   (semanticdb-table "testUpdateTabletRestoreStatusHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [1 45])
+            ("iostream" include (:system-flag t) nil [46 65])
+            ("yax/osutil.h" include (:system-flag t) nil [66 89])
+            ("UpdateTabletRestoreStateHandler.h" include (:system-flag t) nil [90 134])
+            ("UpdateTabletRestoreStateRequest.h" include (:system-flag t) nil [135 179])
+            ("UpdateTabletRestoreStateResponse.h" include (:system-flag t) nil [180 225])
+            ("dht/test_wrappers.h" include (:system-flag t) nil [226 256])
+            ("dht/RestoreTransientStore.h" include (:system-flag t) nil [257 295])
+            ("RowPredicate.h" include nil nil [296 321])
+            ("dump.h" include nil nil [322 339])
+            ("TcTestBase.h" include nil nil [340 363])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [364 384])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [385 468])
+            ("TestUpdateTabletRestoreStateHandler" type
+               (:superclasses 
+                  ( ("TcTestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestUpdateTabletRestoreStateHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [556 592]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [537 593])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testWithValidParams" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [611 631]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [598 632])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [637 662])
+                    ("public" label nil (reparse-symbol classsubparts) [664 671])
+                    ("tryHandler" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("req" variable
+                               (:reference 1
+                                :type ("UpdateTabletRestoreStateRequest" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [809 846])
+                            ("resp" variable
+                               (:reference 1
+                                :type ("UpdateTabletRestoreStateResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [847 886])
+                            ("tableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [887 916]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [765 1130])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [1137 1731])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [1741 1803])
+                    ("testWithValidParams" function (:type "void") (reparse-symbol classsubparts) [1813 4673])
+                    ("testPreamble" function (:type "void") (reparse-symbol classsubparts) [4766 4797])
+                    ("private" label nil (reparse-symbol classsubparts) [4799 4807])
+                    ("disp" variable (:type ("Dispatcher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4812 4828])
+                    ("emptyOrderedScanResponse" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4834 4871])
+                    ("recordNotFoundResponse" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4876 4911])
+                    ("okResponse" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4916 4939])
+                    ("su" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4945 4996])
+                    ("tablet" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4945 4996])
+                    ("restoreId" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4945 4996])
+                    ("importId" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4945 4996])
+                    ("table" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4945 4996])
+                    ("createGetTabletRecordResponseJson" function
+                       (:arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5048 5069])
+                            ("state" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5120 5140])
+                            ("su" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5191 5208])
+                            ("importId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5259 5282])
+                            ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5333 5354])
+                            ("dbTableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5405 5431]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5002 6988]))                  
+                :type "class")
+                nil [469 6992])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [7003 7012])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7013 7025]))                  
+                :type "int")
+                nil [6994 7184]))          
+    :file "testUpdateTabletRestoreStatusHandler.cc"
+    :pointmax 7186
+    :fsize 7185
+    :lastmodtime '(20328 58309)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "dump.h"
+    :file "dump.h"
+    :fsize 1357
+    :lastmodtime '(20328 58309)
+    )
+   (semanticdb-table "TcTestUtils.h"
+    :file "TcTestUtils.h"
+    :fsize 610
+    :lastmodtime '(20328 58309)
+    )
+   (semanticdb-table "testTypeUtils.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [1 45])
+            ("iostream" include (:system-flag t) nil [83 102])
+            ("yax/osutil.h" include (:system-flag t) nil [165 188])
+            ("TypeUtils.h" include nil nil [247 269])
+            ("TcTestBase.h" include nil nil [329 352])
+            ("BackupProgressByStateStruct.h" include nil nil [411 451])
+            ("BackupStatusStruct.h" include nil nil [493 524])
+            ("DestReplPolicyStruct.h" include nil nil [575 608])
+            ("IndexDescStruct.h" include nil nil [657 685])
+            ("IndexFieldStruct.h" include nil nil [739 768])
+            ("NamedPolicyStruct.h" include nil nil [821 851])
+            ("RegionInStruct.h" include nil nil [903 930])
+            ("RegionOutStruct.h" include nil nil [985 1013])
+            ("RestoreInfoStruct.h" include nil nil [1067 1097])
+            ("RestoreProgressByRegionStruct.h" include nil nil [1149 1191])
+            ("RestoreStatusStruct.h" include nil nil [1231 1263])
+            ("StatusCodeMessageStruct.h" include nil nil [1313 1349])
+            ("StatusCodeMessageStructStruct.h" include nil nil [1395 1437])
+            ("SuGlobalDataStruct.h" include nil nil [1477 1508])
+            ("SuTableStruct.h" include nil nil [1559 1585])
+            ("SuTableAclsStruct.h" include nil nil [1641 1671])
+            ("TaskOutStruct.h" include nil nil [1723 1749])
+            ("TimeStatisticsStruct.h" include nil nil [1805 1838])
+            ("TmTaskOutStruct.h" include nil nil [1887 1915])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1969 1989])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [2051 2134])
+            ("TestTypeUtils" type
+               (:superclasses 
+                  ( ("TcTestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestTypeUtils" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2323 2337]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2304 2338])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testBasic" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2399 2409]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2386 2410])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [2468 2493])
+                    ("public" label nil (reparse-symbol classsubparts) [2628 2635])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [2796 2961])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [3124 3143])
+                    ("testBasic" function (:type "void") (reparse-symbol classsubparts) [3206 108633])
+                    ("testPreamble" function (:type "void") (reparse-symbol classsubparts) [108796 108961])
+                    ("private" label nil (reparse-symbol classsubparts) [109124 109132])
+                    ("disp" variable (:type ("Dispatcher" type (:type "class") nil nil)) (reparse-symbol classsubparts) [109210 109226]))                  
+                :type "class")
+                nil [2136 109286])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [109375 109384])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [109385 109397]))                  
+                :type "int")
+                nil [109366 109859]))          
+    :file "testTypeUtils.cc"
+    :pointmax 109940
+    :fsize 109939
+    :lastmodtime '(20504 33886)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!dht!controller!src!cpp-tc!handlers!unit_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

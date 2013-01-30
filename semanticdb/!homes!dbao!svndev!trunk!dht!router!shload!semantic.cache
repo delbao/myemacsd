@@ -1,0 +1,131 @@
+;; Object shload/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "shload/"
+  :tables (list 
+   (semanticdb-table "Stats.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__STATS_H__" variable (:constant-flag t) nil [145 156])
+            ("Stats" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [351 358])
+                    ("addFinishedRequest" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("duration" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [513 541]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [482 542])
+                    ("getStats" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("min" variable
+                               (:reference 1
+                                :type "unsigned long long")
+                                (reparse-symbol arg-sub-list) [1219 1243])
+                            ("max" variable
+                               (:reference 1
+                                :type "unsigned long long")
+                                (reparse-symbol arg-sub-list) [1244 1268])
+                            ("median" variable
+                               (:reference 1
+                                :type "unsigned long long")
+                                (reparse-symbol arg-sub-list) [1269 1296])
+                            ("secondQuartile" variable
+                               (:reference 1
+                                :type "unsigned long long")
+                                (reparse-symbol arg-sub-list) [1322 1357])
+                            ("thirdQuartile" variable
+                               (:reference 1
+                                :type "unsigned long long")
+                                (reparse-symbol arg-sub-list) [1358 1392])
+                            ("average" variable
+                               (:reference 1
+                                :type "unsigned long long")
+                                (reparse-symbol arg-sub-list) [1418 1446])
+                            ("minRequestNum" variable
+                               (:reference 1
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [1472 1496])
+                            ("maxRequestNum" variable
+                               (:reference 1
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [1497 1521]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1198 1522])
+                    ("drawBoxPlot" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("min" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [1875 1898])
+                            ("median" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [1899 1925])
+                            ("max" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [1926 1949])
+                            ("firstQuartile" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [1978 2011])
+                            ("thirdQuartile" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [2012 2045]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1851 2046])
+                    ("protected" label nil (reparse-symbol classsubparts) [2048 2058])
+                    ("Node" type
+                       (:members 
+                          ( ("Node" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("duration" variable (:type "unsigned long long") (reparse-symbol arg-sub-list) [2290 2318])
+                                    ("next" variable
+                                       (:pointer 1
+                                        :type ("Node" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2319 2330]))                                  
+                                :type ("Node" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [2285 2380])
+                            ("duration_" variable (:type "unsigned long long") (reparse-symbol classsubparts) [2389 2419])
+                            ("next_" variable
+                               (:pointer 1
+                                :type ("Node" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [2455 2469]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [2101 2495])
+                    ("head_" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :type ("Node" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2501 2521])
+                    ("deleteState" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2613 2639])
+                    ("private" label nil (reparse-symbol classsubparts) [2641 2649])
+                    ("Stats" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Stats" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2654 2662])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Stats" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2723 2736]))                          
+                        :type ("Stats" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2706 2737]))                  
+                :type "class")
+                nil [337 2779]))          
+    :file "Stats.h"
+    :pointmax 3000
+    :fsize 2999
+    :lastmodtime '(20328 58290)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__STATS_H__")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!dht!router!shload!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

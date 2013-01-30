@@ -1,0 +1,826 @@
+;; Object httpparser/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "httpparser/"
+  :tables (list 
+   (semanticdb-table "URL.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("URL_H" variable (:constant-flag t) nil [23 28])
+            ("string" include (:system-flag t) nil [75 92])
+            ("list" include (:system-flag t) nil [93 108])
+            ("stdint.h" include (:system-flag t) nil [109 128])
+            ("uf/util/Composable.H" include (:system-flag t) nil [129 160])
+            ("URL" type
+               (:superclasses 
+                  ( ("Composable" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [479 486])
+                    ("URL" function
+                       (:constructor-flag t
+                        :type ("URL" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [569 603])
+                    ("parse" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1113 1130])
+                            ("dataLen" variable (:type "int") (reparse-symbol arg-sub-list) [1131 1144])
+                            ("parseHost" variable (:type "bool") (reparse-symbol arg-sub-list) [1149 1165])
+                            ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1166 1171]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1102 1172])
+                    ("parse" function
+                       (:arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1544 1567]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1533 1643])
+                    ("parseHost" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2050 2067])
+                            ("dataLen" variable (:type "int") (reparse-symbol arg-sub-list) [2068 2081]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2035 2086])
+                    ("parseHost" function
+                       (:arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2400 2423]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2385 2503])
+                    ("parsePathAndQuery" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2939 2956])
+                            ("dataLen" variable (:type "int") (reparse-symbol arg-sub-list) [2957 2970]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2916 2975])
+                    ("parsePathAndQuery" function
+                       (:arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3322 3345]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3299 3433])
+                    ("Scheme" type
+                       (:members 
+                          ( ("SCHEME_HTTP" variable
+                               (:constant-flag t
+                                :default-value (3551 3552)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3537 3552])
+                            ("SCHEME_HTTPS" variable
+                               (:constant-flag t
+                                :default-value (3577 3578)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [3562 3578]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [3511 3585])
+                    ("getScheme" function (:type ("Scheme" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3672 3732])
+                    ("getSchemeStr" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3844 3973])
+                    ("getHost" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4083 4151])
+                    ("getPort" function (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4350 4517])
+                    ("getExplicitPort" function (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4727 4801])
+                    ("MatrixComponent" type
+                       (:members 
+                          ( ("path" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5000 5017])
+                            ("params" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5026 5045])
+                            ("MatrixComponent" function
+                               (:constructor-flag t
+                                :type ("MatrixComponent" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [5054 5075])
+                            ("MatrixComponent" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("pth" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5101 5124])
+                                    ("prm" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [5125 5148]))                                  
+                                :type ("MatrixComponent" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [5085 5177]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [4963 5185])
+                    ("MatrixComponents" type
+                       (:typedef ("std::list" type
+                             (:template-specifier 
+                                ( ("MatrixComponent" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::list"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [5248 5300])
+                    ("getPath" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5401 5469])
+                    ("getEscapedPath" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5473 5508])
+                    ("getUnescapedPath" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5514 5551])
+                    ("getMatrixComponents" function
+                       (:constant-flag t
+                        :type ("MatrixComponents" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5654 6058])
+                    ("getQuery" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6182 6252])
+                    ("getFromPath" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6390 6466])
+                    ("setScheme" function
+                       (:arguments 
+                          ( ("newScheme" variable (:type ("Scheme" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6568 6585]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6553 6626])
+                    ("setScheme" function
+                       (:arguments 
+                          ( ("schemeStr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [6807 6829]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6792 6893])
+                    ("setScheme" function
+                       (:arguments 
+                          ( ("schemeStr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7049 7078]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7034 7149])
+                    ("setHost" function
+                       (:arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7304 7327]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7291 7405])
+                    ("setHost" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7621 7638])
+                            ("hostLen" variable (:type "int") (reparse-symbol arg-sub-list) [7639 7652]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7608 7657])
+                    ("setPort" function
+                       (:arguments 
+                          ( ("port" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7805 7819]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7792 7861])
+                    ("setPath" function
+                       (:arguments 
+                          ( ("path" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7959 7983]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7946 8063])
+                    ("setPath" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("path" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [8260 8277])
+                            ("pathLen" variable (:type "int") (reparse-symbol arg-sub-list) [8278 8291]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [8247 8296])
+                    ("setPath" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("matrixPath" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MatrixComponents" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8422 8457]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [8409 8458])
+                    ("setQuery" function
+                       (:arguments 
+                          ( ("query" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8703 8728]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8689 8800])
+                    ("setQuery" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("query" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [9002 9020])
+                            ("queryLen" variable (:type "int") (reparse-symbol arg-sub-list) [9021 9035]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8988 9040])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9208 9221])
+                    ("private" label nil (reparse-symbol classsubparts) [9223 9231])
+                    ("_scheme" variable (:type ("Scheme" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9237 9252])
+                    ("_host" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9257 9275])
+                    ("_explicitPort" variable (:type ("uint16_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9280 9303])
+                    ("_path" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9308 9326])
+                    ("_query" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9331 9350])
+                    ("_fromPath" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9355 9377])
+                    ("_matrixComponents" variable (:type ("MatrixComponents" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9382 9417])
+                    ("_matrixComponentsParsed" variable (:type "bool") (reparse-symbol classsubparts) [9422 9451])
+                    ("_compose" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9471 9488]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [9457 9495])
+                    ("_init" function (:type "void") (reparse-symbol classsubparts) [9501 9657])
+                    ("SCHEME_HTTP_STR" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9663 9704])
+                    ("SCHEME_HTTPS_STR" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9709 9751])
+                    ("_setScheme" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("schemeStr" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9798 9810]))                          )
+                        (reparse-symbol classsubparts) [9757 10090])
+                    ("_parseHost" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10112 10129])
+                            ("dataLen" variable (:type "int") (reparse-symbol arg-sub-list) [10130 10142])
+                            ("i" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [10143 10150]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10096 10151])
+                    ("_parsePathAndQuery" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10180 10197])
+                            ("dataLen" variable (:type "int") (reparse-symbol arg-sub-list) [10198 10210]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [10156 10211])
+                    ("_parseMatrixComponents" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10216 10246])
+                    ("_handlePathOrQueryChange" function (:type "void") (reparse-symbol classsubparts) [10251 10431]))                  
+                :type "class")
+                nil [447 10434]))          
+    :file "URL.H"
+    :pointmax 10452
+    :fsize 10451
+    :lastmodtime '(20622 62377)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("URL_H")
+          )
+
+    )
+   (semanticdb-table "HTTPRequest.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("HTTP_REQUEST_H" variable (:constant-flag t) nil [33 47])
+            ("HTTPMessage.H" include nil nil [49 73])
+            ("URL.H" include nil nil [74 90])
+            ("HTTPRequest" type
+               (:superclasses 
+                  ( ("HTTPMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [215 222])
+                    ("HTTPRequest" function
+                       (:constructor-flag t
+                        :type ("HTTPRequest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [228 407])
+                    ("getURL" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("url" variable
+                               (:reference 1
+                                :type ("URL" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [634 643])
+                            ("isForwardProxyRequest" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [644 673]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [622 683])
+                    ("getURL" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("URL" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [689 717])
+                    ("isForwardProxyRequest" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [723 753])
+                    ("reset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [760 773])
+                    ("setURL" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("urlString" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [791 820]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [779 821])
+                    ("setURL" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("urlArg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("URL" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [838 856]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [826 857])
+                    ("protected" label nil (reparse-symbol classsubparts) [860 870])
+                    ("_validateHeader" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [876 905])
+                    ("_checkHostField" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hostField" variable
+                               (:reference 1
+                                :type ("MIMEFields::ConstFieldIterator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [932 974]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [911 981])
+                    ("_getURL" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("url" variable
+                               (:reference 1
+                                :type ("URL" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1000 1009])
+                            ("isForwardProxyRequest" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1010 1038])
+                            ("hostField" variable
+                               (:reference 1
+                                :type ("MIMEFields::ConstFieldIterator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1039 1081]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [987 1088])
+                    ("_setURL" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1099 1120])
+                    ("_url" variable
+                       (:typemodifiers ("mutable")
+                        :type ("URL" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1126 1143])
+                    ("_urlInit" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1149 1171])
+                    ("_isForwardProxyRequest" variable
+                       (:typemodifiers ("mutable")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1210 1246])
+                    ("_urlReset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1252 1269]))                  
+                :type "class")
+                nil [173 1272]))          
+    :file "HTTPRequest.H"
+    :pointmax 1299
+    :fsize 1298
+    :lastmodtime '(20622 62377)
+    :unmatched-syntax '((number 674 . 675) (punctuation 672 . 673))
+    :lexical-table 
+        '(("HTTP_REQUEST_H")
+          )
+
+    )
+   (semanticdb-table "HTTPMessage.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("HTTP_MESSAGE_H" variable (:constant-flag t) nil [32 46])
+            ("string" include (:system-flag t) nil [48 65])
+            ("HTTPStartLine.H" include nil nil [66 92])
+            ("MIMEFields.H" include nil nil [93 116])
+            ("uf/util/ByteBlocks.H" include (:system-flag t) nil [117 148])
+            ("uf/util/Serializable.H" include (:system-flag t) nil [149 182])
+            ("HTTPMessage" type
+               (:superclasses 
+                  ( ("Serializable" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [458 465])
+                    ("HTTPMessage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("t" variable (:type ("HTTPMessageType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [483 502])
+                            ("" variable (:type ("HTTP_MESSAGE_TYPE_REQUEST" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [503 529]))                          
+                        :type ("HTTPMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [471 676])
+                    ("parseHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1343 1360])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1361 1373])
+                            ("endptr" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1374 1395]))                          
+                        :type ("ParseResult" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1319 1399])
+                    ("BodyData" type
+                       (:members 
+                          ( ("dechunked" variable (:type ("ByteBlocks" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1541 1562])
+                            ("raw" variable (:type ("ByteBlocks" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1636 1651])
+                            ("DataType" type
+                               (:members 
+                                  ( ("UNKNOWN" variable
+                                       (:constant-flag t
+                                        :default-value (1687 1688)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1677 1688])
+                                    ("CHUNKED" variable
+                                       (:constant-flag t
+                                        :default-value (1701 1702)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1691 1702])
+                                    ("NON_CHUNKED" variable
+                                       (:constant-flag t
+                                        :default-value (1719 1720)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [1705 1720]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [1661 1723])
+                            ("DATA_TYPE_STRINGS_" variable
+                               (:pointer 1
+                                :dereference 1
+                                :typemodifiers ("static")
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [1786 1826])
+                            ("rawDataType" variable (:type ("DataType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1892 1913])
+                            ("BodyData" function
+                               (:constructor-flag t
+                                :type ("BodyData" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1923 1988])
+                            ("size" function (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2006 2161])
+                            ("setBlockListEnable" function
+                               (:arguments 
+                                  ( ("enable" variable (:type "bool") (reparse-symbol arg-sub-list) [2203 2215]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2179 2329])
+                            ("clear" function (:type "void") (reparse-symbol classsubparts) [2339 2427])
+                            ("terminateCurrBlock" function (:type "void") (reparse-symbol classsubparts) [2437 2564])
+                            ("increment" function
+                               (:arguments 
+                                  ( ("ptr" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [2589 2605])
+                                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2606 2618]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2574 2720]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [1467 2727])
+                    ("parseBody" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3541 3558])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3559 3571])
+                            ("body" variable
+                               (:reference 1
+                                :type ("BodyData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3572 3587])
+                            ("endptr" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3588 3609]))                          
+                        :type ("ParseResult" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3519 3613])
+                    ("parse" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4306 4323])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4324 4336])
+                            ("body" variable
+                               (:reference 1
+                                :type ("BodyData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4337 4352])
+                            ("endPtr" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4353 4374])
+                            ("headersDone" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [4378 4397]))                          
+                        :type ("ParseResult" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4288 4401])
+                    ("reset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4437 4450])
+                    ("getType" function (:type ("HTTPMessageType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4456 4536])
+                    ("getStartLine" function (:type ("HTTPStartLine" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4542 4610])
+                    ("getMIMEFields" function (:type ("MIMEFields" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4616 4683])
+                    ("getStartLine" function
+                       (:constant-flag t
+                        :type ("HTTPStartLine" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4689 4769])
+                    ("getMIMEFields" function
+                       (:constant-flag t
+                        :type ("MIMEFields" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4775 4854])
+                    ("determineHeaderComposeSize" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [4941 4980])
+                    ("composeHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5062 5079])
+                            ("clearStringFirst" variable (:type "bool") (reparse-symbol arg-sub-list) [5080 5103])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5104 5110]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5043 5117])
+                    ("composeHeader" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5179 5337])
+                    ("clone" function
+                       (:arguments 
+                          ( ("source" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("HTTPMessage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5429 5455]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5418 5664])
+                    ("valid" function (:type "bool") (reparse-symbol classsubparts) [5748 5797])
+                    ("HTTPMessage" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [5803 5829])
+                    ("protected" label nil (reparse-symbol classsubparts) [5832 5842])
+                    ("_dirty" variable (:type "bool") (reparse-symbol classsubparts) [5847 5859])
+                    ("EntityType" type
+                       (:members 
+                          ( ("ENTITY_UNKNOWN" variable
+                               (:constant-flag t
+                                :default-value (5912 5913)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [5895 5913])
+                            ("ENTITY_START_LINE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [5923 5941])
+                            ("ENTITY_MIME_FIELDS" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [5950 5969])
+                            ("ENTITY_CHUNK_LENGTH" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [5978 5998])
+                            ("ENTITY_CHUNK_EXTENSION" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6007 6030])
+                            ("ENTITY_CHUNK_DATA" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6039 6057])
+                            ("ENTITY_CHUNK_TERMINATOR" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6066 6090])
+                            ("ENTITY_TRAILER" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6099 6114])
+                            ("ENTITY_HEADER" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6123 6137])
+                            ("ENTITY_BODY" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6146 6163]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [5865 6164])
+                    ("_startLine" variable (:type ("HTTPStartLine" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6170 6195])
+                    ("_mimeFields" variable (:type ("MIMEFields" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6200 6223])
+                    ("BodyType" type
+                       (:members 
+                          ( ("BODY_TYPE_UNKNOWN" variable
+                               (:constant-flag t
+                                :default-value (6277 6278)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6257 6278])
+                            ("EMPTY_BODY" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6288 6299])
+                            ("CHUNKED_BODY" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6308 6321])
+                            ("LENGTH_BASED_BODY" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6330 6348])
+                            ("BODY_TILL_EOI" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [6357 6425]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [6229 6426])
+                    ("_bodyType" variable (:type ("BodyType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6432 6451])
+                    ("_currEntity" variable (:type ("EntityType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6456 6479])
+                    ("_currMsgEntity" variable (:type ("EntityType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6484 6510])
+                    ("_pendingBodyLength" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6515 6543])
+                    ("_currChunkSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6548 6570])
+                    ("_pendingChunkSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6575 6600])
+                    ("_chunkSizeStr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6605 6631])
+                    ("_currLineTermIndex" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6636 6662])
+                    ("_trailerFieldsFound" variable (:type ("MIMEFields" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6667 6698])
+                    ("_clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [6704 6718])
+                    ("_init" function (:type "void") (reparse-symbol classsubparts) [6723 7030])
+                    ("_validateHeader" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7036 7105])
+                    ("_setupParseBody" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7111 7134])
+                    ("_validateBody" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7139 7160])
+                    ("_parseChunkedBody" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7195 7212])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7213 7225])
+                            ("body" variable
+                               (:reference 1
+                                :type ("BodyData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7226 7241])
+                            ("endptr" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7242 7262]))                          
+                        :type ("ParseResult" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7165 7263])
+                    ("WIRE_FORMAT_VERSION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [7269 7307])
+                    ("_serialize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7328 7345]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7312 7352])
+                    ("_deserialize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7375 7392])
+                            ("dataLen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7393 7408]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7357 7409])
+                    ("_allowTypeChangeOnDeserialize" variable (:type "bool") (reparse-symbol classsubparts) [7415 7450])
+                    ("_validateSpecifiedTrailer" variable (:type "bool") (reparse-symbol classsubparts) [7455 7486]))                  
+                :type "class")
+                nil [415 7489]))          
+    :file "HTTPMessage.H"
+    :pointmax 7516
+    :fsize 7515
+    :lastmodtime '(20622 62377)
+    :unmatched-syntax '((punctuation 5829 . 5830) (punctuation 5102 . 5103) (number 4398 . 4399) (punctuation 4396 . 4397) (number 4375 . 4376) (punctuation 4373 . 4374) (number 3610 . 3611) (punctuation 3608 . 3609) (number 1396 . 1397) (punctuation 1394 . 1395) (punctuation 501 . 502))
+    :lexical-table 
+        '(("HTTP_MESSAGE_H")
+          )
+
+    )
+   )
+  :file "!homes!dbao!uf!0.5!http!component!inc!uf!httpparser!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

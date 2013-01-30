@@ -1,0 +1,258 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "notifyCons.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("notifyCons_cc_rcsid" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [73 211])
+            ("repl/dbTX.h" include nil nil [213 235])
+            ("repl/dbTXLogEntry.h" include nil nil [237 267])
+            ("yut/string.h" include nil nil [269 292])
+            ("stdio.h" include (:system-flag t) nil [294 312])
+            ("sys/param.h" include (:system-flag t) nil [313 335])
+            ("map" include (:system-flag t) nil [337 351])
+            ("fstream" include (:system-flag t) nil [352 370])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [371 391])
+            ("notifyConsFlush" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("consumerArg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1333 1357]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1312 1358])
+            ("notifyConsShutdown" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("consumerArg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1283 1307]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1259 1308])
+            ("notifyConsProcessTx" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("consumerArg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1215 1239])
+                    ("tx" variable
+                       (:pointer 1
+                        :type ("yreplDbTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1240 1254]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1190 1255])
+            ("notifyConsProcess" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("consumerArg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1135 1159])
+                    ("entry" variable
+                       (:pointer 1
+                        :type ("yreplDbTXLogEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1160 1185]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1112 1186])
+            ("notifyConsInit" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "bool"
+                :arguments 
+                  ( ("consumerArg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1057 1081])
+                    ("ReaderLogDir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1082 1107]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [1037 1108])
+            ("C" extern (:members 
+              ( ("notifyConsInit" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "bool"
+                    :arguments 
+                      ( ("consumerArg" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [1057 1081])
+                        ("ReaderLogDir" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [1082 1107]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [1037 1108])
+                ("notifyConsProcess" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "bool"
+                    :arguments 
+                      ( ("consumerArg" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [1135 1159])
+                        ("entry" variable
+                           (:pointer 1
+                            :type ("yreplDbTXLogEntry" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [1160 1185]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [1112 1186])
+                ("notifyConsProcessTx" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "bool"
+                    :arguments 
+                      ( ("consumerArg" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [1215 1239])
+                        ("tx" variable
+                           (:pointer 1
+                            :type ("yreplDbTX" type (:type "class") nil nil))
+                            (reparse-symbol arg-sub-list) [1240 1254]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [1190 1255])
+                ("notifyConsShutdown" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("consumerArg" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [1283 1307]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [1259 1308])
+                ("notifyConsFlush" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("consumerArg" variable
+                           (:pointer 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [1333 1357]))                      
+                    :prototype-flag t)
+                    (reparse-symbol extern-c-contents) [1312 1358]))              ) nil [1021 1361])
+            ("notifyConsConfig" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("outputFile" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1384 1401])
+                          ("param2" variable (:type "int") (reparse-symbol classsubparts) [1404 1415])
+                          ("param3" variable (:type "int") (reparse-symbol classsubparts) [1418 1429]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1365 1449])
+            ("CMap" type
+               (:typedef ("map" type
+                     (:template-specifier 
+                        ( ("string" type nil nil nil)
+                          ("notifyConsConfig" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "map"
+                :type "typedef")
+                nil [1451 1494])
+            ("consMap" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("CMap" type (:type "class") nil nil))
+                nil [1495 1523])
+            ("notifyConsInit" function
+               (:arguments 
+                  ( ("consumerArg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1546 1570])
+                    ("ReaderLogDir" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1571 1596]))                  
+                :type "bool")
+                nil [1525 2831])
+            ("notifyConsProcess" function
+               (:arguments 
+                  ( ("consumerArg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2858 2882])
+                    ("entry" variable
+                       (:pointer 1
+                        :type ("yreplDbTXLogEntry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2883 2908]))                  
+                :type "bool")
+                nil [2834 3266])
+            ("notifyConsProcessTx" function
+               (:arguments 
+                  ( ("consumerArg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3295 3319])
+                    ("tx" variable
+                       (:pointer 1
+                        :type ("yreplDbTX" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3320 3334]))                  
+                :type "bool")
+                nil [3269 3964])
+            ("notifyConsShutdown" function
+               (:arguments 
+                  ( ("consumerArg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3992 4016]))                  
+                :type "void")
+                nil [3967 4098])
+            ("notifyConsFlush" function
+               (:arguments 
+                  ( ("consumerArg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4123 4147]))                  
+                :type "void")
+                nil [4101 4279]))          
+    :file "notifyCons.cc"
+    :pointmax 4282
+    :fsize 4281
+    :lastmodtime '(20455 30423)
+    :unmatched-syntax '((punctuation 1361 . 1362))
+    )
+   )
+  :file "!homes!dbao!svndevn!trunk!sherpa_externals!trunk!notify_consumers!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,29 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/state_server/src/stateserver" "-I$(top_srcdir)/ufcache/mem/inc" "-I$(top_srcdir)/http/state/src" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcache/disk/uf_plugins/inc" "-I$(top_srcdir)/ufcache/disk/inc" "-I$(top_srcdir)/ufcache/disk/store/inc" "-I$(top_srcdir)/ufcore/inc")) nil [1 425])
+            ("pkglibexecdir" variable (:default-value ("$(libexecdir)/$(PACKAGE)")) nil [426 467])
+            ("pkglibexec_LTLIBRARIES" variable (:default-value ("libufdiskcacheplugins.la")) nil [467 544])
+            ("source_files" variable (:default-value ("RegisterBackupStore.C" "DiskObjectReaderUF.C" "DiskObjectWriterUF.C" "HTTPCacheObjectLoader.C" "UFExitIndicator.C" "SetMemCache.C" "CheckMemCache.C" "ServeFromMemCache.C" "HTTPCacheObject.C" "HTTPCacheDataSource.C" "CacheObjectRef.C")) nil [544 789])
+            ("libufdiskcacheplugins_la_SOURCES" variable (:default-value ("$(source_files)")) nil [790 841])
+            ("libufdiskcacheplugins_la_LIBADD" variable (:default-value ("$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/ufcache/mem/src/libufmemcache.la" "$(top_builddir)/ufcache/disk/api/libufdiskcache.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la" "$(top_builddir)/state_server/src/stateserver/libufstateserver.la")) nil [841 1206])
+            ("libufdiskcacheplugins_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [1207 1260])
+            ("libufdiskcacheplugins_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [1260 1344])
+            ("libufdiskcacheplugins_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [1344 1432])
+            ("libufdiskcacheplugins_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [1432 1490])
+            ("libufdiskcacheplugins_p_la_LIBADD" variable (:default-value ("$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/ufcache/mem/src/libufmemcache_p.la" "$(top_builddir)/ufcache/disk/api/libufdiskcache_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la" "$(top_builddir)/state_server/src/stateserver/libufstateserver_p.la")) nil [1490 1869]))          
+    :file "Makefile.am"
+    :pointmax 1869
+    :fsize 1868
+    :lastmodtime '(20625 28920)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!ufcache!disk!uf_plugins!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

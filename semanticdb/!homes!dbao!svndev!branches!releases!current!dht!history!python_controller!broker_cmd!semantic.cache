@@ -1,0 +1,148 @@
+;; Object broker_cmd/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "broker_cmd/"
+  :tables (list 
+   (semanticdb-table "BrokerCmd.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [99 117])
+            ("string" include (:system-flag t) nil [118 135])
+            ("stdlib.h" include (:system-flag t) nil [136 155])
+            ("dht/LogUtils.h" include (:system-flag t) nil [157 182])
+            ("dht/FwCode.h" include (:system-flag t) nil [183 206])
+            ("dht/StringUtils.h" include (:system-flag t) nil [207 235])
+            ("dht/BrokerApi.h" include (:system-flag t) nil [236 262])
+            ("dht/SectionConfig.h" include (:system-flag t) nil [263 293])
+            ("dht/ProcessContext.h" include (:system-flag t) nil [294 325])
+            ("dht/YcaClient.h" include (:system-flag t) nil [326 352])
+            ("BrokerCmdUtil.h" include nil nil [354 380])
+            ("TcCommon.h" include nil nil [381 402])
+            ("WS_OP_ASSIGN_OVERRIDE" variable (:constant-flag t) nil [412 433])
+            ("WS_OP_CANCEL_OVERRIDE" variable (:constant-flag t) nil [462 483])
+            ("WS_OP_COPY_MARK" variable (:constant-flag t) nil [512 527])
+            ("WS_OP_REQ_SYNC" variable (:constant-flag t) nil [556 570])
+            ("WS_OP_ACTIVATE_COPY" variable (:constant-flag t) nil [603 622])
+            ("WS_OP_PROXY_EOT" variable (:constant-flag t) nil [651 666])
+            ("DEFAULT_CONTROLLER_CONFIG_FILE" variable (:constant-flag t) nil [696 726])
+            ("CONFIG_CONTROLLER_SECTION" variable (:constant-flag t) nil [758 783])
+            ("CONFIG_TC_ADMIN_APPID" variable (:constant-flag t) nil [816 837])
+            ("CONFIG_TC_DATA_APPID" variable (:constant-flag t) nil [868 888])
+            ("CONFIG_YCA_ENABLE" variable (:constant-flag t) nil [913 930])
+            ("CONFIG_YCA_ENABLE_DEFAULT" variable (:constant-flag t) nil [952 977])
+            ("CONFIG_TC_ADMIN_APPID_DEFAULT" variable (:constant-flag t) nil [991 1020])
+            ("CONFIG_TC_DATA_APPID_DEFAULT" variable (:constant-flag t) nil [1032 1060])
+            ("ERR_EXIT" variable (:constant-flag t) nil [1075 1083])
+            ("NORMAL_EXIT" variable (:constant-flag t) nil [1094 1105])
+            ("ymb_option" type
+               (:members 
+                  ( ("UNKNOWN_OPTION" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1131 1146])
+                    ("ASSIGN_OVERRIDE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1151 1167])
+                    ("CANCEL_OVERRIDE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1172 1188])
+                    ("COPY_MARK" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1193 1203])
+                    ("REQUEST_SYNC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1208 1221])
+                    ("ACTIVATE_COPY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1226 1240])
+                    ("PROXY_EOT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1245 1255]))                  
+                :type "enum")
+                nil [1109 1258])
+            ("USAGE" variable (:constant-flag t) nil [1268 1273])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [2076 2096])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [2098 2193])
+            ("print_usage" function
+               (:arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2212 2228])
+                    ("exit_code" variable (:type "int") (reparse-symbol arg-sub-list) [2229 2243]))                  
+                :type "int")
+                nil [2196 2301])
+            ("broker" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("BrokerApi" type (:type "class") nil nil))
+                nil [2303 2328])
+            ("initYca" function
+               (:arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Config" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2360 2381]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [2330 3197])
+            ("init" function (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) nil [3199 4504])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4515 4524])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4525 4538]))                  
+                :type "int")
+                nil [4506 10803]))          
+    :file "BrokerCmd.cc"
+    :pointmax 10992
+    :fsize 10991
+    :lastmodtime '(20425 22412)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("WS_OP_COPY_MARK" . ((string "\"copy_mark\"" 536 . 547)))
+          ("ERR_EXIT" . ((number "1" 1084 . 1085)))
+          ("WS_OP_REQ_SYNC" . ((string "\"request_sync\"" 580 . 594)))
+          ("CONFIG_TC_DATA_APPID" . ((string "\"YCA_TC_APP_ID\"" 889 . 904)))
+          ("DEFAULT_CONTROLLER_CONFIG_FILE" . ((string "\"etc/php/ydht_php.ini\"" 727 . 749)))
+          ("CONFIG_CONTROLLER_SECTION" . ((string "\"dht_tablet_controller\"" 784 . 807)))
+          ("CONFIG_YCA_ENABLE_DEFAULT" . ((string "\"On\"" 978 . 982)))
+          ("CONFIG_TC_ADMIN_APPID_DEFAULT" . ((string "\"\"" 1021 . 1023)))
+          ("NORMAL_EXIT" . ((number "0" 1106 . 1107)))
+          ("USAGE" . ((string "\"Usage: %s \\n\\
+               <assign_override>  -T <tableName> -t <tabletName> -s <bad_region> -d <good_region> -z timestamp [-m (major override)]\\n\\
+               <cancel_override>  -T <tableName> -t <tabletName> -s <bad_region> -d <good_region>  -z timestamp [-m (major override)] \\n\\
+               <copy_mark>        -T <tableName> -t <tabletName> -i <snapshotname> -h <desthost> -p <publisher_region> -d <dest_region> [-S (use SSL)]\\n\\
+               <request_sync>     -T <tableName> -t <tabletName> -r <recordName>\\n\\
+               <activate_copy>    -T <tableName> -t <tabletName> -h <desthost> -i <snapshotname> \\n\\
+               <proxy_eot>        -T <tableName> -t <tabletName> -i <splitId> -c <coordinator> -s <splitPoint> -r <comma separated list of regions> -p <publisher region>\\n\"" 1274 . 2074)))
+          ("WS_OP_CANCEL_OVERRIDE" . ((string "\"cancel_override\"" 486 . 503)))
+          ("WS_OP_ASSIGN_OVERRIDE" . ((string "\"assign_override\"" 436 . 453)))
+          ("WS_OP_PROXY_EOT" . ((string "\"proxy_eot\"" 675 . 686)))
+          ("CONFIG_TC_ADMIN_APPID" . ((string "\"YCA_TC_ADMIN_APP_ID\"" 838 . 859)))
+          ("WS_OP_ACTIVATE_COPY" . ((string "\"activate_copy\"" 627 . 642)))
+          ("CONFIG_YCA_ENABLE" . ((string "\"YCA_ENABLE\"" 931 . 943)))
+          ("CONFIG_TC_DATA_APPID_DEFAULT" . ((string "\"\"" 1061 . 1063)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndev!branches!releases!current!dht!history!python_controller!broker_cmd!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

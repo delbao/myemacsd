@@ -1,0 +1,30 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_LDFLAGS" variable (:default-value ("-lyhdrs")) nil [1 22])
+            ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc")) nil [22 178])
+            ("pkglibexecdir" variable (:default-value ("$(libexecdir)/$(PACKAGE)")) nil [179 220])
+            ("pkglibexec_LTLIBRARIES" variable (:default-value ("libufyahooconnection.la")) nil [220 295])
+            ("source_files" variable (:default-value ("YahooConnectionConf.C" "YahooConnectionConf.H" "YahooConnectionStats.C" "YahooConnectionStats.H" "YahooHeaders.C" "YahooHeaders.H" "YahooConnectionPlugin.C" "YahooConnectionPlugin.H")) nil [295 511])
+            ("libufyahooconnection_la_SOURCES" variable (:default-value ("$(source_files)")) nil [511 561])
+            ("libufyahooconnection_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver.la" "$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [561 946])
+            ("libufyahooconnection_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [946 998])
+            ("libufyahooconnection_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [998 1081])
+            ("libufyahooconnection_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [1081 1168])
+            ("libufyahooconnection_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [1168 1225])
+            ("libufyahooconnection_p_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver_p.la" "$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/http/component/src/remap/libufhttpremap_p.la" "$(top_builddir)/http/component/src/parser/libufhttpparser_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [1225 1624]))          
+    :file "Makefile.am"
+    :pointmax 1624
+    :fsize 1623
+    :lastmodtime '(20622 62405)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!plugin!yahoo_connection!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,228 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "TabletSplitProgress.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__TABLET_SPLIT_PROGRESS_H__" variable (:constant-flag t) nil [104 131])
+            ("string" include (:system-flag t) nil [133 149])
+            ("map" include (:system-flag t) nil [150 163])
+            ("dht/FwCode.h" include (:system-flag t) nil [164 186])
+            ("dht/WebCode.h" include (:system-flag t) nil [187 210])
+            ("TabletSplitProgress" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [241 249])
+                    ("TestTabletSplitProgress" friend nil (reparse-symbol classsubparts) [255 291])
+                    ("TabletSplitPhase" type
+                       (:members 
+                          ( ("TABLET_SPLIT_NONE" variable
+                               (:constant-flag t
+                                :default-value (355 356)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [334 356])
+                            ("PREPARE" variable
+                               (:constant-flag t
+                                :default-value (376 377)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [366 377])
+                            ("ABORT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [387 393])
+                            ("COMMIT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [402 409]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [298 416])
+                    ("TabletSplitProgress" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("TabletSplitProgress" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [422 444])
+                    ("TabletSplitProgress" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [450 481])
+                    ("parse" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("progressInfo" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [518 550]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [491 551])
+                    ("serialize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("serialStr" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [576 606]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [561 607])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [613 626])
+                    ("getSplitPhase" function (:type ("TabletSplitPhase" type (:type "class") nil nil)) (reparse-symbol classsubparts) [632 695])
+                    ("setPhasePrepare" function (:type "void") (reparse-symbol classsubparts) [701 759])
+                    ("setPhaseCommit" function (:type "void") (reparse-symbol classsubparts) [765 820])
+                    ("setPhaseAbort" function (:type "void") (reparse-symbol classsubparts) [826 879])
+                    ("isRegionSuccessful" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("regionName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [909 939]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [885 940])
+                    ("isRegionAttempted" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("regionName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [973 1003]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [950 1004])
+                    ("numAttemptsForRegion" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("regionName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1039 1069]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1014 1070])
+                    ("retCodeFromRegion" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("regionName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1120 1150]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1080 1151])
+                    ("setRegionInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1176 1202])
+                            ("retcode" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1202 1232])
+                            ("nattempts" variable (:type "int") (reparse-symbol arg-sub-list) [1256 1270]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1157 1271])
+                    ("save" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("id" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1303 1319]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1277 1320])
+                    ("LIST_DELIMITER" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1326 1359])
+                    ("REGION_INFO_DELIMITER" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1364 1404])
+                    ("private" label nil (reparse-symbol classsubparts) [1406 1414])
+                    ("phase_" variable (:type ("TabletSplitPhase" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1424 1448])
+                    ("RegionProgressInfo" type
+                       (:members 
+                          ( ("RegionProgressInfo" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("retcode" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1512 1542])
+                                    ("attempts" variable (:type "int") (reparse-symbol arg-sub-list) [1542 1555]))                                  
+                                :type ("RegionProgressInfo" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1493 1556])
+                            ("RegionProgressInfo" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1565 1587])
+                            ("retCode_" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1596 1627])
+                            ("numAttempts_" variable (:type "int") (reparse-symbol classsubparts) [1636 1653]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [1453 1660])
+                    ("RegionProgressMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("RegionProgressInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1665 1732])
+                    ("RegionProgressMapIter" type
+                       (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                        :superclasses "std::map::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1737 1818])
+                    ("RegionProgressMapCIter" type
+                       (:typedef ("std::map::const_iterator" type (:type "class") nil nil)
+                        :superclasses "std::map::const_iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1823 1911])
+                    ("regionInfo_" variable (:type ("RegionProgressMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1917 1947])
+                    ("setPhase" function
+                       (:arguments 
+                          ( ("phase" variable (:type ("TabletSplitPhase" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1967 1990]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1953 2051])
+                    ("TabletSplitProgress" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("TabletSplitProgress" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2077 2098]))                          
+                        :type ("TabletSplitProgress" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2057 2099])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("TabletSplitProgress" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2135 2157]))                          
+                        :type ("TabletSplitProgress" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2104 2158]))                  
+                :type "class")
+                nil [212 2162]))          
+    :file "TabletSplitProgress.h"
+    :pointmax 2393
+    :fsize 2392
+    :lastmodtime '(20545 26179)
+    :unmatched-syntax '((punctuation 291 . 292))
+    :lexical-table 
+        '(("__TABLET_SPLIT_PROGRESS_H__")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svn!trunk!history!python_controller!taskManager!src!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

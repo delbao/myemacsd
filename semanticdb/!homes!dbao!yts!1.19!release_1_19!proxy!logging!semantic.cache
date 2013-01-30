@@ -1,0 +1,424 @@
+;; Object logging/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "logging/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("1.2" "foreign" "no-installman" "no-installinfo")) nil [103 163])
+            ("XAR" variable (:default-value ("@XAR@")) nil [243 255])
+            ("AR" variable (:default-value ("$(XAR)")) nil [255 267])
+            ("DEFS" variable (:default-value ("-DIOCORE_LOG_COLLATION")) nil [290 321])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/libinktomi++")) nil [322 362])
+            ("INCLUDES" variable (:default-value ("$(iocore_include_dirs)")) nil [362 398])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy")) nil [398 432])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/http2")) nil [432 472])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/http2/remap")) nil [472 518])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2")) nil [518 558])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/preparse")) nil [558 607])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/utils")) nil [607 653])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/web2")) nil [653 698])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/hdrs")) nil [698 737])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/common/include")) nil [737 780])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/auth/include")) nil [780 821])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/tcp/include")) nil [831 871])
+            ("INCLUDES" variable (:default-value ("@TBD_1_INCDIR@")) nil [877 904])
+            ("INCLUDES" variable (:default-value ("@TBD_2_INCDIR@")) nil [904 931])
+            ("INCLUDES" variable (:default-value ("@TBD_3_INCDIR@")) nil [931 958])
+            ("INCLUDES" variable (:default-value ("$(SSL_INCDIR)")) nil [958 984])
+            ("noinst_LIBRARIES" variable (:default-value ("liblogging.a")) nil [985 1017])
+            ("liblogging_a_SOURCES" variable (:default-value ("Log.cc" "LogUtils.cc" "LogConfig.cc" "LogSock.cc" "LogBuffer.cc" "LogField.cc" "LogFilter.cc" "LogFormat.cc" "LogFile.cc" "LogObject.cc" "LogHost.cc" "LogAccess.cc" "LogAccessHttp.cc" "LogAccessICP.cc" "LogAccessFtp.cc" "LogCollationAccept.cc" "LogCollationClientSM.cc" "LogCollationHostSM.cc" "LogFieldAliasMap.cc")) nil [1050 1505])
+            ("clean-local" function nil nil [1506 1583]))          
+    :file "Makefile.am"
+    :pointmax 1583
+    :fsize 1582
+    :lastmodtime '(20632 41274)
+    :unmatched-syntax '((shell-command 1520 . 1582) (bol 1519 . 1519))
+    )
+   (semanticdb-table "Log.h"
+    :file "Log.h"
+    :fsize 5003
+    :lastmodtime '(20632 41273)
+    )
+   (semanticdb-table "LogObject.h"
+    :file "LogObject.h"
+    :fsize 14339
+    :lastmodtime '(20632 41274)
+    )
+   (semanticdb-table "LogConfig.h"
+    :file "LogConfig.h"
+    :fsize 9894
+    :lastmodtime '(20632 41274)
+    )
+   (semanticdb-table "LogHost.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LOG_HOST_H" variable (:constant-flag t) nil [311 321])
+            ("LogSock" type
+               (:prototype t
+                :type "class")
+                nil [323 337])
+            ("LogBuffer" type
+               (:prototype t
+                :type "class")
+                nil [338 354])
+            ("LogCollationClientSM" type
+               (:prototype t
+                :type "class")
+                nil [504 531])
+            ("LogBufferSink.h" include nil nil [542 568])
+            ("LogHost" type
+               (:superclasses 
+                  ( ("LogBufferSink" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("LogCollationClientSM" friend nil (reparse-symbol classsubparts) [960 993])
+                    ("public" label nil (reparse-symbol classsubparts) [1007 1014])
+                    ("LogHost" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("object_filename" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1028 1050])
+                            ("object_signature" variable (:type ("inku64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1051 1075]))                          
+                        :type ("LogHost" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1019 1076])
+                    ("LogHost" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LogHost" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1090 1105]))                          
+                        :type ("LogHost" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1081 1106])
+                    ("LogHost" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1111 1123])
+                    ("set_name_or_ipstr" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name_or_ipstr" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1151 1171]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1129 1172])
+                    ("set_ipstr_port" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ipstr" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1197 1209])
+                            ("port" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1210 1228]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1177 1229])
+                    ("set_name_port" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hostname" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1253 1268])
+                            ("port" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1269 1287]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1234 1288])
+                    ("connected" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ping" variable (:type "bool") (reparse-symbol arg-sub-list) [1311 1321]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1295 1322])
+                    ("connect" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1327 1343])
+                    ("disconnect" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1348 1367])
+                    ("write" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("lb" variable
+                               (:pointer 1
+                                :type ("LogBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1383 1397])
+                            ("to_disk" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1398 1414])
+                            ("to_net" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1415 1430])
+                            ("to_pipe" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1440 1456]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1372 1457])
+                    ("name" function
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1463 1526])
+                    ("port" function (:type "unsigned int") (reparse-symbol classsubparts) [1531 1566])
+                    ("ip" function (:type "unsigned int") (reparse-symbol classsubparts) [1571 1602])
+                    ("ipstr" function
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [1607 1641])
+                    ("display" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fd" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1662 1672])
+                            ("" variable (:type ("stdout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1673 1680]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1648 1681])
+                    ("get_orphan_logfile" function
+                       (:pointer 1
+                        :type ("LogFile" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1686 1741])
+                    ("do_filesystem_checks" function (:type "int") (reparse-symbol classsubparts) [1800 1881])
+                    ("private" label nil (reparse-symbol classsubparts) [1884 1892])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1897 1910])
+                    ("authenticated" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1915 1937])
+                    ("orphan_write" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("lb" variable
+                               (:pointer 1
+                                :type ("LogBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1960 1974])
+                            ("to_disk" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1975 1991]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1942 1994])
+                    ("orphan_write_and_delete" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("lb" variable
+                               (:pointer 1
+                                :type ("LogBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2028 2042])
+                            ("to_disk" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2043 2059]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1999 2062])
+                    ("create_orphan_LogFile_object" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2067 2103])
+                    ("private" label nil (reparse-symbol classsubparts) [2105 2113])
+                    ("m_object_filename" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2118 2142])
+                    ("m_object_signature" variable (:type ("inku64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2147 2173])
+                    ("m_ip" variable (:type "unsigned int") (reparse-symbol classsubparts) [2178 2192])
+                    ("m_ipstr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2197 2211])
+                    ("m_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2216 2229])
+                    ("m_port" variable (:type "int") (reparse-symbol classsubparts) [2234 2245])
+                    ("m_sock" variable
+                       (:pointer 1
+                        :type ("LogSock" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2250 2266])
+                    ("m_sock_fd" variable (:type "int") (reparse-symbol classsubparts) [2271 2285])
+                    ("m_connected" variable (:type "bool") (reparse-symbol classsubparts) [2290 2307])
+                    ("m_orphan_file" variable
+                       (:pointer 1
+                        :type ("LogFile" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2312 2335])
+                    ("public" label nil (reparse-symbol classsubparts) [2431 2438])
+                    ("link" variable (:type ("Link" type
+                         (:template-specifier 
+                            ( ("LogHost" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2443 2462])
+                    ("private" label nil (reparse-symbol classsubparts) [2464 2472])
+                    ("LogHost" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("LogHost" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2519 2530])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LogHost" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2555 2570]))                          
+                        :type ("LogHost" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2535 2571]))                  
+                :type "class")
+                nil [880 2574])
+            ("LogHostList" type
+               (:superclasses 
+                  ( ("LogBufferSink" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2789 2796])
+                    ("LogHostList" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("LogHostList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2801 2816])
+                    ("LogHostList" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2821 2837])
+                    ("add" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("host" variable
+                               (:pointer 1
+                                :type ("LogHost" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2853 2867])
+                            ("copy" variable (:type "bool") (reparse-symbol arg-sub-list) [2868 2879])
+                            ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2880 2885]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2843 2886])
+                    ("count" function
+                       (:prototype-flag t
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [2891 2909])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2914 2928])
+                    ("write" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("lb" variable
+                               (:pointer 1
+                                :type ("LogBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2943 2957])
+                            ("to_disk" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2958 2974])
+                            ("to_net" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2977 2992])
+                            ("to_pipe" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3003 3019]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2933 3022])
+                    ("first" function
+                       (:pointer 1
+                        :type ("LogHost" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3028 3074])
+                    ("next" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("here" variable
+                               (:pointer 1
+                                :type ("LogHost" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3094 3108]))                          
+                        :type ("LogHost" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3079 3138])
+                    ("display" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fd" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3158 3168])
+                            ("" variable (:type ("stdout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3169 3176]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3144 3177])
+                    ("==" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("rhs" variable
+                               (:reference 1
+                                :type ("LogHostList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3198 3215]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3182 3216])
+                    ("do_filesystem_checks" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3221 3248])
+                    ("private" label nil (reparse-symbol classsubparts) [3250 3258])
+                    ("m_host_list" variable (:type ("Queue" type
+                         (:template-specifier 
+                            ( ("LogHost" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3263 3290])
+                    ("LogHostList" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LogHostList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3351 3370]))                          
+                        :type ("LogHostList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3338 3371])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LogHostList" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3400 3419]))                          
+                        :type ("LogHostList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3376 3420]))                  
+                :type "class")
+                nil [2746 3423]))          
+    :file "LogHost.h"
+    :pointmax 3432
+    :fsize 3431
+    :lastmodtime '(20632 41273)
+    :unmatched-syntax '((punctuation 3167 . 3168) (number 3019 . 3020) (punctuation 3018 . 3019) (number 2992 . 2993) (punctuation 2991 . 2992) (number 2974 . 2975) (punctuation 2973 . 2974) (punctuation 2878 . 2879) (number 2059 . 2060) (punctuation 2058 . 2059) (number 1991 . 1992) (punctuation 1990 . 1991) (punctuation 1881 . 1882) (punctuation 1741 . 1742) (punctuation 1671 . 1672) (punctuation 1641 . 1642) (punctuation 993 . 994))
+    :lexical-table 
+        '(("LOG_HOST_H")
+          )
+
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!proxy!logging!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

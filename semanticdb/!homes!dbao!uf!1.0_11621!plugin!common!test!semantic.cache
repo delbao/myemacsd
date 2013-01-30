@@ -1,0 +1,24 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-DPIPE_NOT_EFD" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/plugin/upload_proxy/src/" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/plugin/common/inc" "-I/home/y/include" "-I/home/y/include/libxml2" "-I/usr/include/libxml2")) nil [68 405])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [463 489])
+            ("check_PROGRAMS" variable (:default-value ("testCommon")) nil [550 578])
+            ("testCommon_SOURCES" variable (:default-value ("$(top_builddir)/test/CppUnitTestRunner.cc" "TestMD5.C" "TestNumberToString.C" "TestSHA1.C" "TestStringToNumber.C" "TestUUID.C" "TestUrl.C" "TestJsonParser.C" "TestMicroSec.C" "TestTemplateApply.C" "TestXmlParser.C")) nil [689 948])
+            ("testCommon_LDFLAGS" variable (:default-value ("-lcppunit" "-ljsoncpp" "-lpthread" "$(AM_LDFLAGS)")) nil [949 1014])
+            ("testCommon_LDADD" variable (:default-value ("$(top_builddir)/plugin/common/src/libufcommon.la" "$(top_builddir)/ufcore/src/core/libufcore.la")) nil [1014 1136]))          
+    :file "Makefile.am"
+    :pointmax 1136
+    :fsize 1135
+    :lastmodtime '(20629 53848)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!plugin!common!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

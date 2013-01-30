@@ -1,0 +1,32 @@
+;; Object docs/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "docs/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("foreign" "no-dependencies")) nil [1006 1049])
+            ("man_MANS" variable (:default-value ("curl.1" "curl-config.1" "mk-ca-bundle.1")) nil [1050 1097])
+            ("GENHTMLPAGES" variable (:default-value ("curl.html" "curl-config.html" "mk-ca-bundle.html")) nil [1097 1157])
+            ("PDFPAGES" variable (:default-value ("curl.pdf" "curl-config.pdf" "mk-ca-bundle.pdf")) nil [1157 1210])
+            ("HTMLPAGES" variable (:default-value ("$(GENHTMLPAGES)" "index.html")) nil [1211 1250])
+            ("SUBDIRS" variable (:default-value ("examples" "libcurl")) nil [1251 1278])
+            ("CLEANFILES" variable (:default-value ("$(GENHTMLPAGES)" "$(PDFPAGES)")) nil [1279 1320])
+            ("EXTRA_DIST" variable (:default-value ("MANUAL" "BUGS" "CONTRIBUTE" "FAQ" "FEATURES" "INTERNALS" "SSLCERTS" "README.win32" "RESOURCES" "TODO" "TheArtOfHttpScripting" "THANKS" "VERSIONS" "KNOWN_BUGS" "BINDINGS" "$(man_MANS)" "$(HTMLPAGES)" "HISTORY" "INSTALL" "$(PDFPAGES)" "LICENSE-MIXING" "README.netware" "DISTRO-DILEMMA" "INSTALL.devcpp" "MAIL-ETIQUETTE" "HTTP-COOKIES")) nil [1321 1632])
+            ("MAN2HTML" variable (:default-value ("roffit" "<" "$<" ">$@")) nil [1633 1659])
+            ("SUFFIXES" variable (:default-value (".1" ".html" ".pdf")) nil [1660 1685])
+            ("html" function (:arguments ("$(HTMLPAGES)")) nil [1686 1728])
+            ("pdf" function (:arguments ("$(PDFPAGES)")) nil [1729 1768])
+            (".1.html" function nil nil [1769 1791])
+            (".1.pdf" function nil nil [1792 1946]))          
+    :file "Makefile.am"
+    :pointmax 1947
+    :fsize 1946
+    :lastmodtime '(20631 43692)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!curl-master!docs!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

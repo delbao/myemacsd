@@ -1,0 +1,24 @@
+;; Object remap/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "remap/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc")) nil [1 85])
+            ("AM_LDFLAGS" variable (:default-value ("-lpcre" "-lcares")) nil [86 114])
+            ("lib_LTLIBRARIES" variable (:default-value ("libufhttpremap.la")) nil [143 179])
+            ("source_files" variable (:default-value ("MappingsStore.C" "MappingsStoreImpl.C" "Tokenizer.C" "URLMapping.C" "URLMappingPathIndex.C" "URLRewrite.C" "URLRewriteImpl.C" "RegexMapping.C" "RegexMappingImpl.C")) nil [179 377])
+            ("libufhttpremap_la_SOURCES" variable (:default-value ("$(source_files)")) nil [380 424])
+            ("libufhttpremap_la_LIBADD" variable (:default-value ("$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [424 671]))          
+    :file "Makefile.am"
+    :pointmax 671
+    :fsize 670
+    :lastmodtime '(20629 53828)
+    :unmatched-syntax '((bol 377 . 377))
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!http!component!src!remap!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

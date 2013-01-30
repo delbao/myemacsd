@@ -1,0 +1,3157 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Bank.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("Bank.h" include (:system-flag t) nil [60 77])
+            ("dht/RequestState.h" include (:system-flag t) nil [78 107])
+            ("dht/StorageTransport.h" include (:system-flag t) nil [108 141])
+            ("dht/MultiServerTransport.h" include (:system-flag t) nil [142 179])
+            ("LbContext.h" include (:system-flag t) nil [180 202])
+            ("boost/bind.hpp" include (:system-flag t) nil [203 228])
+            ("dht/SchemaNames.h" include (:system-flag t) nil [229 257])
+            ("dht/DeleteObj.h" include (:system-flag t) nil [258 284])
+            ("DataRecorder.h" include (:system-flag t) nil [285 310])
+            ("cmath" include (:system-flag t) nil [311 327])
+            ("logger" variable
+               (:typemodifiers ("static")
+                :default-value "log4cpp::Category::getInstance(\"dht.lb.\"__FILE__)"
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [329 419])
+            ("SuMetricsPair" type
+               (:typedef ("std::pair" type
+                     (:template-specifier 
+                        ( ("std::string" type (:constant-flag t) nil nil)
+                          ("SuMetrics" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::pair"
+                :type "typedef")
+                nil [421 485])
+            ("Bank" function
+               (:constructor-flag t
+                :parent "Bank"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [499 523]))                  
+                :type ("Bank" type (:type "class") nil nil))
+                nil [487 899])
+            ("Bank" function
+               (:destructor-flag t
+                :parent "Bank"
+                :type "void")
+                nil [901 1134])
+            ("CreateRequestState" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1164 1171])
+                    ("CreateRequestState" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uri" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1195 1218]))                          
+                        :type ("CreateRequestState" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1176 1238])
+                    ("()" function
+                       (:operator-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1273 1287]))                          
+                        :type ("RequestState" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1248 1381])
+                    ("private" label nil (reparse-symbol classsubparts) [1387 1395])
+                    ("uri_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1400 1417]))                  
+                :type "class")
+                nil [1136 1420])
+            ("ping" function
+               (:parent "Bank"
+                :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                nil [1422 2827])
+            ("readLbStats" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("doSuHealthCheck" variable (:type "bool") (reparse-symbol arg-sub-list) [2869 2890]))                  
+                :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                nil [2829 5208])
+            ("recordMetrics" function
+               (:parent "Bank"
+                :type "void")
+                nil [5210 5655])
+            ("addSu" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("suName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5675 5701])
+                    ("suState" variable
+                       (:constant-flag t
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5702 5724]))                  
+                :type "void")
+                nil [5657 5786])
+            ("analyzeMetrics" function
+               (:parent "Bank"
+                :type "void")
+                nil [5789 6093])
+            ("reportImbalances" function
+               (:parent "Bank"
+                :type "void")
+                nil [6095 6794])
+            ("deleteIfInvalid" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("sm" variable
+                       (:pointer 1
+                        :type ("SuMetrics" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6824 6838]))                  
+                :type "bool")
+                nil [6796 6981])
+            ("removeInvalidMetrics" function
+               (:parent "Bank"
+                :type "void")
+                nil [6983 7300])
+            ("calcAvgSuLoad" function
+               (:parent "Bank"
+                :type "void")
+                nil [7302 7764])
+            ("calcMeanSuLoad" function
+               (:parent "Bank"
+                :type "void")
+                nil [7767 8070])
+            ("calcStdDevSuLoad" function
+               (:parent "Bank"
+                :type "void")
+                nil [8072 8573])
+            ("calcMeanNumberOfTablets" function
+               (:parent "Bank"
+                :type "void")
+                nil [8575 8902])
+            ("calcAvgSuDiskFree" function
+               (:parent "Bank"
+                :type "void")
+                nil [8905 9013])
+            ("calcAvgSuDiskBusyPct" function
+               (:parent "Bank"
+                :type "void")
+                nil [9015 9338])
+            ("calcAvgAggTabletLoad" function
+               (:parent "Bank"
+                :type "void")
+                nil [9340 9830])
+            ("calcAvgTabletLoad" function
+               (:parent "Bank"
+                :type "void")
+                nil [9832 10223])
+            ("calcSuMetricAvg" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("func" variable (:type ("SMCallBack" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10255 10271]))                  
+                :type "double")
+                nil [10225 10538])
+            ("calcQuantiles" function
+               (:parent "Bank"
+                :type "void")
+                nil [10586 17212])
+            ("inLoadQuantileBand" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17245 17271])
+                    ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17272 17294]))                  
+                :type "bool")
+                nil [17214 18458])
+            ("inDiskBusyPctQuantileBand" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18498 18524])
+                    ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18525 18547]))                  
+                :type "bool")
+                nil [18460 19845])
+            ("inDiskFreeBytesQuantileBand" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19887 19913])
+                    ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19914 19936]))                  
+                :type "bool")
+                nil [19847 21270])
+            ("inNumTabletsQuantileBand" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21309 21335])
+                    ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21336 21358]))                  
+                :type "bool")
+                nil [21272 22636])
+            ("inAggTabletLoadQuantileBand" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22678 22704])
+                    ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22705 22727]))                  
+                :type "bool")
+                nil [22638 24059])
+            ("isDiskFreeBytesBalanced" function
+               (:parent "Bank"
+                :type "bool")
+                nil [24062 24616])
+            ("isDiskBusyPctBalanced" function
+               (:parent "Bank"
+                :type "bool")
+                nil [24620 25183])
+            ("isFoundInHotSuList" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("su" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25216 25238]))                  
+                :type "bool")
+                nil [25185 25597]))          
+    :file "Bank.cc"
+    :pointmax 25785
+    :fsize 25784
+    :lastmodtime '(20614 60047)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "ISuFailureDetector.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__I_SU_FAILURE_DETECTOR_H__" variable (:constant-flag t) nil [104 131])
+            ("string" include (:system-flag t) nil [133 150])
+            ("map" include (:system-flag t) nil [151 165])
+            ("set" include (:system-flag t) nil [166 180])
+            ("LbCode.h" include nil nil [181 200])
+            ("dht/WebCode.h" include (:system-flag t) nil [201 225])
+            ("dht/RequestState.h" include (:system-flag t) nil [226 255])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [257 277])
+            ("HealthCheckResponse" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [353 360])
+                    ("HealthCheckResponse" function
+                       (:constructor-flag t
+                        :type ("HealthCheckResponse" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [365 440])
+                    ("HealthCheckResponse" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("resp" variable (:type "bool") (reparse-symbol arg-sub-list) [467 477])
+                            ("rc" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [502 527]))                          
+                        :type ("HealthCheckResponse" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [447 593])
+                    ("HealthCheckResponse" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("rsp" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("RequestState" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [618 642]))                          
+                        :type ("HealthCheckResponse" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [598 769])
+                    ("HealthCheckResponse" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [774 799])
+                    ("respCode_" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [807 839])
+                    ("gotResponse_" variable (:type "bool") (reparse-symbol classsubparts) [844 862]))                  
+                :type "class")
+                nil [325 865])
+            ("SuHealthMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("HealthCheckResponse" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [867 930])
+            ("SuHealthMapIter" type
+               (:typedef ("SuHealthMap::iterator" type (:type "class") nil nil)
+                :superclasses "SuHealthMap::iterator"
+                :type "typedef")
+                nil [931 977])
+            ("SuHealthMapCIter" type
+               (:typedef ("SuHealthMap::const_iterator" type (:type "class") nil nil)
+                :superclasses "SuHealthMap::const_iterator"
+                :type "typedef")
+                nil [978 1031])
+            ("SU_STATUS_OK_STR" variable (:constant-flag t) nil [1068 1084])
+            ("SU_STATUS_DOWN_STR" variable (:constant-flag t) nil [1101 1119])
+            ("SU_STATUS_DEAD_STR" variable (:constant-flag t) nil [1138 1156])
+            ("SU_STATUS_UNKNOWN_STR" variable (:constant-flag t) nil [1175 1196])
+            ("SuStatusChange" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1273 1280])
+                    ("SuStatusChange" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("su" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1300 1322])
+                            ("prev" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1342 1366])
+                            ("curr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1386 1410]))                          
+                        :type ("SuStatusChange" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1285 1540])
+                    ("SuStatusChange" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1546 1566])
+                    ("suName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1573 1593])
+                    ("prevStatus_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1598 1622])
+                    ("currentStatus_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1627 1654]))                  
+                :type "class")
+                nil [1250 1657])
+            ("ISuFailureDetector" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1732 1739])
+                    ("initConfig" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1788 1834])
+                    ("removeInvalidSus" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("sus" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1972 2005]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1926 2010])
+                    ("getSuStatusChanges" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("SuStatusChange" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2078 2146])
+                    ("updateHealth" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("hostName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2261 2282])
+                            ("response" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("HealthCheckResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2329 2366]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2219 2371])
+                    ("updateHealth" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("suResMap" variable (:type ("SuHealthMap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2491 2512]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2449 2517])
+                    ("printSuStatus" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2573 2620])
+                    ("reset" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2696 2737])
+                    ("ISuFailureDetector" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2764 2796])
+                    ("printSuStatusReco" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2866 2916])
+                    ("printDeadSus" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2971 3016]))                  
+                :type "class")
+                nil [1704 3019]))          
+    :file "ISuFailureDetector.h"
+    :pointmax 3182
+    :fsize 3181
+    :lastmodtime '(20614 58583)
+    :unmatched-syntax '((punctuation 2796 . 2797) (punctuation 1566 . 1567) (punctuation 1540 . 1541) (punctuation 800 . 801) (punctuation 441 . 442))
+    :lexical-table 
+        '(("__I_SU_FAILURE_DETECTOR_H__")
+          ("SU_STATUS_DOWN_STR" . ((string "\"SU_DOWN\"" 1120 . 1129)))
+          ("SU_STATUS_OK_STR" . ((string "\"SU_OK\"" 1085 . 1092)))
+          ("SU_STATUS_DEAD_STR" . ((string "\"SU_DEAD\"" 1157 . 1166)))
+          ("SU_STATUS_UNKNOWN_STR" . ((string "\"UNKNOWN\"" 1197 . 1206)))
+          )
+
+    )
+   (semanticdb-table "JobScheduler.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("JOB_SCHEDULER_H" variable (:constant-flag t) nil [92 107])
+            ("map" include (:system-flag t) nil [109 123])
+            ("vector" include (:system-flag t) nil [124 141])
+            ("functional" include (:system-flag t) nil [142 163])
+            ("dht/typedefs.h" include (:system-flag t) nil [164 189])
+            ("LbCode.h" include nil nil [190 209])
+            ("LbJob.h" include nil nil [210 228])
+            ("MoveJob.h" include nil nil [229 249])
+            ("SplitJob.h" include nil nil [250 271])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [272 303])
+            ("JobScheduler" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [326 333])
+                    ("TestJobScheduler" friend nil (reparse-symbol classsubparts) [339 368])
+                    ("JobScheduler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("JobScheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [410 425])
+                    ("JobScheduler" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [465 489])
+                    ("init" function
+                       (:prototype-flag t
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [567 595])
+                    ("resetJobs" function
+                       (:prototype-flag t
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [773 806])
+                    ("checkProgress" function
+                       (:prototype-flag t
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [957 994])
+                    ("getBankMoveJobCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1099 1123]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1070 1124])
+                    ("getBankSplitJobCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1231 1255]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1201 1256])
+                    ("getBankMoveJobRecommendationCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1354 1378]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1311 1379])
+                    ("getBankSplitJobRecommendationCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1428 1452]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1384 1453])
+                    ("getBankJobCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1558 1582]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1533 1583])
+                    ("getSuJobCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1685 1711]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1662 1712])
+                    ("getSuMoveJobCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1745 1771]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1718 1772])
+                    ("addMoveJob" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1869 1894])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1932 1958])
+                            ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1995 2018])
+                            ("dest" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2055 2079]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1837 2080])
+                    ("addSplitJob" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2177 2202])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2240 2266])
+                            ("suName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2304 2330]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2144 2331])
+                    ("addMoveJobRecommendation" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2436 2461])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2499 2525])
+                            ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2562 2585])
+                            ("dest" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2622 2646]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2390 2647])
+                    ("addSplitJobRecommendation" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2753 2778])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2816 2842])
+                            ("suName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2880 2906]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2706 2907])
+                    ("scheduleJobs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2988 2993]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2954 2994])
+                    ("isMovePossible" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3265 3291]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3245 3292])
+                    ("isSplitPossible" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3568 3593])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3593 3619])
+                            ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3645 3671]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3547 3672])
+                    ("isJobFoundWithinInterval" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3825 3851]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3795 3852])
+                    ("getMoveJobCount" function
+                       (:prototype-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3900 3927])
+                    ("getSplitJobCount" function
+                       (:prototype-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4226 4254])
+                    ("getRunningJobCount" function (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4260 4354])
+                    ("resetRunningJobCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4472 4477]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4446 4478])
+                    ("gcOldJobs" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4484 4501])
+                    ("scheduleRecoJobs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jobIdVec" variable
+                               (:reference 1
+                                :type ("StrVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4545 4562]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4507 4563])
+                    ("printRecoJobs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fd" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4604 4617]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4569 4618])
+                    ("printRunningJobs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fd" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4662 4675]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4624 4676])
+                    ("printJobCount" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fd" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [4717 4730]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4682 4731])
+                    ("isTabletMoveFoundInHist" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4766 4785])
+                            ("tablet" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4786 4806]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4737 4807])
+                    ("isMoveJobFoundForServer" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4916 4942]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4887 4943])
+                    ("getMoveJobCountForTable" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5056 5081]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5023 5082])
+                    ("private" label nil (reparse-symbol classsubparts) [5083 5091])
+                    ("LbJobPtr" type
+                       (:typedef ("boost::shared_ptr" type
+                             (:template-specifier 
+                                ( ("LbJob" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "boost::shared_ptr"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [5097 5139])
+                    ("JobPtrVec" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("LbJobPtr" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::vector"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [5145 5185])
+                    ("JobPtrVecIter" type
+                       (:typedef ("std::vector::iterator" type (:type "class") nil nil)
+                        :superclasses "std::vector::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [5190 5244])
+                    ("JobPtrVecCIter" type
+                       (:typedef ("std::vector::const_iterator" type (:type "class") nil nil)
+                        :superclasses "std::vector::const_iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [5249 5310])
+                    ("runningJobs_" variable (:type ("JobPtrVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5316 5339])
+                    ("finishedJobs_" variable (:type ("JobPtrVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5344 5368])
+                    ("recoJobs_" variable (:type ("JobPtrVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5373 5393])
+                    ("prevMoveEnabled_" variable (:type "bool") (reparse-symbol classsubparts) [5399 5421])
+                    ("prevSplitEnabled_" variable (:type "bool") (reparse-symbol classsubparts) [5426 5449])
+                    ("MoveJobHistMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("uint64_t" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [5508 5563])
+                    ("MoveJobHistMapIter" type
+                       (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                        :superclasses "std::map::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [5568 5637])
+                    ("tabletMoveJobHistMap_" variable (:type ("MoveJobHistMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5643 5680])
+                    ("oldestMoveTabletTime_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5731 5762])
+                    ("startJob" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("job" variable
+                               (:reference 1
+                                :type ("LbJobPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5798 5812]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5768 5813])
+                    ("JobScheduler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("js" variable
+                               (:reference 1
+                                :type ("JobScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5832 5849]))                          
+                        :type ("JobScheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5819 5850])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("js" variable
+                               (:reference 1
+                                :type ("JobScheduler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5880 5897]))                          
+                        :type ("JobScheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5856 5898])
+                    ("printJobs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jobVector" variable
+                               (:reference 1
+                                :type ("JobPtrVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5935 5956])
+                            ("jobIndex" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5957 5971])
+                            ("fd" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [6007 6020]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5904 6021])
+                    ("getMoveJobCountForTable" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jvec" variable
+                               (:reference 1
+                                :type ("JobPtrVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6125 6141])
+                            ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6142 6167]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6092 6168])
+                    ("vecErase" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("vec" variable
+                               (:reference 1
+                                :type ("JobPtrVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6213 6228])
+                            ("fun" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6228 6234]))                          
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [6174 6235]))                  
+                :type "class")
+                nil [305 6243]))          
+    :file "JobScheduler.h"
+    :pointmax 6404
+    :fsize 6403
+    :lastmodtime '(20614 60047)
+    :unmatched-syntax '((punctuation 368 . 369))
+    :lexical-table 
+        '(("JOB_SCHEDULER_H")
+          )
+
+    )
+   (semanticdb-table "JobTracker.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("JOB_TRACKER_H" variable (:constant-flag t) nil [90 103])
+            ("map" include (:system-flag t) nil [104 118])
+            ("vector" include (:system-flag t) nil [119 136])
+            ("string" include (:system-flag t) nil [137 154])
+            ("LbCode.h" include (:system-flag t) nil [155 174])
+            ("JobTracker" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [195 202])
+                    ("TestJobTracker" friend nil (reparse-symbol classsubparts) [208 235])
+                    ("JobTracker" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("JobTracker" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [242 255])
+                    ("JobTracker" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [261 283])
+                    ("init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [362 367]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [336 368])
+                    ("removeExpired" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [473 478]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [438 479])
+                    ("incFailedJobTries" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [666 690])
+                            ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [718 744]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [643 745])
+                    ("getFailedJobTries" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [837 861])
+                            ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [893 919]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [810 920])
+                    ("resetFailedJobTries" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1005 1029])
+                            ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1059 1085]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [980 1086])
+                    ("getFailedJobTriesKey" function
+                       (:arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1126 1150])
+                            ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1189 1215]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1093 1252])
+                    ("setFailedJobTries" function
+                       (:arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1338 1362])
+                            ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1363 1389])
+                            ("count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1417 1432]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1315 1678])
+                    ("addTabletToMoveCandidate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("su" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1788 1810])
+                            ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1861 1886])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1937 1963])
+                            ("tabletLoad" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [2014 2039])
+                            ("sizeMb" variable
+                               (:constant-flag t
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [2090 2110]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1742 2111])
+                    ("updateChildrenInMoveCandidates" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("su" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2322 2344])
+                            ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2401 2426])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2483 2509])
+                            ("lchild" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2566 2592])
+                            ("rchild" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2649 2675]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2270 2676])
+                    ("removeTabletFromMoveCandidates" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2800 2825])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2866 2892]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2764 2893])
+                    ("getSuMoveCandidate" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("su" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3158 3180])
+                            ("table" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3181 3200])
+                            ("tablet" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3229 3249])
+                            ("tabletLoad" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3250 3269])
+                            ("sizeMB" variable
+                               (:reference 1
+                                :type "double")
+                                (reparse-symbol arg-sub-list) [3269 3284]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3134 3285])
+                    ("private" label nil (reparse-symbol classsubparts) [3287 3295])
+                    ("TabletInfoStruct" type
+                       (:members 
+                          ( ("TabletInfoStruct" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("suName" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3353 3379])
+                                    ("tableName" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3405 3434])
+                                    ("tabletName" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [3460 3490])
+                                    ("tabletLoad" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type "double")
+                                        (reparse-symbol arg-sub-list) [3516 3541])
+                                    ("sizeMB" variable (:type "double") (reparse-symbol arg-sub-list) [3567 3581]))                                  
+                                :type ("TabletInfoStruct" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [3336 3788])
+                            ("suName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3798 3818])
+                            ("tableName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3827 3850])
+                            ("tabletName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3859 3883])
+                            ("tabletLoad_" variable (:type "double") (reparse-symbol classsubparts) [3892 3911])
+                            ("sizeMB_" variable (:type "double") (reparse-symbol classsubparts) [3920 3935])
+                            ("timestamp_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3944 3964])
+                            ("leftChild_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3973 3996])
+                            ("rightChild_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4005 4029]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [3301 4036])
+                    ("TabletInfoStruct" type
+                       (:typedef ("TabletInfoStruct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil)
+                        :superclasses "TabletInfoStruct"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4041 4090])
+                    ("SuMoveCandidatesVec" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("TabletInfoStruct" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::vector"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4129 4187])
+                    ("SuMoveCandidatesVecIter" type
+                       (:typedef ("std::vector::iterator" type (:type "class") nil nil)
+                        :superclasses "std::vector::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4192 4264])
+                    ("suMoveCandidatesVec_" variable (:type ("SuMoveCandidatesVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4270 4311])
+                    ("oldestMoveCandidateTime_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4379 4413])
+                    ("SuJobState" type
+                       (:members 
+                          ( ("failedTries" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4447 4468])
+                            ("timestamp" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4477 4496]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [4419 4503])
+                    ("SuJobState" type
+                       (:typedef ("SuJobState" type (:type "class") nil nil)
+                        :superclasses "SuJobState"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4508 4538])
+                    ("SuFailedJobTriesMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("SuJobState" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4589 4651])
+                    ("SuFailedJobTriesMapIter" type
+                       (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                        :superclasses "std::map::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4656 4732])
+                    ("suFailedJobTriesMap_" variable (:type ("SuFailedJobTriesMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4738 4779])
+                    ("oldestSuFailedJobTriesTime_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4842 4879]))                  
+                :type "class")
+                nil [176 4883]))          
+    :file "JobTracker.h"
+    :pointmax 5100
+    :fsize 5099
+    :lastmodtime '(20614 58583)
+    :unmatched-syntax '((punctuation 235 . 236))
+    :lexical-table 
+        '(("JOB_TRACKER_H")
+          )
+
+    )
+   (semanticdb-table "LbLogStorage.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LB_LOG_STORAGE_H" variable (:constant-flag t) nil [93 109])
+            ("dht/LogStorage.h" include (:system-flag t) nil [111 138])
+            ("LbCode.h" include (:system-flag t) nil [139 158])
+            ("vector" include (:system-flag t) nil [159 176])
+            ("dht/FwDecls.h" include (:system-flag t) nil [177 201])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [202 233])
+            ("LbLogStorage" type
+               (:superclasses 
+                  ( ("LogStorage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("TestLbLogStorage" friend nil (reparse-symbol classsubparts) [470 499])
+                    ("public" label nil (reparse-symbol classsubparts) [501 508])
+                    ("LbLogStorage" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("LbLogStorage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [514 529])
+                    ("LbLogStorage" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [535 559])
+                    ("overrideRuntimeLog" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("category" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [589 617])
+                            ("level" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [617 642]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [565 643])
+                    ("clearRuntimeLog" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [648 671])
+                    ("getRuntimeLogOverrides" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [681 723])
+                    ("beginTransaction" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [758 790])
+                    ("endTransaction" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [821 851])
+                    ("trackPath" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("msg1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [905 930])
+                            ("msg2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [931 956]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [882 957])
+                    ("getTrackedPath" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [988 1032])
+                    ("private" label nil (reparse-symbol classsubparts) [1034 1042])
+                    ("LogOverrideInfo" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [1081 1088])
+                            ("LogOverrideInfo" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("category" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1113 1141])
+                                    ("level" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1166 1191]))                                  
+                                :type ("LogOverrideInfo" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1097 1192])
+                            ("level_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1202 1221])
+                            ("logOvrdPtr" variable (:type ("LogOverridePtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1230 1256]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [1048 1263])
+                    ("inTransaction_" variable (:type "bool") (reparse-symbol classsubparts) [1269 1289])
+                    ("RuntimeLogMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("LogOverrideInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1338 1398])
+                    ("RuntimeLogMapIter" type
+                       (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                        :superclasses "std::map::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1403 1477])
+                    ("RuntimeLogMapCIter" type
+                       (:typedef ("std::map::const_iterator" type (:type "class") nil nil)
+                        :superclasses "std::map::const_iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1482 1563])
+                    ("runtimeLogs_" variable (:type ("RuntimeLogMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1568 1595])
+                    ("pathTracker_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1769 1794]))                  
+                :type "class")
+                nil [425 1797])
+            ("LbLogStoragePtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("LbLogStorage" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::shared_ptr"
+                :type "typedef")
+                nil [1799 1855]))          
+    :file "LbLogStorage.h"
+    :pointmax 2015
+    :fsize 2014
+    :lastmodtime '(20614 58583)
+    :unmatched-syntax '((punctuation 499 . 500))
+    :lexical-table 
+        '(("LB_LOG_STORAGE_H")
+          )
+
+    )
+   (semanticdb-table "LoadBalancer.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__LOAD_BALANCER_H_" variable (:constant-flag t) nil [95 113])
+            ("ypc/ypc_handler.h" include (:system-flag t) nil [115 143])
+            ("ysys/time.h" include (:system-flag t) nil [144 166])
+            ("string" include (:system-flag t) nil [168 185])
+            ("dht/FwCode.h" include (:system-flag t) nil [187 210])
+            ("dht/System.h" include (:system-flag t) nil [211 234])
+            ("LbCode.h" include nil nil [236 255])
+            ("LbContext.h" include nil nil [256 278])
+            ("JobScheduler.h" include nil nil [279 304])
+            ("RulesEngine.h" include nil nil [305 329])
+            ("CmdHandler.h" include nil nil [330 353])
+            ("ISuFailureDetector.h" include nil nil [354 385])
+            ("Bank.h" include (:system-flag t) nil [386 403])
+            ("BankMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("BankPtr" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [542 589])
+            ("BankMapIter" type
+               (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                :superclasses "std::map::iterator"
+                :type "typedef")
+                nil [590 651])
+            ("LoadBalancer" type
+               (:members 
+                  ( ("loadBalancerMain" function
+                       (:prototype-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("lbConfigFilePath" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [774 809])
+                            ("lbId" variable (:type "int") (reparse-symbol arg-sub-list) [859 868])
+                            ("cmdPort" variable (:type "int") (reparse-symbol arg-sub-list) [918 930]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [679 931])
+                    ("TestHelper" friend nil (reparse-symbol classsubparts) [936 959])
+                    ("LBSimContext" friend nil (reparse-symbol classsubparts) [965 990])
+                    ("lbSim" friend nil (reparse-symbol classsubparts) [996 1014])
+                    ("TestLoadBalancer" friend nil (reparse-symbol classsubparts) [1020 1049])
+                    ("public" label nil (reparse-symbol classsubparts) [1052 1059])
+                    ("instance" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("LoadBalancer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1148 1181])
+                    ("LoadBalancer" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1187 1211])
+                    ("private" label nil (reparse-symbol classsubparts) [1213 1221])
+                    ("rulesEngine_" variable (:type ("RulesEngine" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1254 1279])
+                    ("cmdHandler_" variable (:type ("CmdHandler" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1308 1331])
+                    ("protected" label nil (reparse-symbol classsubparts) [1333 1343])
+                    ("LoadBalancer" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("LoadBalancer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1383 1398])
+                    ("lbId_" variable (:type "int") (reparse-symbol classsubparts) [1404 1414])
+                    ("lbConfigFilePath_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1457 1487])
+                    ("s_instance" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :type ("LoadBalancer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1531 1563])
+                    ("init" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("lbConfigFilePath" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1637 1672])
+                            ("lbId" variable (:type "int") (reparse-symbol arg-sub-list) [1673 1682])
+                            ("cmdPort" variable (:type "int") (reparse-symbol arg-sub-list) [1683 1695]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1611 1696])
+                    ("initConfig" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1733 1738]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1701 1739])
+                    ("configCheck" function
+                       (:prototype-flag t
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1745 1780])
+                    ("run" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1811 1816]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1786 1817])
+                    ("checkTotalRunTime" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("runInterval" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1957 1978])
+                            ("nextRunTime" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1979 2001]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1934 2002])
+                    ("setActionContext" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2008 2032])
+                    ("fillBankInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bankInfo" variable
+                               (:reference 1
+                                :type ("BankMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2208 2226])
+                            ("sus" variable
+                               (:reference 1
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2265 2292]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2174 2293]))                  
+                :type "class")
+                nil [653 2297]))          
+    :file "LoadBalancer.h"
+    :pointmax 2458
+    :fsize 2457
+    :lastmodtime '(20614 58583)
+    :unmatched-syntax '((punctuation 1049 . 1050) (punctuation 1014 . 1015) (punctuation 990 . 991) (punctuation 959 . 960))
+    :lexical-table 
+        '(("__LOAD_BALANCER_H_")
+          )
+
+    )
+   (semanticdb-table "MoveHeatRule.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__MOVE_HEAT_RULE_H_" variable (:constant-flag t) nil [97 116])
+            ("Rule.h" include nil nil [119 136])
+            ("LbCode.h" include nil nil [137 156])
+            ("JobScheduler.h" include nil nil [158 183])
+            ("LbContext.h" include nil nil [184 206])
+            ("Bank.h" include nil nil [207 224])
+            ("map" include (:system-flag t) nil [226 240])
+            ("TableTabletPair" type
+               (:typedef ("std::pair" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::pair"
+                :type "typedef")
+                nil [242 301])
+            ("MoveHeatRule" type
+               (:superclasses 
+                  ( ("Rule" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("TestMoveHeatRule" friend nil (reparse-symbol classsubparts) [346 376])
+                    ("public" label nil (reparse-symbol classsubparts) [379 386])
+                    ("MoveHeatRule" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("MoveHeatRule" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [391 406])
+                    ("MoveHeatRule" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [411 435])
+                    ("execute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :type ("Bank" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [505 516]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [476 517])
+                    ("isRecommending" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [522 544])
+                    ("private" label nil (reparse-symbol classsubparts) [550 558])
+                    ("pickTabletToMove" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [607 627])
+                            ("destSu" variable
+                               (:pointer 1
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [628 646])
+                            ("tTablet" variable
+                               (:reference 1
+                                :type ("TableTabletPair" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [689 714]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [569 715])
+                    ("scheduleMove" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [760 785])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [824 850])
+                            ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [889 912])
+                            ("dest" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [951 975])
+                            ("movesAdded" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [976 992]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [726 993])
+                    ("isBalancingFeasible" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hot" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1024 1045])
+                            ("cold" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1075 1097]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [999 1098])
+                    ("isPostMoveLoadWithinLimit" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("th" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1134 1158])
+                            ("dest" variable
+                               (:pointer 1
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1158 1174]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1103 1175])
+                    ("isDiskFreeCritLow" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1204 1224]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1181 1225])
+                    ("isLowDiskFree" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1249 1269]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1230 1270])
+                    ("isDestDiskFree" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tm" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1380 1404])
+                            ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1404 1424]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1360 1430])
+                    ("isBootStrapping" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1456 1476]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1435 1477])
+                    ("isMovePossible" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1503 1523]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1483 1524])
+                    ("checkIfTabletMoveAllowedForTable" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1583 1608])
+                            ("allowTabletMoves" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1617 1640]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1529 1641])
+                    ("sortByLoadAsc" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("smvec" variable
+                               (:reference 1
+                                :type ("SuMetricsVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1666 1686]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1647 1687])
+                    ("sortByLoadDesc" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("smvec" variable
+                               (:reference 1
+                                :type ("SuMetricsVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1712 1732]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1692 1733])
+                    ("clearOldState" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1738 1759])
+                    ("isMaxTabletMoveCheckRequired" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1846 1882])
+                    ("fetchTableAndTabletCount" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1888 1920])
+                    ("ctx_" variable
+                       (:pointer 1
+                        :type ("LbContext" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1926 1942])
+                    ("js_" variable
+                       (:pointer 1
+                        :type ("JobScheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1947 1965])
+                    ("bank_" variable
+                       (:pointer 1
+                        :type ("Bank" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1970 1982])
+                    ("tableAndTabletCountMap_" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2045 2096]))                  
+                :type "class")
+                nil [303 2104]))          
+    :file "MoveHeatRule.h"
+    :pointmax 2292
+    :fsize 2291
+    :lastmodtime '(20614 58583)
+    :unmatched-syntax '((punctuation 376 . 377))
+    :lexical-table 
+        '(("__MOVE_HEAT_RULE_H_")
+          )
+
+    )
+   (semanticdb-table "MoveRule.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__MOVE_RULE_H_" variable (:constant-flag t) nil [91 105])
+            ("map" include (:system-flag t) nil [107 121])
+            ("Rule.h" include nil nil [123 140])
+            ("LbCode.h" include nil nil [141 160])
+            ("JobScheduler.h" include nil nil [163 188])
+            ("LbContext.h" include nil nil [189 211])
+            ("Bank.h" include nil nil [212 229])
+            ("TableTabletPair" type
+               (:typedef ("std::pair" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::pair"
+                :type "typedef")
+                nil [231 290])
+            ("MoveRule" type
+               (:superclasses 
+                  ( ("Rule" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("TestMoveRule" friend nil (reparse-symbol classsubparts) [326 352])
+                    ("public" label nil (reparse-symbol classsubparts) [355 362])
+                    ("MoveRule" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("MoveRule" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [403 414])
+                    ("MoveRule" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [454 474])
+                    ("execute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :type ("Bank" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [545 556]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [516 557])
+                    ("isRecommending" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [562 584])
+                    ("private" label nil (reparse-symbol classsubparts) [586 594])
+                    ("balanceSus" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("diskFullSus" variable
+                               (:reference 1
+                                :type ("SuMetricsVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [616 642])
+                            ("coldSus" variable
+                               (:reference 1
+                                :type ("SuMetricsVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [642 664]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [600 665])
+                    ("getHotAndColdSus" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [671 695])
+                    ("pickTabletToMove" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [739 759])
+                            ("destSu" variable
+                               (:pointer 1
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [760 778])
+                            ("tTablet" variable
+                               (:reference 1
+                                :type ("TableTabletPair" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [821 846]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [701 847])
+                    ("readjustColdList" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("coldList" variable
+                               (:reference 1
+                                :type ("SuMetricsVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [933 956]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [911 957])
+                    ("scheduleMove" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [996 1021])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1060 1086])
+                            ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1125 1148])
+                            ("dest" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1187 1211]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [962 1212])
+                    ("continueMoveRule" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bankName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1256 1284])
+                            ("coldSus" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SuMetricsVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1327 1355]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1218 1356])
+                    ("isBalancingFeasible" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hot" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1387 1408])
+                            ("cold" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1438 1460]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1362 1461])
+                    ("isPostMoveLoadWithinLimit" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("th" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1497 1521])
+                            ("dest" variable
+                               (:pointer 1
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1521 1537]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1466 1538])
+                    ("isAboveAvgLoad" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1564 1584]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1544 1585])
+                    ("isBelowAvgLoad" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1610 1630]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1590 1631])
+                    ("isDiskFreeCritLow" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1659 1679]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1636 1680])
+                    ("isLowDiskFree" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1704 1724]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1685 1725])
+                    ("isDestDiskFree" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tm" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1835 1859])
+                            ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1859 1879]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1815 1885])
+                    ("isBootStrapping" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1911 1931]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1890 1932])
+                    ("isMovePossible" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1958 1978]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1938 1979])
+                    ("checkIfTableReachedMaxMoveLimit" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2037 2062])
+                            ("allowTabletMoves" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2071 2094]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1984 2095])
+                    ("sortByLoadAsc" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("smvec" variable
+                               (:reference 1
+                                :type ("SuMetricsVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2120 2140]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2101 2141])
+                    ("sortByLoadDesc" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("smvec" variable
+                               (:reference 1
+                                :type ("SuMetricsVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2166 2186]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2146 2187])
+                    ("clearOldState" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2192 2213])
+                    ("isMaxTabletMoveCheckRequired" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2300 2336])
+                    ("isMaxTablesTabletPerSuCheckRequired" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2342 2385])
+                    ("isSuReachedMaxTabletsPerTable" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2426 2451])
+                            ("su" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2452 2474]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2391 2475])
+                    ("fetchTableAndTabletCount" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2481 2513])
+                    ("ctx_" variable
+                       (:pointer 1
+                        :type ("LbContext" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2519 2535])
+                    ("js_" variable
+                       (:pointer 1
+                        :type ("JobScheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2540 2558])
+                    ("bank_" variable
+                       (:pointer 1
+                        :type ("Bank" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2563 2575])
+                    ("hotSus_" variable
+                       (:pointer 1
+                        :type ("SuMetricsVec" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2581 2603])
+                    ("coldSus_" variable
+                       (:pointer 1
+                        :type ("SuMetricsVec" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2608 2631])
+                    ("TableAndTabletCountMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("int" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [2689 2747])
+                    ("tableAndTabletCountMap_" variable (:type ("TableAndTabletCountMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2752 2799])
+                    ("suTableTabletCountMap_" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("TableAndTabletCountMap" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2846 2915]))                  
+                :type "class")
+                nil [292 2918]))          
+    :file "MoveRule.h"
+    :pointmax 3079
+    :fsize 3078
+    :lastmodtime '(20614 58583)
+    :unmatched-syntax '((punctuation 352 . 353))
+    :lexical-table 
+        '(("__MOVE_RULE_H_")
+          )
+
+    )
+   (semanticdb-table "MoveVolumeRule.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__MOVE_VOLUME_RULE_H_" variable (:constant-flag t) nil [99 120])
+            ("Rule.h" include nil nil [122 139])
+            ("LbCode.h" include nil nil [140 159])
+            ("JobScheduler.h" include nil nil [161 186])
+            ("LbContext.h" include nil nil [187 209])
+            ("Bank.h" include nil nil [210 227])
+            ("map" include (:system-flag t) nil [229 243])
+            ("TableTabletPair" type
+               (:typedef ("std::pair" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::pair"
+                :type "typedef")
+                nil [245 304])
+            ("MoveVolumeRule" type
+               (:superclasses 
+                  ( ("Rule" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("TestMoveVolumeRule" friend nil (reparse-symbol classsubparts) [346 378])
+                    ("public" label nil (reparse-symbol classsubparts) [381 388])
+                    ("MoveVolumeRule" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("MoveVolumeRule" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [393 410])
+                    ("MoveVolumeRule" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [415 441])
+                    ("execute" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :type ("Bank" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [511 522]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [482 523])
+                    ("isRecommending" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [529 551])
+                    ("private" label nil (reparse-symbol classsubparts) [557 565])
+                    ("pickTabletToMove" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [614 634])
+                            ("destSu" variable
+                               (:pointer 1
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [635 653])
+                            ("tTablet" variable
+                               (:reference 1
+                                :type ("TableTabletPair" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [696 721]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [576 722])
+                    ("scheduleMove" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [821 846])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [885 911])
+                            ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [950 973])
+                            ("dest" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1012 1036])
+                            ("movesAdded" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1037 1053]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [787 1054])
+                    ("isBalancingFeasible" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hot" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1086 1107])
+                            ("cold" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1137 1159]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1061 1160])
+                    ("isPostMoveLoadWithinLimit" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("th" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1196 1220])
+                            ("dest" variable
+                               (:pointer 1
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1220 1236]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1165 1237])
+                    ("isDiskFreeCritLow" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1266 1286]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1243 1287])
+                    ("isLowDiskFree" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1311 1331]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1292 1332])
+                    ("isDestDiskFree" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tm" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1442 1466])
+                            ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1466 1486]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1422 1492])
+                    ("isBootStrapping" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1518 1538]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1497 1539])
+                    ("isMovePossible" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1565 1585]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1545 1586])
+                    ("checkIfTabletMoveAllowedForTable" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1645 1670])
+                            ("allowTabletMoves" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1679 1702]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1591 1703])
+                    ("sortByLoadAsc" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("smvec" variable
+                               (:reference 1
+                                :type ("SuMetricsVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1728 1748]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1709 1749])
+                    ("sortByLoadDesc" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("smvec" variable
+                               (:reference 1
+                                :type ("SuMetricsVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1774 1794]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1754 1795])
+                    ("clearOldState" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1800 1821])
+                    ("isMaxTabletMoveCheckRequired" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1908 1944])
+                    ("fetchTableAndTabletCount" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1950 1982])
+                    ("ctx_" variable
+                       (:pointer 1
+                        :type ("LbContext" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1992 2008])
+                    ("js_" variable
+                       (:pointer 1
+                        :type ("JobScheduler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2013 2031])
+                    ("bank_" variable
+                       (:pointer 1
+                        :type ("Bank" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2036 2048])
+                    ("tableAndTabletCountMap_" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2106 2157]))                  
+                :type "class")
+                nil [306 2165]))          
+    :file "MoveVolumeRule.h"
+    :pointmax 2353
+    :fsize 2352
+    :lastmodtime '(20614 58583)
+    :unmatched-syntax '((punctuation 378 . 379))
+    :lexical-table 
+        '(("__MOVE_VOLUME_RULE_H_")
+          )
+
+    )
+   (semanticdb-table "QRSuFailureDetector.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__QR_SU_FAILURE_DETECTOR_H__" variable (:constant-flag t) nil [105 133])
+            ("deque" include (:system-flag t) nil [135 151])
+            ("ISuFailureDetector.h" include nil nil [152 183])
+            ("DEF_DEAD_THRESHOLD_PERCENTAGE" variable (:constant-flag t) nil [193 222])
+            ("DEF_DOWN_THRESHOLD_PERCENTAGE" variable (:constant-flag t) nil [234 263])
+            ("NO_RESPONSE" variable (:constant-flag t) nil [276 287])
+            ("SuHeathResponseMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::deque" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [291 362])
+            ("SuHeathResponseMapIter" type
+               (:typedef ("SuHeathResponseMap::iterator" type (:type "class") nil nil)
+                :superclasses "SuHeathResponseMap::iterator"
+                :type "typedef")
+                nil [363 423])
+            ("QRSuFailureDetector" type
+               (:superclasses 
+                  ( ("ISuFailureDetector" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [590 597])
+                    ("QRSuFailureDetector" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("windowSize" variable (:type "int") (reparse-symbol arg-sub-list) [622 637]))                          
+                        :type ("QRSuFailureDetector" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [602 638])
+                    ("QRSuFailureDetector" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [644 667])
+                    ("instance" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :type ("QRSuFailureDetector" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [699 738])
+                    ("initConfig" function
+                       (:prototype-flag t
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [785 819])
+                    ("removeInvalidSus" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sus" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [949 982]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [911 983])
+                    ("getSuStatusChanges" function
+                       (:prototype-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("SuStatusChange" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1051 1106])
+                    ("updateHealth" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hostName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1213 1234])
+                            ("response" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("HealthCheckResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1273 1309]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1179 1310])
+                    ("updateHealth" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("suHealthMap" variable (:type ("SuHealthMap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1422 1446]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1388 1448])
+                    ("execSuStatusChanges" function
+                       (:prototype-flag t
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1500 1543])
+                    ("printSuStatus" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1599 1633])
+                    ("reset" function
+                       (:prototype-flag t
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1709 1738])
+                    ("printSuStatusReco" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1807 1845])
+                    ("printDeadSus" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1900 1933])
+                    ("protected" label nil (reparse-symbol classsubparts) [1935 1945])
+                    ("s_instance" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :type ("QRSuFailureDetector" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1950 1989])
+                    ("private" label nil (reparse-symbol classsubparts) [1991 1999])
+                    ("checkForStatusChange" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hostname" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2112 2133]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2070 2134])
+                    ("changeStatus" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hostName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2232 2253])
+                            ("newStatus" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2254 2276]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2198 2277])
+                    ("removeInvalidSus" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("imap" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2345 2353])
+                            ("sus" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2396 2429]))                          
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [2284 2430])
+                    ("resetReco" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2451 2456]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2436 2457])
+                    ("suResponseMap_" variable (:type ("SuHeathResponseMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2463 2497])
+                    ("suToStatusMap_" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2502 2552])
+                    ("suStatusChanges_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("SuStatusChange" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2557 2602])
+                    ("windowSize_" variable (:type "int") (reparse-symbol classsubparts) [2608 2624])
+                    ("deadThreshold_" variable (:type "int") (reparse-symbol classsubparts) [2629 2648])
+                    ("downThreshold_" variable (:type "int") (reparse-symbol classsubparts) [2653 2672]))                  
+                :type "class")
+                nil [534 2675]))          
+    :file "QRSuFailureDetector.h"
+    :pointmax 2836
+    :fsize 2835
+    :lastmodtime '(20614 58583)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("DEF_DEAD_THRESHOLD_PERCENTAGE" . ((number "80" 223 . 225)))
+          ("__QR_SU_FAILURE_DETECTOR_H__")
+          ("NO_RESPONSE" . ((number "0" 288 . 289)))
+          ("DEF_DOWN_THRESHOLD_PERCENTAGE" . ((number "60" 264 . 266)))
+          )
+
+    )
+   (semanticdb-table "SuMetrics.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("SU_METRICS_H" variable (:constant-flag t) nil [89 101])
+            ("string" include (:system-flag t) nil [103 120])
+            ("LbCode.h" include (:system-flag t) nil [121 140])
+            ("dht/CrDecls.h" include (:system-flag t) nil [141 165])
+            ("TabletMetrics.h" include (:system-flag t) nil [166 192])
+            ("dht/FwDecls.h" include (:system-flag t) nil [193 217])
+            ("SU_STATE_ACTIVE" variable (:constant-flag t) nil [274 289])
+            ("SU_STATE_MANUAL_JOBS" variable (:constant-flag t) nil [300 320])
+            ("SU_STATE_JOBS_SUSPENDED" variable (:constant-flag t) nil [331 354])
+            ("SU_STATE_DRAINING_TABLETS" variable (:constant-flag t) nil [365 390])
+            ("TabletMetricsPMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("TabletMetricsPtr" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [394 459])
+            ("TabletMetricsPMapIter" type
+               (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                :superclasses "std::map::iterator"
+                :type "typedef")
+                nil [460 539])
+            ("TabletMetricsPMapCIter" type
+               (:typedef ("std::map::const_iterator" type (:type "class") nil nil)
+                :superclasses "std::map::const_iterator"
+                :type "typedef")
+                nil [540 626])
+            ("SuMetrics" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [646 653])
+                    ("TestSuMetrics" friend nil (reparse-symbol classsubparts) [658 684])
+                    ("TestBank" friend nil (reparse-symbol classsubparts) [690 711])
+                    ("TestMoveRule" friend nil (reparse-symbol classsubparts) [717 742])
+                    ("TestMoveVolumeRule" friend nil (reparse-symbol classsubparts) [748 779])
+                    ("TestMoveHeatRule" friend nil (reparse-symbol classsubparts) [785 814])
+                    ("init" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [825 844])
+                    ("SuMetrics" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("suName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [864 890])
+                            ("suState" variable
+                               (:constant-flag t
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [891 913]))                          
+                        :type ("SuMetrics" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [854 914])
+                    ("SuMetrics" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [919 960])
+                    ("getName" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [970 1035])
+                    ("shouldIgnore" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1041 1066])
+                    ("parseSuLbStats" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("resp" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1108 1132]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1072 1133])
+                    ("getLoad" function (:type "double") (reparse-symbol classsubparts) [1139 1191])
+                    ("getThroughput" function (:type "double") (reparse-symbol classsubparts) [1197 1254])
+                    ("getPower" function (:type "double") (reparse-symbol classsubparts) [1260 1313])
+                    ("isAutoCopyEnabled" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1319 1349])
+                    ("isBootStrapping" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1355 1384])
+                    ("getDiskFreeBytes" function (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1390 1462])
+                    ("getDiskMaxBytes" function (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1472 1542])
+                    ("getDiskBusyPct" function (:type "double") (reparse-symbol classsubparts) [1552 1618])
+                    ("getAggTabletLoad" function (:type "double") (reparse-symbol classsubparts) [1624 1694])
+                    ("getAvgTabletLoad" function (:type "double") (reparse-symbol classsubparts) [1700 1784])
+                    ("getNumTablets" function (:type "int") (reparse-symbol classsubparts) [1790 1851])
+                    ("getStatsInitTsSec" function (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1861 1934])
+                    ("getLastStatsTsSec" function (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1940 2013])
+                    ("getHotTablets" function
+                       (:constant-flag t
+                        :type ("TabletMetricsPVec" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2019 2102])
+                    ("getBigTablets" function
+                       (:constant-flag t
+                        :type ("TabletMetricsPVec" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2108 2189])
+                    ("parseTabletMetrics" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2219 2244])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2244 2270])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2299 2316])
+                            ("tvec" variable
+                               (:reference 1
+                                :type ("TabletMetricsPVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2316 2340]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2195 2341])
+                    ("getStaleStatsToleranceMin" function
+                       (:typemodifiers ("static")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2348 2440])
+                    ("getStatsBakeTimeMin" function
+                       (:typemodifiers ("static")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2446 2525])
+                    ("LoadCategory" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("COLD_SU" variable
+                                     (:constant-flag t
+                                      :default-value (2588 2589)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [2578 2589])
+                                  ("NORMAL_SU" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [2599 2609])
+                                  ("HOT_SU" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [2618 2630]))                                
+                              :type "enum")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [2555 2644])
+                    ("setLoadCategory" function
+                       (:arguments 
+                          ( ("category" variable (:type ("LoadCategory" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2671 2693]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2650 2735])
+                    ("getLoadCategory" function (:type ("LoadCategory" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2745 2819])
+                    ("LoadType" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("AVG_SU" variable
+                                     (:constant-flag t
+                                      :default-value (2880 2881)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [2871 2881])
+                                  ("LOW_DISK_SU" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [2891 2903])
+                                  ("BOOTSTRAPPING_SU" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [2912 2929])
+                                  ("BELOW_AVG_SU" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [2938 2951])
+                                  ("ABOVE_AVG_SU" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [2960 2973]))                                
+                              :type "enum")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [2848 2989])
+                    ("setLoadType" function
+                       (:arguments 
+                          ( ("type" variable (:type ("LoadType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3012 3026]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2995 3060])
+                    ("getLoadType" function (:type ("LoadType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3070 3132])
+                    ("private" label nil (reparse-symbol classsubparts) [3138 3146])
+                    ("s_staleStatsToleranceMin" variable
+                       (:typemodifiers ("static")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3282 3323])
+                    ("s_statsBakeTimeMin" variable
+                       (:typemodifiers ("static")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3371 3406])
+                    ("suName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3412 3432])
+                    ("suState_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3437 3454])
+                    ("isValidData_" variable (:type "bool") (reparse-symbol classsubparts) [3462 3480])
+                    ("load_" variable (:type "double") (reparse-symbol classsubparts) [3486 3499])
+                    ("tput_" variable (:type "double") (reparse-symbol classsubparts) [3504 3517])
+                    ("power_" variable (:type "double") (reparse-symbol classsubparts) [3522 3536])
+                    ("diskFreeBytes_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3542 3566])
+                    ("diskMaxBytes_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3571 3594])
+                    ("diskBusyPct_" variable (:type "double") (reparse-symbol classsubparts) [3599 3619])
+                    ("aggTabletHeat_" variable (:type "double") (reparse-symbol classsubparts) [3624 3646])
+                    ("numTablets_" variable (:type "int") (reparse-symbol classsubparts) [3651 3667])
+                    ("statsInitTsSec_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3673 3697])
+                    ("lastStatsTsSec_" variable (:type ("int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3702 3726])
+                    ("loadCategory_" variable (:type ("LoadCategory" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3782 3809])
+                    ("loadType_" variable (:type ("LoadType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3881 3900])
+                    ("tMetrics_" variable (:type ("TabletMetricsPMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3910 3938])
+                    ("hotTablets_" variable (:type ("TabletMetricsPVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3943 3973])
+                    ("bigTablets_" variable (:type ("TabletMetricsPVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3978 4008])
+                    ("SuMetrics" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4045 4065]))                          
+                        :type ("SuMetrics" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4035 4066])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4092 4112]))                          
+                        :type ("SuMetrics" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4071 4113])
+                    ("parseSuLbStatsField" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("jobj" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4185 4202])
+                            ("field" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4202 4220])
+                            ("value" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4266 4275]))                          
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [4119 4276])
+                    ("isRebootingSu" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4281 4307])
+                    ("isStaleMetrics" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4312 4339]))                  
+                :type "class")
+                nil [628 4342]))          
+    :file "SuMetrics.h"
+    :pointmax 4557
+    :fsize 4556
+    :lastmodtime '(20614 58583)
+    :unmatched-syntax '((punctuation 814 . 815) (punctuation 779 . 780) (punctuation 742 . 743) (punctuation 711 . 712) (punctuation 684 . 685))
+    :lexical-table 
+        '(("SU_STATE_DRAINING_TABLETS" . ((number "4" 391 . 392)))
+          ("SU_STATE_ACTIVE" . ((number "1" 290 . 291)))
+          ("SU_STATE_MANUAL_JOBS" . ((number "2" 321 . 322)))
+          ("SU_METRICS_H")
+          ("SU_STATE_JOBS_SUSPENDED" . ((number "3" 355 . 356)))
+          )
+
+    )
+   (semanticdb-table "LbJob.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LB_JOB_H" variable (:constant-flag t) nil [85 93])
+            ("string" include (:system-flag t) nil [95 112])
+            ("dht/WebCode.h" include (:system-flag t) nil [113 137])
+            ("dht/typedefs.h" include (:system-flag t) nil [138 163])
+            ("dht/StringUtils.h" include (:system-flag t) nil [164 192])
+            ("dht/JsonObject.h" include (:system-flag t) nil [193 220])
+            ("LbCode.h" include nil nil [221 240])
+            ("LbJob" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [256 263])
+                    ("TestLbJob" friend nil (reparse-symbol classsubparts) [269 291])
+                    ("TestMoveJob" friend nil (reparse-symbol classsubparts) [297 321])
+                    ("TestSplitJob" friend nil (reparse-symbol classsubparts) [327 352])
+                    ("TestJobScheduler" friend nil (reparse-symbol classsubparts) [358 387])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("ostr" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [425 444])
+                            ("lbJob" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("LbJob" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [445 464]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [393 465])
+                    ("JobStatus" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("JOB_STATUS_NONE" variable
+                                     (:constant-flag t
+                                      :default-value (533 534)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [515 534])
+                                  ("JOB_QUEUED" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [544 555])
+                                  ("JOB_RUNNING" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [564 576])
+                                  ("JOB_DONE" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [585 594])
+                                  ("JOB_FAILED" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [603 619]))                                
+                              :type "enum")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [492 630])
+                    ("LbJob" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [642 667])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [667 693])
+                            ("SU" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [704 726]))                          
+                        :type ("LbJob" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [636 727])
+                    ("LbJob" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [733 753])
+                    ("getId" function (:type "long int") (reparse-symbol classsubparts) [760 814])
+                    ("getStrId" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [820 902])
+                    ("start" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [908 947])
+                    ("stop" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [957 997])
+                    ("readStatusFromTC" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1003 1055])
+                    ("getStartTime" function (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1061 1125])
+                    ("setStartTime" function
+                       (:arguments 
+                          ( ("stime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1149 1164]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1131 1201])
+                    ("getEndTime" function (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1207 1268])
+                    ("setEndTime" function
+                       (:arguments 
+                          ( ("etime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1295 1310]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1279 1344])
+                    ("isFinished" function (:type "bool") (reparse-symbol classsubparts) [1350 1414])
+                    ("isMoveJob" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1420 1479])
+                    ("isSplitJob" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1485 1546])
+                    ("isGarbage" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1552 1569])
+                    ("maxTriesExceeded" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1575 1599])
+                    ("getStatus" function
+                       (:typemodifiers ("virtual")
+                        :type ("JobStatus" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1606 1667])
+                    ("isRunning" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1673 1747])
+                    ("belongsToBank" function
+                       (:arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1772 1796]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1753 1840])
+                    ("belongsToSU" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("suName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1875 1901]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1850 1945])
+                    ("isMoveForBank" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1978 2002]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1951 2061])
+                    ("isSplitForBank" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2099 2123]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2071 2183])
+                    ("isMoveForTable" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2217 2242]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2189 2301])
+                    ("isJobForTablet" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2327 2352])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2377 2403]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2307 2404])
+                    ("isCopySrc" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("suName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2433 2459]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2410 2489])
+                    ("isWithinSUInterval" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("suName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2527 2553]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2495 2554])
+                    ("getTableName" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2560 2618])
+                    ("getTabletName" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2624 2684])
+                    ("toString" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2690 2726])
+                    ("toJson" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2732 2766])
+                    ("protected" label nil (reparse-symbol classsubparts) [2768 2778])
+                    ("s_jobId" variable
+                       (:typemodifiers ("static")
+                        :type "long int")
+                        (reparse-symbol classsubparts) [2783 2807])
+                    ("jobId_" variable (:type "long int") (reparse-symbol classsubparts) [2813 2829])
+                    ("table_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2835 2854])
+                    ("tablet_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2860 2880])
+                    ("suName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2886 2906])
+                    ("bankName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2961 2983])
+                    ("status_" variable (:type ("JobStatus" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3023 3041])
+                    ("startTime_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3166 3186])
+                    ("endTime_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3234 3252])
+                    ("failedAttempts_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3312 3337])
+                    ("lastStatusCode_" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3343 3381]))                  
+                :type "class")
+                nil [242 3430]))          
+    :file "LbJob.h"
+    :pointmax 3591
+    :fsize 3590
+    :lastmodtime '(20614 58583)
+    :unmatched-syntax '((punctuation 387 . 388) (punctuation 352 . 353) (punctuation 321 . 322) (punctuation 291 . 292))
+    :lexical-table 
+        '(("LB_JOB_H")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndevn!branches!uffIntegration!controller!loadBalancer!src!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

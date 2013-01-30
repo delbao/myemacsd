@@ -1,0 +1,154 @@
+;; Object design/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "design/"
+  :tables (list 
+   (semanticdb-table "ClientScanImpl.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("DHT" type
+               (:members 
+                  ( ("ScanRequestParams" type
+                       (:superclasses 
+                          ( ("RequestParamBase" type
+                               (:protection "public"
+                                :type "class")
+                                nil nil))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [20 654])
+                    ("ScanRequest" type
+                       (:members 
+                          ( ("params_" variable (:type ("ScanRequestParams" type (:type "class") nil nil)) (reparse-symbol classsubparts) [689 715])
+                            ("cont_" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [724 744])
+                            ("numRecordsRetrieved_" variable (:type "int") (reparse-symbol classsubparts) [753 782])
+                            ("done_" variable (:type "bool") (reparse-symbol classsubparts) [791 809])
+                            ("incParser_" variable (:type ("IncrementalParser" type (:type "class") nil nil)) (reparse-symbol classsubparts) [818 847])
+                            ("buffrdRecords_" variable (:type ("list" type
+                                 (:template-specifier 
+                                    ( ("pair" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1119 1165])
+                            ("ScanRequest" function
+                               (:constructor-flag t
+                                :type ("ScanRequest" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [1175 1190])
+                            ("setup" function
+                               (:arguments 
+                                  ( ("params" variable (:type ("ScanRequestParams" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1210 1235])
+                                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [1236 1248]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [1200 1772])
+                            ("receive" function
+                               (:arguments 
+                                  ( ("key" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2022 2039])
+                                    ("" variable
+                                       (:pointer 1
+                                        :type ("DHT::Data" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2040 2051])
+                                    ("" variable (:type ("resultData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2052 2063])
+                                    ("done" variable
+                                       (:reference 1
+                                        :type "bool")
+                                        (reparse-symbol arg-sub-list) [2086 2097])
+                                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [2098 2110]))                                  
+                                :type "int")
+                                (reparse-symbol classsubparts) [2010 2641])
+                            ("private" label nil (reparse-symbol classsubparts) [2647 2655])
+                            ("makeNextCurlCall" function (:type "int") (reparse-symbol classsubparts) [2673 4939])
+                            ("callback" function
+                               (:arguments 
+                                  ( ("data" variable
+                                       (:pointer 1
+                                        :type "void")
+                                        (reparse-symbol arg-sub-list) [4963 4975]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [4949 5567]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [661 5578])
+                    ("Continuation" type
+                       (:members 
+                          ( ("endHashKey" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5625 5659])
+                            ("startHashKey" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5625 5659])
+                            ("excludedKeys" variable (:type ("vector" type
+                                 (:template-specifier 
+                                    ( ("string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [5668 5698])
+                            ("advance" function
+                               (:arguments 
+                                  ( ("nextKeyRetrieved" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5721 5745]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [5708 6013]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [5597 6020]))                  
+                :type "namespace")
+                nil [1 6039]))          
+    :file "ClientScanImpl.cc"
+    :pointmax 6061
+    :fsize 6060
+    :lastmodtime '(20449 26762)
+    :unmatched-syntax '((punctuation 2050 . 2051))
+    )
+   (semanticdb-table "TabletMetadata.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("record_timeline_type" variable (:type ("" type
+                 (:members 
+                    ( ("MASTERFUL" variable
+                         (:constant-flag t
+                          :type "int")
+                          (reparse-symbol enumsubparts) [4844 4854])
+                      ("MERGING" variable
+                         (:constant-flag t
+                          :type "int")
+                          (reparse-symbol enumsubparts) [4931 5002]))                    
+                  :type "enum")
+                  nil nil)) nil [4829 5024])
+            ("override" type
+               (:members 
+                  ( ("bad_region" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6212 6230])
+                    ("good_region" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6235 6254])
+                    ("timestamp" variable (:type "long") (reparse-symbol classsubparts) [6259 6274])
+                    ("is_major" variable (:type "bool") (reparse-symbol classsubparts) [6279 6293])
+                    ("add" function
+                       (:arguments 
+                          ( ("newOverride" variable (:type ("override" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6308 6329]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6299 7132])
+                    ("garbageCollect" function
+                       (:arguments 
+                          ( ("" variable (:type ("olderByTime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7309 7321]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7289 7572]))                  
+                :type "class")
+                nil [6191 7757])
+            ("save" function
+               (:type ("override" type
+                     (:prototype t
+                      :type "class")
+                      nil nil)
+                :parent "TabletMetadata")
+                nil [6191 7757])
+            ("follow_overrides" function
+               (:parent "StorageUnit"
+                :arguments 
+                  ( ("" variable (:type ("tablet_metadata" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8753 8769])
+                    ("" variable (:type ("region" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8770 8777]))                  
+                :type "int")
+                nil [8723 11268]))          
+    :file "TabletMetadata.cc"
+    :pointmax 11269
+    :fsize 11268
+    :lastmodtime '(20449 26762)
+    :unmatched-syntax '((semantic-list 5180 . 6149) (symbol 5158 . 5180) (STRUCT 5151 . 5157) (semantic-list 4512 . 4782) (symbol 4486 . 4512) (STRUCT 4479 . 4485) (semantic-list 159 . 4272) (symbol 127 . 159) (STRUCT 120 . 126) (punctuation 4036 . 4037) (semantic-list 3381 . 4036) (punctuation 3247 . 3248) (punctuation 3149 . 3150) (semantic-list 2197 . 2630) (punctuation 2094 . 2095) (punctuation 2056 . 2057) (semantic-list 1155 . 2056) (punctuation 1073 . 1074) (punctuation 4036 . 4037) (semantic-list 3381 . 4036) (punctuation 3247 . 3248) (punctuation 3149 . 3150) (semantic-list 2197 . 2630) (punctuation 2094 . 2095) (punctuation 2056 . 2057) (semantic-list 1155 . 2056) (punctuation 1073 . 1074))
+    )
+   )
+  :file "!homes!dbao!svn!trunk!dht!design!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

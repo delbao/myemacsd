@@ -1,0 +1,2350 @@
+;; Object api/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "api/"
+  :tables (list 
+   (semanticdb-table "BlackList.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [915 937])
+            ("stdio.h" include (:system-flag t) nil [938 956])
+            ("string.h" include (:system-flag t) nil [957 976])
+            ("stdlib.h" include (:system-flag t) nil [977 996])
+            ("ctype.h" include (:system-flag t) nil [997 1015])
+            ("TRUE" variable (:constant-flag t) nil [1025 1029])
+            ("FALSE" variable (:constant-flag t) nil [1040 1045])
+            ("MAX_URL_SIZE" variable (:constant-flag t) nil [1056 1068])
+            ("URL_TYPE" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("ALLOWED" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1091 1099])
+                          ("FORBIDDEN" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1103 1115]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [1073 1125])
+            ("read_host" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("url" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1165 1175])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1176 1189])
+                    ("buf_size" variable (:type "int") (reparse-symbol arg-sub-list) [1190 1203]))                  
+                :type "void")
+                nil [1150 1204])
+            ("select_url_catagory" function
+               (:prototype-flag t
+                :type ("URL_TYPE" type (:type "class") nil nil))
+                nil [1205 1236])
+            ("User" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("header_bytes" variable (:type "int") (reparse-symbol classsubparts) [1257 1274]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1238 1282])
+            ("BlackListPlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("direct" variable (:type "int") (reparse-symbol classsubparts) [1361 1372])
+                          ("target_host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1375 1393])
+                          ("target_port" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1396 1414])
+                          ("allowed_host_p" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1445 1466])
+                          ("forbidden_host_p" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1469 1492])
+                          ("forbidden_ratio" variable (:type "double") (reparse-symbol classsubparts) [1495 1518])
+                          ("requests" variable (:type "long") (reparse-symbol classsubparts) [1549 1563])
+                          ("allowed_requests" variable (:type "long") (reparse-symbol classsubparts) [1566 1588])
+                          ("forbidden_requests" variable (:type "long") (reparse-symbol classsubparts) [1591 1615])
+                          ("successful_documents" variable (:type "long") (reparse-symbol classsubparts) [1619 1645])
+                          ("forbidden_documents" variable (:type "long") (reparse-symbol classsubparts) [1648 1673])
+                          ("redirect_documents" variable (:type "long") (reparse-symbol classsubparts) [1676 1700])
+                          ("unfinished_documents" variable (:type "long") (reparse-symbol classsubparts) [1703 1729])
+                          ("other_failed_documents" variable (:type "long") (reparse-symbol classsubparts) [1732 1760])
+                          ("total_bytes_received" variable (:type "long") (reparse-symbol classsubparts) [1763 1789]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1284 1808])
+            ("my_plugin" variable (:type ("BlackListPlugin" type (:type "class") nil nil)) nil [1810 1836])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [1857 1871]))                  
+                :type "void")
+                nil [1838 2580])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2606 2619])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2620 2632]))                  
+                :type "void")
+                nil [2583 3343])
+            ("INKOptionsProcessFinish" function (:type "void") nil [3346 3542])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3569 3582])
+                    ("conn_status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3587 3619]))                  
+                :type "void")
+                nil [3544 3721])
+            ("INKPluginFinish" function (:type "void") nil [3724 3914])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3938 3976])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [3977 3999])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4007 4045])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [4046 4068])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4076 4114])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [4115 4136])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4144 4182]))                  
+                :type "int")
+                nil [3917 5145])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5182 5195])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5196 5209])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [5217 5228])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5229 5247]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [5148 5861])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5903 5916])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5929 5951])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [5963 5982])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [5995 6012]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [5864 6206])
+            ("INKReport" function (:type "void") nil [6209 7217])
+            ("read_host" function
+               (:arguments 
+                  ( ("url" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7498 7508])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7509 7522])
+                    ("buf_size" variable (:type "int") (reparse-symbol arg-sub-list) [7523 7536]))                  
+                :type "void")
+                nil [7483 8217])
+            ("select_url_catagory" function (:type ("URL_TYPE" type (:type "class") nil nil)) nil [8353 8521]))          
+    :file "BlackList.c"
+    :pointmax 8523
+    :fsize 8522
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TRUE" . ((number "1" 1030 . 1031)))
+          ("FALSE" . ((number "0" 1046 . 1047)))
+          ("MAX_URL_SIZE" . ((number "256" 1069 . 1072)))
+          )
+
+    )
+   (semanticdb-table "CheckAppend-1.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [846 864])
+            ("string.h" include (:system-flag t) nil [865 884])
+            ("stdlib.h" include (:system-flag t) nil [885 904])
+            ("sys/types.h" include (:system-flag t) nil [905 927])
+            ("sys/stat.h" include (:system-flag t) nil [928 949])
+            ("time.h" include (:system-flag t) nil [950 967])
+            ("fcntl.h" include (:system-flag t) nil [968 986])
+            ("ClientAPI.h" include nil nil [987 1009])
+            ("assert.h" include (:system-flag t) nil [1010 1029])
+            ("ctype.h" include (:system-flag t) nil [1030 1048])
+            ("MAX_PATH_SIZE" variable (:constant-flag t) nil [1058 1071])
+            ("TRUE" variable (:constant-flag t) nil [1084 1088])
+            ("FALSE" variable (:constant-flag t) nil [1099 1104])
+            ("MAX_URL_LEN" variable (:constant-flag t) nil [1139 1150])
+            ("print_debug" variable (:constant-flag t) nil [1224 1235])
+            ("CONN_DATA" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("tail_of_resp" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1268 1287])
+                          ("tail_of_resp_index" variable (:type "int") (reparse-symbol classsubparts) [1290 1313]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1249 1326])
+            ("CheckAppendPlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("requests" variable (:type "long") (reparse-symbol classsubparts) [1374 1388])
+                          ("successful_requests" variable (:type "long") (reparse-symbol classsubparts) [1390 1415])
+                          ("unfinished_requests" variable (:type "long") (reparse-symbol classsubparts) [1417 1442])
+                          ("total_bytes_received" variable (:type "long") (reparse-symbol classsubparts) [1444 1470])
+                          ("url_file" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1508 1523])
+                          ("append_file_path" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1579 1616])
+                          ("append_file" variable (:type "int") (reparse-symbol classsubparts) [1619 1635])
+                          ("go_direct" variable (:type "int") (reparse-symbol classsubparts) [1638 1652])
+                          ("statbuf" variable (:type ("stat" type
+                               (:prototype t
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [1655 1675])
+                          ("append_content" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1678 1699])
+                          ("tmpBuf" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1702 1715])
+                          ("append_len" variable (:type "int") (reparse-symbol classsubparts) [1718 1733]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1329 1754])
+            ("my_plugin" variable (:type ("CheckAppendPlugin" type (:type "class") nil nil)) nil [1756 1784])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [1805 1819]))                  
+                :type "void")
+                nil [1786 2427])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2455 2468])
+                    ("conn_status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2469 2501]))                  
+                :type "void")
+                nil [2429 2642])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2724 2737])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2738 2750]))                  
+                :type "void")
+                nil [2701 3494])
+            ("INKOptionsProcessFinish" function (:type "void") nil [3496 5059])
+            ("INKPluginFinish" function (:type "void") nil [5061 5130])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5403 5441])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [5442 5464])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5467 5505])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [5506 5528])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5531 5569])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [5570 5591])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5594 5632]))                  
+                :type "int")
+                nil [5382 6631])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6762 6775])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6776 6789])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [6793 6804])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6805 6823]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [6728 6852])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("request_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6894 6911])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6912 6934])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [6971 6990])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [6991 7008]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [6855 8716])
+            ("INKReport" function (:type "void") nil [8769 9186]))          
+    :file "CheckAppend-1.c"
+    :pointmax 9187
+    :fsize 9186
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("print_debug" (spp-arg-list ("x") 1235 . 1238) . ((punctuation ";" 1239 . 1240)))
+          ("TRUE" . ((number "1" 1089 . 1090)))
+          ("MAX_URL_LEN" . ((number "1024" 1151 . 1155)))
+          ("MAX_PATH_SIZE" . ((number "256" 1072 . 1075)))
+          ("FALSE" . ((number "0" 1105 . 1106)))
+          )
+
+    )
+   (semanticdb-table "CheckAppend.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [921 939])
+            ("string.h" include (:system-flag t) nil [940 959])
+            ("stdlib.h" include (:system-flag t) nil [960 979])
+            ("sys/types.h" include (:system-flag t) nil [980 1002])
+            ("sys/stat.h" include (:system-flag t) nil [1003 1024])
+            ("time.h" include (:system-flag t) nil [1025 1042])
+            ("fcntl.h" include (:system-flag t) nil [1043 1061])
+            ("ClientAPI.h" include nil nil [1062 1084])
+            ("assert.h" include (:system-flag t) nil [1085 1104])
+            ("ctype.h" include (:system-flag t) nil [1105 1123])
+            ("MAX_PATH_SIZE" variable (:constant-flag t) nil [1133 1146])
+            ("TRUE" variable (:constant-flag t) nil [1159 1163])
+            ("FALSE" variable (:constant-flag t) nil [1174 1179])
+            ("MAX_URL_LEN" variable (:constant-flag t) nil [1214 1225])
+            ("print_debug" variable (:constant-flag t) nil [1299 1310])
+            ("CONN_DATA" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("tail_of_resp" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1343 1362])
+                          ("tail_of_resp_index" variable (:type "int") (reparse-symbol classsubparts) [1365 1388])
+                          ("check_this_response" variable (:type "int") (reparse-symbol classsubparts) [1391 1415]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1324 1428])
+            ("CheckAppendPlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("requests" variable (:type "long") (reparse-symbol classsubparts) [1476 1490])
+                          ("successful_requests" variable (:type "long") (reparse-symbol classsubparts) [1492 1517])
+                          ("unfinished_requests" variable (:type "long") (reparse-symbol classsubparts) [1519 1544])
+                          ("total_bytes_received" variable (:type "long") (reparse-symbol classsubparts) [1546 1572])
+                          ("url_file" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1610 1625])
+                          ("append_file_path" variable
+                             (:dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1681 1718])
+                          ("append_file" variable (:type "int") (reparse-symbol classsubparts) [1721 1737])
+                          ("go_direct" variable (:type "int") (reparse-symbol classsubparts) [1740 1754])
+                          ("statbuf" variable (:type ("stat" type
+                               (:prototype t
+                                :type "struct")
+                                nil nil)) (reparse-symbol classsubparts) [1757 1777])
+                          ("append_content" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1780 1801])
+                          ("tmpBuf" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1804 1817])
+                          ("append_len" variable (:type "int") (reparse-symbol classsubparts) [1820 1835])
+                          ("url_file_present" variable (:type "int") (reparse-symbol classsubparts) [1838 1859]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1431 1880])
+            ("my_plugin" variable (:type ("CheckAppendPlugin" type (:type "class") nil nil)) nil [1882 1910])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [1931 1945]))                  
+                :type "void")
+                nil [1912 2584])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2612 2625])
+                    ("conn_status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2626 2658]))                  
+                :type "void")
+                nil [2586 2799])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2881 2894])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2895 2907]))                  
+                :type "void")
+                nil [2858 3720])
+            ("INKOptionsProcessFinish" function (:type "void") nil [3722 5285])
+            ("INKPluginFinish" function (:type "void") nil [5287 5402])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5675 5713])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [5714 5736])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5739 5777])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [5778 5800])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5803 5841])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [5842 5863])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5866 5904]))                  
+                :type "int")
+                nil [5654 7106])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7237 7250])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7251 7264])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [7268 7279])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7280 7298]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [7203 8013])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("request_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8055 8072])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8073 8095])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [8132 8151])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [8152 8169]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [8016 9916])
+            ("INKReport" function (:type "void") nil [9969 10386]))          
+    :file "CheckAppend.c"
+    :pointmax 10388
+    :fsize 10387
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("print_debug" (spp-arg-list ("x") 1310 . 1313) . ((punctuation ";" 1314 . 1315)))
+          ("TRUE" . ((number "1" 1164 . 1165)))
+          ("MAX_URL_LEN" . ((number "1024" 1226 . 1230)))
+          ("MAX_PATH_SIZE" . ((number "256" 1147 . 1150)))
+          ("FALSE" . ((number "0" 1180 . 1181)))
+          )
+
+    )
+   (semanticdb-table "CheckContentClient.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [407 429])
+            ("stdio.h" include (:system-flag t) nil [430 448])
+            ("stdlib.h" include (:system-flag t) nil [449 468])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("clientid" variable (:type "int") (reparse-symbol arg-sub-list) [489 502]))                  
+                :type "void")
+                nil [470 739])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [776 789])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [790 803])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [811 822])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [823 841]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [742 870])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [912 925])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [938 960])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [972 991])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [1004 1021]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [873 1406]))          
+    :file "CheckContentClient.c"
+    :pointmax 1412
+    :fsize 1411
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "CheckReplaceHeader.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [531 549])
+            ("string.h" include (:system-flag t) nil [550 569])
+            ("stdlib.h" include (:system-flag t) nil [570 589])
+            ("sys/types.h" include (:system-flag t) nil [590 612])
+            ("sys/stat.h" include (:system-flag t) nil [613 634])
+            ("time.h" include (:system-flag t) nil [635 652])
+            ("fcntl.h" include (:system-flag t) nil [653 671])
+            ("ClientAPI.h" include nil nil [672 694])
+            ("TRUE" variable (:constant-flag t) nil [704 708])
+            ("FALSE" variable (:constant-flag t) nil [719 724])
+            ("replace_hdr_test_failed" variable (:type "int") nil [728 756])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("clientid" variable (:type "int") (reparse-symbol arg-sub-list) [777 790]))                  
+                :type "void")
+                nil [758 952])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [989 1002])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1003 1016])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [1017 1028])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1029 1047]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [955 2096]))          
+    :file "CheckReplaceHeader.c"
+    :pointmax 2100
+    :fsize 2099
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TRUE" . ((number "1" 709 . 710)))
+          ("FALSE" . ((number "0" 725 . 726)))
+          )
+
+    )
+   (semanticdb-table "RequestList.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [1049 1071])
+            ("stdio.h" include (:system-flag t) nil [1072 1090])
+            ("string.h" include (:system-flag t) nil [1091 1110])
+            ("stdlib.h" include (:system-flag t) nil [1111 1130])
+            ("ctype.h" include (:system-flag t) nil [1131 1149])
+            ("TRUE" variable (:constant-flag t) nil [1159 1163])
+            ("FALSE" variable (:constant-flag t) nil [1174 1179])
+            ("MAX_URL_SIZE" variable (:constant-flag t) nil [1190 1202])
+            ("MAX_LISTS" variable (:constant-flag t) nil [1215 1224])
+            ("MAX_FILE_NAME_SIZE" variable (:constant-flag t) nil [1236 1254])
+            ("MAX_SMALL_NAME" variable (:constant-flag t) nil [1267 1281])
+            ("URL_TYPE" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("ALLOWED" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1304 1312])
+                          ("FORBIDDEN" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [1316 1328]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [1286 1338])
+            ("read_host" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("url" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1378 1388])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1389 1402])
+                    ("buf_size" variable (:type "int") (reparse-symbol arg-sub-list) [1403 1416]))                  
+                :type "void")
+                nil [1363 1417])
+            ("select_url_catagory" function
+               (:prototype-flag t
+                :type "int")
+                nil [1418 1444])
+            ("User" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("header_bytes" variable (:type "int") (reparse-symbol classsubparts) [1465 1482]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1446 1490])
+            ("RequestListPlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("direct" variable (:type "int") (reparse-symbol classsubparts) [1569 1580])
+                          ("target_host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1583 1601])
+                          ("target_port" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1604 1622])
+                          ("list_fp" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1652 1679])
+                          ("list_str" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1682 1709])
+                          ("list_ratio" variable
+                             (:dereference 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [1712 1741])
+                          ("list_requests" variable
+                             (:dereference 1
+                              :type "int")
+                              (reparse-symbol classsubparts) [1744 1776])
+                          ("nlist" variable (:type "int") (reparse-symbol classsubparts) [1779 1789])
+                          ("requests" variable (:type "long") (reparse-symbol classsubparts) [1820 1834])
+                          ("successful_documents" variable (:type "long") (reparse-symbol classsubparts) [1838 1864])
+                          ("unfinished_documents" variable (:type "long") (reparse-symbol classsubparts) [1867 1893])
+                          ("other_failed_documents" variable (:type "long") (reparse-symbol classsubparts) [1896 1924])
+                          ("total_bytes_received" variable (:type "long") (reparse-symbol classsubparts) [1927 1953]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1492 1975])
+            ("my_plugin" variable (:type ("RequestListPlugin" type (:type "class") nil nil)) nil [1977 2005])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [2026 2040]))                  
+                :type "void")
+                nil [2007 2606])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2632 2645])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2646 2658]))                  
+                :type "void")
+                nil [2609 3928])
+            ("INKOptionsProcessFinish" function (:type "void") nil [3931 4127])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4154 4167])
+                    ("conn_status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4172 4204]))                  
+                :type "void")
+                nil [4129 4306])
+            ("INKPluginFinish" function (:type "void") nil [4309 4518])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4542 4580])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [4581 4603])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4611 4649])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [4650 4672])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4680 4718])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [4719 4740])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4748 4786]))                  
+                :type "int")
+                nil [4521 6495])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6532 6545])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6546 6559])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [6567 6578])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6579 6597]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [6498 6791])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6833 6846])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6859 6881])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [6893 6912])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [6925 6942]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [6794 7136])
+            ("INKReport" function (:type "void") nil [7139 7951])
+            ("read_host" function
+               (:arguments 
+                  ( ("url" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8232 8242])
+                    ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8243 8256])
+                    ("buf_size" variable (:type "int") (reparse-symbol arg-sub-list) [8257 8270]))                  
+                :type "void")
+                nil [8217 8951])
+            ("select_url_catagory" function (:type "int") nil [9091 9356]))          
+    :file "RequestList.c"
+    :pointmax 9357
+    :fsize 9356
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX_LISTS" . ((number "10" 1225 . 1227)))
+          ("MAX_FILE_NAME_SIZE" . ((number "512" 1255 . 1258)))
+          ("TRUE" . ((number "1" 1164 . 1165)))
+          ("MAX_SMALL_NAME" . ((number "10" 1282 . 1284)))
+          ("FALSE" . ((number "0" 1180 . 1181)))
+          ("MAX_URL_SIZE" . ((number "256" 1203 . 1206)))
+          )
+
+    )
+   (semanticdb-table "SimBasicAuth-0.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [433 455])
+            ("stdio.h" include (:system-flag t) nil [456 474])
+            ("string.h" include (:system-flag t) nil [475 494])
+            ("stdlib.h" include (:system-flag t) nil [495 514])
+            ("assert.h" include (:system-flag t) nil [515 534])
+            ("ctype.h" include (:system-flag t) nil [535 553])
+            ("TRUE" variable (:constant-flag t) nil [563 567])
+            ("FALSE" variable (:constant-flag t) nil [578 583])
+            ("MAX_SIZES" variable (:constant-flag t) nil [594 603])
+            ("MAX_ORIGIN_SERVERS" variable (:constant-flag t) nil [665 683])
+            ("User" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("doc_size_requested" variable (:type "long") (reparse-symbol classsubparts) [733 757])
+                          ("header_bytes" variable (:type "long") (reparse-symbol classsubparts) [759 777]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [715 785])
+            ("parse_origin_server_str" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [816 828]))                  
+                :type "void")
+                nil [787 829])
+            ("generate_serial_number" function
+               (:prototype-flag t
+                :type "long")
+                nil [830 860])
+            ("generate_size" function
+               (:prototype-flag t
+                :type "long")
+                nil [863 884])
+            ("read_docsize_dist" function
+               (:prototype-flag t
+                :type "void")
+                nil [885 910])
+            ("SimSDKtestPlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("target_host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [930 948])
+                          ("target_port" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [950 968])
+                          ("credentials" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [973 991])
+                          ("origin_host" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [993 1031])
+                          ("origin_port" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1033 1071])
+                          ("num_origin_server" variable (:type "int") (reparse-symbol classsubparts) [1073 1095])
+                          ("direct" variable (:type "int") (reparse-symbol classsubparts) [1098 1109])
+                          ("hotset" variable (:type "double") (reparse-symbol classsubparts) [1111 1125])
+                          ("docset" variable (:type "double") (reparse-symbol classsubparts) [1128 1142])
+                          ("hotset_access_ratio" variable (:type "double") (reparse-symbol classsubparts) [1144 1171])
+                          ("max_hotset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [1174 1201])
+                          ("max_docset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [1203 1230])
+                          ("num_sizes" variable (:type "int") (reparse-symbol classsubparts) [1266 1280])
+                          ("sizes" variable
+                             (:dereference 1
+                              :type "long")
+                              (reparse-symbol classsubparts) [1282 1304])
+                          ("cumulative_size_prob" variable
+                             (:dereference 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [1306 1345])
+                          ("docsize_dist_file_p" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1347 1373])
+                          ("requests" variable (:type "long") (reparse-symbol classsubparts) [1403 1417])
+                          ("successful_requests" variable (:type "long") (reparse-symbol classsubparts) [1419 1444])
+                          ("unfinished_requests" variable (:type "long") (reparse-symbol classsubparts) [1446 1471])
+                          ("total_bytes_received" variable (:type "long") (reparse-symbol classsubparts) [1473 1499]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [912 1519])
+            ("my_plugin" variable (:type ("SimSDKtestPlugin" type (:type "class") nil nil)) nil [1521 1548])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [1569 1583]))                  
+                :type "void")
+                nil [1550 2079])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2161 2174])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2175 2187]))                  
+                :type "void")
+                nil [2138 3243])
+            ("INKOptionsProcessFinish" function (:type "void") nil [3245 3435])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3463 3476])
+                    ("conn_status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3477 3509]))                  
+                :type "void")
+                nil [3437 3602])
+            ("INKPluginFinish" function (:type "void") nil [3604 3823])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4096 4134])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [4135 4157])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4160 4198])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [4199 4221])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4224 4262])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [4263 4284])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4287 4325]))                  
+                :type "int")
+                nil [4075 5497])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5628 5641])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5642 5655])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [5659 5670])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5671 5689]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [5594 5760])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5899 5912])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5916 5938])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [5941 5960])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [5964 5981]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [5860 6306])
+            ("INKReport" function (:type "void") nil [6359 6776])
+            ("generate_serial_number" function (:type "long") nil [6916 7321])
+            ("generate_size" function (:type "long") nil [7372 7690])
+            ("read_docsize_dist" function (:type "void") nil [7742 9063])
+            ("parse_origin_server_str" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9207 9219]))                  
+                :type "void")
+                nil [9178 10058]))          
+    :file "SimBasicAuth-0.c"
+    :pointmax 10060
+    :fsize 10059
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX_SIZES" . ((number "1000" 604 . 608)))
+          ("MAX_ORIGIN_SERVERS" . ((number "10" 684 . 686)))
+          ("TRUE" . ((number "1" 568 . 569)))
+          ("FALSE" . ((number "0" 584 . 585)))
+          )
+
+    )
+   (semanticdb-table "SimBasicAuth-1.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [464 486])
+            ("stdio.h" include (:system-flag t) nil [487 505])
+            ("string.h" include (:system-flag t) nil [506 525])
+            ("stdlib.h" include (:system-flag t) nil [526 545])
+            ("assert.h" include (:system-flag t) nil [546 565])
+            ("ctype.h" include (:system-flag t) nil [566 584])
+            ("TRUE" variable (:constant-flag t) nil [594 598])
+            ("FALSE" variable (:constant-flag t) nil [609 614])
+            ("MAX_SIZES" variable (:constant-flag t) nil [625 634])
+            ("MAX_ORIGIN_SERVERS" variable (:constant-flag t) nil [696 714])
+            ("MAX_URL_LEN" variable (:constant-flag t) nil [753 764])
+            ("User" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("doc_size_requested" variable (:type "long") (reparse-symbol classsubparts) [789 813])
+                          ("header_bytes" variable (:type "long") (reparse-symbol classsubparts) [815 833]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [771 841])
+            ("parse_origin_server_str" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [914 926]))                  
+                :type "void")
+                nil [885 927])
+            ("generate_serial_number" function
+               (:prototype-flag t
+                :type "long")
+                nil [928 958])
+            ("generate_size" function
+               (:prototype-flag t
+                :type "long")
+                nil [961 982])
+            ("read_docsize_dist" function
+               (:prototype-flag t
+                :type "void")
+                nil [983 1008])
+            ("getUrl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("urlFile" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1021 1035])
+                    ("urlLine" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1036 1050]))                  
+                :type "int")
+                nil [1009 1051])
+            ("SimSDKtestPlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("target_host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1071 1089])
+                          ("target_port" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1091 1109])
+                          ("credentials" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1114 1132])
+                          ("origin_host" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1134 1172])
+                          ("origin_port" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1174 1212])
+                          ("num_origin_server" variable (:type "int") (reparse-symbol classsubparts) [1214 1236])
+                          ("direct" variable (:type "int") (reparse-symbol classsubparts) [1239 1250])
+                          ("hotset" variable (:type "double") (reparse-symbol classsubparts) [1252 1266])
+                          ("docset" variable (:type "double") (reparse-symbol classsubparts) [1269 1283])
+                          ("hotset_access_ratio" variable (:type "double") (reparse-symbol classsubparts) [1285 1312])
+                          ("max_hotset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [1315 1342])
+                          ("max_docset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [1344 1371])
+                          ("num_sizes" variable (:type "int") (reparse-symbol classsubparts) [1407 1421])
+                          ("sizes" variable
+                             (:dereference 1
+                              :type "long")
+                              (reparse-symbol classsubparts) [1423 1445])
+                          ("cumulative_size_prob" variable
+                             (:dereference 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [1447 1486])
+                          ("docsize_dist_file_p" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1488 1514])
+                          ("requests" variable (:type "long") (reparse-symbol classsubparts) [1544 1558])
+                          ("successful_requests" variable (:type "long") (reparse-symbol classsubparts) [1560 1585])
+                          ("unfinished_requests" variable (:type "long") (reparse-symbol classsubparts) [1587 1612])
+                          ("total_bytes_received" variable (:type "long") (reparse-symbol classsubparts) [1614 1640])
+                          ("url_file" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1678 1693]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1053 1713])
+            ("my_plugin" variable (:type ("SimSDKtestPlugin" type (:type "class") nil nil)) nil [1715 1742])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [1763 1777]))                  
+                :type "void")
+                nil [1744 2274])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2356 2369])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2370 2382]))                  
+                :type "void")
+                nil [2333 3737])
+            ("INKOptionsProcessFinish" function (:type "void") nil [3739 3929])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3957 3970])
+                    ("conn_status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3971 4003]))                  
+                :type "void")
+                nil [3931 4096])
+            ("INKPluginFinish" function (:type "void") nil [4098 4352])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4625 4663])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [4664 4686])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4689 4727])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [4728 4750])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4753 4791])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [4792 4813])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4816 4854]))                  
+                :type "int")
+                nil [4604 6693])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6824 6837])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6838 6851])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [6855 6866])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6867 6885]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [6790 6956])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7549 7562])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [7586 7608])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [7632 7651])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [7675 7692]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [7510 7721])
+            ("INKReport" function (:type "void") nil [7774 8191])
+            ("generate_serial_number" function (:type "long") nil [8331 8736])
+            ("generate_size" function (:type "long") nil [8787 9105])
+            ("read_docsize_dist" function (:type "void") nil [9157 10478])
+            ("parse_origin_server_str" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10622 10634]))                  
+                :type "void")
+                nil [10593 11473])
+            ("getUrl" function
+               (:arguments 
+                  ( ("urlFile" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11487 11501])
+                    ("urlLine" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11502 11516]))                  
+                :type "int")
+                nil [11475 11600]))          
+    :file "SimBasicAuth-1.c"
+    :pointmax 11602
+    :fsize 11601
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX_SIZES" . ((number "1000" 635 . 639)))
+          ("MAX_ORIGIN_SERVERS" . ((number "10" 715 . 717)))
+          ("TRUE" . ((number "1" 599 . 600)))
+          ("MAX_URL_LEN" . ((number "1024" 765 . 769)))
+          ("FALSE" . ((number "0" 615 . 616)))
+          )
+
+    )
+   (semanticdb-table "SimInkBench.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [214 236])
+            ("math.h" include (:system-flag t) nil [237 254])
+            ("stdio.h" include (:system-flag t) nil [255 273])
+            ("string.h" include (:system-flag t) nil [274 293])
+            ("stdlib.h" include (:system-flag t) nil [294 313])
+            ("assert.h" include (:system-flag t) nil [314 333])
+            ("ctype.h" include (:system-flag t) nil [334 352])
+            ("TRUE" variable (:constant-flag t) nil [362 366])
+            ("FALSE" variable (:constant-flag t) nil [377 382])
+            ("MAX_SIZES" variable (:constant-flag t) nil [393 402])
+            ("MAX_ORIGIN_SERVERS" variable (:constant-flag t) nil [464 482])
+            ("User" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("doc_size_requested" variable (:type "long") (reparse-symbol classsubparts) [533 557])
+                          ("header_bytes" variable (:type "long") (reparse-symbol classsubparts) [560 578]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [514 586])
+            ("parse_origin_server_str" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [617 629]))                  
+                :type "void")
+                nil [588 630])
+            ("generate_serial_number" function
+               (:prototype-flag t
+                :type "long")
+                nil [631 661])
+            ("generate_size" function
+               (:prototype-flag t
+                :type "long")
+                nil [664 685])
+            ("read_docsize_dist" function
+               (:prototype-flag t
+                :type "void")
+                nil [686 711])
+            ("SimInkbenchPlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("target_host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [732 750])
+                          ("target_port" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [753 771])
+                          ("origin_host" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [774 812])
+                          ("origin_port" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [815 853])
+                          ("num_origin_server" variable (:type "int") (reparse-symbol classsubparts) [856 878])
+                          ("direct" variable (:type "int") (reparse-symbol classsubparts) [882 893])
+                          ("hotset" variable (:type "double") (reparse-symbol classsubparts) [896 910])
+                          ("docset" variable (:type "double") (reparse-symbol classsubparts) [914 928])
+                          ("hotset_access_ratio" variable (:type "double") (reparse-symbol classsubparts) [931 958])
+                          ("max_hotset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [962 989])
+                          ("max_docset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [992 1019])
+                          ("num_sizes" variable (:type "int") (reparse-symbol classsubparts) [1057 1071])
+                          ("sizes" variable
+                             (:dereference 1
+                              :type "long")
+                              (reparse-symbol classsubparts) [1074 1096])
+                          ("cumulative_size_prob" variable
+                             (:dereference 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [1099 1138])
+                          ("docsize_dist_file_p" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1141 1167])
+                          ("requests" variable (:type "long") (reparse-symbol classsubparts) [1199 1213])
+                          ("successful_requests" variable (:type "long") (reparse-symbol classsubparts) [1216 1241])
+                          ("unfinished_requests" variable (:type "long") (reparse-symbol classsubparts) [1244 1269])
+                          ("total_bytes_received" variable (:type "long") (reparse-symbol classsubparts) [1272 1298]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [713 1319])
+            ("my_plugin" variable (:type ("SimInkbenchPlugin" type (:type "class") nil nil)) nil [1321 1349])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [1370 1384]))                  
+                :type "void")
+                nil [1351 1807])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1832 1845])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1846 1858]))                  
+                :type "void")
+                nil [1809 2831])
+            ("INKOptionsProcessFinish" function (:type "void") nil [2833 3026])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3053 3066])
+                    ("conn_status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3071 3103]))                  
+                :type "void")
+                nil [3028 3199])
+            ("INKPluginFinish" function (:type "void") nil [3201 3428])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3452 3490])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [3491 3513])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3521 3559])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [3560 3582])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3590 3628])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [3629 3650])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3658 3696]))                  
+                :type "int")
+                nil [3431 4735])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4772 4785])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4786 4799])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [4807 4818])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4819 4837]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [4738 4909])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4951 4964])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4977 4999])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [5011 5030])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [5043 5060]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [4912 5404])
+            ("safediv" variable (:constant-flag t) nil [5415 5422])
+            ("INKReport" function (:type "void") nil [5496 6123])
+            ("generate_serial_number" function (:type "long") nil [6195 6614])
+            ("generate_size" function (:type "long") nil [6665 6991])
+            ("read_docsize_dist" function (:type "void") nil [7043 8423])
+            ("parse_origin_server_str" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8567 8579]))                  
+                :type "void")
+                nil [8538 9468]))          
+    :file "SimInkBench.c"
+    :pointmax 9470
+    :fsize 9469
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX_SIZES" . ((number "1000" 403 . 407)))
+          ("MAX_ORIGIN_SERVERS" . ((number "10" 483 . 485)))
+          ("TRUE" . ((number "1" 367 . 368)))
+          ("FALSE" . ((number "0" 383 . 384)))
+          ("safediv" (spp-arg-list ("top" "bottom") 5422 . 5434) . ((semantic-list "((bottom) ? (((double)(top))/((double)(bottom))) : (bottom))" 5435 . 5495)))
+          )
+
+    )
+   (semanticdb-table "SimInkBenchCache.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [338 360])
+            ("math.h" include (:system-flag t) nil [361 378])
+            ("stdio.h" include (:system-flag t) nil [379 397])
+            ("string.h" include (:system-flag t) nil [398 417])
+            ("stdlib.h" include (:system-flag t) nil [418 437])
+            ("assert.h" include (:system-flag t) nil [438 457])
+            ("ctype.h" include (:system-flag t) nil [458 476])
+            ("TRUE" variable (:constant-flag t) nil [486 490])
+            ("FALSE" variable (:constant-flag t) nil [501 506])
+            ("MAX_SIZES" variable (:constant-flag t) nil [517 526])
+            ("MAX_ORIGIN_SERVERS" variable (:constant-flag t) nil [588 606])
+            ("User" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("doc_size_requested" variable (:type "long") (reparse-symbol classsubparts) [657 681])
+                          ("header_bytes" variable (:type "long") (reparse-symbol classsubparts) [684 702]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [638 710])
+            ("parse_origin_server_str" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [741 753]))                  
+                :type "void")
+                nil [712 754])
+            ("generate_serial_number" function
+               (:prototype-flag t
+                :type "long")
+                nil [755 785])
+            ("generate_size" function
+               (:prototype-flag t
+                :type "long")
+                nil [788 809])
+            ("read_docsize_dist" function
+               (:prototype-flag t
+                :type "void")
+                nil [810 835])
+            ("generate_cachability" function
+               (:prototype-flag t
+                :type "int")
+                nil [836 863])
+            ("InkBenchCachePlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("target_host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [884 902])
+                          ("target_port" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [905 923])
+                          ("origin_host" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [926 964])
+                          ("origin_port" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [967 1005])
+                          ("num_origin_server" variable (:type "int") (reparse-symbol classsubparts) [1008 1030])
+                          ("direct" variable (:type "int") (reparse-symbol classsubparts) [1034 1045])
+                          ("hotset" variable (:type "double") (reparse-symbol classsubparts) [1048 1062])
+                          ("docset" variable (:type "double") (reparse-symbol classsubparts) [1066 1080])
+                          ("hotset_access_ratio" variable (:type "double") (reparse-symbol classsubparts) [1083 1110])
+                          ("max_hotset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [1114 1141])
+                          ("max_docset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [1144 1171])
+                          ("num_sizes" variable (:type "int") (reparse-symbol classsubparts) [1209 1223])
+                          ("sizes" variable
+                             (:dereference 1
+                              :type "long")
+                              (reparse-symbol classsubparts) [1226 1248])
+                          ("cumulative_size_prob" variable
+                             (:dereference 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [1251 1290])
+                          ("docsize_dist_file_p" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1293 1319])
+                          ("cachability_ratio" variable (:type "double") (reparse-symbol classsubparts) [1352 1377])
+                          ("requests" variable (:type "long") (reparse-symbol classsubparts) [1409 1423])
+                          ("cachable_requests" variable (:type "long") (reparse-symbol classsubparts) [1426 1449])
+                          ("successful_requests" variable (:type "long") (reparse-symbol classsubparts) [1452 1477])
+                          ("unfinished_requests" variable (:type "long") (reparse-symbol classsubparts) [1480 1505])
+                          ("total_bytes_received" variable (:type "long") (reparse-symbol classsubparts) [1508 1534]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [865 1557])
+            ("my_plugin" variable (:type ("InkBenchCachePlugin" type (:type "class") nil nil)) nil [1559 1589])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [1610 1624]))                  
+                :type "void")
+                nil [1591 2047])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2072 2085])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2086 2098]))                  
+                :type "void")
+                nil [2049 3189])
+            ("INKOptionsProcessFinish" function (:type "void") nil [3191 3384])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3411 3424])
+                    ("conn_status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3429 3461]))                  
+                :type "void")
+                nil [3386 3557])
+            ("INKPluginFinish" function (:type "void") nil [3559 3786])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3810 3848])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [3849 3871])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3879 3917])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [3918 3940])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3948 3986])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [3987 4008])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4016 4054]))                  
+                :type "int")
+                nil [3789 5767])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5804 5817])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5818 5831])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [5843 5854])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5855 5873]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [5770 5945])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5987 6000])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6013 6035])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [6047 6066])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [6079 6096]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [5948 6440])
+            ("safediv" variable (:constant-flag t) nil [6451 6458])
+            ("INKReport" function (:type "void") nil [6532 7159])
+            ("generate_serial_number" function (:type "long") nil [7299 7718])
+            ("generate_size" function (:type "long") nil [7769 8095])
+            ("read_docsize_dist" function (:type "void") nil [8147 9527])
+            ("parse_origin_server_str" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9671 9683]))                  
+                :type "void")
+                nil [9642 10572])
+            ("generate_cachability" function (:type "int") nil [10574 10733]))          
+    :file "SimInkBenchCache.c"
+    :pointmax 10734
+    :fsize 10733
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX_SIZES" . ((number "1000" 527 . 531)))
+          ("MAX_ORIGIN_SERVERS" . ((number "10" 607 . 609)))
+          ("TRUE" . ((number "1" 491 . 492)))
+          ("FALSE" . ((number "0" 507 . 508)))
+          ("safediv" (spp-arg-list ("top" "bottom") 6458 . 6470) . ((semantic-list "((bottom) ? (((double)(top))/((double)(bottom))) : (bottom))" 6471 . 6531)))
+          )
+
+    )
+   (semanticdb-table "SimSDKtest.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [309 331])
+            ("stdio.h" include (:system-flag t) nil [332 350])
+            ("string.h" include (:system-flag t) nil [351 370])
+            ("stdlib.h" include (:system-flag t) nil [371 390])
+            ("assert.h" include (:system-flag t) nil [391 410])
+            ("ctype.h" include (:system-flag t) nil [411 429])
+            ("TRUE" variable (:constant-flag t) nil [439 443])
+            ("FALSE" variable (:constant-flag t) nil [454 459])
+            ("MAX_SIZES" variable (:constant-flag t) nil [470 479])
+            ("MAX_ORIGIN_SERVERS" variable (:constant-flag t) nil [541 559])
+            ("User" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("doc_size_requested" variable (:type "long") (reparse-symbol classsubparts) [610 634])
+                          ("header_bytes" variable (:type "long") (reparse-symbol classsubparts) [637 655]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [591 663])
+            ("parse_origin_server_str" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [694 706]))                  
+                :type "void")
+                nil [665 707])
+            ("generate_serial_number" function
+               (:prototype-flag t
+                :type "long")
+                nil [708 738])
+            ("generate_size" function
+               (:prototype-flag t
+                :type "long")
+                nil [741 762])
+            ("read_docsize_dist" function
+               (:prototype-flag t
+                :type "void")
+                nil [763 788])
+            ("SimSDKtestPlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("target_host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [809 827])
+                          ("target_port" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [830 848])
+                          ("origin_host" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [851 889])
+                          ("origin_port" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [892 930])
+                          ("num_origin_server" variable (:type "int") (reparse-symbol classsubparts) [933 955])
+                          ("direct" variable (:type "int") (reparse-symbol classsubparts) [959 970])
+                          ("hotset" variable (:type "double") (reparse-symbol classsubparts) [973 987])
+                          ("docset" variable (:type "double") (reparse-symbol classsubparts) [991 1005])
+                          ("hotset_access_ratio" variable (:type "double") (reparse-symbol classsubparts) [1008 1035])
+                          ("max_hotset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [1039 1066])
+                          ("max_docset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [1069 1096])
+                          ("num_sizes" variable (:type "int") (reparse-symbol classsubparts) [1134 1148])
+                          ("sizes" variable
+                             (:dereference 1
+                              :type "long")
+                              (reparse-symbol classsubparts) [1151 1173])
+                          ("cumulative_size_prob" variable
+                             (:dereference 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [1176 1215])
+                          ("docsize_dist_file_p" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1218 1244])
+                          ("requests" variable (:type "long") (reparse-symbol classsubparts) [1276 1290])
+                          ("successful_requests" variable (:type "long") (reparse-symbol classsubparts) [1293 1318])
+                          ("unfinished_requests" variable (:type "long") (reparse-symbol classsubparts) [1321 1346])
+                          ("total_bytes_received" variable (:type "long") (reparse-symbol classsubparts) [1349 1375]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [790 1395])
+            ("my_plugin" variable (:type ("SimSDKtestPlugin" type (:type "class") nil nil)) nil [1397 1424])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [1445 1459]))                  
+                :type "void")
+                nil [1426 1966])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2048 2061])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2062 2074]))                  
+                :type "void")
+                nil [2025 3047])
+            ("INKOptionsProcessFinish" function (:type "void") nil [3049 3242])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3269 3282])
+                    ("conn_status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3287 3319]))                  
+                :type "void")
+                nil [3244 3415])
+            ("INKPluginFinish" function (:type "void") nil [3417 3644])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3917 3955])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [3956 3978])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3986 4024])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [4025 4047])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4055 4093])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [4094 4115])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4123 4161]))                  
+                :type "int")
+                nil [3896 5204])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5335 5348])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5349 5362])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [5370 5381])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5382 5400]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [5301 5472])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5611 5624])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5637 5659])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [5671 5690])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [5703 5720]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [5572 6064])
+            ("INKReport" function (:type "void") nil [6117 6571])
+            ("generate_serial_number" function (:type "long") nil [6711 7130])
+            ("generate_size" function (:type "long") nil [7181 7506])
+            ("read_docsize_dist" function (:type "void") nil [7558 8933])
+            ("parse_origin_server_str" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9077 9089]))                  
+                :type "void")
+                nil [9048 9978]))          
+    :file "SimSDKtest.c"
+    :pointmax 9980
+    :fsize 9979
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX_SIZES" . ((number "1000" 480 . 484)))
+          ("MAX_ORIGIN_SERVERS" . ((number "10" 560 . 562)))
+          ("TRUE" . ((number "1" 444 . 445)))
+          ("FALSE" . ((number "0" 460 . 461)))
+          )
+
+    )
+   (semanticdb-table "SimSDKtestCache.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [518 540])
+            ("stdio.h" include (:system-flag t) nil [541 559])
+            ("string.h" include (:system-flag t) nil [560 579])
+            ("stdlib.h" include (:system-flag t) nil [580 599])
+            ("assert.h" include (:system-flag t) nil [600 619])
+            ("ctype.h" include (:system-flag t) nil [620 638])
+            ("TRUE" variable (:constant-flag t) nil [648 652])
+            ("FALSE" variable (:constant-flag t) nil [663 668])
+            ("MAX_SIZES" variable (:constant-flag t) nil [679 688])
+            ("MAX_ORIGIN_SERVERS" variable (:constant-flag t) nil [750 768])
+            ("User" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("doc_size_requested" variable (:type "long") (reparse-symbol classsubparts) [819 843])
+                          ("header_bytes" variable (:type "long") (reparse-symbol classsubparts) [846 864]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [800 872])
+            ("parse_origin_server_str" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [903 915]))                  
+                :type "void")
+                nil [874 916])
+            ("generate_serial_number" function
+               (:prototype-flag t
+                :type "long")
+                nil [917 947])
+            ("generate_size" function
+               (:prototype-flag t
+                :type "long")
+                nil [950 971])
+            ("read_docsize_dist" function
+               (:prototype-flag t
+                :type "void")
+                nil [972 997])
+            ("generate_cachability" function
+               (:prototype-flag t
+                :type "int")
+                nil [998 1025])
+            ("SDKtestCachePlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("target_host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1046 1064])
+                          ("target_port" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1067 1085])
+                          ("origin_host" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1088 1126])
+                          ("origin_port" variable
+                             (:pointer 1
+                              :dereference 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [1129 1167])
+                          ("num_origin_server" variable (:type "int") (reparse-symbol classsubparts) [1170 1192])
+                          ("direct" variable (:type "int") (reparse-symbol classsubparts) [1196 1207])
+                          ("hotset" variable (:type "double") (reparse-symbol classsubparts) [1210 1224])
+                          ("docset" variable (:type "double") (reparse-symbol classsubparts) [1228 1242])
+                          ("hotset_access_ratio" variable (:type "double") (reparse-symbol classsubparts) [1245 1272])
+                          ("max_hotset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [1276 1303])
+                          ("max_docset_serial_num" variable (:type "long") (reparse-symbol classsubparts) [1306 1333])
+                          ("num_sizes" variable (:type "int") (reparse-symbol classsubparts) [1371 1385])
+                          ("sizes" variable
+                             (:dereference 1
+                              :type "long")
+                              (reparse-symbol classsubparts) [1388 1410])
+                          ("cumulative_size_prob" variable
+                             (:dereference 1
+                              :type "double")
+                              (reparse-symbol classsubparts) [1413 1452])
+                          ("docsize_dist_file_p" variable
+                             (:pointer 1
+                              :type ("FILE" type (:type "class") nil nil))
+                              (reparse-symbol classsubparts) [1455 1481])
+                          ("cachability_ratio" variable (:type "double") (reparse-symbol classsubparts) [1514 1539])
+                          ("requests" variable (:type "long") (reparse-symbol classsubparts) [1571 1585])
+                          ("cachable_requests" variable (:type "long") (reparse-symbol classsubparts) [1588 1611])
+                          ("successful_requests" variable (:type "long") (reparse-symbol classsubparts) [1614 1639])
+                          ("unfinished_requests" variable (:type "long") (reparse-symbol classsubparts) [1642 1667])
+                          ("total_bytes_received" variable (:type "long") (reparse-symbol classsubparts) [1670 1696]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [1027 1718])
+            ("my_plugin" variable (:type ("SDKtestCachePlugin" type (:type "class") nil nil)) nil [1720 1749])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [1770 1784]))                  
+                :type "void")
+                nil [1751 2291])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2373 2386])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2387 2399]))                  
+                :type "void")
+                nil [2350 3490])
+            ("INKOptionsProcessFinish" function (:type "void") nil [3492 3685])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3712 3725])
+                    ("conn_status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3730 3762]))                  
+                :type "void")
+                nil [3687 3858])
+            ("INKPluginFinish" function (:type "void") nil [3860 4087])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4360 4398])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [4399 4421])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4429 4467])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [4468 4490])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4498 4536])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [4537 4558])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4566 4604]))                  
+                :type "int")
+                nil [4339 6325])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6456 6469])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6470 6483])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [6491 6502])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6503 6521]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [6422 6593])
+            ("INKPartialBodyProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6732 6745])
+                    ("partial_content" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6758 6780])
+                    ("partial_length" variable (:type "int") (reparse-symbol arg-sub-list) [6792 6811])
+                    ("accum_length" variable (:type "int") (reparse-symbol arg-sub-list) [6824 6841]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [6693 7185])
+            ("INKReport" function (:type "void") nil [7238 7692])
+            ("generate_serial_number" function (:type "long") nil [7832 8251])
+            ("generate_size" function (:type "long") nil [8302 8627])
+            ("read_docsize_dist" function (:type "void") nil [8679 10054])
+            ("parse_origin_server_str" function
+               (:arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10198 10210]))                  
+                :type "void")
+                nil [10169 11099])
+            ("generate_cachability" function (:type "int") nil [11101 11260]))          
+    :file "SimSDKtestCache.c"
+    :pointmax 11261
+    :fsize 11260
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX_SIZES" . ((number "1000" 689 . 693)))
+          ("MAX_ORIGIN_SERVERS" . ((number "10" 769 . 771)))
+          ("TRUE" . ((number "1" 653 . 654)))
+          ("FALSE" . ((number "0" 669 . 670)))
+          )
+
+    )
+   (semanticdb-table "SingleHostFilter.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [483 505])
+            ("stdio.h" include (:system-flag t) nil [506 524])
+            ("string.h" include (:system-flag t) nil [525 544])
+            ("stdlib.h" include (:system-flag t) nil [545 564])
+            ("TRUE" variable (:constant-flag t) nil [574 578])
+            ("FALSE" variable (:constant-flag t) nil [589 594])
+            ("MAX_URL_SIZE" variable (:constant-flag t) nil [605 617])
+            ("URL_TYPE" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("ALLOWED" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [639 647])
+                          ("FORBIDDEN" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [651 663]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [622 673])
+            ("FilterPlugin" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("direct" variable (:type "int") (reparse-symbol classsubparts) [751 762])
+                          ("target_host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [765 783])
+                          ("target_port" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [786 804])
+                          ("forbidden_ratio" variable (:type "double") (reparse-symbol classsubparts) [835 858])
+                          ("forbidden_host" variable
+                             (:pointer 1
+                              :type "char")
+                              (reparse-symbol classsubparts) [861 882])
+                          ("requests" variable (:type "long") (reparse-symbol classsubparts) [908 922])
+                          ("allowed_requests" variable (:type "long") (reparse-symbol classsubparts) [925 947])
+                          ("forbidden_requests" variable (:type "long") (reparse-symbol classsubparts) [950 974]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [675 991])
+            ("select_url_catagory" function
+               (:prototype-flag t
+                :type ("URL_TYPE" type (:type "class") nil nil))
+                nil [1016 1047])
+            ("my_plugin" variable (:type ("FilterPlugin" type (:type "class") nil nil)) nil [1049 1072])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("client_id" variable (:type "int") (reparse-symbol arg-sub-list) [1093 1107]))                  
+                :type "void")
+                nil [1074 1207])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1232 1245])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1246 1258]))                  
+                :type "void")
+                nil [1209 1671])
+            ("INKOptionsProcessFinish" function (:type "void") nil [1673 1869])
+            ("INKPluginFinish" function (:type "void") nil [1872 2019])
+            ("INKRequestCreate" function
+               (:arguments 
+                  ( ("origin_server_host" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2043 2081])
+                    ("max_hostname_size" variable (:type "int") (reparse-symbol arg-sub-list) [2082 2104])
+                    ("origin_server_port" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2112 2150])
+                    ("max_portname_size" variable (:type "int") (reparse-symbol arg-sub-list) [2151 2173])
+                    ("request_buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2181 2219])
+                    ("max_request_size" variable (:type "int") (reparse-symbol arg-sub-list) [2220 2241])
+                    ("req_id" variable
+                       (:pointer 2
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2249 2287]))                  
+                :type "int")
+                nil [2022 3346])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3383 3396])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3397 3410])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [3418 3429])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3430 3448]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [3349 3866])
+            ("safediv" variable (:constant-flag t) nil [3877 3884])
+            ("INKReport" function (:type "void") nil [3958 4322])
+            ("select_url_catagory" function (:type ("URL_TYPE" type (:type "class") nil nil)) nil [4458 4626]))          
+    :file "SingleHostFilter.c"
+    :pointmax 4628
+    :fsize 4627
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TRUE" . ((number "1" 579 . 580)))
+          ("FALSE" . ((number "0" 595 . 596)))
+          ("MAX_URL_SIZE" . ((number "256" 618 . 621)))
+          ("safediv" (spp-arg-list ("top" "bottom") 3884 . 3896) . ((semantic-list "((bottom) ? (((double)(top))/((double)(bottom))) : (bottom))" 3897 . 3957)))
+          )
+
+    )
+   (semanticdb-table "connection_finish.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [1 23])
+            ("stdio.h" include (:system-flag t) nil [24 42])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("clientid" variable (:type "int") (reparse-symbol arg-sub-list) [63 76]))                  
+                :type "void")
+                nil [44 171])
+            ("INKConnectionFinish" function
+               (:arguments 
+                  ( ("rid" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [198 208])
+                    ("status" variable (:type ("INKConnectionStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [209 236]))                  
+                :type "void")
+                nil [173 610]))          
+    :file "connection_finish.c"
+    :pointmax 612
+    :fsize 611
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "header_process.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [218 240])
+            ("stdio.h" include (:system-flag t) nil [241 259])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("clientid" variable (:type "int") (reparse-symbol arg-sub-list) [280 293]))                  
+                :type "void")
+                nil [261 405])
+            ("INKHeaderProcess" function
+               (:arguments 
+                  ( ("req_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [442 455])
+                    ("header" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [456 469])
+                    ("length" variable (:type "int") (reparse-symbol arg-sub-list) [477 488])
+                    ("request_str" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [489 507]))                  
+                :type ("INKRequestAction" type (:type "class") nil nil))
+                nil [408 536]))          
+    :file "header_process.c"
+    :pointmax 545
+    :fsize 544
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "hello_world.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [321 343])
+            ("stdio.h" include (:system-flag t) nil [344 362])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("clientid" variable (:type "int") (reparse-symbol arg-sub-list) [423 436]))                  
+                :type "void")
+                nil [404 479]))          
+    :file "hello_world.c"
+    :pointmax 491
+    :fsize 490
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "options_process.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [218 240])
+            ("stdio.h" include (:system-flag t) nil [241 259])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("clientid" variable (:type "int") (reparse-symbol arg-sub-list) [280 293]))                  
+                :type "void")
+                nil [261 407])
+            ("INKOptionsProcess" function
+               (:arguments 
+                  ( ("option" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [432 445])
+                    ("value" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [446 458]))                  
+                :type "void")
+                nil [409 509]))          
+    :file "options_process.c"
+    :pointmax 515
+    :fsize 514
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "options_process_finish.c"
+    :major-mode 'c-mode
+    :tags 
+        '( ("ClientAPI.h" include nil nil [225 247])
+            ("stdio.h" include (:system-flag t) nil [248 266])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("clientid" variable (:type "int") (reparse-symbol arg-sub-list) [287 300]))                  
+                :type "void")
+                nil [268 427])
+            ("INKOptionsProcessFinish" function (:type "void") nil [429 515]))          
+    :file "options_process_finish.c"
+    :pointmax 521
+    :fsize 520
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "partial_body_process.c"
+    :major-mode 'c-mode
+    :tags nil
+    :file "partial_body_process.c"
+    :pointmax 602
+    :fsize 601
+    :lastmodtime '(20632 41279)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!proxy!api!SDKtest!client!api!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,124 @@
+;; Object testtools/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "testtools/"
+  :tables (list 
+   (semanticdb-table "txfBrokerMessage.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [89 108])
+            ("fstream" include (:system-flag t) nil [109 127])
+            ("dht/JsonUtils.h" include (:system-flag t) nil [128 154])
+            ("dht/LogUtils.h" include (:system-flag t) nil [155 180])
+            ("dht/BrokerMessage.h" include (:system-flag t) nil [181 211])
+            ("dht/SchemaNames.h" include (:system-flag t) nil [212 240])
+            ("TestTransformServer.h" include nil nil [241 273])
+            ("NotificationTransformer.h" include nil nil [274 310])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [312 332])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [334 424])
+            ("DEFAULT_INMESSAGE_DIR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [426 519])
+            ("DEFAULT_OUTMESSAGE_DIR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [520 614])
+            ("DEFAULT_LOG_CONF" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [615 706])
+            ("inMessageDir" variable
+               (:typemodifiers ("static")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [708 764])
+            ("outMessageDir" variable
+               (:typemodifiers ("static")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [765 823])
+            ("logConf" variable
+               (:typemodifiers ("static")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [824 870])
+            ("msgId" variable
+               (:typemodifiers ("static")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [871 896])
+            ("logLevel" variable
+               (:typemodifiers ("static")
+                :type ("TestTransformServer::LogLevel" type (:type "class") nil nil))
+                nil [898 980])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("progname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1000 1021]))                  
+                :type "void")
+                nil [982 1435])
+            ("parseArgs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1459 1468])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1469 1482]))                  
+                :type "bool")
+                nil [1437 2760])
+            ("readBrokerMessage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("inMsg" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2792 2811]))                  
+                :type "bool")
+                nil [2762 3510])
+            ("writeOutMessage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("outMsg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3540 3566])
+                    ("outMsgId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3567 3595]))                  
+                :type "bool")
+                nil [3512 4240])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [4251 4260])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4261 4274]))                  
+                :type "int")
+                nil [4242 5707]))          
+    :file "txfBrokerMessage.cc"
+    :pointmax 5708
+    :fsize 5707
+    :lastmodtime '(20427 299)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!sherpa_externals!trunk!buster_plugin!testtools!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,392 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "ApacheRequestImpl.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("memory" include (:system-flag t) nil [60 77])
+            ("yapache/httpd.h" include (:system-flag t) nil [92 118])
+            ("yapache/http_protocol.h" include (:system-flag t) nil [119 153])
+            ("yapache/http_main.h" include (:system-flag t) nil [154 184])
+            ("ycfn/ycfn.h" include (:system-flag t) nil [185 207])
+            ("ycrypto/keydb/keyDb.h" include (:system-flag t) nil [208 240])
+            ("yck/tcookie.h" include (:system-flag t) nil [241 265])
+            ("boost/scoped_array.hpp" include (:system-flag t) nil [266 299])
+            ("APACHE_OK" variable (:constant-flag t) nil [319 328])
+            ("dht/FwCode.h" include (:system-flag t) nil [349 372])
+            ("ApacheRequestImpl.h" include (:system-flag t) nil [373 403])
+            ("yaxx/StringUtils.h" include (:system-flag t) nil [404 433])
+            ("yax/cookiejar.h" include (:system-flag t) nil [434 460])
+            ("yax/profile.h" include (:system-flag t) nil [461 485])
+            ("dht/UCharUtils.h" include (:system-flag t) nil [486 513])
+            ("dht/ActionContext.h" include (:system-flag t) nil [514 544])
+            ("dht/LogUtils.h" include (:system-flag t) nil [545 570])
+            ("dht/YcaClient.h" include (:system-flag t) nil [571 597])
+            ("dht/WebConstants.h" include (:system-flag t) nil [598 627])
+            ("dht/ActionContext.h" include nil nil [628 658])
+            ("dht/ProcessContext.h" include nil nil [659 690])
+            ("dht/StringUtils.h" include nil nil [691 719])
+            ("boost/scoped_array.hpp" include (:system-flag t) nil [720 753])
+            ("ForwardEncryption.h" include nil nil [754 784])
+            ("yax/login.h" include (:system-flag t) nil [785 807])
+            ("dht/JsonObject.h" include (:system-flag t) nil [808 835])
+            ("log" variable
+               (:typemodifiers ("static")
+                :default-value "log4cpp::Category::getInstance(\"dht.framework.\" __FILE__)"
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [837 927])
+            ("ApacheRequestImpl::s_authCheck" variable
+               (:pointer 1
+                :constant-flag t
+                :default-value "\"YAUTH_CHECK\""
+                :type "char")
+                nil [929 993])
+            ("ApacheRequestImpl::s_missingOrInvalidCookie" variable
+               (:pointer 1
+                :constant-flag t
+                :default-value "\"22\""
+                :type "char")
+                nil [994 1062])
+            ("ApacheRequestImpl::s_cookieError" variable
+               (:pointer 1
+                :constant-flag t
+                :default-value "\"yahoo-cookie-error\""
+                :type "char")
+                nil [1063 1136])
+            ("REQ_BUFFER_SIZE" variable (:constant-flag t) nil [1184 1199])
+            ("MAX_STRSIZE_TO_LOG" variable (:constant-flag t) nil [1242 1260])
+            ("ApacheRequestImpl" function
+               (:constructor-flag t
+                :parent "ApacheRequestImpl"
+                :type ("ApacheRequestImpl" type (:type "class") nil nil))
+                nil [1268 1460])
+            ("ApacheRequestImpl" function
+               (:destructor-flag t
+                :parent "ApacheRequestImpl"
+                :type "void")
+                nil [1464 1507])
+            ("addGetParams" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("args" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1635 1652]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1581 2663])
+            ("checkEncryption" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2722 2737]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [2665 5981])
+            ("getEncValidTime" function
+               (:parent "ApacheRequestImpl"
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [5983 6056])
+            ("getBodyEncVersion" function
+               (:parent "ApacheRequestImpl"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [6058 6138])
+            ("init" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("r" variable
+                       (:pointer 1
+                        :type ("request_rec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6186 6201]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [6140 8116])
+            ("setCryptoKeyName" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [8160 8176]))                  
+                :type "void")
+                nil [8118 8206])
+            ("isBodyEncrypted" function
+               (:parent "ApacheRequestImpl"
+                :type "bool")
+                nil [8208 8283])
+            ("getPathAndParams" function
+               (:parent "ApacheRequestImpl"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [8285 8370])
+            ("getPath" function
+               (:parent "ApacheRequestImpl"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [8372 8446])
+            ("getParam" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("param" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8641 8666]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [8600 8881])
+            ("getParam" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("paramKey" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8918 8946])
+                    ("values" variable
+                       (:reference 1
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8947 8977]))                  
+                :type "void")
+                nil [8884 9248])
+            ("getParam" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("paramKey" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9285 9313])
+                    ("values" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9314 9347]))                  
+                :type "void")
+                nil [9251 9618])
+            ("getParams" function
+               (:parent "ApacheRequestImpl"
+                :constant-flag t
+                :type ("std::multimap" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [9620 9733])
+            ("read" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("buffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9785 9798])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9799 9811])
+                    ("read_size" variable
+                       (:reference 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9812 9830]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [9739 10030])
+            ("readBodyToString" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("limit" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10090 10103]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [10032 12827])
+            ("getBody" function
+               (:parent "ApacheRequestImpl"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [12829 12914])
+            ("getBody" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("data" variable
+                       (:reference 1
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12965 12981]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [12916 13607])
+            ("getBody" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("data" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13658 13679]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [13609 14215])
+            ("hasBody" function
+               (:parent "ApacheRequestImpl"
+                :type "bool")
+                nil [14217 14296])
+            ("getMethod" function
+               (:parent "ApacheRequestImpl"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [14298 14399])
+            ("getOperation" function
+               (:parent "ApacheRequestImpl"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [14401 14651])
+            ("getHeader" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("header" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14688 14714])
+                    ("value" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14715 14735]))                  
+                :type "bool")
+                nil [14653 15063])
+            ("getHeader" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("header" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15107 15133]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [15065 15221])
+            ("hasHeader" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("header" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15258 15284]))                  
+                :type "bool")
+                nil [15223 15373])
+            ("getPathSegment" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("index" variable (:type "int") (reparse-symbol arg-sub-list) [15562 15572]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [15515 15692])
+            ("getRemoteIP" function
+               (:parent "ApacheRequestImpl"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [15697 15909])
+            ("getYcaHeader" function
+               (:parent "ApacheRequestImpl"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [15911 16006])
+            ("GetHeaders" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("headers" variable
+                       (:reference 1
+                        :type ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16043 16087]))                  
+                :type "void")
+                nil [16008 16525])
+            ("dequote" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16567 16585])
+                    ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16586 16597]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [16527 17653])
+            ("header_iterate_func" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17700 17710])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17751 17767])
+                    ("value" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17808 17826]))                  
+                :type "int")
+                nil [17657 18782])
+            ("authenticateUser" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("userName" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18841 18863])
+                    ("yuid" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18864 18882])
+                    ("guid" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18887 18905])
+                    ("expireTime" variable
+                       (:reference 1
+                        :type ("time_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18906 18925]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [18784 21778])
+            ("getYuid" function
+               (:parent "ApacheRequestImpl"
+                :arguments 
+                  ( ("userName" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [21828 21849])
+                    ("jar" variable (:type ("yax_cookiejar_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21850 21870])
+                    ("yuid" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21871 21889]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [21780 22445]))          
+    :file "ApacheRequestImpl.cc"
+    :pointmax 22599
+    :fsize 22598
+    :lastmodtime '(20449 26717)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MAX_STRSIZE_TO_LOG" . ((number "256" 1262 . 1265)))
+          ("APACHE_OK" . ((number "0" 326 . 327)))
+          ("REQ_BUFFER_SIZE" . ((number "4096" 1200 . 1204)))
+          )
+
+    )
+   (semanticdb-table "ApacheRequestImpl.h"
+    :file "ApacheRequestImpl.h"
+    :fsize 11088
+    :lastmodtime '(20449 26717)
+    )
+   (semanticdb-table "ForwardEncryption.h"
+    :file "ForwardEncryption.h"
+    :fsize 1644
+    :lastmodtime '(20449 26717)
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svn!trunk!dht!framework!base!src!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

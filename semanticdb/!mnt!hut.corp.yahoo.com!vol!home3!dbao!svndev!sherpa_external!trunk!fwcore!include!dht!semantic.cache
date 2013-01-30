@@ -1,0 +1,1065 @@
+;; Object dht/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dht/"
+  :tables (list 
+   (semanticdb-table "CrDecls.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("CR_DECLS_H" variable (:constant-flag t) nil [87 97])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [426 457])
+            ("string" include (:system-flag t) nil [458 475])
+            ("vector" include (:system-flag t) nil [476 493])
+            ("map" include (:system-flag t) nil [494 508])
+            ("JsonOutput" type
+               (:prototype t
+                :type "class")
+                nil [536 553])
+            ("JsonOutputPtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("JsonOutput" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::shared_ptr"
+                :type "typedef")
+                nil [554 606])
+            ("JsonObject" type
+               (:prototype t
+                :type "class")
+                nil [635 652])
+            ("JsonObjectPtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("JsonObject" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::shared_ptr"
+                :type "typedef")
+                nil [653 705])
+            ("JsonObjectIterator" type
+               (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                :superclasses "std::map::iterator"
+                :type "typedef")
+                nil [706 777])
+            ("JsonArrayIterator" type
+               (:typedef ("std::vector::iterator" type (:type "class") nil nil)
+                :superclasses "std::vector::iterator"
+                :type "typedef")
+                nil [778 839])
+            ("JsonObjectCIter" type
+               (:typedef ("std::map::const_iterator" type (:type "class") nil nil)
+                :superclasses "std::map::const_iterator"
+                :type "typedef")
+                nil [840 914])
+            ("JsonArrayCIter" type
+               (:typedef ("std::vector::const_iterator" type (:type "class") nil nil)
+                :superclasses "std::vector::const_iterator"
+                :type "typedef")
+                nil [915 979])
+            ("JsonInput" type
+               (:prototype t
+                :type "class")
+                nil [1007 1023])
+            ("JsonInputPtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("JsonInput" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::shared_ptr"
+                :type "typedef")
+                nil [1024 1074])
+            ("BrokerMessage" type
+               (:prototype t
+                :type "class")
+                nil [1105 1125])
+            ("BrokerMessagePtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("BrokerMessage" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::shared_ptr"
+                :type "typedef")
+                nil [1126 1184])
+            ("Message" type
+               (:prototype t
+                :type "class")
+                nil [1209 1223])
+            ("Buffer" type
+               (:prototype t
+                :type "class")
+                nil [1225 1238])
+            ("UtilityBuffer" type
+               (:prototype t
+                :type "class")
+                nil [1239 1259])
+            ("LogStorage" type
+               (:prototype t
+                :type "class")
+                nil [1260 1277]))          
+    :file "CrDecls.h"
+    :pointmax 1437
+    :fsize 1436
+    :lastmodtime '(20550 21459)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CR_DECLS_H")
+          )
+
+    )
+   (semanticdb-table "Message.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__MESSAGE_H__" variable (:constant-flag t) nil [90 103])
+            ("string" include (:system-flag t) nil [105 122])
+            ("map" include (:system-flag t) nil [123 137])
+            ("list" include (:system-flag t) nil [138 153])
+            ("vector" include (:system-flag t) nil [154 171])
+            ("set" include (:system-flag t) nil [172 186])
+            ("iostream" include (:system-flag t) nil [187 206])
+            ("sys/types.h" include (:system-flag t) nil [207 229])
+            ("dht/CrCode.h" include nil nil [231 254])
+            ("dht/UtilityBuffer.h" include (:system-flag t) nil [255 285])
+            ("Message" type
+               (:prototype t
+                :type "class")
+                nil [287 301])
+            ("<<" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("ostr" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [527 546])
+                    ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [546 565]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [501 566])
+            ("Message" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [665 672])
+                    ("HeaderIterator" type
+                       (:typedef ("std::multimap::iterator" type (:type "class") nil nil)
+                        :superclasses "std::multimap::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [682 755])
+                    ("HeaderCIterator" type
+                       (:typedef ("std::multimap::const_iterator" type (:type "class") nil nil)
+                        :superclasses "std::multimap::const_iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [760 840])
+                    ("HeaderDescriptor" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::pair" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::vector"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [845 919])
+                    ("MessageSerializer" friend nil (reparse-symbol classsubparts) [925 955])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("ostr" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [994 1013])
+                            ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1013 1032]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [961 1033])
+                    ("TestMessage" friend nil (reparse-symbol classsubparts) [1038 1062])
+                    ("DaemonMessage" friend nil (reparse-symbol classsubparts) [1394 1420])
+                    ("Message" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1427 1437])
+                    ("Message" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1443 1462])
+                    ("calcSerializationSize" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("totalSize" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1687 1707])
+                            ("numHeaders" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1708 1729]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1652 1736])
+                    ("serializeDirect" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2253 2264])
+                            ("size" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2265 2278]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2208 2285])
+                    ("serialize" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2865 2871])
+                            ("" variable (:type ("data" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2872 2877])
+                            ("size" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2878 2891]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2826 2898])
+                    ("deserialize" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3235 3252])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3253 3265]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3194 3266])
+                    ("deserializeEnvelope" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3743 3760])
+                            ("dataSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3814 3832])
+                            ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3886 3900])
+                            ("" variable (:type ("bodyData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3901 3910])
+                            ("bodySize" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3964 3984]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3694 3985])
+                    ("deserializeBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4497 4514])
+                            ("bodySize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4515 4531])
+                            ("overallSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4582 4603])
+                            ("shouldCopy" variable (:type "bool") (reparse-symbol arg-sub-list) [4604 4620]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4452 4621])
+                    ("deserializeBody" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4774 4791])
+                            ("bodySize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4792 4808])
+                            ("overallSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4858 4879]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4729 4970])
+                    ("copy" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5176 5206])
+                    ("headerBegin" function
+                       (:prototype-flag t
+                        :type ("HeaderCIterator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5355 5391])
+                    ("headerEnd" function
+                       (:prototype-flag t
+                        :type ("HeaderCIterator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5527 5561])
+                    ("numHeaders" function
+                       (:prototype-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5617 5643])
+                    ("getOperation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5773 5820])
+                    ("setOperation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("operation" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5970 6000]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5944 6001])
+                    ("getPerRequestLog" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6115 6160])
+                    ("setPerRequestLog" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("logstr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6305 6331]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6275 6332])
+                    ("getTestHook" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6436 6476])
+                    ("setTestHook" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("hookstr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6606 6633]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6581 6634])
+                    ("getBrokerTestHook" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6752 6798])
+                    ("setBrokerTestHook" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("hookstr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6941 6968]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6910 6969])
+                    ("getErrorStack" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7085 7127])
+                    ("setErrorStack" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("estack" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7272 7298]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7245 7299])
+                    ("hasResponseCode" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7453 7482])
+                    ("setResponseCode" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("code" variable (:type ("CrCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7684 7710]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7663 7711])
+                    ("getResponseCode" function
+                       (:prototype-flag t
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8029 8074])
+                    ("setPrefix" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("prefix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8339 8365]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8308 8366])
+                    ("getPrefix" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8506 8543])
+                    ("getBodySize" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8644 8679])
+                    ("attachBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [9245 9255])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9255 9267])
+                            ("shouldOwn" variable (:type "bool") (reparse-symbol arg-sub-list) [9267 9282]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [9221 9283])
+                    ("writeBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [9592 9608])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9609 9621]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9553 9622])
+                    ("readBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10110 10120])
+                            ("bufSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10120 10135])
+                            ("bodySize" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10135 10152]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10072 10159])
+                    ("readBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("dest" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10367 10385]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10329 10392])
+                    ("getBody" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type "char")
+                        (reparse-symbol classsubparts) [10592 10667])
+                    ("clear" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [10732 10753])
+                    ("clearBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [10807 10832])
+                    ("clearHeaders" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [10884 10912])
+                    ("getEnvHdrLen" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11002 11058])
+                    ("deserializeLogMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [11103 11120])
+                            ("datalen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11121 11138]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11064 11139])
+                    ("protected" label nil (reparse-symbol classsubparts) [11141 11152])
+                    ("Message" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("serializer" variable
+                               (:pointer 1
+                                :type ("MessageSerializer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11165 11195]))                          
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11157 11196])
+                    ("HEADER_OPERATION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11206 11248])
+                    ("HEADER_RESPONSE_CODE" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11253 11299])
+                    ("HEADER_PER_REQUEST_LOG" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11304 11352])
+                    ("HEADER_TEST_HOOK" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11357 11399])
+                    ("HEADER_BROKER_TEST_HOOK" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11404 11453])
+                    ("HEADER_ERR_STACK" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11458 11500])
+                    ("CURRENT_ENCODING_VER" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11602 11648])
+                    ("getHdrNames" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("hdrNames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11949 11988]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [11925 11989])
+                    ("getHdrDescriptor" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("desc" variable
+                               (:reference 1
+                                :type ("HeaderDescriptor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12256 12280]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12227 12281])
+                    ("Message" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12304 12323]))                          
+                        :type ("explicit" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12287 12324])
+                    ("getHeader" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12615 12639]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12586 12646])
+                    ("getHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12843 12867])
+                            ("values" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12868 12899]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12828 12906])
+                    ("getHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13101 13125])
+                            ("values" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13126 13159]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13086 13166])
+                    ("getHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13362 13385])
+                            ("values" variable
+                               (:reference 1
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13385 13415]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13347 13423])
+                    ("setHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13588 13612])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13613 13638]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13573 13640])
+                    ("removeHeader" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13813 13836]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13787 13837])
+                    ("private" label nil (reparse-symbol classsubparts) [13839 13847])
+                    ("data_" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [13852 13864])
+                    ("dataSize_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13923 13940])
+                    ("isOwner_" variable (:type "bool") (reparse-symbol classsubparts) [13982 13996])
+                    ("prefix_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14064 14084])
+                    ("headers_" variable (:type ("std::multimap" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [14353 14401])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14495 14505]))                          
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14476 14506])
+                    ("writeSerialForm" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("destBuf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [14549 14563])
+                            ("totalSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14614 14633])
+                            ("numHeaders" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14684 14704]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14512 14711])
+                    ("deserializeHeaders" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable
+                               (:reference 1
+                                :type ("UtilityBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14757 14777])
+                            ("numHeaders" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14778 14798]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14717 14799])
+                    ("envHdrLen_" variable
+                       (:typemodifiers ("mutable")
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14805 14831]))                  
+                :type "class")
+                nil [648 14910]))          
+    :file "Message.h"
+    :pointmax 15126
+    :fsize 15125
+    :lastmodtime '(20550 21459)
+    :unmatched-syntax '((punctuation 3899 . 3900) (punctuation 2870 . 2871) (punctuation 1420 . 1421) (punctuation 1062 . 1063) (punctuation 955 . 956))
+    :lexical-table 
+        '(("__MESSAGE_H__")
+          )
+
+    )
+   (semanticdb-table "StringUtilsCore.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__STRING_UTIL_CORE_H" variable (:constant-flag t) nil [166 186])
+            ("iostream" include (:system-flag t) nil [187 206])
+            ("iomanip" include (:system-flag t) nil [207 225])
+            ("sstream" include (:system-flag t) nil [226 244])
+            ("dht/CrCode.h" include (:system-flag t) nil [245 268])
+            ("StringUtilsCore" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [358 365])
+                    ("urlEscape" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("input" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [649 675])
+                            ("output" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [676 697]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [627 698])
+                    ("urlEscape" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("input" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [826 851]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [797 852])
+                    ("urlUnescape" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("input" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1154 1180])
+                            ("output" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1181 1202]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1130 1203])
+                    ("buildTopicName" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1355 1381])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1420 1447]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1321 1448])
+                    ("buildTopicName" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1607 1633])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1665 1692])
+                            ("topic" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1724 1744]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1580 1745])
+                    ("parseTopicName" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2082 2107])
+                            ("table" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2139 2159])
+                            ("tablet" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2191 2212]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2055 2213])
+                    ("convertHexStringToUI64" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2584 2609])
+                            ("out" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2610 2624]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2525 2625])
+                    ("convertHexStringToUI32" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2997 3022])
+                            ("out" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3023 3037]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2937 3038])
+                    ("convertUI64ToHexString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("val" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3410 3424]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3367 3425])
+                    ("convertUI32ToHexString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("val" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3788 3806]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3745 3807])
+                    ("convertUI32ToMinimalHexString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("val" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4187 4205]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4137 4206])
+                    ("toPrintable" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4541 4557])
+                            ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4558 4569]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4510 4570])
+                    ("crcHash" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4756 4773])
+                            ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4774 4787]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4732 4788])
+                    ("toString" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("item" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4919 4926]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [4863 4927])
+                    ("fromString" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("strValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5273 5301])
+                            ("value" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5339 5348]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [5200 5349])
+                    ("numberToHexString" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5637 5645]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [5568 5646])
+                    ("numberToMinimalHexString" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5908 5916]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [5832 5917])
+                    ("hexStringToNumber" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("strvalue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6298 6326])
+                            ("value" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6370 6379]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [6219 6380])
+                    ("EMPTY_STRING" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6386 6424]))                  
+                :type "class")
+                nil [333 6427])
+            ("toString" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("std::string" type (:type "class") nil nil)
+                :arguments 
+                  ( ("item" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6490 6497]))                  
+                :parent "StringUtilsCore")
+                nil [6429 6592])
+            ("fromString" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("strValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6666 6694])
+                    ("value" variable
+                       (:reference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6706 6715]))                  
+                :parent "StringUtilsCore")
+                nil [6594 6955])
+            ("numberToHexString" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("std::string" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7026 7034]))                  
+                :parent "StringUtilsCore")
+                nil [6957 7212])
+            ("numberToMinimalHexString" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("std::string" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7290 7298]))                  
+                :parent "StringUtilsCore")
+                nil [7214 7401])
+            ("hexStringToNumber" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("strvalue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7481 7509])
+                    ("value" variable
+                       (:reference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7528 7537]))                  
+                :parent "StringUtilsCore")
+                nil [7403 7767]))          
+    :file "StringUtilsCore.h"
+    :pointmax 7927
+    :fsize 7926
+    :lastmodtime '(20550 21459)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__STRING_UTIL_CORE_H")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndev!sherpa_external!trunk!fwcore!include!dht!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

@@ -1,0 +1,409 @@
+;; Object simulator/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "simulator/"
+  :tables (list 
+   (semanticdb-table "LbSimControllerTransport.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LB_SIM_CONTROLLER_TRANSPORT_H" variable (:constant-flag t) nil [106 135])
+            ("dht/ControllerTransport.h" include (:system-flag t) nil [137 173])
+            ("dht/data.h" include (:system-flag t) nil [174 195])
+            ("MySQLImpl.h" include nil nil [196 218])
+            ("LbJobSchema.h" include (:system-flag t) nil [219 243])
+            ("MapStrUI64" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("uint64_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [245 296])
+            ("MapStrUI64Iter" type
+               (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                :superclasses "std::map::iterator"
+                :type "typedef")
+                nil [297 362])
+            ("MapStrUI64CIter" type
+               (:typedef ("std::map::const_iterator" type (:type "class") nil nil)
+                :superclasses "std::map::const_iterator"
+                :type "typedef")
+                nil [363 435])
+            ("JobStatus" type
+               (:members 
+                  ( ("JOB_RUNNING" variable
+                       (:constant-flag t
+                        :default-value (472 473)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [458 473])
+                    ("JOB_DONE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [479 488]))                  
+                :type "enum")
+                nil [437 491])
+            ("LbSimControllerTransport" type
+               (:superclasses 
+                  ( ("ControllerTransport" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [559 566])
+                    ("s_copyRateMbPS" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "double")
+                        (reparse-symbol classsubparts) [571 606])
+                    ("s_splitExecTime" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [611 649])
+                    ("LbSimControllerTransport" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("LbSimControllerTransport" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [655 682])
+                    ("LbSimControllerTransport" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [688 724])
+                    ("ping" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("forwardToPrimary" variable (:type "bool") (reparse-symbol arg-sub-list) [764 786])
+                            ("response" variable
+                               (:reference 1
+                                :type ("DHT::Data" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [825 845]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [730 846])
+                    ("getStorageUnits" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [897 921])
+                            ("response" variable
+                               (:reference 1
+                                :type ("DHT::Data" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [971 991]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [852 992])
+                    ("getStorageTablets" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("storageUnit" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1080 1111])
+                            ("response" variable
+                               (:reference 1
+                                :type ("DHT::Data" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1146 1166]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [998 1167])
+                    ("getTCRegionName" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("region" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1222 1242]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1177 1243])
+                    ("splitTablet" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1290 1315])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1361 1387])
+                            ("splitPoint" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1433 1463])
+                            ("response" variable
+                               (:reference 1
+                                :type ("DHT::Data" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1509 1529]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1249 1530])
+                    ("copyTablet" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1575 1600])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1645 1671])
+                            ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1716 1739])
+                            ("dest" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1784 1808])
+                            ("srcRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1853 1882])
+                            ("copyType" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1927 1955])
+                            ("response" variable
+                               (:reference 1
+                                :type ("DHT::Data" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2000 2020]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1535 2021])
+                    ("getCopyCompleted" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("snapshotId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2072 2102])
+                            ("response" variable
+                               (:reference 1
+                                :type ("DHT::Data" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2102 2122]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2026 2123])
+                    ("getSplitStatus" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2168 2193])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2193 2219])
+                            ("detailedInfo" variable (:type "bool") (reparse-symbol arg-sub-list) [2264 2282])
+                            ("response" variable
+                               (:reference 1
+                                :type ("DHT::Data" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2282 2302]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2124 2303])
+                    ("calcSplitPoint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2345 2370])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2371 2397])
+                            ("splitPoint" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2438 2462]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2309 2463])
+                    ("getSplitPoint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2503 2528])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2528 2554])
+                            ("splitPoint" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2594 2618]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2468 2619])
+                    ("getHashSplitPoint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2668 2693])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2737 2763])
+                            ("splitPoint" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2807 2831]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2629 2832])
+                    ("getOrderedSplitPoint" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2880 2905])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2952 2978])
+                            ("splitPoint" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3025 3049]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2838 3050])
+                    ("isTaskInProgress" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3082 3107])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3107 3133]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3060 3134])
+                    ("getChildrenNames" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3162 3188])
+                            ("splitPoint" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3189 3219])
+                            ("leftChild" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3246 3269])
+                            ("rightChild" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3269 3293]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3140 3294])
+                    ("getHashChildren" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3321 3347])
+                            ("splitPoint" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3348 3378])
+                            ("leftChild" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3404 3427])
+                            ("rightChild" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3427 3451]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3300 3452])
+                    ("getOrderedChildren" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("parent" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3481 3507])
+                            ("splitPoint" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3508 3538])
+                            ("leftChild" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3567 3590])
+                            ("rightChild" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3590 3614]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3457 3615])
+                    ("private" label nil (reparse-symbol classsubparts) [3617 3625])
+                    ("pendingSplits_" variable
+                       (:typemodifiers ("static")
+                        :type ("MapStrUI64" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3773 3806])
+                    ("mysql_" variable (:type ("MySQLImpl" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3811 3829]))                  
+                :type "class")
+                nil [497 3832]))          
+    :file "LbSimControllerTransport.h"
+    :pointmax 4065
+    :fsize 4064
+    :lastmodtime '(20550 21253)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("LB_SIM_CONTROLLER_TRANSPORT_H")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndev!trunk!controller!loadBalancer!simulator!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

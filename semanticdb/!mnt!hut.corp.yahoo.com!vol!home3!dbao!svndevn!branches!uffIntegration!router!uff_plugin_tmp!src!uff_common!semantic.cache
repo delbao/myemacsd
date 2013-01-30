@@ -1,0 +1,567 @@
+;; Object uff_common/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "uff_common/"
+  :tables (list 
+   (semanticdb-table "PluginStorage.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("PluginStorage.h" include nil nil [1 27])
+            ("_txnStorageKey" function
+               (:prototype-flag t
+                :parent "PluginStorage"
+                :constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [29 96])
+            ("PluginStorage" function
+               (:constructor-flag t
+                :parent "PluginStorage"
+                :type ("PluginStorage" type (:type "class") nil nil))
+                nil [98 131])
+            ("PluginStorage" function
+               (:destructor-flag t
+                :parent "PluginStorage"
+                :type "void")
+                nil [133 167])
+            ("setTransactionData" function
+               (:parent "PluginStorage"
+                :arguments 
+                  ( ("txnData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [208 222]))                  
+                :type "void")
+                nil [169 249])
+            ("getTransactionData" function
+               (:pointer 1
+                :parent "PluginStorage"
+                :type "void")
+                nil [251 316]))          
+    :file "PluginStorage.cc"
+    :pointmax 318
+    :fsize 317
+    :lastmodtime '(20616 12671)
+    :unmatched-syntax '((string 72 . 94))
+    )
+   (semanticdb-table "PluginStorage.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("PLUGIN_STORAGE" variable (:constant-flag t) nil [32 46])
+            ("uf/stateserver/UFHTTPTxnObject.H" include (:system-flag t) nil [48 91])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [93 113])
+            ("PluginStorage" type
+               (:superclasses 
+                  ( ("UFPluginStorageType" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [165 172])
+                    ("PluginStorage" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("PluginStorage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [177 193])
+                    ("PluginStorage" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [199 216])
+                    ("getTransactionData" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [222 249])
+                    ("setTransactionData" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("txnData" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [279 293]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [255 294])
+                    ("_txnStorageKey" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [300 335])
+                    ("PluginStorageTest" friend nil (reparse-symbol classsubparts) [341 371])
+                    ("private" label nil (reparse-symbol classsubparts) [374 382])
+                    ("_txnData" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [387 402]))                  
+                :type "class")
+                nil [116 408]))          
+    :file "PluginStorage.h"
+    :pointmax 417
+    :fsize 416
+    :lastmodtime '(20616 12671)
+    :unmatched-syntax '((punctuation 371 . 372))
+    :lexical-table 
+        '(("PLUGIN_STORAGE")
+          )
+
+    )
+   (semanticdb-table "UFResponseAPI.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UFResponseAPI.h" include nil nil [1 27])
+            ("UFResponse" function
+               (:destructor-flag t
+                :parent "UFResponse"
+                :type "void")
+                nil [29 57])
+            ("UFResponse" function
+               (:constructor-flag t
+                :parent "UFResponse"
+                :arguments 
+                  ( ("txn" variable
+                       (:pointer 1
+                        :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [82 103])
+                    ("rType" variable (:type ("ResponseType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104 123]))                  
+                :type ("UFResponse" type (:type "class") nil nil))
+                nil [59 397])
+            ("isServerResponse" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("rType" variable (:type ("ResponseType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [433 452]))                  
+                :type "void")
+                nil [399 708])
+            ("setContext" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [817 827]))                  
+                :type "void")
+                nil [789 1240])
+            ("getContext" function
+               (:pointer 1
+                :parent "UFResponse"
+                :type "void")
+                nil [1242 1709])
+            ("getHttpStatus" function
+               (:parent "UFResponse"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [1711 1902])
+            ("getHeaderValue" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1936 1962])
+                    ("returnValue" variable
+                       (:reference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1963 1984]))                  
+                :type "bool")
+                nil [1904 2054])
+            ("setHeaderValue" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2088 2114])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2114 2141])
+                    ("urlEncode" variable
+                       (:constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [2141 2162]))                  
+                :type "bool")
+                nil [2056 2243])
+            ("setHeaderValueInsert" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2340 2366])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2367 2394]))                  
+                :type "bool")
+                nil [2302 2456])
+            ("setOrReplaceHeaderValue" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2556 2582])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2583 2610]))                  
+                :type "bool")
+                nil [2515 2672])
+            ("replaceHeaderValue" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2710 2736])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2736 2763]))                  
+                :type "bool")
+                nil [2674 2936])
+            ("isHeaderEqual" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2969 2995])
+                    ("expectedValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2995 3024]))                  
+                :type "bool")
+                nil [2938 3127])
+            ("removeHeaderValue" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3165 3191]))                  
+                :type "bool")
+                nil [3130 3251])
+            ("setFollowRedirect" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("isFollowRedirect" variable (:type "int") (reparse-symbol arg-sub-list) [3288 3309]))                  
+                :type "void")
+                nil [3253 3645])
+            ("setReturnBody" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3786 3806]))                  
+                :type "void")
+                nil [3755 3906])
+            ("setReturnStatus" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("httpStatus" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3997 4017])
+                    ("reason" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4018 4040]))                  
+                :type "void")
+                nil [3964 4193])
+            ("setErrorBody" function
+               (:parent "UFResponse"
+                :arguments 
+                  ( ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4271 4291]))                  
+                :type "void")
+                nil [4241 4392]))          
+    :file "UFResponseAPI.cc"
+    :pointmax 4394
+    :fsize 4393
+    :lastmodtime '(20616 12671)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "UFResponseAPI.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UF_RESPONSE_HH" variable (:constant-flag t) nil [32 46])
+            ("uf/stateserver/UFHTTPTxnObject.H" include (:system-flag t) nil [48 91])
+            ("uf/httputil/Util.H" include (:system-flag t) nil [92 121])
+            ("dht/StringUtils.h" include (:system-flag t) nil [122 150])
+            ("ClientResponse.hh" include nil nil [151 179])
+            ("ServerResponse.hh" include nil nil [180 208])
+            ("UFBase.h" include nil nil [209 228])
+            ("PluginStorage.h" include nil nil [229 255])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [257 277])
+            ("HTTPUtil" using (:type ("HTTPUtil" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [278 303])
+            ("UFResponse" type
+               (:superclasses 
+                  ( ("ClientResponse" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil)
+                    ("ServerResponse" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [379 386])
+                    ("ResponseType" type
+                       (:members 
+                          ( ("SERVER_RESPONSE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [414 430])
+                            ("CLIENT_RESPONSE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [436 454]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [389 455])
+                    ("UFResponse" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("txn" variable
+                               (:pointer 1
+                                :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [476 497])
+                            ("" variable (:type ("ResponseType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [498 511]))                          
+                        :type ("UFResponse" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [465 512])
+                    ("UFResponse" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [522 544])
+                    ("setContext" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ctx" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [579 589]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [555 590])
+                    ("getContext" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [600 627])
+                    ("getHttpStatus" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [729 762])
+                    ("setFollowRedirect" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("followRedirect" variable (:type "int") (reparse-symbol arg-sub-list) [950 969]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [919 970])
+                    ("setReturnBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("body" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1061 1081]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1034 1082])
+                    ("setReturnStatus" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("httpStatus" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1199 1219])
+                            ("reason" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1220 1242]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1170 1243])
+                    ("setErrorBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("body" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1398 1418]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1372 1419])
+                    ("setHeaderValue" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("headerName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1502 1528])
+                            ("headerValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1528 1555])
+                            ("urlEncode" variable
+                               (:constant-flag t
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [1555 1576]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1482 1577])
+                    ("setHeaderValueInsert" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("headerName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1831 1857])
+                            ("headerValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1858 1885]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1797 1886])
+                    ("setOrReplaceHeaderValue" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("headerName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2029 2055])
+                            ("headerValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2056 2083]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1992 2084])
+                    ("replaceHeaderValue" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("headerName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2243 2269])
+                            ("headerValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2269 2296]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2211 2297])
+                    ("removeHeaderValue" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("headerName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2394 2420]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2363 2421])
+                    ("getHeaderValue" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2586 2606])
+                            ("returnValue" variable
+                               (:reference 1
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2607 2628]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2558 2629])
+                    ("isHeaderEqual" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2949 2969])
+                            ("expectedValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2969 2998]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2922 2999])
+                    ("handleReadResponse" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3181 3207])
+                    ("UFResponseTest" friend nil (reparse-symbol classsubparts) [3217 3244])
+                    ("private" label nil (reparse-symbol classsubparts) [3251 3259])
+                    ("isServerResponse" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("rType" variable (:type ("ResponseType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3284 3303]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3262 3304])
+                    ("_txn" variable
+                       (:pointer 1
+                        :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3314 3336])
+                    ("_base" variable (:type ("UFBase" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3345 3358])
+                    ("_statusCode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3367 3388])
+                    ("_httpReason" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3397 3416])
+                    ("_returnBody" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3418 3437])
+                    ("_serverResponse" variable (:type "bool") (reparse-symbol classsubparts) [3439 3460]))                  
+                :type "class")
+                nil [306 3465]))          
+    :file "UFResponseAPI.h"
+    :pointmax 3478
+    :fsize 3477
+    :lastmodtime '(20616 12671)
+    :unmatched-syntax '((punctuation 3244 . 3245))
+    :lexical-table 
+        '(("UF_RESPONSE_HH")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndevn!branches!uffIntegration!router!uff_plugin_tmp!src!uff_common!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

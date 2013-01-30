@@ -1,0 +1,371 @@
+;; Object mysql/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mysql/"
+  :tables (list 
+   (semanticdb-table "blob_store.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sys/time.h" include (:system-flag t) nil [1 22])
+            ("string.h" include (:system-flag t) nil [23 42])
+            ("unistd.h" include (:system-flag t) nil [43 62])
+            ("sys/stat.h" include (:system-flag t) nil [63 84])
+            ("stdio.h" include (:system-flag t) nil [85 103])
+            ("stdlib.h" include (:system-flag t) nil [104 123])
+            ("blob_store.h" include nil nil [125 148])
+            ("startup" function
+               (:parent "BlobStore"
+                :type "int")
+                nil [150 608])
+            ("shutdown" function
+               (:parent "BlobStore"
+                :type "int")
+                nil [610 679])
+            ("create_tablet" function
+               (:parent "BlobStore"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [710 731])
+                    ("key_size" variable (:type "int") (reparse-symbol arg-sub-list) [732 745]))                  
+                :type "int")
+                nil [681 1262])
+            ("read" function
+               (:parent "BlobStore"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1284 1305])
+                    ("record_key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RecordKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1312 1340])
+                    ("record" variable
+                       (:reference 1
+                        :type ("RecordVal" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1347 1365])
+                    ("datalen" variable (:type ("u_int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1386 1400]))                  
+                :type "int")
+                nil [1264 2571])
+            ("readRange" function
+               (:parent "BlobStore"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2598 2619])
+                    ("start_record_key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RecordKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2624 2658])
+                    ("end_record_key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RecordKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2663 2695])
+                    ("result_set" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("Record" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2700 2728])
+                    ("datalen" variable (:type ("u_int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2754 2768]))                  
+                :type "int")
+                nil [2573 3621])
+            ("update" function
+               (:parent "BlobStore"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3645 3666])
+                    ("record" variable
+                       (:reference 1
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3667 3682]))                  
+                :type "int")
+                nil [3623 4084])
+            ("insert" function
+               (:parent "BlobStore"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4108 4129])
+                    ("record" variable
+                       (:reference 1
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4130 4145]))                  
+                :type "int")
+                nil [4086 4872])
+            ("remove" function
+               (:parent "BlobStore"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4896 4917])
+                    ("record_key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RecordKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4918 4946]))                  
+                :type "int")
+                nil [4874 5261])
+            ("flush" function
+               (:parent "BlobStore"
+                :type "int")
+                nil [5263 5390])
+            ("exportSnapshot" function
+               (:parent "BlobStore"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5423 5444])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5445 5460])
+                    ("output_stream" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5461 5481]))                  
+                :type "int")
+                nil [5392 5497])
+            ("importSnapshot" function
+               (:parent "BlobStore"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5530 5551])
+                    ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5552 5567])
+                    ("input_stream" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5568 5587]))                  
+                :type "int")
+                nil [5499 5603]))          
+    :file "blob_store.cc"
+    :pointmax 5606
+    :fsize 5605
+    :lastmodtime '(20598 3551)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "blob_store.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("string" include (:system-flag t) nil [1 18])
+            ("stdio.h" include (:system-flag t) nil [19 37])
+            ("vector" include (:system-flag t) nil [38 55])
+            ("map" include (:system-flag t) nil [56 70])
+            ("mysql/mysql.h" include (:system-flag t) nil [71 95])
+            ("RecordKey" type
+               (:typedef ("string" type (:type "class") nil nil)
+                :superclasses "string"
+                :type "typedef")
+                nil [97 122])
+            ("RecordVal" type
+               (:typedef ("string" type (:type "class") nil nil)
+                :superclasses "string"
+                :type "typedef")
+                nil [123 148])
+            ("Record" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [167 175])
+                    ("m_key" variable (:type ("RecordKey" type (:type "class") nil nil)) (reparse-symbol classsubparts) [180 196])
+                    ("m_val" variable (:type ("RecordVal" type (:type "class") nil nil)) (reparse-symbol classsubparts) [201 217])
+                    ("public" label nil (reparse-symbol classsubparts) [220 227])
+                    ("Record" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RecordKey" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [239 260])
+                            ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RecordVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [261 282]))                          
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [232 328])
+                    ("getKey" function (:type ("RecordKey" type (:type "class") nil nil)) (reparse-symbol classsubparts) [334 380])
+                    ("getVal" function (:type ("RecordVal" type (:type "class") nil nil)) (reparse-symbol classsubparts) [386 432]))                  
+                :type "class")
+                nil [150 435])
+            ("BlobStore" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [456 464])
+                    ("connection" variable (:type ("MYSQL" type (:type "class") nil nil)) (reparse-symbol classsubparts) [469 486])
+                    ("public" label nil (reparse-symbol classsubparts) [488 495])
+                    ("startup" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [499 513])
+                    ("shutdown" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [517 532])
+                    ("create_tablet" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [554 575])
+                            ("key_size" variable (:type "int") (reparse-symbol arg-sub-list) [576 589]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [536 590])
+                    ("read" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [603 624])
+                            ("record_key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RecordKey" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [637 665])
+                            ("record" variable
+                               (:reference 1
+                                :type ("RecordVal" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [678 696])
+                            ("datalen" variable (:type ("u_int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [708 722]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [594 723])
+                    ("readRange" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [741 762])
+                            ("start_record_key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RecordKey" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [779 813])
+                            ("end_record_key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RecordKey" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [830 862])
+                            ("result_set" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("Record" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [879 907])
+                            ("datalen" variable (:type ("u_int" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [924 938]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [727 939])
+                    ("update" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [954 975])
+                            ("record" variable
+                               (:reference 1
+                                :type ("Record" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [976 991]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [943 992])
+                    ("remove" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1007 1028])
+                            ("record_key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RecordKey" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1029 1057]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [996 1058])
+                    ("insert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1073 1094])
+                            ("record" variable
+                               (:reference 1
+                                :type ("Record" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1095 1110]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1062 1111])
+                    ("flush" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1115 1127])
+                    ("exportSnapshot" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1150 1171])
+                            ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1172 1187])
+                            ("output_stream" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1188 1208]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1131 1209])
+                    ("importSnapshot" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1232 1253])
+                            ("flags" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [1254 1269])
+                            ("input_stream" variable
+                               (:pointer 1
+                                :type ("FILE" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1270 1289]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1213 1290]))                  
+                :type "class")
+                nil [437 1294]))          
+    :file "blob_store.h"
+    :pointmax 1297
+    :fsize 1296
+    :lastmodtime '(20598 3551)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svn!branches!releases!current!current!storage!dotfs!mysql!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

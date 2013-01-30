@@ -1,0 +1,28 @@
+;; Object remap/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "remap/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("check_PROGRAMS" variable (:default-value ("testtokenizer")) nil [1 119])
+            ("TESTS" variable (:default-value ("testtokenizer" "testufhttpconf" "testurlmapping" "testufstateserverconf" "testurlrewrite")) nil [119 228])
+            ("AM_LDFLAGS" variable (:default-value ("-lcppunit" "-lcares" "-lpcre" "-ldl" "-lssl" "-lcrypto")) nil [229 308])
+            ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/http/component/inc/uf/httpremap" "-I$(top_srcdir)/http/component/inc/uf/httpconf" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/ufcore/inc")) nil [309 531])
+            ("LDADD" variable (:default-value ("$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la" "$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/http/component/src/remap/libufhttpremap_p.la" "$(top_builddir)/http/component/src/parser/libufhttpparser_p.la")) nil [533 834])
+            ("testtokenizer_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestTokenizerPastMaxWithShareToks.C")) nil [835 940])
+            ("testurlmapping_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestURLMapping.C")) nil [940 1027])
+            ("testurlrewrite_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestURLRewrite.C")) nil [1027 1114])
+            ("testufhttpconf_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestUFHTTPConf.C")) nil [1114 1201])
+            ("testufstateserverconf_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "TestUFStateServerConf.C")) nil [1201 1302]))          
+    :file "Makefile.am"
+    :pointmax 1302
+    :fsize 1301
+    :lastmodtime '(20625 28883)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!http!component!test!remap!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,29 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_LDFLAGS" variable (:default-value ("-lz" "-lysecure")) nil [1 28])
+            ("AM_CPPFLAGS" variable (:default-value ("-DPIPE_NOT_EFD" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc")) nil [28 203])
+            ("source_files" variable (:default-value ("ComboHandler.C" "HttpDataFetcherImpl.C")) nil [204 264])
+            ("lib_LTLIBRARIES" variable (:default-value ("libcombo.la")) nil [361 405])
+            ("libcombo_la_SOURCES" variable (:default-value ("$(source_files)")) nil [406 444])
+            ("libcombo_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver.la" "$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [444 817])
+            ("libcombo_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [818 858])
+            ("libcombo_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [858 929])
+            ("libcombo_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [929 1004])
+            ("libcombo_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [1004 1049])
+            ("libcombo_p_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver_p.la" "$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/http/component/src/remap/libufhttpremap_p.la" "$(top_builddir)/http/component/src/parser/libufhttpparser_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [1049 1436]))          
+    :file "Makefile.am"
+    :pointmax 1436
+    :fsize 1435
+    :lastmodtime '(20625 28948)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!plugin!combohandler!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

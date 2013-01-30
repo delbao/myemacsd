@@ -1,0 +1,26 @@
+;; Object conf/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "conf/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-DPIPE_NOT_EFD" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/plugin/upload_proxy/src/" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc/")) nil [68 290])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [347 373])
+            ("check_PROGRAMS" variable (:default-value ("testhttpconf")) nil [434 513])
+            ("testhttpconf_SOURCES" variable (:default-value ("$(top_builddir)/test/CppUnitTestRunner.cc" "TestHTTPConf.C")) nil [608 692])
+            ("testufhttpconf_SOURCES" variable (:default-value ("$(top_builddir)/test/CppUnitTestRunner.cc" "TestUFHTTPConf.C")) nil [692 780])
+            ("testufstateserverconf_SOURCES" variable (:default-value ("$(top_builddir)/test/CppUnitTestRunner.cc" "TestUFStateServerConf.C")) nil [780 882])
+            ("LDFLAGS" variable (:default-value ("-lcppunit" "-lynetdblib" "$(AM_LDFLAGS)")) nil [883 929])
+            ("LDADD" variable (:default-value ("$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la")) nil [929 1171]))          
+    :file "Makefile.am"
+    :pointmax 1175
+    :fsize 1174
+    :lastmodtime '(20629 53827)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!http!component!test!conf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

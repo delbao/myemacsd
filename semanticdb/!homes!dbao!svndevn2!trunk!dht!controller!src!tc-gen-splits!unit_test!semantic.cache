@@ -1,0 +1,104 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables (list 
+   (semanticdb-table "testSplitPoints.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/TestBase.h" include (:system-flag t) nil [1 26])
+            ("Common.h" include nil nil [28 47])
+            ("SplitPoints.h" include nil nil [48 72])
+            ("SplitPointsIterator.h" include nil nil [73 105])
+            ("SplitPointsYID.h" include nil nil [106 133])
+            ("SplitPointsYIDSearch.h" include nil nil [134 167])
+            ("TestHelper.h" include nil nil [169 192])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [194 214])
+            ("Headers" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [216 267])
+            ("TestSplitPoints" type
+               (:superclasses 
+                  ( ("TestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestSplitPoints" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [333 349]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [314 350])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testBasic" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [368 378]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [355 379])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [384 409])
+                    ("public" label nil (reparse-symbol classsubparts) [410 417])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [422 437])
+                    ("testBasic" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [442 459])
+                    ("testPreamble" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [464 484])
+                    ("private" label nil (reparse-symbol classsubparts) [489 497]))                  
+                :type "class")
+                nil [268 500])
+            ("splitPointsToString" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("SplitPoints" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [536 552]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [502 933])
+            ("trySplitPoints" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sp" variable
+                       (:pointer 1
+                        :type ("SplitPoints" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [964 980])
+                    ("nsplits" variable (:type "int") (reparse-symbol arg-sub-list) [981 993]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [935 1056])
+            ("testBasic" function
+               (:parent "TestSplitPoints"
+                :type "void")
+                nil [1137 1968])
+            ("testPreamble" function
+               (:parent "TestSplitPoints"
+                :type "void")
+                nil [2049 2144])
+            ("xlog" variable (:type ("log4cpp::Category" type (:type "class") nil nil)) nil [2146 2238])
+            ("main" function (:type "int") nil [2319 2407]))          
+    :file "testSplitPoints.cc"
+    :pointmax 2559
+    :fsize 2558
+    :lastmodtime '(20465 53838)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndevn2!trunk!dht!controller!src!tc-gen-splits!unit_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

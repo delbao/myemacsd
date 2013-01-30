@@ -1,0 +1,41 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "dhtMySQLImport.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/LogUtils.h" include (:system-flag t) nil [60 85])
+            ("dht/StringUtils.h" include (:system-flag t) nil [86 114])
+            ("dht/DhtFlock.h" include (:system-flag t) nil [115 140])
+            ("DhtStorageCommands.h" include nil nil [141 172])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [175 274])
+            ("dhtFlock" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("DhtFlock" type (:type "class") nil nil))
+                nil [275 301])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [311 320])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [321 333]))                  
+                :type "int")
+                nil [302 1405]))          
+    :file "dhtMySQLImport.cc"
+    :pointmax 1563
+    :fsize 1562
+    :lastmodtime '(20550 21323)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!storage!mains!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,505 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Request.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("string" include (:system-flag t) nil [187 204])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [205 235])
+            ("dht/ydht.h" include (:system-flag t) nil [253 274])
+            ("RequestImpl.h" include nil nil [476 500])
+            ("_DHT_NAMESPACE" using (:type ("_DHT_NAMESPACE" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [502 533])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [535 624])
+            ("emptyMap" variable
+               (:typemodifiers ("static")
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [626 677])
+            ("Request" function
+               (:constructor-flag t
+                :parent "Request"
+                :type ("Request" type (:type "class") nil nil))
+                nil [679 734])
+            ("Request" function
+               (:destructor-flag t
+                :parent "Request"
+                :type "void")
+                nil [737 827])
+            ("get" function
+               (:parent "Request"
+                :arguments 
+                  ( ("params" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::RequestParams" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [847 880])
+                    ("resultData" variable
+                       (:reference 1
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [881 903]))                  
+                :type "int")
+                nil [830 1416])
+            ("get" function
+               (:parent "Request"
+                :arguments 
+                  ( ("table_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1435 1465])
+                    ("record_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1477 1508])
+                    ("fields" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1519 1558])
+                    ("resultData" variable
+                       (:reference 1
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1569 1591]))                  
+                :type "int")
+                nil [1418 2299])
+            ("get" function
+               (:parent "Request"
+                :arguments 
+                  ( ("table_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2318 2348])
+                    ("record_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2360 2391])
+                    ("fields" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2402 2428])
+                    ("resultData" variable
+                       (:reference 1
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2439 2461]))                  
+                :type "int")
+                nil [2301 2798])
+            ("set" function
+               (:parent "Request"
+                :arguments 
+                  ( ("params" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::RequestParams" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2817 2850])
+                    ("data" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2862 2887]))                  
+                :type "int")
+                nil [2800 2959])
+            ("set" function
+               (:parent "Request"
+                :arguments 
+                  ( ("table_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2978 3008])
+                    ("record_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3020 3051])
+                    ("data" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3063 3088]))                  
+                :type "int")
+                nil [2961 3177])
+            ("set" function
+               (:parent "Request"
+                :arguments 
+                  ( ("params" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::RequestParams" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3196 3229])
+                    ("data" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3241 3266])
+                    ("resultData" variable
+                       (:reference 1
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3284 3306]))                  
+                :type "int")
+                nil [3179 3860])
+            ("set" function
+               (:parent "Request"
+                :arguments 
+                  ( ("table_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3879 3909])
+                    ("record_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3921 3952])
+                    ("data" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3964 3989])
+                    ("resultData" variable
+                       (:reference 1
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4007 4029]))                  
+                :type "int")
+                nil [3862 4501])
+            ("remove" function
+               (:parent "Request"
+                :arguments 
+                  ( ("params" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::RequestParams" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4523 4556])
+                    ("resultData" variable
+                       (:reference 1
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4577 4599]))                  
+                :type "int")
+                nil [4503 5130])
+            ("remove" function
+               (:parent "Request"
+                :arguments 
+                  ( ("params" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::RequestParams" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5152 5185]))                  
+                :type "int")
+                nil [5132 5255])
+            ("remove" function
+               (:parent "Request"
+                :arguments 
+                  ( ("table_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5277 5307])
+                    ("record_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5322 5353]))                  
+                :type "int")
+                nil [5257 5488])
+            ("remove" function
+               (:parent "Request"
+                :arguments 
+                  ( ("table_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5510 5540])
+                    ("record_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5555 5586])
+                    ("data" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5600 5625]))                  
+                :type "int")
+                nil [5490 6145])
+            ("remove" function
+               (:parent "Request"
+                :arguments 
+                  ( ("table_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6167 6197])
+                    ("record_name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6219 6250])
+                    ("data" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6271 6296])
+                    ("resultData" variable
+                       (:reference 1
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6317 6339]))                  
+                :type "int")
+                nil [6147 6871])
+            ("SetConfig" function
+               (:parent "Request"
+                :arguments 
+                  ( ("config" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6897 6916]))                  
+                :type "bool")
+                nil [6873 6965])
+            ("ReloadConfig" function
+               (:parent "Request"
+                :type "bool")
+                nil [6967 7040])
+            ("setProp" function
+               (:parent "Request"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7064 7087])
+                    ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7088 7113]))                  
+                :type "void")
+                nil [7042 7264])
+            ("getResponseHeaders" function
+               (:parent "Request"
+                :constant-flag t
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [7266 7549])
+            ("getErrorString" function
+               (:parent "Request"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [7551 7811]))          
+    :file "Request.cc"
+    :pointmax 8015
+    :fsize 8014
+    :lastmodtime '(20545 26295)
+    :unmatched-syntax '((punctuation 827 . 828) (punctuation 734 . 735))
+    )
+   (semanticdb-table "EzCache.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("EzCache.h" include nil nil [323 343])
+            ("_DHT_NAMESPACE" using (:type ("_DHT_NAMESPACE" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [345 376])
+            ("EzCache" function
+               (:constructor-flag t
+                :parent "EzCache"
+                :type ("EzCache" type (:type "class") nil nil))
+                nil [378 481])
+            ("EzCache" function
+               (:destructor-flag t
+                :parent "EzCache"
+                :type "void")
+                nil [483 833])
+            ("put" function
+               (:parent "EzCache"
+                :arguments 
+                  ( ("ezH" variable
+                       (:pointer 1
+                        :type ("CURL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [853 863]))                  
+                :type "void")
+                nil [835 1390])
+            ("get" function
+               (:pointer 1
+                :parent "EzCache"
+                :type ("CURL" type (:type "class") nil nil))
+                nil [1392 1735]))          
+    :file "EzCache.cc"
+    :pointmax 1939
+    :fsize 1938
+    :lastmodtime '(20545 26295)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "MultiRequest.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("log4cpp/Category.hh" include (:system-flag t) nil [190 220])
+            ("dht/ydht.h" include (:system-flag t) nil [238 259])
+            ("MultiRequestImpl.h" include nil nil [460 489])
+            ("_DHT_NAMESPACE" using (:type ("_DHT_NAMESPACE" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [491 522])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [524 618])
+            ("MultiRequest" function
+               (:constructor-flag t
+                :parent "MultiRequest"
+                :type ("MultiRequest" type (:type "class") nil nil))
+                nil [620 685])
+            ("MultiRequest" function
+               (:destructor-flag t
+                :parent "MultiRequest"
+                :type "void")
+                nil [687 787])
+            ("get" function
+               (:parent "MultiRequest"
+                :arguments 
+                  ( ("params" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::MultiRequestParams" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [842 880])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [881 893]))                  
+                :type "int")
+                nil [820 1183])
+            ("receive" function
+               (:parent "MultiRequest"
+                :arguments 
+                  ( ("recordName" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1244 1268])
+                    ("resultData" variable
+                       (:reference 1
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1296 1318])
+                    ("done" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1347 1358])
+                    ("timeout" variable (:type "int") (reparse-symbol arg-sub-list) [1386 1399]))                  
+                :type "bool")
+                nil [1217 1470])
+            ("getNotFound" function
+               (:parent "MultiRequest"
+                :constant-flag t
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1472 1576])
+            ("getNotTried" function
+               (:parent "MultiRequest"
+                :constant-flag t
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1578 1682])
+            ("getErrored" function
+               (:parent "MultiRequest"
+                :constant-flag t
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1684 1786])
+            ("getResponseCode" function
+               (:parent "MultiRequest"
+                :type "int")
+                nil [1788 1871])
+            ("getResponseHeaders" function
+               (:parent "MultiRequest"
+                :constant-flag t
+                :type ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1873 2000])
+            ("setProp" function
+               (:parent "MultiRequest"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2029 2052])
+                    ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2053 2078]))                  
+                :type "void")
+                nil [2002 2114]))          
+    :file "MultiRequest.cc"
+    :pointmax 2318
+    :fsize 2317
+    :lastmodtime '(20545 26295)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "LogUtils.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LOG_UTIL_H" variable (:constant-flag t) nil [28 38])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [39 69])
+            ("DHT_DEBUG_STREAM" variable (:constant-flag t) nil [79 95])
+            ("DHT_INFO_STREAM" variable (:constant-flag t) nil [256 271])
+            ("DHT_INFO_WITH_STACK_STREAM" variable (:constant-flag t) nil [430 456])
+            ("DHT_WARN_STREAM" variable (:constant-flag t) nil [615 630])
+            ("DHT_ERROR_STREAM" variable (:constant-flag t) nil [789 805])
+            ("DHT_CRIT_STREAM" variable (:constant-flag t) nil [966 981]))          
+    :file "LogUtils.h"
+    :pointmax 1140
+    :fsize 1139
+    :lastmodtime '(20545 26295)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("LOG_UTIL_H")
+          ("DHT_CRIT_STREAM" (spp-arg-list nil 981 . 983) . 
+              ((FOR "for" 984 . 987) (semantic-list "(bool x_logbool_x = true; x_logbool_x && log.isCritEnabled(); x_logbool_x = false)" 987 . 1069) (symbol "log" 1070 . 1073) (punctuation "." 1073 . 1074) (symbol "critStream" 1074 . 1084) (semantic-list "()" 1084 . 1086) (punctuation "<" 1087 . 1088) (punctuation "<" 1088 . 1089) (symbol "__FUNCTION__" 1090 . 1102) (punctuation "<" 1103 . 1104) (punctuation "<" 1104 . 1105) (string "\"():\"" 1106 . 1111) (punctuation "<" 1112 . 1113) (punctuation "<" 1113 . 1114) (symbol "__LINE__" 1115 . 1123) (punctuation "<" 1124 . 1125) (punctuation "<" 1125 . 1126) (string "\":\"" 1127 . 1130)))
+          ("DHT_ERROR_STREAM" (spp-arg-list nil 805 . 807) . 
+              ((FOR "for" 808 . 811) (semantic-list "(bool x_logbool_x = true; x_logbool_x && log.isErrorEnabled(); x_logbool_x = false)" 811 . 894) (symbol "log" 895 . 898) (punctuation "." 898 . 899) (symbol "errorStream" 899 . 910) (semantic-list "()" 910 . 912) (punctuation "<" 913 . 914) (punctuation "<" 914 . 915) (symbol "__FUNCTION__" 916 . 928) (punctuation "<" 929 . 930) (punctuation "<" 930 . 931) (string "\"():\"" 932 . 937) (punctuation "<" 938 . 939) (punctuation "<" 939 . 940) (symbol "__LINE__" 941 . 949) (punctuation "<" 950 . 951) (punctuation "<" 951 . 952) (string "\":\"" 953 . 956)))
+          ("DHT_DEBUG_STREAM" (spp-arg-list nil 95 . 97) . 
+              ((FOR "for" 98 . 101) (semantic-list "(bool x_logbool_x = true; x_logbool_x && log.isDebugEnabled(); x_logbool_x = false)" 101 . 184) (symbol "log" 185 . 188) (punctuation "." 188 . 189) (symbol "debugStream" 189 . 200) (semantic-list "()" 200 . 202) (punctuation "<" 203 . 204) (punctuation "<" 204 . 205) (symbol "__FUNCTION__" 206 . 218) (punctuation "<" 219 . 220) (punctuation "<" 220 . 221) (string "\"():\"" 222 . 227) (punctuation "<" 228 . 229) (punctuation "<" 229 . 230) (symbol "__LINE__" 232 . 240) (punctuation "<" 241 . 242) (punctuation "<" 242 . 243) (string "\":\"" 244 . 247)))
+          ("DHT_INFO_WITH_STACK_STREAM" (spp-arg-list nil 456 . 458) . 
+              ((FOR "for" 459 . 462) (semantic-list "(bool x_logbool_x = true; x_logbool_x && log.isInfoEnabled(); x_logbool_x = false)" 462 . 544) (symbol "log" 545 . 548) (punctuation "." 548 . 549) (symbol "infoStream" 549 . 559) (semantic-list "()" 559 . 561) (punctuation "<" 562 . 563) (punctuation "<" 563 . 564) (symbol "__FUNCTION__" 566 . 578) (punctuation "<" 579 . 580) (punctuation "<" 580 . 581) (string "\"():\"" 582 . 587) (punctuation "<" 588 . 589) (punctuation "<" 589 . 590) (symbol "__LINE__" 591 . 599) (punctuation "<" 600 . 601) (punctuation "<" 601 . 602) (string "\":\"" 603 . 606)))
+          ("DHT_INFO_STREAM" (spp-arg-list nil 271 . 273) . 
+              ((FOR "for" 274 . 277) (semantic-list "(bool x_logbool_x = true; x_logbool_x && log.isInfoEnabled(); x_logbool_x = false)" 277 . 359) (symbol "log" 360 . 363) (punctuation "." 363 . 364) (symbol "infoStream" 364 . 374) (semantic-list "()" 374 . 376) (punctuation "<" 377 . 378) (punctuation "<" 378 . 379) (symbol "__FUNCTION__" 381 . 393) (punctuation "<" 394 . 395) (punctuation "<" 395 . 396) (string "\"():\"" 397 . 402) (punctuation "<" 403 . 404) (punctuation "<" 404 . 405) (symbol "__LINE__" 406 . 414) (punctuation "<" 415 . 416) (punctuation "<" 416 . 417) (string "\":\"" 418 . 421)))
+          ("DHT_WARN_STREAM" (spp-arg-list nil 630 . 632) . 
+              ((FOR "for" 633 . 636) (semantic-list "(bool x_logbool_x = true; x_logbool_x && log.isWarnEnabled(); x_logbool_x = false)" 636 . 718) (symbol "log" 719 . 722) (punctuation "." 722 . 723) (symbol "warnStream" 723 . 733) (semantic-list "()" 733 . 735) (punctuation "<" 736 . 737) (punctuation "<" 737 . 738) (symbol "__FUNCTION__" 739 . 751) (punctuation "<" 752 . 753) (punctuation "<" 753 . 754) (string "\"():\"" 755 . 760) (punctuation "<" 761 . 762) (punctuation "<" 762 . 763) (symbol "__LINE__" 764 . 772) (punctuation "<" 773 . 774) (punctuation "<" 774 . 775) (string "\":\"" 776 . 779)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!svn!trunk!client!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

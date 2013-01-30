@@ -1,0 +1,203 @@
+;; Object jmstest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "jmstest/"
+  :tables (list 
+   (semanticdb-table "publisher.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("javax.jms.*" include nil nil [1 20])
+            ("javax.naming.*" include nil nil [21 43])
+            ("weblogic.jndi.*" include nil nil [44 67])
+            ("javax.transaction.UserTransaction" include nil nil [68 109])
+            ("java.util.Hashtable" include nil nil [110 137])
+            ("java.util.Date" include nil nil [138 160])
+            ("publisher" type
+               (:typemodifiers ("public")
+                :members 
+                  ( ("JNDI_FACTORY" variable
+                       (:typemodifiers ("public" "final" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [191 273])
+                    ("JMS_FACTORY" variable
+                       (:typemodifiers ("public" "final" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [278 341])
+                    ("publishcount" variable
+                       (:typemodifiers ("public" "static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [348 381])
+                    ("repeatcount" variable
+                       (:typemodifiers ("public" "static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [386 418])
+                    ("tconFactory" variable
+                       (:typemodifiers ("protected")
+                        :type "TopicConnectionFactory")
+                        (reparse-symbol class_member_declaration) [424 469])
+                    ("tcon" variable
+                       (:typemodifiers ("protected")
+                        :type "TopicConnection")
+                        (reparse-symbol class_member_declaration) [474 505])
+                    ("tsession" variable
+                       (:typemodifiers ("protected")
+                        :type "TopicSession")
+                        (reparse-symbol class_member_declaration) [510 542])
+                    ("tpublisher" variable
+                       (:typemodifiers ("protected")
+                        :type "TopicPublisher")
+                        (reparse-symbol class_member_declaration) [547 583])
+                    ("topic" variable
+                       (:typemodifiers ("protected")
+                        :type "Topic")
+                        (reparse-symbol class_member_declaration) [588 610])
+                    ("msg" variable
+                       (:typemodifiers ("protected")
+                        :type "TextMessage")
+                        (reparse-symbol class_member_declaration) [615 641])
+                    ("usageMessage" function
+                       (:typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [647 783])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [813 826]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [789 2266])
+                    ("getInitialContext" function
+                       (:throws ("NamingException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("url" variable (:type "String") (reparse-symbol formal_parameters) [2320 2330]))                          
+                        :type "InitialContext")
+                        (reparse-symbol class_member_declaration) [2272 2619])
+                    ("close" function
+                       (:throws ("JMSException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2621 2730])
+                    ("init" function
+                       (:throws ("NamingException" "JMSException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("ctx" variable (:type "Context") (reparse-symbol formal_parameters) [3049 3060])
+                            ("topicName" variable (:type "String") (reparse-symbol formal_parameters) [3062 3078]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [3032 4168])
+                    ("sendMessage" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("message" variable (:type "String") (reparse-symbol formal_parameters) [4198 4212]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4174 4490]))                  
+                :type "class")
+                nil [162 4492]))          
+    :file "publisher.java"
+    :pointmax 4493
+    :fsize 4492
+    :lastmodtime '(20328 58230)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "receiver.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("javax.jms.*" include nil nil [1 20])
+            ("javax.naming.*" include nil nil [21 43])
+            ("weblogic.jndi.*" include nil nil [44 67])
+            ("javax.transaction.UserTransaction" include nil nil [68 109])
+            ("java.util.Hashtable" include nil nil [110 137])
+            ("java.util.Vector" include nil nil [138 162])
+            ("receiver" type
+               (:typemodifiers ("public")
+                :interfaces ("javax.jms.MessageListener")
+                :members 
+                  ( ("JNDI_FACTORY" variable
+                       (:typemodifiers ("public" "final" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [230 312])
+                    ("JMS_FACTORY" variable
+                       (:typemodifiers ("public" "final" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [317 424])
+                    ("tconFactory" variable
+                       (:typemodifiers ("protected")
+                        :type "TopicConnectionFactory")
+                        (reparse-symbol class_member_declaration) [430 475])
+                    ("tcon" variable
+                       (:typemodifiers ("protected")
+                        :type "TopicConnection")
+                        (reparse-symbol class_member_declaration) [480 511])
+                    ("tsession" variable
+                       (:typemodifiers ("protected")
+                        :type "TopicSession")
+                        (reparse-symbol class_member_declaration) [516 548])
+                    ("topic" variable
+                       (:typemodifiers ("protected")
+                        :type "Topic")
+                        (reparse-symbol class_member_declaration) [553 575])
+                    ("msg" variable
+                       (:typemodifiers ("protected")
+                        :type "TextMessage")
+                        (reparse-symbol class_member_declaration) [580 606])
+                    ("quit" variable
+                       (:typemodifiers ("public")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [769 795])
+                    ("verbose" variable
+                       (:typemodifiers ("public" "static")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [801 837])
+                    ("usageMessage" function
+                       (:typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [843 971])
+                    ("main" function
+                       (:typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [1001 1014]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [977 1996])
+                    ("getInitialContext" function
+                       (:throws ("NamingException")
+                        :typemodifiers ("private" "static")
+                        :arguments 
+                          ( ("url" variable (:type "String") (reparse-symbol formal_parameters) [2050 2060]))                          
+                        :type "InitialContext")
+                        (reparse-symbol class_member_declaration) [2002 2257])
+                    ("close" function
+                       (:throws ("JMSException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2404 2581])
+                    ("init" function
+                       (:throws ("NamingException" "JMSException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("ctx" variable (:type "Context") (reparse-symbol formal_parameters) [2755 2766]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2738 4404])
+                    ("onMessage" function
+                       (:typemodifiers ("public")
+                        :arguments 
+                          ( ("msg" variable (:type "Message") (reparse-symbol formal_parameters) [4432 4443]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4410 5177]))                  
+                :type "class")
+                nil [165 5179]))          
+    :file "receiver.java"
+    :pointmax 5180
+    :fsize 5179
+    :lastmodtime '(20328 58230)
+    :unmatched-syntax '((GT 2781 . 2782) (IDENTIFIER 2768 . 2774) (LT 2774 . 2775) (SEMICOLON 762 . 763) (PAREN_BLOCK 760 . 762) (GT 759 . 760) (COMMA 751 . 752) (LT 744 . 745) (NEW 731 . 734) (EQ 730 . 731) (GT 723 . 724) (COMMA 715 . 716) (LT 708 . 709) (SEMICOLON 686 . 687) (PAREN_BLOCK 684 . 686) (GT 683 . 684) (LT 667 . 668) (NEW 657 . 660) (EQ 656 . 657) (GT 643 . 644) (PROTECTED 611 . 620) (LT 627 . 628))
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!dht!test!jmstest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

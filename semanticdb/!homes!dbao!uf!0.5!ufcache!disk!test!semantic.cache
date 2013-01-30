@@ -1,0 +1,25 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("check_PROGRAMS" variable (:default-value ("testufdiskcache")) nil [53 90])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [90 116])
+            ("LDADD" variable (:default-value ("$(top_builddir)/ufcache/disk/api/libufdiskcache_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [116 283])
+            ("AM_CXXFLAGS" variable (:default-value ("-Wconversion")) nil [284 311])
+            ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)" "-I$(top_srcdir)/ufcache/disk/inc" "-I$(top_srcdir)/ufcore/inc")) nil [312 414])
+            ("AM_LDFLAGS" variable (:default-value ("-lcppunit")) nil [415 438])
+            ("testufdiskcache_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFDiskCache.C")) nil [439 532]))          
+    :file "Makefile.am"
+    :pointmax 558
+    :fsize 557
+    :lastmodtime '(20622 62386)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!ufcache!disk!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

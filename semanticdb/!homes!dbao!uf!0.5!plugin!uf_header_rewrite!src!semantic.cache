@@ -1,0 +1,29 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_LDFLAGS" variable (:default-value ("-lz" "-lysys" "-lmdbm")) nil [1 32])
+            ("AM_CPPFLAGS" variable (:default-value ("-DPIPE_NOT_EFD" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc/")) nil [32 209])
+            ("lib_LTLIBRARIES" variable (:default-value ("libuf_header_rewrite.la")) nil [210 278])
+            ("source_files" variable (:default-value ("condition.C" "conditions.C" "factory.C" "matcher.C" "operator.C" "operators.C" "parser.C" "regexHelper.C" "resources.C" "ruleset.C" "statement.C" "uf_header_rewrite.C")) nil [279 487])
+            ("libuf_header_rewrite_la_SOURCES" variable (:default-value ("$(source_files)")) nil [488 538])
+            ("libuf_header_rewrite_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver.la" "$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [538 917])
+            ("libuf_header_rewrite_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [917 969])
+            ("libuf_header_rewrite_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [969 1052])
+            ("libuf_header_rewrite_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [1052 1139])
+            ("libuf_header_rewrite_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [1139 1196])
+            ("libuf_header_rewrite_p_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver_p.la" "$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/http/component/src/remap/libufhttpremap_p.la" "$(top_builddir)/http/component/src/parser/libufhttpparser_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [1196 1589]))          
+    :file "Makefile.am"
+    :pointmax 1589
+    :fsize 1588
+    :lastmodtime '(20622 62396)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!plugin!uf_header_rewrite!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

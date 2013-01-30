@@ -1,0 +1,643 @@
+;; Object dht_sim/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dht_sim/"
+  :tables (list 
+   (semanticdb-table "main.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [1 23])
+            ("sys/wait.h" include (:system-flag t) nil [24 45])
+            ("unistd.h" include (:system-flag t) nil [46 65])
+            ("ysys/time.h" include (:system-flag t) nil [66 88])
+            ("iostream" include (:system-flag t) nil [90 109])
+            ("map" include (:system-flag t) nil [110 124])
+            ("memory" include (:system-flag t) nil [125 142])
+            ("TestConfig.h" include nil nil [144 167])
+            ("SharedData.h" include nil nil [168 191])
+            ("Log.h" include nil nil [192 208])
+            ("Subscriber.h" include nil nil [209 232])
+            ("Publisher.h" include nil nil [233 255])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [256 276])
+            ("ChildMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("uint32_t" type nil nil nil)
+                          ("pid_t" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [278 321])
+            ("setupSharedData" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TestConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [364 389]))                  
+                :type ("SharedData" type (:type "class") nil nil))
+                nil [323 390])
+            ("waitForChildren" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("children" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ChildMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [419 444]))                  
+                :type "void")
+                nil [391 445])
+            ("attachToShared" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TestConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [473 498])
+                    ("" variable
+                       (:pointer 1
+                        :type ("SharedData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [504 516])
+                    ("" variable (:type ("sharedData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [517 528])
+                    ("" variable
+                       (:pointer 1
+                        :type ("SequenceNumInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [529 546])
+                    ("" variable (:type ("seqNumInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [547 558])
+                    ("" variable
+                       (:pointer 1
+                        :type ("LockManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [564 577])
+                    ("" variable (:type ("lockMgr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [578 586]))                  
+                :type "bool")
+                nil [446 587])
+            ("createAndRemoveTopics" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("queueId" variable (:type "int") (reparse-symbol arg-sub-list) [623 635])
+                    ("config" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TestConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [641 666])
+                    ("subscribers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ChildMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [671 699])
+                    ("publishers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ChildMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [704 731]))                  
+                :type "void")
+                nil [589 732])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [743 752])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [753 765]))                  
+                :type "int")
+                nil [734 3624])
+            ("setupSharedData" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TestConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3667 3692]))                  
+                :type ("SharedData" type (:type "class") nil nil))
+                nil [3626 4165])
+            ("sendMsgToAllPublishers" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("queueId" variable (:type "int") (reparse-symbol arg-sub-list) [4202 4214])
+                    ("msgCommand" variable
+                       (:constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4215 4241])
+                    ("msgData" variable
+                       (:constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4246 4269])
+                    ("publishers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ChildMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4270 4297]))                  
+                :type "bool")
+                nil [4167 4671])
+            ("sendTopicAction" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("queueId" variable (:type "int") (reparse-symbol arg-sub-list) [4784 4796])
+                    ("msgCommand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4797 4817])
+                    ("topicNum" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4818 4836])
+                    ("subscribers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ChildMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4843 4871])
+                    ("publishers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ChildMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4872 4899]))                  
+                :type "bool")
+                nil [4756 5485])
+            ("createAndRemoveTopics" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("queueId" variable (:type "int") (reparse-symbol arg-sub-list) [5521 5533])
+                    ("config" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TestConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5539 5564])
+                    ("subscribers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ChildMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5569 5597])
+                    ("publishers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ChildMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5602 5629]))                  
+                :type "void")
+                nil [5487 7680])
+            ("attachToShared" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TestConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7709 7734])
+                    ("" variable
+                       (:pointer 1
+                        :type ("SharedData" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7740 7752])
+                    ("" variable (:type ("data" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7753 7758])
+                    ("" variable
+                       (:pointer 1
+                        :type ("SequenceNumInfo" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7759 7776])
+                    ("" variable (:type ("seqNumInfo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7777 7788])
+                    ("" variable
+                       (:pointer 1
+                        :type ("LockManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7794 7807])
+                    ("" variable (:type ("lockMgr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7808 7816]))                  
+                :type "bool")
+                nil [7682 8301])
+            ("waitForChildren" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("children" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ChildMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8332 8357]))                  
+                :type "void")
+                nil [8304 8791]))          
+    :file "main.cc"
+    :pointmax 8792
+    :fsize 8791
+    :lastmodtime '(20550 21323)
+    :unmatched-syntax '((punctuation 7806 . 7807) (punctuation 7775 . 7776) (punctuation 7751 . 7752) (punctuation 576 . 577) (punctuation 545 . 546) (punctuation 515 . 516))
+    )
+   (semanticdb-table "SharedData.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("H__SHARED_DATA_H__" variable (:constant-flag t) nil [36 54])
+            ("sys/types.h" include (:system-flag t) nil [55 77])
+            ("ylock/ylock.h" include (:system-flag t) nil [78 102])
+            ("TestConfig.h" include nil nil [104 127])
+            ("IPCKeys" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [222 229])
+                    ("lookupKeys" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :type ("IPCKeys" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [287 322])
+                    ("controllerMsgQueue" function (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [326 380])
+                    ("publisherSharedMem" function (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [383 439])
+                    ("subscriberSharedMem" function (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [442 499])
+                    ("lockKey" function (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [503 545])
+                    ("private" label nil (reparse-symbol classsubparts) [547 555])
+                    ("IPCKeys" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("msgQueue" variable (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [566 581])
+                            ("psharedMem" variable (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [582 599])
+                            ("ssharedMem" variable (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [600 617])
+                            ("lockKey" variable (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [618 632]))                          
+                        :type ("IPCKeys" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [558 731])
+                    ("msgQueue_" variable (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [738 754])
+                    ("psharedMem_" variable (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [757 775])
+                    ("ssharedMem_" variable (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [778 796])
+                    ("lockKey_" variable (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [799 814]))                  
+                :type "class")
+                nil [206 817])
+            ("LockManager" type
+               (:prototype t
+                :type "class")
+                nil [896 914])
+            ("SharedData" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [935 942])
+                    ("setup" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("keys" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("IPCKeys" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [972 992])
+                            ("memSize" variable
+                               (:constant-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [993 1014]))                          
+                        :type ("SharedData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [947 1015])
+                    ("attach" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("keys" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("IPCKeys" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1044 1064])
+                            ("memSize" variable
+                               (:constant-flag t
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1065 1086]))                          
+                        :type ("SharedData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1018 1087])
+                    ("cleanup" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("keys" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("IPCKeys" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1110 1130]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1090 1131])
+                    ("data" function
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1135 1171])
+                    ("size" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1174 1211])
+                    ("msgQueueId" function (:type "int") (reparse-symbol classsubparts) [1214 1260])
+                    ("lockManager" function
+                       (:pointer 1
+                        :type ("LockManager" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1263 1316])
+                    ("private" label nil (reparse-symbol classsubparts) [1318 1326])
+                    ("SharedData" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1340 1351])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1352 1364])
+                            ("msgQueueId" variable (:type "int") (reparse-symbol arg-sub-list) [1365 1380])
+                            ("lockMgr" variable
+                               (:pointer 1
+                                :type ("LockManager" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1381 1402]))                          
+                        :type ("SharedData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1329 1488])
+                    ("data_" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1492 1504])
+                    ("size_" variable
+                       (:constant-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1507 1526])
+                    ("msgQueueId_" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1529 1551])
+                    ("lockMgr_" variable
+                       (:pointer 1
+                        :type ("LockManager" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1554 1576]))                  
+                :type "class")
+                nil [915 1579])
+            ("SequenceNumInfo" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1757 1764])
+                    ("initialize" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SharedData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1790 1813])
+                            ("config" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TestConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1814 1839]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1767 1840])
+                    ("calculateMemorySize" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("config" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TestConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1877 1902]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1843 1903])
+                    ("attach" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SharedData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1938 1961])
+                            ("config" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TestConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1996 2021]))                          
+                        :type ("SequenceNumInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1907 2022])
+                    ("PLACEHOLDER_SEQ_NUM" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2100 2142])
+                    ("INVALID_ENTRY_SEQ_NUM" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2247 2291])
+                    ("RESET_SEQ_NUM" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2567 2603])
+                    ("maxTopicNum" function (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2607 2660])
+                    ("numKeysPerTopic" function (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2663 2724])
+                    ("sequenceNum" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("topicNum" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2795 2813])
+                            ("keyNum" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2814 2830]))                          
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2774 2837])
+                    ("sequenceNum" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("topicNum" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2893 2911])
+                            ("keyNum" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2912 2928])
+                            ("val" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2929 2942]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2876 2943])
+                    ("private" label nil (reparse-symbol classsubparts) [2945 2953])
+                    ("SequenceNumInfo" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("maxTopicNum" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2972 2999])
+                            ("numKeysPerTopic" variable
+                               (:constant-flag t
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3000 3031])
+                            ("data" variable
+                               (:pointer 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3038 3053]))                          
+                        :type ("SequenceNumInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2956 3148])
+                    ("maxTopicNum_" variable
+                       (:constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3152 3180])
+                    ("numKeysPerTopic_" variable
+                       (:constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3183 3215])
+                    ("entries_" variable
+                       (:pointer 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3218 3237]))                  
+                :type "class")
+                nil [1732 3240])
+            ("LockManager" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3475 3482])
+                    ("setup" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :type ("LockManager" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3486 3514])
+                    ("cleanup" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3517 3539])
+                    ("open" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :type ("LockManager" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3542 3569])
+                    ("lock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3660 3673]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3650 3674])
+                    ("unlock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3690 3703]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3678 3704])
+                    ("private" label nil (reparse-symbol classsubparts) [3706 3714])
+                    ("LockManager" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("mutexes" variable
+                               (:pointer 2
+                                :type ("ylock_mutex_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3729 3753]))                          
+                        :type ("LockManager" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3717 3776])
+                    ("LockManager" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3779 3823])
+                    ("initMutexes" function
+                       (:prototype-flag t
+                        :pointer 2
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("flags" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3862 3878])
+                            ("mode" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [3879 3894]))                          
+                        :type ("ylock_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3827 3895])
+                    ("mutexes_" variable
+                       (:pointer 2
+                        :type ("ylock_mutex_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3899 3924]))                  
+                :type "class")
+                nil [3455 3927])
+            ("genLockKey" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("topic" variable
+                       (:constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4015 4036])
+                    ("cfg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TestConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4037 4059])
+                    ("key" variable
+                       (:constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4065 4084]))                  
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [3988 4132])
+            ("LockWrapper" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4201 4208])
+                    ("LockWrapper" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("key" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4223 4236])
+                            ("lockMgr" variable
+                               (:reference 1
+                                :type ("LockManager" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4237 4258]))                          
+                        :type ("LockWrapper" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4211 4367])
+                    ("LockWrapper" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4371 4409])
+                    ("unlock" function (:type "void") (reparse-symbol classsubparts) [4413 4516])
+                    ("private" label nil (reparse-symbol classsubparts) [4518 4526])
+                    ("key_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4529 4543])
+                    ("lockMgr_" variable (:type ("LockManager" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4546 4568])
+                    ("isLocked_" variable (:type "bool") (reparse-symbol classsubparts) [4571 4586]))                  
+                :type "class")
+                nil [4180 4589])
+            ("IPCMsg" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4727 4734])
+                    ("readMsg" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("queueId" variable (:type "int") (reparse-symbol arg-sub-list) [4853 4865])
+                            ("msgType" variable (:type "long") (reparse-symbol arg-sub-list) [4866 4879]))                          
+                        :type ("IPCMsg" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4824 4880])
+                    ("writeMsg" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("queueId" variable (:type "int") (reparse-symbol arg-sub-list) [4976 4988])
+                            ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("IPCMsg" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4989 5007]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4955 5008])
+                    ("IPCMsg" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("msgType" variable (:type "long") (reparse-symbol arg-sub-list) [5019 5032])
+                            ("command" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5033 5050])
+                            ("data" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5051 5065]))                          
+                        :type ("IPCMsg" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5012 5125])
+                    ("msgType" function (:type "long") (reparse-symbol classsubparts) [5157 5198])
+                    ("command" function (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5201 5246])
+                    ("data" function (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5249 5288])
+                    ("CMD_NEW_TOPIC" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5307 5343])
+                    ("CMD_DELETE_TOPIC" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5346 5385])
+                    ("private" label nil (reparse-symbol classsubparts) [5387 5395])
+                    ("msgType_" variable (:type "long") (reparse-symbol classsubparts) [5398 5412])
+                    ("command_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5415 5433])
+                    ("data_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5436 5451]))                  
+                :type "class")
+                nil [4712 5454]))          
+    :file "SharedData.h"
+    :pointmax 5463
+    :fsize 5462
+    :lastmodtime '(20550 21323)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("H__SHARED_DATA_H__")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!storage!dht_sim!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

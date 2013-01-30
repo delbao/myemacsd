@@ -1,0 +1,27 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("check_PROGRAMS" variable (:default-value ("testmd5")) nil [53 116])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [116 142])
+            ("LDADD" variable (:default-value ("$(top_builddir)/ufcache/disk/api/libufdiskcache_p.la" "$(top_builddir)/ufcache/disk/store/src/libufdiskstore_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [142 372])
+            ("AM_CXXFLAGS" variable (:default-value ("-Wconversion")) nil [373 400])
+            ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)" "-I$(top_srcdir)/ufcache/disk/inc" "-I$(top_srcdir)/ufcache/disk/store/inc" "-I$(top_srcdir)/ufcore/inc")) nil [401 546])
+            ("AM_LDFLAGS" variable (:default-value ("-lcppunit")) nil [547 570])
+            ("testufdiskstore_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFDiskStore.C")) nil [571 658])
+            ("testmd5_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testmd5.C")) nil [658 729])
+            ("testbloom_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testBloomFilter.C")) nil [729 810]))          
+    :file "Makefile.am"
+    :pointmax 836
+    :fsize 835
+    :lastmodtime '(20622 62388)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!ufcache!disk!store!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

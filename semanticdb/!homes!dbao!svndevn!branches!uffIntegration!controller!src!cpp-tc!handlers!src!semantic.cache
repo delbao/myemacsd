@@ -1,0 +1,1198 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Request.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("REQUEST_H" variable (:constant-flag t) nil [86 95])
+            ("dht/JsonObject.h" include nil nil [97 124])
+            ("string" include (:system-flag t) nil [125 142])
+            ("vector" include (:system-flag t) nil [143 160])
+            ("set" include (:system-flag t) nil [161 175])
+            ("iostream" include (:system-flag t) nil [176 195])
+            ("sstream" include (:system-flag t) nil [196 214])
+            ("unicode/regex.h" include (:system-flag t) nil [215 241])
+            ("dht/WebCode.h" include (:system-flag t) nil [242 266])
+            ("dht/System.h" include (:system-flag t) nil [267 290])
+            ("dht/typedefs.h" include (:system-flag t) nil [291 316])
+            ("TcCode.h" include nil nil [317 336])
+            ("TcFields.h" include nil nil [337 358])
+            ("TcChoices.h" include nil nil [359 381])
+            ("TcDbSchema.h" include nil nil [382 405])
+            ("MapStrMapStrStr" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::map" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [437 520])
+            ("RETURN_THIS_IF_NOT_OK" variable (:constant-flag t) nil [567 588])
+            ("DBP" variable (:constant-flag t) nil [923 926])
+            ("Request" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1057 1064])
+                    ("Request" function
+                       (:constructor-flag t
+                        :type ("Request" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1066 1078])
+                    ("init" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("jo" variable
+                               (:reference 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1118 1133]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1084 1136])
+                    ("toJson" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1177 1189])
+                            ("" variable (:type ("jo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1190 1193]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1141 1202])
+                    ("reset" function
+                       (:typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1252 1293])
+                    ("toMap" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("m" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1317 1355]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1298 1359])
+                    ("errStr" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1365 1386])
+                    ("Request" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1388 1409])
+                    ("jsonArrayToVector" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("jo" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1444 1459])
+                            ("v" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1460 1488]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1415 1489])
+                    ("getValFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jo" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1562 1577])
+                            ("mand" variable (:type "bool") (reparse-symbol arg-sub-list) [1578 1588])
+                            ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1589 1605])
+                            ("val" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1606 1623])
+                            ("defaultVal" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1624 1654])
+                            ("regex" variable
+                               (:reference 1
+                                :type ("RegexMatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1655 1675]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1542 1676])
+                    ("getValFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jo" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1701 1716])
+                            ("mand" variable (:type "bool") (reparse-symbol arg-sub-list) [1717 1727])
+                            ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1728 1744])
+                            ("val" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1753 1783])
+                            ("idefaultVal" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1784 1828])
+                            ("regex" variable
+                               (:reference 1
+                                :type ("RegexMatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1829 1849]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1681 1850])
+                    ("getValFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jo" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1875 1890])
+                            ("mand" variable (:type "bool") (reparse-symbol arg-sub-list) [1891 1901])
+                            ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1902 1918])
+                            ("val" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1919 1928])
+                            ("defaultVal" variable (:type "int") (reparse-symbol arg-sub-list) [1929 1944])
+                            ("regex" variable
+                               (:reference 1
+                                :type ("RegexMatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1945 1965]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1855 1966])
+                    ("getValFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jo" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1991 2006])
+                            ("mand" variable (:type "bool") (reparse-symbol arg-sub-list) [2007 2017])
+                            ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2018 2034])
+                            ("val" variable
+                               (:reference 1
+                                :type ("time_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2035 2047])
+                            ("defaultVal" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2048 2066])
+                            ("regex" variable
+                               (:reference 1
+                                :type ("RegexMatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2067 2087]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1971 2088])
+                    ("getValFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jo" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2113 2128])
+                            ("mand" variable (:type "bool") (reparse-symbol arg-sub-list) [2129 2139])
+                            ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2140 2156])
+                            ("val" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [2157 2167])
+                            ("defaultVal" variable (:type "bool") (reparse-symbol arg-sub-list) [2168 2184])
+                            ("regex" variable
+                               (:reference 1
+                                :type ("RegexMatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2185 2205]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2093 2206])
+                    ("getValFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jo" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2231 2246])
+                            ("mand" variable (:type "bool") (reparse-symbol arg-sub-list) [2247 2257])
+                            ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2258 2274])
+                            ("val" variable
+                               (:reference 1
+                                :type "unsigned int")
+                                (reparse-symbol arg-sub-list) [2275 2293])
+                            ("defaultVal" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2294 2318])
+                            ("regex" variable
+                               (:reference 1
+                                :type ("RegexMatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2319 2339]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2211 2340])
+                    ("getValFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jo" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2365 2380])
+                            ("mand" variable (:type "bool") (reparse-symbol arg-sub-list) [2381 2391])
+                            ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2392 2408])
+                            ("" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2409 2421])
+                            ("" variable (:type ("val" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2422 2426]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2345 2427])
+                    ("stringMatchesRegex" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("regex" variable
+                               (:reference 1
+                                :type ("RegexMatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2711 2731])
+                            ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2732 2755]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2687 2756])
+                    ("checkExtraKeys" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jo" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2782 2797])
+                            ("expectedKeys" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2798 2824]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2762 2825])
+                    ("isValid" function (:type "bool") (reparse-symbol classsubparts) [2831 2877])
+                    ("anyToJson" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("s" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2905 2926]))                          
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2883 2972])
+                    ("anyToJson" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("i" variable (:type "int") (reparse-symbol arg-sub-list) [2999 3005]))                          
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2977 3052])
+                    ("anyToJson" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("u" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3079 3094]))                          
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3057 3141])
+                    ("anyToJson" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("b" variable (:type "bool") (reparse-symbol arg-sub-list) [3168 3175]))                          
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3146 3219])
+                    ("anyToJson" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("r" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("Request" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3246 3263]))                          
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3224 3270])
+                    ("anyToJson" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("reqs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("Request" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3297 3331]))                          
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3275 3338])
+                    ("anyToJson" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("vs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3365 3400]))                          
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3343 3407])
+                    ("anyToJson" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("m" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("Request" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3434 3475]))                          
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3412 3482])
+                    ("addError" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fmt" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3542 3558])
+                            ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [3559 3563]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3528 3564])
+                    ("translateKeys" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("trans" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3596 3615])
+                            ("src" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3616 3656])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3657 3698]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3570 3699])
+                    ("translateKeys" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("trans" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3730 3749])
+                            ("src" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::map" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3750 3804])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::map" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3805 3860]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3704 3861])
+                    ("translateKeys" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("trans" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3892 3911])
+                            ("src" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("std::map" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3912 3976])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("std::map" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3977 4042]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3866 4043])
+                    ("removeBlanks" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("m" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4074 4112]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4049 4113])
+                    ("removeBlanks" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("m" variable
+                               (:reference 1
+                                :type ("MapStrMapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4143 4162]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4118 4163])
+                    ("assertMatch" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("matcher" variable
+                               (:reference 1
+                                :type ("RegexMatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4208 4230])
+                            ("target" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4231 4257])
+                            ("emptyOk" variable (:type "bool") (reparse-symbol arg-sub-list) [4258 4271])
+                            ("error" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4272 4297]))                          
+                        :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4168 4298])
+                    ("sanitizeBadString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("badString" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4499 4528]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4462 4529])
+                    ("convert" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("T" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5201 5228])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::map" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5229 5284]))                          
+                        :typemodifiers ("static"))
+                        (reparse-symbol classsubparts) [5162 5485])
+                    ("convert" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("src" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::map" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5641 5695])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("T" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5696 5718]))                          
+                        :typemodifiers ("static"))
+                        (reparse-symbol classsubparts) [5506 5914])
+                    ("convert" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("T" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5980 6017])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("std::map" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6018 6083]))                          
+                        :typemodifiers ("static"))
+                        (reparse-symbol classsubparts) [5941 6300])
+                    ("convert" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "void"
+                        :arguments 
+                          ( ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("std::map" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6366 6436])
+                            ("dest" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("T" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6437 6469]))                          
+                        :typemodifiers ("static"))
+                        (reparse-symbol classsubparts) [6327 6690])
+                    ("isUnique" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("v" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("T" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6782 6806]))                          
+                        :typemodifiers ("static"))
+                        (reparse-symbol classsubparts) [6739 6882])
+                    ("private" label nil (reparse-symbol classsubparts) [6886 6894])
+                    ("uintToString" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("u" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6924 6931]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6899 6932])
+                    ("errors_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [6937 6970])
+                    ("getSubObject" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jo" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6993 7008])
+                            ("mand" variable (:type "bool") (reparse-symbol arg-sub-list) [7009 7019])
+                            ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7020 7036])
+                            ("" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7037 7049])
+                            ("" variable (:type ("jout" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7050 7055])
+                            ("expectedType" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7056 7081]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6975 7082])
+                    ("handleGet" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("rc" variable (:type ("CrCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7102 7126])
+                            ("mand" variable (:type "bool") (reparse-symbol arg-sub-list) [7127 7137])
+                            ("key" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7138 7154])
+                            ("expectedType" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [7155 7180]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7087 7181]))                  
+                :type "class")
+                nil [1041 7184])
+            ("Response" type
+               (:typedef ("Request" type (:type "class") nil nil)
+                :superclasses "Request"
+                :type "typedef")
+                nil [7249 7274]))          
+    :file "Request.h"
+    :pointmax 7297
+    :fsize 7296
+    :lastmodtime '(20614 58588)
+    :unmatched-syntax '((punctuation 7048 . 7049) (punctuation 2420 . 2421) (punctuation 1409 . 1410) (punctuation 1188 . 1189) (punctuation 1078 . 1079))
+    :lexical-table 
+        '(("DBP" (spp-arg-list ("...") 926 . 931) . 
+              ((symbol "fprintf" 932 . 939) (semantic-list "(stderr, \"## %5d   %s  \", __LINE__, __FILE__)" 939 . 984) (punctuation ";" 984 . 985) (symbol "fprintf" 986 . 993) (semantic-list "(stderr,  __VA_ARGS__)" 993 . 1015) (punctuation ";" 1015 . 1016) (symbol "fprintf" 1017 . 1024) (semantic-list "(stderr, \"\\n\")" 1024 . 1038) (punctuation ";" 1038 . 1039)))
+          ("REQUEST_H")
+          ("RETURN_THIS_IF_NOT_OK" (spp-arg-list ("x_othercode_x" "x_call_x") 588 . 613) . ((semantic-list "{                                                   \\
+        CrCode::ResponseCode rcx___ = (x_call_x);       \\
+        if(rcx___ != CrCode::CrOk) {                    \\
+            return (x_othercode_x);                     \\
+        }                                               \\
+    }" 621 . 912)))
+          )
+
+    )
+   (semanticdb-table "TabletAllocator.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/LogUtils.h" include (:system-flag t) nil [1 26])
+            ("TabletAllocator.h" include nil nil [27 55])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [56 76])
+            ("ASSERT_INITED" variable (:constant-flag t) nil [94 107])
+            ("TabletAllocator" function
+               (:constructor-flag t
+                :parent "TabletAllocator"
+                :type ("TabletAllocator" type (:type "class") nil nil))
+                nil [242 316])
+            ("init" function
+               (:parent "TabletAllocator"
+                :arguments 
+                  ( ("suRows" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("MapStrStr" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [362 393])
+                    ("serverWeights" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [394 445])
+                    ("tablets" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [446 486]))                  
+                :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                nil [318 716])
+            ("limitServers" function
+               (:parent "TabletAllocator"
+                :arguments 
+                  ( ("servers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [911 951]))                  
+                :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                nil [859 2072])
+            ("excludeServers" function
+               (:parent "TabletAllocator"
+                :arguments 
+                  ( ("servers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2128 2168]))                  
+                :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                nil [2074 2765])
+            ("get" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("m" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("map" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil)
+                                  ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2799 2828])
+                    ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2829 2847])
+                    ("value" variable
+                       (:reference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2848 2862]))                  
+                :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                nil [2767 3091])
+            ("processRows" function
+               (:parent "TabletAllocator"
+                :arguments 
+                  ( ("rows" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("MapStrStr" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3144 3173]))                  
+                :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                nil [3093 3929])
+            ("processWeightMap" function
+               (:parent "TabletAllocator"
+                :arguments 
+                  ( ("weightMap" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("double" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3987 4034]))                  
+                :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                nil [3931 4782])
+            ("computeTotalWeight" function
+               (:parent "TabletAllocator"
+                :type "void")
+                nil [4784 5034])
+            ("initServerToNumTablets" function
+               (:parent "TabletAllocator"
+                :arguments 
+                  ( ("nTablets" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5106 5120]))                  
+                :type "void")
+                nil [5060 5825])
+            ("verifyTabletCount" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("serverIdToNumTablets" variable
+                       (:constant-flag t
+                        :type ("map" type
+                             (:template-specifier 
+                                ( ("uint" type nil nil nil)
+                                  ("uint" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5968 6011])
+                    ("nTabletsToAllocate" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6012 6036]))                  
+                :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                nil [5921 6419])
+            ("allocate" function
+               (:parent "TabletAllocator"
+                :arguments 
+                  ( ("tabletToServerId" variable
+                       (:reference 1
+                        :type ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("uint" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6469 6515]))                  
+                :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                nil [6421 7293]))          
+    :file "TabletAllocator.cc"
+    :pointmax 7294
+    :fsize 7293
+    :lastmodtime '(20614 60050)
+    :unmatched-syntax '((symbol 78 . 84))
+    :lexical-table 
+        '(("ASSERT_INITED" . 
+              ((IF "if" 108 . 110) (semantic-list "(!inited_)" 110 . 120) (semantic-list "{ return TcCode::Error; }" 121 . 146)))
+          )
+
+    )
+   (semanticdb-table "Dispatcher.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("Dispatcher.h" include nil nil [60 83])
+            ("TcProcessContext.h" include nil nil [84 113])
+            ("TimeStatisticsStruct.h" include nil nil [114 147])
+            ("TcFailover.h" include nil nil [148 171])
+            ("dht/JsonObject.h" include (:system-flag t) nil [172 199])
+            ("dht/CrDecls.h" include (:system-flag t) nil [200 224])
+            ("dht/LogUtils.h" include (:system-flag t) nil [225 250])
+            ("dht/UCharUtils.h" include (:system-flag t) nil [251 278])
+            ("dht/ApacheHandler.h" include (:system-flag t) nil [279 309])
+            ("dht/SchemaNames.h" include (:system-flag t) nil [310 338])
+            ("dht/System.h" include (:system-flag t) nil [339 362])
+            ("dht/StopWatch.h" include (:system-flag t) nil [363 389])
+            ("TcCommon.h" include nil nil [390 411])
+            ("Registry.h" include nil nil [412 433])
+            ("dht/YcaClient.h" include (:system-flag t) nil [434 460])
+            ("TOP_LEVEL" variable (:constant-flag t) nil [478 487])
+            ("HEADER_USER_AGENT" variable (:constant-flag t) nil [508 525])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [540 560])
+            ("addErrorStackToStatusBlock" function
+               (:parent "Dispatcher"
+                :arguments 
+                  ( ("status" variable
+                       (:pointer 1
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [892 911]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [831 2103])
+            ("Dispatcher" function
+               (:constructor-flag t
+                :parent "Dispatcher"
+                :type ("Dispatcher" type (:type "class") nil nil))
+                nil [2106 2769])
+            ("Dispatcher" function
+               (:destructor-flag t
+                :parent "Dispatcher"
+                :type "void")
+                nil [2771 2847])
+            ("connectToPstore" function
+               (:parent "Dispatcher"
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [2849 3382])
+            ("makeMethodPlusVersion" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("method" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3420 3441])
+                    ("version" variable (:type "int") (reparse-symbol arg-sub-list) [3442 3454]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [3384 3589])
+            ("getProtoVersion" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("WebRequest" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3618 3640]))                  
+                :type "int")
+                nil [3591 3972])
+            ("isSuAndAllowedCommand" function
+               (:parent "Dispatcher"
+                :arguments 
+                  ( ("operation" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4014 4036])
+                    ("appid" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4037 4056]))                  
+                :type "bool")
+                nil [3974 4540])
+            ("handleRequest" function
+               (:parent "Dispatcher"
+                :arguments 
+                  ( ("request" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("WebRequest" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4591 4617])
+                    ("jsonResp" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4618 4640]))                  
+                :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                nil [4542 7966])
+            ("resolveMethod" function
+               (:parent "Dispatcher"
+                :arguments 
+                  ( ("method" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8017 8043])
+                    ("protoVersion" variable (:type "int") (reparse-symbol arg-sub-list) [8044 8061])
+                    ("" variable
+                       (:pointer 1
+                        :type ("Registration" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8062 8076])
+                    ("" variable (:type ("reg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8077 8081]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [7969 8634])
+            ("handleRequest" function
+               (:parent "Dispatcher"
+                :arguments 
+                  ( ("remoteIP" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8685 8708])
+                    ("userAgent" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8709 8733])
+                    ("protoVersion" variable (:type "int") (reparse-symbol arg-sub-list) [8734 8751])
+                    ("method" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8752 8778])
+                    ("param" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8779 8804])
+                    ("jsonReq" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8805 8832])
+                    ("jsonResp" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8833 8855]))                  
+                :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                nil [8636 9577])
+            ("processRequest" function
+               (:parent "Dispatcher"
+                :arguments 
+                  ( ("remoteIP" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9629 9652])
+                    ("userAgent" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9653 9677])
+                    ("protoVersion" variable (:type "int") (reparse-symbol arg-sub-list) [9678 9695])
+                    ("method" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9696 9722])
+                    ("param" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9723 9748])
+                    ("jsonReq" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9749 9776])
+                    ("" variable
+                       (:pointer 1
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9777 9789])
+                    ("" variable (:type ("respJo" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9790 9797]))                  
+                :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                nil [9579 15115])
+            ("createResponse" function
+               (:parent "Dispatcher"
+                :arguments 
+                  ( ("wc" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15230 15255])
+                    ("payload" variable
+                       (:reference 1
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15256 15276])
+                    ("" variable
+                       (:pointer 1
+                        :type ("JsonObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15277 15289])
+                    ("" variable (:type ("response" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15290 15299]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [15181 15796])
+            ("checkShouldForward" function
+               (:parent "Dispatcher"
+                :arguments 
+                  ( ("req" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("WebRequest" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15851 15873])
+                    ("should" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [15874 15887]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [15798 17443])
+            ("registerMethod" function
+               (:parent "Dispatcher"
+                :arguments 
+                  ( ("method" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17478 17497])
+                    ("req" variable
+                       (:pointer 1
+                        :type ("Request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17498 17511])
+                    ("resp" variable
+                       (:pointer 1
+                        :type ("Response" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17512 17527])
+                    ("handler" variable
+                       (:pointer 1
+                        :type ("Handler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17528 17545]))                  
+                :type "void")
+                nil [17445 17717]))          
+    :file "Dispatcher.cc"
+    :pointmax 17719
+    :fsize 17718
+    :lastmodtime '(20614 58589)
+    :unmatched-syntax '((punctuation 15288 . 15289) (punctuation 9788 . 9789) (punctuation 8075 . 8076) (symbol 462 . 468))
+    :lexical-table 
+        '(("TOP_LEVEL" . ((symbol "WS_TXT_YDHT" 488 . 499)))
+          ("HEADER_USER_AGENT" . ((string "\"User-Agent\"" 526 . 538)))
+          )
+
+    )
+   (semanticdb-table "Dispatcher.h"
+    :file "Dispatcher.h"
+    :fsize 3387
+    :lastmodtime '(20614 58588)
+    )
+   (semanticdb-table "TcProcessContext.h"
+    :file "TcProcessContext.h"
+    :fsize 5656
+    :lastmodtime '(20614 58588)
+    )
+   (semanticdb-table "TimeStatisticsStruct.h"
+    :file "TimeStatisticsStruct.h"
+    :fsize 1489
+    :lastmodtime '(20630 46996)
+    )
+   (semanticdb-table "TcFailover.h"
+    :file "TcFailover.h"
+    :fsize 503
+    :lastmodtime '(20614 58589)
+    )
+   (semanticdb-table "Registry.h"
+    :file "Registry.h"
+    :fsize 723
+    :lastmodtime '(20614 58588)
+    )
+   )
+  :file "!homes!dbao!svndevn!branches!uffIntegration!controller!src!cpp-tc!handlers!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

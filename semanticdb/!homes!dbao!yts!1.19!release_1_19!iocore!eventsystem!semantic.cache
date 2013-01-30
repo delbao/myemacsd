@@ -1,0 +1,800 @@
+;; Object eventsystem/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "eventsystem/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("1.2" "foreign" "no-installman" "no-installinfo")) nil [63 123])
+            ("INCLUDES" variable (:default-value ("@TBD_1_INCDIR@")) nil [124 150])
+            ("INCLUDES" variable (:default-value ("@TBD_2_INCDIR@")) nil [150 177])
+            ("INCLUDES" variable (:default-value ("@TBD_3_INCDIR@")) nil [177 204])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/common/include")) nil [204 247])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/librecords")) nil [247 286])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/libinktomi++")) nil [286 327])
+            ("DEFS" variable (:default-value ("@IOCORE_MODULARIZED_DEFS@")) nil [328 362])
+            ("noinst_LIBRARIES" variable (:default-value ("libinkevent.a")) nil [363 396])
+            ("libinkevent_a_SOURCES" variable (:default-value ("Thread.cc" "Lock.cc" "UnixEvent.cc" "UnixEThread.cc" "UnixEventProcessor.cc" "PQ-List.cc" "ProtectedQueue.cc" "IOBuffer.cc" "SocketManager.cc" "Inline.cc" "Processor.cc" "EventSystem.cc")) nil [397 633]))          
+    :file "Makefile.am"
+    :pointmax 634
+    :fsize 633
+    :lastmodtime '(20632 41266)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "I_Continuation.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_I_Continuation_h_" variable (:constant-flag t) nil [358 376])
+            ("inktomi++.h" include nil nil [378 400])
+            ("I_Lock.h" include nil nil [401 420])
+            ("Continuation" type
+               (:prototype t
+                :type "class")
+                nil [422 441])
+            ("ContinuationQueue" type
+               (:prototype t
+                :type "class")
+                nil [442 466])
+            ("Processor" type
+               (:prototype t
+                :type "class")
+                nil [467 483])
+            ("ProxyMutex" type
+               (:prototype t
+                :type "class")
+                nil [484 501])
+            ("EThread" type
+               (:prototype t
+                :type "class")
+                nil [502 516])
+            ("CONTINUATION_EVENT_NONE" variable (:constant-flag t) nil [726 749])
+            ("CONTINUATION_DONE" variable (:constant-flag t) nil [766 783])
+            ("CONTINUATION_CONT" variable (:constant-flag t) nil [805 822])
+            ("Continuation" type
+               (:prototype t
+                :type "struct")
+                nil [837 857])
+            ("force_VFPT_to_top" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1524 1531])
+                    ("force_VFPT_to_top" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1534 1565]))                  
+                :type "class")
+                nil [1498 1568])
+            ("Continuation" type
+               (:superclasses 
+                  ( ("force_VFPT_to_top" type
+                       (:protection "unspecified"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2632 2639])
+                    ("handler" variable (:type ("ContinuationHandler" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2913 2942])
+                    ("handler_name" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2959 2993])
+                    ("mutex" variable (:type ("ProxyMutexPtr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3192 3219])
+                    ("link" variable (:type ("Link" type
+                         (:template-specifier 
+                            ( ("Continuation" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3358 3384])
+                    ("handleEvent" function
+                       (:arguments 
+                          ( ("event" variable (:type "int") (reparse-symbol arg-sub-list) [3923 3934])
+                            ("data" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3960 3973]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3907 4023])
+                    ("Continuation" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("amutex" variable
+                               (:pointer 1
+                                :type ("ProxyMutex" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4258 4279])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4280 4285]))                          
+                        :type ("Continuation" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4245 4286]))                  
+                :type "class")
+                nil [2591 4289])
+            ("SET_HANDLER" variable (:constant-flag t) nil [4504 4515])
+            ("SET_CLASS_HANDLER" variable (:constant-flag t) nil [5076 5093])
+            ("SET_CONTINUATION_HANDLER" variable (:constant-flag t) nil [5420 5444])
+            ("Continuation" function
+               (:constructor-flag t
+                :parent "Continuation"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("amutex" variable
+                       (:pointer 1
+                        :type ("ProxyMutex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5657 5677]))                  
+                :type ("Continuation" type (:type "class") nil nil))
+                nil [5623 5759]))          
+    :file "I_Continuation.h"
+    :pointmax 5790
+    :fsize 5789
+    :lastmodtime '(20632 41266)
+    :unmatched-syntax '((punctuation 4278 . 4279) (number 3974 . 3975) (punctuation 3972 . 3973) (number "0" 3935 . 3958) (punctuation 3933 . 3934) (punctuation 932 . 933) (semantic-list 908 . 932) (semantic-list 871 . 907) (INT 867 . 870) (TYPEDEF 859 . 866))
+    :lexical-table 
+        '(("_I_Continuation_h_")
+          ("CONTINUATION_CONT" . ((number "1" 834 . 835)))
+          ("CONTINUATION_DONE" . ((number "0" 795 . 796)))
+          ("SET_HANDLER" (spp-arg-list ("_h") 4515 . 4519) . ((semantic-list "(handler = ((ContinuationHandler)_h),handler_name = #_h)" 4524 . 4580)))
+          ("SET_CLASS_HANDLER" (spp-arg-list ("_c" "_h") 5093 . 5101) . ((symbol "SET_HANDLER" 5106 . 5117) (semantic-list "((_c##Handler)&_c::_h)" 5117 . 5139)))
+          ("CONTINUATION_EVENT_NONE" . ((number "0" 755 . 756)))
+          ("SET_CONTINUATION_HANDLER" (spp-arg-list ("_c" "_h") 5444 . 5451) . ((semantic-list "(_c->handler = ((ContinuationHandler) _h),_c->handler_name = #_h)" 5456 . 5521)))
+          )
+
+    )
+   (semanticdb-table "I_Lock.h"
+    :file "I_Lock.h"
+    :fsize 22456
+    :lastmodtime '(20632 41265)
+    )
+   (semanticdb-table "I_EThread.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_EThread_h_" variable (:constant-flag t) nil [365 376])
+            ("inktomi++.h" include nil nil [378 400])
+            ("I_Thread.h" include nil nil [401 422])
+            ("I_Lock.h" include nil nil [423 442])
+            ("I_PriorityEventQueue.h" include nil nil [443 476])
+            ("I_ProxyAllocator.h" include nil nil [477 506])
+            ("I_ProtectedQueue.h" include nil nil [508 537])
+            ("vector" include (:system-flag t) nil [539 556])
+            ("PER_THREAD_DATA" variable (:constant-flag t) nil [566 581])
+            ("MUTEX_RETRY_DELAY" variable (:constant-flag t) nil [603 620])
+            ("MAX_ACCEPT_EVENTS" variable (:constant-flag t) nil [695 712])
+            ("Continuation" type
+               (:prototype t
+                :type "struct")
+                nil [880 900])
+            ("NetHandler" type
+               (:prototype t
+                :type "struct")
+                nil [901 919])
+            ("UDPNetHandler" type
+               (:prototype t
+                :type "struct")
+                nil [920 941])
+            ("DiskHandler" type
+               (:prototype t
+                :type "struct")
+                nil [942 961])
+            ("LogConfiguration" type
+               (:prototype t
+                :type "struct")
+                nil [962 986])
+            ("LogEventForwarder" type
+               (:prototype t
+                :type "struct")
+                nil [987 1012])
+            ("Event" type
+               (:prototype t
+                :type "struct")
+                nil [1013 1026])
+            ("SessionBucket" type
+               (:prototype t
+                :type "struct")
+                nil [1027 1048])
+            ("IOBufferData" type
+               (:prototype t
+                :type "class")
+                nil [1050 1069])
+            ("IOBufferBlock" type
+               (:prototype t
+                :type "class")
+                nil [1070 1090])
+            ("ThreadType" type
+               (:members 
+                  ( ("REGULAR" variable
+                       (:constant-flag t
+                        :default-value (1117 1118)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1109 1118])
+                    ("MONITOR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1119 1127])
+                    ("DEDICATED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1127 1137]))                  
+                :type "enum")
+                nil [1092 1138])
+            ("teThreadType" type
+               (:members 
+                  ( ("keAsyncThread" variable
+                       (:constant-flag t
+                        :default-value (1173 1174)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1158 1174])
+                    ("keBoundThread" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1175 1189])
+                    ("keSpawnThread" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1190 1205]))                  
+                :type "enum")
+                nil [1139 1206])
+            ("EThread" type
+               (:superclasses 
+                  ( ("Thread" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2376 2383])
+                    ("schedule_imm" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("c" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3270 3287])
+                            ("callback_event" variable (:type "int") (reparse-symbol arg-sub-list) [3313 3344])
+                            ("" variable (:type ("EVENT_IMMEDIATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3345 3361])
+                            ("cookie" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3387 3410])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3411 3417]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3247 3418])
+                    ("schedule_at" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("c" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4229 4246])
+                            ("atimeout_at" variable (:type ("ink_hrtime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4271 4298])
+                            ("callback_event" variable (:type "int") (reparse-symbol arg-sub-list) [4323 4354])
+                            ("" variable (:type ("EVENT_INTERVAL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4355 4370])
+                            ("cookie" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4395 4418])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4419 4425]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4207 4426])
+                    ("schedule_in" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("c" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5228 5245])
+                            ("atimeout_in" variable (:type ("ink_hrtime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5270 5297])
+                            ("callback_event" variable (:type "int") (reparse-symbol arg-sub-list) [5322 5353])
+                            ("" variable (:type ("EVENT_INTERVAL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5354 5369])
+                            ("cookie" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5394 5417])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5418 5424]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5206 5425])
+                    ("schedule_every" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("c" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6191 6208])
+                            ("aperiod" variable (:type ("ink_hrtime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6236 6259])
+                            ("callback_event" variable (:type "int") (reparse-symbol arg-sub-list) [6287 6318])
+                            ("" variable (:type ("EVENT_INTERVAL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6319 6334])
+                            ("cookie" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [6362 6385])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6386 6392]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6166 6393])
+                    ("schedule_imm_local" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("c" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7062 7079])
+                            ("callback_event" variable (:type "int") (reparse-symbol arg-sub-list) [7111 7142])
+                            ("" variable (:type ("EVENT_IMMEDIATE" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7143 7159])
+                            ("cookie" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [7191 7214])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7215 7221]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7033 7222])
+                    ("schedule_at_local" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("c" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7990 8007])
+                            ("atimeout_at" variable (:type ("ink_hrtime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8038 8065])
+                            ("callback_event" variable (:type "int") (reparse-symbol arg-sub-list) [8096 8127])
+                            ("" variable (:type ("EVENT_INTERVAL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8128 8143])
+                            ("cookie" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [8174 8197])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8198 8204]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7962 8205])
+                    ("schedule_in_local" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("c" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8977 8994])
+                            ("atimeout_in" variable (:type ("ink_hrtime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9025 9052])
+                            ("callback_event" variable (:type "int") (reparse-symbol arg-sub-list) [9083 9114])
+                            ("" variable (:type ("EVENT_INTERVAL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9115 9130])
+                            ("cookie" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [9161 9184])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9185 9191]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8949 9192])
+                    ("schedule_every_local" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("c" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9937 9954])
+                            ("aperiod" variable (:type ("ink_hrtime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9987 10010])
+                            ("callback_event" variable (:type "int") (reparse-symbol arg-sub-list) [10043 10074])
+                            ("" variable (:type ("EVENT_INTERVAL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10075 10090])
+                            ("cookie" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [10123 10146])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10147 10153]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9907 10154])
+                    ("schedule_local" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("e" variable
+                               (:pointer 1
+                                :type ("Event" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10197 10206]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10175 10207])
+                    ("generator" variable (:type ("InkRand" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10211 10236])
+                    ("eventAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10239 10269])
+                    ("netVCAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10272 10302])
+                    ("sslNetVCAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10305 10338])
+                    ("inkioNetVCAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10341 10376])
+                    ("httpClientSessionAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10379 10421])
+                    ("httpServerSessionAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10424 10466])
+                    ("cacheVConnectionAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10469 10510])
+                    ("newCacheVConnectionAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10513 10557])
+                    ("openDirEntryAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10560 10597])
+                    ("ramCacheEntryAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10600 10638])
+                    ("evacuationBlockAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10641 10681])
+                    ("ioDataAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10684 10715])
+                    ("ioBlockAllocator" variable (:type ("ProxyAllocator" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10718 10750])
+                    ("ioBufAllocator" variable
+                       (:dereference 1
+                        :type ("ProxyAllocator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10753 10786])
+                    ("private" label nil (reparse-symbol classsubparts) [10931 10939])
+                    ("EThread" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("EThread" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11002 11018]))                          
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10994 11019])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("EThread" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11044 11060]))                          
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11022 11061])
+                    ("public" label nil (reparse-symbol classsubparts) [11250 11257])
+                    ("EThread" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11261 11272])
+                    ("EThread" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("att" variable (:type ("ThreadType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11284 11299])
+                            ("anid" variable (:type "int") (reparse-symbol arg-sub-list) [11300 11309]))                          
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11275 11310])
+                    ("EThread" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("att" variable (:type ("ThreadType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11322 11337])
+                            ("e" variable
+                               (:pointer 1
+                                :type ("Event" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11338 11347])
+                            ("sem" variable
+                               (:pointer 1
+                                :type ("ink_sem" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11348 11361]))                          
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11313 11362])
+                    ("EThread" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [11365 11385])
+                    ("schedule_spawn" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("cont" variable
+                               (:pointer 1
+                                :type ("Continuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11413 11433]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11389 11434])
+                    ("schedule" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("e" variable
+                               (:pointer 1
+                                :type ("Event" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11456 11466]))                          
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11438 11467])
+                    ("thread_private" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [11549 11586])
+                    ("diskHandler" variable
+                       (:pointer 1
+                        :type ("DiskHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11707 11733])
+                    ("logConfig" variable
+                       (:pointer 1
+                        :type ("LogConfiguration" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11774 11803])
+                    ("logEventForwarder" variable
+                       (:pointer 1
+                        :type ("LogEventForwarder" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11806 11843])
+                    ("aio_ops" variable (:type ("Queue" type
+                         (:template-specifier 
+                            ( ("Continuation" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [11873 11903])
+                    ("EventQueueExternal" variable (:type ("ProtectedQueue" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11907 11941])
+                    ("EventQueue" variable (:type ("PriorityEventQueue" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11944 11974])
+                    ("ethreads_to_be_signalled" variable
+                       (:pointer 2
+                        :type ("EThread" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11978 12013])
+                    ("n_ethreads_to_be_signalled" variable (:type "int") (reparse-symbol classsubparts) [12016 12047])
+                    ("total_sleep_time" variable (:type ("ink_hrtime" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12056 12084])
+                    ("accept_event" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12088 12127])
+                    ("accept_event_count" variable (:type "int") (reparse-symbol classsubparts) [12130 12155])
+                    ("main_accept_index" variable (:type "int") (reparse-symbol classsubparts) [12158 12182])
+                    ("id" variable (:type "int") (reparse-symbol classsubparts) [12186 12193])
+                    ("ethread_id" variable (:type "int") (reparse-symbol classsubparts) [12202 12217])
+                    ("heartbeat_index" variable (:type "int") (reparse-symbol classsubparts) [12248 12268])
+                    ("event_types" variable (:type "unsigned int") (reparse-symbol classsubparts) [12272 12297])
+                    ("is_event_type" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("et" variable (:type ("EventType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12319 12332]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [12300 12333])
+                    ("set_event_type" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("et" variable (:type ("EventType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12356 12369]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12336 12370])
+                    ("getEventFd" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [12373 12390])
+                    ("execute" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12417 12432])
+                    ("process_event" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("e" variable
+                               (:pointer 1
+                                :type ("Event" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12454 12463])
+                            ("calling_code" variable (:type "int") (reparse-symbol arg-sub-list) [12464 12481]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12435 12482])
+                    ("free_event" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("e" variable
+                               (:pointer 1
+                                :type ("Event" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12501 12510]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12485 12511])
+                    ("events_processed" variable (:type "long") (reparse-symbol classsubparts) [12516 12538])
+                    ("tt" variable (:type ("ThreadType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [12543 12557])
+                    ("oneevent" variable
+                       (:pointer 1
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12580 12596])
+                    ("eventsem" variable
+                       (:pointer 1
+                        :type ("ink_sem" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12632 12650])
+                    ("thread_stats" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("long long" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [12685 12721])
+                    ("thread_stats_mutex" variable
+                       (:pointer 1
+                        :type ("ProxyMutex" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12724 12755]))                  
+                :type "class")
+                nil [2343 12758])
+            ("ink_dummy_for_new" type (:type "class") nil [12760 12914])
+            ("ETHREAD_GET_PTR" variable (:constant-flag t) nil [13004 13019])
+            ("this_ethread" function
+               (:prototype-flag t
+                :pointer 1
+                :type ("EThread" type (:type "class") nil nil))
+                nil [13084 13109]))          
+    :file "I_EThread.h"
+    :pointmax 13134
+    :fsize 13133
+    :lastmodtime '(20632 41266)
+    :unmatched-syntax '((symbol 13073 . 13083) (semantic-list 12972 . 12995) (semantic-list 12940 . 12971) (NEW 12937 . 12940) (OPERATOR 12928 . 12936) (punctuation 12926 . 12927) (VOID 12922 . 12926) (INLINE 12915 . 12921) (punctuation 10145 . 10146) (punctuation 10073 . 10074) (punctuation 9183 . 9184) (punctuation 9113 . 9114) (punctuation 8196 . 8197) (punctuation 8126 . 8127) (punctuation 7213 . 7214) (punctuation 7141 . 7142) (punctuation 6384 . 6385) (punctuation 6317 . 6318) (punctuation 5416 . 5417) (punctuation 5352 . 5353) (punctuation 4417 . 4418) (punctuation 4353 . 4354) (punctuation 3409 . 3410) (punctuation 3343 . 3344))
+    :lexical-table 
+        '(("_EThread_h_")
+          ("MAX_ACCEPT_EVENTS" . ((number "20" 713 . 715)))
+          ("PER_THREAD_DATA" . ((semantic-list "(1024*1024)" 582 . 593)))
+          ("ETHREAD_GET_PTR" (spp-arg-list ("thread" "offset") 13019 . 13035) . ((semantic-list "((void*)((char*)(thread)+(offset)))" 13036 . 13071)))
+          ("MUTEX_RETRY_DELAY" . ((symbol "HRTIME_MSECONDS" 621 . 636) (semantic-list "(20)" 636 . 640)))
+          )
+
+    )
+   (semanticdb-table "I_Thread.h"
+    :file "I_Thread.h"
+    :fsize 2791
+    :lastmodtime '(20632 41265)
+    )
+   (semanticdb-table "I_PriorityEventQueue.h"
+    :file "I_PriorityEventQueue.h"
+    :fsize 2464
+    :lastmodtime '(20632 41266)
+    )
+   (semanticdb-table "I_ProxyAllocator.h"
+    :file "I_ProxyAllocator.h"
+    :fsize 2188
+    :lastmodtime '(20632 41265)
+    )
+   (semanticdb-table "I_ProtectedQueue.h"
+    :file "I_ProtectedQueue.h"
+    :fsize 1338
+    :lastmodtime '(20632 41265)
+    )
+   (semanticdb-table "UnixEThread.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ink_unused.h" include nil nil [169 192])
+            ("__TIME__" variable (:type "int") nil [322 331])
+            ("P_EventSystem.h" include nil nil [356 382])
+            ("AIOCallback" type
+               (:prototype t
+                :type "struct")
+                nil [384 403])
+            ("MAX_HEARTBEATS_MISSED" variable (:constant-flag t) nil [413 434])
+            ("NO_HEARTBEAT" variable (:constant-flag t) nil [455 467])
+            ("THREAD_MAX_HEARTBEAT_MSECONDS" variable (:constant-flag t) nil [497 526])
+            ("NO_ETHREAD_ID" variable (:constant-flag t) nil [538 551])
+            ("EThread" function
+               (:constructor-flag t
+                :parent "EThread"
+                :type ("EThread" type (:type "class") nil nil))
+                nil [574 796])
+            ("EThread" function
+               (:constructor-flag t
+                :parent "EThread"
+                :arguments 
+                  ( ("att" variable (:type ("ThreadType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [815 830])
+                    ("anid" variable (:type "int") (reparse-symbol arg-sub-list) [831 840]))                  
+                :type ("EThread" type (:type "class") nil nil))
+                nil [798 1548])
+            ("EThread" function
+               (:constructor-flag t
+                :parent "EThread"
+                :arguments 
+                  ( ("att" variable (:type ("ThreadType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1567 1582])
+                    ("e" variable
+                       (:pointer 1
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1583 1592])
+                    ("sem" variable
+                       (:pointer 1
+                        :type ("ink_sem" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1593 1606]))                  
+                :type ("EThread" type (:type "class") nil nil))
+                nil [1550 1953])
+            ("EThread" function
+               (:destructor-flag t
+                :parent "EThread"
+                :type "void")
+                nil [2091 2321])
+            ("is_event_type" function
+               (:parent "EThread"
+                :arguments 
+                  ( ("et" variable (:type ("EventType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2351 2364]))                  
+                :type "bool")
+                nil [2323 2409])
+            ("set_event_type" function
+               (:parent "EThread"
+                :arguments 
+                  ( ("et" variable (:type ("EventType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2439 2452]))                  
+                :type "void")
+                nil [2410 2487])
+            ("process_event" function
+               (:parent "EThread"
+                :arguments 
+                  ( ("e" variable
+                       (:pointer 1
+                        :type ("Event" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2518 2527])
+                    ("calling_code" variable (:type "int") (reparse-symbol arg-sub-list) [2528 2545]))                  
+                :type "void")
+                nil [2489 3493])
+            ("eventProcessor" variable
+               (:typemodifiers ("extern")
+                :type ("EventProcessor" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3939 3983])
+            ("execute" function
+               (:parent "EThread"
+                :type "void")
+                nil [3984 7952]))          
+    :file "UnixEThread.cc"
+    :pointmax 7954
+    :fsize 7953
+    :lastmodtime '(20632 41265)
+    :unmatched-syntax '((string 318 . 321) (symbol 309 . 317) (string 234 . 308) (punctuation 232 . 233) (semantic-list 229 . 231) (symbol 212 . 229) (symbol 205 . 211) (CHAR 200 . 204) (STATIC 193 . 199))
+    :lexical-table 
+        '(("MAX_HEARTBEATS_MISSED" . ((number "10" 444 . 446)))
+          ("THREAD_MAX_HEARTBEAT_MSECONDS" . ((number "60" 527 . 529)))
+          ("NO_ETHREAD_ID" . ((punctuation "-" 570 . 571) (number "1" 571 . 572)))
+          ("NO_HEARTBEAT" . ((punctuation "-" 486 . 487) (number "1" 487 . 488)))
+          )
+
+    )
+   (semanticdb-table "P_EventSystem.h"
+    :file "P_EventSystem.h"
+    :fsize 2908
+    :lastmodtime '(20632 41265)
+    )
+   (semanticdb-table "Thread.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("P_EventSystem.h" include nil nil [343 369])
+            ("init_thread_key" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type ("ink_thread_key" type (:type "class") nil nil))
+                nil [522 562])
+            ("global_mutex" variable
+               (:pointer 1
+                :type ("ProxyMutex" type (:type "class") nil nil))
+                nil [564 596])
+            ("Thread::cur_time" variable (:type ("ink_hrtime" type (:type "class") nil nil)) nil [597 629])
+            ("Thread::thread_data_key" variable (:type ("ink_thread_key" type (:type "class") nil nil)) nil [641 700])
+            ("Thread" function
+               (:constructor-flag t
+                :parent "Thread"
+                :type ("Thread" type (:type "class") nil nil))
+                nil [702 869])
+            ("key_destructor" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [898 911]))                  
+                :type "void")
+                nil [871 931])
+            ("init_thread_key" function (:type ("ink_thread_key" type (:type "class") nil nil)) nil [933 1070])
+            ("thread_data_internal" type
+               (:members 
+                  ( ("f" variable (:type ("ThreadFunction" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1255 1272])
+                    ("a" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [1275 1284])
+                    ("me" variable
+                       (:pointer 1
+                        :type ("Thread" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1287 1299]))                  
+                :type "struct")
+                nil [1223 1302])
+            ("spawn_thread_internal" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("a" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1340 1349]))                  
+                :type "void")
+                nil [1304 1518])
+            ("start" function
+               (:parent "Thread"
+                :arguments 
+                  ( ("f" variable (:type ("ThreadFunction" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1539 1556])
+                    ("a" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1556 1565])
+                    ("stacksize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1566 1583]))                  
+                :type "void")
+                nil [1520 1906]))          
+    :file "Thread.cc"
+    :pointmax 1907
+    :fsize 1906
+    :lastmodtime '(20632 41265)
+    :unmatched-syntax '((symbol 630 . 640))
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!iocore!eventsystem!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

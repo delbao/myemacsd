@@ -1,0 +1,1349 @@
+;; Object integration_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "integration_test/"
+  :tables (list 
+   (semanticdb-table "ClientTest.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cppunit/TextTestRunner.h" include (:system-flag t) nil [65 100])
+            ("cppunit/TestCase.h" include (:system-flag t) nil [101 130])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [131 175])
+            ("unistd.h" include (:system-flag t) nil [176 195])
+            ("vector" include (:system-flag t) nil [221 238])
+            ("string" include (:system-flag t) nil [239 256])
+            ("dht/ydht.h" include (:system-flag t) nil [257 278])
+            ("dht/RequestParams.h" include (:system-flag t) nil [279 309])
+            ("dht/data.h" include (:system-flag t) nil [310 331])
+            ("yaxx/StringUtils.h" include (:system-flag t) nil [332 361])
+            ("ysys/time.h" include (:system-flag t) nil [377 399])
+            ("limits.h" include (:system-flag t) nil [419 438])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [469 499])
+            ("log4cpp/PropertyConfigurator.hh" include (:system-flag t) nil [500 542])
+            ("_DHT_NAMESPACE" using (:type ("_DHT_NAMESPACE" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [544 575])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [576 596])
+            ("stressIterations" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [598 631])
+            ("tabletSpec" variable
+               (:typemodifiers ("static")
+                :type ("string" type (:type "class") nil nil))
+                nil [632 657])
+            ("rec" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type ("string" type (:type "class") nil nil))
+                nil [659 693])
+            ("rec2" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type ("string" type (:type "class") nil nil))
+                nil [694 730])
+            ("rec3" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type ("string" type (:type "class") nil nil))
+                nil [731 767])
+            ("predRec" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type ("string" type (:type "class") nil nil))
+                nil [768 808])
+            ("predFldWBlanks" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type ("string" type (:type "class") nil nil))
+                nil [809 868])
+            ("userName" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type ("string" type (:type "class") nil nil))
+                nil [869 910])
+            ("table" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type ("string" type (:type "class") nil nil))
+                nil [911 948])
+            ("mergingTable" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :type ("string" type (:type "class") nil nil))
+                nil [949 1003])
+            ("firstInit" variable
+               (:typemodifiers ("static")
+                :type "bool")
+                nil [1004 1033])
+            ("verbose" variable
+               (:typemodifiers ("static")
+                :type "bool")
+                nil [1034 1062])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [1450 1556])
+            ("overrideLog" variable
+               (:typemodifiers ("static")
+                :type "bool")
+                nil [1558 1590])
+            ("logLevel" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [1591 1638])
+            ("setTablet" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:reference 1
+                        :type ("Request" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1662 1675]))                  
+                :type "void")
+                nil [1640 1787])
+            ("setTablet" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mreq" variable
+                       (:reference 1
+                        :type ("MRequest" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1876 1891]))                  
+                :type "void")
+                nil [1854 2003])
+            ("setTablet" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mreq" variable
+                       (:reference 1
+                        :type ("MultiRequest" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2027 2046]))                  
+                :type "void")
+                nil [2005 2158])
+            ("setTablet" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("req" variable
+                       (:reference 1
+                        :type ("ScanRequest" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2182 2199]))                  
+                :type "void")
+                nil [2160 2311])
+            ("showData" function
+               (:arguments 
+                  ( ("data" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2401 2423])
+                    ("pad" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2424 2436]))                  
+                :type "void")
+                nil [2387 4411])
+            ("ClientTest" type
+               (:superclasses 
+                  ( ("CppUnit::TestCase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ClientTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4486 4497]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4467 4498])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MReqMisuse" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4820 4831]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4807 4832])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("SetPropTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4869 4881]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4856 4882])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MReqAppendCert" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4911 4926]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4898 4927])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MReqTest1GetAll" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4949 4965]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4936 4966])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MReqTest1SetOnlyName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4988 5009]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4975 5010])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MReqTest2SetOnlyName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5032 5053]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5019 5054])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MReqRemoveTestValid1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5076 5097]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5063 5098])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MReqMultiOpTest1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5120 5137]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5107 5138])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MReqRespHeaderTest1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5160 5180]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5147 5181])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MReqStringFields1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5203 5221]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5190 5222])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MReqTest1Reuse" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5244 5259]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5231 5260])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1206460_MReq" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5282 5298]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5269 5299])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqGetTestNoRec" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5365 5381]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5352 5382])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ClassSizeTest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5404 5418]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5391 5419])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ConfigTest1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5483 5495]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5470 5496])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("MergingTableOperations" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5556 5579]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5543 5580])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqGetTestAllFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5603 5623]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5590 5624])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqGetTestEmptyFldVector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5646 5671]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5633 5672])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqGetTestOnlyName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5694 5713]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5681 5714])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqGetTestReuseReq" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5736 5755]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5723 5756])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqGetNegTestBogusField" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5834 5858]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5821 5859])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqGetTestUnReqField" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5881 5902]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5868 5903])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqGetJsonInFieldName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5925 5947]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5912 5948])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqSetTestOnlyName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5971 5990]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5958 5991])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqSetTestTwoFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6013 6033]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6000 6034])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqRemoveTestValid1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6100 6120]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6087 6121])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqRemoveTestValid2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6143 6163]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6130 6164])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqRespHeaderTest1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6186 6205]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6173 6206])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqRemoveTestInvalid1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6284 6306]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6271 6307])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqRemoveTestInvalid2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6329 6351]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6316 6352])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqNegTest421" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6375 6389]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6362 6390])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqAppendCert" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6412 6426]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6399 6427])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqStringFields1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6450 6467]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6437 6468])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1200157" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6490 6501]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6477 6502])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1206460" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6525 6536]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6512 6537])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1198287" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6559 6570]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6546 6571])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1226949" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6593 6604]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6580 6605])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1233485" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6627 6638]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6614 6639])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1220691" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6661 6672]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6648 6673])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1249239" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6695 6706]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6682 6707])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1239271_get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6729 6744]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6716 6745])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1239271_remove" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6767 6785]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6754 6786])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1239271_set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6808 6823]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6795 6824])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1527718" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6846 6857]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6833 6858])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1266916" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6881 6892]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6868 6893])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1266922" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6915 6926]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6902 6927])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1195749" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6949 6960]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6936 6961])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("DoxSample" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6983 6993]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6970 6994])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1774222" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7016 7027]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7003 7028])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqParmsTest1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7051 7065]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7038 7066])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqParmsGetTest1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7088 7105]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7075 7106])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ReqParmsGetTest2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7128 7145]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7115 7146])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("PredTest1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7169 7179]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7156 7180])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("PredTest2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7202 7212]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7189 7213])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("BatchPred" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7235 7245]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7222 7246])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("BadRegexp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7268 7278]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7255 7279])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("CritReadTest1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7570 7584]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7557 7585])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("NumKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7607 7614]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7594 7615])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1753315" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7637 7648]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7624 7649])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1762781" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7671 7682]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7658 7683])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("NullField" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7705 7715]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7692 7716])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1796601" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7738 7749]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7725 7750])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1799748" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7772 7783]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7759 7784])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1823975" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7806 7817]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7793 7818])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1778838" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7840 7851]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7827 7852])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1914002" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7874 7885]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7861 7886])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1914002" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7908 7919]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7895 7920])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1938191" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7942 7953]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7929 7954])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug2176468" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7978 7989]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [7965 7990])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("Bug1999844" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8359 8370]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8346 8371])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ScanRequestTest1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8395 8412]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8382 8413])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ScanRequestTest2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8435 8452]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8422 8453])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("ScanRequestTest3" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8475 8492]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [8462 8493])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [8896 8921])
+                    ("public" label nil (reparse-symbol classsubparts) [8927 8934])
+                    ("ClientTest" function
+                       (:constructor-flag t
+                        :type ("ClientTest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8943 9548])
+                    ("ClientTest" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9558 9626])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [9636 9660])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [9670 9697])
+                    ("SetAndGetTest" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9707 9728])
+                    ("SetEmptyRecordTest" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9737 9763])
+                    ("SetResponseBodyTest" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9772 9799])
+                    ("MRequestAddOpsTest" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9808 9834])
+                    ("ClassSizeTest" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9843 9864])
+                    ("ConfigTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9873 9892])
+                    ("SetPropTest" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9901 9920])
+                    ("MergingTableOperations" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9930 9960])
+                    ("ReqGetTestAllFields" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9970 9997])
+                    ("ReqGetTestEmptyFldVector" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10006 10038])
+                    ("ReqGetTestOnlyName" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10047 10073])
+                    ("ReqGetTestReuseReq" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10082 10108])
+                    ("ReqGetNegTestBogusField" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10117 10148])
+                    ("ReqGetTestUnReqField" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10157 10185])
+                    ("ReqGetJsonInFieldName" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10194 10223])
+                    ("ReqSetTestOnlyName" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10233 10259])
+                    ("ReqSetTestTwoFields" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10268 10295])
+                    ("ReqSetTestBigData" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10304 10329])
+                    ("ReqRemoveTestValid1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10339 10366])
+                    ("ReqRemoveTestValid2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10375 10402])
+                    ("ReqRemoveTestInvalid1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10411 10440])
+                    ("ReqRemoveTestInvalid2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10449 10478])
+                    ("ReqNegTest421" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10488 10509])
+                    ("MReqTest1GetAll" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10518 10541])
+                    ("MReqTest1SetOnlyName" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10550 10578])
+                    ("MReqTest2SetOnlyName" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10587 10615])
+                    ("MReqRemoveTestValid1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10624 10652])
+                    ("MReqMultiOpTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10662 10686])
+                    ("MReqMisuse" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10695 10713])
+                    ("ReqRespHeaderTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10723 10749])
+                    ("MReqRespHeaderTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10758 10785])
+                    ("ReqAppendCert" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10795 10816])
+                    ("MReqAppendCert" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10825 10847])
+                    ("ReqStringFields1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10857 10881])
+                    ("MReqStringFields1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10890 10915])
+                    ("MReqTest1Reuse" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10924 10946])
+                    ("MReqTest2Reuse" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10955 10977])
+                    ("Bug1200157" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10987 11005])
+                    ("Bug1206460" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11014 11032])
+                    ("Bug1206460_MReq" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11041 11064])
+                    ("Bug1198287" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11073 11091])
+                    ("Bug1226949" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11100 11118])
+                    ("Bug1233485" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11127 11145])
+                    ("Bug1220691" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11154 11172])
+                    ("Bug1249239" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11181 11199])
+                    ("Bug1239271_get" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11208 11230])
+                    ("Bug1239271_set" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11239 11261])
+                    ("Bug1239271_remove" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11270 11295])
+                    ("Bug1195749" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11304 11322])
+                    ("Bug1823975" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11331 11349])
+                    ("Bug1266916" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11359 11377])
+                    ("Bug1266922" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11386 11404])
+                    ("Bug1527718" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11413 11431])
+                    ("Bug1914002" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11440 11458])
+                    ("Bug1999844" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11467 11485])
+                    ("DoxSample" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11495 11512])
+                    ("ReqParmsTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11522 11543])
+                    ("ReqParmsGetTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11552 11576])
+                    ("ReqParmsGetTest2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11585 11609])
+                    ("Bug1753315" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11618 11636])
+                    ("Bug1762781" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11645 11663])
+                    ("Bug1774222" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11672 11690])
+                    ("Bug1788476" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11699 11717])
+                    ("Bug1791793" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11726 11744])
+                    ("Bug1796601" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11753 11771])
+                    ("Bug1799748" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11780 11798])
+                    ("PredTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11808 11825])
+                    ("PredTest2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11834 11851])
+                    ("BatchPred" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11860 11877])
+                    ("BadRegexp" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11886 11903])
+                    ("NotifyTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11913 11932])
+                    ("NotifyTest2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11941 11960])
+                    ("NotifyTest3" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11969 11988])
+                    ("CritReadTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [11997 12018])
+                    ("NumKey" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12027 12041])
+                    ("NullField" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12050 12067])
+                    ("MultiRequestTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12077 12102])
+                    ("MultiRequestTest2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12111 12136])
+                    ("Bug1864127" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12145 12163])
+                    ("ScanRequestTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12173 12197])
+                    ("ScanRequestTest2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12206 12230])
+                    ("ScanRequestTest3" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12239 12263])
+                    ("Bug1778838" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12273 12291])
+                    ("ReqGetTestNoRec" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12300 12323])
+                    ("populateTestData" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12333 12357])
+                    ("Bug1938191" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12366 12384])
+                    ("Bug2176468" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12393 12411])
+                    ("ForwardTest1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12416 12436])
+                    ("ForwardTest2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [12441 12461]))                  
+                :type "class")
+                nil [4413 12464])
+            ("SetAndGetTest" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [12466 13179])
+            ("SetEmptyRecordTest" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [13181 13470])
+            ("MRequestAddOpsTest" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [13472 14511])
+            ("SetResponseBodyTest" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [14514 15532])
+            ("ForwardTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [15534 16487])
+            ("ForwardTest2" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [16489 17060])
+            ("ClassSizeTest" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [17106 17915])
+            ("ConfigTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [17917 18819])
+            ("SetPropTest" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [18821 19588])
+            ("ReqRespHeaderTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [19590 20781])
+            ("ReqAppendCert" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [20848 21489])
+            ("MergingTableOperations" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [21561 35151])
+            ("ReqGetTestAllFields" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [35211 35762])
+            ("ReqGetTestNoRec" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [35764 36091])
+            ("ReqStringFields1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [36093 36760])
+            ("ReqGetTestEmptyFldVector" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [36762 37228])
+            ("populateTestData" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [37230 40429])
+            ("ReqGetTestOnlyName" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [40431 41041])
+            ("ReqGetTestReuseReq" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [41043 41513])
+            ("ReqGetNegTestBogusField" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [41515 42068])
+            ("ReqGetTestUnReqField" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [42070 42655])
+            ("ReqGetJsonInFieldName" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [42657 43560])
+            ("ReqSetTestOnlyName" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [43620 44317])
+            ("ReqSetTestTwoFields" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [44319 45204])
+            ("ReqSetTestBigData" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [45206 46540])
+            ("ReqRemoveTestValid1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [46603 47386])
+            ("ReqRemoveTestValid2" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [47388 48393])
+            ("ReqRemoveTestInvalid1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [48395 48691])
+            ("ReqRemoveTestInvalid2" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [48693 49062])
+            ("ReqNegTest421" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [49127 49558])
+            ("MReqTest1GetAll" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [49627 50486])
+            ("MReqStringFields1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [50488 51416])
+            ("MReqRespHeaderTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [51418 53170])
+            ("MReqAppendCert" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [53172 54115])
+            ("MReqTest1SetOnlyName" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [54118 56277])
+            ("MReqTest2SetOnlyName" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [56279 58914])
+            ("MReqRemoveTestValid1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [58916 60189])
+            ("MReqMultiOpTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [60192 62554])
+            ("MReqMisuse" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [62556 63673])
+            ("Bug1200157" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [63817 64804])
+            ("Bug1206460" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [64806 66424])
+            ("Bug1206460_MReq" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [66426 68942])
+            ("Bug1198287" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [69044 69396])
+            ("Bug1823975" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [69398 70115])
+            ("Bug1226949" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [70117 72634])
+            ("Bug1233485" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [72636 73082])
+            ("Bug1220691" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [73084 74239])
+            ("Bug1249239" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [74241 75022])
+            ("Bug1239271_get" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [75024 75652])
+            ("Bug1239271_set" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [75654 76612])
+            ("Bug1239271_remove" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [76614 77215])
+            ("Bug1266916" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [77218 78050])
+            ("CNTRL_A_STRING" variable (:constant-flag t) nil [78060 78074])
+            ("Bug1266922" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [78079 78583])
+            ("Bug1195749" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [78586 79366])
+            ("DoxSample" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [79433 80288])
+            ("MReqTest1Reuse" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [80290 81170])
+            ("MReqTest2Reuse" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [81172 82259])
+            ("Bug1527718" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [82301 83652])
+            ("ReqParmsTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [83654 84114])
+            ("ReqParmsGetTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [84116 84938])
+            ("ReqParmsGetTest2" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [84940 86034])
+            ("Bug1791793" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [86036 87055])
+            ("Bug1753315" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [87057 88412])
+            ("Bug1762781" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [88414 89150])
+            ("Bug1796601" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [89152 90516])
+            ("PredTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [90518 91275])
+            ("PredTest2" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [91277 92075])
+            ("BatchPred" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [92110 95834])
+            ("BadRegexp" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [95836 96426])
+            ("Bug1778838" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [96428 96913])
+            ("CritReadTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [96915 97872])
+            ("NotifyTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [97874 98849])
+            ("NotifyTest2" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [98851 100080])
+            ("NotifyTest3" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [100211 101264])
+            ("MultiRequestTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [101266 103468])
+            ("MultiRequestTest2" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [103470 104760])
+            ("Bug1864127" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [104762 105582])
+            ("Bug1788476" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [105584 106693])
+            ("NumKey" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [106695 107154])
+            ("NullField" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [107156 108447])
+            ("Bug1774222" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [108449 109184])
+            ("Bug1799748" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [109186 110782])
+            ("Bug1914002" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [110784 116151])
+            ("Bug2176468" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [116193 116810])
+            ("Bug1938191" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [116853 117964])
+            ("Bug1999844" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [117966 119158])
+            ("ScanRequestTest1" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [119160 120889])
+            ("ScanRequestTest2" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [120891 122747])
+            ("ScanRequestTest3" function
+               (:parent "ClientTest"
+                :type "void")
+                nil [122749 124169])
+            ("testFunction" function (:type "void") nil [124172 124290])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [124301 124310])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [124311 124323]))                  
+                :type "int")
+                nil [124292 125393]))          
+    :file "ClientTest.cc"
+    :pointmax 125394
+    :fsize 125564
+    :lastmodtime '(20545 26291)
+    :unmatched-syntax '((string 2437 . 2439) (punctuation 2435 . 2436) (string 976 . 1001) (string 931 . 946) (string 892 . 908) (string 838 . 866) (string 790 . 806) (string 750 . 765) (string 713 . 728) (string 677 . 691))
+    :lexical-table 
+        '(("CNTRL_A_STRING" . ((string "\"\"" 78075 . 78078)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!svn!trunk!client!integration_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

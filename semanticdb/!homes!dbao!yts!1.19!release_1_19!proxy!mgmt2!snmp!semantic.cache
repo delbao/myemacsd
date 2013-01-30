@@ -1,0 +1,58 @@
+;; Object snmp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "snmp/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("1.2" "foreign" "no-installman" "no-installinfo")) nil [125 185])
+            ("INCLUDES" variable (:default-value ("@TBD_1_INCDIR@")) nil [186 212])
+            ("INCLUDES" variable (:default-value ("@TBD_2_INCDIR@")) nil [212 239])
+            ("INCLUDES" variable (:default-value ("@TBD_3_INCDIR@")) nil [239 266])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/common/include")) nil [266 309])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/libinktomi++")) nil [309 350])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/librecords")) nil [350 389])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2")) nil [390 430])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/api2")) nil [430 475])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/api2/include")) nil [475 528])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/cli")) nil [528 572])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/cluster")) nil [572 620])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/preparse")) nil [620 669])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/snmp")) nil [669 714])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/utils")) nil [714 760])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/web2")) nil [760 805])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy")) nil [806 840])
+            ("SNMP_DEFS" variable (:default-value ("@SNMP_DEFS@")) nil [841 865])
+            ("SNMP_ROOT" variable (:default-value ("/usr/releng/lib/snmp")) nil [865 898])
+            ("SNMP_INCLUDES" variable (:default-value ("@SNMP_INCDIR@")) nil [898 928])
+            ("noinst_LIBRARIES" variable (:default-value ("libsnmp.a")) nil [957 986])
+            ("SNMP_MIB_HDR" variable (:default-value ("inktomi-ts-mibdefs.h" "inktomi-ts-mibsupp.h" "inktomi-ts-mibpart.h" "inktomi-ts-mibtype.h")) nil [1037 1191])
+            ("SNMP_SADK_SRC" variable (:default-value ("oidl.c")) nil [1247 1270])
+            ("SNMP_DEFS" variable (:default-value ("-DUSE_SNMP=1" "-DSETS" "-DEMANATE" "-DSUBAGENT")) nil [1271 1325])
+            ("SNMP_DEFS" variable (:default-value ("-DSR_MIB_TABLE_H" "-DSR_IP" "-DSR_TCP_IPC")) nil [1325 1376])
+            ("SNMP_DEFS" variable (:default-value ("-DMIBDEFS=\\\"inktomi-ts-mibdefs.h\\\"")) nil [1376 1424])
+            ("SNMP_DEFS" variable (:default-value ("-DMIBPART=\\\"inktomi-ts-mibpart.h\\\"")) nil [1424 1472])
+            ("SNMP_DEFS" variable (:default-value ("-DMIBSUPP=\\\"inktomi-ts-mibsupp.h\\\"")) nil [1472 1520])
+            ("SNMP_DEFS" variable (:default-value ("-DMIBTYPE=\\\"inktomi-ts-mibtype.h\\\"")) nil [1520 1568])
+            ("SNMP_DEFS" variable (:default-value ("-DMIBOID=\\\"inktomi-ts-miboid.c\\\"")) nil [1568 1614])
+            ("BUILT_SOURCES" variable (:default-value ("SNMP.cc" "inktomi-ts-miboid.c" "v_inktomi-ts-mib.cc" "k_inktomi-ts-mib.cc" "SNMPsm.cc" "$(SNMP_SADK_SRC)")) nil [1615 1816])
+            ("BUILT_SOURCES" variable (:default-value ("SNMP.cc")) nil [1823 1847])
+            ("MGMT_DEFS" variable (:default-value ("@MGMT_DEFS@")) nil [1855 1879])
+            ("DEFS" variable (:default-value ("$(MGMT_DEFS)" "$(SNMP_DEFS)")) nil [1879 1914])
+            ("INCLUDES" variable (:default-value ("$(SNMP_INCLUDES)")) nil [1914 1943])
+            ("libsnmp_a_SOURCES" variable (:default-value ("$(BUILT_SOURCES)")) nil [1964 2001])
+            ("SNMPsm.o" function (:arguments ("SNMPsm.cc")) nil [2039 2151])
+            ("oidl.o" function (:arguments ("oidl.c" "$(SNMP_MIB_HDR)" "inktomi-ts-miboid.c")) nil [2214 2292])
+            ("install-data-local" function nil nil [2317 2449])
+            ("clean-local" function nil nil [2450 2509]))          
+    :file "Makefile.am"
+    :pointmax 2509
+    :fsize 2508
+    :lastmodtime '(20632 41352)
+    :unmatched-syntax '((shell-command 2464 . 2508) (bol 2463 . 2463))
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!proxy!mgmt2!snmp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,34 @@
+;; Object radius/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "radius/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("1.2" "foreign" "no-installman" "no-installinfo")) nil [101 161])
+            ("XAR" variable (:default-value ("@XAR@")) nil [242 254])
+            ("AR" variable (:default-value ("$(XAR)")) nil [254 266])
+            ("INCLUDES" variable (:default-value ("@iocore_include_dirs@")) nil [267 300])
+            ("INCLUDES" variable (:default-value ("@LIBINKTOMI_INCDIR@")) nil [300 332])
+            ("INCLUDES" variable (:default-value ("@TBD_1_INCDIR@")) nil [332 359])
+            ("INCLUDES" variable (:default-value ("@TBD_2_INCDIR@")) nil [359 386])
+            ("INCLUDES" variable (:default-value ("@TBD_3_INCDIR@")) nil [386 413])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/auth/include")) nil [444 485])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/auth/proxy-compat")) nil [485 531])
+            ("noinst_LIBRARIES" variable (:default-value ("libradius.a")) nil [807 838])
+            ("libradius_a_SOURCES" variable (:default-value ("RADIUSGen.cc" "RADIUSProvider.cc" "RADIUSUtil.cc" "RADIUSConfig.cc" "RADIUSClientSM.cc")) nil [869 1004])
+            ("EXTRA_PROGRAMS" variable (:default-value ("test_radius")) nil [1287 1316])
+            ("test_radius_SOURCES" variable (:default-value ("test_radius.cc")) nil [1317 1354])
+            ("test_radius_LDADD" variable (:default-value ("@LIBIOCORE@" "@LIBINKTOMI@" "@LIBBSDTCP@" "@LIBTHREAD@" "@LIBSOCKET@" "@LIBNSL@" "@LIBRESOLV@" "@LIBRT@" "@TBD_1_LDADD@" "@TBD_2_LDADD@" "@TBD_3_LDADD@" "@LIBMLD@" "@LIBEXC@" "libradius.a" "./../../controller/libcontroller.a" "@LIBINKTOMI@" "@LIBIOCORE@")) nil [1355 1704])
+            ("clean-local" function nil nil [1706 1759]))          
+    :file "Makefile.am"
+    :pointmax 1759
+    :fsize 1758
+    :lastmodtime '(20632 41389)
+    :unmatched-syntax '((shell-command 1720 . 1758) (bol 1719 . 1719))
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!auth!authentication!radius!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

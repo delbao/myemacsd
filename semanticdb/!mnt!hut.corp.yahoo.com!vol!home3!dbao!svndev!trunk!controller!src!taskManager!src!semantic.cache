@@ -1,0 +1,1383 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "MRTaskStatus.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("MRTaskStatus.h" include (:system-flag t) nil [59 84])
+            ("BoostLibs.h" include (:system-flag t) nil [85 107])
+            ("TaskManager.h" include (:system-flag t) nil [108 132])
+            ("TaskManagerContext.h" include (:system-flag t) nil [133 164])
+            ("dht/LogUtils.h" include (:system-flag t) nil [166 191])
+            ("dht/SchemaNames.h" include (:system-flag t) nil [192 220])
+            ("dht/RequestState.h" include (:system-flag t) nil [221 250])
+            ("dht/MultiServerTransport.h" include (:system-flag t) nil [251 288])
+            ("log" variable
+               (:typemodifiers ("static")
+                :default-value "log4cpp::Category::getInstance(\"dht.tm.\"__FILE__)"
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [290 377])
+            ("MRTaskStatus" function
+               (:constructor-flag t
+                :parent "MRTaskStatus"
+                :type ("MRTaskStatus" type (:type "class") nil nil))
+                nil [381 415])
+            ("getStatus" function
+               (:parent "MRTaskStatus"
+                :arguments 
+                  ( ("rtid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MapStrStr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [463 485])
+                    ("routers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MapStrStr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [485 510]))                  
+                :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                nil [417 1730])
+            ("getFailedRegions" function
+               (:parent "MRTaskStatus"
+                :type ("StrVec" type (:type "class") nil nil))
+                nil [1732 2070])
+            ("getRegionResponse" function
+               (:parent "MRTaskStatus"
+                :arguments 
+                  ( ("region" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2120 2146]))                  
+                :type ("RequestStateSP" type (:type "class") nil nil))
+                nil [2072 2184]))          
+    :file "MRTaskStatus.cc"
+    :pointmax 2373
+    :fsize 2372
+    :lastmodtime '(20550 21282)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "MRTaskStatus.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("MR_TASK_STATUS_H" variable (:constant-flag t) nil [93 109])
+            ("string" include (:system-flag t) nil [110 127])
+            ("map" include (:system-flag t) nil [128 142])
+            ("TmCode.h" include (:system-flag t) nil [144 163])
+            ("MultiRegionTransport.h" include (:system-flag t) nil [164 197])
+            ("dht/typedefs.h" include (:system-flag t) nil [199 224])
+            ("dht/WebCode.h" include (:system-flag t) nil [225 249])
+            ("dht/RequestState.h" include (:system-flag t) nil [250 279])
+            ("RegionRespMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("RequestStateSP" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [281 340])
+            ("MRTaskStatus" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [363 370])
+                    ("MRTaskStatus" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("MRTaskStatus" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [375 390])
+                    ("MRTaskStatus" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [400 426])
+                    ("getStatus" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("regionTaskIds" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [479 510])
+                            ("routers" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [510 535]))                          
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [440 536])
+                    ("getFailedRegions" function
+                       (:prototype-flag t
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [546 572])
+                    ("getRegionResponse" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [615 641]))                          
+                        :type ("RequestStateSP" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [582 642])
+                    ("protected" label nil (reparse-symbol classsubparts) [737 747])
+                    ("regResponses_" variable (:type ("RegionRespMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [752 780]))                  
+                :type "class")
+                nil [342 783]))          
+    :file "MRTaskStatus.h"
+    :pointmax 1003
+    :fsize 1002
+    :lastmodtime '(20550 21282)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("MR_TASK_STATUS_H")
+          )
+
+    )
+   (semanticdb-table "NotifHandler.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("TM_NOTIF_HANDLER_H" variable (:constant-flag t) nil [197 215])
+            ("string" include (:system-flag t) nil [217 234])
+            ("vector" include (:system-flag t) nil [235 252])
+            ("map" include (:system-flag t) nil [253 267])
+            ("dht/FwCode.h" include (:system-flag t) nil [268 291])
+            ("dht/RequestState.h" include (:system-flag t) nil [292 321])
+            ("dht/typedefs.h" include (:system-flag t) nil [322 347])
+            ("TaskHandler.h" include nil nil [349 373])
+            ("TaskManager.h" include nil nil [374 398])
+            ("Task.h" include nil nil [399 416])
+            ("TaskTable.h" include nil nil [417 439])
+            ("TmCode.h" include nil nil [440 459])
+            ("StrStrMMap" type
+               (:typedef ("std::multimap" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::multimap"
+                :type "typedef")
+                nil [556 614])
+            ("StrStrMMapIter" type
+               (:typedef ("std::multimap::iterator" type (:type "class") nil nil)
+                :superclasses "std::multimap::iterator"
+                :type "typedef")
+                nil [615 687])
+            ("StrStrMMapCIter" type
+               (:typedef ("std::multimap::const_iterator" type (:type "class") nil nil)
+                :superclasses "std::multimap::const_iterator"
+                :type "typedef")
+                nil [688 767])
+            ("NotifHandler" type
+               (:superclasses 
+                  ( ("TaskHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [811 818])
+                    ("NotifHandler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("handlerName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [836 867]))                          
+                        :type ("NotifHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [823 868])
+                    ("NotifHandler" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [874 898])
+                    ("parentInit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [904 946])
+                    ("childInit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [951 992])
+                    ("cleanup" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("rv" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1018 1042]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [997 1043])
+                    ("abortTask" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("h" variable
+                               (:reference 1
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1072 1080]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1049 1081])
+                    ("execute" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("h" variable
+                               (:reference 1
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1123 1131]))                          
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1086 1132])
+                    ("protected" label nil (reparse-symbol classsubparts) [1134 1144])
+                    ("getURI" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1176 1205]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1149 1210])
+                    ("getBody" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tabletName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1243 1273]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1215 1278])
+                    ("parseOpInfo" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("opInfo" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1324 1350]))                          
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1283 1355])
+                    ("setNotifState" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1403 1432]))                          
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1360 1437])
+                    ("private" label nil (reparse-symbol classsubparts) [1439 1447])
+                    ("getTabletMap" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1487 1516])
+                            ("tabletMap" variable
+                               (:reference 1
+                                :type ("StrStrMMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1555 1577]))                          
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1453 1578])
+                    ("readFinishedTablets" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("task" variable
+                               (:reference 1
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1610 1621]))                          
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1583 1622])
+                    ("filterFinishedTablets" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("finTablets" variable
+                               (:reference 1
+                                :type ("StrVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1654 1673])
+                            ("tabletMap" variable
+                               (:reference 1
+                                :type ("StrStrMMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1673 1695]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1627 1696])
+                    ("sendRequestToSus" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1740 1769])
+                            ("tabletMap" variable (:type ("StrStrMMap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1812 1833])
+                            ("requests" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("RequestStateSP" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1876 1924]))                          
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1702 1925])
+                    ("setProgressInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("task" variable
+                               (:reference 1
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1967 1978])
+                            ("requests" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("RequestStateSP" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2021 2074]))                          
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1930 2075])
+                    ("TestNotifHandler" friend nil (reparse-symbol classsubparts) [2081 2110]))                  
+                :type "class")
+                nil [769 2115]))          
+    :file "NotifHandler.h"
+    :pointmax 2300
+    :fsize 2299
+    :lastmodtime '(20550 21282)
+    :unmatched-syntax '((punctuation 2110 . 2111))
+    :lexical-table 
+        '(("TM_NOTIF_HANDLER_H")
+          )
+
+    )
+   (semanticdb-table "PushSuDataHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/LogUtils.h" include (:system-flag t) nil [59 84])
+            ("dht/RequestState.h" include (:system-flag t) nil [85 114])
+            ("dht/MultiServerTransport.h" include (:system-flag t) nil [115 152])
+            ("dht/SchemaNames.h" include (:system-flag t) nil [153 181])
+            ("dht/URLBuilder.h" include (:system-flag t) nil [182 209])
+            ("dht/ActionContext.h" include (:system-flag t) nil [210 240])
+            ("TaskManagerContext.h" include (:system-flag t) nil [242 273])
+            ("PushSuDataHandler.h" include (:system-flag t) nil [274 304])
+            ("Controller.h" include (:system-flag t) nil [305 328])
+            ("TmTestHooks.h" include (:system-flag t) nil [329 353])
+            ("log" variable
+               (:typemodifiers ("static")
+                :default-value "log4cpp::Category::getInstance(\"dht.tm.\"__FILE__)"
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [355 442])
+            ("HostRequestStateMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("RequestStateSP" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [446 511])
+            ("HostRequestStatePair" type
+               (:typedef ("std::pair" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("RequestStateSP" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::pair"
+                :type "typedef")
+                nil [512 579])
+            ("CHUNK_SIZE" variable (:constant-flag t) nil [619 629])
+            ("FAILED_SERVERS" variable (:constant-flag t) nil [641 655])
+            ("SERVERS_TO_PUSH" variable (:constant-flag t) nil [681 696])
+            ("FAILURE_RETRY_ATTEMPTS" variable (:constant-flag t) nil [724 746])
+            ("execute" function
+               (:parent "PushSuDataHandler"
+                :arguments 
+                  ( ("task" variable
+                       (:reference 1
+                        :type ("Task" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1084 1095]))                  
+                :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                nil [1035 2838])
+            ("serializeServerInfo" function
+               (:parent "PushSuDataHandler"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2892 2918])
+                    ("tabletCount" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2939 2960])
+                    ("pushAttempts" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2961 2983]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2840 3123])
+            ("deSerializeServerInfo" function
+               (:parent "PushSuDataHandler"
+                :arguments 
+                  ( ("serverInfo" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3188 3218])
+                    ("serverName" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3219 3243])
+                    ("tabletCount" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3266 3288])
+                    ("pushAttempts" variable
+                       (:reference 1
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3289 3312]))                  
+                :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                nil [3125 4770])
+            ("addToFailedList" function
+               (:parent "PushSuDataHandler"
+                :arguments 
+                  ( ("failedSus" variable
+                       (:reference 1
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4813 4831])
+                    ("suInfoStr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4832 4861]))                  
+                :type "void")
+                nil [4772 5918])
+            ("getSuRequestBody" function
+               (:parent "PushSuDataHandler"
+                :arguments 
+                  ( ("suName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5969 5995])
+                    ("tcResponse" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5995 6025]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [5920 6753])
+            ("readSuData" function
+               (:parent "PushSuDataHandler"
+                :arguments 
+                  ( ("task" variable
+                       (:reference 1
+                        :type ("Task" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6806 6817])
+                    ("servers" variable
+                       (:reference 1
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6817 6833])
+                    ("suData" variable
+                       (:reference 1
+                        :type ("MapStrStr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6833 6851])
+                    ("failedSus" variable
+                       (:reference 1
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6851 6869]))                  
+                :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                nil [6754 10059])
+            ("pushSuData" function
+               (:parent "PushSuDataHandler"
+                :arguments 
+                  ( ("suData" variable
+                       (:reference 1
+                        :type ("MapStrStr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10113 10131])
+                    ("failedSus" variable
+                       (:reference 1
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10131 10149]))                  
+                :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                nil [10061 12078])
+            ("setProgressInfo" function
+               (:parent "PushSuDataHandler"
+                :arguments 
+                  ( ("task" variable
+                       (:reference 1
+                        :type ("Task" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12138 12149])
+                    ("servers" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12150 12172]))                  
+                :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                nil [12080 13060])
+            ("readStorageUnits" function
+               (:parent "PushSuDataHandler"
+                :arguments 
+                  ( ("progressInfo" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13120 13152])
+                    ("serversToPush" variable
+                       (:reference 1
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13152 13174]))                  
+                :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                nil [13062 14776])
+            ("PushSuDataHandler" function
+               (:constructor-flag t
+                :parent "PushSuDataHandler"
+                :type ("PushSuDataHandler" type (:type "class") nil nil))
+                nil [14779 14861])
+            ("PushSuDataHandler" function
+               (:destructor-flag t
+                :parent "PushSuDataHandler"
+                :type "void")
+                nil [14862 14907])
+            ("parentInit" function
+               (:parent "PushSuDataHandler"
+                :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                nil [14909 15037])
+            ("childInit" function
+               (:parent "PushSuDataHandler"
+                :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                nil [15039 15166])
+            ("cleanup" function
+               (:parent "PushSuDataHandler"
+                :arguments 
+                  ( ("rc" variable (:type ("TmCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15201 15225]))                  
+                :type "void")
+                nil [15168 15284]))          
+    :file "PushSuDataHandler.cc"
+    :pointmax 15472
+    :fsize 15471
+    :lastmodtime '(20550 21282)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("FAILURE_RETRY_ATTEMPTS" . ((number "10" 747 . 749)))
+          ("FAILED_SERVERS" . ((string "\"failed_servers\"" 656 . 672)))
+          ("SERVERS_TO_PUSH" . ((string "\"servers_to_push\"" 697 . 714)))
+          ("CHUNK_SIZE" . ((number "10" 630 . 632)))
+          )
+
+    )
+   (semanticdb-table "TPCCoordinator.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("TPC_COORDINATOR_H" variable (:constant-flag t) nil [94 111])
+            ("Runnable.h" include (:system-flag t) nil [113 134])
+            ("TmCode.h" include (:system-flag t) nil [135 154])
+            ("dht/WebCode.h" include (:system-flag t) nil [155 179])
+            ("Task.h" include (:system-flag t) nil [180 197])
+            ("TaskHandler.h" include (:system-flag t) nil [198 222])
+            ("TPCHandler.h" include (:system-flag t) nil [223 246])
+            ("TPCCoordinator" type
+               (:superclasses 
+                  ( ("Runnable" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [381 388])
+                    ("TestTPCCoordinator" friend nil (reparse-symbol classsubparts) [393 424])
+                    ("TPCPhase" type
+                       (:members 
+                          ( ("TPC_START" variable
+                               (:constant-flag t
+                                :default-value (476 477)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [464 477])
+                            ("TPC_PREPARE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [487 499])
+                            ("TPC_COMMIT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [508 519])
+                            ("TPC_ABORT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [528 538])
+                            ("TPC_END" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [547 555]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [435 562])
+                    ("TPCNodeProgressInfo" type
+                       (:members 
+                          ( ("name_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [617 635])
+                            ("status_" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [644 674]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [576 681])
+                    ("TPCCoordinator" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("task" variable
+                               (:pointer 1
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [706 717])
+                            ("handler" variable
+                               (:pointer 1
+                                :type ("TPCHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [717 737]))                          
+                        :type ("TPCCoordinator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [691 738])
+                    ("TPCCoordinator" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [743 769])
+                    ("run" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [779 814])
+                    ("protected" label nil (reparse-symbol classsubparts) [820 830])
+                    ("prepare" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [836 875])
+                    ("commit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [880 918])
+                    ("rollback" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [923 963])
+                    ("loadLog" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [973 1012])
+                    ("writeLog" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1017 1057])
+                    ("serializeLog" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1063 1098])
+                    ("deserializeLog" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("serialLog" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1148 1177]))                          
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1104 1178])
+                    ("getPhase" function
+                       (:typemodifiers ("virtual")
+                        :type ("TPCPhase" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1188 1246])
+                    ("nextPhase" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("status" variable (:type "bool") (reparse-symbol arg-sub-list) [1274 1286]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1251 1287])
+                    ("gotoPreparePhase" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1297 1329])
+                    ("gotoAbortPhase" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1334 1364])
+                    ("gotoCommitPhase" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1369 1400])
+                    ("gotoTPCEndPhase" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1405 1436])
+                    ("private" label nil (reparse-symbol classsubparts) [1442 1450])
+                    ("handler_" variable
+                       (:pointer 1
+                        :type ("TPCHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1456 1477])
+                    ("task_" variable
+                       (:pointer 1
+                        :type ("Task" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1482 1494])
+                    ("phase_" variable (:type ("TPCPhase" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1499 1515])
+                    ("TPCProgressMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("TPCNodeProgressInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1553 1618])
+                    ("TPCProgressMapIter" type
+                       (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                        :superclasses "std::map::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1623 1702])
+                    ("TPCProgressMapCIter" type
+                       (:typedef ("std::map::const_iterator" type (:type "class") nil nil)
+                        :superclasses "std::map::const_iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1707 1793])
+                    ("progressInfo_" variable (:type ("TPCProgressMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1799 1828])
+                    ("parseProgressInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("participant" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1857 1888])
+                            ("progressData" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1916 1941])
+                            ("failCount" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [1969 1985]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1834 1986])
+                    ("TPCCoordinator" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("co" variable
+                               (:reference 1
+                                :type ("TPCCoordinator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2007 2026]))                          
+                        :type ("TPCCoordinator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1992 2027])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("co" variable
+                               (:reference 1
+                                :type ("TPCCoordinator" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2058 2077]))                          
+                        :type ("TPCCoordinator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2032 2078]))                  
+                :type "class")
+                nil [340 2081])
+            ("TPCPhase" type
+               (:typedef ("TPCCoordinator::TPCPhase" type (:type "class") nil nil)
+                :superclasses "TPCCoordinator::TPCPhase"
+                :type "typedef")
+                nil [2083 2125])
+            ("TPCNodeProgressInfo" type
+               (:typedef ("TPCCoordinator::TPCNodeProgressInfo" type (:type "class") nil nil)
+                :superclasses "TPCCoordinator::TPCNodeProgressInfo"
+                :type "typedef")
+                nil [2126 2190]))          
+    :file "TPCCoordinator.h"
+    :pointmax 2410
+    :fsize 2409
+    :lastmodtime '(20550 21282)
+    :unmatched-syntax '((punctuation 424 . 425))
+    :lexical-table 
+        '(("TPC_COORDINATOR_H")
+          )
+
+    )
+   (semanticdb-table "TableRestoreHandler.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__TABLE_RESTORE_HANDLER_H__" variable (:constant-flag t) nil [214 241])
+            ("TaskHandler.h" include nil nil [243 267])
+            ("TaskManager.h" include nil nil [268 292])
+            ("dht/RestoreTransientStore.h" include (:system-flag t) nil [293 331])
+            ("dht/HashTabletRange.h" include (:system-flag t) nil [332 364])
+            ("dht/OrderedTabletRange.h" include (:system-flag t) nil [365 400])
+            ("map" include (:system-flag t) nil [402 416])
+            ("TabletSuMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::map" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [446 539])
+            ("TableRestoreHandler" type
+               (:superclasses 
+                  ( ("TaskHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [691 698])
+                    ("TestTableRestoreHandler" friend nil (reparse-symbol classsubparts) [703 739])
+                    ("OPINFO_BACKUP_ID" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [746 788])
+                    ("OPINFO_RESTORE_ID" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [793 836])
+                    ("PROGRESSINFO_START_RANGE" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [841 891])
+                    ("TableRestoreHandler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("TableRestoreHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [902 925])
+                    ("TableRestoreHandler" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [930 961])
+                    ("parentInit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [971 1013])
+                    ("childInit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1018 1059])
+                    ("cleanup" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("rv" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1085 1109]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1064 1110])
+                    ("execute" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("h" variable
+                               (:reference 1
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1152 1160]))                          
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1115 1161])
+                    ("abortTask" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("task" variable
+                               (:reference 1
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1189 1200]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1166 1201])
+                    ("private" label nil (reparse-symbol classsubparts) [1203 1211])
+                    ("rts_" variable (:type ("RestoreTransientStore" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1216 1243])
+                    ("max_restores_per_su_" variable (:type "int") (reparse-symbol classsubparts) [1248 1273])
+                    ("max_copies_from_backup_server_" variable (:type "int") (reparse-symbol classsubparts) [1278 1313])
+                    ("tabletRestoreTimeoutSeconds_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1318 1356])
+                    ("rescheduleIntervalSeconds_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1361 1397])
+                    ("maxActiveTabletRestores_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1402 1436])
+                    ("regionToRouter_" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1441 1492])
+                    ("parseOpInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("task" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1767 1784])
+                            ("backupId" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1822 1844])
+                            ("restoreId" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1882 1905]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1734 1912])
+                    ("parseProgressInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("task" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2131 2148])
+                            ("startRange" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2192 2216]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2092 2217])
+                    ("updateProgressInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("task" variable
+                               (:reference 1
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2436 2447])
+                            ("startRange" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2492 2522]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2396 2523])
+                    ("getTabletSUMap" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2800 2825])
+                            ("regions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2866 2906])
+                            ("tabletSuMap" variable
+                               (:reference 1
+                                :type ("TabletSuMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2947 2972]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2764 2973])
+                    ("getRouter" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3158 3184])
+                            ("router" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3220 3240]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3127 3247])
+                    ("getFirstSU" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3505 3531])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3568 3594])
+                            ("imap" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("std::map" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3631 3767])
+                            ("su" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3804 3820]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3473 3827])
+                    ("getTabletRestoreStatus" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("map" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletStatusMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4169 4196])
+                            ("keyType" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4245 4272])
+                            ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4321 4347])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4396 4422])
+                            ("coveringTablet" variable
+                               (:reference 1
+                                :type ("TabletRestoreStatus" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4471 4507])
+                            ("isExact" variable
+                               (:reference 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [4556 4570]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4125 4577])
+                    ("abortActiveTabletRestores" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4790 4815])
+                            ("restoreId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4867 4896]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4743 4897])
+                    ("handleError" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("tableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5182 5211])
+                            ("restoreId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5256 5285])
+                            ("fwCode" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5330 5358])
+                            ("webCode" variable
+                               (:default-value "WebCode::Success)"
+                                :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5403 5452]))                          
+                        :type ("TmCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5142 5453])
+                    ("checkImportThreshold" function
+                       (:prototype-flag t
+                        :typemodifiers ("inline")
+                        :arguments 
+                          ( ("su" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5720 5742])
+                            ("usedSus" variable
+                               (:reference 1
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("int" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5796 5832])
+                            ("totalImports" variable
+                               (:reference 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [5886 5904]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5671 5911]))                  
+                :type "class")
+                nil [642 5915]))          
+    :file "TableRestoreHandler.h"
+    :pointmax 6145
+    :fsize 6144
+    :lastmodtime '(20550 21282)
+    :unmatched-syntax '((punctuation 739 . 740))
+    :lexical-table 
+        '(("__TABLE_RESTORE_HANDLER_H__")
+          )
+
+    )
+   (semanticdb-table "TabletSplitProgress.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__TABLET_SPLIT_PROGRESS_H__" variable (:constant-flag t) nil [104 131])
+            ("string" include (:system-flag t) nil [133 149])
+            ("map" include (:system-flag t) nil [150 163])
+            ("dht/FwCode.h" include (:system-flag t) nil [164 186])
+            ("dht/WebCode.h" include (:system-flag t) nil [187 210])
+            ("Task.h" include (:system-flag t) nil [211 228])
+            ("TabletSplitProgress" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [259 267])
+                    ("TestTabletSplitProgress" friend nil (reparse-symbol classsubparts) [273 309])
+                    ("TabletSplitPhase" type
+                       (:members 
+                          ( ("TABLET_SPLIT_NONE" variable
+                               (:constant-flag t
+                                :default-value (373 374)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [352 374])
+                            ("PREPARE" variable
+                               (:constant-flag t
+                                :default-value (394 395)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [384 395])
+                            ("ABORT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [405 411])
+                            ("COMMIT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [420 427]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [316 434])
+                    ("TabletSplitProgress" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("TabletSplitProgress" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [440 462])
+                    ("TabletSplitProgress" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [468 499])
+                    ("parse" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("progressInfo" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [536 568]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [509 569])
+                    ("serialize" function
+                       (:prototype-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [579 603])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [609 622])
+                    ("setTask" function
+                       (:arguments 
+                          ( ("task" variable
+                               (:pointer 1
+                                :type ("Task" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [641 652]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [628 682])
+                    ("getSplitPhase" function (:type ("TabletSplitPhase" type (:type "class") nil nil)) (reparse-symbol classsubparts) [688 751])
+                    ("setPhasePrepare" function (:type "void") (reparse-symbol classsubparts) [757 815])
+                    ("setPhaseCommit" function (:type "void") (reparse-symbol classsubparts) [821 876])
+                    ("setPhaseAbort" function (:type "void") (reparse-symbol classsubparts) [882 935])
+                    ("isRegionSuccessful" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("regionName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [965 995]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [941 996])
+                    ("isRegionAttempted" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("regionName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1029 1059]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1006 1060])
+                    ("numAttemptsForRegion" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("regionName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1095 1125]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1070 1126])
+                    ("retCodeFromRegion" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("regionName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1176 1206]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1136 1207])
+                    ("setRegionInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1232 1258])
+                            ("retcode" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1258 1288])
+                            ("nattempts" variable (:type "int") (reparse-symbol arg-sub-list) [1312 1326]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1213 1327])
+                    ("save" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("id" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1359 1381]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1333 1382])
+                    ("LIST_DELIMITER" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1388 1421])
+                    ("REGION_INFO_DELIMITER" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [1426 1466])
+                    ("private" label nil (reparse-symbol classsubparts) [1468 1476])
+                    ("task_" variable
+                       (:pointer 1
+                        :type ("Task" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1482 1494])
+                    ("phase_" variable (:type ("TabletSplitPhase" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1499 1523])
+                    ("RegionProgressInfo" type
+                       (:members 
+                          ( ("RegionProgressInfo" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("retcode" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1587 1617])
+                                    ("attempts" variable (:type "int") (reparse-symbol arg-sub-list) [1617 1630]))                                  
+                                :type ("RegionProgressInfo" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [1568 1631])
+                            ("RegionProgressInfo" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [1640 1662])
+                            ("retCode_" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1671 1702])
+                            ("numAttempts_" variable (:type "int") (reparse-symbol classsubparts) [1711 1728]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [1528 1735])
+                    ("RegionProgressMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("RegionProgressInfo" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1740 1807])
+                    ("RegionProgressMapIter" type
+                       (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                        :superclasses "std::map::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1812 1893])
+                    ("RegionProgressMapCIter" type
+                       (:typedef ("std::map::const_iterator" type (:type "class") nil nil)
+                        :superclasses "std::map::const_iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1898 1986])
+                    ("regionInfo_" variable (:type ("RegionProgressMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1992 2022])
+                    ("setPhase" function
+                       (:arguments 
+                          ( ("phase" variable (:type ("TabletSplitPhase" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2042 2065]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2028 2126])
+                    ("TabletSplitProgress" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("TabletSplitProgress" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2152 2173]))                          
+                        :type ("TabletSplitProgress" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2132 2174])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("TabletSplitProgress" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2210 2232]))                          
+                        :type ("TabletSplitProgress" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2179 2233]))                  
+                :type "class")
+                nil [230 2237]))          
+    :file "TabletSplitProgress.h"
+    :pointmax 2468
+    :fsize 2467
+    :lastmodtime '(20550 21282)
+    :unmatched-syntax '((punctuation 309 . 310))
+    :lexical-table 
+        '(("__TABLET_SPLIT_PROGRESS_H__")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndev!trunk!controller!src!taskManager!src!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

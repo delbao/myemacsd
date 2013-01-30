@@ -1,0 +1,138 @@
+;; Object httpstate/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "httpstate/"
+  :tables (list 
+   (semanticdb-table "CheckCache.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("CHECKCACHE_H" variable (:constant-flag t) nil [30 42])
+            ("uf/httpremap/URLRewrite.H" include nil nil [43 79])
+            ("uf/httpremap/URLMapping.H" include nil nil [80 116])
+            ("uf/stateserver/UFHTTPTxnObject.H" include nil nil [117 160])
+            ("uf/stateserver/UFStatePlugin.H" include nil nil [161 202])
+            ("CacheMgmt" type
+               (:prototype t
+                :type "class")
+                nil [204 220])
+            ("UFHTTPTxnObject" type
+               (:prototype t
+                :type "class")
+                nil [222 244])
+            ("CheckCache" type
+               (:superclasses 
+                  ( ("UFStatePlugin" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [287 294])
+                    ("CheckCache" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("reg" variable (:type "bool") (reparse-symbol arg-sub-list) [310 320])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [321 327]))                          
+                        :type ("CheckCache" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [299 328])
+                    ("CheckCache" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [333 355])
+                    ("init" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [361 373])
+                    ("pluginHandler" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type ("UFPluginData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [397 416]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [378 417])
+                    ("createUFPlugin" function
+                       (:pointer 1
+                        :type ("UFPlugin" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [422 477])
+                    ("preStateRunner" function
+                       (:arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [502 513]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [482 557])
+                    ("postStateRunner" function
+                       (:arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [583 594]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [562 639])
+                    ("getRegistrationLocation" function
+                       (:typemodifiers ("static")
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [644 718])
+                    ("protected" label nil (reparse-symbol classsubparts) [721 731])
+                    ("canServeFromCache" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [736 761])
+                    ("getCacheStatus" function
+                       (:prototype-flag t
+                        :type ("UFHTTPTxnObject::CACHE_STATUS" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [766 813])
+                    ("cts" variable
+                       (:typemodifiers ("static")
+                        :type ("CheckCache" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [819 841])
+                    ("_registrationLocation" variable
+                       (:typemodifiers ("static")
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [846 893])
+                    ("_localTxn" variable
+                       (:pointer 1
+                        :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [899 934])
+                    ("private" label nil (reparse-symbol classsubparts) [936 944])
+                    ("_pCacheMgr" variable
+                       (:pointer 1
+                        :type ("CacheMgmt" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [949 971]))                  
+                :type "class")
+                nil [245 974])
+            ("CACHE_TTL" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1028 1070])
+            ("CACHE_MAX_AGE" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1071 1121])
+            ("STALE_WHILE_REVALIDATE" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1122 1196])
+            ("DONT_PRESERVE_HEADERS" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1197 1277]))          
+    :file "CheckCache.H"
+    :pointmax 1286
+    :fsize 1285
+    :lastmodtime '(20629 53826)
+    :unmatched-syntax '((punctuation 319 . 320))
+    :lexical-table 
+        '(("CHECKCACHE_H")
+          )
+
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!http!state!inc!uf!httpstate!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

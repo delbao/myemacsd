@@ -1,0 +1,73 @@
+;; Object init/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "init/"
+  :tables (list 
+   (semanticdb-table "InitHook.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("com.yahoo.dtf.ydht.init" package nil nil [1 33])
+            ("java.util.Vector" include nil nil [35 59])
+            ("com.yahoo.dtf.NodeInfo" include nil nil [61 91])
+            ("com.yahoo.dtf.actions.Action" include nil nil [92 128])
+            ("com.yahoo.dtf.actions.protocol.CleanUpHook" include nil nil [129 179])
+            ("com.yahoo.dtf.actions.protocol.ReleaseAgent" include nil nil [180 231])
+            ("com.yahoo.dtf.actions.ydht.YdhtCliPool" include nil nil [232 278])
+            ("com.yahoo.dtf.actions.ydht.YdhtOperation" include nil nil [279 327])
+            ("com.yahoo.dtf.comm.CommClient" include nil nil [328 365])
+            ("com.yahoo.dtf.config.Config" include nil nil [366 401])
+            ("com.yahoo.dtf.exception.DTFException" include nil nil [402 446])
+            ("com.yahoo.dtf.exception.YDHTException" include nil nil [447 492])
+            ("com.yahoo.dtf.init.InitClass" include nil nil [493 529])
+            ("com.yahoo.dtf.logger.DTFLogger" include nil nil [530 568])
+            ("com.yahoo.dtf.logger.RemoteLogger" include nil nil [569 610])
+            ("com.yahoo.dtf.recorder.Event" include nil nil [611 647])
+            ("com.yahoo.dtf.util.Command" include nil nil [648 682])
+            ("com.yahoo.dtf.util.YinstUtil" include nil nil [683 719])
+            ("InitHook" type
+               (:typemodifiers ("public")
+                :interfaces ("InitClass" "CleanUpHook")
+                :members 
+                  ( ("YDHT_AGENT_TYPE" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [787 860])
+                    ("YDHT_AGENT_TYPE_CLIENT" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [866 930])
+                    ("YDHT_AGENT_TYPE_TC" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [935 995])
+                    ("YDHT_AGENT_TYPE_SU" variable
+                       (:typemodifiers ("private" "final" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [1000 1060])
+                    ("checkSetup" function
+                       (:throws ("DTFException")
+                        :typemodifiers ("public" "static")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1066 2032])
+                    ("init" function
+                       (:throws ("DTFException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [2042 4183])
+                    ("cleanup" function
+                       (:throws ("DTFException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4193 4856]))                  
+                :type "class")
+                nil [721 4858]))          
+    :file "InitHook.java"
+    :pointmax 4859
+    :fsize 4858
+    :lastmodtime '(20425 22294)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!branches!releases!current!dht!test!ydht-dtf!src!java!com!yahoo!dtf!ydht!init!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

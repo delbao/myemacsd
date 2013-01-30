@@ -1,0 +1,68 @@
+;; Object wmt/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "wmt/"
+  :tables (list 
+   (semanticdb-table "Main.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("InkAPIWrapper.h" include nil nil [1 27])
+            ("MixtAPIInternal.h" include nil nil [29 57])
+            ("MixtAPIPrivate.h" include nil nil [58 85])
+            ("WMT.h" include nil nil [87 103])
+            ("StatPages.h" include nil nil [104 126])
+            ("MMSAcceptorWMT.h" include nil nil [127 154])
+            ("HTTPDispatchWMT.h" include nil nil [155 183])
+            ("HTTPAcceptorWMT.h" include nil nil [184 212])
+            ("SplitterTableMixt.h" include nil nil [213 243])
+            ("MBridgeMonitorMixt.h" include nil nil [244 275])
+            ("MMSMessage.h" include nil nil [277 300])
+            ("MIXT-version.h" include nil nil [325 350])
+            ("HTTPHdr" type
+               (:prototype t
+                :type "struct")
+                nil [352 367])
+            ("register_ShowWMT" function
+               (:prototype-flag t
+                :pointer 1
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("c" variable
+                       (:pointer 1
+                        :type ("Continuation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [401 418])
+                    ("h" variable
+                       (:pointer 1
+                        :type ("HTTPHdr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [419 430]))                  
+                :type ("Action" type (:type "class") nil nil))
+                nil [368 431])
+            ("g_client_id_" variable (:type ("vink32" type (:type "class") nil nil)) nil [455 482])
+            ("g_MixtAPIPrivate" variable
+               (:pointer 1
+                :type ("MixtAPIPrivate" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [483 523])
+            ("INKPluginInit" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [544 553])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [554 573]))                  
+                :type "void")
+                nil [525 2646]))          
+    :file "Main.cc"
+    :pointmax 2649
+    :fsize 2648
+    :lastmodtime '(20632 41364)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!mixt!wmt!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
