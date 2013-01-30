@@ -1,0 +1,52 @@
+;; Object plugin/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "plugin/"
+  :tables (list 
+   (semanticdb-table "SherpaAPI.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("SherpaAPI.h" include nil nil [1 23])
+            ("processRequest" function
+               (:arguments 
+                  ( ("ufRequest" variable
+                       (:reference 1
+                        :type ("UFRequest" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [45 66]))                  
+                :type "bool")
+                nil [25 469])
+            ("processReadResponse" function
+               (:arguments 
+                  ( ("ufResponse" variable
+                       (:reference 1
+                        :type ("UFResponse" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [496 519]))                  
+                :type "void")
+                nil [471 768])
+            ("processSendResponse" function
+               (:arguments 
+                  ( ("ufResponse" variable
+                       (:reference 1
+                        :type ("UFResponse" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [795 818]))                  
+                :type "void")
+                nil [770 1068])
+            ("handleTransactionCleanUp" function
+               (:arguments 
+                  ( ("txnStorage" variable
+                       (:pointer 1
+                        :type ("PluginStorage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1100 1126]))                  
+                :type "void")
+                nil [1070 1489])
+            ("initializeProgram" function (:type "void") nil [1928 2120]))          
+    :file "SherpaAPI.cc"
+    :pointmax 2122
+    :fsize 2121
+    :lastmodtime '(20616 12671)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndevn!branches!uffIntegration!router!uff_plugin_tmp!src!plugin!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,1744 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("SRCTOP" variable (:default-value ("$(CURDIR)/../../..")) nil [1 30])
+            ("$(SRCTOP)/build/Makefile.defs" include nil nil [31 69])
+            ("NOTTHESE" variable (:default-value ("autoTestFwCode.cc" "testActionStatsRecorder.cc" "testBrokerMessage.cc" "TestCurlMulti.cc" "testSymbolLoad.cc" "lockbench.cc" "testCharArraySink.cc" "testMessage.cc")) nil [70 258])
+            ("SHARED_OBJS" variable (:default-value ("YahooCookieUtil")) nil [282 332])
+            ("CXXSRC" variable (:default-value ("$(addsuffix .cc, $(SHARED_OBJS) )")) nil [332 377])
+            ("EXETARGET" variable (:default-value ("$(patsubst %.cc,%,$(filter-out $(NOTTHESE) $(CXXSRC), $(wildcard *.cc)))")) nil [378 463])
+            ("LIB_NAME" variable (:default-value ("dhtbasetestHelper")) nil [684 720])
+            ("LINC" variable (:default-value ("-I$(CURDIR)" "-I../src" "-I../include")) nil [721 765])
+            ("LLDLIBS" variable (:default-value ("-L./$(OBJDIR)")) nil [766 802])
+            ("LINC" variable (:default-value ("-I/home/y/include/yicu")) nil [828 867])
+            ("LLDLIBS" variable (:default-value ("-L../src" "-L../testSymbolLoad" "-ldhtFwTestPreload" "-ldht_common" "-lcppunit" "-ljson" "-lycfn")) nil [868 1080])
+            ("LLDLIBS" variable (:default-value ("-l$(LIB_NAME)_p" "-ldhtFrameworkBase_p" "-ltestSymbolLoad_p" "-llog4cpp_y" "-lyck" "-lysys" "-lmdbm" "-lylock" "-lcurl" "-lproxyio" "-lycore++" "-lyca" "-lthoth" "-lapstubs" "-ltribble" "-lboost_iostreams-gcc34-mt-1_41_1" "-lsmgscli" "-ldhtFwCore")) nil [1100 1690])
+            ("LLDLIBS" variable (:default-value ("-l$(LIB_NAME)" "-ldhtFrameworkBase" "-ltestSymbolLoad")) nil [1696 1824])
+            ("CXXFLAGS" variable (:default-value ("-O0" "-g" "-DUNIT_TEST")) nil [1831 1862])
+            ("WARN" variable (:default-value ("-Werror" "-Wall")) nil [1863 1885])
+            ("LCLEAN" variable (:default-value ("*.valout*" "*~" "testLog.log" "brokerAccess.log")) nil [1885 1937])
+            ("LRUN_PATH" variable (:default-value ("../src/$(OBJDIR)" "../testSymbolLoad/$(OBJDIR)")) nil [1938 1997])
+            ("LDEF" variable (:default-value ("-D_FILE_OFFSET_BITS=64")) nil [1997 2028])
+            ("$(SRCTOP)/build/Makefile.rules" include nil nil [2161 2200])
+            ("$(SRCTOP)/build/Makefile.ut" include nil nil [2200 2293])
+            ("test" function (:arguments ("lockbench" "$(OEXE)" "$(ORUN)" "testFwCode")) nil [2294 2342])
+            ("valcheck" function (:arguments ("$(OVAL)" "testFwCode")) nil [2342 2372])
+            ("AUTOTESTFWCODE" variable (:default-value ("autoTestFwCode")) nil [2373 2403])
+            ("testFwCode" function nil nil [2403 2498]))          
+    :file "Makefile"
+    :pointmax 2498
+    :fsize 2497
+    :lastmodtime '(20603 30196)
+    :unmatched-syntax '((shell-command 2478 . 2497) (bol 2477 . 2477) (shell-command 2129 . 2153) (bol 2128 . 2128) (shell-command 2086 . 2122) (bol 2085 . 2085) (shell-command 2059 . 2084) (bol 2058 . 2058))
+    )
+   (semanticdb-table "testRouterTransport.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [61 80])
+            ("string" include (:system-flag t) nil [81 98])
+            ("sstream" include (:system-flag t) nil [99 117])
+            ("dht/TestBase.h" include (:system-flag t) nil [119 144])
+            ("dht/RouterTransport.h" include (:system-flag t) nil [145 177])
+            ("dht/StringUtils.h" include (:system-flag t) nil [178 206])
+            ("TestHelper.h" include nil nil [207 230])
+            ("dht/WebConstants.h" include (:system-flag t) nil [231 260])
+            ("dht/test_wrappers.h" include (:system-flag t) nil [261 291])
+            ("dht/FwTestHooks.h" include nil nil [292 320])
+            ("dht/ProcessContext.h" include nil nil [321 352])
+            ("ycfn/ycfn.h" include (:system-flag t) nil [353 375])
+            ("dht/Stats.h" include nil nil [376 398])
+            ("boost/scoped_array.hpp" include (:system-flag t) nil [399 432])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [434 534])
+            ("JSON_RESPONSE_OK" variable
+               (:typemodifiers ("static")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [536 615])
+            ("EncryptBufferAutoPtr" type
+               (:typedef ("boost::scoped_array" type
+                     (:template-specifier 
+                        ( ("char" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::scoped_array"
+                :type "typedef")
+                nil [616 671])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [673 693])
+            ("TestRouterTransport" type
+               (:superclasses 
+                  ( ("TestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestRouterTransport" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [765 785]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [746 786])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testEncryptFail" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [804 820]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [791 821])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardStorageOperation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [839 867]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [826 868])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardStorageOperationWithYcaEmptyAppid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [886 931]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [873 932])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardStorageOperationWithYcaSomeAppid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [950 994]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [937 995])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardStorageOperationWithYcaFail" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1013 1052]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1000 1053])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardEncryptedStorageOperation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1071 1108]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1058 1109])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardEncryptedStorageOperationEmptyRequest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1127 1176]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1114 1177])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardEncryptedStorageOperationHugeRequest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1195 1243]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1182 1244])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardEncryptedStorageOperationEmptyResp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1262 1308]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1249 1309])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardGetSync" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1327 1346]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1314 1347])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardCopyMark" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1365 1385]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1352 1386])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardCopyMarkBadJsonResp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1404 1435]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1391 1436])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardCompression" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1454 1477]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1441 1478])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetRegionToForwardToHeader" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1496 1527]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1483 1528])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testForwardCancelCopy" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1546 1568]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1533 1569])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1574 1599])
+                    ("public" label nil (reparse-symbol classsubparts) [1600 1607])
+                    ("setUp" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1612 1625])
+                    ("tearDown" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1630 1646])
+                    ("testEncryptFail" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1651 1674])
+                    ("testForwardStorageOperation" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1679 1714])
+                    ("testForwardStorageOperationWithYcaEmptyAppid" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1719 1771])
+                    ("testForwardStorageOperationWithYcaSomeAppid" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1776 1827])
+                    ("testForwardStorageOperationWithYcaFail" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1832 1878])
+                    ("testForwardGetSync" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1883 1909])
+                    ("testForwardCopyMark" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1914 1941])
+                    ("testForwardCopyMarkBadJsonResp" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1946 1984])
+                    ("testForwardEncryptedStorageOperation" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1989 2033])
+                    ("testForwardEncryptedStorageOperationEmptyRequest" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2038 2094])
+                    ("testForwardEncryptedStorageOperationHugeRequest" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2099 2154])
+                    ("testForwardEncryptedStorageOperationEmptyResp" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2159 2212])
+                    ("testForwardCompression" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2217 2247])
+                    ("testGetRegionToForwardToHeader" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2252 2290])
+                    ("testForwardCancelCopy" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2295 2324])
+                    ("initOnce" function
+                       (:typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2329 2795])
+                    ("TestRouterTransport" function
+                       (:constructor-flag t
+                        :type ("TestRouterTransport" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2801 2840])
+                    ("verifyForwardOpStats" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("Id" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2871 2893])
+                            ("count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2893 2908])
+                            ("sFailures" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2909 2928])
+                            ("cFailures" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2959 2978])
+                            ("success" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2978 2995])
+                            ("latency" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2995 3012])
+                            ("reqSize" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3043 3060])
+                            ("respSize" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3060 3078]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2845 3079])
+                    ("private" label nil (reparse-symbol classsubparts) [3081 3089])
+                    ("statsRecorder" variable (:type ("ActionMonitor" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3094 3122]))                  
+                :type "class")
+                nil [694 3125])
+            ("setUp" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [3127 3667])
+            ("tearDown" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [3669 3711])
+            ("encrypt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3749 3775])
+                    ("output" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3776 3797]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [3713 4307])
+            ("decrypt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("encryptedBody" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4345 4379])
+                    ("resultStr" variable
+                       (:reference 1
+                        :type ("EncryptBufferAutoPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4388 4421])
+                    ("resultStrLen" variable
+                       (:reference 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4430 4452]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [4309 5059])
+            ("testForwardCompression" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [5061 7479])
+            ("testEncryptFail" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [7481 9705])
+            ("verifyForwardOpStats" function
+               (:parent "TestRouterTransport"
+                :arguments 
+                  ( ("Id" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9755 9777])
+                    ("count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9777 9792])
+                    ("sFailures" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9793 9812])
+                    ("cFailures" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9834 9853])
+                    ("success" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9853 9870])
+                    ("latency" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9870 9887])
+                    ("reqSize" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9909 9926])
+                    ("respSize" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9926 9944]))                  
+                :type "void")
+                nil [9707 10985])
+            ("testForwardEncryptedStorageOperation" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [10987 17912])
+            ("testForwardEncryptedStorageOperationEmptyRequest" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [17914 20196])
+            ("testForwardEncryptedStorageOperationHugeRequest" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [20198 24643])
+            ("testForwardEncryptedStorageOperationEmptyResp" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [24645 26126])
+            ("testForwardStorageOperation" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [26128 32350])
+            ("testForwardGetSync" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [32352 35388])
+            ("testForwardStorageOperationWithYcaEmptyAppid" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [35390 37900])
+            ("testForwardStorageOperationWithYcaSomeAppid" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [37902 40460])
+            ("testForwardStorageOperationWithYcaFail" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [40463 42851])
+            ("testForwardCopyMark" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [42853 47109])
+            ("testForwardCopyMarkBadJsonResp" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [47111 49048])
+            ("testGetRegionToForwardToHeader" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [49050 50010])
+            ("testForwardCancelCopy" function
+               (:parent "TestRouterTransport"
+                :type "void")
+                nil [50012 51753])
+            ("main" function (:type "int") nil [51756 51977]))          
+    :file "testRouterTransport.cc"
+    :pointmax 52165
+    :fsize 52164
+    :lastmodtime '(20690 55062)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "testStorageTransport.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [60 79])
+            ("string" include (:system-flag t) nil [80 97])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [98 142])
+            ("cppunit/extensions/TestFactoryRegistry.h" include (:system-flag t) nil [143 194])
+            ("cppunit/ui/text/TestRunner.h" include (:system-flag t) nil [195 234])
+            ("cppunit/TestListener.h" include (:system-flag t) nil [235 268])
+            ("cppunit/BriefTestProgressListener.h" include (:system-flag t) nil [269 315])
+            ("cppunit/TestResult.h" include (:system-flag t) nil [316 347])
+            ("cppunit/TestFailure.h" include (:system-flag t) nil [348 380])
+            ("dht/TestBase.h" include (:system-flag t) nil [381 406])
+            ("TestHelper.h" include nil nil [407 430])
+            ("dht/StorageTransport.h" include nil nil [431 464])
+            ("dht/JsonObject.h" include (:system-flag t) nil [465 492])
+            ("dht/SchemaNames.h" include (:system-flag t) nil [493 521])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [523 543])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [544 643])
+            ("TestStorageTransport" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestStorageTransport" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [729 750]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [710 751])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testPing" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [769 778]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [756 779])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testInitiateCopy" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [797 814]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [784 815])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testAddEmptyTablet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [833 852]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [820 853])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testDropTablet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [871 886]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [858 887])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSendFtrTabletSnapshot" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [905 931]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [892 932])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSendCopy" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [950 963]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [937 964])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetSplitPoint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [982 1000]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [969 1001])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testBackupTablet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1019 1036]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1006 1037])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testCancelCopy" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1055 1070]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1042 1071])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testCancelLoadTablet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1089 1110]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1076 1111])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testCancelReceiveTablet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1129 1153]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1116 1154])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSendIndexDelete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1172 1192]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1159 1193])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSendIndexSet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1211 1228]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1198 1229])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testInitiateDrainFlip" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1247 1269]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1234 1270])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testInitBackup" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1288 1303]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1275 1304])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetTabletMetadata" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1322 1344]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1309 1345])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1350 1375])
+                    ("public" label nil (reparse-symbol classsubparts) [1381 1389])
+                    ("testPing" function (:type "void") (reparse-symbol classsubparts) [1394 1929])
+                    ("testGetTabletMetadata" function (:type "void") (reparse-symbol classsubparts) [1935 3219])
+                    ("testInitiateCopy" function (:type "void") (reparse-symbol classsubparts) [3225 4437])
+                    ("testAddEmptyTablet" function (:type "void") (reparse-symbol classsubparts) [4443 5015])
+                    ("testDropTablet" function (:type "void") (reparse-symbol classsubparts) [5021 5554])
+                    ("testRead" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5582 5592])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5593 5605])
+                            ("nmemb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5606 5619])
+                            ("data" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5620 5631]))                          
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5559 5661])
+                    ("testSendFtrTabletSnapshot" function (:type "void") (reparse-symbol classsubparts) [5667 7202])
+                    ("testSendCopy" function (:type "void") (reparse-symbol classsubparts) [7208 8281])
+                    ("testGetSplitPoint" function (:type "void") (reparse-symbol classsubparts) [8287 8901])
+                    ("testCancelLoadTablet" function (:type "void") (reparse-symbol classsubparts) [8907 9529])
+                    ("testCancelReceiveTablet" function (:type "void") (reparse-symbol classsubparts) [9535 10163])
+                    ("testInitiateDrainFlip" function (:type "void") (reparse-symbol classsubparts) [10169 10805])
+                    ("testInitBackup" function (:type "void") (reparse-symbol classsubparts) [10811 11387])
+                    ("testSendIndexDelete" function (:type "void") (reparse-symbol classsubparts) [11397 13861])
+                    ("testSendIndexSet" function (:type "void") (reparse-symbol classsubparts) [13866 15686])
+                    ("testCancelCopy" function (:type "void") (reparse-symbol classsubparts) [15692 16890])
+                    ("testBackupTablet" function (:type "void") (reparse-symbol classsubparts) [16896 18009])
+                    ("private" label nil (reparse-symbol classsubparts) [18010 18018]))                  
+                :type "class")
+                nil [647 18021])
+            ("main" function (:type "int") nil [18023 18147]))          
+    :file "testStorageTransport.cc"
+    :pointmax 18335
+    :fsize 18334
+    :lastmodtime '(20550 21302)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "TestHelper.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__TEST_HELPER_H__" variable (:constant-flag t) nil [184 201])
+            ("memory" include (:system-flag t) nil [203 220])
+            ("ycfn/ycfn.h" include (:system-flag t) nil [221 243])
+            ("ycrypto/keydb/keyDb.h" include (:system-flag t) nil [244 276])
+            ("iostream" include (:system-flag t) nil [278 297])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [298 342])
+            ("cppunit/extensions/TestFactoryRegistry.h" include (:system-flag t) nil [343 394])
+            ("cppunit/ui/text/TestRunner.h" include (:system-flag t) nil [395 434])
+            ("cppunit/TestListener.h" include (:system-flag t) nil [435 468])
+            ("cppunit/TestResult.h" include (:system-flag t) nil [469 500])
+            ("cppunit/TestFailure.h" include (:system-flag t) nil [501 533])
+            ("dht/LogUtils.h" include nil nil [534 559])
+            ("dht/Config.h" include nil nil [560 583])
+            ("dht/SectionConfig.h" include nil nil [584 614])
+            ("dht/ActionContext.h" include nil nil [615 645])
+            ("dht/FastSharedEphemeralStoreMDBM.h" include nil nil [646 691])
+            ("dht/test_wrappers.h" include (:system-flag t) nil [692 722])
+            ("dht/ProcessContext.h" include nil nil [723 754])
+            ("helperLog" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [756 864])
+            ("x_global_me_x" variable
+               (:typemodifiers ("static")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [935 968])
+            ("ME" variable (:constant-flag t) nil [977 979])
+            ("FW_UT_CRYPTO_KEY_NAME" variable (:constant-flag t) nil [1413 1434])
+            ("TestHelper" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1475 1482])
+                    ("logInit" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("file" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1507 1525]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1487 1624])
+                    ("processContextInited" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1630 1663])
+                    ("initProcessContext" function
+                       (:typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1669 2319])
+                    ("fssInit" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("iniFile" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2346 2367])
+                            ("section" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2391 2412]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2326 2923])
+                    ("fssClose" function
+                       (:typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2929 3180])
+                    ("fssClear" function
+                       (:typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [3186 3427])
+                    ("getFSSInstance" function
+                       (:typemodifiers ("static")
+                        :type ("FastSharedEphemeralStoreMDBM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3433 3549])
+                    ("checkErrorStack" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3621 3649])
+                            ("rc" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3650 3674]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3593 3859])
+                    ("append_utf8" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("input" variable (:type "int") (reparse-symbol arg-sub-list) [4373 4383])
+                            ("result" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4384 4404]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4349 5022])
+                    ("basicEncrypt" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("from" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5052 5075])
+                            ("to" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5076 5093]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5027 5731])
+                    ("basicDecrypt" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("from" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5762 5785])
+                            ("to" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5786 5803]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5737 6390])
+                    ("compressUtils" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("input" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6518 6544])
+                            ("outputBuffer" variable
+                               (:reference 1
+                                :type ("CharBufferAutoPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6559 6592])
+                            ("outputLength" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6607 6629])
+                            ("compressFlag" variable (:type "bool") (reparse-symbol arg-sub-list) [6644 6662]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6472 7038])
+                    ("encryptUrl" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("from" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7066 7089])
+                            ("to" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7090 7107]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7043 7151])
+                    ("decryptUrl" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("from" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7184 7207])
+                            ("to" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7208 7225]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7161 7269])
+                    ("encryptBody" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("from" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7303 7326])
+                            ("to" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7327 7344]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7279 7388])
+                    ("decryptBody" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("from" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7422 7445])
+                            ("to" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7446 7463]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7398 7507])
+                    ("private" label nil (reparse-symbol classsubparts) [7510 7518])
+                    ("fssInited" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7523 7545])
+                    ("fssInstance" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :type ("FastSharedEphemeralStoreMDBM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7550 7599]))                  
+                :type "class")
+                nil [1456 7602])
+            ("TestHelper::fssInited" variable (:type "bool") nil [7603 7638])
+            ("TestHelper::fssInstance" variable
+               (:pointer 1
+                :type ("FastSharedEphemeralStoreMDBM" type (:type "class") nil nil))
+                nil [7639 7697])
+            ("TestHelper::processContextInited" variable (:type "bool") nil [7698 7744]))          
+    :file "TestHelper.h"
+    :pointmax 7923
+    :fsize 7922
+    :lastmodtime '(20550 21302)
+    :unmatched-syntax '((string 2413 . 2422) (punctuation 2411 . 2412) (string 2368 . 2389) (punctuation 2366 . 2367) (string 1526 . 1547) (punctuation 1524 . 1525))
+    :lexical-table 
+        '(("FW_UT_CRYPTO_KEY_NAME" . ((string "\"sherpa.fw.testkey\"" 1435 . 1454)))
+          ("__TEST_HELPER_H__")
+          ("ME" . ((semantic-list "(x_global_me_x.clear(), x_global_me_x.append(__FILE__ \"::\").append(__FUNCTION__).append(\"():\").append(StringUtils::toString(__LINE__)).append(\": \"))" 980 . 1128)))
+          )
+
+    )
+   (semanticdb-table "locktest.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sys/types.h" include (:system-flag t) nil [155 177])
+            ("sys/wait.h" include (:system-flag t) nil [178 199])
+            ("stdio.h" include (:system-flag t) nil [200 218])
+            ("unistd.h" include (:system-flag t) nil [219 238])
+            ("dht/LogUtils.h" include nil nil [240 265])
+            ("dht/LockManager.h" include nil nil [266 294])
+            ("dht/FastSharedEphemeralStoreMDBM.h" include nil nil [295 340])
+            ("TestLockManager.h" include nil nil [341 369])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1101 1121])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [1122 1222])
+            ("test_count" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [1224 1250])
+            ("failed_test_count" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [1251 1284])
+            ("PARENT_PROC" variable (:constant-flag t) nil [1294 1305])
+            ("CHILD_PROC" variable (:constant-flag t) nil [1316 1326])
+            ("PARENT_WAIT_USECS" variable (:constant-flag t) nil [1339 1356])
+            ("TEST_KEY_1" variable (:constant-flag t) nil [1424 1434])
+            ("TEST_KEY_2" variable (:constant-flag t) nil [1454 1464])
+            ("TEST_KEY_3" variable (:constant-flag t) nil [1484 1494])
+            ("TEST_KEY_4" variable (:constant-flag t) nil [1514 1524])
+            ("STATIC" variable (:constant-flag t) nil [1545 1551])
+            ("TestHelper" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1579 1586])
+                    ("logInit" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("file" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1611 1628]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1591 1779])
+                    ("fssInit" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("iniFile" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1804 1825])
+                            ("section" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1849 1870]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1784 2375])
+                    ("fssClear" function
+                       (:typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2381 2559])
+                    ("getFSSInstance" function
+                       (:typemodifiers ("static")
+                        :type ("FastSharedEphemeralStoreMDBM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2565 2647])
+                    ("fssInited" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2652 2674])
+                    ("fss" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :type ("FastSharedEphemeralStoreMDBM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2679 2721]))                  
+                :type "class")
+                nil [1560 2724])
+            ("TestHelper::fssInited" variable (:type "bool") nil [2726 2761])
+            ("TestHelper::fss" variable
+               (:pointer 1
+                :type ("FastSharedEphemeralStoreMDBM" type (:type "class") nil nil))
+                nil [2762 2816])
+            ("reapPid" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("pid" variable (:type ("pid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2838 2848]))                  
+                :type "void")
+                nil [2818 3329])
+            ("initOnce" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [3331 3547])
+            ("initEachTest" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [3655 3713])
+            ("sleepingCB" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3738 3753])
+                    ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3754 3773]))                  
+                :type "void")
+                nil [3715 3999])
+            ("CB_KEY" variable (:constant-flag t) nil [4009 4015])
+            ("clearCbKey" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [4032 4155])
+            ("setCbKey" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [4157 4282])
+            ("isSetCbKey" function
+               (:typemodifiers ("static")
+                :type "bool")
+                nil [4284 4453])
+            ("cbDied" variable
+               (:typemodifiers ("static")
+                :type "bool")
+                nil [4455 4482])
+            ("dyingCB" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4504 4519])
+                    ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4520 4539]))                  
+                :type "void")
+                nil [4484 5161])
+            ("myCallbackNoPipe" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5192 5207])
+                    ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5208 5227]))                  
+                :type "void")
+                nil [5163 5362])
+            ("myCallback" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5597 5612])
+                    ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5613 5632]))                  
+                :type "void")
+                nil [5574 5941])
+            ("readPipe" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("result" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6443 6466])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [6476 6483]))                  
+                :type "void")
+                nil [6422 6893])
+            ("validate" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("testName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6917 6940])
+                    ("expected" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6950 6981])
+                    ("pipeContents" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6991 7026])
+                    ("lastTry" variable (:type "bool") (reparse-symbol arg-sub-list) [7036 7049]))                  
+                :type "bool")
+                nil [6895 9060])
+            ("validate" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("testName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9084 9107])
+                    ("expected" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9117 9148])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [9158 9165]))                  
+                :type "bool")
+                nil [9062 9311])
+            ("theLockCall" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lmgr" variable
+                       (:pointer 1
+                        :type ("LockManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9337 9355])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [9385 9392])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9433 9449])
+                    ("procType" variable (:type "int") (reparse-symbol arg-sub-list) [9497 9510])
+                    ("prewait" variable (:type "int") (reparse-symbol arg-sub-list) [9564 9576])
+                    ("postwait" variable (:type "int") (reparse-symbol arg-sub-list) [9620 9633])
+                    ("wrlock" variable (:type "bool") (reparse-symbol arg-sub-list) [9677 9689])
+                    ("rsp" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9729 9792]))                  
+                :type "void")
+                nil [9313 11124])
+            ("theDeath" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [11147 11154])
+                    ("procType" variable (:type "int") (reparse-symbol arg-sub-list) [11155 11168]))                  
+                :type "void")
+                nil [11126 11821])
+            ("theUnlockCall" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("lmgr" variable
+                       (:pointer 1
+                        :type ("LockManager" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11849 11867])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [11897 11904])
+                    ("key" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11945 11961])
+                    ("procType" variable (:type "int") (reparse-symbol arg-sub-list) [11999 12012])
+                    ("prewait" variable (:type "int") (reparse-symbol arg-sub-list) [12066 12078])
+                    ("postwait" variable (:type "int") (reparse-symbol arg-sub-list) [12122 12135])
+                    ("rsp" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12179 12242]))                  
+                :type "void")
+                nil [11823 13233])
+            ("test0a" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [13302 13320]))                  
+                :type "void")
+                nil [13283 14674])
+            ("test0b" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [14740 14758]))                  
+                :type "void")
+                nil [14721 16113])
+            ("test0c" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [16197 16215]))                  
+                :type "void")
+                nil [16178 18731])
+            ("test1a" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [18826 18844]))                  
+                :type "void")
+                nil [18807 21469])
+            ("test1b" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [21555 21573]))                  
+                :type "void")
+                nil [21536 24196])
+            ("test1c" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [24267 24285]))                  
+                :type "void")
+                nil [24248 27793])
+            ("test2b" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [27862 27880]))                  
+                :type "void")
+                nil [27843 31643])
+            ("test3a" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [31798 31816]))                  
+                :type "void")
+                nil [31779 34581])
+            ("test3b" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [34659 34677]))                  
+                :type "void")
+                nil [34640 37690])
+            ("test11" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [38085 38103]))                  
+                :type "void")
+                nil [38066 44360])
+            ("test12" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [44723 48288])
+            ("test13" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [48569 48587]))                  
+                :type "void")
+                nil [48550 54678])
+            ("test13a" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [55087 55105]))                  
+                :type "void")
+                nil [55067 62234])
+            ("test14" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [63139 63157]))                  
+                :type "void")
+                nil [63120 69211])
+            ("test14a" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [69508 69526]))                  
+                :type "void")
+                nil [69488 77129])
+            ("test14b" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [77375 77393]))                  
+                :type "void")
+                nil [77355 82173])
+            ("test15" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [82278 82296]))                  
+                :type "void")
+                nil [82259 85126])
+            ("test16" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [85288 85306]))                  
+                :type "void")
+                nil [85269 88137])
+            ("test17" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [88325 88343]))                  
+                :type "void")
+                nil [88306 91067])
+            ("test18" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [91266 91284]))                  
+                :type "void")
+                nil [91247 94217])
+            ("test19" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [94298 94316]))                  
+                :type "void")
+                nil [94279 98121])
+            ("test25a" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [98270 98288]))                  
+                :type "void")
+                nil [98250 103295])
+            ("test26" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [103627 108916])
+            ("test99" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [108950 112212])
+            ("test5a" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("stressCount" variable (:type "int") (reparse-symbol arg-sub-list) [112233 112249])
+                    ("trackAllPids" variable (:type "bool") (reparse-symbol arg-sub-list) [112250 112268]))                  
+                :type "void")
+                nil [112214 113058])
+            ("stdio.h" include (:system-flag t) nil [113060 113078])
+            ("unistd.h" include (:system-flag t) nil [113079 113098])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [113118 113134]))                  
+                :type "void")
+                nil [113100 113187])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [113198 113207])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [113208 113221]))                  
+                :type "int")
+                nil [113189 114630]))          
+    :file "locktest.cc"
+    :pointmax 114780
+    :fsize 114779
+    :lastmodtime '(20550 21302)
+    :unmatched-syntax '((string 1871 . 1880) (punctuation 1869 . 1870) (string 1826 . 1847) (punctuation 1824 . 1825))
+    :lexical-table 
+        '(("TEST_KEY_3" . ((string "\"testkey3\"" 1495 . 1505)))
+          ("TEST_KEY_4" . ((string "\"testkey4\"" 1525 . 1535)))
+          ("STATIC" . ((STATIC "static" 1552 . 1558)))
+          ("CHILD_PROC" . ((number "2" 1328 . 1329)))
+          ("CB_KEY" . ((string "\"CallBackDone\"" 4016 . 4030)))
+          ("PARENT_PROC" . ((number "1" 1306 . 1307)))
+          ("PARENT_WAIT_USECS" . ((number "50000" 1363 . 1368)))
+          ("TEST_KEY_1" . ((string "\"testkey1\"" 1435 . 1445)))
+          ("TEST_KEY_2" . ((string "\"testkey2\"" 1465 . 1475)))
+          )
+
+    )
+   (semanticdb-table "testDhtFlock.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("unistd.h" include (:system-flag t) nil [20 39])
+            ("stdlib.h" include (:system-flag t) nil [40 59])
+            ("errno.h" include (:system-flag t) nil [60 78])
+            ("string.h" include (:system-flag t) nil [79 98])
+            ("sys/wait.h" include (:system-flag t) nil [99 120])
+            ("string" include (:system-flag t) nil [122 139])
+            ("dht/DhtFlock.h" include (:system-flag t) nil [141 166])
+            ("dht/LogUtils.h" include (:system-flag t) nil [167 192])
+            ("dht/FastSharedEphemeralStoreMDBM.h" include (:system-flag t) nil [193 238])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [240 260])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [261 364])
+            ("TestHelper" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [385 392])
+                    ("logInit" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("file" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [417 434]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [397 585])
+                    ("fssInit" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("iniFile" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [610 631])
+                            ("section" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [655 676]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [590 1181])
+                    ("fssClear" function
+                       (:typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1187 1365])
+                    ("getFSSInstance" function
+                       (:typemodifiers ("static")
+                        :type ("FastSharedEphemeralStoreMDBM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1371 1453])
+                    ("fssInited" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1458 1480])
+                    ("fss" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :type ("FastSharedEphemeralStoreMDBM" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1485 1527]))                  
+                :type "class")
+                nil [366 1530])
+            ("TestHelper::fssInited" variable (:type "bool") nil [1532 1567])
+            ("TestHelper::fss" variable
+               (:pointer 1
+                :type ("FastSharedEphemeralStoreMDBM" type (:type "class") nil nil))
+                nil [1568 1622])
+            ("MYKEY" variable (:constant-flag t) nil [1631 1636])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1664 1680]))                  
+                :type "void")
+                nil [1646 1764])
+            ("ntests" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [1766 1784])
+            ("startTest" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [1786 1857])
+            ("allTestsPassed" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [1859 1944])
+            ("reapPid" function
+               (:arguments 
+                  ( ("pid" variable (:type ("pid_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1959 1969]))                  
+                :type "void")
+                nil [1946 2450])
+            ("getLock" function
+               (:arguments 
+                  ( ("fl" variable
+                       (:reference 1
+                        :type ("DhtFlock" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2481 2495])
+                    ("wlock" variable (:type "bool") (reparse-symbol arg-sub-list) [2496 2507])
+                    ("useLogMsg" variable (:type "bool") (reparse-symbol arg-sub-list) [2508 2523])
+                    ("logMsg" variable (:type "bool") (reparse-symbol arg-sub-list) [2524 2536]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [2452 3005])
+            ("test1" function
+               (:arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3018 3036])
+                    ("wlock" variable (:type "bool") (reparse-symbol arg-sub-list) [3037 3048]))                  
+                :type "void")
+                nil [3007 3637])
+            ("test2" function
+               (:arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3815 3833])
+                    ("wlock" variable (:type "bool") (reparse-symbol arg-sub-list) [3834 3845]))                  
+                :type "void")
+                nil [3804 6010])
+            ("test3" function
+               (:arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6185 6203])
+                    ("wlock" variable (:type "bool") (reparse-symbol arg-sub-list) [6204 6215]))                  
+                :type "void")
+                nil [6174 7784])
+            ("test4" function
+               (:arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7851 7869]))                  
+                :type "void")
+                nil [7839 10301])
+            ("crfile" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10322 10340]))                  
+                :type "void")
+                nil [10303 10516])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [10527 10536])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10537 10550]))                  
+                :type "int")
+                nil [10518 11437]))          
+    :file "testDhtFlock.cc"
+    :pointmax 11589
+    :fsize 11588
+    :lastmodtime '(20550 21302)
+    :unmatched-syntax '((string 677 . 686) (punctuation 675 . 676) (string 632 . 653) (punctuation 630 . 631))
+    :lexical-table 
+        '(("MYKEY" . ((string "\"MyKey\"" 1637 . 1644)))
+          )
+
+    )
+   (semanticdb-table "testControllerTransport.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [60 79])
+            ("string" include (:system-flag t) nil [80 97])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [98 142])
+            ("cppunit/extensions/TestFactoryRegistry.h" include (:system-flag t) nil [143 194])
+            ("cppunit/ui/text/TestRunner.h" include (:system-flag t) nil [195 234])
+            ("cppunit/TestListener.h" include (:system-flag t) nil [235 268])
+            ("cppunit/BriefTestProgressListener.h" include (:system-flag t) nil [269 315])
+            ("cppunit/TestResult.h" include (:system-flag t) nil [316 347])
+            ("cppunit/TestFailure.h" include (:system-flag t) nil [348 380])
+            ("dht/TestBase.h" include (:system-flag t) nil [381 406])
+            ("TestHelper.h" include nil nil [407 430])
+            ("dht/ControllerTransport.h" include nil nil [431 467])
+            ("dht/JsonObject.h" include (:system-flag t) nil [468 495])
+            ("dht/SchemaNames.h" include (:system-flag t) nil [496 524])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [525 545])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [546 645])
+            ("TestControllerTransport" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestControllerTransport" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [734 758]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [715 759])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetCopyStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [777 795]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [764 796])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetCopyCompleted" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [814 835]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [801 836])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetStorageUnits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [854 874]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [841 875])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetStorageTablets" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [893 915]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [880 916])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetStorageTableTabletCount" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [934 965]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [921 966])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetSUData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [984 998]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [971 999])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetRegions" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1017 1032]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1004 1033])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testPing" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1051 1060]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1038 1061])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetMyRegionFromTC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1079 1101]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1066 1102])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testInvalidateTablet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1120 1141]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1107 1142])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testCopyComplete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1160 1177]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1147 1178])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSplitTablet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1196 1212]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1183 1213])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testCopyTablet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1231 1246]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1218 1247])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetSplitStatus" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1265 1284]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1252 1285])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetTabletCountOfTables" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1303 1330]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1290 1331])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetSSLRouter" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1349 1366]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1336 1367])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetTableKeyTypeRegionsAndTablets" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1385 1422]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1372 1423])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetTabletSuMap" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1441 1460]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1428 1461])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testCancelCopy" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1479 1494]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1466 1495])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testCopyActivated" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1513 1531]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1500 1532])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSplitRequest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1550 1567]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1537 1568])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testBackupTablet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1586 1603]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1573 1604])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testTabletBackupComplete" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1622 1647]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1609 1648])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testImportTablet" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1666 1683]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1653 1684])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testUpdateTabletRestoreState" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1702 1731]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1689 1732])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testDrainFlip" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1750 1764]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1737 1765])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testAddPrivileges" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1783 1801]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1770 1802])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSetNotifState" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1820 1838]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1807 1839])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testGetFtrTabletRestoreState" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1857 1886]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1844 1887])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testSetSuMeta" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1905 1919]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [1892 1920])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [1925 1950])
+                    ("public" label nil (reparse-symbol classsubparts) [1956 1964])
+                    ("testGetCopyStatus" function (:type "void") (reparse-symbol classsubparts) [1974 2986])
+                    ("testGetCopyCompleted" function (:type "void") (reparse-symbol classsubparts) [2991 4316])
+                    ("testGetStorageUnits" function (:type "void") (reparse-symbol classsubparts) [4322 5627])
+                    ("testGetStorageTablets" function (:type "void") (reparse-symbol classsubparts) [5633 6197])
+                    ("testGetStorageTableTabletCount" function (:type "void") (reparse-symbol classsubparts) [6203 8526])
+                    ("testGetSUData" function (:type "void") (reparse-symbol classsubparts) [8532 9084])
+                    ("testGetRegions" function (:type "void") (reparse-symbol classsubparts) [9090 9624])
+                    ("testPing" function (:type "void") (reparse-symbol classsubparts) [9629 11054])
+                    ("testGetMyRegionFromTC" function (:type "void") (reparse-symbol classsubparts) [11064 14668])
+                    ("testInvalidateTablet" function (:type "void") (reparse-symbol classsubparts) [14674 15640])
+                    ("testCopyComplete" function (:type "void") (reparse-symbol classsubparts) [15646 16809])
+                    ("testCancelCopy" function (:type "void") (reparse-symbol classsubparts) [16815 17639])
+                    ("testCopyActivated" function (:type "void") (reparse-symbol classsubparts) [17644 18417])
+                    ("testCopyTablet" function (:type "void") (reparse-symbol classsubparts) [18423 20393])
+                    ("testSplitTablet" function (:type "void") (reparse-symbol classsubparts) [20398 22175])
+                    ("testSplitRequest" function (:type "void") (reparse-symbol classsubparts) [22180 23619])
+                    ("testGetSplitStatus" function (:type "void") (reparse-symbol classsubparts) [23624 27396])
+                    ("testGetTabletCountOfTables" function (:type "void") (reparse-symbol classsubparts) [27402 28384])
+                    ("testGetSSLRouter" function (:type "void") (reparse-symbol classsubparts) [28390 31262])
+                    ("testGetTableKeyTypeRegionsAndTablets" function (:type "void") (reparse-symbol classsubparts) [31268 35335])
+                    ("testGetTabletSuMap" function (:type "void") (reparse-symbol classsubparts) [35341 37844])
+                    ("testBackupTablet" function (:type "void") (reparse-symbol classsubparts) [37854 38445])
+                    ("testTabletBackupComplete" function (:type "void") (reparse-symbol classsubparts) [38455 39086])
+                    ("testImportTablet" function (:type "void") (reparse-symbol classsubparts) [39092 39704])
+                    ("testUpdateTabletRestoreState" function (:type "void") (reparse-symbol classsubparts) [39710 40361])
+                    ("testDrainFlip" function (:type "void") (reparse-symbol classsubparts) [40367 41139])
+                    ("testAddPrivileges" function (:type "void") (reparse-symbol classsubparts) [41145 41825])
+                    ("testSetNotifState" function (:type "void") (reparse-symbol classsubparts) [41831 42428])
+                    ("testGetFtrTabletRestoreState" function (:type "void") (reparse-symbol classsubparts) [42434 43060])
+                    ("testSetSuMeta" function (:type "void") (reparse-symbol classsubparts) [43070 43756])
+                    ("setUp" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [43761 43774])
+                    ("tearDown" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [43779 43795])
+                    ("private" label nil (reparse-symbol classsubparts) [43797 43805]))                  
+                :type "class")
+                nil [649 43808])
+            ("setUp" function
+               (:parent "TestControllerTransport"
+                :type "void")
+                nil [43810 43853])
+            ("tearDown" function
+               (:parent "TestControllerTransport"
+                :type "void")
+                nil [43855 43901])
+            ("main" function (:type "int") nil [43903 44033]))          
+    :file "testControllerTransport.cc"
+    :pointmax 44221
+    :fsize 44220
+    :lastmodtime '(20588 31675)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!framework!base!unit_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

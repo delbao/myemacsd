@@ -1,0 +1,29 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_LDFLAGS" variable (:default-value ("-lpcre" "-lyax" "-lsyck")) nil [1 34])
+            ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc")) nil [34 191])
+            ("lib_LTLIBRARIES" variable (:default-value ("libufcookieremap.la")) nil [192 252])
+            ("source_files" variable (:default-value ("CookieOperations.C" "CookieOperations.H" "CookieRemapConf.C" "CookieRemapConf.H" "CookieRemapPlugin.C" "CookieRemapPlugin.H")) nil [253 406])
+            ("libufcookieremap_la_SOURCES" variable (:default-value ("$(source_files)")) nil [407 453])
+            ("libufcookieremap_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver.la" "$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [453 828])
+            ("libufcookieremap_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [829 877])
+            ("libufcookieremap_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [877 956])
+            ("libufcookieremap_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [956 1039])
+            ("libufcookieremap_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [1039 1092])
+            ("libufcookieremap_p_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver_p.la" "$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/http/component/src/remap/libufhttpremap_p.la" "$(top_builddir)/http/component/src/parser/libufhttpparser_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [1092 1481]))          
+    :file "Makefile.am"
+    :pointmax 1481
+    :fsize 1480
+    :lastmodtime '(20625 28949)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!plugin!cookie_remap!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

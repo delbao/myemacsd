@@ -1,0 +1,99 @@
+;; Object stateserver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "stateserver/"
+  :tables (list 
+   (semanticdb-table "UFPlugin.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UF_PLUGIN" variable (:constant-flag t) nil [102 111])
+            ("uf/stateserver/UFPluginData.H" include (:system-flag t) nil [112 152])
+            ("string" include (:system-flag t) nil [153 170])
+            ("UFPlugin" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [188 195])
+                    ("UFPlugin" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("UFPlugin" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [256 267])
+                    ("UFPlugin" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [314 334])
+                    ("init" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [426 446])
+                    ("postThreadInit" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [520 550])
+                    ("pluginHandler" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type ("UFPluginData" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [773 792]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [746 797])
+                    ("createUFPlugin" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("UFPlugin" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [915 955])
+                    ("registerPlugin" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("state" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1529 1554])
+                            ("ufp" variable
+                               (:pointer 1
+                                :type ("UFPlugin" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1555 1569]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1498 1570]))                  
+                :type "class")
+                nil [171 1573]))          
+    :file "UFPlugin.H"
+    :pointmax 1581
+    :fsize 1580
+    :lastmodtime '(20629 53862)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("UF_PLUGIN")
+          )
+
+    )
+   (semanticdb-table "UFPluginMap.H"
+    :file "UFPluginMap.H"
+    :fsize 904
+    :lastmodtime '(20629 53862)
+    )
+   (semanticdb-table "UFHTTPTxnObject.H"
+    :file "UFHTTPTxnObject.H"
+    :fsize 20157
+    :lastmodtime '(20629 53862)
+    )
+   (semanticdb-table "UFStatePlugin.H"
+    :file "UFStatePlugin.H"
+    :fsize 2369
+    :lastmodtime '(20629 53862)
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!state_server!inc!uf!stateserver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

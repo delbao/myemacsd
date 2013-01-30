@@ -1,0 +1,383 @@
+;; Object detail/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "detail/"
+  :tables (list 
+   (semanticdb-table "enable_if.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_ENABLE_IF_23022003THW_HPP" variable (:constant-flag t) nil [319 350])
+            ("boost/detail/workaround.hpp" include (:system-flag t) nil [352 390])
+            ("boost/mpl/identity.hpp" include (:system-flag t) nil [391 424])
+            ("boost/iterator/detail/config_def.hpp" include (:system-flag t) nil [426 473])
+            ("boost" type
+               (:members 
+                  ( ("iterators" type
+                       (:members 
+                          ( ("enabled" type
+                               (:template 
+                                  ( ("bool" type nil nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("base" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("type" type
+                                               (:typedef ("T" type (:type "class") nil nil)
+                                                :superclasses "T"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [813 828]))                                          )
+                                        (reparse-symbol classsubparts) [758 837]))                                  )
+                                (reparse-symbol namespacesubparts) [712 844])
+                            ("enabled" type
+                               (:type "struct"
+                                :members 
+                                  ( ("base" type
+                                       (:template 
+                                          ( ("T" type (:type "class") nil nil))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [1108 1522]))                                  
+                                :template-specifier 
+                                  ( ("false" type nil nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [1059 1529])
+                            ("base" variable (:type "int") (reparse-symbol namespacesubparts) [1716 1868]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [621 1873]))                  
+                :type "namespace")
+                nil [600 1899])
+            ("boost/iterator/detail/config_undef.hpp" include (:system-flag t) nil [1920 1969]))          
+    :file "enable_if.hpp"
+    :pointmax 2013
+    :fsize 2012
+    :lastmodtime '(17765 48446)
+    :unmatched-syntax '((TEMPLATE 1707 . 1715) (punctuation 1706 . 1707) (punctuation 1705 . 1706) (punctuation 1704 . 1705) (semantic-list 1691 . 1704) (punctuation 1690 . 1691) (symbol 1683 . 1690) (punctuation 1681 . 1682) (symbol 1597 . 1606) (STRUCT 1590 . 1596) (punctuation 1584 . 1585) (symbol 1578 . 1584) (CLASS 1572 . 1577) (punctuation 1556 . 1557) (symbol 1552 . 1556) (CLASS 1546 . 1551) (punctuation 1545 . 1546) (TEMPLATE 1536 . 1544))
+    :lexical-table 
+        '(("BOOST_ENABLE_IF_23022003THW_HPP")
+          )
+
+    )
+   (semanticdb-table "config_def.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("boost/config.hpp" include (:system-flag t) nil [434 461])
+            ("boost/detail/workaround.hpp" include (:system-flag t) nil [475 513])
+            ("BOOST_ITERATOR_CONFIG_DEF" variable (:constant-flag t) nil [611 636])
+            ("BOOST_ITERATOR_REF_CONSTNESS_KILLS_WRITABILITY" variable (:constant-flag t) nil [1707 1753])
+            ("BOOST_NO_LVALUE_RETURN_DETECTION" variable (:constant-flag t) nil [2085 2117])
+            ("v" type (:type "struct") nil [2141 2154])
+            ("foo" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("no" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2213 2222])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [2223 2227]))                  
+                :prototype-flag t)
+                nil [2185 2228])
+            ("foo" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "char"
+                :arguments 
+                  ( ("" variable
+                       (:reference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2262 2265])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [2266 2270]))                  
+                :prototype-flag t)
+                nil [2232 2271])
+            ("value_iterator" type
+               (:members 
+                  ( ("" variable
+                       (:functionpointer-flag t
+                        :type ("v" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2308 2328]))                  
+                :type "struct")
+                nil [2276 2333])
+            ("lvalue_deref_helper" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("x" variable
+                       (:typemodifiers ("static")
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2395 2407])
+                    ("" type
+                       (:members 
+                          ( ("value" variable
+                               (:constant-flag t
+                                :default-value (2429 2453)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [2421 2453]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [2414 2456]))                  )
+                nil [2337 2461])
+            ("z2" variable
+               (:dereference 1
+                :type "int")
+                nil [2465 2520])
+            ("z" variable
+               (:dereference 1
+                :type "int")
+                nil [2523 2590])
+            ("BOOST_NO_IS_CONVERTIBLE" variable (:constant-flag t) nil [2662 2685])
+            ("BOOST_NO_IS_CONVERTIBLE_TEMPLATE" variable (:constant-flag t) nil [3044 3076])
+            ("boost/type_traits/is_convertible.hpp" include (:system-flag t) nil [3142 3193])
+            ("foo" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("foo" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3250 3252]))                          
+                        :type ("foo" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [3246 3253])
+                    ("foo" function
+                       (:template 
+                          ( ("U" type (:type "class") nil nil))                          
+                        :type ("foo" type (:type "struct") nil nil)
+                        :arguments 
+                          ( ("other" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("foo" type
+                                     (:template-specifier 
+                                        ( ("U" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3294 3314]))                          
+                        :constructor-flag t)
+                        (reparse-symbol classsubparts) [3263 3331])
+                    ("p" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3341 3345]))                  )
+                nil [3198 3352])
+            ("x" variable (:type "bool") nil [3358 3425])
+            ("BOOST_ITERATOR_NO_MPL_AUX_HAS_XXX" variable (:constant-flag t) nil [3645 3678])
+            ("BOOST_NO_STRICT_ITERATOR_INTEROPERABILITY" variable (:constant-flag t) nil [3875 3916])
+            ("BOOST_ARG_DEPENDENT_TYPENAME" variable (:constant-flag t) nil [3980 4008])
+            ("BOOST_NO_ONE_WAY_ITERATOR_INTEROP" variable (:constant-flag t) nil [4576 4609]))          
+    :file "config_def.hpp"
+    :pointmax 4669
+    :fsize 4668
+    :lastmodtime '(17765 48446)
+    :unmatched-syntax '((punctuation 2180 . 2181) (semantic-list 2177 . 2180) (semantic-list 2172 . 2177) (CHAR 2167 . 2171) (TYPEDEF 2158 . 2165))
+    :lexical-table 
+        '(("BOOST_NO_IS_CONVERTIBLE")
+          ("BOOST_NO_STRICT_ITERATOR_INTEROPERABILITY")
+          ("BOOST_ARG_DEPENDENT_TYPENAME" . ((TYPENAME "typename" 4009 . 4017)))
+          ("BOOST_ITERATOR_REF_CONSTNESS_KILLS_WRITABILITY" . ((number "1" 1754 . 1755)))
+          ("BOOST_NO_LVALUE_RETURN_DETECTION")
+          ("BOOST_ITERATOR_NO_MPL_AUX_HAS_XXX")
+          ("BOOST_ITERATOR_CONFIG_DEF")
+          ("BOOST_NO_IS_CONVERTIBLE_TEMPLATE")
+          ("BOOST_NO_ONE_WAY_ITERATOR_INTEROP")
+          )
+
+    )
+   (semanticdb-table "config_undef.hpp"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "config_undef.hpp"
+    :pointmax 723
+    :fsize 722
+    :lastmodtime '(17765 48446)
+    :unmatched-syntax '((symbol 704 . 714) (symbol 696 . 703) (punctuation 695 . 696) (symbol 688 . 694) (symbol 685 . 687) (symbol 677 . 684) (symbol 671 . 676) (punctuation 669 . 670))
+    )
+   (semanticdb-table "facade_iterator_category.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("FACADE_ITERATOR_CATEGORY_DWA20031118_HPP" variable (:constant-flag t) nil [277 317])
+            ("boost/iterator/iterator_categories.hpp" include (:system-flag t) nil [319 369])
+            ("boost/static_assert.hpp" include (:system-flag t) nil [371 406])
+            ("boost/mpl/or.hpp" include (:system-flag t) nil [408 436])
+            ("boost/mpl/and.hpp" include (:system-flag t) nil [480 509])
+            ("boost/mpl/if.hpp" include (:system-flag t) nil [510 538])
+            ("boost/mpl/eval_if.hpp" include (:system-flag t) nil [539 572])
+            ("boost/mpl/identity.hpp" include (:system-flag t) nil [573 607])
+            ("boost/type_traits/is_same.hpp" include (:system-flag t) nil [609 650])
+            ("boost/type_traits/is_const.hpp" include (:system-flag t) nil [651 693])
+            ("boost/type_traits/is_reference.hpp" include (:system-flag t) nil [694 740])
+            ("boost/type_traits/is_convertible.hpp" include (:system-flag t) nil [741 789])
+            ("boost/type_traits/is_same.hpp" include (:system-flag t) nil [791 832])
+            ("boost/iterator/detail/config_def.hpp" include (:system-flag t) nil [834 882])
+            ("boost" type
+               (:members 
+                  ( ("use_default" type
+                       (:prototype t
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [1118 1137]))                  
+                :type "namespace")
+                nil [1100 1139])
+            ("boost" type
+               (:members 
+                  ( ("detail" type
+                       (:members 
+                          ( ("input_output_iterator_tag" type
+                               (:superclasses 
+                                  ( ("std::input_iterator_tag" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("output_iterator_tag" function
+                                       (:parent "std"
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1605 1692]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [1180 1695])
+                            ("iterator_writability_disabled" type
+                               (:template 
+                                  ( ("ValueParam" type (:type "class") nil nil)
+                                    ("Reference" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :superclasses 
+                                  ( ("mpl::or_" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [1861 2218])
+                            ("is_iterator_category" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :superclasses 
+                                  ( ("mpl::or_" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [3808 3980])
+                            ("is_iterator_traversal" type
+                               (:template 
+                                  ( ("T" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :superclasses 
+                                  ( ("is_convertible" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [3982 4083])
+                            ("iterator_category_with_traversal" type
+                               (:template 
+                                  ( ("Category" type (:type "class") nil nil)
+                                    ("Traversal" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("BOOST_STATIC_ASSERT" function
+                                       (:prototype-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [4962 5124])
+                                    ("BOOST_STATIC_ASSERT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("is_iterator_category" type
+                                                 (:template-specifier 
+                                                    ( ("Category" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [5150 5181])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5182 5188]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5130 5189])
+                                    ("BOOST_STATIC_ASSERT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("is_iterator_category" type
+                                                 (:template-specifier 
+                                                    ( ("Traversal" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [5215 5247])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5248 5254]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5194 5255])
+                                    ("BOOST_STATIC_ASSERT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("is_iterator_traversal" type
+                                                 (:template-specifier 
+                                                    ( ("Category" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [5281 5313])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5314 5320]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5260 5321])
+                                    ("BOOST_STATIC_ASSERT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("is_iterator_traversal" type
+                                                 (:template-specifier 
+                                                    ( ("Traversal" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [5405 5438])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5439 5445]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5385 5446]))                                  
+                                :superclasses 
+                                  ( ("Category" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil)
+                                    ("Traversal" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [4305 5468])
+                            ("facade_iterator_category_impl" type
+                               (:template 
+                                  ( ("Traversal" type (:type "class") nil nil)
+                                    ("ValueParam" type (:type "class") nil nil)
+                                    ("Reference" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :members 
+                                  ( ("BOOST_STATIC_ASSERT" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("" variable (:type ("is_iterator_category" type
+                                                 (:template-specifier 
+                                                    ( ("Traversal" type nil nil nil))                                                    
+                                                  :type "class")
+                                                  nil nil)) (reparse-symbol arg-sub-list) [5750 5782])
+                                            ("" variable (:type ("value" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5783 5789]))                                          
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [5729 5790])
+                                    ("category" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5906 5920])
+                                    ("type" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6159 6169]))                                  )
+                                (reparse-symbol namespacesubparts) [5580 6172])
+                            ("facade_iterator_category" type
+                               (:template 
+                                  ( ("CategoryOrTraversal" type (:type "class") nil nil)
+                                    ("ValueParam" type (:type "class") nil nil)
+                                    ("Reference" type (:type "class") nil nil))                                  
+                                :type "struct"
+                                :superclasses 
+                                  ( ("mpl::eval_if" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  )
+                                (reparse-symbol namespacesubparts) [6232 6576]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1159 6579]))                  
+                :type "namespace")
+                nil [1141 6580])
+            ("boost/iterator/detail/config_undef.hpp" include (:system-flag t) nil [6609 6659]))          
+    :file "facade_iterator_category.hpp"
+    :pointmax 6712
+    :fsize 6711
+    :lastmodtime '(17765 48446)
+    :unmatched-syntax '((punctuation 6158 . 6159) (punctuation 6157 . 6158) (punctuation 6156 . 6157) (punctuation 6150 . 6151) (symbol 6141 . 6150) (punctuation 6140 . 6141) (symbol 6132 . 6140) (punctuation 6131 . 6132) (symbol 6099 . 6131) (punctuation 6097 . 6098) (symbol 6082 . 6090) (punctuation 6080 . 6081) (punctuation 6072 . 6073) (symbol 6059 . 6063) (punctuation 6058 . 6059) (punctuation 6057 . 6058) (punctuation 6056 . 6057) (symbol 6048 . 6056) (punctuation 6047 . 6048) (symbol 6017 . 6047) (TYPENAME 6008 . 6016) (punctuation 6006 . 6007) (symbol 5986 . 5995) (punctuation 5972 . 5973) (symbol 5965 . 5972) (punctuation 5955 . 5956) (symbol 5952 . 5955) (punctuation 5951 . 5952) (punctuation 5950 . 5951) (symbol 5947 . 5950) (TYPENAME 5938 . 5946) (TYPEDEF 5930 . 5937) (punctuation 5905 . 5906) (punctuation 5904 . 5905) (punctuation 5903 . 5904) (symbol 5889 . 5898) (punctuation 5888 . 5889) (symbol 5878 . 5888) (punctuation 5877 . 5878) (symbol 5868 . 5877) (punctuation 5858 . 5859) (symbol 5826 . 5858) (TYPENAME 5817 . 5825) (TYPEDEF 5809 . 5816) (punctuation 5782 . 5783) (punctuation 5781 . 5782) (punctuation 5749 . 5750) (punctuation 5438 . 5439) (punctuation 5437 . 5438) (punctuation 5313 . 5314) (punctuation 5312 . 5313) (punctuation 5280 . 5281) (punctuation 5247 . 5248) (punctuation 5246 . 5247) (punctuation 5214 . 5215) (punctuation 5181 . 5182) (punctuation 5180 . 5181) (semantic-list 4992 . 5122) (punctuation 4991 . 4992) (punctuation 3741 . 3742) (semantic-list 3738 . 3741) (punctuation 3736 . 3737) (punctuation 3730 . 3731) (punctuation 3720 . 3721) (symbol 3711 . 3720) (punctuation 3710 . 3711) (symbol 3702 . 3710) (punctuation 3701 . 3702) (punctuation 3700 . 3701) (symbol 3697 . 3700) (punctuation 3695 . 3696) (punctuation 3683 . 3684) (symbol 3665 . 3683) (punctuation 3664 . 3665) (punctuation 3663 . 3664) (symbol 3660 . 3663) (punctuation 3659 . 3660) (symbol 3651 . 3659) (punctuation 3650 . 3651) (punctuation 3649 . 3650) (symbol 3646 . 3649) (punctuation 3644 . 3645) (punctuation 3632 . 3633) (punctuation 3618 . 3619) (symbol 3608 . 3618) (punctuation 3606 . 3607) (symbol 3597 . 3606) (punctuation 3596 . 3597) (symbol 3582 . 3596) (punctuation 3580 . 3581) (punctuation 3506 . 3507) (symbol 3481 . 3506) (punctuation 3479 . 3480) (symbol 3470 . 3479) (punctuation 3469 . 3470) (symbol 3455 . 3469) (punctuation 3437 . 3438) (symbol 3433 . 3437) (punctuation 3432 . 3433) (punctuation 3431 . 3432) (symbol 3428 . 3431) (punctuation 3414 . 3415) (symbol 3407 . 3414) (punctuation 3406 . 3407) (punctuation 3405 . 3406) (symbol 3402 . 3405) (TYPENAME 3393 . 3401) (punctuation 3391 . 3392) (punctuation 3383 . 3384) (punctuation 3373 . 3374) (symbol 3340 . 3360) (punctuation 3339 . 3340) (punctuation 3338 . 3339) (symbol 3335 . 3338) (punctuation 3333 . 3334) (symbol 3292 . 3318) (punctuation 3291 . 3292) (punctuation 3290 . 3291) (symbol 3287 . 3290) (punctuation 3285 . 3286) (punctuation 3269 . 3270) (symbol 3242 . 3269) (punctuation 3241 . 3242) (symbol 3232 . 3241) (punctuation 3231 . 3232) (symbol 3217 . 3231) (punctuation 3199 . 3200) (symbol 3196 . 3199) (punctuation 3195 . 3196) (punctuation 3194 . 3195) (symbol 3191 . 3194) (punctuation 3189 . 3190) (punctuation 3177 . 3178) (symbol 3151 . 3177) (punctuation 3150 . 3151) (punctuation 3149 . 3150) (symbol 3146 . 3149) (punctuation 3145 . 3146) (symbol 3137 . 3145) (punctuation 3136 . 3137) (punctuation 3135 . 3136) (symbol 3132 . 3135) (punctuation 3130 . 3131) (punctuation 3118 . 3119) (symbol 3091 . 3118) (punctuation 3090 . 3091) (symbol 3081 . 3090) (punctuation 3080 . 3081) (symbol 3066 . 3080) (punctuation 3052 . 3053) (symbol 3045 . 3052) (punctuation 3044 . 3045) (punctuation 3043 . 3044) (symbol 3040 . 3043) (punctuation 3038 . 3039) (punctuation 3030 . 3031) (punctuation 3020 . 3021) (symbol 2999 . 3020) (punctuation 2998 . 2999) (symbol 2989 . 2998) (punctuation 2988 . 2989) (symbol 2974 . 2988) (punctuation 2972 . 2973) (punctuation 2960 . 2961) (symbol 2951 . 2960) (punctuation 2950 . 2951) (symbol 2938 . 2950) (punctuation 2924 . 2925) (symbol 2920 . 2924) (punctuation 2919 . 2920) (punctuation 2918 . 2919) (symbol 2915 . 2918) (punctuation 2905 . 2906) (symbol 2898 . 2905) (punctuation 2897 . 2898) (punctuation 2896 . 2897) (symbol 2893 . 2896) (punctuation 2891 . 2892) (symbol 2856 . 2888) (STRUCT 2849 . 2855) (punctuation 2847 . 2848) (symbol 2838 . 2847) (CLASS 2832 . 2837) (punctuation 2830 . 2831) (symbol 2820 . 2830) (CLASS 2814 . 2819) (punctuation 2812 . 2813) (symbol 2803 . 2812) (CLASS 2797 . 2802) (punctuation 2796 . 2797) (TEMPLATE 2787 . 2795) (OPERATOR 1596 . 1604))
+    :lexical-table 
+        '(("FACADE_ITERATOR_CATEGORY_DWA20031118_HPP")
+          )
+
+    )
+   )
+  :file "!usr!include!boost!iterator!detail!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

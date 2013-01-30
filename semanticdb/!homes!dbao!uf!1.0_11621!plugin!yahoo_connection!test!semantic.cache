@@ -1,0 +1,25 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/test" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/state/conf" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/plugin/yahoo_connection/src")) nil [1 266])
+            ("check_PROGRAMS" variable (:default-value ("testpluginpostthreadinit")) nil [394 436])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [513 539])
+            ("testyahooheaders_SOURCES" variable (:default-value ("$(top_builddir)/test/CppUnitTestRunner.cc" "TestFilterHeaders.C" "TestFilterHeadersFromTrusted.C" "TestYahooConnectionPlugin.C" "TestAddYripHeaders.C" "TestAddYraHeaders.C" "TestAddYpathHeaders.C")) nil [659 898])
+            ("testpluginpostthreadinit_SOURCES" variable (:default-value ("$(top_builddir)/test/CppUnitTestRunner.cc" "TestPluginPostThreadInit.C")) nil [901 1014])
+            ("LDFLAGS" variable (:default-value ("-lcppunit" "$(AM_LDFLAGS)")) nil [1017 1051])
+            ("LDADD" variable (:default-value ("$(top_builddir)/plugin/yahoo_connection/src/libufyahooconnection.la")) nil [1051 1131]))          
+    :file "Makefile.am"
+    :pointmax 1131
+    :fsize 1130
+    :lastmodtime '(20629 53854)
+    :unmatched-syntax '((bol 1014 . 1014) (bol 898 . 898))
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!plugin!yahoo_connection!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

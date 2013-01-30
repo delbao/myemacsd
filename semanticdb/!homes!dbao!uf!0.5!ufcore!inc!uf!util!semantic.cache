@@ -1,0 +1,620 @@
+;; Object util/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "util/"
+  :tables (list 
+   (semanticdb-table "Log.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UF_LOG_H" variable (:constant-flag t) nil [26 34])
+            ("stdio.h" include (:system-flag t) nil [36 54])
+            ("ostream" include (:system-flag t) nil [55 73])
+            ("sstream" include (:system-flag t) nil [74 92])
+            ("uf/core/UF.H" include (:system-flag t) nil [93 116])
+            ("uf/util/UFLogSectionMgr.H" include (:system-flag t) nil [117 153])
+            ("LogSelector" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [8323 8330])
+                    ("logLevel" variable
+                       (:typemodifiers ("static")
+                        :type "short")
+                        (reparse-symbol classsubparts) [8339 8361]))                  
+                :type "class")
+                nil [8299 8364])
+            ("LOG_ERROR" variable (:constant-flag t) nil [8377 8386])
+            ("LOG_DEBUG" variable (:constant-flag t) nil [8606 8615])
+            ("string" include (:system-flag t) nil [8825 8842])
+            ("OStreamLoggerOutputEnum" type
+               (:members 
+                  ( ("ERR" variable
+                       (:constant-flag t
+                        :default-value (8965 8966)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [8959 8966])
+                    ("OUT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [8972 8976])
+                    ("FILE_OUT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [8981 8991]))                  
+                :type "enum")
+                nil [8924 8992])
+            ("OStreamLogger" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [9016 9023])
+                    ("OStreamLogger" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("mode" variable (:type ("OStreamLoggerOutputEnum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9046 9075])
+                            ("outputLogFile" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9076 9108]))                          
+                        :type ("OStreamLogger" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9032 9171])
+                    ("OStreamLogger" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9180 9197])
+                    ("printBeginning" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9206 9228])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9265 9288]))                          
+                        :type ("OStreamLogger" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9238 9289])
+                    ("<<" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("OStreamLogger" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9354 9367]))                          
+                        :operator-flag t)
+                        (reparse-symbol classsubparts) [9298 9537])
+                    ("setCurrentLogLevel" function
+                       (:typemodifiers ("inline")
+                        :arguments 
+                          ( ("currentLogLevel" variable (:type "int") (reparse-symbol arg-sub-list) [9577 9597]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [9546 9634])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9670 9691]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9644 9708])
+                    ("flush" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [9718 9731])
+                    ("setHeaderFormat" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("formatStr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9903 9925]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [9875 9926])
+                    ("setTimestampFormat" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("formatStr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10172 10194]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [10141 10195])
+                    ("releaseThreadLoggers" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [10331 10366])
+                    ("threadSpecificStdErrLog" variable
+                       (:typemodifiers ("static")
+                        :type ("pthread_key_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10376 10421])
+                    ("threadSpecificStdOutLog" variable
+                       (:typemodifiers ("static")
+                        :type ("pthread_key_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10430 10475])
+                    ("threadSpecificFileOutLog" variable
+                       (:typemodifiers ("static")
+                        :type ("pthread_key_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10484 10530])
+                    ("logLevel" variable
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [10540 10560])
+                    ("accessLogEnabled" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10569 10598])
+                    ("accessLogFile" variable
+                       (:typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10607 10640])
+                    ("logLevelMap" variable
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [10649 10672])
+                    ("setLogLevelsList" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("levels" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10710 10724]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [10681 10725])
+                    ("shouldDropThisSectionLog" function
+                       (:prototype-flag t
+                        :typemodifiers ("static" "inline")
+                        :arguments 
+                          ( ("thisLogLevel" variable (:type "int") (reparse-symbol arg-sub-list) [10778 10795]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10734 10796])
+                    ("registerSections" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("sectionList" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10834 10853]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [10805 10854])
+                    ("_currentLogSectionId" variable (:type "int") (reparse-symbol classsubparts) [10863 10891])
+                    ("_currentSection" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10900 10923])
+                    ("private" label nil (reparse-symbol classsubparts) [10929 10937])
+                    ("_createThreadKey" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("pKey" variable
+                               (:pointer 1
+                                :type ("pthread_key_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10984 11004]))                          
+                        :type ("pthread_key_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10946 11005])
+                    ("OStreamLogger" function
+                       (:constructor-flag t
+                        :type ("OStreamLogger" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11014 11079])
+                    ("_mode" variable (:type ("OStreamLoggerOutputEnum" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11089 11123])
+                    ("_outputLogFile" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11132 11175])
+                    ("_outStream" variable (:type ("std::ostringstream" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11184 11223])
+                    ("_currentLogLevel" variable (:type "int") (reparse-symbol classsubparts) [11232 11277]))                  
+                :type "class")
+                nil [8994 11280])
+            ("getThreadLogger" function
+               (:pointer 1
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("pKey" variable
+                       (:pointer 1
+                        :type ("pthread_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11320 11340])
+                    ("mode" variable (:type ("OStreamLoggerOutputEnum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11341 11370])
+                    ("outputFile" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11371 11401])
+                    ("currentLogLevel" variable (:type "int") (reparse-symbol arg-sub-list) [11401 11421]))                  
+                :type ("OStreamLogger" type (:type "class") nil nil))
+                nil [11282 11762])
+            ("IS_LOG_NOT_ALLOWED" variable (:constant-flag t) nil [11772 11790])
+            ("SECTION_DEBUG" variable (:constant-flag t) nil [11982 11995])
+            ("L_ACCESS" variable (:constant-flag t) nil [12152 12160])
+            ("L_DEBUG_3" variable (:constant-flag t) nil [12576 12585])
+            ("L_DEBUG_2" variable (:constant-flag t) nil [12700 12709])
+            ("L_DEBUG" variable (:constant-flag t) nil [12824 12831])
+            ("L_DEBUG_1" variable (:constant-flag t) nil [12946 12955])
+            ("L_INFO" variable (:constant-flag t) nil [12972 12978])
+            ("L_ERROR" variable (:constant-flag t) nil [13093 13100])
+            ("L_DEBUG_NEW" variable (:constant-flag t) nil [13215 13226]))          
+    :file "Log.H"
+    :pointmax 13407
+    :fsize 13406
+    :lastmodtime '(20622 62382)
+    :unmatched-syntax '((semantic-list 9691 . 9706) (semantic-list 9684 . 9691))
+    :lexical-table 
+        '(("SECTION_DEBUG" . 
+              ((IF "if" 11996 . 11998) (semantic-list "(!UFLogSectionMgr::m_sSectionMgrEnabled || IS_LOG_NOT_ALLOWED(2))" 11999 . 12064) (punctuation ";" 12065 . 12066) (ELSE "else" 12067 . 12071) (punctuation "*" 12072 . 12073) (semantic-list "(getThreadLogger(&OStreamLogger::threadSpecificStdErrLog, ERR, \"\",2))" 12073 . 12142)))
+          ("L_ACCESS" . 
+              ((IF "if" 12161 . 12163) (semantic-list "(!OStreamLogger::accessLogEnabled || OStreamLogger::accessLogFile.empty())" 12163 . 12237) (punctuation ";" 12238 . 12239) (ELSE "else" 12240 . 12244) (punctuation "*" 12245 . 12246) (semantic-list "(getThreadLogger(&OStreamLogger::threadSpecificStdOutLog, OUT, \"\",1))" 12246 . 12315)))
+          ("L_DEBUG" . 
+              ((IF "if" 12832 . 12834) (semantic-list "(IS_LOG_NOT_ALLOWED(2))" 12835 . 12858) (punctuation ";" 12859 . 12860) (ELSE "else" 12861 . 12865) (punctuation "*" 12866 . 12867) (semantic-list "(getThreadLogger(&OStreamLogger::threadSpecificStdErrLog, ERR, \"\",2))" 12867 . 12936)))
+          ("L_ERROR" . 
+              ((IF "if" 13101 . 13103) (semantic-list "(IS_LOG_NOT_ALLOWED(0))" 13104 . 13127) (punctuation ";" 13128 . 13129) (ELSE "else" 13130 . 13134) (punctuation "*" 13135 . 13136) (semantic-list "(getThreadLogger(&OStreamLogger::threadSpecificStdErrLog, ERR, \"\",0))" 13136 . 13205)))
+          ("L_DEBUG_1" . ((symbol "L_DEBUG" 12956 . 12963)))
+          ("L_DEBUG_2" . 
+              ((IF "if" 12710 . 12712) (semantic-list "(IS_LOG_NOT_ALLOWED(3))" 12713 . 12736) (punctuation ";" 12737 . 12738) (ELSE "else" 12739 . 12743) (punctuation "*" 12744 . 12745) (semantic-list "(getThreadLogger(&OStreamLogger::threadSpecificStdErrLog, ERR, \"\",3))" 12745 . 12814)))
+          ("L_INFO" . 
+              ((IF "if" 12980 . 12982) (semantic-list "(IS_LOG_NOT_ALLOWED(1))" 12983 . 13006) (punctuation ";" 13007 . 13008) (ELSE "else" 13009 . 13013) (punctuation "*" 13014 . 13015) (semantic-list "(getThreadLogger(&OStreamLogger::threadSpecificStdErrLog, ERR, \"\",1))" 13015 . 13084)))
+          ("L_DEBUG_3" . 
+              ((IF "if" 12586 . 12588) (semantic-list "(IS_LOG_NOT_ALLOWED(4))" 12589 . 12612) (punctuation ";" 12613 . 12614) (ELSE "else" 12615 . 12619) (punctuation "*" 12620 . 12621) (semantic-list "(getThreadLogger(&OStreamLogger::threadSpecificStdErrLog, ERR, \"\",4))" 12621 . 12690)))
+          ("L_DEBUG_NEW" (spp-arg-list ("level" "os") 13226 . 13236) . ((semantic-list "{\\
+    if (!IS_LOG_NOT_ALLOWED(level)) \\
+    {*(getThreadLogger(&OStreamLogger::threadSpecificStdErrLog, ERR, \"\",level)) << os << endl;} \\
+}" 13239 . 13379)))
+          ("UF_LOG_H")
+          ("LOG_ERROR" (spp-arg-list ("fmt" "args...") 8386 . 8400) . 
+              ((DO "do" 8401 . 8403) (semantic-list "{                                    \\
+    if(LogSelector::logLevel >= 1) \\
+    fprintf(stderr, \"[%s:%d] [%s] ERROR: \" fmt \"\\n\", __FILE__, __LINE__, __FUNCTION__ , ##args ); \\
+    }" 8404 . 8585) (WHILE "while" 8586 . 8591) (semantic-list "(0)" 8592 . 8595)))
+          ("LOG_DEBUG" (spp-arg-list ("fmt" "args...") 8615 . 8629) . 
+              ((DO "do" 8630 . 8632) (semantic-list "{                                    \\
+    if(LogSelector::logLevel >= 2) \\
+    fprintf(stderr, \"[%s:%d] [%s] DEBUG: \" fmt \"\\n\", __FILE__, __LINE__, __FUNCTION__ , ##args ); \\
+    }" 8633 . 8814) (WHILE "while" 8815 . 8820) (semantic-list "(0)" 8821 . 8824)))
+          ("IS_LOG_NOT_ALLOWED" (spp-arg-list ("level") 11790 . 11797) . ((semantic-list "(\\
+(!UFLogSectionMgr::m_sSectionMgrEnabled && (OStreamLogger::logLevel < level)) || \\
+(UFLogSectionMgr::m_sSectionMgrEnabled && !UFLogSectionMgr::isThisLogAllowed(level)) \\
+)" 11798 . 11972)))
+          )
+
+    )
+   (semanticdb-table "UFLogSectionMgr.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UF_LOG_SECTION_MGR_H" variable (:constant-flag t) nil [38 58])
+            ("UFLogSectionMgrImpl" type
+               (:prototype t
+                :type "class")
+                nil [60 86])
+            ("UFLogSectionMgr" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [111 118])
+                    ("UFLogSectionMgr" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [123 142])
+                    ("getInstance" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :type ("UFLogSectionMgr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [224 262])
+                    ("registerSection" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("sectionName" variable
+                               (:constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [432 457]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [406 458])
+                    ("registerSection" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("sectionName" variable
+                               (:constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [668 693])
+                            ("sectionDesc" variable
+                               (:constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [693 718]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [642 719])
+                    ("getSectionDesc" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("sectionName" variable
+                               (:constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [910 935]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [882 936])
+                    ("getSectionList" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sectionList" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1153 1180]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1133 1181])
+                    ("initMask" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("allowAll" variable (:type "bool") (reparse-symbol arg-sub-list) [1355 1369]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1341 1370])
+                    ("addSectionsToMask" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sectionList" variable
+                               (:constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1581 1606]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1558 1607])
+                    ("removeSectionsFromMask" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sectionList" variable
+                               (:constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1824 1849]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1796 1850])
+                    ("isSectionAllowedForLog" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sectionId" variable (:type "int") (reparse-symbol arg-sub-list) [2058 2072]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2030 2073])
+                    ("enterSection" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sectionName" variable
+                               (:constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2320 2345]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2302 2346])
+                    ("exitSection" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sectionName" variable
+                               (:constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2478 2503]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2461 2504])
+                    ("getCurrentSectionName" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2612 2650])
+                    ("m_sSectionMgrEnabled" variable
+                       (:typemodifiers ("static")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2656 2689])
+                    ("m_sMaxLogLevel" variable
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [2694 2721])
+                    ("m_sThreadSpecificSectionId" variable
+                       (:typemodifiers ("static")
+                        :type ("pthread_key_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2726 2774])
+                    ("m_sThreadSpecificSectionName" variable
+                       (:typemodifiers ("static")
+                        :type ("pthread_key_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2779 2829])
+                    ("isThisLogAllowed" function
+                       (:prototype-flag t
+                        :typemodifiers ("static" "inline")
+                        :arguments 
+                          ( ("thisLogLevel" variable (:type "int") (reparse-symbol arg-sub-list) [2870 2887]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2834 2888])
+                    ("private" label nil (reparse-symbol classsubparts) [2889 2897])
+                    ("UFLogSectionMgr" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("UFLogSectionMgr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2902 2920])
+                    ("m_pImpl" variable
+                       (:pointer 1
+                        :type ("UFLogSectionMgrImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2925 2954])
+                    ("m_spSectionMgr" variable
+                       (:pointer 1
+                        :typemodifiers ("static")
+                        :type ("UFLogSectionMgr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2960 2999])
+                    ("createThreadKey" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("pKey" variable
+                               (:pointer 1
+                                :type ("pthread_key_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3041 3061]))                          
+                        :type ("pthread_key_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3004 3062]))                  
+                :type "class")
+                nil [87 3065])
+            ("isThisLogAllowed" function
+               (:parent "UFLogSectionMgr"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("thisLogLevel" variable (:type "int") (reparse-symbol arg-sub-list) [3114 3131]))                  
+                :type "bool")
+                nil [3068 3300])
+            ("L_REGISTER_SECTION" variable (:constant-flag t) nil [3310 3328])
+            ("L_SECTION_MASK_INIT" variable (:constant-flag t) nil [3436 3455])
+            ("L_SECTION_MASK_ADD" variable (:constant-flag t) nil [3526 3544])
+            ("L_SECTION_MASK_REMOVE" variable (:constant-flag t) nil [3630 3651])
+            ("L_SECTION_SET_MAX_LEVEL" variable (:constant-flag t) nil [3742 3765])
+            ("L_SECTION_ENTER" variable (:constant-flag t) nil [3823 3838])
+            ("L_SECTION_EXIT" variable (:constant-flag t) nil [3961 3975]))          
+    :file "UFLogSectionMgr.H"
+    :pointmax 4096
+    :fsize 4095
+    :lastmodtime '(20622 62382)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("L_SECTION_MASK_ADD" (spp-arg-list ("sectionList") 3544 . 3557) . 
+              ((symbol "UFLogSectionMgr" 3558 . 3573) (punctuation ":" 3573 . 3574) (punctuation ":" 3574 . 3575) (symbol "getInstance" 3575 . 3586) (semantic-list "()" 3586 . 3588) (punctuation "-" 3588 . 3589) (punctuation ">" 3589 . 3590) (symbol "addSectionsToMask" 3590 . 3607) (semantic-list "(sectionList)" 3607 . 3620) (punctuation ";" 3620 . 3621)))
+          ("L_REGISTER_SECTION" (spp-arg-list ("sectionName" "sectionDesc") 3328 . 3353) . 
+              ((symbol "UFLogSectionMgr" 3354 . 3369) (punctuation ":" 3369 . 3370) (punctuation ":" 3370 . 3371) (symbol "getInstance" 3371 . 3382) (semantic-list "()" 3382 . 3384) (punctuation "-" 3384 . 3385) (punctuation ">" 3385 . 3386) (symbol "registerSection" 3386 . 3401) (semantic-list "(sectionName,sectionDesc)" 3401 . 3426) (punctuation ";" 3426 . 3427)))
+          ("L_SECTION_MASK_INIT" (spp-arg-list ("allowAll") 3455 . 3465) . 
+              ((symbol "UFLogSectionMgr" 3466 . 3481) (punctuation ":" 3481 . 3482) (punctuation ":" 3482 . 3483) (symbol "getInstance" 3483 . 3494) (semantic-list "()" 3494 . 3496) (punctuation "-" 3496 . 3497) (punctuation ">" 3497 . 3498) (symbol "initMask" 3498 . 3506) (semantic-list "(allowAll)" 3506 . 3516) (punctuation ";" 3516 . 3517)))
+          ("L_SECTION_SET_MAX_LEVEL" (spp-arg-list ("level") 3765 . 3772) . 
+              ((symbol "UFLogSectionMgr" 3773 . 3788) (punctuation ":" 3788 . 3789) (punctuation ":" 3789 . 3790) (symbol "m_sMaxLogLevel" 3790 . 3804) (punctuation "=" 3805 . 3806) (symbol "level" 3807 . 3812) (punctuation ";" 3812 . 3813)))
+          ("L_SECTION_ENTER" (spp-arg-list ("sectionName") 3838 . 3851) . 
+              ((IF "if" 3852 . 3854) (semantic-list "(UFLogSectionMgr::m_sSectionMgrEnabled)" 3854 . 3893) (symbol "UFLogSectionMgr" 3894 . 3909) (punctuation ":" 3909 . 3910) (punctuation ":" 3910 . 3911) (symbol "getInstance" 3911 . 3922) (semantic-list "()" 3922 . 3924) (punctuation "-" 3924 . 3925) (punctuation ">" 3925 . 3926) (symbol "enterSection" 3926 . 3938) (semantic-list "(sectionName)" 3938 . 3951) (punctuation ";" 3951 . 3952)))
+          ("UF_LOG_SECTION_MGR_H")
+          ("L_SECTION_MASK_REMOVE" (spp-arg-list ("sectionList") 3651 . 3664) . 
+              ((symbol "UFLogSectionMgr" 3665 . 3680) (punctuation ":" 3680 . 3681) (punctuation ":" 3681 . 3682) (symbol "getInstance" 3682 . 3693) (semantic-list "()" 3693 . 3695) (punctuation "-" 3695 . 3696) (punctuation ">" 3696 . 3697) (symbol "removeSectionsFromMask" 3697 . 3719) (semantic-list "(sectionList)" 3719 . 3732) (punctuation ";" 3732 . 3733)))
+          ("L_SECTION_EXIT" (spp-arg-list ("sectionName") 3975 . 3988) . 
+              ((IF "if" 3989 . 3991) (semantic-list "(UFLogSectionMgr::m_sSectionMgrEnabled)" 3991 . 4030) (symbol "UFLogSectionMgr" 4031 . 4046) (punctuation ":" 4046 . 4047) (punctuation ":" 4047 . 4048) (symbol "getInstance" 4048 . 4059) (semantic-list "()" 4059 . 4061) (punctuation "-" 4061 . 4062) (punctuation ">" 4062 . 4063) (symbol "exitSection" 4063 . 4074) (semantic-list "(sectionName)" 4074 . 4087) (punctuation ";" 4087 . 4088)))
+          )
+
+    )
+   (semanticdb-table "UFStateConf.H"
+    :file "UFStateConf.H"
+    :fsize 2132
+    :lastmodtime '(20622 62382)
+    )
+   (semanticdb-table "ByteBlocks.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BYTE_BLOCKS_H" variable (:constant-flag t) nil [31 44])
+            ("list" include (:system-flag t) nil [46 61])
+            ("string" include (:system-flag t) nil [62 79])
+            ("Log.H" include nil nil [81 97])
+            ("ByteBlocks" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [375 382])
+                    ("ByteBlocks" function
+                       (:constructor-flag t
+                        :type ("ByteBlocks" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [387 428])
+                    ("setBlockListEnable" function
+                       (:arguments 
+                          ( ("enable" variable (:type "bool") (reparse-symbol arg-sub-list) [547 559]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [523 606])
+                    ("startBlock" function
+                       (:arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [735 751]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [719 888])
+                    ("terminateCurrBlock" function (:type "void") (reparse-symbol classsubparts) [1194 1483])
+                    ("checkCurrBlockContinuity" function
+                       (:arguments 
+                          ( ("nextByte" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1774 1795]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1744 1956])
+                    ("increment" function
+                       (:arguments 
+                          ( ("ptr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2328 2345])
+                            ("size" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [2349 2368]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2313 2644])
+                    ("clear" function (:type "void") (reparse-symbol classsubparts) [2674 2817])
+                    ("getString" function
+                       (:arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3013 3030]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2998 3534])
+                    ("getString" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3731 3856])
+                    ("Block" type
+                       (:members 
+                          ( ("Block" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("p" variable
+                                       (:pointer 1
+                                        :constant-flag t
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [3895 3909])
+                                    ("s" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3910 3919]))                                  
+                                :type ("Block" type (:type "struct") nil nil))
+                                (reparse-symbol classsubparts) [3889 3941])
+                            ("ptr" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol classsubparts) [3951 3967])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3976 3988]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [3862 3995])
+                    ("BlockList" type
+                       (:typedef ("std::list" type
+                             (:template-specifier 
+                                ( ("Block" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::list"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [4001 4036])
+                    ("getBlocks" function
+                       (:constant-flag t
+                        :type ("BlockList" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4210 4345])
+                    ("size" function (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4402 4476])
+                    ("getNumBlocks" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4541 4652])
+                    ("removeFirstBlock" function
+                       (:arguments 
+                          ( ("pPtr" variable
+                               (:pointer 2
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4680 4698])
+                            ("pSize" variable
+                               (:pointer 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4699 4713]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4658 4963])
+                    ("private" label nil (reparse-symbol classsubparts) [4965 4973])
+                    ("_blockList" variable (:type ("BlockList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4978 4999])
+                    ("_currPtr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [5004 5025])
+                    ("_currSize" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5030 5049])
+                    ("_totalSize" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5054 5074])
+                    ("_dirty" variable (:type "bool") (reparse-symbol classsubparts) [5079 5091])
+                    ("_blockListEnable" variable (:type "bool") (reparse-symbol classsubparts) [5096 5118])
+                    ("_init" function (:type "void") (reparse-symbol classsubparts) [5124 5277]))                  
+                :type "class")
+                nil [356 5280]))          
+    :file "ByteBlocks.H"
+    :pointmax 5306
+    :fsize 5305
+    :lastmodtime '(20622 62382)
+    :unmatched-syntax '((punctuation 3941 . 3942) (punctuation 3941 . 3942) (number 2369 . 2370) (punctuation 2367 . 2368) (number 2346 . 2347) (punctuation 2344 . 2345))
+    :lexical-table 
+        '(("BYTE_BLOCKS_H")
+          )
+
+    )
+   )
+  :file "!homes!dbao!uf!0.5!ufcore!inc!uf!util!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

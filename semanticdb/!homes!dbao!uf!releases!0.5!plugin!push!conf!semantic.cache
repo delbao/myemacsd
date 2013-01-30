@@ -1,0 +1,24 @@
+;; Object conf/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "conf/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/plugin/common/inc")) nil [1 160])
+            ("pkglibexecdir" variable (:default-value ("$(libexecdir)/$(PACKAGE)")) nil [161 202])
+            ("pkglibexec_LTLIBRARIES" variable (:default-value ("libufhttppushconf.la")) nil [202 248])
+            ("libufhttppushconf_la_SOURCES" variable (:default-value ("PushConf.H" "PushConf.C")) nil [248 310])
+            ("libufhttppushconf_la_LDFLAGS" variable (:default-value ("$(AM_LDFLAGS)")) nil [311 356])
+            ("libufhttppushconf_la_LIBADD" variable (:default-value ("$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/plugin/common/src/libufcommon.la")) nil [356 544]))          
+    :file "Makefile.am"
+    :pointmax 544
+    :fsize 543
+    :lastmodtime '(20625 28927)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!plugin!push!conf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

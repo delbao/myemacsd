@@ -1,0 +1,1079 @@
+;; Object stateserver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "stateserver/"
+  :tables (list 
+   (semanticdb-table "UFHTTPTxnObject.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UFHTTPTXNOBJECT_H" variable (:constant-flag t) nil [35 52])
+            ("map" include (:system-flag t) nil [54 68])
+            ("list" include (:system-flag t) nil [69 84])
+            ("unistd.h" include (:system-flag t) nil [85 104])
+            ("uf/util/Factory.H" include (:system-flag t) nil [105 133])
+            ("uf/util/CharBufObject.H" include (:system-flag t) nil [134 168])
+            ("uf/conf/UFHTTPConf.H" include (:system-flag t) nil [169 200])
+            ("uf/util/TextUtils.H" include (:system-flag t) nil [201 231])
+            ("uf/core/UFPC.H" include (:system-flag t) nil [232 257])
+            ("uf/httpremap/URLRewrite.H" include (:system-flag t) nil [258 294])
+            ("uf/httpparser/HTTPResponse.H" include (:system-flag t) nil [295 334])
+            ("uf/stateserver/UFPluginData.H" include (:system-flag t) nil [335 375])
+            ("uf/core/UFStatSystem.H" include (:system-flag t) nil [376 409])
+            ("uf/stateserver/UFHttpStats.H" include (:system-flag t) nil [410 449])
+            ("uf/core/UFConnectionPool.H" include (:system-flag t) nil [450 487])
+            ("uf/conf/UFStateServerConf.H" include (:system-flag t) nil [488 526])
+            ("UFPluginStorageType" type
+               (:prototype t
+                :type "struct")
+                nil [528 555])
+            ("bufList" type
+               (:typedef ("std::list" type
+                     (:template-specifier 
+                        ( ("char" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::list"
+                :type "typedef")
+                nil [606 639])
+            ("UFPluginStorage" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("UFPluginStorageType" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [640 708])
+            ("friendOfHTTPTxn" type
+               (:prototype t
+                :type "class")
+                nil [709 731])
+            ("ResponseDataSource" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [759 766])
+                    ("ResponseDataSource" function
+                       (:constructor-flag t
+                        :type ("ResponseDataSource" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [771 812])
+                    ("produceData" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 2
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [845 857])
+                            ("timeout" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [858 874])
+                            ("freeBuf" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [885 900]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [817 908])
+                    ("ResponseDataSource" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [913 945])
+                    ("protected" label nil (reparse-symbol classsubparts) [947 957])
+                    ("_sendBody" variable (:type "bool") (reparse-symbol classsubparts) [962 980]))                  
+                :type "class")
+                nil [732 983])
+            ("CacheObject" type
+               (:prototype t
+                :type "class")
+                nil [984 1002])
+            ("UFHTTPTxnObjectImpl" type
+               (:prototype t
+                :type "class")
+                nil [1003 1029])
+            ("UFHTTPTxnObject" type
+               (:superclasses 
+                  ( ("UFPluginData" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1076 1083])
+                    ("RequestState" type
+                       (:members 
+                          ( ("NOT_STARTED" variable
+                               (:constant-flag t
+                                :default-value (1134 1135)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1120 1135])
+                            ("STARTED" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1145 1153])
+                            ("FAILED" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1162 1169])
+                            ("COMPLETED" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1178 1193]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [1088 1194])
+                    ("UFHTTPTxnObject" function
+                       (:constructor-flag t
+                        :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1250 1279])
+                    ("init" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1378 1390])
+                    ("requestReset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1487 1507])
+                    ("UFHTTPTxnObject" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1609 1645])
+                    ("getClientRequest" function
+                       (:typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("HTTPRequest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1756 1829])
+                    ("getServerRequest" function
+                       (:typemodifiers ("virtual")
+                        :type ("HTTPRequest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1956 2023])
+                    ("getRemapRequest" function (:type ("HTTPRequest" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2168 2225])
+                    ("getServerResponse" function
+                       (:typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("HTTPResponse" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2354 2430])
+                    ("getClientResponse" function
+                       (:typemodifiers ("virtual")
+                        :type ("HTTPResponse" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2563 2633])
+                    ("getClientBodyData" function
+                       (:typemodifiers ("virtual")
+                        :type ("HTTPMessage::BodyData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2771 2846])
+                    ("getServerBodyData" function
+                       (:typemodifiers ("virtual")
+                        :type ("HTTPMessage::BodyData" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2984 3059])
+                    ("getClientParseResult" function
+                       (:typemodifiers ("virtual")
+                        :type ("ParseResult" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3221 3294])
+                    ("getServerParseResult" function (:type ("ParseResult" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3455 3520])
+                    ("connectionReset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3592 3615])
+                    ("setURL" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("urlString" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("URL" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3811 3832]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3799 3833])
+                    ("setURL" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("urlString" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3994 4023]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3982 4024])
+                    ("setClientParseResult" function
+                       (:arguments 
+                          ( ("parseResult" variable (:type ("ParseResult" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4200 4224]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4174 4263])
+                    ("setServerParseResult" function
+                       (:arguments 
+                          ( ("parseResult" variable (:type ("ParseResult" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4438 4462]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4412 4501])
+                    ("setNextState" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("state" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4734 4752]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4708 4786])
+                    ("getServerUFIO" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4922 4975])
+                    ("setServerUFIO" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5138 5149]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5111 5150])
+                    ("getResponseDataSource" function
+                       (:pointer 1
+                        :type ("ResponseDataSource" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5411 5486])
+                    ("setResponseDataSource" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("responseDataSource" variable
+                               (:pointer 1
+                                :type ("ResponseDataSource" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5794 5833]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5759 5879])
+                    ("setTxnId" function
+                       (:arguments 
+                          ( ("id" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6106 6116]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6092 6133])
+                    ("getTxnId" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6357 6393])
+                    ("setTxnStartTime" function (:type "void") (reparse-symbol classsubparts) [6472 6743])
+                    ("getTxnStartTime" function (:type ("timespec" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [6882 6943])
+                    ("getTxnStartEpochTime" function
+                       (:constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [7023 7098])
+                    ("setTxnEndTime" function (:type "void") (reparse-symbol classsubparts) [7185 7374])
+                    ("getTxnEndTime" function (:type ("timespec" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [7486 7579])
+                    ("getTxnEndEpochTime" function
+                       (:constant-flag t
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [7657 7728])
+                    ("getRemapURLMap" function
+                       (:pointer 1
+                        :type ("URLMapping" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8005 8050])
+                    ("setRemapURLMap" function
+                       (:arguments 
+                          ( ("map" variable
+                               (:pointer 1
+                                :type ("URLMapping" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8347 8363]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8327 8380])
+                    ("setKeepAliveClientConnection" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("KA" variable (:type "bool") (reparse-symbol arg-sub-list) [8613 8621]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8571 8658])
+                    ("setKeepAliveServerConnection" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("KA" variable (:type "bool") (reparse-symbol arg-sub-list) [8890 8898]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8848 8935])
+                    ("getKeepAliveClientConnection" function (:type "bool") (reparse-symbol classsubparts) [9116 9190])
+                    ("getKeepAliveServerConnection" function (:type "bool") (reparse-symbol classsubparts) [9371 9445])
+                    ("setCloseClientConnectionAtTxnComplete" function (:type "void") (reparse-symbol classsubparts) [9554 9646])
+                    ("getCloseClientConnectionAtTxnComplete" function (:type "bool") (reparse-symbol classsubparts) [9755 9847])
+                    ("cleanUp" function (:type "void") (reparse-symbol classsubparts) [9910 10211])
+                    ("getRequestBufList" function
+                       (:typemodifiers ("virtual")
+                        :type ("list" type
+                             (:template-specifier 
+                                ( ("char" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [10341 10408])
+                    ("getResponseBufList" function (:type ("list" type
+                         (:template-specifier 
+                            ( ("char" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [10538 10599])
+                    ("getExtraClientRequest" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("offset" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10979 10995])
+                            ("size" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10995 11008]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [10943 11128])
+                    ("setExtraClientRequest" function
+                       (:arguments 
+                          ( ("extraClientRequestBuffer" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [11516 11547])
+                            ("offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11548 11562])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11563 11575]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [11489 11713])
+                    ("getExtraServerResponse" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("offset" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12104 12120])
+                            ("size" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12121 12134]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [12075 12257])
+                    ("setExtraServerResponse" function
+                       (:arguments 
+                          ( ("extraServerResponseBuffer" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [12665 12697])
+                            ("offset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12698 12712])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12713 12725]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12637 12868])
+                    ("getStateServerConf" function
+                       (:pointer 1
+                        :type ("UFStateServerConf" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12993 13182])
+                    ("getConnPool" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("UFConnectionPool" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13305 13490])
+                    ("getUF" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13587 13717])
+                    ("getPluginStorage" function (:type ("UFPluginStorage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13943 14020])
+                    ("getTransactionPluginStorage" function (:type ("UFPluginStorage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14245 14318])
+                    ("getSessionPluginStorage" function (:type ("UFPluginStorage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14552 14628])
+                    ("getUFHTTPConf" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("UFHTTPConf" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14751 14787])
+                    ("setClientRespCode" function
+                       (:arguments 
+                          ( ("respcode" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "unsigned short int")
+                                (reparse-symbol arg-sub-list) [14999 15034]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [14976 15067])
+                    ("setClientRespMsg" function
+                       (:arguments 
+                          ( ("respmsg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15234 15256]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [15212 15287])
+                    ("getClientRespCode" function
+                       (:constant-flag t
+                        :type "unsigned short int")
+                        (reparse-symbol classsubparts) [15526 15599])
+                    ("getClientRespMsg" function
+                       (:constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15753 15812])
+                    ("sendCustomResponse" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("status_code" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type "unsigned short int")
+                                (reparse-symbol arg-sub-list) [16387 16425])
+                            ("status_desc" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16426 16450])
+                            ("any_otherheaders" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16454 16483])
+                            ("body" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16487 16505])
+                            ("bGoToReadResponseHeader" variable (:type "bool") (reparse-symbol arg-sub-list) [16509 16539])
+                            ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16540 16545]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [16363 16547])
+                    ("setHTTPUFIO" function
+                       (:arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16655 16666]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [16638 16685])
+                    ("getHTTPUFIO" function
+                       (:pointer 1
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16692 16732])
+                    ("getOriginServerConnectTimeout" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [16878 16915])
+                    ("setOriginServerConnectTimeout" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("iTimeInUS" variable (:type "int") (reparse-symbol arg-sub-list) [17188 17202]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [17152 17203])
+                    ("requestState" variable (:type ("RequestState" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17210 17251])
+                    ("_isPipelineReq" variable (:type "bool") (reparse-symbol classsubparts) [17257 17300])
+                    ("CACHE_STATUS" type
+                       (:members 
+                          ( ("CACHE_MISS" variable
+                               (:constant-flag t
+                                :default-value (17371 17372)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [17358 17372])
+                            ("CACHE_HIT" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [17382 17392])
+                            ("CACHE_STALE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [17401 17418]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [17326 17419])
+                    ("_canCacheResponse" variable (:type "bool") (reparse-symbol classsubparts) [17424 17470])
+                    ("_canServeFromCache" variable (:type "bool") (reparse-symbol classsubparts) [17475 17522])
+                    ("_canServeStaleResponse" variable (:type "bool") (reparse-symbol classsubparts) [17527 17578])
+                    ("_cacheStatus" variable (:type ("CACHE_STATUS" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17583 17624])
+                    ("_servingFromCache" variable (:type "bool") (reparse-symbol classsubparts) [17629 17675])
+                    ("_cacheKey" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17680 17718])
+                    ("_cacheObject" variable
+                       (:pointer 1
+                        :type ("CacheObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17723 17764])
+                    ("_requestTime" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17769 17810])
+                    ("HTTP_CACHE_MODE" type
+                       (:members 
+                          ( ("META_DATA" variable
+                               (:constant-flag t
+                                :default-value (17871 17872)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [17859 17872])
+                            ("REAL_DATA" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [17882 17897]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [17824 17898])
+                    ("_cacheMode" variable (:type ("HTTP_CACHE_MODE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17903 17946])
+                    ("getMode" function (:type ("HTTP_CACHE_MODE" type (:type "class") nil nil)) (reparse-symbol classsubparts) [17951 18005])
+                    ("protected" label nil (reparse-symbol classsubparts) [18010 18020])
+                    ("ReadRequestHeader" friend nil (reparse-symbol classsubparts) [18221 18251])
+                    ("ConnectToServer" friend nil (reparse-symbol classsubparts) [18257 18285])
+                    ("TunnelClientRequestBody" friend nil (reparse-symbol classsubparts) [18291 18327])
+                    ("ReadResponseHeader" friend nil (reparse-symbol classsubparts) [18333 18364])
+                    ("SendResponse" friend nil (reparse-symbol classsubparts) [18370 18395])
+                    ("TxnComplete" friend nil (reparse-symbol classsubparts) [18401 18425])
+                    ("UFFetchTask" friend nil (reparse-symbol classsubparts) [18431 18455])
+                    ("friendOfHTTPTxn" friend nil (reparse-symbol classsubparts) [18461 18489])
+                    ("_setURL" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [18496 18511])
+                    ("getMutableClientRequest" function (:type ("HTTPRequest" type (:type "class") nil nil)) (reparse-symbol classsubparts) [18635 18701])
+                    ("getMutableServerResponse" function (:type ("HTTPResponse" type (:type "class") nil nil)) (reparse-symbol classsubparts) [18826 18895])
+                    ("originServerRequestReset" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [19018 19058])
+                    ("originServerResponseReset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [19191 19224])
+                    ("clientRequestReset" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [19353 19387])
+                    ("clientResponseReset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [19519 19546])
+                    ("releaseOriginServerConnection" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("bKeepConn" variable (:type "bool") (reparse-symbol arg-sub-list) [19841 19856]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [19798 19857])
+                    ("resetClientProducer" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [19918 19945])
+                    ("releaseConfs" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [19950 19970])
+                    ("_clientRequest" variable (:type ("HTTPRequest" type (:type "class") nil nil)) (reparse-symbol classsubparts) [19976 20019])
+                    ("_serverRequest" variable (:type ("HTTPRequest" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20024 20067])
+                    ("_remapRequest" variable (:type ("HTTPRequest" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20072 20114])
+                    ("_clientBody" variable (:type ("HTTPMessage::BodyData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20119 20159])
+                    ("_serverResponse" variable (:type ("HTTPResponse" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20164 20208])
+                    ("_serverBody" variable (:type ("HTTPMessage::BodyData" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20213 20253])
+                    ("_clientResponse" variable (:type ("HTTPResponse" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20258 20302])
+                    ("_clientParseResult" variable (:type ("ParseResult" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20307 20354])
+                    ("_serverParseResult" variable (:type ("ParseResult" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20359 20406])
+                    ("_map" variable
+                       (:pointer 1
+                        :type ("URLMapping" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20412 20445])
+                    ("_serverUFIO" variable
+                       (:pointer 1
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20450 20490])
+                    ("_httpUFIO" variable
+                       (:pointer 1
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20495 20533])
+                    ("_responseDataSource" variable
+                       (:pointer 1
+                        :type ("ResponseDataSource" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20538 20586])
+                    ("_txnId" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20591 20626])
+                    ("_keepAliveClientConnection" variable (:type "bool") (reparse-symbol classsubparts) [20631 20686])
+                    ("_keepAliveServerConnection" variable (:type "bool") (reparse-symbol classsubparts) [20691 20746])
+                    ("requestBufList" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("char" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [20752 20795])
+                    ("responseBufList" variable (:type ("list" type
+                         (:template-specifier 
+                            ( ("char" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [20800 20844])
+                    ("_extraClientRequestBuffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [20850 20904])
+                    ("_extraClientRequestBufferOffset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20909 20969])
+                    ("_extraClientRequestBufferSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20974 21032])
+                    ("_extraServerResponseBuffer" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [21038 21093])
+                    ("_extraServerResponseBufferOffset" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [21098 21159])
+                    ("_extraServerResponseBufferSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [21164 21223])
+                    ("_txnStartTime" variable (:type ("timespec" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [21228 21270])
+                    ("_txnEndTime" variable (:type ("timespec" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [21275 21315])
+                    ("_pluginStorage" variable (:type ("UFPluginStorage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [21320 21363])
+                    ("_sessionPluginStorage" variable (:type ("UFPluginStorage" type (:type "class") nil nil)) (reparse-symbol classsubparts) [21368 21418])
+                    ("_httpConf" variable
+                       (:pointer 1
+                        :type ("UFHTTPConf" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [21423 21461])
+                    ("_remapHttpConf" variable
+                       (:pointer 1
+                        :type ("UFHTTPConf" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [21466 21509])
+                    ("_stateServerConf" variable
+                       (:pointer 1
+                        :type ("UFStateServerConf" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [21514 21559])
+                    ("_connectionPool" variable
+                       (:pointer 1
+                        :type ("UFConnectionPool" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [21564 21608])
+                    ("_currentUF" variable
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [21613 21652])
+                    ("_clientRespCode" variable (:type "unsigned int") (reparse-symbol classsubparts) [21663 21696])
+                    ("_clientRespMsg" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [21701 21729])
+                    ("_txnStartEpochTime" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [21734 21772])
+                    ("_txnEndEpochTime" variable (:type ("timeval" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [21777 21813])
+                    ("_endTxnTimeSet" variable (:type "bool") (reparse-symbol classsubparts) [21818 21855])
+                    ("_originServerConnectionTimeout" variable (:type "int") (reparse-symbol classsubparts) [21860 21913])
+                    ("_closeClientConnectionAtTxnComplete" variable (:type "bool") (reparse-symbol classsubparts) [21919 21983])
+                    ("_httpTxnObjectImpl" variable
+                       (:pointer 1
+                        :type ("UFHTTPTxnObjectImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22050 22090])
+                    ("public" label nil (reparse-symbol classsubparts) [22091 22098])
+                    ("UFHTTPTxnObject" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22120 22143]))                          
+                        :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22104 22144])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22176 22199]))                          
+                        :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22149 22200]))                  
+                :type "class")
+                nil [1030 22204])
+            ("CacheObject" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [22252 22259])
+                    ("CachePartitionStorage" friend nil (reparse-symbol classsubparts) [22264 22298])
+                    ("CacheMgmt" friend nil (reparse-symbol classsubparts) [22304 22326])
+                    ("CacheObject" function
+                       (:constructor-flag t
+                        :type ("CacheObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22333 22359])
+                    ("CacheObject" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [22376 22399]))                          
+                        :type ("CacheObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22364 22424])
+                    ("CacheObject" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [22429 22453])
+                    ("addRefCount" function
+                       (:prototype-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [22459 22481])
+                    ("reduceRefCount" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [22486 22511])
+                    ("getRefCount" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22516 22565])
+                    ("markObjectForDeletion" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [22570 22602])
+                    ("isComplete" function (:type "bool") (reparse-symbol classsubparts) [22607 22677])
+                    ("setIsComplete" function (:type "bool") (reparse-symbol classsubparts) [22682 22754])
+                    ("getIsValid" function (:type "bool") (reparse-symbol classsubparts) [22759 22806])
+                    ("setIsValid" function
+                       (:arguments 
+                          ( ("flag" variable (:type "bool") (reparse-symbol arg-sub-list) [22830 22840]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [22811 22861])
+                    ("getTimeToExpire" function (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [22867 22924])
+                    ("setTimeToExpire" function
+                       (:arguments 
+                          ( ("timePassed" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22951 22969]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [22929 23001])
+                    ("getInsertionTime" function (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23006 23065])
+                    ("setInsertionTime" function
+                       (:arguments 
+                          ( ("timePassed" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23093 23111]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [23070 23144])
+                    ("getKey" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23150 23193])
+                    ("setKey" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [23210 23233]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [23198 23249])
+                    ("completeAndNotify" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("validity" variable (:type "bool") (reparse-symbol arg-sub-list) [23278 23293])
+                            ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23294 23299]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [23255 23300])
+                    ("protected" label nil (reparse-symbol classsubparts) [23302 23312])
+                    ("_refCount" variable (:type ("ssize_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23317 23359])
+                    ("_timeToExpire" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23364 23410])
+                    ("_insertionTime" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23415 23462])
+                    ("_isComplete" variable (:type "bool") (reparse-symbol classsubparts) [23467 23511])
+                    ("_isValid" variable (:type "bool") (reparse-symbol classsubparts) [23516 23557])
+                    ("_key" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23562 23599])
+                    ("_completionControl" variable (:type ("UFMutex" type (:type "class") nil nil)) (reparse-symbol classsubparts) [23604 23655])
+                    ("_next" variable
+                       (:pointer 1
+                        :type ("CacheObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [23661 23699])
+                    ("_prev" variable
+                       (:pointer 1
+                        :type ("CacheObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [23704 23742])
+                    ("reset" function (:type "void") (reparse-symbol classsubparts) [23748 23933]))                  
+                :type "class")
+                nil [22232 23936])
+            ("completeAndNotify" function
+               (:parent "CacheObject"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("validity" variable (:type "bool") (reparse-symbol arg-sub-list) [23981 23995]))                  
+                :type "void")
+                nil [23938 24146])
+            ("UFPluginStorageType" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [24183 24190])
+                    ("UFPluginStorageType" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [24198 24231]))                  
+                :type "class")
+                nil [24151 24235])
+            ("StringPluginStorage" type
+               (:superclasses 
+                  ( ("UFPluginStorageType" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("StringPluginStorage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [24318 24337]))                          
+                        :type ("StringPluginStorage" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [24298 24354])
+                    ("_data" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24359 24373])
+                    ("protected" label nil (reparse-symbol classsubparts) [24375 24385])
+                    ("StringPluginStorage" function
+                       (:constructor-flag t
+                        :type ("StringPluginStorage" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [24390 24414]))                  
+                :type "struct")
+                nil [24236 24417])
+            ("SizeTPluginStorage" type
+               (:superclasses 
+                  ( ("UFPluginStorageType" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("SizeTPluginStorage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("data" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24498 24510]))                          
+                        :type ("SizeTPluginStorage" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [24479 24527])
+                    ("_data" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24532 24546])
+                    ("protected" label nil (reparse-symbol classsubparts) [24548 24558])
+                    ("SizeTPluginStorage" function
+                       (:constructor-flag t
+                        :type ("SizeTPluginStorage" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [24563 24586]))                  
+                :type "struct")
+                nil [24418 24589])
+            ("SSizeTPluginStorage" type
+               (:superclasses 
+                  ( ("UFPluginStorageType" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("SSizeTPluginStorage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("data" variable (:type ("ssize_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24672 24685]))                          
+                        :type ("SSizeTPluginStorage" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [24652 24702])
+                    ("_data" variable (:type ("ssize_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [24707 24722])
+                    ("protected" label nil (reparse-symbol classsubparts) [24724 24734])
+                    ("SSizeTPluginStorage" function
+                       (:constructor-flag t
+                        :type ("SSizeTPluginStorage" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [24739 24763]))                  
+                :type "struct")
+                nil [24590 24766])
+            ("BoolPluginStorage" type
+               (:superclasses 
+                  ( ("UFPluginStorageType" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("BoolPluginStorage" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("data" variable (:type "bool") (reparse-symbol arg-sub-list) [24845 24855]))                          
+                        :type ("BoolPluginStorage" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [24827 24872])
+                    ("_data" variable (:type "bool") (reparse-symbol classsubparts) [24877 24889])
+                    ("protected" label nil (reparse-symbol classsubparts) [24891 24901])
+                    ("BoolPluginStorage" function
+                       (:constructor-flag t
+                        :type ("BoolPluginStorage" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [24906 24928]))                  
+                :type "struct")
+                nil [24767 24931])
+            ("requestReset" function
+               (:parent "UFHTTPTxnObject"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [24933 25746])
+            ("init" function
+               (:parent "UFHTTPTxnObject"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [25749 26662])
+            ("connectionReset" function
+               (:parent "UFHTTPTxnObject"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [26664 27362])
+            ("friendOfHTTPTxn" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [27507 27514])
+                    ("getClientRequest" function
+                       (:arguments 
+                          ( ("txn" variable
+                               (:pointer 1
+                                :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27549 27570]))                          
+                        :type ("HTTPRequest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27519 27629]))                  
+                :type "class")
+                nil [27483 27632])
+            ("UFIODataSource" type
+               (:superclasses 
+                  ( ("ResponseDataSource" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [27685 27692])
+                    ("UFIODataSource" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27712 27723])
+                            ("sendBody" variable (:type "bool") (reparse-symbol arg-sub-list) [27724 27739])
+                            ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27740 27745]))                          
+                        :type ("UFIODataSource" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27697 27785])
+                    ("UFIODataSource" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [27790 27818])
+                    ("produceData" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 2
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [27851 27863])
+                            ("timeout" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27864 27880])
+                            ("freeBuf" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [27891 27906]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27823 27910])
+                    ("setUFIO" function
+                       (:arguments 
+                          ( ("ufio" variable
+                               (:pointer 1
+                                :type ("UFIO" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [27929 27940]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [27916 27953])
+                    ("getUFIO" function
+                       (:pointer 1
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [27959 27989])
+                    ("protected" label nil (reparse-symbol classsubparts) [27991 28001])
+                    ("UFIODataSource" function
+                       (:constructor-flag t
+                        :type ("UFIODataSource" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [28006 28037])
+                    ("_ufio" variable
+                       (:pointer 1
+                        :type ("UFIO" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [28042 28064]))                  
+                :type "class")
+                nil [27634 28067])
+            ("StatusDataSource" type
+               (:superclasses 
+                  ( ("ResponseDataSource" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [28291 28298])
+                    ("StatusDataSource" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("status_code" variable (:type "unsigned short int") (reparse-symbol arg-sub-list) [28761 28792])
+                            ("status_msg" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28793 28811])
+                            ("anyotherheaders" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28815 28838])
+                            ("body" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28842 28854]))                          
+                        :type ("StatusDataSource" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [28744 28858])
+                    ("StatusDataSource" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [28861 28892])
+                    ("produceData" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 2
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [28986 28998])
+                            ("timeout" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [28999 29015])
+                            ("freeBuf" variable
+                               (:pointer 1
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [29026 29041]))                          
+                        :type ("ssize_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [28958 29045])
+                    ("getStatusMsg" function
+                       (:constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [29125 29179])
+                    ("getStatusCode" function (:type "unsigned short int") (reparse-symbol classsubparts) [29274 29331])
+                    ("getStatusDescription" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("status_code" variable
+                               (:constant-flag t
+                                :type "unsigned short int")
+                                (reparse-symbol arg-sub-list) [29540 29577]))                          
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [29497 29579])
+                    ("private" label nil (reparse-symbol classsubparts) [29580 29588])
+                    ("StatusDataSource" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("StatusDataSource" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [29593 29613])
+                    ("StatusDataSource" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("StatusDataSource" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [29681 29699]))                          
+                        :type ("StatusDataSource" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [29664 29701])
+                    ("_status_code" variable (:type "unsigned short int") (reparse-symbol classsubparts) [29708 29741])
+                    ("_msglength" variable (:type "unsigned int") (reparse-symbol classsubparts) [29746 29771])
+                    ("_status_msg" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [29776 29796])
+                    ("_otherheaders" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [29801 29823])
+                    ("_body" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [29828 29841])
+                    ("CONTENT_LENGTH" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [29847 29888])
+                    ("STATUS_START" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [29893 29931])
+                    ("respcode_2_respdesc" variable (:type "int") (reparse-symbol classsubparts) [29985 30006])
+                    ("_temptoloadtheMap" variable
+                       (:typemodifiers ("static")
+                        :type ("StatusDataSource" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [30011 30054])
+                    ("_dataAlreadyProduced" variable (:type "bool") (reparse-symbol classsubparts) [30059 30085]))                  
+                :type "class")
+                nil [28237 30089])
+            ("addRefCount" function
+               (:parent "CacheObject"
+                :typemodifiers ("inline")
+                :type ("size_t" type (:type "class") nil nil))
+                nil [30091 30183])
+            ("reduceRefCount" function
+               (:parent "CacheObject"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [30185 30526])
+            ("markObjectForDeletion" function
+               (:parent "CacheObject"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [30528 30669]))          
+    :file "UFHTTPTxnObject.H"
+    :pointmax 30678
+    :fsize 30677
+    :lastmodtime '(20625 28959)
+    :unmatched-syntax '((punctuation 29983 . 29984) (symbol 29977 . 29983) (punctuation 29976 . 29977) (punctuation 29975 . 29976) (symbol 29972 . 29975) (punctuation 29970 . 29971) (INT 29967 . 29970) (UNSIGNED 29958 . 29966) (SHORT 29952 . 29957) (punctuation 29951 . 29952) (symbol 29948 . 29951) (punctuation 29947 . 29948) (punctuation 29946 . 29947) (symbol 29943 . 29946) (STATIC 29936 . 29942) (punctuation 29701 . 29702) (number 29042 . 29043) (punctuation 29040 . 29041) (number 29016 . 29024) (punctuation 29014 . 29015) (punctuation 28893 . 28894) (string 28854 . 28856) (punctuation 28853 . 28854) (string 28838 . 28840) (punctuation 28837 . 28838) (string 28811 . 28813) (punctuation 28810 . 28811) (punctuation 27989 . 27990) (punctuation 27953 . 27954) (number 27907 . 27908) (punctuation 27905 . 27906) (number 27881 . 27889) (punctuation 27879 . 27880) (punctuation 27738 . 27739) (punctuation 24231 . 24232) (punctuation 23292 . 23293) (punctuation 22326 . 22327) (punctuation 22298 . 22299) (SHORT 21657 . 21662) (punctuation 18489 . 18490) (punctuation 18455 . 18456) (punctuation 18425 . 18426) (punctuation 18395 . 18396) (punctuation 18364 . 18365) (punctuation 18327 . 18328) (punctuation 18285 . 18286) (punctuation 18251 . 18252) (TYPEDEF 17816 . 17823) (punctuation 16733 . 16734) (punctuation 16685 . 16686) (punctuation 16538 . 16539) (string 16505 . 16507) (punctuation 16504 . 16505) (string 16483 . 16485) (punctuation 16482 . 16483) (string 16450 . 16452) (punctuation 16449 . 16450) (punctuation 15287 . 15288) (punctuation 15067 . 15068) (punctuation 13717 . 13718) (punctuation 13490 . 13491) (punctuation 13182 . 13183) (punctuation 7579 . 7580) (punctuation 6943 . 6944) (punctuation 5486 . 5487) (punctuation 4975 . 4976) (punctuation 1645 . 1646) (number 901 . 902) (punctuation 899 . 900) (number 875 . 883) (punctuation 873 . 874))
+    :lexical-table 
+        '(("UFHTTPTXNOBJECT_H")
+          )
+
+    )
+   (semanticdb-table "UFHttpStats.H"
+    :file "UFHttpStats.H"
+    :fsize 937
+    :lastmodtime '(20625 28959)
+    )
+   (semanticdb-table "UFPlugin.H"
+    :file "UFPlugin.H"
+    :fsize 11929
+    :lastmodtime '(20625 28959)
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!state_server!inc!uf!stateserver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

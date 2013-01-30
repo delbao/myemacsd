@@ -1,0 +1,58 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables (list 
+   (semanticdb-table "baseTest.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("baseTest.h" include nil nil [1 22])
+            ("iostream" include (:system-flag t) nil [23 42])
+            ("yax/osutil.h" include (:system-flag t) nil [43 66])
+            ("std::cout" using (:type ("std::cout" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [68 84])
+            ("std::endl" using (:type ("std::endl" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [85 101])
+            ("std::string" using (:type ("std::string" type
+                 (:prototype t
+                  :type "class")
+                  nil nil)) nil [102 120])
+            ("splitregion" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [121 166])
+            ("callbackCalled" variable (:type "bool") nil [167 191])
+            ("testCallback" function
+               (:arguments 
+                  ( ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [211 222]))                  
+                :type "void")
+                nil [193 250])
+            ("testTimerService" function
+               (:parent "BaseTest"
+                :type "void")
+                nil [331 1442])
+            ("testDBConn" function
+               (:parent "BaseTest"
+                :type "void")
+                nil [1522 2373])
+            ("testPreamble" function
+               (:parent "BaseTest"
+                :type "void")
+                nil [2459 2549]))          
+    :file "baseTest.cc"
+    :pointmax 2550
+    :fsize 2549
+    :lastmodtime '(20545 26150)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svn!trunk!controller!src!failover_daemon!unit_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

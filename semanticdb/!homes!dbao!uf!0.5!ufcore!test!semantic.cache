@@ -1,0 +1,197 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("check_PROGRAMS" variable (:default-value ("testLog")) nil [53 540])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [541 567])
+            ("LDADD" variable (:default-value ("$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/http/component/src/remap/libufhttpremap_p.la" "$(top_builddir)/http/component/src/parser/libufhttpparser_p.la" "$(top_builddir)/http/state/src/libufhttpstate_p.la" "$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [723 1079])
+            ("AM_CXXFLAGS" variable (:default-value ("-Wconversion")) nil [1079 1106])
+            ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/http/component/inc")) nil [1106 1182])
+            ("AM_LDFLAGS" variable (:default-value ("-lcppunit")) nil [1182 1205])
+            ("ByteBlocksTest_SOURCES" variable (:default-value ("ByteBlocksTest.C")) nil [1206 1248])
+            ("ConfTest_SOURCES" variable (:default-value ("ConfTest.C")) nil [1248 1278])
+            ("testAddThreadInfo_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testAddThreadInfo.C")) nil [1312 1408])
+            ("testconnectionutil_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testConnectionUtil.C")) nil [1409 1507])
+            ("testtextutils_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testTextUtils.C")) nil [1508 1596])
+            ("teststringutils_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testStringUtils.C")) nil [1597 1689])
+            ("testufstateconf_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFStateConf.C")) nil [1690 1782])
+            ("testutils_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUtils.C")) nil [1783 1863])
+            ("testufserver_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFServer.C")) nil [1864 1950])
+            ("testuf_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUF.C")) nil [1951 2025])
+            ("testufssl_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFSSL.C")) nil [2026 2106])
+            ("testdiskiowritev_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDiskIOWritev.C")) nil [2107 2201])
+            ("testdiskiowrite_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDiskIOWrite.C")) nil [2202 2294])
+            ("testdiskioread_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testDiskIORead.C")) nil [2295 2385])
+            ("testufares_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFAres.C")) nil [2386 2468])
+            ("testufconnectionpool_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFConnectionPool.C")) nil [2469 2571])
+            ("testufpc_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFPC.C")) nil [2572 2650])
+            ("testcondufio_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testCondUFIO.C")) nil [2651 2737])
+            ("testhttp_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testHTTP.C")) nil [2738 2816])
+            ("testaio_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testAIO.C")) nil [2817 2893])
+            ("testufconf_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFConf.C")) nil [2894 2976])
+            ("testufconfmerger_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFConfMerger.C")) nil [2977 3071])
+            ("testUFStatSystem_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFStatSystem.C" "StringBasedUFIO.C")) nil [3072 3188])
+            ("testSSL_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testSSL.C")) nil [3189 3265])
+            ("testSSLMultiCert_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testSSLMultiCert.C")) nil [3266 3360])
+            ("testLog_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testLog.C")) nil [3361 3437])
+            ("testufconfmanager_SOURCES" variable (:default-value ("$(top_srcdir)/test/CppUnitTestRunner.cc" "testUFConfManager.C")) nil [3438 3534]))          
+    :file "Makefile.am"
+    :pointmax 3821
+    :fsize 3820
+    :lastmodtime '(20622 62380)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "testUFPC.C"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("stdlib.h" include (:system-flag t) nil [21 40])
+            ("uf/core/UFPC.H" include (:system-flag t) nil [41 66])
+            ("stdio.h" include (:system-flag t) nil [67 85])
+            ("cppunit/TestFixture.h" include (:system-flag t) nil [86 118])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [119 163])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [165 185])
+            ("produce" variable (:type "bool") nil [186 205])
+            ("consume" variable (:type "bool") nil [206 225])
+            ("intBasedUFDO" type
+               (:superclasses 
+                  ( ("UFDataObject" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("intBasedUFDO" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type "int")
+                                (reparse-symbol arg-sub-list) [288 298]))                          
+                        :type ("intBasedUFDO" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [275 315])
+                    ("intBasedUFDO" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [320 365])
+                    ("_data" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [370 381]))                  
+                :type "struct")
+                nil [227 384])
+            ("numProducerIterToRun" variable (:type ("ssize_t" type (:type "class") nil nil)) nil [387 421])
+            ("useProducer" variable (:type "bool") nil [422 446])
+            ("p" variable
+               (:pointer 1
+                :type ("UFJoinableProducer" type (:type "class") nil nil))
+                nil [447 473])
+            ("TestProducer" type
+               (:superclasses 
+                  ( ("UF" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("run" function (:type "void") (reparse-symbol classsubparts) [512 908])
+                    ("createUF" function
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [913 958]))                  
+                :type "struct")
+                nil [474 961])
+            ("threadCounter" variable (:type ("map" type
+                 (:template-specifier 
+                    ( ("pthread_t" type nil nil nil)
+                      ("int" type nil nil nil))                    
+                  :type "class")
+                  nil nil)) nil [963 997])
+            ("threadCounterMutex" variable (:type ("UFMutex" type (:type "class") nil nil)) nil [998 1025])
+            ("TestConsumer" type
+               (:superclasses 
+                  ( ("UF" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("run" function (:type "void") (reparse-symbol classsubparts) [1064 2585])
+                    ("createUF" function
+                       (:pointer 1
+                        :type ("UF" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2590 2635]))                  
+                :type "struct")
+                nil [1026 2638])
+            ("numConsumersToStart" variable (:type "unsigned int") nil [2640 2677])
+            ("numThreadsToStart" variable (:type "unsigned int") nil [2678 2713])
+            ("TestUFPC" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2763 2770])
+                    ("setUp" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2775 2788])
+                    ("tearDown" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2793 2809])
+                    ("testPC" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2814 2828])
+                    ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestUFPC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2853 2862]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2834 2863])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testPC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2881 2888]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2868 2889])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [2894 2919]))                  
+                :type "class")
+                nil [2716 2922])
+            ("setUp" function
+               (:parent "TestUFPC"
+                :type "void")
+                nil [2925 2951])
+            ("tearDown" function
+               (:parent "TestUFPC"
+                :type "void")
+                nil [2953 2982])
+            ("testPC" function
+               (:parent "TestUFPC"
+                :type "void")
+                nil [2984 3379])
+            ("CPPUNIT_TEST_SUITE_REGISTRATION" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("TestUFPC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3413 3422]))                  
+                :type "int")
+                nil [3381 3423]))          
+    :file "testUFPC.C"
+    :pointmax 3424
+    :fsize 3423
+    :lastmodtime '(20622 62380)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!ufcore!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

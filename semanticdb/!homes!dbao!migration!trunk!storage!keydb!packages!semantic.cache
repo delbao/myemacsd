@@ -1,0 +1,39 @@
+;; Object packages/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "packages/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("ROOT" variable (:default-value ("/home/y")) nil [1 14])
+            ("$(ROOT)/share/yahoo_cfg/Make.defs" include nil nil [14 56])
+            ("all" function (:arguments ("package-release")) nil [57 79])
+            ("test" function (:arguments ("package-test")) nil [80 100])
+            ("clean" function (:arguments ("package-clean")) nil [101 123])
+            ("LCLEAN" variable (:default-value ("*~")) nil [124 137])
+            ("$(ROOT)/share/yahoo_cfg/Make.rules" include nil nil [138 181]))          
+    :file "Makefile"
+    :pointmax 183
+    :fsize 182
+    :lastmodtime '(20451 37989)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "BBMakefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("SRCTOP" variable (:default-value ("$(shell pwd)/../../..")) nil [1 32])
+            ("$(CFG)/Make.defs" include nil nil [75 100])
+            ("$(SRCTOP)/build/Makefile.defs" include nil nil [100 138])
+            ("PACKAGE_CONFIG" variable (:default-value ("$(wildcard *yicf)")) nil [139 172])
+            ("$(CFG)/Make.rules" include nil nil [173 199]))          
+    :file "BBMakefile"
+    :pointmax 236
+    :fsize 236
+    :lastmodtime '(20451 44156)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!migration!trunk!storage!keydb!packages!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

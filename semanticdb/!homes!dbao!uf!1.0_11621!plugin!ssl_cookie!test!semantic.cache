@@ -1,0 +1,24 @@
+;; Object test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "test/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-DPIPE_NOT_EFD" "-I$(top_srcdir)/test" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/plugin/ssl_cookie/src/" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc/")) nil [68 313])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [370 396])
+            ("check_PROGRAMS" variable nil nil [457 475])
+            ("testsslcookie_SOURCES" variable (:default-value ("$(top_builddir)/test/CppUnitTestRunner.cc" "testSSLCookie.C")) nil [602 692])
+            ("testsslcookie_LDFLAGS" variable (:default-value ("-lcppunit" "$(AM_LDFLAGS)")) nil [692 740])
+            ("testsslcookie_LDADD" variable (:default-value ("$(top_builddir)/plugin/ssl_cookie/src/libufsslcookie.la")) nil [740 818]))          
+    :file "Makefile.am"
+    :pointmax 818
+    :fsize 817
+    :lastmodtime '(20629 53850)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!plugin!ssl_cookie!test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,409 @@
+;; Object server/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "server/"
+  :tables (list 
+   (semanticdb-table "JavaStorageUnit.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("com.yahoo.dht.server" package nil nil [1 30])
+            ("com.sampullara.cli.Args" include nil nil [32 63])
+            ("com.sampullara.cli.Argument" include nil nil [64 99])
+            ("com.yahoo.dht.client.exception.DhtClientException" include nil nil [100 157])
+            ("com.yahoo.dht.client.YDHTBench" include nil nil [158 196])
+            ("com.yahoo.dht.client.MultiRequest" include nil nil [197 238])
+            ("com.yahoo.dht.Request" include nil nil [239 268])
+            ("net.sf.json.JSONObject" include nil nil [269 299])
+            ("net.sf.json.JSONArray" include nil nil [300 329])
+            ("java.io.File" include nil nil [331 351])
+            ("java.io.FileInputStream" include nil nil [352 383])
+            ("java.io.FileOutputStream" include nil nil [384 416])
+            ("java.io.IOException" include nil nil [417 444])
+            ("java.lang.ref.SoftReference" include nil nil [445 480])
+            ("java.math.BigInteger" include nil nil [481 509])
+            ("java.nio.ByteBuffer" include nil nil [510 537])
+            ("java.nio.channels.FileChannel" include nil nil [538 575])
+            ("java.security.SecureRandom" include nil nil [576 610])
+            ("java.util.*" include nil nil [611 630])
+            ("java.util.concurrent.*" include nil nil [631 661])
+            ("java.util.concurrent.locks.Lock" include nil nil [662 701])
+            ("java.util.concurrent.locks.ReadWriteLock" include nil nil [702 750])
+            ("java.util.concurrent.locks.ReentrantReadWriteLock" include nil nil [751 808])
+            ("JavaStorageUnit" type
+               (:typemodifiers ("public")
+                :interfaces ("Request")
+                :superclasses "MultiRequest"
+                :members 
+                  ( ("CACHE_ON" variable
+                       (:typemodifiers ("public" "static")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [996 1098])
+                    ("init" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1104 1310])
+                    ("delete" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [1387 1403])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [1405 1422]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1368 1925])
+                    ("get" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [2028 2044])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [2046 2063]))                          
+                        :type "JSONObject")
+                        (reparse-symbol class_member_declaration) [2006 4499])
+                    ("set" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [4615 4631])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [4633 4650])
+                            ("data" variable (:type "JSONObject") (reparse-symbol formal_parameters) [4652 4667]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4599 6314])
+                    ("rootDir" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [6583 6614])
+                    ("rand" variable
+                       (:typemodifiers ("private")
+                        :type "Random")
+                        (reparse-symbol class_member_declaration) [6619 6660])
+                    ("Tablet" type
+                       (:typemodifiers ("public" "static")
+                        :members 
+                          ( ("name" variable
+                               (:typemodifiers ("private")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [6703 6723])
+                            ("dir" variable
+                               (:typemodifiers ("private")
+                                :type "File")
+                                (reparse-symbol class_member_declaration) [6732 6749])
+                            ("left" variable
+                               (:typemodifiers ("private")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [6758 6776])
+                            ("right" variable
+                               (:typemodifiers ("private")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [6785 6804])
+                            ("writeLock" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("subdir" variable (:type "String") (reparse-symbol formal_parameters) [6926 6939]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [6904 7042])
+                            ("writeUnlock" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("subdir" variable (:type "String") (reparse-symbol formal_parameters) [7076 7089]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [7052 7194])
+                            ("readLock" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("subdir" variable (:type "String") (reparse-symbol formal_parameters) [7225 7238]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [7204 7338])
+                            ("readUnlock" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("subdir" variable (:type "String") (reparse-symbol formal_parameters) [7371 7384]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [7348 7486])
+                            ("Tablet" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("name" variable (:type "String") (reparse-symbol formal_parameters) [7503 7514])
+                                    ("dir" variable (:type "File") (reparse-symbol formal_parameters) [7516 7524]))                                  )
+                                (reparse-symbol class_member_declaration) [7496 8243])
+                            ("in" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("l" variable (:type "long") (reparse-symbol formal_parameters) [8271 8277]))                                  
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [8253 8334])
+                            ("getDir" function
+                               (:typemodifiers ("public")
+                                :type "File")
+                                (reparse-symbol class_member_declaration) [8344 8400])
+                            ("getLeft" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [8410 8468])
+                            ("getRight" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [8478 8538])
+                            ("getName" function
+                               (:typemodifiers ("public")
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [8548 8608]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [6666 8614])
+                    ("JavaStorageUnit" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [8620 8652])
+                    ("JavaStorageUnit" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("root" variable (:type "String") (reparse-symbol formal_parameters) [8681 8692]))                          )
+                        (reparse-symbol class_member_declaration) [8658 8730])
+                    ("getTablets" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [8767 8783]))                          )
+                        (reparse-symbol class_member_declaration) [8756 9689])
+                    ("getFileForRecord" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [9725 9742])
+                            ("recordTablet" variable (:type "Tablet") (reparse-symbol formal_parameters) [9744 9763])
+                            ("bytes" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [9765 9777]))                          
+                        :type "File")
+                        (reparse-symbol class_member_declaration) [9695 10432])
+                    ("getTablet" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [10462 10478])
+                            ("bytes" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [10480 10492]))                          
+                        :type "Tablet")
+                        (reparse-symbol class_member_declaration) [10438 10975])
+                    ("root" variable
+                       (:typemodifiers ("private" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [11012 11046])
+                    ("table" variable
+                       (:typemodifiers ("private" "static")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [11082 11117])
+                    ("main" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [11147 11160]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [11123 11843]))                  
+                :type "class")
+                nil [920 11845]))          
+    :file "JavaStorageUnit.java"
+    :pointmax 11846
+    :fsize 11845
+    :lastmodtime '(20545 26033)
+    :unmatched-syntax '((IDENTIFIER 11061 . 11069) (EQ 11070 . 11071) (punctuation 11051 . 11052) (IDENTIFIER 10991 . 10999) (EQ 11000 . 11001) (punctuation 10981 . 10982) (GT 8754 . 8755) (PUBLIC 8736 . 8742) (LT 8747 . 8748) (SEMICOLON 6893 . 6894) (PAREN_BLOCK 6891 . 6893) (GT 6890 . 6891) (COMMA 6875 . 6876) (LT 6868 . 6869) (NEW 6857 . 6860) (EQ 6855 . 6856) (GT 6847 . 6848) (COMMA 6832 . 6833) (PRIVATE 6814 . 6821) (LT 6825 . 6826) (SEMICOLON 6577 . 6578) (PAREN_BLOCK 6559 . 6577) (RSHIFT 6557 . 6559) (LT 6550 . 6551) (COMMA 6535 . 6536) (LT 6528 . 6529) (NEW 6507 . 6510) (EQ 6505 . 6506) (RSHIFT 6496 . 6498) (LT 6489 . 6490) (COMMA 6474 . 6475) (LT 6467 . 6468) (SEMICOLON 6437 . 6438) (PAREN_BLOCK 6421 . 6437) (RSHIFT 6419 . 6421) (LT 6412 . 6413) (COMMA 6406 . 6407) (LT 6399 . 6400) (NEW 6378 . 6381) (EQ 6376 . 6377) (RSHIFT 6364 . 6366) (LT 6357 . 6358) (COMMA 6351 . 6352) (PRIVATE 6320 . 6327) (LT 6344 . 6345) (DOT 2073 . 2074) (IDENTIFIER 2065 . 2071) (DOT 2072 . 2073))
+    )
+   (semanticdb-table "UDB.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("com.yahoo.dht.server" package nil nil [1 30])
+            ("com.yahoo.dht.client.exception.DhtClientException" include nil nil [32 89])
+            ("com.yahoo.dht.client.YDHTBench" include nil nil [90 128])
+            ("com.yahoo.dht.Request" include nil nil [129 158])
+            ("net.sf.json.JSONObject" include nil nil [159 189])
+            ("java.io.File" include nil nil [191 211])
+            ("java.io.FileInputStream" include nil nil [212 243])
+            ("java.io.FileOutputStream" include nil nil [244 276])
+            ("java.io.IOException" include nil nil [277 304])
+            ("java.lang.ref.SoftReference" include nil nil [305 340])
+            ("java.math.BigInteger" include nil nil [341 369])
+            ("java.nio.ByteBuffer" include nil nil [370 397])
+            ("java.nio.channels.FileChannel" include nil nil [398 435])
+            ("java.security.SecureRandom" include nil nil [436 470])
+            ("java.util.*" include nil nil [471 490])
+            ("java.util.concurrent.ConcurrentHashMap" include nil nil [491 537])
+            ("java.util.concurrent.locks.Lock" include nil nil [538 577])
+            ("java.util.concurrent.locks.ReadWriteLock" include nil nil [578 626])
+            ("java.util.concurrent.locks.ReentrantReadWriteLock" include nil nil [627 684])
+            ("UDB" type
+               (:typemodifiers ("public")
+                :interfaces ("Request")
+                :members 
+                  ( ("CACHE_ON" variable
+                       (:typemodifiers ("public" "static")
+                        :type "boolean")
+                        (reparse-symbol class_member_declaration) [839 941])
+                    ("init" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [947 999])
+                    ("delete" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [1076 1092])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [1094 1111]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [1057 1614])
+                    ("get" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [1717 1733])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [1735 1752]))                          
+                        :type "JSONObject")
+                        (reparse-symbol class_member_declaration) [1695 4188])
+                    ("multiGet" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [4221 4237])
+                            ("recordNames" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [4239 4259]))                          
+                        :type "JSONObject")
+                        (reparse-symbol class_member_declaration) [4194 4412])
+                    ("set" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [4528 4544])
+                            ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [4546 4563])
+                            ("data" variable (:type "JSONObject") (reparse-symbol formal_parameters) [4565 4580]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [4512 6198])
+                    ("rootDir" variable
+                       (:typemodifiers ("private")
+                        :type "String")
+                        (reparse-symbol class_member_declaration) [6467 6498])
+                    ("rand" variable
+                       (:typemodifiers ("private")
+                        :type "Random")
+                        (reparse-symbol class_member_declaration) [6503 6544])
+                    ("Tablet" type
+                       (:typemodifiers ("private" "static")
+                        :members 
+                          ( ("dir" variable
+                               (:typemodifiers ("private")
+                                :type "File")
+                                (reparse-symbol class_member_declaration) [6588 6605])
+                            ("left" variable
+                               (:typemodifiers ("private")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [6614 6632])
+                            ("right" variable
+                               (:typemodifiers ("private")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [6641 6660])
+                            ("writeLock" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("subdir" variable (:type "String") (reparse-symbol formal_parameters) [6782 6795]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [6760 6898])
+                            ("writeUnlock" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("subdir" variable (:type "String") (reparse-symbol formal_parameters) [6932 6945]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [6908 7050])
+                            ("readLock" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("subdir" variable (:type "String") (reparse-symbol formal_parameters) [7081 7094]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [7060 7194])
+                            ("readUnlock" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("subdir" variable (:type "String") (reparse-symbol formal_parameters) [7227 7240]))                                  
+                                :type "void")
+                                (reparse-symbol class_member_declaration) [7204 7342])
+                            ("Tablet" function
+                               (:constructor-flag t
+                                :arguments 
+                                  ( ("name" variable (:type "String") (reparse-symbol formal_parameters) [7359 7370])
+                                    ("dir" variable (:type "File") (reparse-symbol formal_parameters) [7372 7380]))                                  )
+                                (reparse-symbol class_member_declaration) [7352 8069])
+                            ("in" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("l" variable (:type "long") (reparse-symbol formal_parameters) [8097 8103]))                                  
+                                :type "boolean")
+                                (reparse-symbol class_member_declaration) [8079 8160])
+                            ("getDir" function
+                               (:typemodifiers ("public")
+                                :type "File")
+                                (reparse-symbol class_member_declaration) [8170 8226])
+                            ("getLeft" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [8236 8294])
+                            ("getRight" function
+                               (:typemodifiers ("public")
+                                :type "long")
+                                (reparse-symbol class_member_declaration) [8304 8364]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [6550 8370])
+                    ("UDB" function
+                       (:constructor-flag t
+                        :typemodifiers ("public"))
+                        (reparse-symbol class_member_declaration) [8376 8396])
+                    ("UDB" function
+                       (:constructor-flag t
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("root" variable (:type "String") (reparse-symbol formal_parameters) [8413 8424]))                          )
+                        (reparse-symbol class_member_declaration) [8402 8462])
+                    ("getTablets" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [8500 8516]))                          )
+                        (reparse-symbol class_member_declaration) [8489 9422])
+                    ("getFileForRecord" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("recordName" variable (:type "String") (reparse-symbol formal_parameters) [9458 9475])
+                            ("recordTablet" variable (:type "Tablet") (reparse-symbol formal_parameters) [9477 9496])
+                            ("bytes" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [9498 9510]))                          
+                        :type "File")
+                        (reparse-symbol class_member_declaration) [9428 10165])
+                    ("getTablet" function
+                       (:throws ("DhtClientException")
+                        :typemodifiers ("private")
+                        :arguments 
+                          ( ("tableName" variable (:type "String") (reparse-symbol formal_parameters) [10196 10212])
+                            ("bytes" variable
+                               (:dereference 1
+                                :type "byte")
+                                (reparse-symbol formal_parameters) [10214 10226]))                          
+                        :type "Tablet")
+                        (reparse-symbol class_member_declaration) [10171 10709]))                  
+                :type "class")
+                nil [796 10712]))          
+    :file "UDB.java"
+    :pointmax 10712
+    :fsize 10711
+    :lastmodtime '(20545 26033)
+    :unmatched-syntax '((GT 8487 . 8488) (PRIVATE 8468 . 8475) (LT 8480 . 8481) (SEMICOLON 6749 . 6750) (PAREN_BLOCK 6747 . 6749) (GT 6746 . 6747) (COMMA 6731 . 6732) (LT 6724 . 6725) (NEW 6713 . 6716) (EQ 6711 . 6712) (GT 6703 . 6704) (COMMA 6688 . 6689) (PRIVATE 6670 . 6677) (LT 6681 . 6682) (SEMICOLON 6461 . 6462) (PAREN_BLOCK 6443 . 6461) (RSHIFT 6441 . 6443) (LT 6434 . 6435) (COMMA 6419 . 6420) (LT 6412 . 6413) (NEW 6391 . 6394) (EQ 6389 . 6390) (RSHIFT 6380 . 6382) (LT 6373 . 6374) (COMMA 6358 . 6359) (LT 6351 . 6352) (SEMICOLON 6321 . 6322) (PAREN_BLOCK 6305 . 6321) (RSHIFT 6303 . 6305) (LT 6296 . 6297) (COMMA 6290 . 6291) (LT 6283 . 6284) (NEW 6262 . 6265) (EQ 6260 . 6261) (RSHIFT 6248 . 6250) (LT 6241 . 6242) (COMMA 6235 . 6236) (PRIVATE 6204 . 6211) (LT 6228 . 6229) (DOT 4269 . 4270) (IDENTIFIER 4261 . 4267) (DOT 4268 . 4269) (DOT 1762 . 1763) (IDENTIFIER 1754 . 1760) (DOT 1761 . 1762))
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svn!trunk!test!dhtbench!src!main!java!com!yahoo!dht!server!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

@@ -1,0 +1,304 @@
+;; Object rhel.4.8.gcov/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "rhel.4.8.gcov/"
+  :tables (list 
+   (semanticdb-table "ExportData.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("multichecksum/Checksum.hh" include (:system-flag t) nil [59 95])
+            ("boost/algorithm/string.hpp" include (:system-flag t) nil [97 134])
+            ("dht/LogUtils.h" include (:system-flag t) nil [135 160])
+            ("dht/WebCode.h" include (:system-flag t) nil [161 185])
+            ("dht/ActionContext.h" include (:system-flag t) nil [186 216])
+            ("dht/TabletRangeCheckable.h" include (:system-flag t) nil [217 254])
+            ("dht/TabletRangeFactory.h" include (:system-flag t) nil [255 290])
+            ("dht/FwDecls.h" include (:system-flag t) nil [291 315])
+            ("dht/ControllerTransport.h" include (:system-flag t) nil [316 352])
+            ("dht/URLBuilder.h" include (:system-flag t) nil [353 380])
+            ("dht/HashTabletRange.h" include (:system-flag t) nil [381 413])
+            ("dht/OrderedTabletRange.h" include (:system-flag t) nil [414 449])
+            ("dht/IndexedTabletRange.h" include (:system-flag t) nil [450 485])
+            ("dht/ProxyTransport.h" include (:system-flag t) nil [486 517])
+            ("UserPermissions.h" include (:system-flag t) nil [519 547])
+            ("TableData.h" include (:system-flag t) nil [548 570])
+            ("ExportData.h" include (:system-flag t) nil [571 594])
+            ("Tablet.h" include (:system-flag t) nil [595 614])
+            ("SuWebRequest.h" include (:system-flag t) nil [615 640])
+            ("ExportDataFormatter.h" include (:system-flag t) nil [641 673])
+            ("SuScanContinuation.h" include (:system-flag t) nil [674 705])
+            ("SuDecls.h" include (:system-flag t) nil [706 726])
+            ("Record.h" include (:system-flag t) nil [727 746])
+            ("SuProcessContext.h" include (:system-flag t) nil [747 776])
+            ("OversightFSS.h" include (:system-flag t) nil [777 802])
+            ("RecordExpiryFilter.h" include (:system-flag t) nil [803 834])
+            ("TombstoneFilter.h" include (:system-flag t) nil [835 863])
+            ("KEY_HIO_STATS" variable (:constant-flag t) nil [873 886])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [899 986])
+            ("USING_NAMESPACE_MCS" variable (:type "int") nil [990 1010])
+            ("ExportData::HIO_CHECKSUM_ALGORITHM" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1012 1074])
+            ("ExportData::HIO_RECORD_SEPARATOR_STR" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1075 1138])
+            ("TabletMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::vector" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [1139 1205])
+            ("TabletMapIter" type
+               (:typedef ("std::map::iterator" type (:type "class") nil nil)
+                :superclasses "std::map::iterator"
+                :type "typedef")
+                nil [1206 1287])
+            ("TabletMapCIter" type
+               (:typedef ("std::map::const_iterator" type (:type "class") nil nil)
+                :superclasses "std::map::const_iterator"
+                :type "typedef")
+                nil [1288 1375])
+            ("execute" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("request" variable
+                       (:reference 1
+                        :type ("SuWebRequest" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1420 1442])
+                    ("response" variable
+                       (:reference 1
+                        :type ("WebResponse" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1442 1464]))                  
+                :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                nil [1377 8097])
+            ("haveError" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("wc" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8127 8152])
+                    ("response" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("WebResponse" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8153 8181]))                  
+                :type "bool")
+                nil [8099 9016])
+            ("formatErrorBody" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("out" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9052 9069])
+                    ("in" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9070 9092])
+                    ("status" variable (:type ("WebCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9093 9122]))                  
+                :type "bool")
+                nil [9018 9520])
+            ("setTabletRangeCheckable" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("keyType" variable (:type ("TabletRange::KeyType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9565 9594])
+                    ("trc" variable
+                       (:reference 1
+                        :type ("TabletRangeCheckable" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9619 9645])
+                    ("requestRange" variable
+                       (:reference 1
+                        :type ("TabletRange" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9670 9696]))                  
+                :type "void")
+                nil [9523 10267])
+            ("processRecord" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("recordFilters" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("RecordFilter" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10317 10360])
+                    ("record" variable
+                       (:reference 1
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10361 10376]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [10269 10887])
+            ("exportLocalTablet" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11067 11082])
+                    ("partitionId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11083 11114])
+                    ("response" variable
+                       (:reference 1
+                        :type ("WebResponse" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11135 11157])
+                    ("maxExportedBytes" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11158 11184]))                  
+                :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                nil [11014 15580])
+            ("saveChecksumAndBytes" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15638 15653])
+                    ("partitionId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15654 15685])
+                    ("checksumStr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15699 15730])
+                    ("bytes" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15731 15753]))                  
+                :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                nil [15582 16332])
+            ("getFileDownloadStats" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16391 16406])
+                    ("partitionId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16407 16438])
+                    ("response" variable
+                       (:reference 1
+                        :type ("WebResponse" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16472 16494]))                  
+                :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                nil [16335 17328])
+            ("retrieveChecksum" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17382 17397])
+                    ("partitionId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17398 17429])
+                    ("checksumStr" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17463 17488])
+                    ("bytes" variable
+                       (:reference 1
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17489 17505]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [17331 18504])
+            ("exportRemoteTablet" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("table" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18860 18885])
+                    ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18905 18931])
+                    ("serverName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18951 18981])
+                    ("response" variable
+                       (:reference 1
+                        :type ("WebResponse" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19002 19024]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [18807 19299])
+            ("getLocalAndRemoteTablets" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("tmap" variable
+                       (:reference 1
+                        :type ("TabletMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19360 19376])
+                    ("localTablets" variable
+                       (:reference 1
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19402 19423])
+                    ("remoteTablets" variable
+                       (:reference 1
+                        :type ("MapStrStr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19449 19474])
+                    ("reqRange" variable (:type ("TabletRangeSharedPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19500 19530]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [19301 20576])
+            ("hasInvalidatedTabletsInRange" function
+               (:parent "ExportData"
+                :arguments 
+                  ( ("invalidTablets" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20642 20671])
+                    ("reqRange" variable (:type ("TabletRangeSharedPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20701 20731]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [20578 21269])
+            ("ChecksummerRAII" function
+               (:constructor-flag t
+                :parent "ChecksummerRAII"
+                :arguments 
+                  ( ("checksummer" variable
+                       (:pointer 1
+                        :type ("Checksum" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21306 21328]))                  
+                :type ("ChecksummerRAII" type (:type "class") nil nil))
+                nil [21272 21364])
+            ("ChecksummerRAII" function
+               (:destructor-flag t
+                :parent "ChecksummerRAII"
+                :type "void")
+                nil [21366 21431]))          
+    :file "ExportData.cc"
+    :pointmax 21619
+    :fsize 21618
+    :lastmodtime '(20515 6491)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("KEY_HIO_STATS" . ((string "\"hioStats\"" 887 . 897)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!dht!storage!handler!src!rhel.4.8.gcov!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

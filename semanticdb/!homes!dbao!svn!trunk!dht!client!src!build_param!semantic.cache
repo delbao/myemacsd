@@ -1,0 +1,275 @@
+;; Object build_param/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "build_param/"
+  :tables (list 
+   (semanticdb-table "RequestParamsImpl.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_YDHT_REQUEST_PARMS_IMPL_" variable (:constant-flag t) nil [174 199])
+            ("string" include (:system-flag t) nil [201 218])
+            ("vector" include (:system-flag t) nil [219 236])
+            ("sys/types.h" include (:system-flag t) nil [237 259])
+            ("DHT" type
+               (:members 
+                  ( ("RequestParamsImpl" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [568 575])
+                            ("RequestParamsImpl" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("RequestParamsImpl" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [623 643])
+                            ("RequestParamsImpl" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("ref" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RequestParamsImpl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [707 736]))                                  
+                                :type ("RequestParamsImpl" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [689 737])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("ref" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("RequestParamsImpl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [815 844]))                                  
+                                :type ("RequestParamsImpl" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [786 845])
+                            ("RequestParamsImpl" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [885 906])
+                            ("_fields" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [920 953])
+                            ("_REfields" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [966 1001])
+                            ("_records" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1014 1048])
+                            ("_tableName" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1062 1085])
+                            ("_recordKey" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1098 1121])
+                            ("_seqid" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1134 1153])
+                            ("_notificationPayload" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1166 1199])
+                            ("_predStr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1212 1233])
+                            ("_isOrderedScan" variable (:type "bool") (reparse-symbol classsubparts) [1247 1267])
+                            ("_keyPrefixSpecified" variable (:type "bool") (reparse-symbol classsubparts) [1320 1345])
+                            ("_keyPrefix" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1358 1381])
+                            ("_startKey" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1394 1416])
+                            ("_startKeyIncluded" variable (:type "bool") (reparse-symbol classsubparts) [1429 1452])
+                            ("_endKey" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1465 1485])
+                            ("_endKeyIncluded" variable (:type "bool") (reparse-symbol classsubparts) [1498 1519])
+                            ("_isAscending" variable (:type "bool") (reparse-symbol classsubparts) [1532 1550])
+                            ("_gotStartHashKey" variable (:type "bool") (reparse-symbol classsubparts) [1742 1771])
+                            ("_startHashKey" variable (:type ("u_int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1784 1811])
+                            ("_gotEndHashKey" variable (:type "bool") (reparse-symbol classsubparts) [1837 1864])
+                            ("_endHashKey" variable (:type ("u_int32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1877 1902])
+                            ("_gotRecordLimit" variable (:type "bool") (reparse-symbol classsubparts) [1916 1944])
+                            ("_recordLimit" variable (:type "int") (reparse-symbol classsubparts) [1957 1982])
+                            ("_gotByteLimit" variable (:type "bool") (reparse-symbol classsubparts) [1996 2022])
+                            ("_byteLimit" variable (:type "int") (reparse-symbol classsubparts) [2035 2058])
+                            ("_excludedKeys" variable (:type ("std::vector" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [2065 2104])
+                            ("parseVector" function
+                               (:prototype-flag t
+                                :typemodifiers ("static")
+                                :arguments 
+                                  ( ("input" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [2142 2167])
+                                    ("result" variable
+                                       (:reference 1
+                                        :type ("std::vector" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [2204 2237]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [2118 2238]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [534 2278]))                  
+                :type "namespace")
+                nil [261 2280]))          
+    :file "RequestParamsImpl.h"
+    :pointmax 2288
+    :fsize 2287
+    :lastmodtime '(20468 62954)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("_YDHT_REQUEST_PARMS_IMPL_")
+          )
+
+    )
+   (semanticdb-table "SubreqHandleImpl.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__DHT_CLIENT_SUBREQHANDLE_IMPL_INCLUDE" variable (:constant-flag t) nil [181 219])
+            ("dht/SubreqHandle.h" include nil nil [221 250])
+            ("DHT" type
+               (:members 
+                  ( ("SubreqHandleImpl" type
+                       (:members 
+                          ( ("public" label nil (reparse-symbol classsubparts) [567 574])
+                            ("SubreqHandleImpl" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :type ("SubreqHandleImpl" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [587 606])
+                            ("SubreqHandleImpl" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("tbl" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [636 659])
+                                    ("rec" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [660 683])
+                                    ("opType" variable (:type ("SubreqHandle::OperationTypes" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [684 720]))                                  
+                                :type ("SubreqHandleImpl" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [619 721])
+                            ("SubreqHandleImpl" function
+                               (:prototype-flag t
+                                :constructor-flag t
+                                :arguments 
+                                  ( ("ref" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SubreqHandleImpl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [751 779]))                                  
+                                :type ("SubreqHandleImpl" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [734 780])
+                            ("SubreqHandleImpl" function
+                               (:prototype-flag t
+                                :destructor-flag t
+                                :type "void")
+                                (reparse-symbol classsubparts) [793 813])
+                            ("=" function
+                               (:prototype-flag t
+                                :operator-flag t
+                                :arguments 
+                                  ( ("ref" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("SubreqHandleImpl" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [854 882]))                                  
+                                :type ("SubreqHandleImpl" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [826 883])
+                            ("getTable" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [897 933])
+                            ("getRecord" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [946 983])
+                            ("getOperationType" function
+                               (:prototype-flag t
+                                :type ("SubreqHandle::OperationTypes" type (:type "class") nil nil))
+                                (reparse-symbol classsubparts) [989 1043])
+                            ("getResponseHeaders" function
+                               (:prototype-flag t
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol classsubparts) [1056 1125])
+                            ("setTable" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("table" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1153 1178]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1139 1179])
+                            ("setRecord" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("record" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [1207 1233]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1192 1234])
+                            ("setOperationType" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("operation" variable (:type ("SubreqHandle::OperationTypes" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1269 1308]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1247 1309])
+                            ("setResponseHeaders" function
+                               (:prototype-flag t
+                                :arguments 
+                                  ( ("hdrs" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("std::map" type
+                                             (:template-specifier 
+                                                ( ("std::string" type nil nil nil)
+                                                  ("std::string" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol arg-sub-list) [1346 1393]))                                  
+                                :type "void")
+                                (reparse-symbol classsubparts) [1322 1394])
+                            ("private" label nil (reparse-symbol classsubparts) [1404 1412])
+                            ("m_tbl" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1425 1443])
+                            ("m_rec" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1456 1474])
+                            ("m_op" variable (:type ("DHT::SubreqHandle::OperationTypes" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1487 1526])
+                            ("_respHdrs" variable (:type ("std::map" type
+                                 (:template-specifier 
+                                    ( ("std::string" type nil nil nil)
+                                      ("std::string" type nil nil nil))                                    
+                                  :type "class")
+                                  nil nil)) (reparse-symbol classsubparts) [1539 1584]))                          
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [534 1591]))                  
+                :type "namespace")
+                nil [317 1593]))          
+    :file "SubreqHandleImpl.h"
+    :pointmax 1601
+    :fsize 1600
+    :lastmodtime '(20468 62954)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__DHT_CLIENT_SUBREQHANDLE_IMPL_INCLUDE")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svn!trunk!dht!client!src!build_param!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

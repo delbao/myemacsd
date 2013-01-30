@@ -1,0 +1,466 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "dhtGarbageCollect.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [100 119])
+            ("iostream" include (:system-flag t) nil [120 139])
+            ("dht/StringUtils.h" include (:system-flag t) nil [140 168])
+            ("dht/LogUtils.h" include (:system-flag t) nil [169 194])
+            ("SuCode.h" include (:system-flag t) nil [195 214])
+            ("dht/DhtFlock.h" include (:system-flag t) nil [248 273])
+            ("DhtStorageCommands.h" include nil nil [275 306])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [308 328])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [330 429])
+            ("expiryTtlSec" variable
+               (:typemodifiers ("static")
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [431 464])
+            ("dhtFlock" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("DhtFlock" type (:type "class") nil nil))
+                nil [465 492])
+            ("dhtFlockGC" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("DhtFlock" type (:type "class") nil nil))
+                nil [493 522])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [542 558]))                  
+                :type "void")
+                nil [524 649])
+            ("parseArgs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [723 732])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [733 746]))                  
+                :type "bool")
+                nil [701 1444])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1506 1515])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1516 1528]))                  
+                :type "int")
+                nil [1496 3182]))          
+    :file "dhtGarbageCollect.cc"
+    :pointmax 3335
+    :fsize 3334
+    :lastmodtime '(20465 53883)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "dhtStatsDaemon.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/DhtStatsDaemon.h" include nil nil [59 90])
+            ("iostream" include (:system-flag t) nil [92 111])
+            ("dht/ProcinfoContext.h" include (:system-flag t) nil [113 145])
+            ("dht/FwCode.h" include (:system-flag t) nil [146 169])
+            ("dht/LogUtils.h" include (:system-flag t) nil [170 195])
+            ("dht/StringUtils.h" include (:system-flag t) nil [196 224])
+            ("signal.h" include (:system-flag t) nil [225 244])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [246 333])
+            ("daemonIndex" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [337 365])
+            ("lokey" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [366 388])
+            ("hikey" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [389 411])
+            ("configSection" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [412 445])
+            ("proxyGroupName" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [446 480])
+            ("commandPort" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [481 509])
+            ("PIKEY_INDEX" variable (:constant-flag t) nil [519 530])
+            ("PIKEY_LOKEY" variable (:constant-flag t) nil [549 560])
+            ("PIKEY_HIKEY" variable (:constant-flag t) nil [582 593])
+            ("PIKEY_SECTION" variable (:constant-flag t) nil [616 629])
+            ("PIKEY_GROUPNAME" variable (:constant-flag t) nil [650 665])
+            ("BLOCK_ON_SEND" variable (:constant-flag t) nil [683 696])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [721 737]))                  
+                :type "void")
+                nil [703 1002])
+            ("checkProcinfo" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1030 1039])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1040 1053]))                  
+                :type "bool")
+                nil [1004 2376])
+            ("parseArgs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2459 2468])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2469 2482]))                  
+                :type "bool")
+                nil [2437 3263])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [3274 3283])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3283 3296]))                  
+                :type "int")
+                nil [3265 5442]))          
+    :file "dhtStatsDaemon.cc"
+    :pointmax 5630
+    :fsize 5629
+    :lastmodtime '(20465 53883)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PIKEY_INDEX" . ((string "\"idx\"" 535 . 540)))
+          ("PIKEY_LOKEY" . ((string "\"lowkey\"" 565 . 573)))
+          ("PIKEY_HIKEY" . ((string "\"highkey\"" 598 . 607)))
+          ("PIKEY_SECTION" . ((string "\"section\"" 632 . 641)))
+          ("PIKEY_GROUPNAME" . ((string "\"group\"" 666 . 673)))
+          ("BLOCK_ON_SEND" . ((punctuation "-" 699 . 700) (number "1" 700 . 701)))
+          )
+
+    )
+   (semanticdb-table "dhtStorageBoot.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("SuCode.h" include (:system-flag t) nil [96 115])
+            ("iostream" include (:system-flag t) nil [116 135])
+            ("dht/StringUtils.h" include (:system-flag t) nil [136 164])
+            ("dht/LogUtils.h" include (:system-flag t) nil [187 212])
+            ("DhtStorageCommands.h" include (:system-flag t) nil [213 244])
+            ("dht/DhtFlock.h" include (:system-flag t) nil [245 270])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [272 302])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [304 399])
+            ("configFile" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [401 438])
+            ("logConfFile" variable
+               (:typemodifiers ("static")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [439 470])
+            ("dhtFlock" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("DhtFlock" type (:type "class") nil nil))
+                nil [471 497])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [517 533]))                  
+                :type "void")
+                nil [499 680])
+            ("parseArgs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [763 772])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [773 786]))                  
+                :type "void")
+                nil [741 1170])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1181 1190])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1191 1204]))                  
+                :type "int")
+                nil [1172 2914]))          
+    :file "dhtStorageBoot.cc"
+    :pointmax 3067
+    :fsize 3066
+    :lastmodtime '(20465 53884)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "dhtStorageDaemon.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [221 239])
+            ("unistd.h" include (:system-flag t) nil [240 259])
+            ("stdlib.h" include (:system-flag t) nil [260 279])
+            ("limits.h" include (:system-flag t) nil [280 299])
+            ("signal.h" include (:system-flag t) nil [300 319])
+            ("iostream" include (:system-flag t) nil [321 340])
+            ("dht/ProcinfoContext.h" include (:system-flag t) nil [342 374])
+            ("dht/FwCode.h" include (:system-flag t) nil [375 398])
+            ("dht/LogUtils.h" include (:system-flag t) nil [399 424])
+            ("dht/StringUtils.h" include (:system-flag t) nil [425 453])
+            ("dht/DhtFlock.h" include (:system-flag t) nil [476 501])
+            ("DhtStorageCommands.h" include nil nil [503 534])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [536 556])
+            ("dhtFlock" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("DhtFlock" type (:type "class") nil nil))
+                nil [558 584])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [585 684])
+            ("daemonIndex" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [686 714])
+            ("configSection" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [715 748])
+            ("commandPort" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [749 777])
+            ("PIKEY_INDEX" variable (:constant-flag t) nil [787 798])
+            ("PIKEY_SECTION" variable (:constant-flag t) nil [817 830])
+            ("BLOCK_ON_SEND" variable (:constant-flag t) nil [852 865])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [890 906]))                  
+                :type "void")
+                nil [872 1076])
+            ("checkProcinfo" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1104 1113])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1114 1127]))                  
+                :type "bool")
+                nil [1078 2012])
+            ("parseArgs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2095 2104])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2105 2118]))                  
+                :type "bool")
+                nil [2073 2649])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2660 2669])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2670 2683]))                  
+                :type "int")
+                nil [2651 5052]))          
+    :file "dhtStorageDaemon.cc"
+    :pointmax 5205
+    :fsize 5204
+    :lastmodtime '(20465 53884)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PIKEY_INDEX" . ((string "\"idx\"" 803 . 808)))
+          ("PIKEY_SECTION" . ((string "\"section\"" 833 . 842)))
+          ("BLOCK_ON_SEND" . ((punctuation "-" 868 . 869) (number "1" 869 . 870)))
+          )
+
+    )
+   (semanticdb-table "dhtTaskDaemon.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [60 79])
+            ("dht/ProcinfoContext.h" include (:system-flag t) nil [81 113])
+            ("dht/FwCode.h" include (:system-flag t) nil [114 137])
+            ("dht/LogUtils.h" include (:system-flag t) nil [138 163])
+            ("dht/StringUtils.h" include (:system-flag t) nil [164 192])
+            ("signal.h" include (:system-flag t) nil [193 212])
+            ("dht/DhtFlock.h" include (:system-flag t) nil [213 238])
+            ("DhtStorageCommands.h" include (:system-flag t) nil [239 270])
+            ("dht/typedefs.h" include (:system-flag t) nil [271 296])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [298 385])
+            ("configSection" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [389 422])
+            ("commandPort" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [423 451])
+            ("PIKEY_SECTION" variable (:constant-flag t) nil [461 474])
+            ("PROCINFO_NAME" variable (:constant-flag t) nil [646 659])
+            ("CMD_LINE_NAME" variable (:constant-flag t) nil [839 852])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [907 923]))                  
+                :type "void")
+                nil [889 1063])
+            ("checkProcinfo" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1091 1100])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1101 1114]))                  
+                :type "bool")
+                nil [1065 1828])
+            ("parseArgs" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [1911 1920])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1921 1934])
+                    ("settings" variable
+                       (:reference 1
+                        :type ("MapStrStr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1935 1956]))                  
+                :type "bool")
+                nil [1889 2763])
+            ("dhtFlock" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("DhtFlock" type (:type "class") nil nil))
+                nil [2765 2791])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2802 2811])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2811 2824]))                  
+                :type "int")
+                nil [2793 4887]))          
+    :file "dhtTaskDaemon.cc"
+    :pointmax 5075
+    :fsize 5074
+    :lastmodtime '(20465 53883)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("PROCINFO_NAME" . ((string "\"dhttaskd\"" 660 . 670)))
+          ("PIKEY_SECTION" . ((string "\"section\"" 477 . 486)))
+          ("CMD_LINE_NAME" . ((string "\"/home/y/bin/dhtCmdLineTaskDaemon\"" 853 . 887)))
+          )
+
+    )
+   (semanticdb-table "ftrSnapshotAndSend.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/LogUtils.h" include (:system-flag t) nil [60 85])
+            ("dht/StringUtils.h" include (:system-flag t) nil [86 114])
+            ("dht/DhtFlock.h" include (:system-flag t) nil [115 140])
+            ("DhtStorageCommands.h" include nil nil [141 172])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [174 273])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [284 293])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [294 306]))                  
+                :type "int")
+                nil [275 456]))          
+    :file "ftrSnapshotAndSend.cc"
+    :pointmax 614
+    :fsize 613
+    :lastmodtime '(20465 53883)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndevn2!trunk!dht!storage!mains!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

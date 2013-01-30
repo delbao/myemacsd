@@ -1,0 +1,51 @@
+;; Object control/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "control/"
+  :tables (list 
+   (semanticdb-table "if.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_PREPROCESSOR_CONTROL_IF_HPP" variable (:constant-flag t) nil [408 441])
+            ("boost/preprocessor/config/config.hpp" include (:system-flag t) nil [444 492])
+            ("boost/preprocessor/control/iif.hpp" include (:system-flag t) nil [493 539])
+            ("boost/preprocessor/logical/bool.hpp" include (:system-flag t) nil [540 587])
+            ("BOOST_PP_IF" variable (:constant-flag t) nil [678 689]))          
+    :file "if.hpp"
+    :pointmax 907
+    :fsize 906
+    :lastmodtime '(18399 46988)
+    :unmatched-syntax '((punctuation 897 . 898) (punctuation 610 . 611) (punctuation 590 . 591) (punctuation 588 . 589) (punctuation 442 . 443) (punctuation 354 . 355) (punctuation 296 . 297) (punctuation 294 . 295) (punctuation 252 . 253) (punctuation 250 . 251) (punctuation 1 . 2))
+    :lexical-table 
+        '(("BOOST_PP_IF" (spp-arg-list ("cond" "t" "f") 689 . 701) . ((symbol "BOOST_PP_IIF" 702 . 714) (semantic-list "(BOOST_PP_BOOL(cond), t, f)" 714 . 741)))
+          ("BOOST_PREPROCESSOR_CONTROL_IF_HPP")
+          )
+
+    )
+   (semanticdb-table "iif.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_PREPROCESSOR_CONTROL_IIF_HPP" variable (:constant-flag t) nil [656 690])
+            ("boost/preprocessor/config/config.hpp" include (:system-flag t) nil [693 741])
+            ("BOOST_PP_IIF" variable (:constant-flag t) nil [811 823])
+            ("BOOST_PP_IIF_I" variable (:constant-flag t) nil [1065 1079])
+            ("BOOST_PP_IIF_0" variable (:constant-flag t) nil [1261 1275])
+            ("BOOST_PP_IIF_1" variable (:constant-flag t) nil [1293 1307]))          
+    :file "iif.hpp"
+    :pointmax 1326
+    :fsize 1325
+    :lastmodtime '(18399 46988)
+    :unmatched-syntax '((punctuation 1316 . 1317) (punctuation 1250 . 1251) (punctuation 996 . 997) (punctuation 742 . 743) (punctuation 691 . 692) (punctuation 601 . 602) (punctuation 543 . 544) (punctuation 541 . 542) (punctuation 1 . 2))
+    :lexical-table 
+        '(("BOOST_PP_IIF_0" (spp-arg-list ("t" "f") 1275 . 1281) . ((symbol "f" 1282 . 1283)))
+          ("BOOST_PP_IIF_1" (spp-arg-list ("t" "f") 1307 . 1313) . ((symbol "t" 1314 . 1315)))
+          ("BOOST_PP_IIF" (spp-arg-list ("bit" "t" "f") 823 . 834) . ((symbol "BOOST_PP_IIF_I" 835 . 849) (semantic-list "(bit, t, f)" 849 . 860)))
+          ("BOOST_PREPROCESSOR_CONTROL_IIF_HPP")
+          ("BOOST_PP_IIF_I" (spp-arg-list ("bit" "t" "f") 1079 . 1090) . ((spp-symbol-merge ((symbol "BOOST_PP_IIF_" 1091 . 1104) (symbol "bit" 1108 . 1111)) 1091 . 1111) (semantic-list "(t, f)" 1111 . 1117)))
+          )
+
+    )
+   )
+  :file "!usr!include!boost!preprocessor!control!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

@@ -1,0 +1,23 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-DPIPE_NOT_EFD" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc/")) nil [1 178])
+            ("source_files" variable (:default-value ("uploadProxy.C" "bufferFilter.C" "setupSM.C")) nil [179 245])
+            ("lib_LTLIBRARIES" variable (:default-value ("libufupload_proxy.la")) nil [246 285])
+            ("libufupload_proxy_la_SOURCES" variable (:default-value ("$(source_files)")) nil [286 333])
+            ("libufupload_proxy_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver.la" "$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [333 708]))          
+    :file "Makefile.am"
+    :pointmax 709
+    :fsize 708
+    :lastmodtime '(20629 53848)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!plugin!upload_proxy!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

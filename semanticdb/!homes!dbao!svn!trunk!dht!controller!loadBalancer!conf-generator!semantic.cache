@@ -1,0 +1,212 @@
+;; Object conf-generator/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "conf-generator/"
+  :tables (list 
+   (semanticdb-table "CfLine.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [59 78])
+            ("CfLine.h" include (:system-flag t) nil [79 98])
+            ("sstream" include (:system-flag t) nil [99 117])
+            ("CF_STR_VOLATILE" variable (:constant-flag t) nil [127 142])
+            ("CF_STR_VECTOR" variable (:constant-flag t) nil [162 175])
+            ("CF_STR_STRING" variable (:constant-flag t) nil [193 206])
+            ("CF_STR_INT" variable (:constant-flag t) nil [224 234])
+            ("CF_STR_DOUBLE" variable (:constant-flag t) nil [249 262])
+            ("CF_STR_BOOL" variable (:constant-flag t) nil [280 291])
+            ("CF_STR_OPTIONAL" variable (:constant-flag t) nil [307 322])
+            ("CF_STR_EQ" variable (:constant-flag t) nil [342 351])
+            ("CF_VALUE_TRUE_STR" variable (:constant-flag t) nil [364 381])
+            ("CF_VALUE_FALSE_STR" variable (:constant-flag t) nil [397 415])
+            ("boost" using (:type ("boost" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [424 446])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [447 467])
+            ("CfLine::CFTOK_VOLATILE" variable
+               (:constant-flag t
+                :type "int")
+                nil [469 502])
+            ("CfLine::CFTOK_VECTOR" variable
+               (:constant-flag t
+                :type "int")
+                nil [503 534])
+            ("CfLine::CFTOK_DATATYPE" variable
+               (:constant-flag t
+                :type "int")
+                nil [535 568])
+            ("CfLine::CFTOK_OPTIONAL" variable
+               (:constant-flag t
+                :type "int")
+                nil [569 602])
+            ("CfLine::CFTOK_NAME" variable
+               (:constant-flag t
+                :type "int")
+                nil [603 632])
+            ("CfLine::CFTOK_EQ" variable
+               (:constant-flag t
+                :type "int")
+                nil [633 660])
+            ("CfLine::CFTOK_VALUE" variable
+               (:constant-flag t
+                :type "int")
+                nil [661 691])
+            ("CfLine" function
+               (:constructor-flag t
+                :parent "CfLine"
+                :type ("CfLine" type (:type "class") nil nil))
+                nil [693 825])
+            ("CfLine" function
+               (:destructor-flag t
+                :parent "CfLine"
+                :type "void")
+                nil [827 849])
+            ("getTokType" function
+               (:parent "CfLine"
+                :arguments 
+                  ( ("token" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [875 900]))                  
+                :type "int")
+                nil [851 1408])
+            ("dataTypeToStr" function
+               (:parent "CfLine"
+                :arguments 
+                  ( ("useConstRef" variable (:type "bool") (reparse-symbol arg-sub-list) [1445 1462]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1410 1813])
+            ("getDataType" function
+               (:parent "CfLine"
+                :arguments 
+                  ( ("type" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1847 1871]))                  
+                :type ("CfDataType" type (:type "class") nil nil))
+                nil [1815 2172])
+            ("readAndValidateValue" function
+               (:parent "CfLine"
+                :arguments 
+                  ( ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2209 2234]))                  
+                :type "bool")
+                nil [2174 3086])
+            ("parse" function
+               (:parent "CfLine"
+                :arguments 
+                  ( ("inLine" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3124 3145]))                  
+                :type ("CgCode::ResponseCode" type (:type "class") nil nil))
+                nil [3088 5668])
+            ("clear" function
+               (:parent "CfLine"
+                :type "void")
+                nil [5670 5919]))          
+    :file "CfLine.cc"
+    :pointmax 6748
+    :fsize 6747
+    :lastmodtime '(20449 26684)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CF_STR_VECTOR" . ((string "\"vector\"" 176 . 184)))
+          ("CF_STR_OPTIONAL" . ((string "\"optional\"" 323 . 333)))
+          ("CF_STR_BOOL" . ((string "\"bool\"" 292 . 298)))
+          ("CF_STR_INT" . ((string "\"int\"" 235 . 240)))
+          ("CF_STR_DOUBLE" . ((string "\"double\"" 263 . 271)))
+          ("CF_STR_EQ" . ((string "\"=\"" 352 . 355)))
+          ("CF_STR_STRING" . ((string "\"string\"" 207 . 215)))
+          ("CF_VALUE_FALSE_STR" . ((string "\"false\"" 416 . 423)))
+          ("CF_STR_VOLATILE" . ((string "\"volatile\"" 143 . 153)))
+          ("CF_VALUE_TRUE_STR" . ((string "\"true\"" 382 . 388)))
+          )
+
+    )
+   (semanticdb-table "CfSection.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [59 78])
+            ("CfSection.h" include (:system-flag t) nil [79 101])
+            ("boost/tokenizer.hpp" include (:system-flag t) nil [102 132])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [134 154])
+            ("boost" using (:type ("boost" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [155 177])
+            ("CfSection" function
+               (:constructor-flag t
+                :parent "CfSection"
+                :type ("CfSection" type (:type "class") nil nil))
+                nil [179 206])
+            ("CfSection" function
+               (:destructor-flag t
+                :parent "CfSection"
+                :type "void")
+                nil [208 236])
+            ("parse" function
+               (:parent "CfSection"
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [277 302]))                  
+                :type ("CgCode::ResponseCode" type (:type "class") nil nil))
+                nil [238 1005]))          
+    :file "CfSection.cc"
+    :pointmax 1726
+    :fsize 1725
+    :lastmodtime '(20449 26684)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "CgParser.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [59 78])
+            ("fstream" include (:system-flag t) nil [79 97])
+            ("CgParser.h" include (:system-flag t) nil [98 119])
+            ("CgCode.h" include (:system-flag t) nil [120 139])
+            ("boost/algorithm/string/trim.hpp" include (:system-flag t) nil [140 182])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [183 203])
+            ("boost" using (:type ("boost" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [204 226])
+            ("parse" function
+               (:parent "CgParser"
+                :arguments 
+                  ( ("fname" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [266 291]))                  
+                :type ("CgCode::ResponseCode" type (:type "class") nil nil))
+                nil [228 1658]))          
+    :file "CgParser.cc"
+    :pointmax 1848
+    :fsize 1847
+    :lastmodtime '(20449 26684)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svn!trunk!dht!controller!loadBalancer!conf-generator!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

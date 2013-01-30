@@ -1,0 +1,549 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "YtsBase.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("InkAPI.h" include (:system-flag t) nil [60 79])
+            ("dht/StringUtils.h" include (:system-flag t) nil [81 109])
+            ("YtsBase.hh" include nil nil [111 132])
+            ("ServerInterface.hh" include nil nil [133 162])
+            ("Utils.hh" include nil nil [163 182])
+            ("RAII.hh" include nil nil [183 201])
+            ("YtsBase" function
+               (:constructor-flag t
+                :parent "YtsBase"
+                :type ("YtsBase" type (:type "class") nil nil))
+                nil [203 271])
+            ("YtsBase" function
+               (:destructor-flag t
+                :parent "YtsBase"
+                :type "void")
+                nil [273 608])
+            ("init" function
+               (:parent "YtsBase"
+                :arguments 
+                  ( ("txn" variable (:type ("INKHttpTxn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [630 645])
+                    ("buffer" variable (:type ("INKMBuffer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [646 665])
+                    ("location" variable (:type ("INKMLoc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [666 683]))                  
+                :type "void")
+                nil [610 751])
+            ("setContext" function
+               (:parent "YtsBase"
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [779 789]))                  
+                :type "void")
+                nil [753 896])
+            ("getContext" function
+               (:pointer 1
+                :parent "YtsBase"
+                :type "void")
+                nil [898 1022])
+            ("removeHeaderValue" function
+               (:parent "YtsBase"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1057 1088]))                  
+                :type "bool")
+                nil [1024 1668])
+            ("setHeaderValue" function
+               (:parent "YtsBase"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1700 1731])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1732 1764])
+                    ("urlEncode" variable
+                       (:constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1780 1801]))                  
+                :type "bool")
+                nil [1670 2796])
+            ("setHeaderValueInsert" function
+               (:parent "YtsBase"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2834 2865])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2887 2919]))                  
+                :type "bool")
+                nil [2798 4211])
+            ("replaceHeaderValue" function
+               (:parent "YtsBase"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4247 4278])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4279 4311]))                  
+                :type "bool")
+                nil [4213 4893])
+            ("setOrReplaceHeaderValue" function
+               (:parent "YtsBase"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4934 4965])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4990 5022]))                  
+                :type "bool")
+                nil [4895 6978])
+            ("getHeaderValue" function
+               (:parent "YtsBase"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7010 7035])
+                    ("returnValue" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7036 7062]))                  
+                :type "bool")
+                nil [6980 8084])
+            ("isHeaderEqual" function
+               (:parent "YtsBase"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8116 8141])
+                    ("expectedValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8142 8176]))                  
+                :type "bool")
+                nil [8087 8623]))          
+    :file "YtsBase.cc"
+    :pointmax 8624
+    :fsize 8623
+    :lastmodtime '(20425 22361)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "YtsRequest.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("InkAPI.h" include (:system-flag t) nil [60 79])
+            ("dht/StringUtils.h" include (:system-flag t) nil [81 109])
+            ("YtsRequest.hh" include nil nil [111 135])
+            ("ServerInterface.hh" include nil nil [136 165])
+            ("Utils.hh" include nil nil [166 185])
+            ("RAII.hh" include nil nil [186 204])
+            ("YtsRequest" function
+               (:constructor-flag t
+                :parent "YtsRequest"
+                :type ("YtsRequest" type (:type "class") nil nil))
+                nil [206 235])
+            ("YtsRequest" function
+               (:destructor-flag t
+                :parent "YtsRequest"
+                :type "void")
+                nil [237 291])
+            ("init" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("txn" variable (:type ("INKHttpTxn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [400 415]))                  
+                :type "bool")
+                nil [377 1054])
+            ("setContext" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1689 1699]))                  
+                :type "void")
+                nil [1660 1733])
+            ("getContext" function
+               (:pointer 1
+                :parent "YtsRequest"
+                :type "void")
+                nil [1735 1805])
+            ("getUrlAndPath" function
+               (:parent "YtsRequest"
+                :type "bool")
+                nil [1807 2794])
+            ("getRequestUrl" function
+               (:parent "YtsRequest"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2796 2865])
+            ("getRequestPath" function
+               (:parent "YtsRequest"
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2867 2940])
+            ("getHttpQueryString" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("queryStr" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2979 3001]))                  
+                :type "bool")
+                nil [2942 3669])
+            ("validateUrl" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("pathStr" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3701 3729])
+                    ("errMsg" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3730 3751]))                  
+                :type "bool")
+                nil [3671 4205])
+            ("setReturnStatus" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("httpStatus" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4241 4261]))                  
+                :type "void")
+                nil [4207 4331])
+            ("removeHeaderValue" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4370 4401]))                  
+                :type "bool")
+                nil [4334 4456])
+            ("setHeaderValue" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4491 4522])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4523 4555])
+                    ("urlEncode" variable
+                       (:constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [4571 4592]))                  
+                :type "bool")
+                nil [4458 4668])
+            ("replaceHeaderValue" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4707 4738])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4758 4790]))                  
+                :type "bool")
+                nil [4670 4859])
+            ("getHeaderValue" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4894 4919])
+                    ("returnValue" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4920 4946]))                  
+                :type "bool")
+                nil [4861 5005])
+            ("isHeaderEqual" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5040 5065])
+                    ("expectedValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5066 5100]))                  
+                :type "bool")
+                nil [5008 5160])
+            ("setConnectTimeoutMsec" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("timeoutMsec" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5202 5223]))                  
+                :type "void")
+                nil [5162 5324])
+            ("getClientIPAddr" function
+               (:parent "YtsRequest"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [5495 5578])
+            ("isKeepAlive" function
+               (:parent "YtsRequest"
+                :type "bool")
+                nil [5580 5896])
+            ("getHeaderValuesCommaSeparated" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5946 5971])
+                    ("returnValue" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6002 6028]))                  
+                :type "bool")
+                nil [5898 7289])
+            ("setOriginUrl" function
+               (:parent "YtsRequest"
+                :arguments 
+                  ( ("protocol" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7323 7352])
+                    ("host" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7366 7391])
+                    ("port" variable (:type "int") (reparse-symbol arg-sub-list) [7405 7414])
+                    ("path" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7428 7453])
+                    ("query" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7467 7493]))                  
+                :type "bool")
+                nil [7292 9300]))          
+    :file "YtsRequest.cc"
+    :pointmax 9302
+    :fsize 9301
+    :lastmodtime '(20425 22361)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "YtsResponse.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("InkAPI.h" include (:system-flag t) nil [60 79])
+            ("dht/StringUtils.h" include (:system-flag t) nil [81 109])
+            ("YtsResponse.hh" include nil nil [111 136])
+            ("ServerInterface.hh" include nil nil [137 166])
+            ("Utils.hh" include nil nil [167 186])
+            ("RAII.hh" include nil nil [187 205])
+            ("YtsResponse" function
+               (:constructor-flag t
+                :parent "YtsResponse"
+                :type ("YtsResponse" type (:type "class") nil nil))
+                nil [207 238])
+            ("YtsResponse" function
+               (:destructor-flag t
+                :parent "YtsResponse"
+                :type "void")
+                nil [240 272])
+            ("init" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("txn" variable (:type ("INKHttpTxn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [299 314])
+                    ("serverResp" variable (:type "bool") (reparse-symbol arg-sub-list) [315 331]))                  
+                :type "bool")
+                nil [275 938])
+            ("setContext" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1137 1147]))                  
+                :type "void")
+                nil [1107 1181])
+            ("getContext" function
+               (:pointer 1
+                :parent "YtsResponse"
+                :type "void")
+                nil [1183 1254])
+            ("getHttpStatus" function
+               (:parent "YtsResponse"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [1256 1350])
+            ("setReturnStatus" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("httpStatus" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1535 1555])
+                    ("reason" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1556 1583]))                  
+                :type "void")
+                nil [1500 2037])
+            ("setErrorBody" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2071 2096]))                  
+                :type "void")
+                nil [2039 2456])
+            ("setReturnBody" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2491 2516]))                  
+                :type "void")
+                nil [2458 2715])
+            ("setFollowRedirect" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("followRedirect" variable (:type "int") (reparse-symbol arg-sub-list) [2754 2773]))                  
+                :type "void")
+                nil [2717 2968])
+            ("removeHeaderValue" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3008 3039]))                  
+                :type "bool")
+                nil [2971 3094])
+            ("setHeaderValue" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3130 3161])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3162 3194])
+                    ("urlEncode" variable
+                       (:constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [3210 3231]))                  
+                :type "bool")
+                nil [3096 3307])
+            ("setHeaderValueInsert" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3349 3380])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3402 3434]))                  
+                :type "bool")
+                nil [3309 3505])
+            ("setOrReplaceHeaderValue" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3550 3581])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3606 3638]))                  
+                :type "bool")
+                nil [3507 3712])
+            ("getHeaderValue" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3748 3773])
+                    ("returnValue" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3774 3800]))                  
+                :type "bool")
+                nil [3714 3859])
+            ("isHeaderEqual" function
+               (:parent "YtsResponse"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3895 3920])
+                    ("expectedValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3921 3955]))                  
+                :type "bool")
+                nil [3862 4015]))          
+    :file "YtsResponse.cc"
+    :pointmax 4016
+    :fsize 4015
+    :lastmodtime '(20425 22361)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!branches!releases!current!dht!router!yts_plugin!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

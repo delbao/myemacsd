@@ -1,0 +1,85 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "OrderedScanner.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("OrderedScanner.h" include nil nil [59 86])
+            ("dht/SchemaNames.h" include (:system-flag t) nil [87 115])
+            ("dht/JsonObject.h" include (:system-flag t) nil [116 143])
+            ("dht/LogUtils.h" include (:system-flag t) nil [144 169])
+            ("boost/foreach.hpp" include (:system-flag t) nil [170 198])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [200 294])
+            ("OrderedScanner" function
+               (:constructor-flag t
+                :parent "OrderedScanner"
+                :arguments 
+                  ( ("uri" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [330 353])
+                    ("requestBody" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [368 399])
+                    ("router" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [414 440])
+                    ("appid" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [455 480]))                  
+                :type ("OrderedScanner" type (:type "class") nil nil))
+                nil [298 600])
+            ("OrderedScanner" function
+               (:destructor-flag t
+                :parent "OrderedScanner"
+                :type "void")
+                nil [602 641])
+            ("hasNext" function
+               (:parent "OrderedScanner"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [643 990])
+            ("next" function
+               (:parent "OrderedScanner"
+                :type ("JsonObjectPtr" type (:type "class") nil nil))
+                nil [992 1282])
+            ("scanFromSherpa" function
+               (:parent "OrderedScanner"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1284 3661])
+            ("setHeader" function
+               (:parent "OrderedScanner"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3704 3734])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3748 3779]))                  
+                :type "void")
+                nil [3664 3823]))          
+    :file "OrderedScanner.cc"
+    :pointmax 4011
+    :fsize 4010
+    :lastmodtime '(20545 26171)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svn!trunk!tools!auditData!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

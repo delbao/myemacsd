@@ -1,0 +1,1498 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables (list 
+   (semanticdb-table "testBrokerHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("EventDispatcher.h" include nil nil [60 88])
+            ("dht/BrokerSubscriber.h" include nil nil [89 122])
+            ("dht/BrokerActionFactory.h" include nil nil [123 159])
+            ("dht/BrokerHandler.h" include nil nil [160 190])
+            ("dht/DaemonProcess.h" include nil nil [191 221])
+            ("dht/EventHandler.h" include nil nil [222 251])
+            ("dht/FwCode.h" include nil nil [252 275])
+            ("dht/LogUtils.h" include nil nil [276 301])
+            ("dht/TestBase.h" include (:system-flag t) nil [302 327])
+            ("unistd.h" include (:system-flag t) nil [328 347])
+            ("sys/types.h" include (:system-flag t) nil [348 370])
+            ("sys/socket.h" include (:system-flag t) nil [371 394])
+            ("netinet/in.h" include (:system-flag t) nil [395 418])
+            ("arpa/inet.h" include (:system-flag t) nil [419 441])
+            ("sys/wait.h" include (:system-flag t) nil [442 463])
+            ("iostream" include (:system-flag t) nil [464 483])
+            ("dht/Stats.h" include nil nil [484 506])
+            ("dht/ProcessContext.h" include nil nil [507 538])
+            ("dht/test_wrappers.h" include nil nil [539 569])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [571 591])
+            ("MsgSubscriberTester" type
+               (:superclasses 
+                  ( ("BrokerSubscriber" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [647 654])
+                    ("MsgSubscriberTester" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("factory" variable
+                               (:pointer 1
+                                :type ("BrokerActionFactory" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [679 708]))                          
+                        :type ("MsgSubscriberTester" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [659 765])
+                    ("init" function
+                       (:arguments 
+                          ( ("config" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("SectionConfig" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [801 829])
+                            ("bse" variable
+                               (:pointer 1
+                                :type ("FaultHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [860 878])
+                            ("factory" variable
+                               (:pointer 1
+                                :type ("BrokerActionFactory" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [909 938])
+                            ("daemonNumber" variable (:type "int") (reparse-symbol arg-sub-list) [969 986])
+                            ("lowKey" variable (:type "int") (reparse-symbol arg-sub-list) [1017 1028])
+                            ("highKey" variable (:type "int") (reparse-symbol arg-sub-list) [1059 1071])
+                            ("maxKey" variable (:type "int") (reparse-symbol arg-sub-list) [1102 1113]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [775 1154])
+                    ("enabled" function (:type "bool") (reparse-symbol classsubparts) [1164 1211])
+                    ("checkConnected" function (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1217 1291])
+                    ("getHealthCheckTimeMs" function (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1297 1354])
+                    ("supportsSubscriptionList" function (:type "bool") (reparse-symbol classsubparts) [1360 1420])
+                    ("open" function (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1426 1494])
+                    ("getfd" function (:type "int") (reparse-symbol classsubparts) [1500 1544])
+                    ("attachToExistingSubscription" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1599 1624]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1549 1696])
+                    ("createSubscription" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1741 1766]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1701 1838])
+                    ("recoverSubscription" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1885 1910])
+                            ("prevHost" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1956 1985]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1844 2026])
+                    ("receive" function (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2032 3550])
+                    ("subscribe" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3587 3612])
+                            ("create" variable (:type "bool") (reparse-symbol arg-sub-list) [3613 3625]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3556 3666])
+                    ("trySubscribe" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3706 3731]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3672 3772])
+                    ("hasSubscription" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3799 3824]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3778 3857])
+                    ("startDelivery" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3898 3923]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3863 3964])
+                    ("startDeliveryIfNotStarted" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4017 4042]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3970 4083])
+                    ("stopDelivery" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4123 4148]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4089 4189])
+                    ("unsubscribe" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4228 4253]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4195 4294])
+                    ("getSubscriptionList" function
+                       (:arguments 
+                          ( ("list" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4341 4371]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4300 4412])
+                    ("fd_" variable (:type "int") (reparse-symbol classsubparts) [4422 4430])
+                    ("valid_" variable (:type "bool") (reparse-symbol classsubparts) [4435 4447])
+                    ("testResult_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4452 4471])
+                    ("factory_" variable
+                       (:pointer 1
+                        :type ("BrokerActionFactory" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4476 4506]))                  
+                :type "class")
+                nil [593 4509])
+            ("BrokerActionTester" type
+               (:superclasses 
+                  ( ("BrokerAction" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [4560 4567])
+                    ("BrokerActionTester" function
+                       (:constructor-flag t
+                        :type ("BrokerActionTester" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4572 4610])
+                    ("execute" function
+                       (:arguments 
+                          ( ("request" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("BrokerMessage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4650 4680]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4620 5310])
+                    ("executed_" variable
+                       (:typemodifiers ("mutable")
+                        :type "int")
+                        (reparse-symbol classsubparts) [5320 5342])
+                    ("testRequestBody_" variable
+                       (:typemodifiers ("mutable")
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5347 5379]))                  
+                :type "class")
+                nil [4511 5382])
+            ("BrokerActionTesterFactory" type
+               (:superclasses 
+                  ( ("BrokerActionFactory" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [5447 5454])
+                    ("getAction" function
+                       (:pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("actionName" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5489 5512])
+                            ("statsName" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5513 5537]))                          
+                        :type ("BrokerAction" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5459 5716])
+                    ("handleError" function
+                       (:arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5739 5764])
+                            ("msgId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5765 5790])
+                            ("response" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5812 5842]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5722 5881])
+                    ("testAction_" variable (:type ("BrokerActionTester" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5891 5922]))                  
+                :type "class")
+                nil [5384 5925])
+            ("UnitTestBrokerHandler" type
+               (:superclasses 
+                  ( ("TestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("UnitTestBrokerHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5998 6020]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5979 6021])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6039 6051]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6026 6052])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testMyAddRemove" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6070 6086]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6057 6087])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testHandleTimer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6105 6121]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [6092 6122])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [6127 6152])
+                    ("public" label nil (reparse-symbol classsubparts) [6153 6160])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [6165 6484])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [6490 6508])
+                    ("testHandler" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [6515 6534])
+                    ("testMyAddRemove" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [6539 6562])
+                    ("testHandleTimer" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [6567 6590])
+                    ("initOnce" function
+                       (:typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [6596 7070]))                  
+                :type "class")
+                nil [5927 7074])
+            ("sendTestMessage" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [7096 7103])
+                    ("message" variable
+                       (:reference 1
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7104 7127]))                  
+                :type "int")
+                nil [7076 7352])
+            ("runClient" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [7369 7376]))                  
+                :type "void")
+                nil [7354 9701])
+            ("runDaemon" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [9718 9725]))                  
+                :type "void")
+                nil [9703 10851])
+            ("testHandler" function
+               (:parent "UnitTestBrokerHandler"
+                :type "void")
+                nil [10853 11349])
+            ("FakeDispatcher" type
+               (:superclasses 
+                  ( ("EventDispatcher" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [11399 11406])
+                    ("FakeDispatcher" function
+                       (:constructor-flag t
+                        :type ("FakeDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11411 11761])
+                    ("FakeDispatcher" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [11767 11795])
+                    ("addIOEvent" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [11841 11858])
+                            ("events" variable (:type "int") (reparse-symbol arg-sub-list) [11895 11916])
+                            ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11953 11975])
+                            ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [12012 12038])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [12086 12109])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12110 12115]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11801 12152])
+                    ("addTimer" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("time_ms" variable (:type "int") (reparse-symbol arg-sub-list) [12200 12222])
+                            ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12257 12279])
+                            ("periodic" variable (:type "bool") (reparse-symbol arg-sub-list) [12314 12338])
+                            ("" variable (:type ("true" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12339 12344])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [12387 12410])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12411 12416]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12162 12456])
+                    ("removeIOEvent" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [12507 12524])
+                            ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12572 12594]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12464 12634])
+                    ("removeIOEvent" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12687 12709]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12644 12749])
+                    ("removeTimer" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [12800 12822])
+                            ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12868 12890]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12759 12933])
+                    ("removeTimer" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12980 13002]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12939 13045])
+                    ("remove" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13091 13113]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13055 13158])
+                    ("dispatch" function
+                       (:typemodifiers ("virtual")
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13168 13247])
+                    ("addIOReturn_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13253 13287])
+                    ("addTimerReturn_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13292 13329])
+                    ("removeIOReturn_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13334 13371])
+                    ("removeTimerReturn_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13376 13416])
+                    ("removeHandlerReturn_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13421 13463])
+                    ("dispatchReturn_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13468 13505]))                  
+                :type "class")
+                nil [11351 13513])
+            ("testMyAddRemove" function
+               (:parent "UnitTestBrokerHandler"
+                :type "void")
+                nil [13515 15178])
+            ("testHandleTimer" function
+               (:parent "UnitTestBrokerHandler"
+                :type "void")
+                nil [15180 16965])
+            ("main" function (:type "int") nil [16967 17205]))          
+    :file "testBrokerHandler.cc"
+    :pointmax 17357
+    :fsize 17356
+    :lastmodtime '(20425 22397)
+    :unmatched-syntax '((punctuation 12409 . 12410) (punctuation 12337 . 12338) (punctuation 12108 . 12109) (number 12039 . 12040) (punctuation 12037 . 12038) (punctuation 6508 . 6509) (punctuation 6484 . 6485))
+    )
+   (semanticdb-table "testDaemonProcess.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("EventDispatcher.h" include nil nil [133 161])
+            ("dht/DaemonProcess.h" include nil nil [162 192])
+            ("dht/EventHandler.h" include nil nil [193 222])
+            ("dht/FwCode.h" include nil nil [223 246])
+            ("dht/LogUtils.h" include nil nil [247 272])
+            ("dht/TestBase.h" include (:system-flag t) nil [273 298])
+            ("unistd.h" include (:system-flag t) nil [299 318])
+            ("sys/types.h" include (:system-flag t) nil [319 341])
+            ("sys/wait.h" include (:system-flag t) nil [342 363])
+            ("iostream" include (:system-flag t) nil [364 383])
+            ("sys/socket.h" include (:system-flag t) nil [384 407])
+            ("TIMER_INTERVAL" variable (:constant-flag t) nil [991 1005])
+            ("IO_TIMEOUT" variable (:constant-flag t) nil [1023 1033])
+            ("IO_INTERVAL" variable (:constant-flag t) nil [1055 1066])
+            ("LAST_MSG_SLEEP" variable (:constant-flag t) nil [1087 1101])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1112 1132])
+            ("EventHandlerTester" type
+               (:superclasses 
+                  ( ("EventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1183 1190])
+                    ("EventHandlerTester" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1214 1221])
+                            ("ioTimeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [1245 1262])
+                            ("timer_ms" variable (:type "int") (reparse-symbol arg-sub-list) [1286 1299]))                          
+                        :type ("EventHandlerTester" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1195 1499])
+                    ("init" function
+                       (:arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1535 1563]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1509 1830])
+                    ("handleEvent" function
+                       (:arguments 
+                          ( ("events" variable (:type "int") (reparse-symbol arg-sub-list) [1873 1897])
+                            ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1935 1963])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2001 2026]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1840 2681])
+                    ("handleTimer" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2732 2760])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2806 2831]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2691 2942])
+                    ("events_" variable (:type "int") (reparse-symbol classsubparts) [2952 2964])
+                    ("dispatcher_" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2969 2998])
+                    ("context_" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [3003 3018])
+                    ("exitCode_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3023 3054])
+                    ("fd_" variable (:type "int") (reparse-symbol classsubparts) [3059 3067])
+                    ("ioTimeout_ms_" variable (:type "int") (reparse-symbol classsubparts) [3072 3090])
+                    ("timer_ms_" variable (:type "int") (reparse-symbol classsubparts) [3095 3109])
+                    ("buffer_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3114 3129])
+                    ("EventHandler::ev_context_map_t" variable (:type "int") (reparse-symbol classsubparts) [3141 3172])
+                    ("EventHandler::evContexts_" variable (:type "int") (reparse-symbol classsubparts) [3183 3209])
+                    ("EventHandler::timerContexts_" variable (:type "int") (reparse-symbol classsubparts) [3220 3249]))                  
+                :type "class")
+                nil [1134 3252])
+            ("UnitTestDaemonProcess" type
+               (:superclasses 
+                  ( ("TestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("UnitTestDaemonProcess" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3325 3347]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3306 3348])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testInit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3366 3375]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3353 3376])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testAddHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3394 3409]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3381 3410])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3428 3434]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3415 3435])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3453 3459]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3440 3460])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3465 3490])
+                    ("public" label nil (reparse-symbol classsubparts) [3491 3498])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [3503 3518])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [3524 3542])
+                    ("testInit" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3549 3565])
+                    ("testAddHandler" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3570 3592])
+                    ("test1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3598 3611])
+                    ("test2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3616 3629]))                  
+                :type "class")
+                nil [3254 3632])
+            ("testInit" function
+               (:parent "UnitTestDaemonProcess"
+                :type "void")
+                nil [3634 3842])
+            ("testAddHandler" function
+               (:parent "UnitTestDaemonProcess"
+                :type "void")
+                nil [3844 4343])
+            ("runClient" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [4360 4367])
+                    ("timeoutLast" variable (:type "bool") (reparse-symbol arg-sub-list) [4368 4385]))                  
+                :type "void")
+                nil [4345 4923])
+            ("runDispatcher" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [4944 4951])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [4952 4967])
+                    ("expect" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4968 4982]))                  
+                :type "void")
+                nil [4925 5591])
+            ("test1" function
+               (:parent "UnitTestDaemonProcess"
+                :type "void")
+                nil [5593 6174])
+            ("test2" function
+               (:parent "UnitTestDaemonProcess"
+                :type "void")
+                nil [6176 6772])
+            ("main" function (:type "int") nil [6774 6912]))          
+    :file "testDaemonProcess.cc"
+    :pointmax 7064
+    :fsize 7063
+    :lastmodtime '(20425 22397)
+    :unmatched-syntax '((punctuation 3542 . 3543) (punctuation 3518 . 3519) (USING 3214 . 3219) (USING 3177 . 3182) (USING 3135 . 3140))
+    :lexical-table 
+        '(("TIMER_INTERVAL" . ((number "275" 1011 . 1014)))
+          ("IO_INTERVAL" . ((number "300" 1075 . 1078)))
+          ("IO_TIMEOUT" . ((number "400" 1043 . 1046)))
+          ("LAST_MSG_SLEEP" . ((number "100" 1107 . 1110)))
+          )
+
+    )
+   (semanticdb-table "testDaemonRpcHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("EventDispatcher.h" include nil nil [60 88])
+            ("dht/FwCode.h" include (:system-flag t) nil [89 112])
+            ("dht/DaemonRpcServer.h" include nil nil [113 145])
+            ("dht/DaemonRpcActionFactory.h" include nil nil [146 185])
+            ("dht/DaemonRpcHandler.h" include nil nil [186 219])
+            ("dht/DaemonProcess.h" include nil nil [220 250])
+            ("dht/EventHandler.h" include nil nil [251 280])
+            ("dht/FwCode.h" include nil nil [281 304])
+            ("dht/LogStorageMultiProcess.h" include nil nil [305 344])
+            ("dht/LogUtils.h" include nil nil [345 370])
+            ("dht/TestBase.h" include (:system-flag t) nil [371 396])
+            ("EventImpl.h" include nil nil [397 419])
+            ("unistd.h" include (:system-flag t) nil [420 439])
+            ("sys/types.h" include (:system-flag t) nil [440 462])
+            ("sys/socket.h" include (:system-flag t) nil [463 486])
+            ("netinet/in.h" include (:system-flag t) nil [487 510])
+            ("arpa/inet.h" include (:system-flag t) nil [511 533])
+            ("sys/wait.h" include (:system-flag t) nil [534 555])
+            ("iostream" include (:system-flag t) nil [556 575])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [577 597])
+            ("TestEventImpl" type
+               (:superclasses 
+                  ( ("EventImpl" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [640 647])
+                    ("init" function (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [652 716])
+                    ("cleanup" function (:type "void") (reparse-symbol classsubparts) [722 744])
+                    ("getEventContext" function
+                       (:pointer 1
+                        :type ("EventContext" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [750 811])
+                    ("releaseEventContext" function
+                       (:arguments 
+                          ( ("evtContext" variable
+                               (:pointer 1
+                                :type ("EventContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [842 868]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [817 876])
+                    ("addIOEvent" function
+                       (:arguments 
+                          ( ("evtContext" variable
+                               (:pointer 1
+                                :type ("EventContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [914 939])
+                            ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [940 947])
+                            ("events" variable (:type "int") (reparse-symbol arg-sub-list) [948 959])
+                            ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [960 975]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [882 1012])
+                    ("addTimerEvent" function
+                       (:arguments 
+                          ( ("evtContext" variable
+                               (:pointer 1
+                                :type ("EventContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1053 1078])
+                            ("ms" variable (:type "int") (reparse-symbol arg-sub-list) [1079 1086])
+                            ("periodic" variable (:type "bool") (reparse-symbol arg-sub-list) [1087 1101]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1018 1138])
+                    ("removeIOEvent" function
+                       (:arguments 
+                          ( ("eventContext" variable
+                               (:pointer 1
+                                :type ("EventContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1179 1206]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1144 1243])
+                    ("removeTimerEvent" function
+                       (:arguments 
+                          ( ("eventContext" variable
+                               (:pointer 1
+                                :type ("EventContext" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1287 1314]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1249 1351])
+                    ("dispatch" function (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1357 1425]))                  
+                :type "class")
+                nil [599 1428])
+            ("TestEventDispatcher" type
+               (:superclasses 
+                  ( ("EventDispatcher" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1483 1490])
+                    ("TestEventDispatcher" function
+                       (:constructor-flag t
+                        :type ("TestEventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1495 1642])
+                    ("TestEventDispatcher" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1647 1681])
+                    ("addIOEvent" function
+                       (:arguments 
+                          ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1719 1726])
+                            ("events" variable (:type "int") (reparse-symbol arg-sub-list) [1727 1738])
+                            ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1739 1762])
+                            ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [1763 1778])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1779 1793]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1687 1845])
+                    ("addTimer" function
+                       (:arguments 
+                          ( ("time_ms" variable (:type "int") (reparse-symbol arg-sub-list) [1881 1893])
+                            ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1894 1916])
+                            ("periodic" variable (:type "bool") (reparse-symbol arg-sub-list) [1917 1931])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1932 1945]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1851 1982])
+                    ("removeIOEvent" function
+                       (:arguments 
+                          ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [2023 2030])
+                            ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2031 2053]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1988 2090])
+                    ("removeIOEvent" function
+                       (:arguments 
+                          ( ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2131 2153]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2096 2190])
+                    ("removeTimer" function
+                       (:arguments 
+                          ( ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2233 2246])
+                            ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2247 2269]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2200 2306])
+                    ("remove" function
+                       (:arguments 
+                          ( ("handler" variable
+                               (:reference 1
+                                :type ("EventHandler" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2340 2362]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2312 2399])
+                    ("dispatch" function (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2405 2473])
+                    ("reset" function (:type "void") (reparse-symbol classsubparts) [2478 2516])
+                    ("fd_" variable (:type "int") (reparse-symbol classsubparts) [2522 2530])
+                    ("addIORet_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2535 2566]))                  
+                :type "class")
+                nil [1430 2569])
+            ("TestRpcAction" type
+               (:superclasses 
+                  ( ("DaemonRpcAction" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2622 2629])
+                    ("TestRpcAction" function
+                       (:constructor-flag t
+                        :type ("TestRpcAction" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2638 2753])
+                    ("execute" function
+                       (:arguments 
+                          ( ("request" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2793 2817])
+                            ("response" variable
+                               (:reference 1
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2834 2853]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2763 3042])
+                    ("executed_" variable
+                       (:typemodifiers ("mutable")
+                        :type "int")
+                        (reparse-symbol classsubparts) [3052 3074])
+                    ("execRc_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3083 3112])
+                    ("rspCode_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3121 3151]))                  
+                :type "class")
+                nil [2571 3154])
+            ("TestDaemonRpcActionFactory" type
+               (:superclasses 
+                  ( ("DaemonRpcActionFactory" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3227 3234])
+                    ("TestDaemonRpcActionFactory" function
+                       (:constructor-flag t
+                        :type ("TestDaemonRpcActionFactory" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3243 3312])
+                    ("getAction" function
+                       (:pointer 1
+                        :constant-flag t
+                        :arguments 
+                          ( ("actionName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3354 3384]))                          
+                        :type ("DaemonRpcAction" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3321 3514])
+                    ("testAction_" variable (:type ("TestRpcAction" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3524 3550])
+                    ("retNull_" variable (:type "bool") (reparse-symbol classsubparts) [3559 3573]))                  
+                :type "class")
+                nil [3156 3576])
+            ("TestRpcServer" type
+               (:superclasses 
+                  ( ("DaemonRpcServer" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3625 3632])
+                    ("TestRpcServer" function
+                       (:constructor-flag t
+                        :type ("TestRpcServer" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3637 3808])
+                    ("init" function
+                       (:arguments 
+                          ( ("daemonId" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [3839 3863]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3813 3900])
+                    ("recvRequest" function
+                       (:arguments 
+                          ( ("message" variable
+                               (:reference 1
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3938 3955]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3905 3990])
+                    ("sendResponse" function
+                       (:arguments 
+                          ( ("message" variable
+                               (:reference 1
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4029 4046]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3995 4272])
+                    ("getfd" function (:type "int") (reparse-symbol classsubparts) [4277 4316])
+                    ("fd_" variable (:type "int") (reparse-symbol classsubparts) [4322 4330])
+                    ("recvReqRc_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4335 4367])
+                    ("sendRspRc_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4372 4404])
+                    ("rspMsgCode_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4409 4442])
+                    ("errStack_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4447 4464]))                  
+                :type "class")
+                nil [3578 4467])
+            ("TestDaemonRpcHandler" type
+               (:superclasses 
+                  ( ("TestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestDaemonRpcHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4539 4560]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4520 4561])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testInitHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4579 4595]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4566 4596])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testInit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4614 4623]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4601 4624])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testHandleEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4642 4658]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4629 4659])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testExecute" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4677 4689]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4664 4690])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [4695 4720])
+                    ("public" label nil (reparse-symbol classsubparts) [4721 4728])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [4733 4748])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [4754 4772])
+                    ("testInitHandler" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4779 4802])
+                    ("testInit" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4807 4823])
+                    ("testHandleEvent" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4828 4851])
+                    ("testExecute" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4856 4875]))                  
+                :type "class")
+                nil [4469 4878])
+            ("testInitHandler" function
+               (:parent "TestDaemonRpcHandler"
+                :type "void")
+                nil [4880 5500])
+            ("testInit" function
+               (:parent "TestDaemonRpcHandler"
+                :type "void")
+                nil [5502 6324])
+            ("testHandleEvent" function
+               (:parent "TestDaemonRpcHandler"
+                :type "void")
+                nil [6326 7601])
+            ("testExecute" function
+               (:parent "TestDaemonRpcHandler"
+                :type "void")
+                nil [7603 9469])
+            ("main" function (:type "int") nil [9471 9610]))          
+    :file "testDaemonRpcHandler.cc"
+    :pointmax 9762
+    :fsize 9761
+    :lastmodtime '(20425 22397)
+    :unmatched-syntax '((punctuation 4772 . 4773) (punctuation 4748 . 4749))
+    )
+   (semanticdb-table "testEventDispatcher.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("EventDispatcher.h" include nil nil [135 163])
+            ("dht/EventHandler.h" include nil nil [164 193])
+            ("dht/FwCode.h" include nil nil [194 217])
+            ("dht/LogUtils.h" include nil nil [218 243])
+            ("dht/TestBase.h" include (:system-flag t) nil [244 269])
+            ("unistd.h" include (:system-flag t) nil [270 289])
+            ("sys/types.h" include (:system-flag t) nil [290 312])
+            ("sys/wait.h" include (:system-flag t) nil [313 334])
+            ("iostream" include (:system-flag t) nil [335 354])
+            ("sys/socket.h" include (:system-flag t) nil [355 378])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [379 399])
+            ("TIMER_INTERVAL" variable (:constant-flag t) nil [982 996])
+            ("IO_TIMEOUT" variable (:constant-flag t) nil [1014 1024])
+            ("IO_INTERVAL" variable (:constant-flag t) nil [1046 1057])
+            ("LAST_MSG_SLEEP" variable (:constant-flag t) nil [1078 1092])
+            ("EventHandlerTester" type
+               (:superclasses 
+                  ( ("EventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1153 1160])
+                    ("EventHandlerTester" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1184 1192]))                          
+                        :type ("EventHandlerTester" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1165 1283])
+                    ("init" function
+                       (:arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1319 1347]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1293 1376])
+                    ("handleEvent" function
+                       (:arguments 
+                          ( ("events" variable (:type "int") (reparse-symbol arg-sub-list) [1419 1443])
+                            ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1481 1509])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1547 1572]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1386 2227])
+                    ("handleTimer" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2278 2306])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2352 2377]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2237 2488])
+                    ("events_" variable (:type "int") (reparse-symbol classsubparts) [2498 2510])
+                    ("dispatcher_" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2515 2544])
+                    ("context_" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2549 2564])
+                    ("exitCode_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2569 2600])
+                    ("fd_" variable (:type "int") (reparse-symbol classsubparts) [2605 2613])
+                    ("buffer_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2618 2633])
+                    ("EventHandler::ev_context_map_t" variable (:type "int") (reparse-symbol classsubparts) [2645 2676])
+                    ("EventHandler::evContexts_" variable (:type "int") (reparse-symbol classsubparts) [2687 2713])
+                    ("EventHandler::timerContexts_" variable (:type "int") (reparse-symbol classsubparts) [2724 2753]))                  
+                :type "class")
+                nil [1104 2756])
+            ("UnitTestEventDispatcher" type
+               (:superclasses 
+                  ( ("TestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("UnitTestEventDispatcher" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2831 2855]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2812 2856])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testInit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2874 2883]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2861 2884])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testAddIOEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2902 2917]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2889 2918])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testAddTimerEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2936 2954]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2923 2955])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testDispatch" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2973 2986]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2960 2987])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3005 3011]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2992 3012])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3030 3036]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3017 3037])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [3042 3067])
+                    ("public" label nil (reparse-symbol classsubparts) [3068 3075])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [3080 3095])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [3101 3119])
+                    ("testInit" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3126 3142])
+                    ("testAddIOEvent" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3147 3169])
+                    ("testAddTimerEvent" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3174 3199])
+                    ("testDispatch" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3204 3224])
+                    ("test1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3230 3243])
+                    ("test2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3248 3261]))                  
+                :type "class")
+                nil [2758 3264])
+            ("testInit" function
+               (:parent "UnitTestEventDispatcher"
+                :type "void")
+                nil [3266 3494])
+            ("testAddIOEvent" function
+               (:parent "UnitTestEventDispatcher"
+                :type "void")
+                nil [3496 4953])
+            ("testAddTimerEvent" function
+               (:parent "UnitTestEventDispatcher"
+                :type "void")
+                nil [4955 6206])
+            ("testDispatch" function
+               (:parent "UnitTestEventDispatcher"
+                :type "void")
+                nil [6208 6510])
+            ("runClient" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [6527 6534])
+                    ("timeoutLast" variable (:type "bool") (reparse-symbol arg-sub-list) [6535 6552]))                  
+                :type "void")
+                nil [6512 7052])
+            ("runDispatcher" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [7073 7080])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [7081 7096])
+                    ("expect" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7097 7111]))                  
+                :type "void")
+                nil [7054 7909])
+            ("test1" function
+               (:parent "UnitTestEventDispatcher"
+                :type "void")
+                nil [7911 8494])
+            ("test2" function
+               (:parent "UnitTestEventDispatcher"
+                :type "void")
+                nil [8496 9094])
+            ("main" function (:type "int") nil [9096 9238]))          
+    :file "testEventDispatcher.cc"
+    :pointmax 9390
+    :fsize 9389
+    :lastmodtime '(20425 22397)
+    :unmatched-syntax '((punctuation 3119 . 3120) (punctuation 3095 . 3096) (USING 2718 . 2723) (USING 2681 . 2686) (USING 2639 . 2644) (number 1194 . 1195) (punctuation 1193 . 1194) (punctuation 1191 . 1192))
+    :lexical-table 
+        '(("TIMER_INTERVAL" . ((number "275" 1002 . 1005)))
+          ("IO_INTERVAL" . ((number "300" 1066 . 1069)))
+          ("IO_TIMEOUT" . ((number "400" 1034 . 1037)))
+          ("LAST_MSG_SLEEP" . ((number "100" 1098 . 1101)))
+          )
+
+    )
+   (semanticdb-table "testLibEventImpl.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LibEventImplTester.h" include nil nil [132 163])
+            ("EventDispatcher.h" include nil nil [164 192])
+            ("dht/FwCode.h" include nil nil [193 216])
+            ("dht/EventHandler.h" include nil nil [217 246])
+            ("dht/LogUtils.h" include nil nil [247 272])
+            ("dht/TestBase.h" include (:system-flag t) nil [273 298])
+            ("unistd.h" include (:system-flag t) nil [299 318])
+            ("sys/types.h" include (:system-flag t) nil [319 341])
+            ("sys/wait.h" include (:system-flag t) nil [342 363])
+            ("iostream" include (:system-flag t) nil [364 383])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [384 404])
+            ("sys/socket.h" include (:system-flag t) nil [405 428])
+            ("TIMER_INTERVAL" variable (:constant-flag t) nil [1012 1026])
+            ("IO_TIMEOUT" variable (:constant-flag t) nil [1044 1054])
+            ("IO_INTERVAL" variable (:constant-flag t) nil [1076 1087])
+            ("LAST_MSG_SLEEP" variable (:constant-flag t) nil [1108 1122])
+            ("TestHandler" type
+               (:superclasses 
+                  ( ("EventHandler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1175 1182])
+                    ("TestHandler" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1199 1207]))                          
+                        :type ("TestHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1187 1298])
+                    ("init" function
+                       (:arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1334 1362]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1308 1391])
+                    ("handleEvent" function
+                       (:arguments 
+                          ( ("events" variable (:type "int") (reparse-symbol arg-sub-list) [1434 1458])
+                            ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1496 1524])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [1562 1587]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1401 2234])
+                    ("handleTimer" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("dispatcher" variable
+                               (:pointer 1
+                                :type ("EventDispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2285 2313])
+                            ("context" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [2359 2384]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2244 2487])
+                    ("events_" variable (:type "int") (reparse-symbol classsubparts) [2497 2509])
+                    ("dispatcher_" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2514 2543])
+                    ("context_" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [2548 2563])
+                    ("exitCode_" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2568 2599])
+                    ("fd_" variable (:type "int") (reparse-symbol classsubparts) [2604 2612])
+                    ("buffer_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2617 2632]))                  
+                :type "class")
+                nil [1133 2635])
+            ("UnitTestLibEventImpl" type
+               (:superclasses 
+                  ( ("TestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("UnitTestLibEventImpl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2707 2728]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2688 2729])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testInit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2747 2756]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2734 2757])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testEvContext" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2775 2789]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2762 2790])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testAddIOEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2808 2823]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2795 2824])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testAddTimerEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2842 2860]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2829 2861])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testDispatch" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2879 2892]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2866 2893])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testEvCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2911 2926]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2898 2927])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2945 2951]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2932 2952])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("test2" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2970 2976]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [2957 2977])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [2982 3007])
+                    ("public" label nil (reparse-symbol classsubparts) [3008 3015])
+                    ("setUp" function (:type "void") (reparse-symbol classsubparts) [3020 3035])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [3041 3059])
+                    ("testInit" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3066 3082])
+                    ("testEvContext" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3087 3108])
+                    ("testAddIOEvent" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3113 3135])
+                    ("testAddTimerEvent" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3140 3165])
+                    ("testDispatch" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3170 3190])
+                    ("testEvCallback" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3195 3217])
+                    ("test1" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3222 3235])
+                    ("test2" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3240 3253]))                  
+                :type "class")
+                nil [2637 3256])
+            ("testInit" function
+               (:parent "UnitTestLibEventImpl"
+                :type "void")
+                nil [3258 3643])
+            ("testEvContext" function
+               (:parent "UnitTestLibEventImpl"
+                :type "void")
+                nil [3645 4270])
+            ("testAddIOEvent" function
+               (:parent "UnitTestLibEventImpl"
+                :type "void")
+                nil [4272 5995])
+            ("testAddTimerEvent" function
+               (:parent "UnitTestLibEventImpl"
+                :type "void")
+                nil [5997 7567])
+            ("testDispatch" function
+               (:parent "UnitTestLibEventImpl"
+                :type "void")
+                nil [7569 7841])
+            ("testEvCallback" function
+               (:parent "UnitTestLibEventImpl"
+                :type "void")
+                nil [7843 8919])
+            ("runClient" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [8936 8943])
+                    ("timeoutLast" variable (:type "bool") (reparse-symbol arg-sub-list) [8944 8961]))                  
+                :type "void")
+                nil [8921 9461])
+            ("runDispatcher" function
+               (:arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [9482 9489])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [9490 9505])
+                    ("expect" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9506 9520]))                  
+                :type "void")
+                nil [9463 11047])
+            ("test1" function
+               (:parent "UnitTestLibEventImpl"
+                :type "void")
+                nil [11049 11629])
+            ("test2" function
+               (:parent "UnitTestLibEventImpl"
+                :type "void")
+                nil [11631 12286])
+            ("main" function (:type "int") nil [12288 12424]))          
+    :file "testLibEventImpl.cc"
+    :pointmax 12576
+    :fsize 12575
+    :lastmodtime '(20425 22397)
+    :unmatched-syntax '((punctuation 3059 . 3060) (punctuation 3035 . 3036) (number 1209 . 1210) (punctuation 1208 . 1209) (punctuation 1206 . 1207))
+    :lexical-table 
+        '(("TIMER_INTERVAL" . ((number "275" 1032 . 1035)))
+          ("IO_INTERVAL" . ((number "300" 1096 . 1099)))
+          ("IO_TIMEOUT" . ((number "400" 1064 . 1067)))
+          ("LAST_MSG_SLEEP" . ((number "100" 1128 . 1131)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndev!branches!releases!current!dht!framework!daemon!unit_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

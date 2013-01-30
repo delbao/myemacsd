@@ -1,0 +1,74 @@
+;; Object stateserver/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "stateserver/"
+  :tables (list 
+   (semanticdb-table "UFPlugin.C"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("uf/stateserver/UFPlugin.H" include (:system-flag t) nil [1 37])
+            ("uf/stateserver/UFPluginMap.H" include (:system-flag t) nil [38 77])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [78 98])
+            ("UFPlugin" function
+               (:constructor-flag t
+                :parent "UFPlugin"
+                :type ("UFPlugin" type (:type "class") nil nil))
+                nil [100 126])
+            ("UFPlugin" function
+               (:destructor-flag t
+                :parent "UFPlugin"
+                :type "void")
+                nil [129 155])
+            ("registerPlugin" function
+               (:parent "UFPlugin"
+                :arguments 
+                  ( ("state" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [191 216])
+                    ("ufp" variable
+                       (:pointer 1
+                        :type ("UFPlugin" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [217 231]))                  
+                :type ("ssize_t" type (:type "class") nil nil))
+                nil [158 306])
+            ("init" function
+               (:parent "UFPlugin"
+                :type "void")
+                nil [308 334])
+            ("postThreadInit" function
+               (:parent "UFPlugin"
+                :type "void")
+                nil [336 372]))          
+    :file "UFPlugin.C"
+    :pointmax 373
+    :fsize 372
+    :lastmodtime '(20629 53861)
+    :unmatched-syntax '((punctuation 155 . 156) (punctuation 126 . 127))
+    )
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I/usr/include/openssl" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/ufcore/src")) nil [1 215])
+            ("lib_LTLIBRARIES" variable (:default-value ("libufstateserver.la")) nil [216 254])
+            ("bin_PROGRAMS" variable (:default-value ("UFStateServer")) nil [254 283])
+            ("libufstateserver_source_files" variable (:default-value ("UFFetchPageImpl.C" "UFFilterManager.C" "UFHttpStats.C" "UFSM.C" "UFSMImpl.C" "UFSMImpl.H" "UFHTTPTxnObject.C" "UFFetchPage.C" "UFFetchTask.C" "UFTask.C" "UFTaskResult.C" "UFTaskResultImpl.H" "UFTaskResultImpl.C" "UFStateRunner.C" "UFStateServerMain.C" "UFHTTPTxnObjectImpl.H" "LoadPlugin.C" "UFPlugin.C" "UFPluginMap.C" "UFPluginData.C" "UFPluginDataImpl.C" "UFPluginDataImpl.H" "UFFilterPlugin.C" "UFStatePlugin.C" "UFHeaderPlugin.C" "StatusDataSource.C" "UFIODataSource.C")) nil [284 846])
+            ("libufstateserver_la_SOURCES" variable (:default-value ("$(libufstateserver_source_files)")) nil [847 910])
+            ("libufstateserver_la_LIBADD" variable (:default-value ("$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/http/component/src/conf/libufconf.la")) nil [910 1159])
+            ("UFStateServer_SOURCES" variable (:default-value ("UFStateServer.C")) nil [1160 1204])
+            ("UFStateServer_LDFLAGS" variable (:default-value ("-lcares" "-lpcre" "-ldl" "-lssl" "-lcrypto" "$(AM_LDFLAGS)")) nil [1205 1302])
+            ("UFStateServer_LDADD" variable (:default-value ("libufstateserver.la" "$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [1303 1632]))          
+    :file "Makefile.am"
+    :pointmax 1632
+    :fsize 1631
+    :lastmodtime '(20629 53861)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!state_server!src!stateserver!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

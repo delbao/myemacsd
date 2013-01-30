@@ -1,0 +1,885 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("SRCTOP" variable (:default-value ("$(CURDIR)/../..")) nil [1 27])
+            ("$(SRCTOP)/build/Makefile.defs" include nil nil [28 66])
+            ("LIB_NAME" variable (:default-value ("DhtRouter")) nil [67 95])
+            ("SHLIB_VERSION" variable (:default-value ("1")) nil [95 115])
+            ("AUTO_CC" variable (:default-value ("RouterSubsystems.cc")) nil [116 154])
+            ("AUTO_HEADERS" variable (:default-value ("RouterSubsystems.h")) nil [154 191])
+            ("CXXSRC" variable (:default-value ("$(filter-out IndexedScanParameters.cc RecordMemory.cc, $(wildcard *.cc) $(AUTO_CC))")) nil [191 285])
+            ("LCLEAN" variable (:default-value ("*~" "dht_router_util.1")) nil [286 327])
+            ("WARN" variable (:default-value ("-Werror" "-Wall")) nil [327 360])
+            ("LDEF" variable (:default-value ("-D_GNU_SOURCE" "-D_FILE_OFFSET_BITS=64" "-DNOMETRICS")) nil [361 429])
+            ("FW_INCLUDES" variable (:default-value ("-I$(SRCTOP)/framework/daemon/include" "-I$(SRCTOP)/framework/base/include" "-I$(SRCTOP)/framework/zookeeper/mt/include")) nil [430 609])
+            ("LINC" variable (:default-value ("-I/home/y/include" "-I/usr/local/include" "$(FW_INCLUDES)")) nil [609 682])
+            ("LINC" variable (:default-value ("-I/home/y/include/yicu")) nil [709 751])
+            ("FW_LIBS_LOC" variable (:default-value ("$(SRCTOP)/framework/base/src")) nil [829 877])
+            ("FW_LIBS_LOC" variable (:default-value ("$(SRCTOP)/framework/zookeeper/mt/src")) nil [877 933])
+            ("LRUN_PATH" variable (:default-value ("$(addsuffix /$(OBJDIR),$(FW_LIBS_LOC))")) nil [934 992])
+            ("LLDLIBS" variable (:default-value ("$(addprefix -L,$(FW_LIBS_LOC))")) nil [993 1036])
+            ("LLDLIBS" variable (:default-value ("-L/home/y/lib")) nil [1036 1070])
+            ("LLDLIBS" variable (:default-value ("-lcurl")) nil [1070 1097])
+            ("LLDLIBS" variable (:default-value ("-ldhtFrameworkBase")) nil [1097 1136])
+            ("LLDLIBS" variable (:default-value ("-ldhtZkMT")) nil [1136 1166])
+            ("LLDLIBS" variable (:default-value ("-ldhtZkMTCore")) nil [1166 1200])
+            ("LLDLIBS" variable (:default-value ("-llog4cpp_y")) nil [1200 1232])
+            ("LLDLIBS" variable (:default-value ("-lmdbm")) nil [1232 1259])
+            ("LLDLIBS" variable (:default-value ("-lsmgscli")) nil [1259 1289])
+            ("LLDLIBS" variable (:default-value ("-lyaxx")) nil [1289 1316])
+            ("LLDLIBS" variable (:default-value ("-lyca")) nil [1316 1342])
+            ("LLDLIBS" variable (:default-value ("-lyconfig")) nil [1342 1372])
+            ("LLDLIBS" variable (:default-value ("-lycore")) nil [1372 1400])
+            ("LLDLIBS" variable (:default-value ("-lycore++")) nil [1400 1430])
+            ("LLDLIBS" variable (:default-value ("-lymonsb")) nil [1430 1459])
+            ("LLDLIBS" variable (:default-value ("-lmonmetrics")) nil [1459 1491])
+            ("LLDLIBS" variable (:default-value ("-lysys_p")) nil [1491 1519])
+            ("LRUN_PATH" variable (:default-value ("/home/y/lib" "/usr/local/lib")) nil [1520 1566])
+            ("CXXFLAGS" variable (:default-value ("-O0" "-g" "-DUNIT_TEST")) nil [1583 1614])
+            ("OPTFLAG" variable (:default-value ("-ggdb" "-dD")) nil [1673 1693])
+            ("OPTFLAG" variable (:default-value ("-O2" "-g")) nil [1820 1838])
+            ("$(SRCTOP)/build/Makefile.rules" include nil nil [1846 1885])
+            ("$(OBJS)" function (:arguments ("$(AUTO_CC)")) nil [1886 1906])
+            ("$(AUTO_CC)" function (:arguments ("../unit_test/conf/dht_router/log4cpp.conf")) nil [1906 1988])
+            ("all" function (:arguments ("dht_router_util.1")) nil [1989 2013])
+            ("dht_router_util.1" function (:arguments ("dht_router_util")) nil [2014 2087])
+            ("clean" function (:arguments ("cleangencode")) nil [2088 2110])
+            ("cleangencode" function nil nil [2111 2160]))          
+    :file "Makefile"
+    :pointmax 2160
+    :fsize 2159
+    :lastmodtime '(20550 21238)
+    :unmatched-syntax '((shell-command 2127 . 2159) (bol 2126 . 2126))
+    )
+   (semanticdb-table "RegionStore.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("RegionStore.hh" include nil nil [65 90])
+            ("sstream" include (:system-flag t) nil [91 109])
+            ("assert.h" include (:system-flag t) nil [129 148])
+            ("algorithm" include (:system-flag t) nil [149 169])
+            ("dht/typedefs.h" include nil nil [194 219])
+            ("dht/SchemaNames.h" include nil nil [235 263])
+            ("LogUtilsRouter.hh" include nil nil [295 323])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [325 345])
+            ("ConstMappingIterator" variable (:type ("const_iterator" type (:type "class") nil nil)) nil [427 463])
+            ("RegionStore" function
+               (:constructor-flag t
+                :parent "RegionStore"
+                :type ("RegionStore" type (:type "class") nil nil))
+                nil [715 765])
+            ("RegionStore" function
+               (:destructor-flag t
+                :parent "RegionStore"
+                :type "void")
+                nil [767 799])
+            ("DeleteSecondArg" function
+               (:destructor-flag t
+                :parent "RegionStore::DeleteSecondArg"
+                :type "void")
+                nil [802 946])
+            ("hasDistance" type
+               (:parent "RegionStore"
+                :members 
+                  ( ("distance_" variable (:type "int") (reparse-symbol classsubparts) [1075 1089])
+                    ("public" label nil (reparse-symbol classsubparts) [1091 1098])
+                    ("hasDistance" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("distance" variable (:type "int") (reparse-symbol arg-sub-list) [1135 1148]))                          
+                        :type ("hasDistance" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1123 1182])
+                    ("()" function
+                       (:operator-flag t
+                        :arguments 
+                          ( ("pair" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("pair" type
+                                     (:template-specifier 
+                                        ( ("string" type nil nil nil)
+                                          ("TwoServer" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1226 1262]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1210 1326]))                  
+                :type "class")
+                nil [1038 1329])
+            ("reSortSortedRegions" function
+               (:parent "RegionStore"
+                :type "void")
+                nil [1750 2573])
+            ("find" function
+               (:parent "RegionStore"
+                :arguments 
+                  ( ("region" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4830 4856])
+                    ("nonSSLServer" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4857 4883])
+                    ("sslServer" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4889 4912])
+                    ("distance" variable
+                       (:reference 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [4913 4927]))                  
+                :type ("RegionStore::RegionStoreCode" type (:type "class") nil nil))
+                nil [4782 5369])
+            ("distanceKeys" function
+               (:parent "RegionStore"
+                :constant-flag t
+                :type ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [6120 6254])
+            ("str" function
+               (:parent "RegionStore"
+                :arguments 
+                  ( ("prefix" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6286 6305]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [6256 6727])
+            ("JSONstr" function
+               (:parent "RegionStore"
+                :arguments 
+                  ( ("prefix" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6763 6782]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [6729 7992])
+            ("localRegion" function
+               (:parent "RegionStore"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [7995 8063])
+            ("numRegions" function
+               (:parent "RegionStore"
+                :type "int")
+                nil [8065 8136])
+            ("construct" function
+               (:parent "RegionStore"
+                :arguments 
+                  ( ("jsonTree" variable (:type ("JsonObjectPtr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8194 8217])
+                    ("rsp" variable
+                       (:reference 1
+                        :type ("RegionStorePtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8218 8239]))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [8149 11646]))          
+    :file "RegionStore.cc"
+    :pointmax 11837
+    :fsize 11836
+    :lastmodtime '(20550 21238)
+    :unmatched-syntax '((punctuation 426 . 427) (punctuation 425 . 426) (punctuation 424 . 425) (punctuation 423 . 424) (symbol 414 . 423) (punctuation 413 . 414) (punctuation 412 . 413) (symbol 401 . 412) (punctuation 400 . 401) (symbol 394 . 400) (punctuation 393 . 394) (symbol 390 . 393) (TYPEDEF 382 . 389))
+    )
+   (semanticdb-table "TableInfo.hh"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("TABLE_INFO_H" variable (:constant-flag t) nil [99 111])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [113 144])
+            ("dht/Printable.h" include (:system-flag t) nil [146 172])
+            ("dht/CodeAndString.h" include nil nil [173 203])
+            ("dht/IndexSubkeysVec.h" include nil nil [204 236])
+            ("Authorization.hh" include nil nil [238 265])
+            ("TableStore" type
+               (:prototype t
+                :type "class")
+                nil [267 284])
+            ("CharPtr" type
+               (:typedef ("char")
+                :pointer 1
+                :superclasses "char"
+                :type "typedef")
+                nil [377 405])
+            ("AclMap" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("ClientPermission" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [466 520])
+            ("TableType" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("kUnknown" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [576 585])
+                          ("kHash" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [586 592])
+                          ("kOrdered" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [593 602])
+                          ("kIndex" variable
+                             (:constant-flag t
+                              :type "int")
+                              (reparse-symbol enumsubparts) [603 610]))                        
+                      :type "enum")
+                      nil nil)
+                :type "typedef")
+                nil [561 621])
+            ("OrderedFieldList" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [703 753])
+            ("IndexTableFieldList" type
+               (:typedef ("std::pair" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("OrderedFieldList" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::pair"
+                :type "typedef")
+                nil [895 963])
+            ("KeyValuePair" type
+               (:typedef ("std::pair" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::pair"
+                :type "typedef")
+                nil [1026 1082])
+            ("OrderedKeyValues" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("KeyValuePair" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [1257 1308])
+            ("TabletBoundary" type
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "struct"
+                :members 
+                  ( ("TabletBoundary" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("left" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2137 2144])
+                            ("theSu" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2145 2163]))                          
+                        :type ("TabletBoundary" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [2122 2215])
+                    ("leftBoundary" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2736 2751])
+                    ("su" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [3292 3307]))                  )
+                nil [1897 3310])
+            ("HashTabletBoundary" type
+               (:typedef ("TabletBoundary" type
+                     (:template-specifier 
+                        ( ("unsigned int" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "TabletBoundary"
+                :type "typedef")
+                nil [3352 3404])
+            ("OrderedTabletBoundary" type
+               (:typedef ("TabletBoundary" type
+                     (:template-specifier 
+                        ( ("CharPtr" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "TabletBoundary"
+                :type "typedef")
+                nil [3448 3503])
+            ("IndexTabletBoundary" type
+               (:typedef ("TabletBoundary" type
+                     (:template-specifier 
+                        ( ("IndexSubkeysVec" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "TabletBoundary"
+                :type "typedef")
+                nil [3545 3606])
+            ("HashVectorTabletMap" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("HashTabletBoundary" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [3642 3703])
+            ("OrderedVectorTabletMap" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("OrderedTabletBoundary" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [3742 3808])
+            ("IndexVectorTabletMap" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("IndexTabletBoundary" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [3845 3907])
+            ("TabletMap" type
+               (:members 
+                  ( ("size" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [4298 4332])
+                    ("returnSUAt" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4679 4694]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [4648 4705])
+                    ("getTabletNames" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tabletNames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [4822 4860]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4794 4871])
+                    ("getTabletName" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tabletIndex" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5020 5039]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4986 5050])
+                    ("TabletMap" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [5136 5168]))                  
+                :type "struct")
+                nil [4184 5171])
+            ("HashTabletMap" type
+               (:superclasses 
+                  ( ("TabletMap" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("size" function
+                       (:typemodifiers ("virtual")
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [5370 5444])
+                    ("returnSUAt" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5791 5806]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [5760 5860])
+                    ("getTabletNames" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tabletNames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [5894 5932]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5866 5939])
+                    ("getTabletName" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tabletIndex" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5979 5998]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5945 6005])
+                    ("tabletMap" variable (:type ("HashVectorTabletMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6011 6041]))                  
+                :type "struct")
+                nil [5233 6073])
+            ("OrderedTabletMap" type
+               (:superclasses 
+                  ( ("TabletMap" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("size" function
+                       (:typemodifiers ("virtual")
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [6278 6352])
+                    ("returnSUAt" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [6699 6714]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [6668 6768])
+                    ("getTabletNames" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tabletNames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [6802 6840]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6774 6847])
+                    ("getTabletName" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tabletIndex" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6887 6906]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6853 6913])
+                    ("tabletMap" variable (:type ("OrderedVectorTabletMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6919 6952]))                  
+                :type "struct")
+                nil [6138 6986])
+            ("IndexTabletMap" type
+               (:superclasses 
+                  ( ("TabletMap" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("size" function
+                       (:typemodifiers ("virtual")
+                        :type "unsigned int")
+                        (reparse-symbol classsubparts) [7187 7261])
+                    ("returnSUAt" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("index" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [7608 7623]))                          
+                        :type "char")
+                        (reparse-symbol classsubparts) [7577 7677])
+                    ("getTabletNames" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tabletNames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [7711 7749]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7683 7756])
+                    ("getTabletName" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("tabletIndex" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7796 7815]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7762 7822])
+                    ("tabletMap" variable (:type ("IndexVectorTabletMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7828 7859]))                  
+                :type "struct")
+                nil [7049 7891])
+            ("TableInfo" type
+               (:superclasses 
+                  ( ("Printable" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil)
+                    ("JSONPrintable" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [9440 9447])
+                    ("TableInfo" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("mapping" variable
+                               (:pointer 1
+                                :type ("TabletMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12396 12415])
+                            ("regionList" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12416 12456])
+                            ("modTime" variable
+                               (:constant-flag t
+                                :type ("time_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12471 12492])
+                            ("permsMap" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AclMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12493 12517])
+                            ("indexTables" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("IndexTableFieldList" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12532 12582]))                          
+                        :type ("TableInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12386 12583])
+                    ("TableInfo" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("mapping" variable
+                               (:pointer 1
+                                :type ("TabletMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12598 12617])
+                            ("regionList" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12618 12658])
+                            ("modTime" variable
+                               (:constant-flag t
+                                :type ("time_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12673 12694])
+                            ("permsMap" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AclMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12695 12719]))                          
+                        :type ("TableInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12588 12720])
+                    ("TableInfo" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("mapping" variable
+                               (:pointer 1
+                                :type ("TabletMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12735 12754])
+                            ("regionList" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12755 12795])
+                            ("modTime" variable
+                               (:constant-flag t
+                                :type ("time_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12810 12831]))                          
+                        :type ("TableInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12725 12832])
+                    ("getACLInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ycaId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13219 13244])
+                            ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type ("ClientPermission" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13245 13270])
+                            ("" variable (:type ("perms" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13271 13277]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [13203 13284])
+                    ("replaceACLs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("aclPerms" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("AclMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13568 13591]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13551 13592])
+                    ("getACLIds" function
+                       (:prototype-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [13732 13772])
+                    ("getAclMap" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("AclMap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13817 13850])
+                    ("isInRegion" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14055 14081]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [14039 14088])
+                    ("replaceRegions" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("regionList" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [14532 14572]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [14512 14573])
+                    ("getRegionNames" function
+                       (:prototype-flag t
+                        :type ("std::set" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol classsubparts) [14717 14762])
+                    ("setModTime" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("theTime" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14889 14904]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [14873 14905])
+                    ("getModTime" function
+                       (:prototype-flag t
+                        :type ("time_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15030 15056])
+                    ("isLocal" function (:type "bool") (reparse-symbol classsubparts) [16047 16096])
+                    ("getTableType" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("TableType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16189 16226])
+                    ("replaceTabletBoundaryVector" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mapping" variable
+                               (:pointer 1
+                                :type ("TabletMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17187 17206]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [17154 17207])
+                    ("getIndexTableList" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("indexTables" variable
+                               (:reference 1
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("IndexTableFieldList" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17378 17422]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [17355 17423])
+                    ("setIndexTableList" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("indexTables" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("IndexTableFieldList" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [17574 17623]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [17551 17624])
+                    ("find" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("key" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [18765 18775])
+                            ("tabletBoundaries" variable
+                               (:pointer 1
+                                :default-value "NULL,"
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [18776 18814])
+                            ("exclusive" variable
+                               (:constant-flag t
+                                :default-value "false)"
+                                :type "bool")
+                                (reparse-symbol arg-sub-list) [18844 18873]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18740 18884])
+                    ("str" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("prefix" variable
+                               (:default-value "\"\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [19085 19108]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19069 19116])
+                    ("JSONstr" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("prefix" variable
+                               (:default-value "\"\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [19616 19639]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19582 19651])
+                    ("TableInfo" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [19722 19743])
+                    ("getTabletMap" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :constant-flag t
+                        :type ("TabletMap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19802 19841])
+                    ("protected" label nil (reparse-symbol classsubparts) [19843 19853])
+                    ("mapping_" variable
+                       (:pointer 1
+                        :type ("TabletMap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20031 20053])
+                    ("aclMap_" variable (:type ("AclMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20104 20123])
+                    ("regionList_" variable (:type ("std::set" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [20174 20208])
+                    ("modTime_" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20261 20281])
+                    ("indexTables_" variable (:type ("std::set" type
+                         (:template-specifier 
+                            ( ("IndexTableFieldList" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [20450 20493])
+                    ("strSubclassFields" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("prefix" variable
+                               (:default-value "\"\""
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20753 20776]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20715 20788])
+                    ("private" label nil (reparse-symbol classsubparts) [20790 20798])
+                    ("TableInfo" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TableInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20851 20870]))                          
+                        :type ("TableInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20841 20871])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("t" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TableInfo" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20929 20948]))                          
+                        :type ("TableInfo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20908 20949]))                  
+                :type "class")
+                nil [9381 20952])
+            ("TableInfoPtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("TableInfo" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::shared_ptr"
+                :type "typedef")
+                nil [20954 21004]))          
+    :file "TableInfo.hh"
+    :pointmax 21013
+    :fsize 21012
+    :lastmodtime '(20550 21238)
+    :unmatched-syntax '((punctuation 13269 . 13270))
+    :lexical-table 
+        '(("TABLE_INFO_H")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndev!trunk!router!src!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

@@ -1,0 +1,518 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "TestBroker.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("yax/osutil.h" include (:system-flag t) nil [59 82])
+            ("TestBroker.h" include nil nil [102 125])
+            ("dht/LogUtils.h" include nil nil [126 151])
+            ("dht/ActionContext.h" include nil nil [152 182])
+            ("dht/ProcessContext.h" include nil nil [183 214])
+            ("dht/StopWatch.h" include nil nil [215 241])
+            ("dht/System.h" include nil nil [242 265])
+            ("dht/FwTestHooks.h" include (:system-flag t) nil [266 294])
+            ("dht/StringUtils.h" include (:system-flag t) nil [295 323])
+            ("dht/Stats.h" include (:system-flag t) nil [324 346])
+            ("dht/BrokerTransaction.h" include (:system-flag t) nil [347 381])
+            ("dht/BrokerMessageContainer.h" include (:system-flag t) nil [382 421])
+            ("fstream" include (:system-flag t) nil [422 440])
+            ("errno.h" include (:system-flag t) nil [441 459])
+            ("dirent.h" include (:system-flag t) nil [460 479])
+            ("CONFIG_TEST_BROKER_SECTION" variable (:constant-flag t) nil [489 515])
+            ("DEFAULT_PUBLISH_DIR" variable (:constant-flag t) nil [537 556])
+            ("TEST_BROKER_DIR_PATH" variable (:constant-flag t) nil [601 621])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [633 727])
+            ("TestBroker" function
+               (:constructor-flag t
+                :parent "TestBroker"
+                :type ("TestBroker" type (:type "class") nil nil))
+                nil [731 888])
+            ("init" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SectionConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [929 957]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [890 1341])
+            ("getPublisher" function
+               (:parent "TestBroker"
+                :type ("BrokerPublisher" type (:type "class") nil nil))
+                nil [1379 1446])
+            ("getSubscriber" function
+               (:parent "TestBroker"
+                :type ("BrokerSubscriber" type (:type "class") nil nil))
+                nil [1448 1517])
+            ("open" function
+               (:parent "TestBroker"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1519 1588])
+            ("publish" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1671 1696])
+                    ("msg" variable
+                       (:reference 1
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1705 1724])
+                    ("msgId" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1725 1744]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1629 2772])
+            ("publish" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2955 2980])
+                    ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2980 2996])
+                    ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3006 3019])
+                    ("msgId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3020 3045]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [2913 4030])
+            ("publish" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("btxn" variable
+                       (:reference 1
+                        :type ("BrokerTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4074 4099])
+                    ("msgId" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4100 4120]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [4032 5917])
+            ("publishImpl" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5966 5991])
+                    ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6005 6021])
+                    ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6021 6034])
+                    ("msgId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6047 6072]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5920 6690])
+            ("publishImpl" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6738 6763])
+                    ("msg" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6777 6793])
+                    ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6793 6806]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [6692 6857])
+            ("publishImpl" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("txn" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerTransaction" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6906 6936]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [6860 7299])
+            ("getFileModTime" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("fname" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7336 7354]))                  
+                :type ("time_t" type (:type "class") nil nil))
+                nil [7301 7798])
+            ("getLastPublishId" function
+               (:parent "TestBroker"
+                :type ("std::string" type (:type "class") nil nil))
+                nil [7800 8684])
+            ("getPublishedMessage" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("bmsg" variable
+                       (:reference 1
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8740 8760])
+                    ("msgId" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8760 8779]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [8686 9790])
+            ("getfd" function
+               (:parent "TestBroker"
+                :type "int")
+                nil [9831 9873])
+            ("receive" function
+               (:parent "TestBroker"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [9875 9983])
+            ("attachToExistingSubscription" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10049 10074]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [9986 10103])
+            ("createSubscription" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10158 10183]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [10105 10212])
+            ("recoverSubscription" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10268 10293])
+                    ("prevHost" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10314 10342]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [10214 10371])
+            ("hasSubscription" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10407 10432]))                  
+                :type "bool")
+                nil [10373 10461])
+            ("startDelivery" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10511 10536]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [10463 10565])
+            ("startDeliveryIfNotStarted" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10627 10652]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [10567 10681])
+            ("stopDelivery" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10730 10755]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [10683 10784])
+            ("unsubscribe" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("topic" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10833 10858]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [10787 10887])
+            ("getSubscriptionList" function
+               (:parent "TestBroker"
+                :arguments 
+                  ( ("list" variable
+                       (:reference 1
+                        :type ("std::list" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10943 10973]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [10889 11002])
+            ("enabled" function
+               (:parent "TestBroker"
+                :type "bool")
+                nil [11004 11053])
+            ("getHealthCheckTimeMs" function
+               (:parent "TestBroker"
+                :type ("uint32_t" type (:type "class") nil nil))
+                nil [11055 11117])
+            ("supportsSubscriptionList" function
+               (:parent "TestBroker"
+                :type "bool")
+                nil [11120 11186]))          
+    :file "TestBroker.cc"
+    :pointmax 11377
+    :fsize 11376
+    :lastmodtime '(20328 58353)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("CONFIG_TEST_BROKER_SECTION" . ((string "\"testbroker\"" 516 . 528)))
+          ("DEFAULT_PUBLISH_DIR" . ((string "\"var/dht_storage_server/publishes/\"" 557 . 592)))
+          ("TEST_BROKER_DIR_PATH" . ((string "\"dirpath\"" 622 . 631)))
+          )
+
+    )
+   (semanticdb-table "TestBrokerExecAction.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("TestBrokerExecAction.h" include nil nil [59 92])
+            ("DaemonRequest.h" include nil nil [93 119])
+            ("dht/WebConstants.h" include (:system-flag t) nil [120 149])
+            ("SuDaemonActionFactory.h" include nil nil [150 184])
+            ("SuBrokerActionFactory.h" include nil nil [185 219])
+            ("dht/TestBrokerInitFunctions.h" include nil nil [220 260])
+            ("dht/WebResponse.h" include (:system-flag t) nil [261 289])
+            ("SuWebRequest.h" include (:system-flag t) nil [290 315])
+            ("SuProcessContext.h" include (:system-flag t) nil [316 345])
+            ("DaemonMessage.h" include (:system-flag t) nil [346 372])
+            ("dht/JsonObject.h" include (:system-flag t) nil [374 401])
+            ("dht/LogUtils.h" include (:system-flag t) nil [402 427])
+            ("dht/ActionContext.h" include (:system-flag t) nil [428 458])
+            ("dht/StringUtils.h" include (:system-flag t) nil [459 487])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [489 576])
+            ("TestBrokerMessage" type
+               (:superclasses 
+                  ( ("BrokerMessage" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [629 636])
+                    ("TestBrokerMessage" function
+                       (:constructor-flag t
+                        :type ("TestBrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [641 664])
+                    ("TestBrokerMessage" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [670 702])
+                    ("setHeader" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [736 759])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [759 784]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [713 785])
+                    ("getHeader" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [827 850]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [790 851]))                  
+                :type "class")
+                nil [580 854])
+            ("setHeader" function
+               (:parent "TestBrokerMessage"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [891 914])
+                    ("value" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [914 939]))                  
+                :type "void")
+                nil [856 978])
+            ("getHeader" function
+               (:parent "TestBrokerMessage"
+                :constant-flag t
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1029 1052]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [980 1092])
+            ("TestBrokerDaemonRequest" type
+               (:superclasses 
+                  ( ("DaemonRequest" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1150 1157])
+                    ("TestBrokerDaemonRequest" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1186 1211])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1211 1237]))                          
+                        :type ("TestBrokerDaemonRequest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1162 1238])
+                    ("TestBrokerDaemonRequest" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1243 1282])
+                    ("sendExecBrokerActionRequest" function
+                       (:prototype-flag t
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1358 1409]))                  
+                :type "class")
+                nil [1095 1412])
+            ("TestBrokerDaemonRequest" function
+               (:constructor-flag t
+                :parent "TestBrokerDaemonRequest"
+                :arguments 
+                  ( ("table" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1464 1489])
+                    ("tablet" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1490 1516]))                  
+                :type ("TestBrokerDaemonRequest" type (:type "class") nil nil))
+                nil [1414 1555])
+            ("sendExecBrokerActionRequest" function
+               (:parent "TestBrokerDaemonRequest"
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [1557 1846])
+            ("execute" function
+               (:parent "TestBrokerExecAction"
+                :arguments 
+                  ( ("webRequest" variable
+                       (:reference 1
+                        :type ("SuWebRequest" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1902 1927])
+                    ("response" variable
+                       (:reference 1
+                        :type ("WebResponse" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1936 1958]))                  
+                :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                nil [1849 4385])
+            ("prepareDaemonRequest" function
+               (:parent "TestBrokerExecAction"
+                :arguments 
+                  ( ("bmsg" variable
+                       (:reference 1
+                        :type ("TestBrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4452 4476])
+                    ("request" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4477 4500]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [4387 5766])
+            ("getDaemonActionAdjunct" function
+               (:pointer 1
+                :parent "TestBrokerExecAction"
+                :constant-flag t
+                :type ("SuDaemonAction" type (:type "class") nil nil))
+                nil [5768 5891])
+            ("daemonExecute" function
+               (:parent "TestBrokerExecAction::TestBrokerExecActionDaemonSide"
+                :arguments 
+                  ( ("request" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DaemonMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5985 6014])
+                    ("response" variable
+                       (:reference 1
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6029 6047]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5895 7007]))          
+    :file "TestBrokerExecAction.cc"
+    :pointmax 7197
+    :fsize 7196
+    :lastmodtime '(20328 58353)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!dht!storage!testbroker!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

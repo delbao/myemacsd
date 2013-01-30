@@ -1,0 +1,66 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "StatsDaemonProcessContext.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/StatsDaemonProcessContext.h" include nil nil [59 101])
+            ("dht/LogUtils.h" include nil nil [102 127])
+            ("dht/ActionContext.h" include nil nil [128 158])
+            ("dht/typedefs.h" include nil nil [159 184])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [186 273])
+            ("instance" function
+               (:parent "StatsDaemonProcessContext"
+                :type ("StatsDaemonProcessContext" type (:type "class") nil nil))
+                nil [277 413])
+            ("StatsDaemonProcessContext" function
+               (:destructor-flag t
+                :parent "StatsDaemonProcessContext"
+                :type "void")
+                nil [415 637])
+            ("initComponentStats" function
+               (:parent "StatsDaemonProcessContext"
+                :arguments 
+                  ( ("config" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("SectionConfig" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [707 735]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [639 1507])
+            ("singletonInit" function
+               (:parent "StatsDaemonProcessContext"
+                :arguments 
+                  ( ("configFile" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1572 1595]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1509 1728])
+            ("getStats" function
+               (:pointer 1
+                :parent "StatsDaemonProcessContext"
+                :arguments 
+                  ( ("statsName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1774 1803]))                  
+                :type ("Stats" type (:type "class") nil nil))
+                nil [1730 2058]))          
+    :file "StatsDaemonProcessContext.cc"
+    :pointmax 2247
+    :fsize 2246
+    :lastmodtime '(20425 22395)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!branches!releases!current!dht!framework!statsd!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

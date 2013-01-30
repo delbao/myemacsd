@@ -1,0 +1,640 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Bank.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("Bank.h" include (:system-flag t) nil [60 77])
+            ("dht/RequestState.h" include (:system-flag t) nil [78 107])
+            ("dht/StorageTransport.h" include (:system-flag t) nil [108 141])
+            ("dht/MultiServerTransport.h" include (:system-flag t) nil [142 179])
+            ("LbContext.h" include (:system-flag t) nil [180 202])
+            ("boost/bind.hpp" include (:system-flag t) nil [203 228])
+            ("dht/SchemaNames.h" include (:system-flag t) nil [229 257])
+            ("dht/DeleteObj.h" include (:system-flag t) nil [258 284])
+            ("DataRecorder.h" include (:system-flag t) nil [285 310])
+            ("cmath" include (:system-flag t) nil [311 327])
+            ("logger" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [329 419])
+            ("SuMetricsPair" type
+               (:typedef ("std::pair" type
+                     (:template-specifier 
+                        ( ("std::string" type (:constant-flag t) nil nil)
+                          ("SuMetrics" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::pair"
+                :type "typedef")
+                nil [421 485])
+            ("suAggTabletLoadQntls_" function (:type "int") nil [872 899])
+            ("Bank" function
+               (:destructor-flag t
+                :parent "Bank"
+                :type "void")
+                nil [901 1134])
+            ("CreateRequestState" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1164 1171])
+                    ("CreateRequestState" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("uri" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1195 1218]))                          
+                        :type ("CreateRequestState" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1176 1238])
+                    ("()" function
+                       (:operator-flag t
+                        :pointer 1
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1273 1287]))                          
+                        :type ("RequestState" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1248 1381])
+                    ("private" label nil (reparse-symbol classsubparts) [1387 1395])
+                    ("uri_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1400 1417]))                  
+                :type "class")
+                nil [1136 1420])
+            ("ping" function
+               (:parent "Bank"
+                :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                nil [1422 2827])
+            ("readLbStats" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("doSuHealthCheck" variable (:type "bool") (reparse-symbol arg-sub-list) [2869 2890]))                  
+                :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                nil [2829 5208])
+            ("recordMetrics" function
+               (:parent "Bank"
+                :type "void")
+                nil [5210 5655])
+            ("addSu" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("suName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5675 5701])
+                    ("suState" variable
+                       (:constant-flag t
+                        :type ("int32_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5702 5724]))                  
+                :type "void")
+                nil [5657 5786])
+            ("analyzeMetrics" function
+               (:parent "Bank"
+                :type "void")
+                nil [5789 6093])
+            ("reportImbalances" function
+               (:parent "Bank"
+                :type "void")
+                nil [6095 6794])
+            ("deleteIfInvalid" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("sm" variable
+                       (:pointer 1
+                        :type ("SuMetrics" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6824 6838]))                  
+                :type "bool")
+                nil [6796 6981])
+            ("removeInvalidMetrics" function
+               (:parent "Bank"
+                :type "void")
+                nil [6983 7300])
+            ("calcAvgSuLoad" function
+               (:parent "Bank"
+                :type "void")
+                nil [7302 7764])
+            ("calcMeanSuLoad" function
+               (:parent "Bank"
+                :type "void")
+                nil [7767 8070])
+            ("calcStdDevSuLoad" function
+               (:parent "Bank"
+                :type "void")
+                nil [8072 8573])
+            ("calcMeanNumberOfTablets" function
+               (:parent "Bank"
+                :type "void")
+                nil [8575 8902])
+            ("calcAvgSuDiskFree" function
+               (:parent "Bank"
+                :type "void")
+                nil [8905 9013])
+            ("calcAvgSuDiskBusyPct" function
+               (:parent "Bank"
+                :type "void")
+                nil [9015 9338])
+            ("calcAvgAggTabletLoad" function
+               (:parent "Bank"
+                :type "void")
+                nil [9340 9830])
+            ("calcAvgTabletLoad" function
+               (:parent "Bank"
+                :type "void")
+                nil [9832 10223])
+            ("calcSuMetricAvg" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("func" variable (:type ("SMCallBack" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10255 10271]))                  
+                :type "double")
+                nil [10225 10538])
+            ("calcQuantiles" function
+               (:parent "Bank"
+                :type "void")
+                nil [10586 17212])
+            ("inLoadQuantileBand" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17245 17271])
+                    ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17272 17294]))                  
+                :type "bool")
+                nil [17214 18458])
+            ("inDiskBusyPctQuantileBand" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18498 18524])
+                    ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18525 18547]))                  
+                :type "bool")
+                nil [18460 19845])
+            ("inDiskFreeBytesQuantileBand" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19887 19913])
+                    ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19914 19936]))                  
+                :type "bool")
+                nil [19847 21270])
+            ("inNumTabletsQuantileBand" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [21309 21335])
+                    ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21336 21358]))                  
+                :type "bool")
+                nil [21272 22636])
+            ("inAggTabletLoadQuantileBand" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("server" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [22678 22704])
+                    ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22705 22727]))                  
+                :type "bool")
+                nil [22638 24059])
+            ("isDiskFreeBytesBalanced" function
+               (:parent "Bank"
+                :type "bool")
+                nil [24062 24616])
+            ("isDiskBusyPctBalanced" function
+               (:parent "Bank"
+                :type "bool")
+                nil [24620 25183])
+            ("isFoundInHotSuList" function
+               (:parent "Bank"
+                :arguments 
+                  ( ("su" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [25216 25238]))                  
+                :type "bool")
+                nil [25185 25597]))          
+    :file "Bank.cc"
+    :pointmax 25760
+    :fsize 25784
+    :lastmodtime '(20564 58836)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "Bank.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BANK_H" variable (:constant-flag t) nil [83 89])
+            ("map" include (:system-flag t) nil [90 104])
+            ("string" include (:system-flag t) nil [105 122])
+            ("SuMetrics.h" include (:system-flag t) nil [123 145])
+            ("LbCode.h" include (:system-flag t) nil [146 165])
+            ("ISuFailureDetector.h" include (:system-flag t) nil [166 197])
+            ("SuMetricsVec" type
+               (:typedef ("std::vector" type
+                     (:template-specifier 
+                        ( ("SuMetrics" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::vector"
+                :type "typedef")
+                nil [199 244])
+            ("SuMetricsVecIter" type
+               (:typedef ("std::vector::iterator" type (:type "class") nil nil)
+                :superclasses "std::vector::iterator"
+                :type "typedef")
+                nil [245 304])
+            ("SuMetricsVecCIter" type
+               (:typedef ("std::vector::const_iterator" type (:type "class") nil nil)
+                :superclasses "std::vector::const_iterator"
+                :type "typedef")
+                nil [305 371])
+            ("SuMetricsVecRIter" type
+               (:typedef ("std::vector::reverse_iterator" type (:type "class") nil nil)
+                :superclasses "std::vector::reverse_iterator"
+                :type "typedef")
+                nil [372 440])
+            ("SuMetricsVecCRIter" type
+               (:typedef ("std::vector::const_reverse_iterator" type (:type "class") nil nil)
+                :superclasses "std::vector::const_reverse_iterator"
+                :type "typedef")
+                nil [441 516])
+            ("quantiles" type
+               (:members 
+                  ( ("lowest" variable (:type "double") (reparse-symbol classsubparts) [587 601])
+                    ("twentyPct" variable (:type "double") (reparse-symbol classsubparts) [606 623])
+                    ("fortyPct" variable (:type "double") (reparse-symbol classsubparts) [628 644])
+                    ("sixtyPct" variable (:type "double") (reparse-symbol classsubparts) [649 665])
+                    ("eightyPct" variable (:type "double") (reparse-symbol classsubparts) [670 687])
+                    ("hundredPct" variable (:type "double") (reparse-symbol classsubparts) [692 710])
+                    ("quantiles" function
+                       (:constructor-flag t
+                        :type ("quantiles" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [715 813])
+                    ("quantiles" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("u" variable (:type "double") (reparse-symbol arg-sub-list) [828 837])
+                            ("v" variable (:type "double") (reparse-symbol arg-sub-list) [838 847])
+                            ("w" variable (:type "double") (reparse-symbol arg-sub-list) [848 857])
+                            ("x" variable (:type "double") (reparse-symbol arg-sub-list) [858 867])
+                            ("y" variable (:type "double") (reparse-symbol arg-sub-list) [868 877])
+                            ("z" variable (:type "double") (reparse-symbol arg-sub-list) [878 887]))                          
+                        :type ("quantiles" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [818 962]))                  
+                :type "struct")
+                nil [565 965])
+            ("Bank" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [986 993])
+                    ("TestBank" friend nil (reparse-symbol classsubparts) [999 1020])
+                    ("TestMoveRule" friend nil (reparse-symbol classsubparts) [1026 1051])
+                    ("TestMoveVolumeRule" friend nil (reparse-symbol classsubparts) [1057 1088])
+                    ("TestMoveHeatRule" friend nil (reparse-symbol classsubparts) [1094 1123])
+                    ("QuantileBand" type
+                       (:members 
+                          ( ("FIRST" variable
+                               (:constant-flag t
+                                :default-value (1169 1170)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1161 1170])
+                            ("SECOND" variable
+                               (:constant-flag t
+                                :default-value (1209 1210)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1200 1210])
+                            ("THIRD" variable
+                               (:constant-flag t
+                                :default-value (1250 1251)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1242 1251])
+                            ("FORTH" variable
+                               (:constant-flag t
+                                :default-value (1288 1289)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1280 1289])
+                            ("FIFTH" variable
+                               (:constant-flag t
+                                :default-value (1325 1326)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1317 1326]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [1134 1351])
+                    ("Bank" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("bankName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1370 1398]))                          
+                        :type ("Bank" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1365 1399])
+                    ("Bank" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1405 1421])
+                    ("readLbStats" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("doHealthCheck" variable (:type "bool") (reparse-symbol arg-sub-list) [1528 1548])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1549 1555]))                          
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1495 1556])
+                    ("ping" function
+                       (:prototype-flag t
+                        :type ("LbCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1614 1642])
+                    ("getName" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1648 1712])
+                    ("addSu" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("suName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1800 1826])
+                            ("suState" variable
+                               (:constant-flag t
+                                :type ("int32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1827 1849]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1789 1850])
+                    ("getSuMetrics" function
+                       (:constant-flag t
+                        :type ("SuMetricsVec" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1856 1931])
+                    ("getSuHealthMap" function
+                       (:constant-flag t
+                        :type ("SuHealthMap" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1937 2015])
+                    ("getAvgSuLoad" function (:type "double") (reparse-symbol classsubparts) [2021 2083])
+                    ("getMeanSuLoad" function (:type "double") (reparse-symbol classsubparts) [2089 2153])
+                    ("getMeanNumberOfTablets" function (:type "double") (reparse-symbol classsubparts) [2159 2240])
+                    ("getStdDevSuLoad" function (:type "double") (reparse-symbol classsubparts) [2250 2318])
+                    ("getAvgDiskFreeBytes" function (:type "double") (reparse-symbol classsubparts) [2328 2406])
+                    ("getAvgSuDiskBusyPct" function (:type "double") (reparse-symbol classsubparts) [2416 2492])
+                    ("getAvgAggTabletLoad" function (:type "double") (reparse-symbol classsubparts) [2502 2577])
+                    ("getAvgTabletLoad" function (:type "double") (reparse-symbol classsubparts) [2587 2657])
+                    ("getHotSus" function (:type ("SuMetricsVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2663 2720])
+                    ("getColdSus" function (:type ("SuMetricsVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2726 2785])
+                    ("getSuLoadQntls" function (:type ("quantiles" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2966 3031])
+                    ("getSuAggTabletLoadQntls" function (:type ("quantiles" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3036 3119])
+                    ("getSuNumTabletsQntls" function (:type ("quantiles" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3124 3201])
+                    ("getSuDiskFreeBytesQntls" function (:type ("quantiles" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3206 3289])
+                    ("getSuDiskBusyPctQntls" function (:type ("quantiles" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3294 3373])
+                    ("analyzeMetrics" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3383 3405])
+                    ("removeInvalidMetrics" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3410 3438])
+                    ("recordMetrics" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3443 3464])
+                    ("inLoadQuantileBand" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3629 3655])
+                            ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3656 3678]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3605 3679])
+                    ("inDiskBusyPctQuantileBand" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3715 3741])
+                            ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3742 3764]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3684 3765])
+                    ("inDiskFreeBytesQuantileBand" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3803 3829])
+                            ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3830 3852]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3770 3853])
+                    ("inAggTabletLoadQuantileBand" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3891 3917])
+                            ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3918 3940]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3858 3941])
+                    ("inNumTabletsQuantileBand" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("server" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3976 4002])
+                            ("quantileBand" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4003 4025]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3946 4026])
+                    ("isDiskFreeBytesBalanced" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4032 4063])
+                    ("isDiskBusyPctBalanced" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4068 4097])
+                    ("isFoundInHotSuList" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("su" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4131 4153]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4107 4154])
+                    ("private" label nil (reparse-symbol classsubparts) [4156 4164])
+                    ("calcAvgSuLoad" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4170 4191])
+                    ("calcMeanSuLoad" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4196 4218])
+                    ("calcStdDevSuLoad" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4223 4247])
+                    ("calcMeanNumberOfTablets" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4252 4283])
+                    ("calcAvgSuDiskFree" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4288 4313])
+                    ("calcAvgSuDiskBusyPct" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4318 4346])
+                    ("calcAvgAggTabletLoad" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4351 4379])
+                    ("calcAvgTabletLoad" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4384 4409])
+                    ("calcQuantiles" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4419 4440])
+                    ("reportImbalances" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4445 4469])
+                    ("deleteIfInvalid" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("sm" variable
+                               (:pointer 1
+                                :type ("SuMetrics" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4500 4514]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4479 4515])
+                    ("uint64_t" function
+                       (:arguments 
+                          ( ("" variable (:type ("SuMetrics" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4543 4553])
+                            ("" variable (:type ("SMCallBack" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4555 4566]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [4533 4568])
+                    ("calcSuMetricAvg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("func" variable (:type ("SMCallBack" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4602 4618]))                          
+                        :type "double")
+                        (reparse-symbol classsubparts) [4579 4619])
+                    ("Bank" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bank" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4762 4779]))                          
+                        :type ("Bank" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4757 4780])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("bank" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Bank" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4801 4818]))                          
+                        :type ("Bank" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4785 4819])
+                    ("name_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4834 4852])
+                    ("suMetrics_" variable (:type ("SuMetricsVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4862 4886])
+                    ("hotSus_" variable (:type ("SuMetricsVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4949 4970])
+                    ("coldSus_" variable (:type ("SuMetricsVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4975 4997])
+                    ("suHealthMap_" variable (:type ("SuHealthMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5003 5028])
+                    ("avgSuLoad_" variable (:type "double") (reparse-symbol classsubparts) [5036 5054])
+                    ("meanSuLoad_" variable (:type "double") (reparse-symbol classsubparts) [5059 5078])
+                    ("stdDevSuLoad_" variable (:type "double") (reparse-symbol classsubparts) [5083 5104])
+                    ("meanNumberOfTablets_" variable (:type "double") (reparse-symbol classsubparts) [5109 5137])
+                    ("avgSuDiskFreeBytes_" variable (:type "double") (reparse-symbol classsubparts) [5142 5169])
+                    ("avgSuDiskBusyPct_" variable (:type "double") (reparse-symbol classsubparts) [5174 5199])
+                    ("avgAggTabletLoad_" variable (:type "double") (reparse-symbol classsubparts) [5204 5229])
+                    ("avgTabletLoad_" variable (:type "double") (reparse-symbol classsubparts) [5234 5256])
+                    ("suLoadQntls_" variable (:type ("quantiles" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5320 5344])
+                    ("suDiskBusyPctQntls_" variable (:type ("quantiles" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5349 5380])
+                    ("suDiskFreeBytesQntls_" variable (:type ("quantiles" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5385 5418])
+                    ("suNumTabletsQntls_" variable (:type ("quantiles" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5423 5453])
+                    ("suAggTabletLoadQntls_" variable (:type ("quantiles" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5458 5491]))                  
+                :type "class")
+                nil [973 5500])
+            ("BankPtr" type
+               (:typedef ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("Bank" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::shared_ptr"
+                :type "typedef")
+                nil [5502 5542]))          
+    :file "Bank.h"
+    :pointmax 5755
+    :fsize 5750
+    :lastmodtime '(20564 6078)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BANK_H")
+          )
+
+    )
+   (semanticdb-table "LbContext.h"
+    :file "LbContext.h"
+    :fsize 5261
+    :lastmodtime '(20550 21253)
+    )
+   (semanticdb-table "DataRecorder.h"
+    :file "DataRecorder.h"
+    :fsize 3100
+    :lastmodtime '(20550 21253)
+    )
+   (semanticdb-table "SuMetrics.h"
+    :file "SuMetrics.h"
+    :fsize 4556
+    :lastmodtime '(20550 21253)
+    )
+   (semanticdb-table "LbCode.h"
+    :file "LbCode.h"
+    :fsize 1083
+    :lastmodtime '(20550 21253)
+    )
+   (semanticdb-table "ISuFailureDetector.h"
+    :file "ISuFailureDetector.h"
+    :fsize 3181
+    :lastmodtime '(20550 21253)
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!controller!loadBalancer!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

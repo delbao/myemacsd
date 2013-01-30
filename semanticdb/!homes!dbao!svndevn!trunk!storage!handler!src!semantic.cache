@@ -1,0 +1,502 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "BrokerSyncMergingRecord.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("string" include (:system-flag t) nil [97 114])
+            ("dht/BrokerAction.h" include (:system-flag t) nil [116 145])
+            ("dht/BrokerMessage.h" include (:system-flag t) nil [146 176])
+            ("SuBrokerAction.h" include (:system-flag t) nil [177 204])
+            ("dht/FwTestHooks.h" include (:system-flag t) nil [205 233])
+            ("dht/System.h" include (:system-flag t) nil [234 257])
+            ("Record.h" include nil nil [259 278])
+            ("SuCode.h" include nil nil [279 298])
+            ("MergingRecord.h" include nil nil [299 325])
+            ("BrokerSyncMergingRecord.h" include nil nil [326 362])
+            ("BrokerSyncMergingInputs.h" include nil nil [363 399])
+            ("dht/UCharUtils.h" include (:system-flag t) nil [400 427])
+            ("SuFaultHandler.h" include nil nil [428 455])
+            ("SuProcessContext.h" include nil nil [456 485])
+            ("dht/LogUtils.h" include (:system-flag t) nil [486 511])
+            ("dht/ActionContext.h" include (:system-flag t) nil [512 542])
+            ("Tablet.h" include (:system-flag t) nil [543 562])
+            ("RecordUtils.h" include nil nil [563 587])
+            ("TableData.h" include (:system-flag t) nil [588 610])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [612 632])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [634 733])
+            ("missedMessageCheck" function
+               (:parent "BrokerSyncMergingRecord"
+                :arguments 
+                  ( ("msgSequence" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MergingRecordSequenceId" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [785 829])
+                    ("recSequence" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("MergingRecordSequenceId" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [849 893])
+                    ("sendingRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [913 947]))                  
+                :type "void")
+                nil [735 2701])
+            ("overwrite" function
+               (:parent "BrokerSyncMergingRecord"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2818 2843])
+                    ("recordName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2844 2870])
+                    ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2871 2887])
+                    ("inputData" variable
+                       (:reference 1
+                        :type ("BrokerSyncMergingInputs" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2898 2934])
+                    ("exists" variable (:type "bool") (reparse-symbol arg-sub-list) [2935 2947]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [2761 4014])
+            ("suExecuteCalledByGetSync" function
+               (:parent "BrokerSyncMergingRecord"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4088 4114]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [4016 5409])
+            ("suExecute" function
+               (:parent "BrokerSyncMergingRecord"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5468 5494]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5411 7454])
+            ("suExecuteImpl" function
+               (:parent "BrokerSyncMergingRecord"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7517 7542])
+                    ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7543 7558])
+                    ("diskRecordBase" variable
+                       (:reference 1
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7559 7582])
+                    ("sendingRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7583 7611])
+                    ("inputData" variable
+                       (:reference 1
+                        :type ("BrokerSyncMergingInputs" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7612 7648]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [7456 33913]))          
+    :file "BrokerSyncMergingRecord.cc"
+    :pointmax 34066
+    :fsize 34065
+    :lastmodtime '(20641 19704)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "SuBrokerAction.h"
+    :file "SuBrokerAction.h"
+    :fsize 7166
+    :lastmodtime '(20551 43246)
+    )
+   (semanticdb-table "Record.h"
+    :file "Record.h"
+    :fsize 32954
+    :lastmodtime '(20614 57316)
+    )
+   (semanticdb-table "MergingRecord.h"
+    :file "MergingRecord.h"
+    :fsize 16358
+    :lastmodtime '(20614 57316)
+    )
+   (semanticdb-table "BrokerSyncMergingRecord.h"
+    :file "BrokerSyncMergingRecord.h"
+    :fsize 3356
+    :lastmodtime '(20551 43244)
+    )
+   (semanticdb-table "BrokerSyncMergingInputs.h"
+    :file "BrokerSyncMergingInputs.h"
+    :fsize 3624
+    :lastmodtime '(20551 43245)
+    )
+   (semanticdb-table "SuFaultHandler.h"
+    :file "SuFaultHandler.h"
+    :fsize 23296
+    :lastmodtime '(20614 57316)
+    )
+   (semanticdb-table "SuProcessContext.h"
+    :file "SuProcessContext.h"
+    :fsize 25990
+    :lastmodtime '(20641 19704)
+    )
+   (semanticdb-table "Tablet.h"
+    :file "Tablet.h"
+    :fsize 29442
+    :lastmodtime '(20551 43245)
+    )
+   (semanticdb-table "RecordUtils.h"
+    :file "RecordUtils.h"
+    :fsize 13658
+    :lastmodtime '(20551 43245)
+    )
+   (semanticdb-table "TableData.h"
+    :file "TableData.h"
+    :fsize 18650
+    :lastmodtime '(20551 43245)
+    )
+   (semanticdb-table "BrokerSyncIndexRecord.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("string" include (:system-flag t) nil [95 112])
+            ("dht/BrokerAction.h" include (:system-flag t) nil [114 143])
+            ("dht/BrokerMessage.h" include (:system-flag t) nil [144 174])
+            ("SuBrokerAction.h" include (:system-flag t) nil [175 202])
+            ("dht/FwTestHooks.h" include (:system-flag t) nil [203 231])
+            ("dht/System.h" include (:system-flag t) nil [232 255])
+            ("Record.h" include nil nil [257 276])
+            ("SuCode.h" include nil nil [277 296])
+            ("MergingRecord.h" include nil nil [297 323])
+            ("BrokerSyncIndexRecord.h" include nil nil [324 358])
+            ("dht/UCharUtils.h" include (:system-flag t) nil [359 386])
+            ("SuFaultHandler.h" include nil nil [387 414])
+            ("SuProcessContext.h" include nil nil [415 444])
+            ("dht/LogUtils.h" include (:system-flag t) nil [445 470])
+            ("dht/ActionContext.h" include (:system-flag t) nil [471 501])
+            ("Tablet.h" include (:system-flag t) nil [502 521])
+            ("RecordUtils.h" include nil nil [522 546])
+            ("TableData.h" include (:system-flag t) nil [547 569])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [571 591])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [593 692])
+            ("missedMessageCheck" function
+               (:parent "BrokerSyncIndexRecord"
+                :arguments 
+                  ( ("msgSequence" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MergingRecordSequenceId" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [742 786])
+                    ("recSequence" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("MergingRecordSequenceId" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [806 850])
+                    ("sendingRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [870 904]))                  
+                :type "void")
+                nil [694 2658])
+            ("overwrite" function
+               (:parent "BrokerSyncIndexRecord"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2773 2798])
+                    ("recordName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2799 2825])
+                    ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2826 2842])
+                    ("inputData" variable
+                       (:reference 1
+                        :type ("IndexRecordInputs" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2853 2883])
+                    ("exists" variable (:type "bool") (reparse-symbol arg-sub-list) [2884 2896]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [2718 3963])
+            ("suExecuteCalledByGetSync" function
+               (:parent "BrokerSyncIndexRecord"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4176 4202]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [4106 5444])
+            ("suExecute" function
+               (:parent "BrokerSyncIndexRecord"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5501 5527]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5446 7288])
+            ("suExecuteImpl" function
+               (:parent "BrokerSyncIndexRecord"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7349 7374])
+                    ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7375 7390])
+                    ("diskRecordBase" variable
+                       (:reference 1
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7391 7414])
+                    ("sendingRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7415 7443])
+                    ("inputData" variable
+                       (:reference 1
+                        :type ("IndexRecordInputs" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7444 7474]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [7290 13358]))          
+    :file "BrokerSyncIndexRecord.cc"
+    :pointmax 13511
+    :fsize 13510
+    :lastmodtime '(20614 57316)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "BadConflictUtils.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/LogUtils.h" include (:system-flag t) nil [174 199])
+            ("dht/JsonObject.h" include (:system-flag t) nil [200 227])
+            ("dht/RequestState.h" include (:system-flag t) nil [228 257])
+            ("Tablet.h" include nil nil [259 278])
+            ("Record.h" include nil nil [279 298])
+            ("SuProcessContext.h" include nil nil [299 328])
+            ("BadConflictUtils.h" include nil nil [329 358])
+            ("RecordUtils.h" include nil nil [359 383])
+            ("BrokerSyncMergingRecord.h" include nil nil [384 420])
+            ("BrokerSyncMasteredRecord.h" include nil nil [421 458])
+            ("BrokerSyncIndexRecord.h" include nil nil [459 493])
+            ("SuBrokerActionFactory.h" include nil nil [494 528])
+            ("SherpaRegion.h" include nil nil [529 554])
+            ("SherpaGlobalData.h" include nil nil [555 584])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [586 606])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [608 707])
+            ("handleBadConflict" function
+               (:parent "BadConflictUtils"
+                :arguments 
+                  ( ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1042 1068])
+                    ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1069 1085])
+                    ("record" variable
+                       (:reference 1
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1086 1102])
+                    ("recordSeqId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1121 1153]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [984 3127])
+            ("getSyncAndApplyToDisk" function
+               (:parent "BadConflictUtils"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3191 3207])
+                    ("record" variable
+                       (:reference 1
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3230 3246])
+                    ("sequenceId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3269 3299]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [3129 6760])
+            ("CreateMessageFromResponse" function
+               (:parent "BadConflictUtils"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6828 6844])
+                    ("record" variable
+                       (:reference 1
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6871 6887])
+                    ("senderRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6914 6947])
+                    ("responseBody" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6974 7007])
+                    ("msgBody" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7034 7056])
+                    ("bmsg" variable
+                       (:reference 1
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7083 7104]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [6762 8559])
+            ("ApplyMessageToDisk" function
+               (:parent "BadConflictUtils"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8620 8636])
+                    ("bmsg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8637 8664]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [8561 9120])
+            ("getFullRegions" function
+               (:parent "BadConflictUtils"
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9177 9193])
+                    ("record" variable
+                       (:reference 1
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9194 9210])
+                    ("fullRegions" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9211 9249]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [9122 10643])
+            ("parseGetSync" function
+               (:parent "BadConflictUtils"
+                :arguments 
+                  ( ("record" variable
+                       (:reference 1
+                        :type ("Record" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10699 10715])
+                    ("responseBody" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10730 10763])
+                    ("recordBody" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10778 10803])
+                    ("seqId" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10817 10836]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [10646 12141]))          
+    :file "BadConflictUtils.cc"
+    :pointmax 12142
+    :fsize 12141
+    :lastmodtime '(20641 19704)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "BadConflictUtils.h"
+    :file "BadConflictUtils.h"
+    :fsize 3934
+    :lastmodtime '(20551 43245)
+    )
+   (semanticdb-table "BrokerSyncMasteredRecord.h"
+    :file "BrokerSyncMasteredRecord.h"
+    :fsize 4816
+    :lastmodtime '(20614 57316)
+    )
+   (semanticdb-table "BrokerSyncIndexRecord.h"
+    :file "BrokerSyncIndexRecord.h"
+    :fsize 3311
+    :lastmodtime '(20551 43245)
+    )
+   (semanticdb-table "SuBrokerActionFactory.h"
+    :file "SuBrokerActionFactory.h"
+    :fsize 2219
+    :lastmodtime '(20551 43245)
+    )
+   (semanticdb-table "SherpaRegion.h"
+    :file "SherpaRegion.h"
+    :fsize 1184
+    :lastmodtime '(20551 43246)
+    )
+   (semanticdb-table "SherpaGlobalData.h"
+    :file "SherpaGlobalData.h"
+    :fsize 5355
+    :lastmodtime '(20551 43246)
+    )
+   )
+  :file "!homes!dbao!svndevn!trunk!storage!handler!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

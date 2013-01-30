@@ -1,0 +1,108 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "ZkMTBase.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sys/time.h" include (:system-flag t) nil [188 209])
+            ("zookeeper/zookeeper.h" include (:system-flag t) nil [211 243])
+            ("dht/CrCode.h" include (:system-flag t) nil [245 268])
+            ("dht/LogUtils.h" include (:system-flag t) nil [269 294])
+            ("dht/ZkHandleBase.h" include (:system-flag t) nil [295 324])
+            ("dht/ZkMTBase.h" include (:system-flag t) nil [325 350])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [569 589])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [591 685])
+            ("zkWatcher" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("zh" variable
+                       (:pointer 1
+                        :type ("zhandle_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [709 723])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [724 733])
+                    ("state" variable (:type "int") (reparse-symbol arg-sub-list) [734 744])
+                    ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [745 762])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [763 773]))                  
+                :type "void")
+                nil [687 873])
+            ("../../common/ZkEventString.inc" include nil nil [898 939])
+            ("../../common/ZkStateString.inc" include nil nil [964 1005])
+            ("ZkMTBase" function
+               (:constructor-flag t
+                :parent "ZkMTBase"
+                :arguments 
+                  ( ("hostList" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1027 1056])
+                    ("chroot" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1057 1084])
+                    ("cert" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1085 1110]))                  
+                :type ("ZkMTBase" type (:type "class") nil nil))
+                nil [1007 1157])
+            ("ZkMTBase" function
+               (:destructor-flag t
+                :parent "ZkMTBase"
+                :type "void")
+                nil [1159 1206])
+            ("zkHandleClear" function
+               (:parent "ZkMTBase"
+                :type "void")
+                nil [1208 1322])
+            ("init" function
+               (:parent "ZkMTBase"
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [1324 1579])
+            ("mainWatcher" function
+               (:parent "ZkMTBase"
+                :arguments 
+                  ( ("zh" variable
+                       (:pointer 1
+                        :type ("zhandle_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1772 1786])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [1787 1796])
+                    ("state" variable (:type "int") (reparse-symbol arg-sub-list) [1797 1807])
+                    ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1808 1825]))                  
+                :type "void")
+                nil [1744 1949])
+            ("zkHandleInit" function
+               (:parent "ZkMTBase"
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                nil [1951 3212]))          
+    :file "ZkMTBase.cc"
+    :pointmax 3365
+    :fsize 3364
+    :lastmodtime '(20427 302)
+    :unmatched-syntax '((punctuation 962 . 963) (punctuation 961 . 962) (symbol 953 . 961) (symbol 946 . 952) (punctuation 945 . 946) (punctuation 944 . 945) (symbol 941 . 944) (punctuation 896 . 897) (punctuation 895 . 896) (symbol 887 . 895) (symbol 880 . 886) (punctuation 879 . 880) (punctuation 878 . 879) (symbol 875 . 878))
+    )
+   )
+  :file "!homes!dbao!svndev!sherpa_externals!trunk!fwcore!zookeeper!mt!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

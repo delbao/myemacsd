@@ -1,0 +1,771 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "LevelDbPersistentStoreImpl.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LEVELDB_PSTORE_IMPL_H" variable (:constant-flag t) nil [542 563])
+            ("PersistentStore.h" include nil nil [565 593])
+            ("SuDecls.h" include nil nil [594 614])
+            ("MySQLCoreDBImpl.h" include nil nil [615 643])
+            ("LevelDbInstanceManager.h" include nil nil [644 679])
+            ("dht/LogUtils.h" include (:system-flag t) nil [680 705])
+            ("dht/StringUtils.h" include (:system-flag t) nil [706 734])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [735 766])
+            ("TabletMetadata.h" include (:system-flag t) nil [767 794])
+            ("LevelDbPersistentStoreImpl" type
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type "class"
+                :members 
+                  ( ("TestLevelDbHelper" friend nil (reparse-symbol classsubparts) [903 933])
+                    ("private" label nil (reparse-symbol classsubparts) [936 944])
+                    ("instanceManager_" variable (:type ("LevelDbInstanceManager" type
+                         (:template-specifier 
+                            ( ("Client" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1161 1210])
+                    ("dbo_" variable (:type ("MySQLCoreDBImpl" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1319 1341])
+                    ("keyType_" variable
+                       (:constant-flag t
+                        :type ("TabletRange::KeyType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1402 1438])
+                    ("LevelDbPersistentStoreImpl" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("LevelDbPersistentStoreImpl" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1470 1499]))                          
+                        :type ("LevelDbPersistentStoreImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1443 1500])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("LevelDbPersistentStoreImpl" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1542 1571]))                          
+                        :type ("LevelDbPersistentStoreImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1505 1572])
+                    ("public" label nil (reparse-symbol classsubparts) [1584 1591])
+                    ("LevelDbPersistentStoreImpl" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TabletRange::KeyType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1623 1644])
+                            ("myDBObj" variable
+                               (:reference 1
+                                :type ("MySQLCoreDBImpl" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1645 1670]))                          
+                        :type ("LevelDbPersistentStoreImpl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1596 1671])
+                    ("LevelDbPersistentStoreImpl" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1676 1714])
+                    ("METADATA_MYSQL_TABLE_NAME" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1773 1824])
+                    ("getKeyType" function
+                       (:prototype-flag t
+                        :type ("TabletRange::KeyType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2029 2069])
+                    ("isHashed" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2257 2279])
+                    ("isOrdered" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2284 2307])
+                    ("isIndexed" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2312 2335])
+                    ("addEmptyTablet" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2424 2451]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2388 2452])
+                    ("initMetadataMetadata" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2547 2574]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2505 2575])
+                    ("dropTablet" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2660 2687]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2628 2688])
+                    ("dropRestoredTablet" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2781 2808]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2741 2809])
+                    ("clearTabletRange" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :type ("Tablet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2900 2915])
+                            ("removalLimit" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2958 2980]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2862 2981])
+                    ("getApproximateTableSize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3079 3106])
+                            ("tableSize" variable
+                               (:reference 1
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3156 3175])
+                            ("rowCount" variable
+                               (:reference 1
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3225 3244]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3034 3245])
+                    ("get" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3323 3356])
+                            ("recordData" variable
+                               (:reference 1
+                                :type ("StorageRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3386 3412]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3298 3413])
+                    ("update" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3494 3527])
+                            ("updateData" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("StorageRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3560 3592]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3466 3593])
+                    ("insert" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3674 3707])
+                            ("insertData" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("StorageRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3740 3772]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3646 3773])
+                    ("remove" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3853 3886])
+                            ("recordKey" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("RecordKey" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3919 3946]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3825 3947])
+                    ("scan" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4031 4064])
+                            ("continuation" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ScanContinuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4065 4102])
+                            ("selector" variable (:type ("ScanSelect::Selector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4113 4143])
+                            ("expiryTime" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4144 4170])
+                            ("scanLimit" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4171 4194])
+                            ("byteLimit" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4204 4221]))                          
+                        :type ("StorageRecordIterator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3999 4222])
+                    ("scan" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("mySQLTableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4346 4380])
+                            ("continuation" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ScanContinuation" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4391 4428])
+                            ("numRecordsToFetch" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4439 4466])
+                            ("callback" variable
+                               (:reference 1
+                                :type ("ScanCallback" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4476 4499])
+                            ("selector" variable (:type ("ScanSelect::Selector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4509 4539])
+                            ("expiryTime" variable
+                               (:constant-flag t
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4549 4575]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4320 4576])
+                    ("getSnapshotExporter" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4701 4734])
+                            ("tablet" variable
+                               (:reference 1
+                                :type ("Tablet" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4780 4796])
+                            ("snapshotId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4842 4872])
+                            ("destMetro" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4918 4948])
+                            ("exporter" variable
+                               (:reference 1
+                                :type ("SnapshotExporterAutoPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4994 5028]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4660 5029])
+                    ("getSnapshotImporter" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMeta" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5123 5156])
+                            ("version" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5197 5224])
+                            ("snapshotId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5265 5295])
+                            ("restoreId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5336 5365])
+                            ("caller" variable (:type "int") (reparse-symbol arg-sub-list) [5406 5417])
+                            ("snapshot" variable
+                               (:reference 1
+                                :type ("SnapshotImporterAutoPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5458 5492]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5082 5493])
+                    ("getIncomingCopyProgress" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("metadata" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5591 5622])
+                            ("snapshotId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5656 5686])
+                            ("current" variable
+                               (:reference 1
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5721 5738])
+                            ("estimated" variable
+                               (:reference 1
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5773 5792]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5546 5799])
+                    ("getOutgoingCopyProgress" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("metadata" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("TabletMetadata" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5901 5932])
+                            ("snapshotId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5966 5996])
+                            ("current" variable
+                               (:reference 1
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6031 6048])
+                            ("estimated" variable
+                               (:reference 1
+                                :type ("int64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6083 6102]))                          
+                        :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5856 6109]))                  
+                :superclasses 
+                  ( ("PersistentStore" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  )
+                nil [796 6112])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [6139 6228])
+            ("LevelDbPersistentStoreImpl::METADATA_MYSQL_TABLE_NAME" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [6230 6393])
+            ("LevelDbPersistentStoreImpl" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("LevelDbPersistentStoreImpl" type (:type "class") nil nil)
+                :arguments 
+                  ( ("keyType" variable (:type ("TabletRange::KeyType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6515 6544])
+                    ("myDBObj" variable
+                       (:reference 1
+                        :type ("MySQLCoreDBImpl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6545 6570]))                  
+                :parent "LevelDbPersistentStoreImpl"
+                :constructor-flag t)
+                nil [6396 6696])
+            ("LevelDbPersistentStoreImpl" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type "void"
+                :parent "LevelDbPersistentStoreImpl"
+                :destructor-flag t)
+                nil [6698 6823])
+            ("getKeyType" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("TabletRange::KeyType" type (:type "class") nil nil)
+                :parent "LevelDbPersistentStoreImpl")
+                nil [6881 7037])
+            ("isHashed" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type "bool"
+                :parent "LevelDbPersistentStoreImpl")
+                nil [7039 7206])
+            ("isOrdered" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type "bool"
+                :parent "LevelDbPersistentStoreImpl")
+                nil [7208 7377])
+            ("isIndexed" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type "bool"
+                :parent "LevelDbPersistentStoreImpl")
+                nil [7379 7548])
+            ("addEmptyTablet" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7679 7706]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [7551 8698])
+            ("initMetadataMetadata" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8834 8861]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [8700 8945])
+            ("dropTablet" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9197 9224]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [9073 10377])
+            ("dropRestoredTablet" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10511 10538]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [10379 10567])
+            ("clearTabletRange" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10886 10901])
+                    ("removalLimit" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10902 10924]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [10756 10978])
+            ("getApproximateTableSize" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11118 11145])
+                    ("tableSize" variable
+                       (:reference 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11170 11189])
+                    ("rowCount" variable
+                       (:reference 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11214 11233]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [10981 11262])
+            ("get" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11381 11414])
+                    ("recordData" variable
+                       (:reference 1
+                        :type ("StorageRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11415 11441]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [11264 12430])
+            ("update" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12552 12585])
+                    ("updateData" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("StorageRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12586 12618]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [12432 13557])
+            ("insert" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13679 13712])
+                    ("insertData" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("StorageRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13720 13752]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [13559 14752])
+            ("remove" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14874 14907])
+                    ("rkey" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RecordKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14908 14930]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [14754 15811])
+            ("scan" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("StorageRecordIterator" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15932 15965])
+                    ("continuation" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ScanContinuation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15966 16003])
+                    ("selector" variable (:type ("ScanSelect::Selector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16009 16039])
+                    ("expiryTime" variable
+                       (:constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16040 16066])
+                    ("scanLimit" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [16067 16090])
+                    ("byteLimit" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16096 16113]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [15813 16153])
+            ("scan" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("mySQLTableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16348 16382])
+                    ("continuation" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("ScanContinuation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16388 16425])
+                    ("numRecordsToFetch" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16431 16458])
+                    ("callback" variable
+                       (:reference 1
+                        :type ("ScanCallback" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16464 16487])
+                    ("selector" variable (:type ("ScanSelect::Selector" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16493 16523])
+                    ("expiryTime" variable
+                       (:constant-flag t
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16529 16555]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [16230 16584])
+            ("getSnapshotExporter" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16719 16752])
+                    ("tablet" variable
+                       (:reference 1
+                        :type ("Tablet" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16773 16789])
+                    ("snapshotId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16810 16840])
+                    ("destMetro" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16861 16891])
+                    ("exporter" variable
+                       (:reference 1
+                        :type ("SnapshotExporterAutoPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16912 16946]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [16586 16975])
+            ("getSnapshotImporter" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("tabletMeta" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17110 17143])
+                    ("version" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17164 17191])
+                    ("snapshotId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17212 17242])
+                    ("restoreId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17263 17292])
+                    ("caller" variable (:type "int") (reparse-symbol arg-sub-list) [17313 17324])
+                    ("importer" variable
+                       (:reference 1
+                        :type ("SnapshotImporterAutoPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17345 17379]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [16977 17408])
+            ("getIncomingCopyProgress" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("metadata" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17547 17578])
+                    ("snapshotId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17603 17633])
+                    ("current" variable
+                       (:reference 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17658 17675])
+                    ("estimated" variable
+                       (:reference 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17700 17719]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [17410 17754])
+            ("getOutgoingCopyProgress" function
+               (:template 
+                  ( ("HelperClass" type (:type "class") nil nil)
+                    ("Client" type (:type "class") nil nil))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("metadata" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("TabletMetadata" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17893 17924])
+                    ("snapshotId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17949 17979])
+                    ("current" variable
+                       (:reference 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18004 18021])
+                    ("estimated" variable
+                       (:reference 1
+                        :type ("int64_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18046 18065]))                  
+                :parent "LevelDbPersistentStoreImpl")
+                nil [17756 18100]))          
+    :file "LevelDbPersistentStoreImpl.h"
+    :pointmax 18135
+    :fsize 18134
+    :lastmodtime '(20690 55277)
+    :unmatched-syntax '((punctuation 933 . 934))
+    :lexical-table 
+        '(("LEVELDB_PSTORE_IMPL_H")
+          )
+
+    )
+   (semanticdb-table "LevelDbInstanceManager.h"
+    :file "LevelDbInstanceManager.h"
+    :fsize 4089
+    :lastmodtime '(20690 55277)
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!storage!engine!leveldb!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

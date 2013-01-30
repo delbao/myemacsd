@@ -1,0 +1,290 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "dhtRecordComparator.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("iostream" include (:system-flag t) nil [60 79])
+            ("fstream" include (:system-flag t) nil [80 98])
+            ("sstream" include (:system-flag t) nil [99 117])
+            ("string" include (:system-flag t) nil [118 135])
+            ("vector" include (:system-flag t) nil [136 153])
+            ("map" include (:system-flag t) nil [155 169])
+            ("boost/tokenizer.hpp" include (:system-flag t) nil [170 200])
+            ("boost/foreach.hpp" include (:system-flag t) nil [201 229])
+            ("dht/LogUtils.h" include (:system-flag t) nil [231 256])
+            ("dht/FwCode.h" include (:system-flag t) nil [257 280])
+            ("dht/StringUtilsCore.h" include (:system-flag t) nil [281 313])
+            ("dht/StringUtils.h" include (:system-flag t) nil [314 342])
+            ("MAX_LINE_LENGTH" variable (:constant-flag t) nil [352 367])
+            ("KEY_COL" variable (:constant-flag t) nil [381 388])
+            ("IDX_COL" variable (:constant-flag t) nil [399 406])
+            ("MODTIME_COL" variable (:constant-flag t) nil [417 428])
+            ("SCAN_START_TIME_COL" variable (:constant-flag t) nil [439 458])
+            ("BRANCHID_COL" variable (:constant-flag t) nil [469 481])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [485 505])
+            ("boost" using (:type ("boost" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [506 528])
+            ("INDEX_FIX_COMMAND" variable
+               (:constant-flag t
+                :type ("string" type (:type "class") nil nil))
+                nil [530 605])
+            ("usage" function
+               (:prototype-flag t
+                :type "void")
+                nil [607 620])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [622 711])
+            ("TM_LOG4CPP_CONF" variable (:constant-flag t) nil [721 736])
+            ("logErrorMessage" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("msg" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [799 810]))                  
+                :type "void")
+                nil [771 878])
+            ("RecordComparator" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [909 916])
+                    ("RecordComparator" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("file1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [942 962])
+                            ("file2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [988 1008]))                          
+                        :type ("RecordComparator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [925 1091])
+                    ("RecordComparator" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1101 1131])
+                    ("compare" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1142 1181])
+                    ("protected" label nil (reparse-symbol classsubparts) [1187 1197])
+                    ("file1_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1206 1220])
+                    ("file2_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1229 1243])
+                    ("tokenize" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("str" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1266 1284])
+                            ("tokens" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1285 1308]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1252 1309]))                  
+                :type "class")
+                nil [880 1312])
+            ("IndexRecordComparator" type
+               (:superclasses 
+                  ( ("RecordComparator" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1373 1380])
+                    ("IndexRecordComparator" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("file1" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1411 1431])
+                            ("file2" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1462 1482])
+                            ("table" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1513 1526])
+                            ("idxFld" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1557 1571])
+                            ("baseTableScanStartTime" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1602 1632])
+                            ("indexTableScanStartTime" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1663 1694])
+                            ("outputFile" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1725 1743]))                          
+                        :type ("IndexRecordComparator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1389 2119])
+                    ("IndexRecordComparator" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2130 2157])
+                    ("compare" function
+                       (:prototype-flag t
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2168 2199])
+                    ("private" label nil (reparse-symbol classsubparts) [2205 2213])
+                    ("table_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2222 2236])
+                    ("indexField_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2245 2264])
+                    ("baseTableScanStartTime_" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2273 2304])
+                    ("indexTableScanStartTime_" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2313 2345])
+                    ("outputFile_" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2354 2373])
+                    ("printFixerCommand" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ofs" variable
+                               (:reference 1
+                                :type ("ofstream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2405 2419])
+                            ("timestamp" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2420 2437])
+                            ("record" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2438 2452])
+                            ("indexKey" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2479 2495])
+                            ("brancId" variable (:type "int") (reparse-symbol arg-sub-list) [2496 2509]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2382 2513])
+                    ("printFixerCommand" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ofs" variable
+                               (:reference 1
+                                :type ("ofstream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2545 2559])
+                            ("record" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2560 2574]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2522 2575])
+                    ("readNextRow" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("in" variable
+                               (:reference 1
+                                :type ("ifstream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2602 2615])
+                            ("row" variable
+                               (:reference 1
+                                :type ("vector" type
+                                     (:template-specifier 
+                                        ( ("string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2616 2636]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2584 2637]))                  
+                :type "class")
+                nil [1314 2640])
+            ("info" type
+               (:members 
+                  ( ("seqId" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2660 2673])
+                    ("ts" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2678 2688]))                  
+                :type "struct")
+                nil [2642 2691])
+            ("compare" function
+               (:parent "RecordComparator"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [2693 5725])
+            ("compare" function
+               (:parent "IndexRecordComparator"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [6240 11860])
+            ("printFixerCommand" function
+               (:parent "IndexRecordComparator"
+                :arguments 
+                  ( ("ofs" variable
+                       (:reference 1
+                        :type ("ofstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11909 11923])
+                    ("timestamp" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11924 11941])
+                    ("record" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11942 11956])
+                    ("indexKey" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11975 11991])
+                    ("branchId" variable (:type "int") (reparse-symbol arg-sub-list) [11992 12005]))                  
+                :type "void")
+                nil [11862 12385])
+            ("printFixerCommand" function
+               (:parent "IndexRecordComparator"
+                :arguments 
+                  ( ("ofs" variable
+                       (:reference 1
+                        :type ("ofstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12434 12448])
+                    ("record" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12449 12463]))                  
+                :type "void")
+                nil [12387 12641])
+            ("readNextRow" function
+               (:parent "IndexRecordComparator"
+                :arguments 
+                  ( ("in" variable
+                       (:reference 1
+                        :type ("ifstream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12685 12698])
+                    ("row" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12699 12719]))                  
+                :type "bool")
+                nil [12643 13118])
+            ("tokenize" function
+               (:parent "RecordComparator"
+                :arguments 
+                  ( ("str" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13153 13171])
+                    ("tokens" variable
+                       (:reference 1
+                        :type ("vector" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13172 13195]))                  
+                :type "void")
+                nil [13120 13438])
+            ("usage" function (:type "void") nil [13440 13670])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [13682 13691])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [13692 13704]))                  
+                :type "int")
+                nil [13673 17353]))          
+    :file "dhtRecordComparator.cc"
+    :pointmax 17541
+    :fsize 17540
+    :lastmodtime '(20465 53867)
+    :unmatched-syntax '((number 2510 . 2511) (punctuation 2508 . 2509) (punctuation 2157 . 2158) (punctuation 2119 . 2120) (punctuation 1131 . 1132) (punctuation 1091 . 1092))
+    :lexical-table 
+        '(("TM_LOG4CPP_CONF" . ((string "\"conf/dhtAuditData/log4cpp.conf\"" 737 . 769)))
+          ("KEY_COL" . ((number "0" 389 . 390)))
+          ("SCAN_START_TIME_COL" . ((number "3" 459 . 460)))
+          ("MAX_LINE_LENGTH" . ((number "4096" 368 . 372)))
+          ("MODTIME_COL" . ((number "2" 429 . 430)))
+          ("BRANCHID_COL" . ((number "4" 482 . 483)))
+          ("IDX_COL" . ((number "1" 407 . 408)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndevn2!trunk!dht!tools!auditData!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,547 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "SherpaTransport.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/SherpaTransport.h" include nil nil [60 92])
+            ("dht/FwCode.h" include nil nil [93 116])
+            ("dht/JsonObject.h" include nil nil [117 144])
+            ("dht/SchemaNames.h" include nil nil [145 173])
+            ("dht/LogUtils.h" include nil nil [174 199])
+            ("dht/FwTestHooks.h" include (:system-flag t) nil [200 228])
+            ("dht/ActionContext.h" include (:system-flag t) nil [229 259])
+            ("string" include (:system-flag t) nil [261 278])
+            ("map" include (:system-flag t) nil [279 293])
+            ("boost/any.hpp" include (:system-flag t) nil [295 319])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [321 341])
+            ("SherpaTransport::URI_PREFIX" variable
+               (:constant-flag t
+                :default-value "\"/YDHTWebService/V1/\""
+                :type ("string" type (:type "class") nil nil))
+                nil [343 408])
+            ("MAXREDIRS" variable
+               (:constant-flag t
+                :default-value "10"
+                :type "int")
+                nil [409 434])
+            ("log" variable
+               (:typemodifiers ("static")
+                :default-value "log4cpp::Category::getInstance(\"dht.framework.\" __FILE__)"
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [480 575])
+            ("isInt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [647 673]))                  
+                :type "bool")
+                nil [636 674])
+            ("isBool" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [687 713]))                  
+                :type "bool")
+                nil [675 714])
+            ("isDouble" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [729 755]))                  
+                :type "bool")
+                nil [715 756])
+            ("isString" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [771 797]))                  
+                :type "bool")
+                nil [757 798])
+            ("SherpaTransport" function
+               (:constructor-flag t
+                :parent "SherpaTransport"
+                :type ("SherpaTransport" type (:type "class") nil nil))
+                nil [800 945])
+            ("SherpaTransport" function
+               (:destructor-flag t
+                :parent "SherpaTransport"
+                :type "void")
+                nil [947 987])
+            ("init" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("host" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1034 1058])
+                    ("appId" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1059 1084])
+                    ("useSSL" variable
+                       (:constant-flag t
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [1090 1108])
+                    ("timeoutMsecs" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1108 1130])
+                    ("idleTimeoutSeconds" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1130 1158]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [990 1391])
+            ("destroy" function
+               (:parent "SherpaTransport"
+                :type "void")
+                nil [1394 1462])
+            ("setImpl" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1511 1535])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1550 1572])
+                    ("ydht" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1587 1607])
+                    ("recursionCount" variable (:type "int") (reparse-symbol arg-sub-list) [1622 1641])
+                    ("uri" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1656 1674]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1464 3413])
+            ("setWithRetries" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("connSetting" variable (:type ("ConnectionSetting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3469 3499])
+                    ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3504 3533])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3534 3561])
+                    ("fields" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MapStrStr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3567 3591])
+                    ("webRc" variable
+                       (:reference 1
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3591 3620])
+                    ("seqId" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3625 3649]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [3415 4381])
+            ("getSherpaTransport" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("transport" variable
+                       (:reference 1
+                        :type ("SherpaTransportAutoPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4441 4475])
+                    ("connSetting" variable
+                       (:reference 1
+                        :type ("ConnectionSetting" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4476 4507]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [4383 4824])
+            ("setWithRetries" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("connSetting" variable (:type ("ConnectionSetting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4884 4914])
+                    ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4915 4944])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4945 4972])
+                    ("fields" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MapStrAny" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4978 5002])
+                    ("webRc" variable
+                       (:reference 1
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5003 5032])
+                    ("seqId" variable
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5037 5061]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [4830 5792])
+            ("setWithRetries" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("connSetting" variable (:type ("ConnectionSetting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5848 5878])
+                    ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5883 5912])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5913 5940])
+                    ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5945 5969])
+                    ("response" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5969 5993])
+                    ("webRc" variable
+                       (:reference 1
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5998 6027])
+                    ("recursionCount" variable (:type "int") (reparse-symbol arg-sub-list) [6032 6051])
+                    ("uri" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6052 6075]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5794 6845])
+            ("set" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6890 6914])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6926 6948])
+                    ("fields" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MapStrAny" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6960 6984])
+                    ("seqId" variable
+                       (:constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6995 7014]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [6847 8453])
+            ("set" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8498 8522])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8534 8556])
+                    ("fields" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("MapStrStr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8568 8592])
+                    ("seqId" variable
+                       (:constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8603 8622]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [8455 9267])
+            ("set" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9312 9341])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9341 9368])
+                    ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9373 9397])
+                    ("response" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9398 9422])
+                    ("recursionCount" variable (:type "int") (reparse-symbol arg-sub-list) [9427 9446])
+                    ("uri" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9447 9470]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [9269 10558])
+            ("getWithRetries" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("connSetting" variable (:type ("ConnectionSetting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10614 10644])
+                    ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10649 10678])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10679 10706])
+                    ("jsonRecord" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10712 10736])
+                    ("webRc" variable
+                       (:reference 1
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10737 10766]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [10560 11495])
+            ("getWithRetries" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("connSetting" variable (:type ("ConnectionSetting" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11551 11581])
+                    ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11582 11611])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11612 11639])
+                    ("json" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11644 11664])
+                    ("webRc" variable
+                       (:reference 1
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11665 11694]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [11497 12418])
+            ("get" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12463 12487])
+                    ("recName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12499 12521])
+                    ("jsonRecord" variable
+                       (:reference 1
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [12533 12552]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [12420 13179])
+            ("get" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13224 13253])
+                    ("recordName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13254 13284])
+                    ("response" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13289 13313]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [13181 13927])
+            ("parseURL" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("input" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [13977 14002])
+                    ("protocol" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14003 14025])
+                    ("hostNPort" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14026 14049])
+                    ("uri" variable
+                       (:reference 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14060 14077]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [13929 14486])
+            ("remove" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("tableName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14534 14563])
+                    ("recordName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14564 14594])
+                    ("response" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14602 14626]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [14488 15221])
+            ("OrderedScanContinuation" function
+               (:parent "SherpaTransport::OrderedScanContinuation"
+                :type "int")
+                nil [15224 15458])
+            ("orderedScan" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("uriPath" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15530 15557])
+                    ("body" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15558 15582])
+                    ("response" variable
+                       (:reference 1
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15583 15607])
+                    ("recursionCount" variable (:type "int") (reparse-symbol arg-sub-list) [15620 15639]))                  
+                :type ("SherpaTransport::OrderedScanContinuation" type (:type "class") nil nil))
+                nil [15459 19666])
+            ("enableAutoRedirect" function
+               (:parent "SherpaTransport"
+                :type "void")
+                nil [19668 19741])
+            ("disableAutoRedirect" function
+               (:parent "SherpaTransport"
+                :type "void")
+                nil [19743 19818])
+            ("isRetryMechanismRequired" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("frc" variable (:type ("FwCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19877 19902]))                  
+                :type "bool")
+                nil [19820 20179])
+            ("setHeader" function
+               (:parent "SherpaTransport"
+                :arguments 
+                  ( ("headerName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20314 20344])
+                    ("headerValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20355 20386]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [20265 20456])
+            ("isInt" function
+               (:arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20566 20593]))                  
+                :type "bool")
+                nil [20555 20639])
+            ("isBool" function
+               (:arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20653 20680]))                  
+                :type "bool")
+                nil [20641 20727])
+            ("isDouble" function
+               (:arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20743 20770]))                  
+                :type "bool")
+                nil [20729 20819])
+            ("isString" function
+               (:arguments 
+                  ( ("operand" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("boost::any" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20835 20862]))                  
+                :type "bool")
+                nil [20821 20927]))          
+    :file "SherpaTransport.cc"
+    :pointmax 21080
+    :fsize 21079
+    :lastmodtime '(20614 58615)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndevn!branches!uffIntegration!framework!base!src!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

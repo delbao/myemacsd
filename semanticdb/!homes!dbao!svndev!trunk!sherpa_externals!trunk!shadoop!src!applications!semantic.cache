@@ -1,0 +1,373 @@
+;; Object applications/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "applications/"
+  :tables (list 
+   (semanticdb-table "HDFSToHDFS.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("applications" package nil nil [1 22])
+            ("java.io.IOException" include nil nil [25 52])
+            ("java.util.ArrayList" include nil nil [53 80])
+            ("java.util.Iterator" include nil nil [81 107])
+            ("java.util.List" include nil nil [108 130])
+            ("java.util.StringTokenizer" include nil nil [131 164])
+            ("org.apache.hadoop.conf.Configuration" include nil nil [234 278])
+            ("org.apache.hadoop.conf.Configured" include nil nil [279 320])
+            ("org.apache.hadoop.fs.Path" include nil nil [321 354])
+            ("org.apache.hadoop.io.LongWritable" include nil nil [398 439])
+            ("org.apache.hadoop.io.Text" include nil nil [440 473])
+            ("org.apache.hadoop.mapred.FileInputFormat" include nil nil [526 574])
+            ("org.apache.hadoop.mapred.FileOutputFormat" include nil nil [575 624])
+            ("org.apache.hadoop.mapred.JobClient" include nil nil [625 667])
+            ("org.apache.hadoop.mapred.JobConf" include nil nil [668 708])
+            ("org.apache.hadoop.mapred.MapReduceBase" include nil nil [709 755])
+            ("org.apache.hadoop.mapred.Mapper" include nil nil [756 795])
+            ("org.apache.hadoop.mapred.OutputCollector" include nil nil [796 844])
+            ("org.apache.hadoop.mapred.Reporter" include nil nil [888 929])
+            ("org.apache.hadoop.mapred.RecordReader" include nil nil [983 1028])
+            ("org.apache.hadoop.mapred.InputSplit" include nil nil [1029 1072])
+            ("org.apache.hadoop.util.Tool" include nil nil [1076 1111])
+            ("org.apache.hadoop.util.ToolRunner" include nil nil [1112 1153])
+            ("sherpa.SherpaConf" include nil nil [1199 1224])
+            ("sherpa.SherpaInputFormat" include nil nil [1225 1257])
+            ("sherpa.SherpaRecordReader" include nil nil [1258 1291])
+            ("sherpa.SherpaSplit" include nil nil [1292 1318])
+            ("net.sf.json.*" include nil nil [1320 1341])
+            ("HDFSToHDFS" type
+               (:typemodifiers ("public")
+                :interfaces ("Tool")
+                :superclasses "Configured"
+                :members 
+                  ( ("printUsage" function
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2414 2599])
+                    ("run" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [2621 2634]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [2606 6514])
+                    ("main" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [6547 6560]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [6523 6681]))                  
+                :type "class")
+                nil [1423 6684]))          
+    :file "HDFSToHDFS.java"
+    :pointmax 6685
+    :fsize 6684
+    :lastmodtime '(20427 312)
+    :unmatched-syntax '((GT 1599 . 1600) (COMMA 1593 . 1594) (COMMA 1587 . 1588) (COMMA 1581 . 1582) (PUBLIC 1496 . 1502) (LT 1568 . 1569))
+    )
+   (semanticdb-table "SherpaHdfsWordCount.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("applications" package nil nil [1 22])
+            ("java.io.IOException" include nil nil [25 52])
+            ("java.util.ArrayList" include nil nil [53 80])
+            ("java.util.Iterator" include nil nil [81 107])
+            ("java.util.List" include nil nil [108 130])
+            ("org.apache.hadoop.conf.Configuration" include nil nil [168 212])
+            ("org.apache.hadoop.conf.Configured" include nil nil [213 254])
+            ("org.apache.hadoop.fs.Path" include nil nil [365 398])
+            ("org.apache.hadoop.io.IntWritable" include nil nil [442 482])
+            ("org.apache.hadoop.io.LongWritable" include nil nil [483 524])
+            ("org.apache.hadoop.io.Text" include nil nil [525 558])
+            ("org.apache.hadoop.mapred.FileOutputFormat" include nil nil [611 660])
+            ("org.apache.hadoop.mapred.JobClient" include nil nil [661 703])
+            ("org.apache.hadoop.mapred.JobConf" include nil nil [704 744])
+            ("org.apache.hadoop.mapred.MapReduceBase" include nil nil [745 791])
+            ("org.apache.hadoop.mapred.Mapper" include nil nil [792 831])
+            ("org.apache.hadoop.mapred.OutputCollector" include nil nil [832 880])
+            ("org.apache.hadoop.mapred.Reducer" include nil nil [881 921])
+            ("org.apache.hadoop.mapred.Reporter" include nil nil [965 1006])
+            ("org.apache.hadoop.mapred.RecordReader" include nil nil [1060 1105])
+            ("org.apache.hadoop.mapred.InputSplit" include nil nil [1106 1149])
+            ("org.apache.hadoop.util.Tool" include nil nil [1153 1188])
+            ("org.apache.hadoop.util.ToolRunner" include nil nil [1189 1230])
+            ("sherpa.SherpaConf" include nil nil [1276 1301])
+            ("sherpa.SherpaInputFormat" include nil nil [1302 1334])
+            ("sherpa.SherpaRecordReader" include nil nil [1335 1368])
+            ("sherpa.SherpaSplit" include nil nil [1369 1395])
+            ("sherpa.SherpaJsonConfig" include nil nil [1396 1427])
+            ("net.sf.json.*" include nil nil [1429 1450])
+            ("SherpaHdfsWordCount" type
+               (:typemodifiers ("public")
+                :interfaces ("Tool")
+                :superclasses "Configured"
+                :members 
+                  ( ("SherpaUnpackRR" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "SherpaRecordReader"
+                        :members 
+                          ( ("unpackSherpaInput" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("inobj" variable (:type "JSONObject") (reparse-symbol formal_parameters) [5219 5235]))                                  
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [5187 5328])
+                            ("SherpaUnpackRR" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("job" variable (:type "Configuration") (reparse-symbol formal_parameters) [5354 5371])
+                                    ("split" variable (:type "SherpaSplit") (reparse-symbol formal_parameters) [5400 5417]))                                  )
+                                (reparse-symbol class_member_declaration) [5332 5464]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [5116 5473])
+                    ("UnpackSherpaIF" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "SherpaInputFormat"
+                        :members 
+                          ( ("getRecordReader" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :arguments 
+                                  ( ("genericSplit" variable (:type "InputSplit") (reparse-symbol formal_parameters) [5606 5629])
+                                    ("job" variable (:type "JobConf") (reparse-symbol formal_parameters) [5631 5642])
+                                    ("reporter" variable (:type "Reporter") (reparse-symbol formal_parameters) [5649 5666]))                                  )
+                                (reparse-symbol class_member_declaration) [5584 5848]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [5477 5853])
+                    ("printUsage" function
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5860 6047])
+                    ("run" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [6069 6082]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6054 9517])
+                    ("main" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [9550 9563]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9526 9693]))                  
+                :type "class")
+                nil [1532 9696]))          
+    :file "SherpaHdfsWordCount.java"
+    :pointmax 9697
+    :fsize 9696
+    :lastmodtime '(20427 312)
+    :unmatched-syntax '((GT 5582 . 5583) (COMMA 5576 . 5577) (PUBLIC 5544 . 5550) (LT 5563 . 5564) (GT 4754 . 4755) (COMMA 4741 . 4742) (COMMA 4735 . 4736) (COMMA 4722 . 4723) (PUBLIC 4646 . 4652) (LT 4717 . 4718) (GT 1720 . 1721) (COMMA 1707 . 1708) (COMMA 1701 . 1702) (COMMA 1695 . 1696) (PUBLIC 1610 . 1616) (LT 1682 . 1683))
+    )
+   (semanticdb-table "SherpaKeysToHDFS.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("applications" package nil nil [1 22])
+            ("java.io.IOException" include nil nil [25 52])
+            ("java.util.ArrayList" include nil nil [53 80])
+            ("java.util.Iterator" include nil nil [81 107])
+            ("java.util.List" include nil nil [108 130])
+            ("org.apache.hadoop.conf.Configuration" include nil nil [200 244])
+            ("org.apache.hadoop.conf.Configured" include nil nil [245 286])
+            ("org.apache.hadoop.fs.Path" include nil nil [397 430])
+            ("org.apache.hadoop.io.IntWritable" include nil nil [474 514])
+            ("org.apache.hadoop.io.LongWritable" include nil nil [515 556])
+            ("org.apache.hadoop.io.Text" include nil nil [557 590])
+            ("org.apache.hadoop.mapred.FileOutputFormat" include nil nil [643 692])
+            ("org.apache.hadoop.mapred.JobClient" include nil nil [693 735])
+            ("org.apache.hadoop.mapred.JobConf" include nil nil [736 776])
+            ("org.apache.hadoop.mapred.MapReduceBase" include nil nil [777 823])
+            ("org.apache.hadoop.mapred.Mapper" include nil nil [824 863])
+            ("org.apache.hadoop.mapred.OutputCollector" include nil nil [864 912])
+            ("org.apache.hadoop.mapred.Reducer" include nil nil [913 953])
+            ("org.apache.hadoop.mapred.Reporter" include nil nil [997 1038])
+            ("org.apache.hadoop.mapred.RecordReader" include nil nil [1092 1137])
+            ("org.apache.hadoop.mapred.InputSplit" include nil nil [1138 1181])
+            ("org.apache.hadoop.util.Tool" include nil nil [1185 1220])
+            ("org.apache.hadoop.util.ToolRunner" include nil nil [1221 1262])
+            ("sherpa.SherpaConf" include nil nil [1308 1333])
+            ("sherpa.SherpaInputFormat" include nil nil [1334 1366])
+            ("sherpa.SherpaRecordReader" include nil nil [1367 1400])
+            ("sherpa.SherpaSplit" include nil nil [1401 1427])
+            ("sherpa.SherpaJsonConfig" include nil nil [1428 1459])
+            ("net.sf.json.*" include nil nil [1461 1482])
+            ("SherpaKeysToHDFS" type
+               (:typemodifiers ("public")
+                :interfaces ("Tool")
+                :superclasses "Configured"
+                :members 
+                  ( ("SherpaUnpackRR" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "SherpaRecordReader"
+                        :members 
+                          ( ("unpackSherpaInput" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("inobj" variable (:type "JSONObject") (reparse-symbol formal_parameters) [5343 5359]))                                  
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [5311 5452])
+                            ("SherpaUnpackRR" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("job" variable (:type "Configuration") (reparse-symbol formal_parameters) [5478 5495])
+                                    ("split" variable (:type "SherpaSplit") (reparse-symbol formal_parameters) [5524 5541]))                                  )
+                                (reparse-symbol class_member_declaration) [5456 5588]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [5240 5597])
+                    ("UnpackSherpaIF" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "SherpaInputFormat"
+                        :members 
+                          ( ("getRecordReader" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :arguments 
+                                  ( ("genericSplit" variable (:type "InputSplit") (reparse-symbol formal_parameters) [5730 5753])
+                                    ("job" variable (:type "JobConf") (reparse-symbol formal_parameters) [5755 5766])
+                                    ("reporter" variable (:type "Reporter") (reparse-symbol formal_parameters) [5773 5790]))                                  )
+                                (reparse-symbol class_member_declaration) [5708 5972]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [5601 5977])
+                    ("printUsage" function
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [5984 6171])
+                    ("run" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [6193 6206]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [6178 9869])
+                    ("main" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [9902 9915]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [9878 10042]))                  
+                :type "class")
+                nil [1564 10045]))          
+    :file "SherpaKeysToHDFS.java"
+    :pointmax 10046
+    :fsize 10045
+    :lastmodtime '(20427 312)
+    :unmatched-syntax '((GT 5706 . 5707) (COMMA 5700 . 5701) (PUBLIC 5668 . 5674) (LT 5687 . 5688) (GT 4878 . 4879) (COMMA 4865 . 4866) (COMMA 4859 . 4860) (COMMA 4846 . 4847) (PUBLIC 4770 . 4776) (LT 4841 . 4842) (GT 1753 . 1754) (COMMA 1740 . 1741) (COMMA 1734 . 1735) (COMMA 1728 . 1729) (PUBLIC 1643 . 1649) (LT 1715 . 1716))
+    )
+   (semanticdb-table "SherpaToHdfs.java"
+    :major-mode 'java-mode
+    :tags 
+        '( ("applications" package nil nil [1 22])
+            ("java.io.IOException" include nil nil [25 52])
+            ("java.util.ArrayList" include nil nil [53 80])
+            ("java.util.Iterator" include nil nil [81 107])
+            ("java.util.List" include nil nil [108 130])
+            ("org.apache.hadoop.conf.Configuration" include nil nil [200 244])
+            ("org.apache.hadoop.conf.Configured" include nil nil [245 286])
+            ("org.apache.hadoop.fs.Path" include nil nil [287 320])
+            ("org.apache.hadoop.io.LongWritable" include nil nil [364 405])
+            ("org.apache.hadoop.io.Text" include nil nil [406 439])
+            ("org.apache.hadoop.mapred.FileOutputFormat" include nil nil [492 541])
+            ("org.apache.hadoop.mapred.JobClient" include nil nil [542 584])
+            ("org.apache.hadoop.mapred.JobConf" include nil nil [585 625])
+            ("org.apache.hadoop.mapred.MapReduceBase" include nil nil [626 672])
+            ("org.apache.hadoop.mapred.Mapper" include nil nil [673 712])
+            ("org.apache.hadoop.mapred.OutputCollector" include nil nil [713 761])
+            ("org.apache.hadoop.mapred.Reporter" include nil nil [805 846])
+            ("org.apache.hadoop.mapred.RecordReader" include nil nil [900 945])
+            ("org.apache.hadoop.mapred.InputSplit" include nil nil [946 989])
+            ("org.apache.hadoop.util.Tool" include nil nil [993 1028])
+            ("org.apache.hadoop.util.ToolRunner" include nil nil [1029 1070])
+            ("sherpa.SherpaConf" include nil nil [1116 1141])
+            ("sherpa.SherpaInputFormat" include nil nil [1142 1174])
+            ("sherpa.SherpaRecordReader" include nil nil [1175 1208])
+            ("sherpa.SherpaSplit" include nil nil [1209 1235])
+            ("net.sf.json.*" include nil nil [1237 1258])
+            ("SherpaToHdfs" type
+               (:typemodifiers ("public")
+                :interfaces ("Tool")
+                :superclasses "Configured"
+                :members 
+                  ( ("totalMapTime" variable
+                       (:typemodifiers ("public" "static")
+                        :type "long")
+                        (reparse-symbol class_member_declaration) [1409 1441])
+                    ("SherpaUnpackRR" type
+                       (:typemodifiers ("public" "static")
+                        :superclasses "SherpaRecordReader"
+                        :members 
+                          ( ("unpackSherpaInput" function
+                               (:typemodifiers ("public")
+                                :arguments 
+                                  ( ("inobj" variable (:type "JSONObject") (reparse-symbol formal_parameters) [3691 3707]))                                  
+                                :type "String")
+                                (reparse-symbol class_member_declaration) [3659 3800])
+                            ("SherpaUnpackRR" function
+                               (:constructor-flag t
+                                :throws ("IOException")
+                                :typemodifiers ("public")
+                                :arguments 
+                                  ( ("job" variable (:type "Configuration") (reparse-symbol formal_parameters) [3826 3843])
+                                    ("split" variable (:type "SherpaSplit") (reparse-symbol formal_parameters) [3872 3889]))                                  )
+                                (reparse-symbol class_member_declaration) [3804 3936]))                          
+                        :type "class")
+                        (reparse-symbol class_member_declaration) [3588 3945])
+                    ("printUsage" function
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [4352 4539])
+                    ("run" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [4561 4574]))                          
+                        :type "int")
+                        (reparse-symbol class_member_declaration) [4546 8759])
+                    ("main" function
+                       (:throws ("Exception")
+                        :typemodifiers ("public" "static")
+                        :arguments 
+                          ( ("args" variable
+                               (:dereference 1
+                                :type "String")
+                                (reparse-symbol formal_parameters) [8792 8805]))                          
+                        :type "void")
+                        (reparse-symbol class_member_declaration) [8768 8983]))                  
+                :type "class")
+                nil [1340 8986]))          
+    :file "SherpaToHdfs.java"
+    :pointmax 8987
+    :fsize 8986
+    :lastmodtime '(20427 312)
+    :unmatched-syntax '((GT 4028 . 4029) (COMMA 4022 . 4023) (PUBLIC 3949 . 3955) (LT 4009 . 4010) (GT 1550 . 1551) (COMMA 1544 . 1545) (COMMA 1538 . 1539) (COMMA 1532 . 1533) (PUBLIC 1447 . 1453) (LT 1519 . 1520))
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!sherpa_externals!trunk!shadoop!src!applications!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

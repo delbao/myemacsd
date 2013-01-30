@@ -1,0 +1,147 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "LevelDbPersistentStoreImpl.cc"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "LevelDbPersistentStoreImpl.cc"
+    :pointmax 12148
+    :fsize 12147
+    :lastmodtime '(20641 19366)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "LevelDbThriftClient.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LevelDbClient.h" include nil nil [169 195])
+            ("LevelDbThriftClient.h" include nil nil [196 228])
+            ("iostream" include (:system-flag t) nil [229 248])
+            ("dht/LogUtils.h" include (:system-flag t) nil [249 274])
+            ("dht/ActionContext.h" include (:system-flag t) nil [275 305])
+            ("apache::thrift::protocol" using (:type ("apache::thrift::protocol" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [307 348])
+            ("apache::thrift::transport" using (:type ("apache::thrift::transport" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [349 391])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [520 609])
+            ("createInstance" function
+               (:parent "LevelDbThriftClient"
+                :arguments 
+                  ( ("instanceId" variable (:type "int") (reparse-symbol arg-sub-list) [688 703]))                  
+                :type ("boost::shared_ptr" type
+                     (:template-specifier 
+                        ( ("LevelDbThriftClient" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [612 1617])
+            ("LevelDbThriftClient" function
+               (:constructor-flag t
+                :parent "LevelDbThriftClient"
+                :arguments 
+                  ( ("instanceId" variable (:type "int") (reparse-symbol arg-sub-list) [1661 1676])
+                    ("socket" variable (:type ("boost::shared_ptr" type
+                         (:template-specifier 
+                            ( ("TSocket" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1697 1731])
+                    ("transport" variable (:type ("boost::shared_ptr" type
+                         (:template-specifier 
+                            ( ("TTransport" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1752 1792])
+                    ("protocol" variable (:type ("boost::shared_ptr" type
+                         (:template-specifier 
+                            ( ("TProtocol" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol arg-sub-list) [1813 1872]))                  
+                :type ("LevelDbThriftClient" type (:type "class") nil nil))
+                nil [1619 2146])
+            ("LevelDbThriftClient" function
+               (:constructor-flag t
+                :parent "LevelDbThriftClient"
+                :arguments 
+                  ( ("instanceId" variable (:type "int") (reparse-symbol arg-sub-list) [2278 2293]))                  
+                :type ("LevelDbThriftClient" type (:type "class") nil nil))
+                nil [2236 2717])
+            ("LevelDbThriftClient" function
+               (:destructor-flag t
+                :parent "LevelDbThriftClient"
+                :type "void")
+                nil [2720 2873])
+            ("getRecord" function
+               (:parent "LevelDbThriftClient"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3097 3120])
+                    ("recordData" variable
+                       (:reference 1
+                        :type ("StorageRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3121 3147]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [3044 4521])
+            ("insertRecord" function
+               (:parent "LevelDbThriftClient"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4701 4724])
+                    ("insertData" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("StorageRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4725 4757]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [4645 5809])
+            ("updateRecord" function
+               (:parent "LevelDbThriftClient"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6025 6048])
+                    ("updateData" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("StorageRecord" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6049 6081]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [5969 7125])
+            ("removeRecord" function
+               (:parent "LevelDbThriftClient"
+                :arguments 
+                  ( ("key" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7348 7371])
+                    ("recordName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("RecordKey" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7372 7400]))                  
+                :type ("SuCode::ResponseCode" type (:type "class") nil nil))
+                nil [7292 8017]))          
+    :file "LevelDbThriftClient.cc"
+    :pointmax 8169
+    :fsize 8168
+    :lastmodtime '(20641 19366)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svn!branches!releases!current!current!storage!engine!leveldb!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

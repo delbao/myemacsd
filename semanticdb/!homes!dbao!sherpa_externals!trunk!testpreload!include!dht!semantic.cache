@@ -1,0 +1,501 @@
+;; Object dht/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dht/"
+  :tables (list 
+   (semanticdb-table "test_wrappers.h"
+    :major-mode 'c-mode
+    :tags 
+        '( ("TEST_WRAPPERS_H" variable (:constant-flag t) nil [92 107])
+            ("string" include (:system-flag t) nil [232 249])
+            ("map" include (:system-flag t) nil [250 264])
+            ("list" include (:system-flag t) nil [265 280])
+            ("deque" include (:system-flag t) nil [281 297])
+            ("curl/curl.h" include (:system-flag t) nil [298 320])
+            ("sys/types.h" include (:system-flag t) nil [321 343])
+            ("vector" include (:system-flag t) nil [345 362])
+            ("unicode/ucnv.h" include (:system-flag t) nil [363 388])
+            ("unicode/unorm.h" include (:system-flag t) nil [389 415])
+            ("ysys/time.h" include (:system-flag t) nil [416 438])
+            ("tribble/TribbleClient.h" include (:system-flag t) nil [439 473])
+            ("tribble/Transaction.h" include (:system-flag t) nil [474 506])
+            ("dht/mock_system.h" include nil nil [507 535])
+            ("mysql/mysql.h" include (:system-flag t) nil [537 561])
+            ("mon/mon_metrics.h" include (:system-flag t) nil [562 590])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [592 612])
+            ("dht_test_mon_metrics" type
+               (:members 
+                  ( ("sent" variable (:type "bool") (reparse-symbol classsubparts) [787 797])
+                    ("dimensions" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [802 847])
+                    ("metrics" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("uint64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [852 891])
+                    ("reset" function (:type "void") (reparse-symbol classsubparts) [897 992]))                  
+                :type "struct")
+                nil [753 995])
+            ("dht_test_mon_metrics_" variable
+               (:typemodifiers ("extern")
+                :type ("dht_test_mon_metrics" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [997 1054])
+            ("dht_test_tribble" type
+               (:members 
+                  ( ("callAction" variable (:type "bool") (reparse-symbol classsubparts) [1222 1250])
+                    ("validReturn" variable (:type "bool") (reparse-symbol classsubparts) [1255 1284])
+                    ("recReturn" variable (:type ("tribble::ReturnCode::Code" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1289 1325])
+                    ("fdReturn" variable (:type ("tribble::ReturnCode::Code" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1330 1365])
+                    ("stopReturn" variable (:type ("tribble::ReturnCode::Code" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1370 1407])
+                    ("startReturn" variable (:type ("tribble::ReturnCode::Code" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1412 1450])
+                    ("unsubReturn" variable (:type ("tribble::ReturnCode::Code" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1455 1493])
+                    ("subReturn" variable (:type ("tribble::ReturnCode::Code" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1498 1534])
+                    ("pubReturn" variable (:type ("tribble::ReturnCode::Code" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1539 1575])
+                    ("timeoutSetting" variable (:type "unsigned int") (reparse-symbol classsubparts) [1580 1608])
+                    ("committedTopic_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1613 1641])
+                    ("committedTxnData_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("tribble::TransactionState" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [1646 1703]))                  
+                :type "struct")
+                nil [1192 1707])
+            ("dht_test_tribble_" variable
+               (:typemodifiers ("extern")
+                :type ("dht_test_tribble" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1709 1758])
+            ("dht_test_mdbm" type
+               (:members 
+                  ( ("mdbm_errors" variable (:type "bool") (reparse-symbol classsubparts) [1919 1936])
+                    ("mdbm_lock_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1941 1966])
+                    ("mdbm_unlock_count" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1971 1998]))                  
+                :type "struct")
+                nil [1892 2001])
+            ("dht_test_mdbm_" variable
+               (:typemodifiers ("extern")
+                :type ("dht_test_mdbm" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2003 2046])
+            ("dht_test_ycfn" type
+               (:members 
+                  ( ("ycfnError" variable (:type "bool") (reparse-symbol classsubparts) [2208 2223])
+                    ("ycfnErrCode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2228 2249])
+                    ("maxPlaintextLen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2254 2277])
+                    ("maxCiphertextLen" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2282 2306]))                  
+                :type "struct")
+                nil [2181 2310])
+            ("dht_test_ycfn_" variable
+               (:typemodifiers ("extern")
+                :type ("dht_test_ycfn" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2312 2355])
+            ("map" include (:system-flag t) nil [2357 2371])
+            ("dht_test_apache" type
+               (:members 
+                  ( ("dht_test_apache" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("dht_test_apache" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [2536 2554])
+                    ("saveOutput" variable (:type "bool") (reparse-symbol classsubparts) [2559 2575])
+                    ("responseOutput" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2608 2635])
+                    ("apSetupClientBlockReturn" variable (:type "int") (reparse-symbol classsubparts) [2662 2691])
+                    ("apShouldClientBlockReturn" variable (:type "int") (reparse-symbol classsubparts) [2718 2748])
+                    ("bodyContent" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [2775 2793])
+                    ("bodyIndex" variable (:type "int") (reparse-symbol classsubparts) [2811 2825])
+                    ("bodyChunkSize" variable (:type "int") (reparse-symbol classsubparts) [2865 2883])
+                    ("bodyTotalSize" variable (:type "int") (reparse-symbol classsubparts) [2917 2935])
+                    ("failBodyRead" variable (:type "bool") (reparse-symbol classsubparts) [2958 2976])
+                    ("setHeaderKey" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3011 3030])
+                    ("setHeaderValue" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3063 3084])
+                    ("unsetHeaderKey" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3117 3138])
+                    ("childTerminateCount" variable (:type "int") (reparse-symbol classsubparts) [3152 3176])
+                    ("logErrorCount" variable (:type "int") (reparse-symbol classsubparts) [3218 3236])
+                    ("httpHdrs" variable (:type ("std::map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3274 3318])
+                    ("setHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hdr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3338 3354])
+                            ("value" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3355 3373]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3323 3374])
+                    ("unsetHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hdr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3396 3412]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3379 3413])
+                    ("clearHeaders" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3418 3438])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3443 3456])
+                    ("contentLen" variable (:type "long") (reparse-symbol classsubparts) [3461 3477]))                  
+                :type "struct")
+                nil [2507 3480])
+            ("dht_test_apache_" variable
+               (:typemodifiers ("extern")
+                :type ("dht_test_apache" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3482 3529])
+            ("dhtTestYca" type
+               (:members 
+                  ( ("ycaError" variable (:type "bool") (reparse-symbol classsubparts) [3687 3701])
+                    ("ycaOpenCertFail" variable (:type "bool") (reparse-symbol classsubparts) [3706 3727])
+                    ("ycaInitFail" variable (:type "bool") (reparse-symbol classsubparts) [3732 3749])
+                    ("certValidityCheckReturn" variable (:type "int") (reparse-symbol classsubparts) [3754 3782])
+                    ("certValue" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3787 3803])
+                    ("certAppidValues" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("char" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [3808 3838]))                  
+                :type "struct")
+                nil [3663 3841])
+            ("dhtTestYca_" variable
+               (:typemodifiers ("extern")
+                :type ("dhtTestYca" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [3843 3880])
+            ("dhtTestCurl" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [3901 3908])
+                    ("dhtTestCurl" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("err" variable (:type "bool") (reparse-symbol arg-sub-list) [3925 3934]))                          
+                        :type ("dhtTestCurl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3913 4090])
+                    ("dhtTestCurl" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [4095 4123])
+                    ("reset" function (:type "void") (reparse-symbol classsubparts) [4128 4571])
+                    ("pushResponseBody" function
+                       (:arguments 
+                          ( ("responseBody" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4699 4732]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4677 4784])
+                    ("urlOpt_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4798 4818])
+                    ("postBody_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4836 4858])
+                    ("rspBuf_" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4885 4906])
+                    ("curlError_" variable (:type "bool") (reparse-symbol classsubparts) [4931 4947])
+                    ("errorCode_" variable (:type ("CURLcode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4952 4972])
+                    ("headers_" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [4977 5015])
+                    ("curlinfoResponseCodes_" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("int" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5020 5056])
+                    ("postBodies_" variable (:type ("std::deque" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5112 5148])
+                    ("sentUrls_" variable (:type ("std::deque" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [5188 5222])
+                    ("setSpecialRunningHandles" function
+                       (:arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [5439 5445]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5409 5491])
+                    ("getRunningHandles" function (:type "int") (reparse-symbol classsubparts) [5496 5560])
+                    ("pushCurlMsg" function
+                       (:arguments 
+                          ( ("x" variable (:type ("CURLMsg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5582 5592]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5565 5632])
+                    ("setCurlInfoResponseCode" function
+                       (:arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [5666 5672]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5637 5765])
+                    ("pushCurlInfoResponseCode" function
+                       (:arguments 
+                          ( ("x" variable (:type "int") (reparse-symbol arg-sub-list) [5800 5806]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5770 5859])
+                    ("curlResponseBodies_" variable (:type ("std::deque" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [6026 6070])
+                    ("curlMsgIx_" variable (:type "unsigned int") (reparse-symbol classsubparts) [6075 6099])
+                    ("running_handles_" variable (:type "int") (reparse-symbol classsubparts) [6135 6156])
+                    ("special_running_handles_" variable (:type "int") (reparse-symbol classsubparts) [6210 6239])
+                    ("curlMsgs_" variable (:type ("vector" type
+                         (:template-specifier 
+                            ( ("CURLMsg" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [6281 6310]))                  
+                :type "class")
+                nil [3881 6343])
+            ("dhtTestCurl_" variable
+               (:typemodifiers ("extern")
+                :type ("dhtTestCurl" type (:type "class") nil nil))
+                nil [6345 6377])
+            ("dht_test_shmproxy" type
+               (:members 
+                  ( ("test" variable (:type "bool") (reparse-symbol classsubparts) [6545 6555])
+                    ("seg_size" variable (:type "int") (reparse-symbol classsubparts) [6560 6573])
+                    ("buf" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [6578 6588])
+                    ("buf_len" variable (:type "int") (reparse-symbol classsubparts) [6593 6605])
+                    ("msg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [6610 6620])
+                    ("msg_len" variable (:type "int") (reparse-symbol classsubparts) [6625 6637])
+                    ("buf_ref_count" variable (:type "int") (reparse-symbol classsubparts) [6642 6660])
+                    ("flags" variable (:type "int") (reparse-symbol classsubparts) [6665 6675])
+                    ("error" variable (:type "int") (reparse-symbol classsubparts) [6680 6690])
+                    ("key" variable (:type "int") (reparse-symbol classsubparts) [6695 6703]))                  
+                :type "struct")
+                nil [6514 6706])
+            ("dht_test_shmproxy_" variable
+               (:typemodifiers ("extern")
+                :type ("dht_test_shmproxy" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [6708 6759])
+            ("dht_test_fileio" type
+               (:members 
+                  ( ("fail_fopen" variable (:type "bool") (reparse-symbol classsubparts) [6926 6942])
+                    ("override_fgets" variable (:type "bool") (reparse-symbol classsubparts) [6947 6967])
+                    ("fgets_returns" variable (:type ("std::list" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [6972 7010]))                  
+                :type "struct")
+                nil [6897 7013])
+            ("dht_test_fileio_" variable
+               (:typemodifiers ("extern")
+                :type ("dht_test_fileio" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [7015 7062])
+            ("dht_test_uchar" type
+               (:members 
+                  ( ("ucnv_open_return" variable (:type ("UErrorCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7226 7254])
+                    ("ucnv_from_uchars_return" variable (:type ("UErrorCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7259 7294])
+                    ("ucnv_to_uchars_return" variable (:type ("UErrorCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7299 7332])
+                    ("unorm_normalize_return" variable (:type ("UErrorCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7337 7371])
+                    ("uregex_settext_return" variable (:type ("UErrorCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7376 7409])
+                    ("uregex_matches_return" variable (:type ("UErrorCode" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7414 7447]))                  
+                :type "struct")
+                nil [7197 7450])
+            ("dht_test_uchar_" variable
+               (:typemodifiers ("extern")
+                :type ("dht_test_uchar" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [7452 7497])
+            ("dht_test_mysql" type
+               (:members 
+                  ( ("fake_connect_enabled" variable (:type "bool") (reparse-symbol classsubparts) [7661 7687])
+                    ("fake_connect" variable
+                       (:pointer 1
+                        :type ("MYSQL" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7692 7712])
+                    ("fake_query_enabled" variable (:type "bool") (reparse-symbol classsubparts) [7717 7741])
+                    ("fake_query_return" variable (:type "int") (reparse-symbol classsubparts) [7746 7769])
+                    ("fake_errno_enabled" variable (:type "bool") (reparse-symbol classsubparts) [7774 7798])
+                    ("fake_errno" variable (:type "unsigned int") (reparse-symbol classsubparts) [7803 7828])
+                    ("fake_row_enabled" variable (:type "bool") (reparse-symbol classsubparts) [7833 7855])
+                    ("fake_row" variable (:type ("MYSQL_ROW" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7860 7879])
+                    ("fake_store_result_enabled" variable (:type "bool") (reparse-symbol classsubparts) [7884 7915])
+                    ("fake_result" variable
+                       (:pointer 1
+                        :type ("MYSQL_RES" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7920 7943])
+                    ("fake_set_charset_enabled" variable (:type "bool") (reparse-symbol classsubparts) [7948 7978])
+                    ("fake_set_charset_return" variable (:type "int") (reparse-symbol classsubparts) [7983 8012])
+                    ("fake_warning_count_enabled" variable (:type "bool") (reparse-symbol classsubparts) [8017 8049])
+                    ("fake_warning_count" variable (:type "unsigned int") (reparse-symbol classsubparts) [8054 8087])
+                    ("fake_field_enabled" variable (:type "bool") (reparse-symbol classsubparts) [8092 8116])
+                    ("fake_field" variable
+                       (:pointer 1
+                        :type ("MYSQL_FIELD" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8121 8145])
+                    ("fake_num_fields_enabled" variable (:type "bool") (reparse-symbol classsubparts) [8150 8179])
+                    ("fake_num_fields" variable (:type "unsigned int") (reparse-symbol classsubparts) [8184 8214])
+                    ("fake_info_enabled" variable (:type "bool") (reparse-symbol classsubparts) [8219 8242])
+                    ("fake_info" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [8247 8263])
+                    ("fake_fetch_lengths" variable
+                       (:pointer 1
+                        :type "unsigned long")
+                        (reparse-symbol classsubparts) [8268 8302])
+                    ("reset" function (:type "void") (reparse-symbol classsubparts) [8308 9036]))                  
+                :type "struct")
+                nil [7632 9039])
+            ("dht_test_mysql_" variable
+               (:typemodifiers ("extern")
+                :type ("dht_test_mysql" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [9041 9086]))          
+    :file "test_wrappers.h"
+    :pointmax 9246
+    :fsize 9245
+    :lastmodtime '(20396 19613)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TEST_WRAPPERS_H")
+          )
+
+    )
+   (semanticdb-table "TestBase.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("TEST_BASE_H" variable (:constant-flag t) nil [88 99])
+            ("cppunit/TestFixture.h" include (:system-flag t) nil [101 133])
+            ("cppunit/TestSuite.h" include (:system-flag t) nil [134 164])
+            ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [165 209])
+            ("TestBase" type
+               (:superclasses 
+                  ( ("CppUnit::TestFixture" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [294 301])
+                    ("TestBase" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("TestBase" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [307 318])
+                    ("TestBase" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [324 344])
+                    ("setUp" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [371 392])
+                    ("tearDown" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [419 443])
+                    ("runme" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("suite" variable
+                               (:pointer 1
+                                :type ("CppUnit::TestSuite" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [496 523])
+                            ("testName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [524 553]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [479 554])
+                    ("slowMode" function (:type "bool") (reparse-symbol classsubparts) [660 704])
+                    ("timeFactor" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("T" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("input" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [762 770]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [710 771]))                  
+                :type "class")
+                nil [246 775])
+            ("timeFactor" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("T" type (:type "class") nil nil)
+                :arguments 
+                  ( ("input" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [821 829]))                  
+                :parent "TestBase")
+                nil [777 855]))          
+    :file "TestBase.h"
+    :pointmax 1050
+    :fsize 1049
+    :lastmodtime '(20396 19613)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TEST_BASE_H")
+          )
+
+    )
+   )
+  :file "!homes!dbao!sherpa_externals!trunk!testpreload!include!dht!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

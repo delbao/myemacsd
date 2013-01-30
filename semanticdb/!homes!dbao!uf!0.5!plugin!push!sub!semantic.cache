@@ -1,0 +1,24 @@
+;; Object sub/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sub/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/plugin/common/inc")) nil [1 195])
+            ("pkglibexecdir" variable (:default-value ("$(libexecdir)/$(PACKAGE)")) nil [196 237])
+            ("pkglibexec_LTLIBRARIES" variable (:default-value ("libufhttppushsub.la")) nil [237 282])
+            ("libufhttppushsub_la_SOURCES" variable (:default-value ("PushSubFilter.H" "PushSubFilter.C" "PushYahooSubFilter.H" "PushYahooSubFilter.C" "PushSubVerifyPlugin.H" "PushSubVerifyPlugin.C")) nil [282 454])
+            ("libufhttppushsub_la_LDFLAGS" variable (:default-value ("-ljsoncpp" "-lynetdblib" "$(AM_LDFLAGS)")) nil [455 521])
+            ("libufhttppushsub_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/util/libufhttputil.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la" "$(top_builddir)/plugin/push/util/libufhttppushutil.la" "$(top_builddir)/plugin/push/conf/libufhttppushconf.la" "$(top_builddir)/plugin/common/src/libufcommon.la")) nil [521 1074]))          
+    :file "Makefile.am"
+    :pointmax 1074
+    :fsize 1073
+    :lastmodtime '(20622 62394)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!plugin!push!sub!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

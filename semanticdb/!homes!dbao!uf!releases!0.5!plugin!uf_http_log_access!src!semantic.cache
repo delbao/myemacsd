@@ -1,0 +1,30 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-fno-strict-aliasing" "-D_FILE_OFFSET_BITS=64" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/plugin/common/inc/uf/plugin/common" "-I$(top_srcdir)/state_server/inc")) nil [1 221])
+            ("AM_LDFLAGS" variable (:default-value ("-llog4cxx" "-lsasl2" "-lldap")) nil [428 466])
+            ("pkglibexecdir" variable (:default-value ("$(libexecdir)/$(PACKAGE)")) nil [467 508])
+            ("pkglibexec_LTLIBRARIES" variable (:default-value ("libufhttplog.la")) nil [536 595])
+            ("libufhttplog_la_LIBADD" variable (:default-value ("$(top_builddir)/ufcore/src/util/libufutil.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/state_server/src/stateserver/libufstateserver.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/plugin/common/src/libufcommon.la")) nil [596 1029])
+            ("source_files" variable (:default-value ("HTTPLogField.H" "HTTPLogField.C" "HTTPLogFormat.H" "HTTPLogFormat.C" "HTTPLogFormatRenderer.H" "HTTPLogFormatRenderer.C" "HTTPLogFormatRendererBinary.H" "HTTPLogFormatRendererBinary.C" "HTTPLogFilter.H" "HTTPLogFilter.C" "HTTPLogAccess.H" "HTTPLogAccess.C" "CustomFormatRollingPolicy.H" "CustomFormatRollingPolicy.C" "TimeBasedRollingFileAppender.H" "TimeBasedRollingFileAppender.C" "TimeBasedTriggeringPolicy.H" "TimeBasedTriggeringPolicy.C" "HTTPLogObject.H" "HTTPLogObject.C" "HTTPTimeLogObject.H" "HTTPTimeLogObject.C" "HTTPSizeLogObject.H" "HTTPSizeLogObject.C" "XMLConfigParser.H" "XMLConfigParser.C" "HTTPLogPlugin.H" "HTTPLogPlugin.C")) nil [1030 1717])
+            ("libufhttplog_la_SOURCES" variable (:default-value ("$(source_files)")) nil [1719 1761])
+            ("libufhttplog_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [1762 1806])
+            ("libufhttplog_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [1806 1881])
+            ("libufhttplog_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [1881 1960])
+            ("libufhttplog_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)" "-llog4cxx" "-lsasl2")) nil [1960 2027])
+            ("libufhttplog_p_la_LIBADD" variable (:default-value ("$(top_builddir)/ufcore/src/util/libufutil_p.la" "$(top_builddir)/http/component/src/remap/libufhttpremap_p.la" "$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/http/component/src/parser/libufhttpparser_p.la" "$(top_builddir)/state_server/src/stateserver/libufstateserver_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la")) nil [2027 2422]))          
+    :file "Makefile.am"
+    :pointmax 2422
+    :fsize 2421
+    :lastmodtime '(20625 28942)
+    :unmatched-syntax '((shell-command 1718 . 1718) (bol 1717 . 1717))
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!plugin!uf_http_log_access!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,192 @@
+;; Object unUsedHanlderTests/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unUsedHanlderTests/"
+  :tables (list 
+   (semanticdb-table "testAddRegionsHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [1 45])
+            ("iostream" include (:system-flag t) nil [46 65])
+            ("yax/osutil.h" include (:system-flag t) nil [66 89])
+            ("AddRegionsHandler.h" include (:system-flag t) nil [90 120])
+            ("AddRegionsRequest.h" include (:system-flag t) nil [121 151])
+            ("AddRegionsResponse.h" include (:system-flag t) nil [152 183])
+            ("TcTestBase.h" include nil nil [184 207])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [208 228])
+            ("log" variable
+               (:typemodifiers ("static")
+                :default-value "log4cpp::Category::getInstance(\"dht.tc.\" __FILE__)"
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [229 312])
+            ("TestAddRegionsHandler" type
+               (:superclasses 
+                  ( ("TcTestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestAddRegionsHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [386 408]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [367 409])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testBasic" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [427 437]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [414 438])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [443 468])
+                    ("public" label nil (reparse-symbol classsubparts) [470 477])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [483 502])
+                    ("RegionMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil)
+                                  ("RegionInStruct" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [512 564])
+                    ("tryHandler" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("resp" variable
+                               (:reference 1
+                                :type ("AddRegionsResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [763 788]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [719 1055])
+                    ("tryHandler" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("regions" variable
+                               (:reference 1
+                                :type ("RegionMap" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1109 1128])
+                            ("resp" variable
+                               (:reference 1
+                                :type ("AddRegionsResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1129 1154]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1065 1450])
+                    ("testBasic" function (:type "void") (reparse-symbol classsubparts) [1460 2267])
+                    ("testPreamble" function (:type "void") (reparse-symbol classsubparts) [2370 2401]))                  
+                :type "class")
+                nil [313 2404])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2415 2424])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2425 2437]))                  
+                :type "int")
+                nil [2406 2582]))          
+    :file "testAddRegionsHandler.cc"
+    :pointmax 2584
+    :fsize 2583
+    :lastmodtime '(20614 60051)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "testGetStorageUnitsHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("cppunit/extensions/HelperMacros.h" include (:system-flag t) nil [1 45])
+            ("iostream" include (:system-flag t) nil [46 65])
+            ("yax/osutil.h" include (:system-flag t) nil [66 89])
+            ("GetStorageUnitsHandler.h" include (:system-flag t) nil [90 125])
+            ("GetStorageUnitsRequest.h" include (:system-flag t) nil [126 161])
+            ("GetStorageUnitsResponse.h" include (:system-flag t) nil [162 198])
+            ("TcTestBase.h" include nil nil [199 222])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [223 243])
+            ("log" variable
+               (:typemodifiers ("static")
+                :default-value "log4cpp::Category::getInstance(\"dht.tc.\" __FILE__)"
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [244 327])
+            ("TestGetStorageUnitsHandler" type
+               (:superclasses 
+                  ( ("TcTestBase" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("CPPUNIT_TEST_SUITE" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("TestGetStorageUnitsHandler" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [406 433]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [387 434])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testBasic" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [452 462]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [439 463])
+                    ("CPPUNIT_TEST" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("testServers" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [481 493]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [468 494])
+                    ("CPPUNIT_TEST_SUITE_END" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [499 524])
+                    ("public" label nil (reparse-symbol classsubparts) [526 533])
+                    ("tearDown" function (:type "void") (reparse-symbol classsubparts) [539 558])
+                    ("suMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("string" type nil nil nil)
+                                  ("SuOutStruct" type (:pointer 1) nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [644 689])
+                    ("tryHandler" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("resp" variable
+                               (:reference 1
+                                :type ("GetStorageUnitsResponse" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [888 918]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [844 1195])
+                    ("testBasic" function (:type "void") (reparse-symbol classsubparts) [1256 1639])
+                    ("testServers" function (:type "void") (reparse-symbol classsubparts) [1692 2178]))                  
+                :type "class")
+                nil [328 2269])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [2280 2289])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2290 2302]))                  
+                :type "int")
+                nil [2271 2452]))          
+    :file "testGetStorageUnitsHandler.cc"
+    :pointmax 2454
+    :fsize 2453
+    :lastmodtime '(20614 60051)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndevn!branches!uffIntegration!controller!src!cpp-tc!handlers!unit_test!unUsedHanlderTests!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

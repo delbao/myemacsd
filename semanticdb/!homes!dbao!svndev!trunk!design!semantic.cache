@@ -1,0 +1,139 @@
+;; Object design/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "design/"
+  :tables (list 
+   (semanticdb-table "SuLockingMethodology12.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LockManager" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [21 28])
+                    ("err_t" variable (:type ("" type
+                         (:members 
+                            ( ("LOCK_OK" variable
+                                 (:constant-flag t
+                                  :type "int")
+                                  (reparse-symbol enumsubparts) [48 56])
+                              ("LOCK_PROCESS_DIED" variable
+                                 (:constant-flag t
+                                  :type "int")
+                                  (reparse-symbol enumsubparts) [103 184])
+                              ("LOCK_SYSERROR" variable
+                                 (:constant-flag t
+                                  :type "int")
+                                  (reparse-symbol enumsubparts) [171 185])
+                              ("LOCK_UNAVAIL" variable
+                                 (:constant-flag t
+                                  :type "int")
+                                  (reparse-symbol enumsubparts) [226 239]))                            
+                          :type "enum")
+                          nil nil)) (reparse-symbol classsubparts) [33 323])
+                    ("lock_type" variable (:type ("" type
+                         (:members 
+                            ( ("LOCK_READ" variable
+                                 (:constant-flag t
+                                  :type "int")
+                                  (reparse-symbol enumsubparts) [343 353])
+                              ("LOCK_WRITE" variable
+                                 (:constant-flag t
+                                  :type "int")
+                                  (reparse-symbol enumsubparts) [362 373]))                            
+                          :type "enum")
+                          nil nil)) (reparse-symbol classsubparts) [328 390])
+                    ("unlock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("key" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [432 436]))                          
+                        :type ("err_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [419 437])
+                    ("private" label nil (reparse-symbol classsubparts) [438 446])
+                    ("allocateLock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("key" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [468 472]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [451 473])
+                    ("releaseLock" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("key" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [495 499])
+                            ("do_unlock" variable (:type "bool") (reparse-symbol arg-sub-list) [500 515]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [478 516])
+                    ("findFreeDescriptor" function
+                       (:prototype-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [521 546])
+                    ("error" variable (:type ("err_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [551 563])
+                    ("init" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [568 580])
+                    ("lastId" variable (:type "int") (reparse-symbol classsubparts) [585 596])
+                    ("" type
+                       (:members 
+                          ( ("DO_UNLOCK" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [616 626])
+                            ("DONT_UNLOCK" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [635 647]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [601 654])
+                    ("LockDescriptor" type
+                       (:members 
+                          ( ("busy" variable (:type "bool") (reparse-symbol classsubparts) [692 702])
+                            ("nusers" variable (:type "int") (reparse-symbol classsubparts) [711 722]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [660 766]))                  
+                :type "class")
+                nil [1 770])
+            ("init" function (:type "bool") nil [1559 1746])
+            ("addPid" function
+               (:arguments 
+                  ( ("" variable (:type ("id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1760 1763])
+                    ("" variable (:type ("pid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1764 1768]))                  
+                :type "bool")
+                nil [1748 1966])
+            ("removePid" function
+               (:arguments 
+                  ( ("" variable (:type ("id" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1983 1986])
+                    ("" variable (:type ("pid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1987 1991]))                  
+                :type "bool")
+                nil [1968 2190])
+            ("findFreeDescriptor" function (:type "int") nil [2192 3117])
+            ("allocateLock" function
+               (:arguments 
+                  ( ("" variable (:type ("key" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3136 3140]))                  
+                :type "int")
+                nil [3119 4102])
+            ("releaseLock" function
+               (:arguments 
+                  ( ("" variable (:type ("key" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4121 4125])
+                    ("" variable (:type ("op" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4126 4129]))                  
+                :type "bool")
+                nil [4104 4667])
+            ("lock" function
+               (:arguments 
+                  ( ("" variable (:type ("key" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4680 4684])
+                    ("" variable (:type ("rw" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4685 4688]))                  
+                :type ("err_t" type (:type "class") nil nil))
+                nil [4669 5056])
+            ("unlock" function
+               (:arguments 
+                  ( ("" variable (:type ("key" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5071 5075]))                  
+                :type ("err_t" type (:type "class") nil nil))
+                nil [5058 5163]))          
+    :file "SuLockingMethodology12.cc"
+    :pointmax 5164
+    :fsize 5163
+    :lastmodtime '(20550 21387)
+    :unmatched-syntax '((semantic-list 405 . 414) (symbol 401 . 405) (symbol 395 . 400))
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!design!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

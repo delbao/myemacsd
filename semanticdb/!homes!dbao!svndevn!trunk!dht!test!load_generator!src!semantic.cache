@@ -1,0 +1,964 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Stats.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("H_STATS_H__" variable (:constant-flag t) nil [29 40])
+            ("sys/types.h" include (:system-flag t) nil [42 64])
+            ("limits.h" include (:system-flag t) nil [107 126])
+            ("ysys/time.h" include (:system-flag t) nil [127 149])
+            ("Log.h" include nil nil [150 166])
+            ("string" include (:system-flag t) nil [168 185])
+            ("vector" include (:system-flag t) nil [186 203])
+            ("timeDifference" function
+               (:typemodifiers ("inline")
+                :arguments 
+                  ( ("start" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [236 251])
+                    ("end" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [252 265]))                  
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [205 426])
+            ("LoadStats" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [525 532])
+                    ("statFactory" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("statsType" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [569 599]))                          
+                        :type ("LoadStats" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [538 600])
+                    ("YMON_SCOREBOARD_STATS" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [606 653])
+                    ("FILE_STATS" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [658 694])
+                    ("ComponentType" type
+                       (:members 
+                          ( ("CLIENT" variable
+                               (:constant-flag t
+                                :default-value (853 854)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [844 854])
+                            ("ROUTER" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [856 863])
+                            ("SU" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [864 867])
+                            ("DB_READ" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [868 876])
+                            ("DB_WRITE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [877 887]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [823 888])
+                    ("firstComponent" function
+                       (:typemodifiers ("static")
+                        :type ("ComponentType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [893 949])
+                    ("lastComponent" function
+                       (:typemodifiers ("static")
+                        :type ("ComponentType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [954 1011])
+                    ("numComponents" function
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [1016 1081])
+                    ("componentStr" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("comp" variable (:type ("ComponentType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1126 1145]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1086 1146])
+                    ("OpType" type
+                       (:members 
+                          ( ("OP_INSERT" variable
+                               (:constant-flag t
+                                :default-value (1196 1197)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1184 1197])
+                            ("OP_UPDATE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1199 1209])
+                            ("OP_UPDATE_REMOTE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1210 1227])
+                            ("OP_DELETE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1228 1238])
+                            ("OP_READ" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1258 1266])
+                            ("OP_READ_CACHED" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1267 1282])
+                            ("OP_READ_UNCACHED" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1283 1300])
+                            ("OP_READ_REMOTE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1301 1316])
+                            ("OP_PUBLISH" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1335 1346])
+                            ("OP_NONE" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1347 1356]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [1170 1357])
+                    ("firstOpType" function
+                       (:typemodifiers ("static")
+                        :type ("OpType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1362 1411])
+                    ("lastOpType" function
+                       (:typemodifiers ("static")
+                        :type ("OpType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1416 1465])
+                    ("numOpTypes" function
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [1470 1529])
+                    ("opIsVirtual" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("op" variable (:type ("OpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1558 1568]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1534 1569])
+                    ("opStr" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("op" variable (:type ("OpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1607 1617]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1574 1618])
+                    ("MetricType" type
+                       (:members 
+                          ( ("METRIC_COUNT" variable
+                               (:constant-flag t
+                                :default-value (1704 1705)
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1689 1705])
+                            ("METRIC_LATENCY" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1707 1722])
+                            ("METRIC_HISTOGRAM" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1723 1741]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [1671 1742])
+                    ("firstMetric" function
+                       (:typemodifiers ("static")
+                        :type ("MetricType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1747 1803])
+                    ("lastMetric" function
+                       (:typemodifiers ("static")
+                        :type ("MetricType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1808 1867])
+                    ("numMetrics" function
+                       (:typemodifiers ("static")
+                        :type "int")
+                        (reparse-symbol classsubparts) [1872 1933])
+                    ("metricStr" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :constant-flag t
+                        :arguments 
+                          ( ("metric" variable (:type ("MetricType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1975 1993]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1938 1994])
+                    ("createStats" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("appName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2025 2053])
+                            ("testID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2054 2081])
+                            ("clientID" variable (:type "int") (reparse-symbol arg-sub-list) [2082 2095]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2000 2100])
+                    ("record" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("comp" variable (:type ("ComponentType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2125 2144])
+                            ("op" variable (:type ("OpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2145 2155])
+                            ("retCode" variable (:type "int") (reparse-symbol arg-sub-list) [2156 2168])
+                            ("val" variable (:type "double") (reparse-symbol arg-sub-list) [2169 2180]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2105 2185])
+                    ("finalize" function
+                       (:pure-virtual-flag t
+                        :prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2190 2218])
+                    ("LoadStats" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2224 2247]))                  
+                :type "class")
+                nil [507 2250])
+            ("++" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("comp" variable
+                       (:reference 1
+                        :type ("LoadStats::ComponentType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2268 2300])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [2301 2305]))                  
+                :type "void")
+                nil [2252 2306])
+            ("++" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("op" variable
+                       (:reference 1
+                        :type ("LoadStats::OpType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2323 2346])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [2347 2351]))                  
+                :type "void")
+                nil [2307 2352])
+            ("MultiStats" type
+               (:superclasses 
+                  ( ("LoadStats" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [2392 2399])
+                    ("MultiStats" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("statTypes" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2415 2458]))                          
+                        :type ("MultiStats" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2404 2459])
+                    ("createStats" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("appName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2490 2518])
+                            ("testID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2519 2546])
+                            ("clientID" variable (:type "int") (reparse-symbol arg-sub-list) [2547 2560]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2465 2561])
+                    ("record" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("comp" variable (:type ("ComponentType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2586 2605])
+                            ("op" variable (:type ("OpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2606 2616])
+                            ("retCode" variable (:type "int") (reparse-symbol arg-sub-list) [2617 2629])
+                            ("val" variable (:type "double") (reparse-symbol arg-sub-list) [2630 2641]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2566 2642])
+                    ("finalize" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2647 2671])
+                    ("MultiStats" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2677 2699])
+                    ("protected" label nil (reparse-symbol classsubparts) [2701 2711])
+                    ("stats_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("LoadStats" type (:pointer 1) nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2716 2748]))                  
+                :type "class")
+                nil [2354 2751]))          
+    :file "Stats.h"
+    :pointmax 2760
+    :fsize 2759
+    :lastmodtime '(20455 30085)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("H_STATS_H__")
+          )
+
+    )
+   (semanticdb-table "FileStats.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("FileStats.h" include nil nil [1 23])
+            ("yax/osutil.h" include (:system-flag t) nil [25 48])
+            ("sstream" include (:system-flag t) nil [49 67])
+            ("Log.h" include nil nil [69 85])
+            ("TIME_MS" variable (:constant-flag t) nil [95 102])
+            ("MAX_STAT_VAL" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type "double")
+                nil [122 161])
+            ("logger" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [220 325])
+            ("Metric" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [342 349])
+                    ("Metric" function
+                       (:constructor-flag t
+                        :type ("Metric" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [354 388])
+                    ("record" function
+                       (:arguments 
+                          ( ("val" variable (:type "double") (reparse-symbol arg-sub-list) [406 417]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [394 444])
+                    ("latency" function (:type "double") (reparse-symbol classsubparts) [449 531])
+                    ("count" function (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [536 577])
+                    ("merge" function
+                       (:arguments 
+                          ( ("metric" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Metric" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [594 616]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [583 686])
+                    ("private" label nil (reparse-symbol classsubparts) [688 696])
+                    ("val_" variable (:type "double") (reparse-symbol classsubparts) [701 713])
+                    ("count_" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [718 734]))                  
+                :type "class")
+                nil [327 737])
+            ("MetricHistogram" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [823 830])
+                    ("BUCKET_SIZE" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [835 868])
+                    ("HISTOGRAM_BUCKETS" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type "int")
+                        (reparse-symbol classsubparts) [909 950])
+                    ("MetricHistogram" function
+                       (:constructor-flag t
+                        :type ("MetricHistogram" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [956 1082])
+                    ("record" function
+                       (:arguments 
+                          ( ("val" variable (:type "double") (reparse-symbol arg-sub-list) [1108 1119]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1096 1522])
+                    ("latency" function (:type "double") (reparse-symbol classsubparts) [1528 1578])
+                    ("count" function (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1583 1631])
+                    ("finalize" function
+                       (:arguments 
+                          ( ("result" variable
+                               (:reference 1
+                                :type ("DHT::Data" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1651 1670]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1637 2109])
+                    ("merge" function
+                       (:arguments 
+                          ( ("mh" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MetricHistogram" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2126 2153]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2115 2303])
+                    ("private" label nil (reparse-symbol classsubparts) [2305 2313])
+                    ("stat_" variable (:type ("Metric" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2318 2331])
+                    ("histogram_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("uint64_t" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [2336 2369])
+                    ("histogramCount" function
+                       (:arguments 
+                          ( ("bucket" variable (:type "int") (reparse-symbol arg-sub-list) [2399 2410]))                          
+                        :type ("uint64_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2375 2518]))                  
+                :type "class")
+                nil [799 2522])
+            ("FileStats" function
+               (:constructor-flag t
+                :parent "FileStats"
+                :type ("FileStats" type (:type "class") nil nil))
+                nil [2524 2646])
+            ("createStats" function
+               (:parent "FileStats"
+                :arguments 
+                  ( ("appName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2677 2705])
+                    ("testID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2706 2733])
+                    ("clientID" variable (:type "int") (reparse-symbol arg-sub-list) [2734 2747]))                  
+                :type "bool")
+                nil [2648 2840])
+            ("record" function
+               (:parent "FileStats"
+                :arguments 
+                  ( ("comp" variable (:type ("ComponentType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2866 2885])
+                    ("op" variable (:type ("OpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2886 2896])
+                    ("retCode" variable (:type "int") (reparse-symbol arg-sub-list) [2897 2909])
+                    ("val" variable (:type "double") (reparse-symbol arg-sub-list) [2910 2921]))                  
+                :type "void")
+                nil [2842 3589])
+            ("retCodeStr" function
+               (:parent "FileStats"
+                :arguments 
+                  ( ("retCodeBucket" variable (:type "int") (reparse-symbol arg-sub-list) [3626 3644]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [3591 3756])
+            ("finalize" function
+               (:parent "FileStats"
+                :type "void")
+                nil [3758 6439]))          
+    :file "FileStats.cc"
+    :pointmax 6440
+    :fsize 6439
+    :lastmodtime '(20455 30085)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TIME_MS" (spp-arg-list ("x") 102 . 105) . ((semantic-list "((x) / 1000.0)" 106 . 120)))
+          )
+
+    )
+   (semanticdb-table "ScoreboardStats.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ScoreboardStats.h" include nil nil [1 29])
+            ("sstream" include (:system-flag t) nil [30 48])
+            ("assert.h" include (:system-flag t) nil [49 68])
+            ("Log.h" include nil nil [69 85])
+            ("logger" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [112 217])
+            ("TIME_MS" variable (:constant-flag t) nil [227 234])
+            ("ScoreboardStats" function
+               (:constructor-flag t
+                :parent "ScoreboardStats"
+                :type ("ScoreboardStats" type (:type "class") nil nil))
+                nil [245 320])
+            ("ScoreboardStats" function
+               (:destructor-flag t
+                :parent "ScoreboardStats"
+                :type "void")
+                nil [322 510])
+            ("makeStat" function
+               (:parent "ScoreboardStats"
+                :arguments 
+                  ( ("sb" variable (:type ("ymonsb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [544 554])
+                    ("key" variable
+                       (:pointer 1
+                        :type ("ymonsb_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [555 573])
+                    ("latencyAsHistogram" variable (:type "bool") (reparse-symbol arg-sub-list) [574 598]))                  
+                :type "void")
+                nil [512 913])
+            ("createScoreboardStats" function
+               (:parent "ScoreboardStats"
+                :arguments 
+                  ( ("sbName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [962 989])
+                    ("latencyAsHistogram" variable (:type "bool") (reparse-symbol arg-sub-list) [990 1014]))                  
+                :type ("ymonsb" type (:type "class") nil nil))
+                nil [915 2438])
+            ("createStats" function
+               (:parent "ScoreboardStats"
+                :arguments 
+                  ( ("appName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2475 2503])
+                    ("testID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2504 2531])
+                    ("clientID" variable (:type "int") (reparse-symbol arg-sub-list) [2532 2545]))                  
+                :type "bool")
+                nil [2440 2848])
+            ("recordScoreboardForKey" function
+               (:parent "ScoreboardStats"
+                :arguments 
+                  ( ("sb" variable (:type ("ymonsb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2896 2906])
+                    ("key" variable
+                       (:pointer 1
+                        :type ("ymonsb_key_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2907 2926])
+                    ("time" variable (:type "double") (reparse-symbol arg-sub-list) [2927 2939]))                  
+                :type "bool")
+                nil [2850 3116])
+            ("recordScoreboard" function
+               (:parent "ScoreboardStats"
+                :arguments 
+                  ( ("sb" variable (:type ("ymonsb" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3158 3168])
+                    ("op" variable (:type ("OpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3169 3179])
+                    ("retCode" variable (:type "int") (reparse-symbol arg-sub-list) [3180 3192])
+                    ("time" variable (:type "double") (reparse-symbol arg-sub-list) [3193 3205]))                  
+                :type "bool")
+                nil [3118 3907])
+            ("record" function
+               (:parent "ScoreboardStats"
+                :arguments 
+                  ( ("comp" variable (:type ("ComponentType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3939 3958])
+                    ("op" variable (:type ("OpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3959 3969])
+                    ("retCode" variable (:type "int") (reparse-symbol arg-sub-list) [3970 3982])
+                    ("val" variable (:type "double") (reparse-symbol arg-sub-list) [3983 3994]))                  
+                :type "void")
+                nil [3909 4303])
+            ("finalize" function
+               (:parent "ScoreboardStats"
+                :type "void")
+                nil [4305 4500]))          
+    :file "ScoreboardStats.cc"
+    :pointmax 4501
+    :fsize 4500
+    :lastmodtime '(20455 30085)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TIME_MS" (spp-arg-list ("x") 234 . 237) . ((semantic-list "((x))" 238 . 243)))
+          )
+
+    )
+   (semanticdb-table "Stats.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("sstream" include (:system-flag t) nil [1 19])
+            ("Stats.h" include nil nil [21 39])
+            ("ScoreboardStats.h" include nil nil [40 68])
+            ("FileStats.h" include nil nil [69 91])
+            ("Log.h" include nil nil [92 108])
+            ("LoadStats::YMON_SCOREBOARD_STATS" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [110 172])
+            ("LoadStats::FILE_STATS" variable
+               (:constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [173 227])
+            ("UNKNOWN_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [229 278])
+            ("CLIENT_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [294 338])
+            ("ROUTER_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [339 383])
+            ("SU_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [384 423])
+            ("DB_READ_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [424 473])
+            ("DB_WRITE_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [474 525])
+            ("OP_INSERT_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [541 591])
+            ("OP_UPDATE_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [592 642])
+            ("OP_UPDATE_REMOTE_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [643 707])
+            ("OP_DELETE_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [708 758])
+            ("OP_READ_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [759 804])
+            ("OP_READ_CACHED_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [805 864])
+            ("OP_READ_UNCACHED_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [865 928])
+            ("OP_READ_REMOTE_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [929 988])
+            ("OP_PUBLISH_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [989 1041])
+            ("OP_NONE_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1042 1088])
+            ("METRIC_COUNT_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1101 1153])
+            ("METRIC_LATENCY_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1154 1210])
+            ("METRIC_HISTOGRAM_STR" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1211 1279])
+            ("logger" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [1306 1411])
+            ("statFactory" function
+               (:pointer 1
+                :parent "LoadStats"
+                :arguments 
+                  ( ("statsType" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1449 1479]))                  
+                :type ("LoadStats" type (:type "class") nil nil))
+                nil [1413 1783])
+            ("componentStr" function
+               (:parent "LoadStats"
+                :constant-flag t
+                :arguments 
+                  ( ("comp" variable (:type ("ComponentType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1832 1851]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [1787 2139])
+            ("opStr" function
+               (:parent "LoadStats"
+                :constant-flag t
+                :arguments 
+                  ( ("op" variable (:type ("OpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2179 2189]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2141 2800])
+            ("opIsVirtual" function
+               (:parent "LoadStats"
+                :arguments 
+                  ( ("op" variable (:type ("OpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2830 2840]))                  
+                :type "bool")
+                nil [2802 2911])
+            ("metricStr" function
+               (:parent "LoadStats"
+                :constant-flag t
+                :arguments 
+                  ( ("metric" variable (:type ("MetricType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2955 2973]))                  
+                :type ("std::string" type (:type "class") nil nil))
+                nil [2913 3226])
+            ("++" function
+               (:operator-flag t
+                :arguments 
+                  ( ("comp" variable
+                       (:reference 1
+                        :type ("LoadStats::ComponentType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3245 3277])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [3278 3282]))                  
+                :type "void")
+                nil [3228 3331])
+            ("++" function
+               (:operator-flag t
+                :arguments 
+                  ( ("op" variable
+                       (:reference 1
+                        :type ("LoadStats::OpType" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3350 3373])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [3374 3378]))                  
+                :type "void")
+                nil [3333 3416])
+            ("MultiStats" function
+               (:constructor-flag t
+                :parent "MultiStats"
+                :arguments 
+                  ( ("statTypes" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3442 3485]))                  
+                :type ("MultiStats" type (:type "class") nil nil))
+                nil [3418 3668])
+            ("MultiStats" function
+               (:destructor-flag t
+                :parent "MultiStats"
+                :type "void")
+                nil [3670 3854])
+            ("createStats" function
+               (:parent "MultiStats"
+                :arguments 
+                  ( ("appName" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3886 3914])
+                    ("testID" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3915 3942])
+                    ("clientID" variable (:type "int") (reparse-symbol arg-sub-list) [3943 3956]))                  
+                :type "bool")
+                nil [3856 4147])
+            ("record" function
+               (:parent "MultiStats"
+                :arguments 
+                  ( ("comp" variable (:type ("ComponentType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4174 4193])
+                    ("op" variable (:type ("OpType" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4194 4204])
+                    ("retCode" variable (:type "int") (reparse-symbol arg-sub-list) [4205 4217])
+                    ("val" variable (:type "double") (reparse-symbol arg-sub-list) [4218 4229]))                  
+                :type "void")
+                nil [4149 4394])
+            ("finalize" function
+               (:parent "MultiStats"
+                :type "void")
+                nil [4396 4569]))          
+    :file "Stats.cc"
+    :pointmax 4570
+    :fsize 4569
+    :lastmodtime '(20455 30085)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "TestConfig.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("H__TEST_CONFIG_H__" variable (:constant-flag t) nil [36 54])
+            ("string" include (:system-flag t) nil [55 72])
+            ("map" include (:system-flag t) nil [73 87])
+            ("sstream" include (:system-flag t) nil [88 106])
+            ("vector" include (:system-flag t) nil [107 124])
+            ("TestConfig" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [145 152])
+                    ("parseStrings" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("strings" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [271 312]))                          
+                        :type ("TestConfig" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [239 313])
+                    ("option" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [465 489])
+                            ("val" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [490 497]))                          
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [431 498])
+                    ("option" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [513 537])
+                            ("strings" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [538 573]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [501 574])
+                    ("contains" function
+                       (:arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [592 616]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [578 669])
+                    ("optionNames" function (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [673 738])
+                    ("private" label nil (reparse-symbol classsubparts) [742 750])
+                    ("setOption" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [768 792])
+                            ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [793 816]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [753 817])
+                    ("OptionMap" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [821 874])
+                    ("options_" variable (:type ("OptionMap" type (:type "class") nil nil)) (reparse-symbol classsubparts) [877 896])
+                    ("optionNames_" variable (:type ("std::vector" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [899 937]))                  
+                :type "class")
+                nil [126 940])
+            ("option" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type "bool"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [988 1012])
+                    ("val" variable
+                       (:reference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1013 1020]))                  
+                :parent "TestConfig")
+                nil [942 1197]))          
+    :file "TestConfig.h"
+    :pointmax 1207
+    :fsize 1206
+    :lastmodtime '(20455 30086)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("H__TEST_CONFIG_H__")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndevn!trunk!dht!test!load_generator!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

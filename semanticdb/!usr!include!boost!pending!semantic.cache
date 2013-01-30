@@ -1,0 +1,202 @@
+;; Object pending/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "pending/"
+  :tables (list 
+   (semanticdb-table "ct_if.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_CT_IF_HPP" variable (:constant-flag t) nil [369 384])
+            ("boost/config.hpp" include (:system-flag t) nil [386 413])
+            ("boost" type
+               (:members 
+                  ( ("ct_if_error" type (:type "struct") (reparse-symbol namespacesubparts) [653 676])
+                    ("true_type" type
+                       (:members 
+                          ( ("" type
+                               (:members 
+                                  ( ("value" variable
+                                       (:constant-flag t
+                                        :default-value (714 720)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [706 720]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [699 721]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [680 724])
+                    ("false_type" type
+                       (:members 
+                          ( ("" type
+                               (:members 
+                                  ( ("value" variable
+                                       (:constant-flag t
+                                        :default-value (762 769)
+                                        :type "int")
+                                        (reparse-symbol enumsubparts) [754 769]))                                  
+                                :type "enum")
+                                (reparse-symbol classsubparts) [747 770]))                          
+                        :type "struct")
+                        (reparse-symbol namespacesubparts) [727 773])
+                    ("ct_and" type
+                       (:template 
+                          ( ("A" type (:type "class") nil nil)
+                            ("B" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("false_type" type (:type "class") nil nil)
+                                :superclasses "false_type"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [823 847]))                          )
+                        (reparse-symbol namespacesubparts) [777 850])
+                    ("ct_and" type
+                       (:type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("true_type" type (:type "class") nil nil)
+                                :superclasses "true_type"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [902 925]))                          
+                        :template-specifier 
+                          ( ("true_type" type nil nil nil)
+                            ("true_type" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [853 928])
+                    ("ct_not" type
+                       (:template 
+                          ( ("A" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("ct_if_error" type (:type "class") nil nil)
+                                :superclasses "ct_if_error"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [967 992]))                          )
+                        (reparse-symbol namespacesubparts) [932 995])
+                    ("ct_not" type
+                       (:type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("false_type" type (:type "class") nil nil)
+                                :superclasses "false_type"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1037 1061]))                          
+                        :template-specifier 
+                          ( ("true_type" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [998 1064])
+                    ("ct_not" type
+                       (:type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("true_type" type (:type "class") nil nil)
+                                :superclasses "true_type"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1107 1130]))                          
+                        :template-specifier 
+                          ( ("false_type" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1067 1133])
+                    ("ct_if" type
+                       (:template 
+                          ( ("bool" type nil nil nil)
+                            ("A" type (:type "class") nil nil)
+                            ("B" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("ct_if_error" type (:type "class") nil nil)
+                                :superclasses "ct_if_error"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1512 1537]))                          )
+                        (reparse-symbol namespacesubparts) [1456 1540])
+                    ("ct_if" type
+                       (:template 
+                          ( ("A" type (:type "class") nil nil)
+                            ("B" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("A" type (:type "class") nil nil)
+                                :superclasses "A"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1600 1615]))                          
+                        :template-specifier 
+                          ( ("true" type nil nil nil)
+                            ("A" type nil nil nil)
+                            ("B" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1543 1618])
+                    ("ct_if" type
+                       (:template 
+                          ( ("A" type (:type "class") nil nil)
+                            ("B" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("B" type (:type "class") nil nil)
+                                :superclasses "B"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1679 1694]))                          
+                        :template-specifier 
+                          ( ("false" type nil nil nil)
+                            ("A" type nil nil nil)
+                            ("B" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1621 1697])
+                    ("ct_if_t" type
+                       (:template 
+                          ( ("cond" type (:type "class") nil nil)
+                            ("A" type (:type "class") nil nil)
+                            ("B" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("ct_if_error" type (:type "class") nil nil)
+                                :superclasses "ct_if_error"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [1929 1954]))                          )
+                        (reparse-symbol namespacesubparts) [1870 1957])
+                    ("ct_if_t" type
+                       (:template 
+                          ( ("A" type (:type "class") nil nil)
+                            ("B" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("A" type (:type "class") nil nil)
+                                :superclasses "A"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2024 2039]))                          
+                        :template-specifier 
+                          ( ("true_type" type nil nil nil)
+                            ("A" type nil nil nil)
+                            ("B" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [1960 2042])
+                    ("ct_if_t" type
+                       (:template 
+                          ( ("A" type (:type "class") nil nil)
+                            ("B" type (:type "class") nil nil))                          
+                        :type "struct"
+                        :members 
+                          ( ("type" type
+                               (:typedef ("B" type (:type "class") nil nil)
+                                :superclasses "B"
+                                :type "typedef")
+                                (reparse-symbol classsubparts) [2110 2125]))                          
+                        :template-specifier 
+                          ( ("false_type" type nil nil nil)
+                            ("A" type nil nil nil)
+                            ("B" type nil nil nil))                          )
+                        (reparse-symbol namespacesubparts) [2045 2128]))                  
+                :type "namespace")
+                nil [632 3138]))          
+    :file "ct_if.hpp"
+    :pointmax 3186
+    :fsize 3185
+    :lastmodtime '(18399 46991)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("BOOST_CT_IF_HPP")
+          )
+
+    )
+   )
+  :file "!usr!include!boost!pending!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

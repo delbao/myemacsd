@@ -1,0 +1,401 @@
+;; Object unUsedHanlders/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unUsedHanlders/"
+  :tables (list 
+   (semanticdb-table "AddTableHandler.cc"
+    :major-mode 'c++-mode
+    :tags nil
+    :file "AddTableHandler.cc"
+    :pointmax 35564
+    :fsize 35563
+    :lastmodtime '(20550 21262)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "AddTableHandler.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ADDTABLEHANDLER_H" variable (:constant-flag t) nil [95 112])
+            ("string" include (:system-flag t) nil [114 131])
+            ("map" include (:system-flag t) nil [132 146])
+            ("stdio.h" include (:system-flag t) nil [147 165])
+            ("Handler.h" include nil nil [166 186])
+            ("Dispatcher.h" include nil nil [187 210])
+            ("AllStructs.h" include nil nil [211 234])
+            ("AddTableRequest.h" include nil nil [235 263])
+            ("PstoreMySQL.h" include nil nil [264 288])
+            ("TcCode.h" include nil nil [289 308])
+            ("AddTableResponse.h" include nil nil [309 338])
+            ("dht/typedefs.h" include (:system-flag t) nil [339 364])
+            ("SuTabletMap" type
+               (:prototype t
+                :type "class")
+                nil [366 384])
+            ("SuTabletDistrib" type
+               (:prototype t
+                :type "class")
+                nil [385 407])
+            ("PolicyJsonStrPair" type
+               (:typedef ("std::pair" type
+                     (:template-specifier 
+                        ( ("JsonObjectPtr" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::pair"
+                :type "typedef")
+                nil [666 729])
+            ("ReplicationPolicy" type
+               (:typedef ("std::map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("PolicyJsonStrPair" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "std::map"
+                :type "typedef")
+                nil [827 893])
+            ("AddTableHandler" type
+               (:superclasses 
+                  ( ("Handler" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [936 943])
+                    ("AddTableHandler" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("AddTableHandler" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [948 966])
+                    ("AddTableHandler" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [976 1023])
+                    ("handleRequest" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("dispatcher" variable
+                               (:reference 1
+                                :type ("Dispatcher" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1072 1095])
+                            ("resource" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1145 1173])
+                            ("request" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Request" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1223 1246])
+                            ("response" variable
+                               (:reference 1
+                                :type ("Request" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1296 1314]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1028 1315])
+                    ("isConst" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1320 1360])
+                    ("paramMatcher" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("RegexMatcher" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1366 1486])
+                    ("resourceMandatory" function
+                       (:typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1500 1549])
+                    ("getPermType" function (:type ("YcaClient::OperationPermType" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1590 1689])
+                    ("private" label nil (reparse-symbol classsubparts) [1692 1700])
+                    ("req_" variable
+                       (:pointer 1
+                        :type ("AddTableRequest" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1705 1727])
+                    ("disp_" variable
+                       (:pointer 1
+                        :type ("Dispatcher" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1732 1750])
+                    ("resp_" variable
+                       (:pointer 1
+                        :type ("AddTableResponse" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1755 1779])
+                    ("tableName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1789 1812])
+                    ("tablets_" variable
+                       (:typemodifiers ("mutable")
+                        :type ("StrVec" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1817 1841])
+                    ("replPolicy_" variable (:type ("ReplicationPolicy" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1846 1876])
+                    ("banks_" variable (:type ("StrVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1881 1895])
+                    ("regions_" variable (:type ("StrVec" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1900 1916])
+                    ("seqId_" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1922 1934])
+                    ("tableId_" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1939 1953])
+                    ("trTime_" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2094 2111])
+                    ("reset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2117 2130])
+                    ("parseRequestParams" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2135 2161])
+                    ("parseAndCachePolicy" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2191 2215])
+                            ("replRules" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("DestReplPolicyStruct" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2245 2306]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2166 2307])
+                    ("shouldCreateInMyRegion" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2322 2358])
+                    ("tableExists" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tcTableInfo" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("YFLDBI::Mss" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2380 2424]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2363 2431])
+                    ("isSameTable" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tcTableInfo" variable
+                               (:reference 1
+                                :type ("YFLDBI::Mss" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2470 2495])
+                            ("shouldCreateLocally" variable (:type "bool") (reparse-symbol arg-sub-list) [2534 2559]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2436 2560])
+                    ("replPolicyToStr" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("replRules" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("DestReplPolicyStruct" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2603 2664]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2566 2670])
+                    ("replPolicyToJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("replRules" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("DestReplPolicyStruct" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2715 2776]))                          
+                        :type ("JsonObjectPtr" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2675 2782])
+                    ("generateTabletList" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2801 2827])
+                    ("generateHashedTabletList" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2832 2864])
+                    ("generateOrderedTabletList" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [2869 2902])
+                    ("storeTableInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("seqId" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2944 2955]))                          
+                        :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2908 2956])
+                    ("storeTablets" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMap" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("SuTabletMap" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [2996 3038])
+                            ("seqId" variable (:type ("uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3077 3088]))                          
+                        :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2962 3089])
+                    ("createTabletsInSU" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("SuTabletMap" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3133 3172]))                          
+                        :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3094 3173])
+                    ("mapTabletsToSUs" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletToSu" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("SuTabletMap" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3215 3252]))                          
+                        :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3178 3253])
+                    ("getTargetSuTablets" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("targetSuTablets" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("SuTabletDistrib" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3298 3389]))                          
+                        :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3258 3390])
+                    ("createJsonRequest" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3434 3446])
+                            ("" variable (:type ("json" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3447 3452]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3395 3453])
+                    ("removeObject" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jsonObj" variable
+                               (:pointer 1
+                                :type ("JsonObject" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3492 3512])
+                            ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3512 3535]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3458 3536])
+                    ("tableTypeToInt" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("type" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3565 3589]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3546 3595])
+                    ("addReplPolicyToPstore" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("policyName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3643 3673])
+                            ("replRules" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::map" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil)
+                                          ("DestReplPolicyStruct" type (:pointer 1) nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3721 3782]))                          
+                        :type ("TcCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3600 3783])
+                    ("loadTabletMapFromDb" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tabletMap" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("SuTabletMap" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [3830 3866]))                          
+                        :type ("WebCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3788 3867])
+                    ("isSameTableParam" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type "bool"
+                        :arguments 
+                          ( ("reqPram" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3924 3941])
+                            ("dbParam" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3942 3959])
+                            ("paramName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3986 4015]))                          
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [3877 4021]))                  
+                :type "class")
+                nil [895 4024]))          
+    :file "AddTableHandler.h"
+    :pointmax 4055
+    :fsize 4054
+    :lastmodtime '(20550 21262)
+    :unmatched-syntax '((punctuation 3445 . 3446))
+    :lexical-table 
+        '(("ADDTABLEHANDLER_H")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!controller!src!cpp-tc!handlers!src!unUsedHanlders!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

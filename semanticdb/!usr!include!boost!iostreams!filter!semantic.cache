@@ -1,0 +1,1666 @@
+;; Object filter/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "filter/"
+  :tables (list 
+   (semanticdb-table "gzip.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_IOSTREAMS_GZIP_HPP_INCLUDED" variable (:constant-flag t) nil [528 561])
+            ("boost/config.hpp" include (:system-flag t) nil [629 656])
+            ("algorithm" include (:system-flag t) nil [760 780])
+            ("cstdio" include (:system-flag t) nil [810 827])
+            ("cstddef" include (:system-flag t) nil [860 878])
+            ("ctime" include (:system-flag t) nil [913 929])
+            ("memory" include (:system-flag t) nil [971 988])
+            ("boost/config.hpp" include (:system-flag t) nil [1027 1054])
+            ("boost/detail/workaround.hpp" include (:system-flag t) nil [1091 1129])
+            ("boost/cstdint.hpp" include (:system-flag t) nil [1130 1158])
+            ("boost/iostreams/constants.hpp" include (:system-flag t) nil [1194 1234])
+            ("boost/iostreams/detail/adapter/non_blocking_adapter.hpp" include (:system-flag t) nil [1252 1318])
+            ("boost/iostreams/detail/adapter/range_adapter.hpp" include (:system-flag t) nil [1319 1378])
+            ("boost/iostreams/detail/char_traits.hpp" include (:system-flag t) nil [1379 1428])
+            ("boost/iostreams/detail/ios.hpp" include (:system-flag t) nil [1429 1470])
+            ("boost/iostreams/operations.hpp" include (:system-flag t) nil [1483 1524])
+            ("boost/iostreams/device/back_inserter.hpp" include (:system-flag t) nil [1525 1576])
+            ("boost/iostreams/filter/zlib.hpp" include (:system-flag t) nil [1577 1619])
+            ("boost/iostreams/pipeline.hpp" include (:system-flag t) nil [1620 1659])
+            ("boost" type
+               (:members 
+                  ( ("iostreams" type
+                       (:members 
+                          ( ("gzip" type
+                               (:members 
+                                  ( ("boost::iostreams::zlib" using (:type ("boost::iostreams::zlib" type
+                                         (:prototype t
+                                          :type "namespace")
+                                          nil nil)) (reparse-symbol namespacesubparts) [1944 1983])
+                                    ("zlib_error" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2025 2057])
+                                    ("bad_crc" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2058 2090])
+                                    ("bad_length" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2127 2159])
+                                    ("bad_header" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2199 2231])
+                                    ("bad_footer" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2253 2285])
+                                    ("magic" type
+                                       (:members 
+                                          ( ("id1" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [2370 2405])
+                                            ("id2" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [2406 2441]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [2308 2444])
+                                    ("method" type
+                                       (:members 
+                                          ( ("deflate" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [2547 2579]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [2470 2582])
+                                    ("flags" type
+                                       (:members 
+                                          ( ("text" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [2686 2718])
+                                            ("header_crc" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [2719 2751])
+                                            ("extra" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [2752 2784])
+                                            ("name" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [2785 2817])
+                                            ("comment" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [2818 2851]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [2609 2854])
+                                    ("extra_flags" type
+                                       (:members 
+                                          ( ("best_compression" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [2963 2995])
+                                            ("best_speed" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol namespacesubparts) [2996 3028]))                                          
+                                        :type "namespace")
+                                        (reparse-symbol namespacesubparts) [2880 3031])
+                                    ("os_fat" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3120 3152])
+                                    ("os_amiga" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3153 3185])
+                                    ("os_vms" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3186 3218])
+                                    ("os_unix" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3219 3251])
+                                    ("os_vm_cms" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3252 3284])
+                                    ("os_atari" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3285 3317])
+                                    ("os_hpfs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3318 3350])
+                                    ("os_macintosh" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3351 3383])
+                                    ("os_z_system" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3384 3416])
+                                    ("os_cp_m" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3417 3449])
+                                    ("os_tops_20" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3450 3483])
+                                    ("os_ntfs" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3484 3517])
+                                    ("os_qdos" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3518 3551])
+                                    ("os_acorn" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3552 3585])
+                                    ("os_unknown" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3586 3620]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1926 3623])
+                            ("gzip_params" type
+                               (:superclasses 
+                                  ( ("zlib_params" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("gzip_params" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [3867 3891])
+                                            ("" variable (:type ("gzip::default_compression" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3892 3918])
+                                            ("method" variable (:type "int") (reparse-symbol arg-sub-list) [3936 3960])
+                                            ("" variable (:type ("gzip::deflated" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3961 3976])
+                                            ("window_bits" variable (:type "int") (reparse-symbol arg-sub-list) [3994 4018])
+                                            ("" variable (:type ("gzip::default_window_bits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4019 4045])
+                                            ("mem_level" variable (:type "int") (reparse-symbol arg-sub-list) [4063 4087])
+                                            ("" variable (:type ("gzip::default_mem_level" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4088 4112])
+                                            ("strategy" variable (:type "int") (reparse-symbol arg-sub-list) [4130 4154])
+                                            ("" variable (:type ("gzip::default_strategy" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4155 4178])
+                                            ("file_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4196 4220])
+                                            ("comment" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4242 4266])
+                                            ("mtime" variable (:type ("std::time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4288 4312]))                                          
+                                        :type ("gzip_params" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [3854 4445])
+                                    ("file_name" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4450 4473])
+                                    ("comment" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4478 4499])
+                                    ("mtime" variable (:type ("std::time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4504 4523]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [3781 4526])
+                            ("gzip_error" type
+                               (:superclasses 
+                                  ( ("BOOST_IOSTREAMS_FAILURE" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [4739 4746])
+                                    ("gzip_error" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("error" variable (:type "int") (reparse-symbol arg-sub-list) [4771 4781]))                                          
+                                        :type ("explicit" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4751 4888])
+                                    ("gzip_error" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("e" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("zlib_error" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [4913 4933]))                                          
+                                        :type ("explicit" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [4893 5058])
+                                    ("error" function (:type "int") (reparse-symbol classsubparts) [5063 5099])
+                                    ("zlib_error_code" function (:type "int") (reparse-symbol classsubparts) [5104 5160])
+                                    ("private" label nil (reparse-symbol classsubparts) [5161 5169])
+                                    ("error_" variable (:type "int") (reparse-symbol classsubparts) [5174 5185])
+                                    ("zlib_error_code_" variable (:type "int") (reparse-symbol classsubparts) [5190 5211]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [4687 5214])
+                            ("basic_gzip_compressor" type
+                               (:superclasses 
+                                  ( ("basic_zlib_compressor" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [5457 5465])
+                                    ("base_type" type
+                                       (:typedef ("basic_zlib_compressor" type
+                                             (:template-specifier 
+                                                ( ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "basic_zlib_compressor"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [5470 5518])
+                                    ("public" label nil (reparse-symbol classsubparts) [5519 5526])
+                                    ("char_type" type
+                                       (:typedef ("char")
+                                        :superclasses "char"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [5531 5554])
+                                    ("category" type
+                                       (:superclasses 
+                                          ( ("dual_use" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil)
+                                            ("filter_tag" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil)
+                                            ("multichar_tag" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil)
+                                            ("closable_tag" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [5559 5677])
+                                    ("basic_gzip_compressor" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("gzip_params" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5705 5725])
+                                            ("" variable (:type ("gzip::default_compression" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5726 5752])
+                                            ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [5780 5797])
+                                            ("" variable (:type ("default_device_buffer_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5798 5826]))                                          
+                                        :type ("basic_gzip_compressor" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [5682 5827])
+                                    ("read" function
+                                       (:template 
+                                          ( ("Source" type (:type "class") nil nil))                                          
+                                        :type ("std::streamsize" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :type ("Source" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5884 5896])
+                                            ("s" variable
+                                               (:pointer 1
+                                                :type ("char_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5897 5910])
+                                            ("n" variable (:type ("std::streamsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5911 5929]))                                          )
+                                        (reparse-symbol classsubparts) [5833 6862])
+                                    ("write" function
+                                       (:template 
+                                          ( ("Sink" type (:type "class") nil nil))                                          
+                                        :type ("std::streamsize" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("snk" variable
+                                               (:reference 1
+                                                :type ("Sink" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6918 6928])
+                                            ("s" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("char_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [6929 6948])
+                                            ("n" variable (:type ("std::streamsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6949 6967]))                                          )
+                                        (reparse-symbol classsubparts) [6868 7392])
+                                    ("close" function
+                                       (:template 
+                                          ( ("Sink" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("snk" variable
+                                               (:reference 1
+                                                :type ("Sink" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7437 7447])
+                                            ("m" variable (:type ("BOOST_IOS::openmode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7448 7470]))                                          )
+                                        (reparse-symbol classsubparts) [7398 8185])
+                                    ("private" label nil (reparse-symbol classsubparts) [8186 8194])
+                                    ("normalize_params" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("p" variable (:type ("gzip_params" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8235 8249]))                                          
+                                        :type ("gzip_params" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8199 8250])
+                                    ("prepare_footer" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [8255 8277])
+                                    ("read_string" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("s" variable
+                                               (:pointer 1
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [8310 8318])
+                                            ("n" variable (:type ("std::streamsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8319 8337])
+                                            ("str" variable
+                                               (:reference 1
+                                                :type ("std::string" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8338 8355]))                                          
+                                        :type ("std::streamsize" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [8282 8356])
+                                    ("write_long" function
+                                       (:template 
+                                          ( ("Sink" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("n" variable (:type "long") (reparse-symbol arg-sub-list) [8413 8420])
+                                            ("next" variable
+                                               (:reference 1
+                                                :type ("Sink" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8421 8432]))                                          
+                                        :typemodifiers ("static"))
+                                        (reparse-symbol classsubparts) [8362 8731])
+                                    ("flag_type" type
+                                       (:members 
+                                          ( ("f_header_done" variable
+                                               (:constant-flag t
+                                                :default-value (8778 8779)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [8762 8779])
+                                            ("f_body_done" variable
+                                               (:constant-flag t
+                                                :default-value (8803 8818)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [8789 8818])
+                                            ("f_footer_done" variable
+                                               (:constant-flag t
+                                                :default-value (8847 8860)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [8831 8860]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [8737 8870])
+                                    ("header_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8875 8896])
+                                    ("footer_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8901 8922])
+                                    ("offset_" variable (:type ("std::size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8927 8948])
+                                    ("flags_" variable (:type "int") (reparse-symbol classsubparts) [8953 8973]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [5396 8976])
+                            ("gzip_compressor" type
+                               (:typedef ("basic_gzip_compressor" type (:type "class") nil nil)
+                                :superclasses "basic_gzip_compressor"
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [9028 9076])
+                            ("basic_gzip_decompressor" type
+                               (:superclasses 
+                                  ( ("basic_zlib_decompressor" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [9330 9337])
+                                    ("char_type" type
+                                       (:typedef ("char")
+                                        :superclasses "char"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [9342 9365])
+                                    ("category" type
+                                       (:superclasses 
+                                          ( ("multichar_input_filter_tag" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil)
+                                            ("closable_tag" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [9370 9459])
+                                    ("basic_gzip_decompressor" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("window_bits" variable (:type "int") (reparse-symbol arg-sub-list) [9489 9506])
+                                            ("" variable (:type ("gzip::default_window_bits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9507 9533])
+                                            ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [9563 9580])
+                                            ("" variable (:type ("default_device_buffer_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9581 9609]))                                          
+                                        :type ("basic_gzip_decompressor" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [9464 9610])
+                                    ("read" function
+                                       (:template 
+                                          ( ("Source" type (:type "class") nil nil))                                          
+                                        :type ("std::streamsize" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :type ("Source" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9667 9679])
+                                            ("s" variable
+                                               (:pointer 1
+                                                :type ("char_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [9680 9693])
+                                            ("n" variable (:type ("std::streamsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9694 9712]))                                          )
+                                        (reparse-symbol classsubparts) [9616 10664])
+                                    ("close" function
+                                       (:template 
+                                          ( ("Source" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :type ("Source" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10711 10723]))                                          )
+                                        (reparse-symbol classsubparts) [10670 10906])
+                                    ("file_name" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10912 10964])
+                                    ("comment" function (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10969 11017])
+                                    ("text" function (:type "bool") (reparse-symbol classsubparts) [11022 11085])
+                                    ("os" function (:type "int") (reparse-symbol classsubparts) [11090 11120])
+                                    ("mtime" function (:type ("std::time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11125 11169])
+                                    ("private" label nil (reparse-symbol classsubparts) [11170 11178])
+                                    ("base_type" type
+                                       (:typedef ("basic_zlib_decompressor" type
+                                             (:template-specifier 
+                                                ( ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "basic_zlib_decompressor"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [11183 11236])
+                                    ("traits_type" variable (:type "int") (reparse-symbol classsubparts) [11284 11296])
+                                    ("is_eof" function
+                                       (:typemodifiers ("static")
+                                        :arguments 
+                                          ( ("c" variable (:type "int") (reparse-symbol arg-sub-list) [11320 11326]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [11301 11371])
+                                    ("make_params" function
+                                       (:prototype-flag t
+                                        :typemodifiers ("static")
+                                        :arguments 
+                                          ( ("window_bits" variable (:type "int") (reparse-symbol arg-sub-list) [11407 11423]))                                          
+                                        :type ("gzip_params" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [11376 11424])
+                                    ("read_uint8" function
+                                       (:template 
+                                          ( ("Source" type (:type "class") nil nil))                                          
+                                        :type ("uint8_t" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :type ("Source" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [11486 11498])
+                                            ("error" variable (:type "int") (reparse-symbol arg-sub-list) [11499 11509]))                                          
+                                        :typemodifiers ("static"))
+                                        (reparse-symbol classsubparts) [11430 11714])
+                                    ("read_uint32" function
+                                       (:template 
+                                          ( ("Source" type (:type "class") nil nil))                                          
+                                        :type ("uint32_t" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :type ("Source" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [11778 11790])
+                                            ("error" variable (:type "int") (reparse-symbol arg-sub-list) [11791 11801]))                                          
+                                        :typemodifiers ("static"))
+                                        (reparse-symbol classsubparts) [11720 12050])
+                                    ("read_string" function
+                                       (:template 
+                                          ( ("Source" type (:type "class") nil nil))                                          
+                                        :type ("std::string" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :type ("Source" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12110 12122]))                                          )
+                                        (reparse-symbol classsubparts) [12056 12447])
+                                    ("read_header" function
+                                       (:template 
+                                          ( ("Source" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :type ("Source" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12500 12512]))                                          )
+                                        (reparse-symbol classsubparts) [12453 14579])
+                                    ("read_footer" function
+                                       (:template 
+                                          ( ("Source" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :type ("Source" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [14632 14644]))                                          )
+                                        (reparse-symbol classsubparts) [14585 15181])
+                                    ("flag_type" type
+                                       (:members 
+                                          ( ("f_header_read" variable
+                                               (:constant-flag t
+                                                :default-value (15228 15229)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [15211 15229])
+                                            ("f_footer_read" variable
+                                               (:constant-flag t
+                                                :default-value (15256 15271)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [15239 15271])
+                                            ("f_text" variable
+                                               (:constant-flag t
+                                                :default-value (15301 15316)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [15284 15316]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [15186 15326])
+                                    ("file_name_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15331 15355])
+                                    ("comment_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15360 15382])
+                                    ("os_" variable (:type "int") (reparse-symbol classsubparts) [15387 15404])
+                                    ("mtime_" variable (:type ("std::time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [15409 15429])
+                                    ("flags_" variable (:type "int") (reparse-symbol classsubparts) [15434 15454]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [9265 15457])
+                            ("gzip_decompressor" type
+                               (:typedef ("basic_gzip_decompressor" type (:type "class") nil nil)
+                                :superclasses "basic_gzip_decompressor"
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [15511 15563])
+                            ("basic_gzip_compressor" function
+                               (:template 
+                                  ( ("Alloc" type (:type "class") nil nil))                                  
+                                :type ("basic_gzip_compressor" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("p" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("gzip_params" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [15729 15750])
+                                    ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [15751 15767]))                                  
+                                :parent "basic_gzip_compressor"
+                                :constructor-flag t)
+                                (reparse-symbol namespacesubparts) [15647 17378])
+                            ("normalize_params" function
+                               (:template 
+                                  ( ("Alloc" type (:type "class") nil nil))                                  
+                                :type ("gzip_params" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("p" variable (:type ("gzip_params" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17464 17478]))                                  
+                                :parent "basic_gzip_compressor")
+                                (reparse-symbol namespacesubparts) [17380 17547])
+                            ("prepare_footer" function
+                               (:template 
+                                  ( ("Alloc" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :parent "basic_gzip_compressor")
+                                (reparse-symbol namespacesubparts) [17549 17814])
+                            ("read_string" function
+                               (:template 
+                                  ( ("Alloc" type (:type "class") nil nil))                                  
+                                :type ("std::streamsize" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("s" variable
+                                       (:pointer 1
+                                        :type "char")
+                                        (reparse-symbol arg-sub-list) [17904 17912])
+                                    ("n" variable (:type ("std::streamsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17913 17931])
+                                    ("str" variable
+                                       (:reference 1
+                                        :type ("std::string" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [17932 17949]))                                  
+                                :parent "basic_gzip_compressor")
+                                (reparse-symbol namespacesubparts) [17816 18377])
+                            ("basic_gzip_decompressor" function
+                               (:template 
+                                  ( ("Alloc" type (:type "class") nil nil))                                  
+                                :type ("basic_gzip_decompressor" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("window_bits" variable (:type "int") (reparse-symbol arg-sub-list) [18547 18563])
+                                    ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [18564 18580]))                                  
+                                :parent "basic_gzip_decompressor"
+                                :constructor-flag t)
+                                (reparse-symbol namespacesubparts) [18461 18694])
+                            ("make_params" function
+                               (:template 
+                                  ( ("Alloc" type (:type "class") nil nil))                                  
+                                :type ("gzip_params" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("window_bits" variable (:type "int") (reparse-symbol arg-sub-list) [18777 18793]))                                  
+                                :parent "basic_gzip_decompressor")
+                                (reparse-symbol namespacesubparts) [18696 18914]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1903 18999]))                  
+                :type "namespace")
+                nil [1885 19001]))          
+    :file "gzip.hpp"
+    :pointmax 19145
+    :fsize 19144
+    :lastmodtime '(17765 48445)
+    :unmatched-syntax '((semantic-list 15481 . 15509) (symbol 15458 . 15481) (number 15507 . 15508) (number 15318 . 15319) (punctuation 15316 . 15317) (punctuation 15315 . 15316) (number 15273 . 15274) (punctuation 15271 . 15272) (punctuation 15270 . 15271) (number 15318 . 15319) (punctuation 15316 . 15317) (punctuation 15315 . 15316) (number 15273 . 15274) (punctuation 15271 . 15272) (punctuation 15270 . 15271) (semantic-list 11276 . 11282) (symbol 11249 . 11276) (TYPEDEF 11241 . 11248) (punctuation 9579 . 9580) (punctuation 9505 . 9506) (punctuation 9263 . 9264) (punctuation 9261 . 9262) (CHAR 9257 . 9261) (punctuation 9256 . 9257) (symbol 9247 . 9256) (punctuation 9246 . 9247) (punctuation 9245 . 9246) (symbol 9242 . 9245) (punctuation 9240 . 9241) (symbol 9234 . 9239) (TYPENAME 9225 . 9233) (punctuation 9224 . 9225) (TEMPLATE 9216 . 9224) (semantic-list 9000 . 9026) (symbol 8977 . 9000) (number 9024 . 9025) (number 8862 . 8863) (punctuation 8860 . 8861) (punctuation 8859 . 8860) (number 8820 . 8821) (punctuation 8818 . 8819) (punctuation 8817 . 8818) (number 8862 . 8863) (punctuation 8860 . 8861) (punctuation 8859 . 8860) (number 8820 . 8821) (punctuation 8818 . 8819) (punctuation 8817 . 8818) (punctuation 5796 . 5797) (punctuation 5724 . 5725) (punctuation 5394 . 5395) (punctuation 5392 . 5393) (CHAR 5388 . 5392) (punctuation 5387 . 5388) (symbol 5378 . 5387) (punctuation 5377 . 5378) (punctuation 5376 . 5377) (symbol 5373 . 5376) (punctuation 5371 . 5372) (symbol 5365 . 5370) (TYPENAME 5356 . 5364) (punctuation 5355 . 5356) (TEMPLATE 5347 . 5355) (number 4313 . 4314) (punctuation 4311 . 4312) (string 4267 . 4269) (punctuation 4265 . 4266) (string 4221 . 4223) (punctuation 4219 . 4220) (punctuation 4153 . 4154) (punctuation 4086 . 4087) (punctuation 4017 . 4018) (punctuation 3959 . 3960) (punctuation 3890 . 3891) (symbol 616 . 620) (symbol 609 . 615) (punctuation 607 . 608))
+    :lexical-table 
+        '(("BOOST_IOSTREAMS_GZIP_HPP_INCLUDED")
+          )
+
+    )
+   (semanticdb-table "zlib.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_IOSTREAMS_ZLIB_HPP_INCLUDED" variable (:constant-flag t) nil [440 473])
+            ("cassert" include (:system-flag t) nil [555 573])
+            ("iosfwd" include (:system-flag t) nil [602 619])
+            ("memory" include (:system-flag t) nil [663 680])
+            ("new" include (:system-flag t) nil [717 731])
+            ("boost/config.hpp" include (:system-flag t) nil [742 769])
+            ("boost/detail/workaround.hpp" include (:system-flag t) nil [823 861])
+            ("boost/iostreams/constants.hpp" include (:system-flag t) nil [862 902])
+            ("boost/iostreams/detail/config/auto_link.hpp" include (:system-flag t) nil [921 975])
+            ("boost/iostreams/detail/config/dyn_link.hpp" include (:system-flag t) nil [976 1029])
+            ("boost/iostreams/detail/config/wide_streams.hpp" include (:system-flag t) nil [1030 1087])
+            ("boost/iostreams/detail/config/zlib.hpp" include (:system-flag t) nil [1088 1137])
+            ("boost/iostreams/detail/ios.hpp" include (:system-flag t) nil [1138 1179])
+            ("boost/iostreams/filter/symmetric.hpp" include (:system-flag t) nil [1205 1252])
+            ("boost/iostreams/pipeline.hpp" include (:system-flag t) nil [1269 1308])
+            ("boost/type_traits/is_same.hpp" include (:system-flag t) nil [1325 1365])
+            ("boost/config/abi_prefix.hpp" include (:system-flag t) nil [1513 1551])
+            ("boost" type
+               (:members 
+                  ( ("iostreams" type
+                       (:members 
+                          ( ("zlib" type
+                               (:members 
+                                  ( ("uint" type
+                                       (:typedef ("unsigned int")
+                                        :superclasses "unsigned int"
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1655 1681])
+                                    ("byte" type
+                                       (:typedef ("unsigned char")
+                                        :superclasses "unsigned char"
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1682 1709])
+                                    ("ulong" type
+                                       (:typedef ("unsigned long")
+                                        :superclasses "unsigned long"
+                                        :type "typedef")
+                                        (reparse-symbol namespacesubparts) [1710 1738])
+                                    ("alloc_func" variable
+                                       (:functionpointer-flag t
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [1748 1799])
+                                    ("free_func" variable
+                                       (:functionpointer-flag t
+                                        :type "void")
+                                        (reparse-symbol namespacesubparts) [1808 1840])
+                                    ("no_compression" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [1906 1938])
+                                    ("best_speed" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [1960 1988])
+                                    ("best_compression" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2010 2044])
+                                    ("default_compression" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2066 2103])
+                                    ("deflated" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2170 2196])
+                                    ("default_strategy" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2266 2300])
+                                    ("filtered" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2322 2348])
+                                    ("huffman_only" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2370 2400])
+                                    ("okay" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2460 2482])
+                                    ("stream_end" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2504 2532])
+                                    ("stream_error" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2554 2584])
+                                    ("version_error" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2606 2637])
+                                    ("data_error" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2659 2687])
+                                    ("mem_error" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2709 2736])
+                                    ("buf_error" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2758 2785])
+                                    ("finish" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2844 2868])
+                                    ("no_flush" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2890 2916])
+                                    ("sync_flush" variable
+                                       (:typemodifiers ("extern")
+                                        :constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [2938 2966])
+                                    ("null" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3109 3158])
+                                    ("default_window_bits" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3199 3249])
+                                    ("default_mem_level" variable
+                                       (:constant-flag t
+                                        :type "int")
+                                        (reparse-symbol namespacesubparts) [3250 3299])
+                                    ("default_crc" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [3300 3353])
+                                    ("default_noheader" variable
+                                       (:constant-flag t
+                                        :type "bool")
+                                        (reparse-symbol namespacesubparts) [3354 3407]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [1605 3410])
+                            ("zlib_params" type
+                               (:members 
+                                  ( ("zlib_params" function
+                                       (:constructor-flag t
+                                        :arguments 
+                                          ( ("level" variable (:type "int") (reparse-symbol arg-sub-list) [3678 3699])
+                                            ("" variable (:type ("zlib::default_compression" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3700 3726])
+                                            ("method" variable (:type "int") (reparse-symbol arg-sub-list) [3744 3765])
+                                            ("" variable (:type ("zlib::deflated" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3766 3781])
+                                            ("window_bits" variable (:type "int") (reparse-symbol arg-sub-list) [3799 3820])
+                                            ("" variable (:type ("zlib::default_window_bits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3821 3847])
+                                            ("mem_level" variable (:type "int") (reparse-symbol arg-sub-list) [3866 3887])
+                                            ("" variable (:type ("zlib::default_mem_level" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3888 3912])
+                                            ("strategy" variable (:type "int") (reparse-symbol arg-sub-list) [3931 3952])
+                                            ("" variable (:type ("zlib::default_strategy" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3953 3976])
+                                            ("noheader" variable (:type "bool") (reparse-symbol arg-sub-list) [3994 4015])
+                                            ("" variable (:type ("zlib::default_noheader" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4016 4039])
+                                            ("calculate_crc" variable (:type "bool") (reparse-symbol arg-sub-list) [4057 4078])
+                                            ("" variable (:type ("zlib::default_crc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4079 4098]))                                          
+                                        :type ("zlib_params" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [3665 4289])
+                                    ("level" variable (:type "int") (reparse-symbol classsubparts) [4294 4304])
+                                    ("method" variable (:type "int") (reparse-symbol classsubparts) [4309 4320])
+                                    ("window_bits" variable (:type "int") (reparse-symbol classsubparts) [4325 4341])
+                                    ("mem_level" variable (:type "int") (reparse-symbol classsubparts) [4346 4360])
+                                    ("strategy" variable (:type "int") (reparse-symbol classsubparts) [4365 4378])
+                                    ("noheader" variable (:type "bool") (reparse-symbol classsubparts) [4383 4397])
+                                    ("calculate_crc" variable (:type "bool") (reparse-symbol classsubparts) [4402 4421]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [3606 4424])
+                            ("BOOST_IOSTREAMS_FAILURE" variable (:type "int") (reparse-symbol namespacesubparts) [4627 4799])
+                            ("detail" type
+                               (:members 
+                                  ( ("zlib_allocator_traits" type
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil))                                          
+                                        :type "struct"
+                                        :members 
+                                          ( ("type" variable (:type ("other" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4959 4970]))                                          )
+                                        (reparse-symbol namespacesubparts) [4821 5025])
+                                    ("zlib_allocator" type
+                                       (:superclasses 
+                                          ( ("Base" type
+                                               (:protection "private"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("private" label nil (reparse-symbol classsubparts) [5218 5226])
+                                            ("size_type" type
+                                               (:typedef ("Base::size_type" type (:type "class") nil nil)
+                                                :superclasses "Base::size_type"
+                                                :type "typedef")
+                                                (reparse-symbol classsubparts) [5231 5274])
+                                            ("public" label nil (reparse-symbol classsubparts) [5275 5282])
+                                            ("BOOST_STATIC_CONSTANT" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable (:type "bool") (reparse-symbol arg-sub-list) [5309 5314])
+                                                    ("" variable (:type ("custom" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5315 5323]))                                                  
+                                                :type "int")
+                                                (reparse-symbol classsubparts) [5287 5380])
+                                            ("allocator_type" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5432 5452])
+                                            ("allocate" function
+                                               (:prototype-flag t
+                                                :pointer 1
+                                                :typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("self" variable
+                                                       (:pointer 1
+                                                        :type "void")
+                                                        (reparse-symbol arg-sub-list) [5479 5490])
+                                                    ("items" variable (:type ("zlib::uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5491 5508])
+                                                    ("size" variable (:type ("zlib::uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5509 5525]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5457 5526])
+                                            ("deallocate" function
+                                               (:prototype-flag t
+                                                :typemodifiers ("static")
+                                                :arguments 
+                                                  ( ("self" variable
+                                                       (:pointer 1
+                                                        :type "void")
+                                                        (reparse-symbol arg-sub-list) [5554 5565])
+                                                    ("address" variable
+                                                       (:pointer 1
+                                                        :type "void")
+                                                        (reparse-symbol arg-sub-list) [5566 5580]))                                                  
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [5531 5581]))                                          
+                                        :type "struct")
+                                        (reparse-symbol namespacesubparts) [5179 5584])
+                                    ("zlib_base" variable (:type ("BOOST_IOSTREAMS_DECL" type
+                                         (:prototype t
+                                          :type "class")
+                                          nil nil)) (reparse-symbol namespacesubparts) [5586 7171])
+                                    ("zlib_compressor_impl" type
+                                       (:superclasses 
+                                          ( ("zlib_base" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil)
+                                            ("zlib_allocator" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [7462 7469])
+                                            ("zlib_compressor_impl" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("zlib_params" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [7496 7516])
+                                                    ("" variable (:type ("zlib::default_compression" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7517 7543]))                                                  
+                                                :type ("zlib_compressor_impl" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [7475 7544])
+                                            ("zlib_compressor_impl" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [7549 7573])
+                                            ("filter" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type "char")
+                                                        (reparse-symbol arg-sub-list) [7591 7603])
+                                                    ("" variable (:type ("src_begin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7604 7614])
+                                                    ("src_end" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type "char")
+                                                        (reparse-symbol arg-sub-list) [7615 7635])
+                                                    ("" variable
+                                                       (:pointer 1
+                                                        :type "char")
+                                                        (reparse-symbol arg-sub-list) [7653 7659])
+                                                    ("" variable (:type ("dest_begin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7660 7671])
+                                                    ("dest_end" variable
+                                                       (:pointer 1
+                                                        :type "char")
+                                                        (reparse-symbol arg-sub-list) [7672 7687])
+                                                    ("flush" variable (:type "bool") (reparse-symbol arg-sub-list) [7688 7700]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [7578 7701])
+                                            ("close" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [7706 7719]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [7383 7722])
+                                    ("zlib_decompressor_impl" type
+                                       (:superclasses 
+                                          ( ("zlib_base" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil)
+                                            ("zlib_allocator" type
+                                               (:protection "public"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("public" label nil (reparse-symbol classsubparts) [8011 8018])
+                                            ("zlib_decompressor_impl" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:reference 1
+                                                        :constant-flag t
+                                                        :type ("zlib_params" type (:type "class") nil nil))
+                                                        (reparse-symbol arg-sub-list) [8046 8065]))                                                  
+                                                :type ("zlib_decompressor_impl" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [8023 8066])
+                                            ("zlib_decompressor_impl" function
+                                               (:prototype-flag t
+                                                :constructor-flag t
+                                                :arguments 
+                                                  ( ("window_bits" variable (:type "int") (reparse-symbol arg-sub-list) [8094 8111])
+                                                    ("" variable (:type ("zlib::default_window_bits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8112 8138]))                                                  
+                                                :type ("zlib_decompressor_impl" type (:type "class") nil nil))
+                                                (reparse-symbol classsubparts) [8071 8139])
+                                            ("zlib_decompressor_impl" function
+                                               (:prototype-flag t
+                                                :destructor-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [8144 8170])
+                                            ("filter" function
+                                               (:prototype-flag t
+                                                :arguments 
+                                                  ( ("" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type "char")
+                                                        (reparse-symbol arg-sub-list) [8188 8200])
+                                                    ("" variable (:type ("begin_in" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8201 8210])
+                                                    ("end_in" variable
+                                                       (:pointer 1
+                                                        :constant-flag t
+                                                        :type "char")
+                                                        (reparse-symbol arg-sub-list) [8211 8230])
+                                                    ("" variable
+                                                       (:pointer 1
+                                                        :type "char")
+                                                        (reparse-symbol arg-sub-list) [8248 8254])
+                                                    ("" variable (:type ("begin_out" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8255 8265])
+                                                    ("end_out" variable
+                                                       (:pointer 1
+                                                        :type "char")
+                                                        (reparse-symbol arg-sub-list) [8266 8280])
+                                                    ("flush" variable (:type "bool") (reparse-symbol arg-sub-list) [8281 8293]))                                                  
+                                                :type "bool")
+                                                (reparse-symbol classsubparts) [8175 8294])
+                                            ("close" function
+                                               (:prototype-flag t
+                                                :type "void")
+                                                (reparse-symbol classsubparts) [8299 8312]))                                          
+                                        :type "class")
+                                        (reparse-symbol namespacesubparts) [7931 8315]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [4801 8318])
+                            ("basic_zlib_compressor" type
+                               (:superclasses 
+                                  ( ("symmetric_filter" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [8633 8641])
+                                    ("impl_type" type
+                                       (:typedef ("detail::zlib_compressor_impl" type
+                                             (:template-specifier 
+                                                ( ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "detail::zlib_compressor_impl"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [8646 8708])
+                                    ("base_type" type
+                                       (:typedef ("symmetric_filter" type
+                                             (:template-specifier 
+                                                ( ("impl_type" type nil nil nil)
+                                                  ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "symmetric_filter"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [8713 8767])
+                                    ("public" label nil (reparse-symbol classsubparts) [8768 8775])
+                                    ("char_type" type
+                                       (:typedef ("base_type::char_type" type (:type "class") nil nil)
+                                        :superclasses "base_type::char_type"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [8780 8842])
+                                    ("category" type
+                                       (:typedef ("base_type::category" type (:type "class") nil nil)
+                                        :superclasses "base_type::category"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [8847 8908])
+                                    ("basic_zlib_compressor" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("zlib_params" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8936 8956])
+                                            ("" variable (:type ("zlib::default_compression" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8957 8983])
+                                            ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [9012 9029])
+                                            ("" variable (:type ("default_device_buffer_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9030 9058]))                                          
+                                        :type ("basic_zlib_compressor" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [8913 9059])
+                                    ("crc" function (:type ("zlib::ulong" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9064 9114])
+                                    ("total_in" function (:type "int") (reparse-symbol classsubparts) [9119 9172]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [8533 9175])
+                            ("zlib_compressor" type
+                               (:typedef ("basic_zlib_compressor" type (:type "class") nil nil)
+                                :superclasses "basic_zlib_compressor"
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [9227 9275])
+                            ("basic_zlib_decompressor" type
+                               (:superclasses 
+                                  ( ("symmetric_filter" type
+                                       (:protection "unspecified"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("private" label nil (reparse-symbol classsubparts) [9573 9581])
+                                    ("impl_type" type
+                                       (:typedef ("detail::zlib_decompressor_impl" type
+                                             (:template-specifier 
+                                                ( ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "detail::zlib_decompressor_impl"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [9586 9648])
+                                    ("base_type" type
+                                       (:typedef ("symmetric_filter" type
+                                             (:template-specifier 
+                                                ( ("impl_type" type nil nil nil)
+                                                  ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "symmetric_filter"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [9653 9707])
+                                    ("public" label nil (reparse-symbol classsubparts) [9708 9715])
+                                    ("char_type" type
+                                       (:typedef ("base_type::char_type" type (:type "class") nil nil)
+                                        :superclasses "base_type::char_type"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [9720 9782])
+                                    ("category" type
+                                       (:typedef ("base_type::category" type (:type "class") nil nil)
+                                        :superclasses "base_type::category"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [9787 9848])
+                                    ("basic_zlib_decompressor" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("window_bits" variable (:type "int") (reparse-symbol arg-sub-list) [9878 9895])
+                                            ("" variable (:type ("zlib::default_window_bits" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9896 9922])
+                                            ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [9952 9969])
+                                            ("" variable (:type ("default_device_buffer_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9970 9998]))                                          
+                                        :type ("basic_zlib_decompressor" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [9853 9999])
+                                    ("basic_zlib_decompressor" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("p" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("zlib_params" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [10029 10050])
+                                            ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [10080 10097])
+                                            ("" variable (:type ("default_device_buffer_size" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10098 10126]))                                          
+                                        :type ("basic_zlib_decompressor" type (:type "struct") nil nil))
+                                        (reparse-symbol classsubparts) [10004 10127])
+                                    ("crc" function (:type ("zlib::ulong" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10132 10182])
+                                    ("total_out" function (:type "int") (reparse-symbol classsubparts) [10187 10242]))                                  
+                                :type "struct")
+                                (reparse-symbol namespacesubparts) [9469 10245])
+                            ("zlib_decompressor" type
+                               (:typedef ("basic_zlib_decompressor" type (:type "class") nil nil)
+                                :superclasses "basic_zlib_decompressor"
+                                :type "typedef")
+                                (reparse-symbol namespacesubparts) [10299 10351])
+                            ("detail" type
+                               (:members 
+                                  ( ("allocate" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil)
+                                            ("Base" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("self" variable
+                                               (:pointer 1
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [10626 10637])
+                                            ("items" variable (:type ("zlib::uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10638 10655])
+                                            ("size" variable (:type ("zlib::uint" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10656 10672]))                                          
+                                        :parent "zlib_allocator"
+                                        :pointer 1)
+                                        (reparse-symbol namespacesubparts) [10537 11025])
+                                    ("deallocate" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil)
+                                            ("Base" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("self" variable
+                                               (:pointer 1
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [11112 11123])
+                                            ("address" variable
+                                               (:pointer 1
+                                                :type "void")
+                                                (reparse-symbol arg-sub-list) [11124 11138]))                                          
+                                        :parent "zlib_allocator")
+                                        (reparse-symbol namespacesubparts) [11027 11352])
+                                    ("zlib_compressor_impl" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil))                                          
+                                        :type ("zlib_compressor_impl" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("p" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("zlib_params" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [11511 11532]))                                          
+                                        :parent "zlib_compressor_impl"
+                                        :constructor-flag t)
+                                        (reparse-symbol namespacesubparts) [11436 11595])
+                                    ("zlib_compressor_impl" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :parent "zlib_compressor_impl"
+                                        :destructor-flag t)
+                                        (reparse-symbol namespacesubparts) [11597 11698])
+                                    ("filter" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [11772 11784])
+                                            ("" variable (:type ("src_begin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11785 11795])
+                                            ("src_end" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [11796 11816])
+                                            ("" variable
+                                               (:pointer 1
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [11823 11829])
+                                            ("" variable (:type ("dest_begin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11830 11841])
+                                            ("dest_end" variable
+                                               (:pointer 1
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [11842 11857])
+                                            ("flush" variable (:type "bool") (reparse-symbol arg-sub-list) [11858 11870]))                                          
+                                        :parent "zlib_compressor_impl")
+                                        (reparse-symbol namespacesubparts) [11700 12104])
+                                    ("close" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :parent "zlib_compressor_impl")
+                                        (reparse-symbol namespacesubparts) [12106 12195])
+                                    ("zlib_decompressor_impl" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil))                                          
+                                        :type ("zlib_decompressor_impl" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("p" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("zlib_params" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [12358 12379]))                                          
+                                        :parent "zlib_decompressor_impl"
+                                        :constructor-flag t)
+                                        (reparse-symbol namespacesubparts) [12279 12443])
+                                    ("zlib_decompressor_impl" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :parent "zlib_decompressor_impl"
+                                        :destructor-flag t)
+                                        (reparse-symbol namespacesubparts) [12445 12551])
+                                    ("zlib_decompressor_impl" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil))                                          
+                                        :type ("zlib_decompressor_impl" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("window_bits" variable (:type "int") (reparse-symbol arg-sub-list) [12632 12648]))                                          
+                                        :parent "zlib_decompressor_impl"
+                                        :constructor-flag t)
+                                        (reparse-symbol namespacesubparts) [12553 12770])
+                                    ("filter" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [12846 12858])
+                                            ("" variable (:type ("src_begin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12859 12869])
+                                            ("src_end" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [12870 12890])
+                                            ("" variable
+                                               (:pointer 1
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [12897 12903])
+                                            ("" variable (:type ("dest_begin" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12904 12915])
+                                            ("dest_end" variable
+                                               (:pointer 1
+                                                :type "char")
+                                                (reparse-symbol arg-sub-list) [12916 12931])
+                                            ("" variable (:type "bool") (reparse-symbol arg-sub-list) [12932 12950]))                                          
+                                        :parent "zlib_decompressor_impl")
+                                        (reparse-symbol namespacesubparts) [12772 13163])
+                                    ("close" function
+                                       (:template 
+                                          ( ("Alloc" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :parent "zlib_decompressor_impl")
+                                        (reparse-symbol namespacesubparts) [13165 13257]))                                  
+                                :type "namespace")
+                                (reparse-symbol namespacesubparts) [10517 13260])
+                            ("basic_zlib_compressor" function
+                               (:template 
+                                  ( ("Alloc" type (:type "class") nil nil))                                  
+                                :type ("basic_zlib_compressor" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("p" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("zlib_params" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13451 13472])
+                                    ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [13473 13489]))                                  
+                                :parent "basic_zlib_compressor"
+                                :constructor-flag t)
+                                (reparse-symbol namespacesubparts) [13369 13526])
+                            ("basic_zlib_decompressor" function
+                               (:template 
+                                  ( ("Alloc" type (:type "class") nil nil))                                  
+                                :type ("basic_zlib_decompressor" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("window_bits" variable (:type "int") (reparse-symbol arg-sub-list) [13696 13712])
+                                    ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [13713 13729]))                                  
+                                :parent "basic_zlib_decompressor"
+                                :constructor-flag t)
+                                (reparse-symbol namespacesubparts) [13610 13776])
+                            ("basic_zlib_decompressor" function
+                               (:template 
+                                  ( ("Alloc" type (:type "class") nil nil))                                  
+                                :type ("basic_zlib_decompressor" type (:type "class") nil nil)
+                                :arguments 
+                                  ( ("p" variable
+                                       (:reference 1
+                                        :constant-flag t
+                                        :type ("zlib_params" type (:type "class") nil nil))
+                                        (reparse-symbol arg-sub-list) [13864 13885])
+                                    ("buffer_size" variable (:type "int") (reparse-symbol arg-sub-list) [13886 13902]))                                  
+                                :parent "basic_zlib_decompressor"
+                                :constructor-flag t)
+                                (reparse-symbol namespacesubparts) [13778 13939]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [1582 14024]))                  
+                :type "namespace")
+                nil [1564 14026])
+            ("boost/config/abi_suffix.hpp" include (:system-flag t) nil [14064 14102]))          
+    :file "zlib.hpp"
+    :pointmax 14235
+    :fsize 14234
+    :lastmodtime '(17765 48445)
+    :unmatched-syntax '((punctuation 12902 . 12903) (punctuation 12857 . 12858) (punctuation 11828 . 11829) (punctuation 11783 . 11784) (semantic-list 10269 . 10297) (symbol 10246 . 10269) (number 10295 . 10296) (punctuation 10096 . 10097) (punctuation 9968 . 9969) (punctuation 9894 . 9895) (punctuation 9467 . 9468) (punctuation 9465 . 9466) (CHAR 9461 . 9465) (punctuation 9460 . 9461) (symbol 9451 . 9460) (punctuation 9450 . 9451) (punctuation 9449 . 9450) (symbol 9446 . 9449) (punctuation 9444 . 9445) (symbol 9438 . 9443) (TYPENAME 9429 . 9437) (punctuation 9428 . 9429) (TEMPLATE 9420 . 9428) (semantic-list 9199 . 9225) (symbol 9176 . 9199) (number 9223 . 9224) (punctuation 9028 . 9029) (punctuation 8955 . 8956) (punctuation 8531 . 8532) (punctuation 8529 . 8530) (CHAR 8525 . 8529) (punctuation 8524 . 8525) (symbol 8515 . 8524) (punctuation 8514 . 8515) (punctuation 8513 . 8514) (symbol 8510 . 8513) (punctuation 8508 . 8509) (symbol 8502 . 8507) (TYPENAME 8493 . 8501) (punctuation 8492 . 8493) (TEMPLATE 8484 . 8492) (punctuation 8253 . 8254) (punctuation 8199 . 8200) (punctuation 8110 . 8111) (punctuation 7929 . 7930) (punctuation 7927 . 7928) (CHAR 7923 . 7927) (punctuation 7922 . 7923) (symbol 7913 . 7922) (punctuation 7912 . 7913) (punctuation 7911 . 7912) (symbol 7908 . 7911) (punctuation 7906 . 7907) (symbol 7900 . 7905) (TYPENAME 7891 . 7899) (punctuation 7890 . 7891) (TEMPLATE 7882 . 7890) (punctuation 7658 . 7659) (punctuation 7602 . 7603) (punctuation 7515 . 7516) (punctuation 7381 . 7382) (punctuation 7379 . 7380) (CHAR 7375 . 7379) (punctuation 7374 . 7375) (symbol 7365 . 7374) (punctuation 7364 . 7365) (punctuation 7363 . 7364) (symbol 7360 . 7363) (punctuation 7358 . 7359) (symbol 7352 . 7357) (TYPENAME 7343 . 7351) (punctuation 7342 . 7343) (TEMPLATE 7334 . 7342) (punctuation 5431 . 5432) (punctuation 5430 . 5431) (punctuation 5429 . 5430) (symbol 5424 . 5429) (punctuation 5423 . 5424) (symbol 5402 . 5423) (TYPENAME 5393 . 5401) (TYPEDEF 5385 . 5392) (semantic-list 5333 . 5378) (punctuation 5322 . 5323) (punctuation 5177 . 5178) (symbol 5172 . 5176) (punctuation 5171 . 5172) (punctuation 5170 . 5171) (punctuation 5169 . 5170) (symbol 5164 . 5169) (punctuation 5163 . 5164) (symbol 5142 . 5163) (symbol 5119 . 5141) (punctuation 5077 . 5078) (symbol 5072 . 5076) (TYPENAME 5063 . 5071) (punctuation 5051 . 5052) (symbol 5046 . 5051) (TYPENAME 5037 . 5045) (punctuation 5035 . 5036) (TEMPLATE 5027 . 5035) (punctuation 4958 . 4959) (punctuation 4957 . 4958) (punctuation 4956 . 4957) (CHAR 4952 . 4956) (punctuation 4951 . 4952) (symbol 4945 . 4951) (TEMPLATE 4936 . 4944) (punctuation 4935 . 4936) (punctuation 4934 . 4935) (symbol 4929 . 4934) (TYPENAME 4920 . 4928) (TYPEDEF 4912 . 4919) (PUBLIC 4620 . 4626) (punctuation 4618 . 4619) (symbol 4607 . 4617) (symbol 4586 . 4606) (CLASS 4580 . 4585) (punctuation 4077 . 4078) (punctuation 4014 . 4015) (punctuation 3951 . 3952) (punctuation 3886 . 3887) (punctuation 3819 . 3820) (punctuation 3764 . 3765) (punctuation 3698 . 3699) (symbol 2917 . 2937) (symbol 2869 . 2889) (symbol 2823 . 2843) (symbol 2737 . 2757) (symbol 2688 . 2708) (symbol 2638 . 2658) (symbol 2585 . 2605) (symbol 2533 . 2553) (symbol 2483 . 2503) (symbol 2439 . 2459) (symbol 2349 . 2369) (symbol 2301 . 2321) (symbol 2245 . 2265) (symbol 2149 . 2169) (symbol 2045 . 2065) (symbol 1989 . 2009) (symbol 1939 . 1959) (symbol 1885 . 1905) (TYPEDEF 1800 . 1807) (TYPEDEF 1740 . 1747) (symbol 528 . 532) (symbol 521 . 527) (punctuation 519 . 520))
+    :lexical-table 
+        '(("BOOST_IOSTREAMS_ZLIB_HPP_INCLUDED")
+          )
+
+    )
+   (semanticdb-table "symmetric.hpp"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("BOOST_IOSTREAMS_SYMMETRIC_FILTER_HPP_INCLUDED" variable (:constant-flag t) nil [1565 1610])
+            ("cassert" include (:system-flag t) nil [1678 1696])
+            ("memory" include (:system-flag t) nil [1697 1714])
+            ("boost/config.hpp" include (:system-flag t) nil [1769 1796])
+            ("boost/iostreams/char_traits.hpp" include (:system-flag t) nil [1844 1886])
+            ("boost/iostreams/constants.hpp" include (:system-flag t) nil [1887 1927])
+            ("boost/iostreams/detail/buffer.hpp" include (:system-flag t) nil [1951 1995])
+            ("boost/iostreams/detail/char_traits.hpp" include (:system-flag t) nil [1996 2045])
+            ("boost/iostreams/detail/closer.hpp" include (:system-flag t) nil [2046 2090])
+            ("boost/iostreams/detail/config/limits.hpp" include (:system-flag t) nil [2091 2142])
+            ("boost/iostreams/detail/template_params.hpp" include (:system-flag t) nil [2143 2196])
+            ("boost/iostreams/traits.hpp" include (:system-flag t) nil [2197 2234])
+            ("boost/iostreams/operations.hpp" include (:system-flag t) nil [2235 2276])
+            ("boost/iostreams/pipeline.hpp" include (:system-flag t) nil [2299 2338])
+            ("boost/preprocessor/iteration/local.hpp" include (:system-flag t) nil [2339 2388])
+            ("boost/preprocessor/punctuation/comma_if.hpp" include (:system-flag t) nil [2389 2443])
+            ("boost/preprocessor/repetition/enum_binary_params.hpp" include (:system-flag t) nil [2444 2507])
+            ("boost/preprocessor/repetition/enum_params.hpp" include (:system-flag t) nil [2508 2564])
+            ("boost/shared_ptr.hpp" include (:system-flag t) nil [2565 2596])
+            ("boost/iostreams/detail/config/disable_warnings.hpp" include (:system-flag t) nil [2617 2678])
+            ("boost" type
+               (:members 
+                  ( ("iostreams" type
+                       (:members 
+                          ( ("symmetric_filter" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [2944 2951])
+                                    ("char_type" variable (:type ("type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3004 3020])
+                                    ("string_type" type
+                                       (:typedef ("std::basic_string" type
+                                             (:template-specifier 
+                                                ( ("char_type" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "std::basic_string"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [3025 3091])
+                                    ("category" type
+                                       (:superclasses 
+                                          ( ("dual_use" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil)
+                                            ("filter_tag" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil)
+                                            ("multichar_tag" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil)
+                                            ("closable_tag" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [3096 3214])
+                                    ("BOOST_PP_LOCAL_MACRO" variable (:constant-flag t) (reparse-symbol classsubparts) [3289 3309])
+                                    ("BOOST_PP_LOCAL_LIMITS" variable (:constant-flag t) (reparse-symbol classsubparts) [3675 3696])
+                                    ("read" function
+                                       (:template 
+                                          ( ("Source" type (:type "class") nil nil))                                          
+                                        :type ("std::streamsize" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :type ("Source" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3865 3877])
+                                            ("s" variable
+                                               (:pointer 1
+                                                :type ("char_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [3878 3891])
+                                            ("n" variable (:type ("std::streamsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3892 3910]))                                          )
+                                        (reparse-symbol classsubparts) [3814 5217])
+                                    ("write" function
+                                       (:template 
+                                          ( ("Sink" type (:type "class") nil nil))                                          
+                                        :type ("std::streamsize" type (:type "class") nil nil)
+                                        :arguments 
+                                          ( ("snk" variable
+                                               (:reference 1
+                                                :type ("Sink" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5273 5283])
+                                            ("s" variable
+                                               (:pointer 1
+                                                :constant-flag t
+                                                :type ("char_type" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5284 5303])
+                                            ("n" variable (:type ("std::streamsize" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5304 5322]))                                          )
+                                        (reparse-symbol classsubparts) [5223 5763])
+                                    ("self" type
+                                       (:typedef ("symmetric_filter" type
+                                             (:template-specifier 
+                                                ( ("SymmetricFilter" type nil nil nil)
+                                                  ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "symmetric_filter"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [5826 5880])
+                                    ("closer" type
+                                       (:parent "detail"
+                                        :prototype t
+                                        :template-specifier 
+                                          ( ("self" type nil nil nil))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [5892 5920])
+                                    ("close" function
+                                       (:template 
+                                          ( ("Sink" type (:type "class") nil nil))                                          
+                                        :type "void"
+                                        :arguments 
+                                          ( ("snk" variable
+                                               (:reference 1
+                                                :type ("Sink" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [5965 5975])
+                                            ("which" variable (:type ("BOOST_IOS::openmode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5976 6002]))                                          )
+                                        (reparse-symbol classsubparts) [5926 6693])
+                                    ("filter" function (:type ("SymmetricFilter" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6698 6743])
+                                    ("unconsumed_input" function
+                                       (:prototype-flag t
+                                        :type ("string_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [6748 6785])
+                                    ("private" label nil (reparse-symbol classsubparts) [6899 6907])
+                                    ("buffer_type" type
+                                       (:typedef ("detail::buffer" type
+                                             (:template-specifier 
+                                                ( ("char_type" type nil nil nil)
+                                                  ("Alloc" type nil nil nil))                                                
+                                              :type "class")
+                                              nil nil)
+                                        :superclasses "detail::buffer"
+                                        :type "typedef")
+                                        (reparse-symbol classsubparts) [6919 6972])
+                                    ("private" label nil (reparse-symbol classsubparts) [6973 6981])
+                                    ("buf" function (:type ("buffer_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6986 7029])
+                                    ("buf" function
+                                       (:constant-flag t
+                                        :type ("buffer_type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [7034 7089])
+                                    ("state" function (:type "int") (reparse-symbol classsubparts) [7094 7133])
+                                    ("begin_read" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7138 7156])
+                                    ("begin_write" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [7161 7180])
+                                    ("fill" function
+                                       (:template 
+                                          ( ("Source" type (:type "class") nil nil))                                          
+                                        :type "int"
+                                        :arguments 
+                                          ( ("src" variable
+                                               (:reference 1
+                                                :type ("Source" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7225 7237]))                                          )
+                                        (reparse-symbol classsubparts) [7186 7508])
+                                    ("flush" function
+                                       (:template 
+                                          ( ("Sink" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("snk" variable
+                                               (:reference 1
+                                                :type ("Sink" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7679 7689]))                                          )
+                                        (reparse-symbol classsubparts) [7640 7884])
+                                    ("flush" function
+                                       (:template 
+                                          ( ("Sink" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("snk" variable
+                                               (:reference 1
+                                                :type ("Sink" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [7929 7939])
+                                            ("" variable (:type ("mpl::true_" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7940 7951]))                                          )
+                                        (reparse-symbol classsubparts) [7890 8422])
+                                    ("flush" function
+                                       (:template 
+                                          ( ("Sink" type (:type "class") nil nil))                                          
+                                        :type "bool"
+                                        :arguments 
+                                          ( ("snk" variable
+                                               (:reference 1
+                                                :type ("Sink" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [8467 8477])
+                                            ("" variable (:type ("mpl::false_" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8478 8490]))                                          )
+                                        (reparse-symbol classsubparts) [8428 8506])
+                                    ("close" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [8512 8525])
+                                    ("flag_type" type
+                                       (:members 
+                                          ( ("f_read" variable
+                                               (:constant-flag t
+                                                :default-value (8567 8568)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [8556 8568])
+                                            ("f_write" variable
+                                               (:constant-flag t
+                                                :default-value (8589 8597)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [8578 8597])
+                                            ("f_eof" variable
+                                               (:constant-flag t
+                                                :default-value (8621 8630)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [8610 8630])
+                                            ("f_good" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [8643 8650])
+                                            ("f_would_block" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [8659 8678]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [8531 8679])
+                                    ("impl" type
+                                       (:superclasses 
+                                          ( ("SymmetricFilter" type
+                                               (:protection "unspecified"
+                                                :type "class")
+                                                nil nil))                                          
+                                        :members 
+                                          ( ("BOOST_PP_LOCAL_MACRO" variable (:constant-flag t) (reparse-symbol classsubparts) [8802 8822])
+                                            ("BOOST_PP_LOCAL_LIMITS" variable (:constant-flag t) (reparse-symbol classsubparts) [9140 9161])
+                                            ("buf_" variable (:type ("buffer_type" type (:type "class") nil nil)) (reparse-symbol classsubparts) [9283 9301])
+                                            ("state_" variable (:type "int") (reparse-symbol classsubparts) [9310 9330]))                                          
+                                        :type "struct")
+                                        (reparse-symbol classsubparts) [8685 9337])
+                                    ("pimpl_" variable (:type ("shared_ptr" type
+                                         (:template-specifier 
+                                            ( ("impl" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [9343 9367]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [2919 9370])
+                            ("begin_read" function
+                               (:template 
+                                  ( ("SymmetricFilter" type (:type "class") nil nil)
+                                    ("Alloc" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :parent "symmetric_filter")
+                                (reparse-symbol namespacesubparts) [9491 9683])
+                            ("begin_write" function
+                               (:template 
+                                  ( ("SymmetricFilter" type (:type "class") nil nil)
+                                    ("Alloc" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :parent "symmetric_filter")
+                                (reparse-symbol namespacesubparts) [9685 9889])
+                            ("close" function
+                               (:template 
+                                  ( ("SymmetricFilter" type (:type "class") nil nil)
+                                    ("Alloc" type (:type "class") nil nil))                                  
+                                :type "void"
+                                :parent "symmetric_filter")
+                                (reparse-symbol namespacesubparts) [9891 10060])
+                            ("unconsumed_input" function
+                               (:parent "symmetric_filter"
+                                :type ("string_type" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [10164 10293]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [2708 10378]))                  
+                :type "namespace")
+                nil [2690 10380])
+            ("boost/iostreams/detail/config/enable_warnings.hpp" include (:system-flag t) nil [10418 10478]))          
+    :file "symmetric.hpp"
+    :pointmax 10554
+    :fsize 10553
+    :lastmodtime '(17765 48445)
+    :unmatched-syntax '((punctuation 10163 . 10164) (punctuation 10162 . 10163) (punctuation 10161 . 10162) (symbol 10156 . 10161) (punctuation 10154 . 10155) (symbol 10139 . 10154) (punctuation 10138 . 10139) (symbol 10122 . 10138) (TYPENAME 10113 . 10121) (punctuation 10111 . 10112) (symbol 10106 . 10111) (TYPENAME 10097 . 10105) (punctuation 10095 . 10096) (symbol 10080 . 10095) (TYPENAME 10071 . 10079) (punctuation 10070 . 10071) (TEMPLATE 10062 . 10070) (semantic-list 9394 . 9415) (symbol 9371 . 9394) (number 9413 . 9414) (semantic-list 9239 . 9241) (symbol 9217 . 9239) (symbol 9209 . 9216) (punctuation 9208 . 9209) (semantic-list 9239 . 9241) (symbol 9217 . 9239) (symbol 9209 . 9216) (punctuation 9208 . 9209) (number 8632 . 8633) (punctuation 8630 . 8631) (punctuation 8629 . 8630) (number 8599 . 8600) (punctuation 8597 . 8598) (punctuation 8596 . 8597) (number 8632 . 8633) (punctuation 8630 . 8631) (punctuation 8629 . 8630) (number 8599 . 8600) (punctuation 8597 . 8598) (punctuation 8596 . 8597) (FRIEND 5885 . 5891) (semantic-list 3774 . 3776) (symbol 3752 . 3774) (symbol 3744 . 3751) (punctuation 3743 . 3744) (punctuation 3003 . 3004) (punctuation 3002 . 3003) (punctuation 3001 . 3002) (symbol 2986 . 3001) (punctuation 2985 . 2986) (symbol 2973 . 2985) (TYPENAME 2964 . 2972) (TYPEDEF 2956 . 2963) (punctuation 2917 . 2918) (punctuation 2915 . 2916) (symbol 2896 . 2900) (punctuation 2895 . 2896) (punctuation 2894 . 2895) (punctuation 2893 . 2894) (symbol 2878 . 2893) (punctuation 2877 . 2878) (symbol 2865 . 2877) (symbol 2842 . 2864) (punctuation 2822 . 2823) (symbol 2813 . 2822) (punctuation 2812 . 2813) (punctuation 2811 . 2812) (symbol 2808 . 2811) (punctuation 2792 . 2793) (symbol 2786 . 2791) (TYPENAME 2777 . 2785) (punctuation 2765 . 2766) (symbol 2750 . 2765) (TYPENAME 2741 . 2749) (punctuation 2739 . 2740) (TEMPLATE 2731 . 2739) (symbol 1665 . 1669) (symbol 1658 . 1664) (punctuation 1656 . 1657))
+    :lexical-table 
+        '(("BOOST_PP_LOCAL_LIMITS" . ((semantic-list "(0, BOOST_IOSTREAMS_MAX_FORWARDING_ARITY)" 9162 . 9203)))
+          ("BOOST_IOSTREAMS_SYMMETRIC_FILTER_HPP_INCLUDED")
+          )
+
+    )
+   )
+  :file "!usr!include!boost!iostreams!filter!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

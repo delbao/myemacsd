@@ -1,0 +1,938 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables (list 
+   (semanticdb-table "FakeRecord.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__FAKE_RECORD_H_" variable (:constant-flag t) nil [34 50])
+            ("map" include (:system-flag t) nil [52 66])
+            ("string" include (:system-flag t) nil [67 84])
+            ("dht/JsonUtils.h" include (:system-flag t) nil [85 111])
+            ("FakeRecordField.h" include nil nil [112 140])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [142 162])
+            ("FakeRecord" type
+               (:prototype t
+                :type "class")
+                nil [164 181])
+            ("MapStrStr" type
+               (:typedef ("map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("std::string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "map"
+                :type "typedef")
+                nil [183 231])
+            ("MapStrField" type
+               (:typedef ("map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("FakeRecordField" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "map"
+                :type "typedef")
+                nil [232 287])
+            ("MapStrRecord" type
+               (:typedef ("map" type
+                     (:template-specifier 
+                        ( ("std::string" type nil nil nil)
+                          ("FakeRecord" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "map"
+                :type "typedef")
+                nil [288 339])
+            ("MapStrStrCIter" variable (:type ("const_iterator" type (:type "class") nil nil)) nil [379 409])
+            ("MapStrFieldCIter" variable (:type ("const_iterator" type (:type "class") nil nil)) nil [454 486])
+            ("MapStrRecordCIter" variable (:type ("const_iterator" type (:type "class") nil nil)) nil [526 559])
+            ("MapStrStrIter" variable (:type ("iterator" type (:type "class") nil nil)) nil [599 622])
+            ("MapStrFieldIter" variable (:type ("iterator" type (:type "class") nil nil)) nil [667 692])
+            ("MapStrRecordIter" variable (:type ("iterator" type (:type "class") nil nil)) nil [732 758])
+            ("FakeRecord" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [779 786])
+                    ("TRUE_INT_STR" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [791 829])
+                    ("FALSE_INT_STR" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [834 873])
+                    ("FakeRecord" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("tableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [890 919])
+                            ("tabletName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [936 966])
+                            ("recordName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [983 1013]))                          
+                        :type ("FakeRecord" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [879 1117])
+                    ("FakeRecord" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("tableName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1135 1164])
+                            ("recordName" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1181 1211]))                          
+                        :type ("FakeRecord" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1124 1212])
+                    ("FakeRecord" function
+                       (:constructor-flag t
+                        :type ("FakeRecord" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1219 1294])
+                    ("FakeRecord" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1301 1339])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1346 1359])
+                    ("fromJsonOutput" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jsonBody" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1385 1413])
+                            ("payload" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1414 1435]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1365 1436])
+                    ("recordChangesFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jsonObj" variable
+                               (:pointer 1
+                                :type ("json_object" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1469 1497]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1442 1498])
+                    ("prevRecordsFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jsonArray" variable
+                               (:pointer 1
+                                :type ("json_object" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1529 1559]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1504 1560])
+                    ("prevRecordFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jsonObj" variable
+                               (:pointer 1
+                                :type ("json_object" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1590 1618]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1566 1619])
+                    ("dataChangesFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("jsonObj" variable
+                               (:pointer 1
+                                :type ("json_object" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1650 1678])
+                            ("prevRecord" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1679 1702]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1625 1703])
+                    ("metaFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("metaObj" variable
+                               (:pointer 1
+                                :type ("json_object" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1728 1756])
+                            ("metaMap" variable
+                               (:reference 1
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1757 1776]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1710 1777])
+                    ("fieldsFromJson" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fieldsObj" variable
+                               (:pointer 1
+                                :type ("json_object" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1803 1833])
+                            ("fieldsMap" variable
+                               (:reference 1
+                                :type ("MapStrField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1834 1857]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1783 1858])
+                    ("fieldsFromJsonArray" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("fieldsArray" variable
+                               (:pointer 1
+                                :type ("json_object" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [1889 1921])
+                            ("fields" variable
+                               (:reference 1
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1922 1940]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1864 1941])
+                    ("getTableName" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1947 2021])
+                    ("getTabletName" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2027 2103])
+                    ("getName" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2109 2179])
+                    ("check" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outRecord" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2196 2224]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2185 2231])
+                    ("checkPrevRecord" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outPrevRecord" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2258 2290]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2237 2297])
+                    ("addMetadata" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2320 2343])
+                            ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2344 2367]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2303 2418])
+                    ("delMetadata" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2442 2465]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2425 2511])
+                    ("getMetadata" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2535 2558])
+                            ("val" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2559 2576]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2518 2634])
+                    ("clearMetadata" function (:type "void") (reparse-symbol classsubparts) [2641 2696])
+                    ("addField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2716 2739])
+                            ("fld" variable
+                               (:pointer 1
+                                :type ("FakeRecordField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2740 2761]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2702 2812])
+                    ("delField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2833 2856]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2819 2902])
+                    ("getField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2923 2946])
+                            ("" variable
+                               (:pointer 1
+                                :type ("FakeRecordField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2947 2964])
+                            ("" variable (:type ("fld" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2965 2969]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2909 3027])
+                    ("clearFields" function (:type "void") (reparse-symbol classsubparts) [3034 3096])
+                    ("addDeletedField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3124 3147])
+                            ("fld" variable
+                               (:pointer 1
+                                :type ("FakeRecordField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3148 3169]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3103 3227])
+                    ("delDeletedField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3255 3278]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3234 3331])
+                    ("getDeletedField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3359 3382])
+                            ("" variable
+                               (:pointer 1
+                                :type ("FakeRecordField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3383 3400])
+                            ("" variable (:type ("fld" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3401 3405]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3338 3470])
+                    ("clearDeletedFields" function (:type "void") (reparse-symbol classsubparts) [3477 3553])
+                    ("addUpdatedField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3581 3604])
+                            ("fld" variable
+                               (:pointer 1
+                                :type ("FakeRecordField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3605 3626]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3560 3684])
+                    ("delUpdatedField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3712 3735]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3691 3788])
+                    ("getUpdatedField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3816 3839])
+                            ("" variable
+                               (:pointer 1
+                                :type ("FakeRecordField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3840 3857])
+                            ("" variable (:type ("fld" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3858 3862]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3795 3927])
+                    ("clearUpdatedFields" function (:type "void") (reparse-symbol classsubparts) [3934 4010])
+                    ("addInsertedField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4039 4062]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4017 4128])
+                    ("delInsertedField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4157 4180]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4135 4232])
+                    ("getInsertedField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4261 4284])
+                            ("val" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4285 4302]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4239 4366])
+                    ("clearInsertedFields" function (:type "void") (reparse-symbol classsubparts) [4373 4440])
+                    ("addRequiredField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4469 4492]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4447 4558])
+                    ("delRequiredField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4587 4610]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4565 4662])
+                    ("getRequiredField" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4691 4714])
+                            ("val" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4715 4732]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4669 4796])
+                    ("clearRequiredFields" function (:type "void") (reparse-symbol classsubparts) [4803 4870])
+                    ("addPrevRecord" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4896 4919])
+                            ("prevRec" variable
+                               (:pointer 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4920 4940]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [4877 5001])
+                    ("delPrevRecord" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5027 5050]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5008 5102])
+                    ("getPrevRecord" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5128 5151])
+                            ("" variable
+                               (:pointer 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5152 5164])
+                            ("" variable (:type ("rec" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5165 5169]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [5109 5233])
+                    ("clearPrevRecords" function (:type "void") (reparse-symbol classsubparts) [5240 5313])
+                    ("setDefaultRecord" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [5320 5344])
+                    ("setMasterfulDiscardedRecord" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [5350 5385])
+                    ("setDefaultCurrentRecord" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("seq_id" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5420 5446])
+                            ("expireTime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5447 5467])
+                            ("modTime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5474 5491])
+                            ("tombstone" variable (:type "bool") (reparse-symbol arg-sub-list) [5492 5507]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5391 5508])
+                    ("setDefaultPrevRecord" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("source" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5540 5566])
+                            ("seq_id" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5567 5593])
+                            ("expireTime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5611 5631])
+                            ("modTime" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5632 5649])
+                            ("tombstone" variable (:type "bool") (reparse-symbol arg-sub-list) [5650 5665]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5514 5666])
+                    ("formatAllMetadata" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5695 5718]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5672 5719])
+                    ("formatFields" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5743 5766]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5725 5767])
+                    ("formatRecordChanges" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5798 5821]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5773 5822])
+                    ("formatPrevRecords" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5851 5874]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5828 5875])
+                    ("formatPrevRecord" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5903 5926])
+                            ("isFirst" variable (:type "bool") (reparse-symbol arg-sub-list) [5927 5940])
+                            ("rec_src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5941 5968]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5881 5969])
+                    ("formatDataChanges" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5998 6021]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5975 6022])
+                    ("private" label nil (reparse-symbol classsubparts) [6024 6032])
+                    ("tableName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6037 6060])
+                    ("tabletName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6065 6089])
+                    ("recordName_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6094 6118])
+                    ("metadata_" variable (:type ("MapStrStr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6124 6144])
+                    ("fields_" variable (:type ("MapStrField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6149 6169])
+                    ("prevRecords_" variable (:type ("MapStrRecord" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6174 6200])
+                    ("deletedFields_" variable (:type ("MapStrField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6257 6284])
+                    ("updatedFields_" variable (:type ("MapStrField" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6289 6316])
+                    ("insertedFields_" variable (:type ("MapStrStr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6321 6349])
+                    ("requiredFields_" variable (:type ("MapStrStr" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6354 6382])
+                    ("formatMetadataInternal" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("outBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6423 6446])
+                            ("metaMap" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6447 6472]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6388 6473])
+                    ("formatFieldsInternal" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("outBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6511 6534])
+                            ("fieldsMap" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6535 6564]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6478 6565])
+                    ("formatFieldArray" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("outBuffer" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6599 6622])
+                            ("fields" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6623 6647]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6570 6648])
+                    ("getMapStrStr" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6679 6702])
+                            ("val" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6703 6720])
+                            ("map" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6721 6742]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6654 6743])
+                    ("addMapStrStr" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6773 6796])
+                            ("val" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6797 6820])
+                            ("map" variable
+                               (:reference 1
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6821 6836]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6748 6837])
+                    ("delMapStrStr" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6867 6890])
+                            ("map" variable
+                               (:reference 1
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6891 6906]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6842 6907])
+                    ("getMapStrField" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6940 6963])
+                            ("" variable
+                               (:pointer 1
+                                :type ("FakeRecordField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6964 6981])
+                            ("" variable (:type ("fld" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6982 6986])
+                            ("map" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6987 7010]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [6913 7011])
+                    ("addMapStrField" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7043 7066])
+                            ("fld" variable
+                               (:pointer 1
+                                :type ("FakeRecordField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7067 7088])
+                            ("map" variable
+                               (:reference 1
+                                :type ("MapStrField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7089 7106]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7016 7107])
+                    ("delMapStrField" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7139 7162])
+                            ("map" variable
+                               (:reference 1
+                                :type ("MapStrField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7163 7180]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7112 7181])
+                    ("clearMapStrFields" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("map" variable
+                               (:reference 1
+                                :type ("MapStrField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7216 7233]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7186 7234])
+                    ("getMapStrRecord" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7268 7291])
+                            ("" variable
+                               (:pointer 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7292 7304])
+                            ("" variable (:type ("rec" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7305 7309])
+                            ("map" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7310 7334]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7240 7335])
+                    ("addMapStrRecord" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7368 7391])
+                            ("rec" variable
+                               (:pointer 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7392 7408])
+                            ("map" variable
+                               (:reference 1
+                                :type ("MapStrRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7409 7427]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7340 7428])
+                    ("delMapStrRecord" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7461 7484])
+                            ("map" variable
+                               (:reference 1
+                                :type ("MapStrRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7485 7503]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7433 7504])
+                    ("clearMapStrRecords" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("map" variable
+                               (:reference 1
+                                :type ("MapStrRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7540 7558]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7509 7559])
+                    ("checkMetadata" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("outMeta" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7591 7616])
+                            ("metaMap" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7617 7642]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7565 7643])
+                    ("compareFields" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("outFields" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7674 7703])
+                            ("fieldsMap" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrField" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7704 7732]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7648 7733])
+                    ("compareFieldsArray" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("outArray" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7769 7795])
+                            ("fieldsArray" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrStr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7796 7825]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7738 7826])
+                    ("comparePrevRecords" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("outRecs" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7862 7890])
+                            ("recMap" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("MapStrRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7891 7918]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7831 7919]))                  
+                :type "class")
+                nil [760 7923]))          
+    :file "FakeRecord.h"
+    :pointmax 7955
+    :fsize 7954
+    :lastmodtime '(20550 21458)
+    :unmatched-syntax '((punctuation 7303 . 7304) (punctuation 6980 . 6981) (punctuation 5313 . 5314) (punctuation 5233 . 5234) (punctuation 5163 . 5164) (punctuation 5102 . 5103) (punctuation 5001 . 5002) (punctuation 4870 . 4871) (punctuation 4796 . 4797) (punctuation 4662 . 4663) (punctuation 4558 . 4559) (punctuation 4440 . 4441) (punctuation 4366 . 4367) (punctuation 4232 . 4233) (punctuation 4128 . 4129) (punctuation 4010 . 4011) (punctuation 3927 . 3928) (punctuation 3856 . 3857) (punctuation 3788 . 3789) (punctuation 3684 . 3685) (punctuation 3553 . 3554) (punctuation 3470 . 3471) (punctuation 3399 . 3400) (punctuation 3331 . 3332) (punctuation 3227 . 3228) (punctuation 3096 . 3097) (punctuation 3027 . 3028) (punctuation 2963 . 2964) (punctuation 2902 . 2903) (punctuation 2812 . 2813) (punctuation 2634 . 2635) (punctuation 2511 . 2512) (punctuation 2418 . 2419) (punctuation 1339 . 1340) (punctuation 1294 . 1295) (punctuation 1117 . 1118) (punctuation 731 . 732) (punctuation 730 . 731) (punctuation 729 . 730) (punctuation 728 . 729) (symbol 718 . 728) (punctuation 716 . 717) (symbol 710 . 716) (punctuation 709 . 710) (punctuation 708 . 709) (symbol 705 . 708) (punctuation 704 . 705) (symbol 701 . 704) (TYPEDEF 693 . 700) (punctuation 666 . 667) (punctuation 665 . 666) (punctuation 664 . 665) (punctuation 663 . 664) (symbol 648 . 663) (punctuation 646 . 647) (symbol 640 . 646) (punctuation 639 . 640) (punctuation 638 . 639) (symbol 635 . 638) (punctuation 634 . 635) (symbol 631 . 634) (TYPEDEF 623 . 630) (punctuation 598 . 599) (punctuation 597 . 598) (punctuation 596 . 597) (symbol 590 . 596) (punctuation 589 . 590) (punctuation 588 . 589) (symbol 585 . 588) (punctuation 583 . 584) (symbol 577 . 583) (punctuation 576 . 577) (punctuation 575 . 576) (symbol 572 . 575) (punctuation 571 . 572) (symbol 568 . 571) (TYPEDEF 560 . 567) (punctuation 525 . 526) (punctuation 524 . 525) (punctuation 523 . 524) (punctuation 522 . 523) (symbol 512 . 522) (punctuation 510 . 511) (symbol 504 . 510) (punctuation 503 . 504) (punctuation 502 . 503) (symbol 499 . 502) (punctuation 498 . 499) (symbol 495 . 498) (TYPEDEF 487 . 494) (punctuation 453 . 454) (punctuation 452 . 453) (punctuation 451 . 452) (punctuation 450 . 451) (symbol 435 . 450) (punctuation 433 . 434) (symbol 427 . 433) (punctuation 426 . 427) (punctuation 425 . 426) (symbol 422 . 425) (punctuation 421 . 422) (symbol 418 . 421) (TYPEDEF 410 . 417) (punctuation 378 . 379) (punctuation 377 . 378) (punctuation 376 . 377) (symbol 370 . 376) (punctuation 369 . 370) (punctuation 368 . 369) (symbol 365 . 368) (punctuation 363 . 364) (symbol 357 . 363) (punctuation 356 . 357) (punctuation 355 . 356) (symbol 352 . 355) (punctuation 351 . 352) (symbol 348 . 351) (TYPEDEF 340 . 347))
+    :lexical-table 
+        '(("__FAKE_RECORD_H_")
+          )
+
+    )
+   (semanticdb-table "FakeRecordField.h"
+    :file "FakeRecordField.h"
+    :fsize 1000
+    :lastmodtime '(20550 21458)
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svndev!sherpa_external!trunk!buster_plugin!unit_test!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

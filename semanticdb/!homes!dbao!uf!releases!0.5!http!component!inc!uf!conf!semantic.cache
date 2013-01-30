@@ -1,0 +1,319 @@
+;; Object conf/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "conf/"
+  :tables (list 
+   (semanticdb-table "UFStateServerConf.H"
+    :file "UFStateServerConf.H"
+    :fsize 1286
+    :lastmodtime '(20625 28889)
+    )
+   (semanticdb-table "UFHTTPConf.H"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__UF_HTTP_CONF_H__" variable (:constant-flag t) nil [36 54])
+            ("uf/core/UFConf.H" include (:system-flag t) nil [56 83])
+            ("uf/util/Log.H" include (:system-flag t) nil [84 108])
+            ("UFHTTPConf" type
+               (:superclasses 
+                  ( ("UFConf" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [326 333])
+                    ("UFHTTPConf" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("conf_file" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [349 378]))                          
+                        :type ("UFHTTPConf" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [338 379])
+                    ("UFHTTPConf" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [384 401])
+                    ("afterParse" function (:type "void") (reparse-symbol classsubparts) [406 536])
+                    ("clear" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [542 555])
+                    ("cache" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("conf_key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [571 599])
+                            ("conf_val" variable
+                               (:pointer 1
+                                :type ("ConfValueBase" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [600 624]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [560 625])
+                    ("getServerPort" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [631 675])
+                    ("getServerName" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [680 740])
+                    ("getReplaceServerHeaderEnabled" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [745 820])
+                    ("getServerHeaderValue" function
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [825 889])
+                    ("getClientKeepAliveEnabled" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [894 963])
+                    ("getChunkingEnabled" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [968 1023])
+                    ("getReverseProxyEnabled" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1028 1099])
+                    ("getClientTimeout" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type "int")
+                        (reparse-symbol classsubparts) [1104 1162])
+                    ("getOriginServerConnectTimeout" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type "int")
+                        (reparse-symbol classsubparts) [1167 1251])
+                    ("getServerTimeout" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1256 1306])
+                    ("getOriginServerTimeout" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1311 1367])
+                    ("getAddXForwardedForEnabled" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1372 1443])
+                    ("isPristineEnabled" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1448 1502])
+                    ("getPluginConfDir" function
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1507 1565])
+                    ("createUFConf" function
+                       (:pointer 1
+                        :arguments 
+                          ( ("confFile" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1591 1620]))                          
+                        :type ("UFConf" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1570 1657])
+                    ("getConnectionCollapsingStatus" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [1662 1738])
+                    ("getRunHTTPCache" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1743 1788])
+                    ("isPipelineEnabled" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1793 1844])
+                    ("getDynamicUrlStatus" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1849 1898])
+                    ("getClientCacheStatus" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1903 1956])
+                    ("getServerCacheStatus" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1962 2015])
+                    ("getRequiredHeaders" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2021 2074])
+                    ("getDefaultStaleAge" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2080 2129])
+                    ("getCacheRespAccCookie" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2135 2189])
+                    ("getLoopDetection" function
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2195 2244])
+                    ("getMaxCacheDocSize" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2250 2304])
+                    ("getRequestViaString" function
+                       (:constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2310 2373])
+                    ("getResponseViaString" function
+                       (:constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2378 2443])
+                    ("getDefaultHTTP10HostHeaderValue" function
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2448 2534])
+                    ("getSendRequestMaxWrite" function
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2540 2602])
+                    ("private" label nil (reparse-symbol classsubparts) [2604 2612])
+                    ("_serverPort" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2618 2635])
+                    ("_serverName" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2640 2665])
+                    ("_replaceServerHeaderEnabled" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2670 2704])
+                    ("_serverHeaderValue" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2709 2741])
+                    ("_clientKeepAliveEnabled" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2746 2776])
+                    ("_chunkingEnabled" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2781 2804])
+                    ("_reverseProxyEnabled" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2809 2836])
+                    ("_clientTimeout" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2841 2861])
+                    ("_serverTimeout" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2866 2886])
+                    ("_originServerConnectTimeout" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2891 2924])
+                    ("_addXForwardedForEnabled" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2929 2960])
+                    ("_pristineEnabled" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2965 2988])
+                    ("_connectionCollapsingStatus" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [2993 3026])
+                    ("_useCache" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3031 3047])
+                    ("_dynamicURL" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3052 3070])
+                    ("_clientNoCache" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3075 3096])
+                    ("_serverNoCache" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3101 3122])
+                    ("_requiredHeaders" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [3127 3149])
+                    ("_maxStaleAge" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [3154 3172])
+                    ("_respToCookies" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [3177 3197])
+                    ("_pluginConfDir" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3202 3230])
+                    ("_pipelineEnabled" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3235 3258])
+                    ("_loopDetection" variable
+                       (:pointer 1
+                        :type "bool")
+                        (reparse-symbol classsubparts) [3263 3284])
+                    ("_maxCacheDocSize" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [3289 3311])
+                    ("_requestViaStr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3316 3343])
+                    ("_responseViaStr" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3348 3376])
+                    ("_defaultHTTP10HostHeaderValue" variable
+                       (:pointer 1
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3381 3424])
+                    ("_sendRequestMaxWrite" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [3429 3455])
+                    ("setViaString" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3461 3481])
+                    ("setServerHeaderValue" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3486 3514]))                  
+                :type "class")
+                nil [291 3518]))          
+    :file "UFHTTPConf.H"
+    :pointmax 3527
+    :fsize 3526
+    :lastmodtime '(20625 28889)
+    :unmatched-syntax '((punctuation 2534 . 2535) (punctuation 2304 . 2305) (punctuation 2244 . 2245) (punctuation 2189 . 2190) (punctuation 2129 . 2130) (punctuation 2074 . 2075) (punctuation 2015 . 2016) (punctuation 1956 . 1957) (punctuation 536 . 537))
+    :lexical-table 
+        '(("__UF_HTTP_CONF_H__")
+          )
+
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!http!component!inc!uf!conf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

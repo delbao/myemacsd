@@ -1,0 +1,166 @@
+;; Object http2/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "http2/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("1.2" "foreign" "no-installman" "no-installinfo")) nil [98 158])
+            ("INCLUDES" variable (:default-value ("-I/home/y/include")) nil [266 295])
+            ("INCLUDES" variable (:default-value ("$(iocore_include_dirs)")) nil [295 331])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy")) nil [331 365])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/auth/include")) nil [365 406])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/librecords")) nil [406 445])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2")) nil [445 485])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/preparse")) nil [485 534])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/utils")) nil [534 580])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/mgmt2/web2")) nil [580 625])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/hdrs")) nil [625 664])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/http2/remap")) nil [664 710])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/logging")) nil [710 752])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/ntlm")) nil [752 791])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/libinktomi++")) nil [791 832])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/common/include")) nil [832 875])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/proxy/radius")) nil [875 916])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/cache")) nil [916 957])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/utils")) nil [957 998])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/eventsystem")) nil [998 1045])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/net")) nil [1045 1084])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/aio")) nil [1084 1123])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/cluster")) nil [1123 1166])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/hostdb")) nil [1166 1208])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/iocore/dns")) nil [1208 1247])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/tcp/include")) nil [1258 1298])
+            ("INCLUDES" variable (:default-value ("$(SSL_INCDIR)")) nil [1304 1330])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/mp")) nil [1330 1361])
+            ("INCLUDES" variable (:default-value ("@TBD_1_INCDIR@")) nil [1361 1388])
+            ("INCLUDES" variable (:default-value ("@TBD_2_INCDIR@")) nil [1388 1415])
+            ("INCLUDES" variable (:default-value ("@TBD_3_INCDIR@")) nil [1415 1442])
+            ("EXTRA_libhttp_a_SOURCES" variable (:default-value ("HttpNcaClient.cc")) nil [1450 1493])
+            ("noinst_LIBRARIES" variable (:default-value ("libhttp.a")) nil [1501 1530])
+            ("libhttp_a_SOURCES" variable (:default-value ("AuthHttpAdapter.cc" "HttpConfig.cc" "HttpDebugNames.cc" "HttpTransact.cc" "HttpTransactCache.cc" "HttpTransactHeaders.cc" "HttpTransactAuth.cc" "HttpMessageBody.cc" "HttpBodyFactory.cc" "HttpAccept.cc" "HttpProxyServerMain.cc" "HttpSM.cc" "HttpUpdateSM.cc" "HttpUpdateTester.cc" "HttpClientSession.cc" "HttpServerSession.cc" "HttpSessionManager.cc" "HttpTunnel.cc" "HttpPages.cc" "HttpCacheSM.cc" "HttpConnectionCount.cc" "Hash_Table.cc" "remap/AclFiltering.cc" "remap/RemapPluginInfo.cc" "remap/RemapPlugins.cc" "remap/RemapProcessor.cc" "remap/StringHash.cc" "remap/UrlMapping.cc" "remap/UrlRewrite.cc" "remap/UrlMappingPathIndex.cc" "$(EXTRA_libhttp_a_SOURCES)")) nil [1561 2335])
+            ("clean-local" function nil nil [2628 2687]))          
+    :file "Makefile.am"
+    :pointmax 2687
+    :fsize 2686
+    :lastmodtime '(20632 41276)
+    :unmatched-syntax '((shell-command 2642 . 2686) (bol 2641 . 2641) (shell-command 2448 . 2626) (bol 2447 . 2447) (ENDIF 1493 . 1498) (bol 1493 . 1493))
+    )
+   (semanticdb-table "HttpClientSession.h"
+    :file "HttpClientSession.h"
+    :fsize 3891
+    :lastmodtime '(20632 41276)
+    )
+   (semanticdb-table "HttpSM.h"
+    :file "HttpSM.h"
+    :fsize 19530
+    :lastmodtime '(20632 41276)
+    )
+   (semanticdb-table "HttpConfig.h"
+    :file "HttpConfig.h"
+    :fsize 35063
+    :lastmodtime '(20632 41276)
+    )
+   (semanticdb-table "HttpAccept.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("_HttpAccept_h_" variable (:constant-flag t) nil [444 458])
+            ("inktomi++.h" include nil nil [460 482])
+            ("P_EventSystem.h" include nil nil [483 509])
+            ("HttpConfig.h" include nil nil [510 533])
+            ("HTTP.h" include nil nil [534 551])
+            ("IPRange.h" include nil nil [552 572])
+            ("HttpAccept" type
+               (:superclasses 
+                  ( ("Continuation" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [615 622])
+                    ("HttpAccept" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("aattr" variable (:type "int") (reparse-symbol arg-sub-list) [638 648])
+                            ("abackdoor" variable (:type "bool") (reparse-symbol arg-sub-list) [649 665])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [666 672]))                          
+                        :type ("HttpAccept" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [627 673])
+                    ("HttpAccept" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [678 692])
+                    ("mainEvent" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("event" variable (:type "int") (reparse-symbol arg-sub-list) [712 722])
+                            ("netvc" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [723 736]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [698 737])
+                    ("private" label nil (reparse-symbol classsubparts) [739 747])
+                    ("backdoor" variable (:type "bool") (reparse-symbol classsubparts) [752 766])
+                    ("attr" variable (:type "int") (reparse-symbol classsubparts) [771 780])
+                    ("HttpAccept" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("HttpAccept" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [796 815]))                          
+                        :type ("HttpAccept" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [785 816])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("HttpAccept" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [846 865]))                          
+                        :type ("HttpAccept" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [821 866]))                  
+                :type "class")
+                nil [574 869])
+            ("HttpAccept" function
+               (:constructor-flag t
+                :parent "HttpAccept"
+                :typemodifiers ("inline")
+                :arguments 
+                  ( ("aattr" variable (:type "int") (reparse-symbol arg-sub-list) [1162 1172])
+                    ("abackdoor" variable (:type "bool") (reparse-symbol arg-sub-list) [1173 1188]))                  
+                :type ("HttpAccept" type (:type "class") nil nil))
+                nil [1132 1302])
+            ("HttpAccept" function
+               (:destructor-flag t
+                :parent "HttpAccept"
+                :typemodifiers ("inline")
+                :type "void")
+                nil [1303 1351]))          
+    :file "HttpAccept.h"
+    :pointmax 1359
+    :fsize 1358
+    :lastmodtime '(20632 41276)
+    :unmatched-syntax '((punctuation 664 . 665))
+    :lexical-table 
+        '(("_HttpAccept_h_")
+          )
+
+    )
+   (semanticdb-table "HttpDebugNames.h"
+    :file "HttpDebugNames.h"
+    :fsize 994
+    :lastmodtime '(20632 41276)
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!proxy!http2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

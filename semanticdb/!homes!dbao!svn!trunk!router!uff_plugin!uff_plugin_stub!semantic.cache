@@ -1,0 +1,130 @@
+;; Object uff_plugin_stub/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "uff_plugin_stub/"
+  :tables (list 
+   (semanticdb-table "Makefile"
+    :major-mode 'makefile-gmake-mode
+    :tags 
+        '( ("SRCTOP" variable (:default-value ("$(CURDIR)/../../../build")) nil [1 36])
+            ("ROOT" variable (:default-value ("/home/y")) nil [36 51])
+            ("ROUTERTOP" variable (:default-value ("../../")) nil [51 71])
+            ("$(ROOT)/share/yahoo_cfg/Make.defs" include nil nil [72 114])
+            ("$(SRCTOP)/Makefile.defs" include nil nil [114 146])
+            ("LIB_NAME" variable (:default-value ("UFCommonStub")) nil [148 179])
+            ("SHLIB_VERSION" variable (:default-value ("1")) nil [179 200])
+            ("CXX" variable (:default-value ("g++4")) nil [201 210])
+            ("CXXSRC" variable (:default-value ("$(wildcard *.cc)")) nil [210 245])
+            ("CFLAGS" variable (:default-value ("-fno-strict-aliasing")) nil [245 285])
+            ("LINC" variable (:default-value ("-I../../include" "-I../src/uff_common/" "-I/usr/local/include" "-I/home/y/include" "-I$(ROUTERTOP)/src/")) nil [286 402])
+            ("LLDLIBS" variable (:default-value ("-L/home/y/lib/" "-L../src/uff_common" "-lufCommon" "-lufhttpparser" "-lufhttpremap" "-lufstateserver" "-lufconf" "-lz" "-lysys")) nil [402 571])
+            ("LDEF" variable (:default-value ("-D_FILE_OFFSET_BITS=64")) nil [573 615])
+            ("CLEAN" variable (:default-value ("rm" "-rf" "rhel.4.8.gcov")) nil [616 656])
+            ("$(ROOT)/share/yahoo_cfg/Make.rules" include nil nil [657 700])
+            ("$(SRCTOP)/Makefile.rules" include nil nil [700 733])
+            ("GCOV" variable (:default-value ("/usr/bin/gcov4")) nil [733 753]))          
+    :file "Makefile"
+    :pointmax 753
+    :fsize 752
+    :lastmodtime '(20545 26129)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "UFBaseStub.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("uf/httputil/Util.H" include (:system-flag t) nil [1 30])
+            ("string" include (:system-flag t) nil [31 48])
+            ("map" include (:system-flag t) nil [49 63])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [65 85])
+            ("HTTPUtil" using (:type ("HTTPUtil" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [87 112])
+            ("UFBaseStub" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [337 344])
+                    ("UFBaseStub" function
+                       (:constructor-flag t
+                        :type ("UFBaseStub" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [349 573])
+                    ("UFBaseStub" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [578 593])
+                    ("clientRequestHeaders" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("string" type nil nil nil)
+                              ("string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [603 644])
+                    ("clientResponseHeaders" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("string" type nil nil nil)
+                              ("string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [649 691])
+                    ("serverRequestHeaders" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("string" type nil nil nil)
+                              ("string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [696 737])
+                    ("serverResponseHeaders" variable (:type ("map" type
+                         (:template-specifier 
+                            ( ("string" type nil nil nil)
+                              ("string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [742 784])
+                    ("txn" variable
+                       (:pointer 1
+                        :type ("UFHTTPTxnObject" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [794 815])
+                    ("clientRequestURL" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [821 845])
+                    ("clientRequestPath" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [850 875])
+                    ("clientRequestQuery" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [880 906])
+                    ("serverRequestURL" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [911 935])
+                    ("clientIP" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [940 956])
+                    ("nextState" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [961 978])
+                    ("isKeepAlive" variable (:type "bool") (reparse-symbol classsubparts) [983 1000])
+                    ("serverRequestTimeout" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1005 1035])
+                    ("clientResponseStatus" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1045 1075])
+                    ("customResponseCode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1081 1109])
+                    ("responseReason" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1114 1136])
+                    ("responseBody" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1141 1161])
+                    ("responseErrorBody" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1166 1191])
+                    ("serverResponseStatusCode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1197 1231])
+                    ("clientResponseStatusCode" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1236 1270])
+                    ("transactionStorage" variable
+                       (:pointer 1
+                        :type ("PluginStorage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1275 1309]))                  
+                :type "class")
+                nil [318 1313])
+            ("Foo" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1330 1337])
+                    ("Foo" function
+                       (:constructor-flag t
+                        :type ("Foo" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1346 1353])
+                    ("Foo" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1362 1370])
+                    ("x" variable (:type "int") (reparse-symbol classsubparts) [1379 1385])
+                    ("test" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1394 1406]))                  
+                :type "class")
+                nil [1315 1409]))          
+    :file "UFBaseStub.h"
+    :pointmax 1412
+    :fsize 1411
+    :lastmodtime '(20545 26129)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svn!trunk!router!uff_plugin!uff_plugin_stub!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

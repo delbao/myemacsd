@@ -1,0 +1,76 @@
+;; Object core/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "core/"
+  :tables (list 
+   (semanticdb-table "Main.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("InkAPIWrapper.h" include nil nil [1 27])
+            ("InkAPI.h" include nil nil [28 47])
+            ("MixtAPIPrivate.h" include nil nil [49 76])
+            ("MixtAPIInternal.h" include nil nil [78 106])
+            ("AdmitControl.h" include nil nil [108 133])
+            ("SelectiveCaching.h" include nil nil [134 163])
+            ("Preload.h" include nil nil [164 184])
+            ("MIXT-version.h" include nil nil [186 211])
+            ("mixt_signals.h" include nil nil [213 238])
+            ("TOUCH" variable (:constant-flag t) nil [250 255])
+            ("sRTSPPort" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [272 293])
+            ("G_ts_target_mem_size" variable (:type ("INK64" type (:type "class") nil nil)) nil [294 321])
+            ("GetRTSPPort" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [323 370])
+            ("SetRTSPPort" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("Port" variable (:type "int") (reparse-symbol arg-sub-list) [396 405]))                  
+                :type "void")
+                nil [372 428])
+            ("API" variable (:type ("MixtAPIPrivate" type
+                 (:prototype t
+                  :type "struct")
+                  nil nil)) nil [430 632])
+            ("INKPluginInit" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [689 698])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [699 718]))                  )
+                (reparse-symbol extern-c-contents) [670 1361])
+            ("C" extern (:members 
+              ( ("INKPluginInit" function
+                   (:typemodifiers ("extern" "\"C\"")
+                    :type "void"
+                    :arguments 
+                      ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [689 698])
+                        ("argv" variable
+                           (:pointer 1
+                            :dereference 1
+                            :constant-flag t
+                            :type "char")
+                            (reparse-symbol arg-sub-list) [699 718]))                      )
+                    (reparse-symbol extern-c-contents) [670 1361]))              ) nil [656 1363]))          
+    :file "Main.cc"
+    :pointmax 1364
+    :fsize 1363
+    :lastmodtime '(20632 41357)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("TOUCH" (spp-arg-list ("x") 255 . 258) . ((semantic-list "((void)(x))" 259 . 270)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!mixt!core!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

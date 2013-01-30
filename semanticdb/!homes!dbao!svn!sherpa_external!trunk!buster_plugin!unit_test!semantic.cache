@@ -1,0 +1,431 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables (list 
+   (semanticdb-table "TestHelper.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__TEST_HELPER_H_" variable (:constant-flag t) nil [34 50])
+            ("dht/StringUtilsCore.h" include (:system-flag t) nil [52 84])
+            ("x_global_me_x" variable
+               (:typemodifiers ("extern")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [154 187])
+            ("ME" variable (:constant-flag t) nil [196 198])
+            ("x_global_log" variable
+               (:typemodifiers ("extern")
+                :type ("std::string" type (:type "class") nil nil))
+                nil [353 385])
+            ("TEST_LOG" variable (:constant-flag t) nil [394 402])
+            ("TestHelper" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [594 601])
+                    ("TestHelper" function
+                       (:constructor-flag t
+                        :type ("TestHelper" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [606 621])
+                    ("TestHelper" function
+                       (:destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [627 643])
+                    ("public" label nil (reparse-symbol classsubparts) [647 654])
+                    ("makeBadUtf8" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [660 693])
+                    ("makeFourByteUtf8" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [699 737])
+                    ("getDefaultTabletName" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("orderedTable" variable (:type "bool") (reparse-symbol arg-sub-list) [783 802])
+                            ("" variable (:type ("false" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [803 809]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [743 810])
+                    ("getDefaultRegion" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [816 854])
+                    ("validateNotificationSyntax" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("outmsg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [899 925]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [860 926]))                  
+                :type "class")
+                nil [574 929]))          
+    :file "TestHelper.h"
+    :pointmax 961
+    :fsize 960
+    :lastmodtime '(20550 20333)
+    :unmatched-syntax '((punctuation 801 . 802) (punctuation 643 . 644) (punctuation 621 . 622))
+    :lexical-table 
+        '(("TEST_LOG" (spp-arg-list ("xmsg") 402 . 408) . ((semantic-list "(x_global_log.clear(), x_global_log.append(__FILE__ \"::\").append(StringUtilsCore::toString(__LINE__)).append(\":\").append(xmsg), std::cout<<x_global_log<<std::endl)" 409 . 572)))
+          ("__TEST_HELPER_H_")
+          ("ME" . ((semantic-list "(x_global_me_x.clear(), x_global_me_x.append(__FILE__ \"::\").append(__FUNCTION__).append(\"():\").append(StringUtilsCore::toString(__LINE__)).append(\": \"))" 199 . 351)))
+          )
+
+    )
+   (semanticdb-table "TestMessageAide.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__TEST_MSG_AIDE_H_" variable (:constant-flag t) nil [36 54])
+            ("dht/BrokerMessage.h" include (:system-flag t) nil [56 86])
+            ("FakeRecord.h" include nil nil [87 110])
+            ("TestMessageAide" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [136 143])
+                    ("TestMessageAide" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [164 192]))                          
+                        :type ("TestMessageAide" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [148 193])
+                    ("TestMessageAide" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [198 217])
+                    ("brkmsg_" variable
+                       (:pointer 1
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [223 246])
+                    ("setBrokerMasterfulSetMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [368 396])
+                            ("record" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [432 451])
+                            ("payload" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [487 514]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [338 515])
+                    ("setBrokerMergingConflictResolveMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [561 589])
+                            ("record" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [635 654])
+                            ("payload" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [700 727]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [521 728])
+                    ("setBrokerReqSyncMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [759 787])
+                            ("record" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [818 837]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [734 838])
+                    ("setOverrideAssignMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [870 898])
+                            ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [929 954])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [986 1012])
+                            ("goodRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1044 1074])
+                            ("badRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1105 1134])
+                            ("isMajor" variable (:type "bool") (reparse-symbol arg-sub-list) [1165 1178]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [844 1179])
+                    ("setBrokerMasterfulSyncRepubMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1222 1250])
+                            ("record" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1292 1311])
+                            ("payload" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1353 1380]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1186 1381])
+                    ("setBrokerMasterfulStubMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1418 1446])
+                            ("record" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1483 1502]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1387 1503])
+                    ("setBrokerMasterfulSetMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1629 1657])
+                            ("record" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1693 1712])
+                            ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1748 1774])
+                            ("payload" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1809 1836]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1599 1837])
+                    ("setBrokerMergingConflictResolveMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1883 1911])
+                            ("record" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1957 1976])
+                            ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2022 2048])
+                            ("payload" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2093 2120]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1843 2121])
+                    ("setBrokerReqSyncMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2152 2180])
+                            ("record" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2211 2230])
+                            ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2260 2286]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2127 2287])
+                    ("setOverrideAssignMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2319 2347])
+                            ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2378 2403])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2435 2461])
+                            ("goodRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2493 2523])
+                            ("badRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2554 2583])
+                            ("pubRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2614 2643])
+                            ("isMajor" variable (:type "bool") (reparse-symbol arg-sub-list) [2674 2687]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2293 2688])
+                    ("setBrokerMasterfulSyncRepubMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2731 2759])
+                            ("record" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2801 2820])
+                            ("pubRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2861 2890])
+                            ("payload" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2932 2959]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2695 2960])
+                    ("setBrokerMasterfulStubMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2997 3025])
+                            ("record" variable
+                               (:reference 1
+                                :type ("FakeRecord" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3062 3081])
+                            ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3118 3144]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2966 3145])
+                    ("setUncertainRecordMarkMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("callerId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3182 3210])
+                            ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3211 3237]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3151 3238])
+                    ("getSerializedMsgString" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("serialMsg" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3272 3295]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3244 3296])
+                    ("isCompressed" function (:type "bool") (reparse-symbol classsubparts) [3302 3365])
+                    ("setCompressed" function
+                       (:arguments 
+                          ( ("isCompressed" variable (:type "bool") (reparse-symbol arg-sub-list) [3393 3411]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3374 3457])
+                    ("reset" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [3463 3476])
+                    ("getMsg" function
+                       (:prototype-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3482 3506])
+                    ("private" label nil (reparse-symbol classsubparts) [3508 3516])
+                    ("s_sequence_num_" variable
+                       (:typemodifiers ("static")
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3521 3553])
+                    ("isCompressed_" variable (:type "bool") (reparse-symbol classsubparts) [3563 3582]))                  
+                :type "class")
+                nil [112 3585]))          
+    :file "TestMessageAide.h"
+    :pointmax 3805
+    :fsize 3804
+    :lastmodtime '(20550 20333)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__TEST_MSG_AIDE_H_")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svn!sherpa_external!trunk!buster_plugin!unit_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,27 @@
+;; Object conf/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "conf/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/http/component/inc")) nil [1 122])
+            ("lib_LTLIBRARIES" variable (:default-value ("libufconf.la")) nil [151 197])
+            ("source_files" variable (:default-value ("UFHTTPConf.C" "UFStateServerConf.C")) nil [197 253])
+            ("libufconf_la_SOURCES" variable (:default-value ("$(source_files)")) nil [253 292])
+            ("libufconf_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [292 333])
+            ("libufconf_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [333 405])
+            ("libufconf_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [405 481])
+            ("libufconf_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [481 527])
+            ("libufconf_p_la_LIBADD" variable (:default-value ("$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [527 653]))          
+    :file "Makefile.am"
+    :pointmax 653
+    :fsize 652
+    :lastmodtime '(20622 62376)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!0.5!http!component!src!conf!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

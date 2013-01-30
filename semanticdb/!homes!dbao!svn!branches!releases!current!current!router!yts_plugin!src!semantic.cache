@@ -1,0 +1,245 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "ServerInterface.hh"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__SERVERINTERFACE_H__" variable (:constant-flag t) nil [98 119])
+            ("string" include (:system-flag t) nil [120 137])
+            ("dht/CodeAndString.h" include nil nil [138 168])
+            ("dht/ByteString.h" include nil nil [169 196])
+            ("InkAPI.h" include nil nil [197 216])
+            ("LogUtilsRouter.hh" include nil nil [217 245])
+            ("Action.hh" include (:system-flag t) nil [246 266])
+            ("Callbacks.hh" include (:system-flag t) nil [267 290])
+            ("Request" type
+               (:prototype t
+                :type "class")
+                nil [405 419])
+            ("TransactionData" type
+               (:prototype t
+                :type "class")
+                nil [448 470])
+            ("ServerInterface" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [1037 1044])
+                    ("ReturnCodes" type
+                       (:members 
+                          ( ("OK" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1165 1168])
+                            ("ContainerCallFailure" variable
+                               (:constant-flag t
+                                :type "int")
+                                (reparse-symbol enumsubparts) [1169 1191]))                          
+                        :type "enum")
+                        (reparse-symbol classsubparts) [1146 1192])
+                    ("Code" type
+                       (:typedef ("CodeAndString" type
+                             (:template-specifier 
+                                ( ("ReturnCodes" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "CodeAndString"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1319 1359])
+                    ("VoidServerCallback" variable
+                       (:functionpointer-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1425 1454])
+                    ("VoidServerTDCallback" variable
+                       (:functionpointer-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [1700 1741])
+                    ("CFServerTDCallback" variable
+                       (:functionpointer-flag t
+                        :type ("Action::RequestAction" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2134 2190])
+                    ("initializeCallbacks" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("readRequestHeader" variable (:type ("CFServerTDCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2965 3002])
+                            ("readSUResponse" variable (:type ("VoidServerTDCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3003 3039])
+                            ("sendResponseToClient" variable (:type ("VoidServerTDCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3076 3118])
+                            ("requestEnd" variable (:type ("VoidServerTDCallback" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3119 3151]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [2933 3152])
+                    ("allocateContainerState" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [3289 3327])
+                    ("deleteContainerState" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("p" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3589 3597]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3556 3598])
+                    ("getRequestUrl" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("txn" variable (:type ("INKHttpTxn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3990 4005])
+                            ("url" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4006 4023]))                          
+                        :type ("Code" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3964 4024])
+                    ("startThread" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("func" variable (:type ("Callbacks::ThreadFunc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4759 4786])
+                            ("opaque" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [4787 4800]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4735 4801])
+                    ("protected" label nil (reparse-symbol classsubparts) [4803 4813])
+                    ("readRequestHeader_" variable
+                       (:typemodifiers ("static")
+                        :type ("CFServerTDCallback" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4818 4863])
+                    ("readSUResponse_" variable
+                       (:typemodifiers ("static")
+                        :type ("VoidServerTDCallback" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4911 4955])
+                    ("sendResponseToClient_" variable
+                       (:typemodifiers ("static")
+                        :type ("VoidServerTDCallback" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5002 5052])
+                    ("requestEnd_" variable
+                       (:typemodifiers ("static")
+                        :type ("VoidServerTDCallback" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5109 5149])
+                    ("private" label nil (reparse-symbol classsubparts) [5192 5200])
+                    ("ServerInterface" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("ServerInterface" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5249 5267])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("ServerInterface" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5348 5371]))                          
+                        :type ("ServerInterface" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5321 5372]))                  
+                :type "class")
+                nil [1013 5375])
+            ("REQUEST_ARG_INDEX" variable
+               (:constant-flag t
+                :type "unsigned int")
+                nil [6558 6595])
+            ("TSAuto" type
+               (:members 
+                  ( ("TSAuto" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("ytsBuffer" variable (:type ("INKMBuffer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8486 8507])
+                            ("parentLocation" variable (:type ("INKMLoc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8508 8532])
+                            ("" variable (:type ("INK_NULL_MLOC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8533 8547])
+                            ("object" variable (:type ("INKMLoc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8548 8564])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8565 8570]))                          
+                        :type ("TSAuto" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [8479 8571])
+                    ("TSAuto" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [8641 8651])
+                    ("buffer" variable (:type ("INKMBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8697 8715])
+                    ("parent" variable (:type ("INKMLoc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8770 8786])
+                    ("obj" variable (:type ("INKMLoc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8838 8851]))                  
+                :type "struct")
+                nil [7930 8854])
+            ("TSAutoString" type
+               (:members 
+                  ( ("TSAutoString" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("ytsBuffer" variable (:type ("INKMBuffer" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10074 10095])
+                            ("parentLocation" variable (:type ("INKMLoc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10096 10120])
+                            ("" variable (:type ("INK_NULL_MLOC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10121 10135])
+                            ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10136 10153])
+                            ("" variable (:type ("NULL" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10154 10159]))                          
+                        :type ("TSAutoString" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [10061 10160])
+                    ("TSAutoString" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10232 10248])
+                    ("buffer" variable (:type ("INKMBuffer" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10294 10313])
+                    ("parent" variable (:type ("INKMLoc" type (:type "class") nil nil)) (reparse-symbol classsubparts) [10346 10363])
+                    ("s" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol classsubparts) [10415 10430]))                  
+                :type "struct")
+                nil [9704 10433])
+            ("TSAutoReenable" type
+               (:members 
+                  ( ("TSAutoReenable" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("ytsTxn" variable (:type ("INKHttpTxn" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10886 10904])
+                            ("ytsEvent" variable (:type ("INKEvent" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10905 10923]))                          
+                        :type ("TSAutoReenable" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [10871 10924])
+                    ("TSAutoReenable" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [10995 11013])
+                    ("txn" variable (:type ("INKHttpTxn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11050 11065])
+                    ("event" variable (:type ("INKEvent" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11114 11129]))                  
+                :type "struct")
+                nil [10666 11132])
+            ("ContainerState" type
+               (:members 
+                  ( ("ContainerState" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("ContainerState" type (:type "struct") nil nil))
+                        (reparse-symbol classsubparts) [11563 11580])
+                    ("txn" variable (:type ("INKHttpTxn" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11631 11646]))                  
+                :type "struct")
+                nil [11469 11649]))          
+    :file "ServerInterface.hh"
+    :pointmax 12269
+    :fsize 12268
+    :lastmodtime '(20598 3445)
+    :unmatched-syntax '((punctuation 10152 . 10153) (punctuation 10119 . 10120) (punctuation 8563 . 8564) (punctuation 8531 . 8532) (TYPEDEF 2126 . 2133) (TYPEDEF 1692 . 1699) (TYPEDEF 1417 . 1424))
+    :lexical-table 
+        '(("__SERVERINTERFACE_H__")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svn!branches!releases!current!current!router!yts_plugin!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

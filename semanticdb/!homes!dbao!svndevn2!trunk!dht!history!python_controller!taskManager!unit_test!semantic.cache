@@ -1,0 +1,105 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables (list 
+   (semanticdb-table "UnitTestNotifCurl.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("UNIT_TEST_NOTIF_CURL_H" variable (:constant-flag t) nil [99 121])
+            ("string" include (:system-flag t) nil [123 140])
+            ("vector" include (:system-flag t) nil [141 158])
+            ("NotifCurl.h" include nil nil [159 181])
+            ("UnitTestNotifCurl" type
+               (:superclasses 
+                  ( ("NotifCurl" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [228 235])
+                    ("UnitTestNotifCurl" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [259 285])
+                            ("enable" variable (:type "bool") (reparse-symbol arg-sub-list) [286 298])
+                            ("fldList" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [299 342]))                          
+                        :type ("UnitTestNotifCurl" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [241 390])
+                    ("UnitTestNotifCurl" function
+                       (:destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [396 430])
+                    ("run" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tvec" variable
+                               (:reference 1
+                                :type ("NotifHandler::TabVec" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [462 490]))                          
+                        :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [437 491])
+                    ("setTabState" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("tablet" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [521 540])
+                            ("hostPort" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [541 562])
+                            ("status" variable (:type "int") (reparse-symbol arg-sub-list) [563 574]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [497 575])
+                    ("clearTabState" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :type "void")
+                        (reparse-symbol classsubparts) [580 608])
+                    ("private" label nil (reparse-symbol classsubparts) [609 617])
+                    ("TabState" type
+                       (:members 
+                          ( ("su" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [648 663])
+                            ("status" variable (:type "int") (reparse-symbol classsubparts) [672 683]))                          
+                        :type "struct")
+                        (reparse-symbol classsubparts) [622 690])
+                    ("TabMapType" type
+                       (:typedef ("std::map" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil)
+                                  ("TabState" type (:type "struct") nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::map"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [695 756])
+                    ("tabMap" variable
+                       (:typemodifiers ("static")
+                        :type ("TabMapType" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [761 786]))                  
+                :type "class")
+                nil [183 789]))          
+    :file "UnitTestNotifCurl.h"
+    :pointmax 1015
+    :fsize 1014
+    :lastmodtime '(20465 53877)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("UNIT_TEST_NOTIF_CURL_H")
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndevn2!trunk!dht!history!python_controller!taskManager!unit_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

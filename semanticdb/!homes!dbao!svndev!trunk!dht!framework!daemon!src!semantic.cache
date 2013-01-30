@@ -1,0 +1,719 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "BrokerHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/BrokerHandler.h" include nil nil [60 90])
+            ("dht/BrokerMessage.h" include nil nil [91 121])
+            ("EventDispatcher.h" include nil nil [122 150])
+            ("dht/LogUtils.h" include nil nil [151 176])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [177 207])
+            ("dht/ActionContext.h" include nil nil [208 238])
+            ("dht/ProcessContext.h" include nil nil [239 270])
+            ("dht/Stats.h" include nil nil [271 293])
+            ("smgs/SuMiscMetrics.hh" include (:system-flag t) nil [294 326])
+            ("smgs/Common.hh" include (:system-flag t) nil [327 352])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [439 529])
+            ("BrokerHandler" function
+               (:constructor-flag t
+                :parent "BrokerHandler"
+                :type ("BrokerHandler" type (:type "class") nil nil))
+                nil [531 662])
+            ("BrokerHandler" function
+               (:destructor-flag t
+                :parent "BrokerHandler"
+                :type "void")
+                nil [664 698])
+            ("initHandler" function
+               (:parent "BrokerHandler"
+                :arguments 
+                  ( ("msgSubscriber" variable
+                       (:pointer 1
+                        :type ("BrokerSubscriber" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [748 780])
+                    ("myRegion" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [808 837]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [700 1171])
+            ("cleanupHandler" function
+               (:parent "BrokerHandler"
+                :type "void")
+                nil [1173 1269])
+            ("myAddIOEvent" function
+               (:parent "BrokerHandler"
+                :arguments 
+                  ( ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1320 1349])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1350 1357]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1271 1633])
+            ("myRemoveIOEvent" function
+               (:parent "BrokerHandler"
+                :arguments 
+                  ( ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1687 1716]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1635 1904])
+            ("init" function
+               (:parent "BrokerHandler"
+                :arguments 
+                  ( ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1947 1976]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1906 3088])
+            ("handleEvent" function
+               (:parent "BrokerHandler"
+                :arguments 
+                  ( ("events" variable (:type "int") (reparse-symbol arg-sub-list) [3138 3162])
+                    ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3166 3194])
+                    ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3198 3223]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [3090 5096])
+            ("handleTimer" function
+               (:parent "BrokerHandler"
+                :arguments 
+                  ( ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5146 5174])
+                    ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5202 5227]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5098 6573]))          
+    :file "BrokerHandler.cc"
+    :pointmax 6726
+    :fsize 6725
+    :lastmodtime '(20328 58326)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "CommandHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/CommandHandler.h" include nil nil [128 159])
+            ("dht/CommandActionFactory.h" include nil nil [160 197])
+            ("CommandSession.h" include nil nil [198 225])
+            ("EventDispatcher.h" include nil nil [226 254])
+            ("dht/LogUtils.h" include nil nil [255 280])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [281 311])
+            ("yio/socksubs.h" include (:system-flag t) nil [312 337])
+            ("errno.h" include (:system-flag t) nil [338 356])
+            ("unistd.h" include (:system-flag t) nil [357 376])
+            ("string" include (:system-flag t) nil [377 394])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [396 486])
+            ("CommandHandler" function
+               (:constructor-flag t
+                :parent "CommandHandler"
+                :type ("CommandHandler" type (:type "class") nil nil))
+                nil [488 628])
+            ("CommandHandler" function
+               (:destructor-flag t
+                :parent "CommandHandler"
+                :type "void")
+                nil [630 688])
+            ("initHandler" function
+               (:parent "CommandHandler"
+                :arguments 
+                  ( ("commandPort" variable (:type "unsigned short") (reparse-symbol arg-sub-list) [739 773])
+                    ("maxSessions" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [802 836])
+                    ("sessionTimeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [865 905])
+                    ("actionFactory" variable
+                       (:pointer 1
+                        :type ("CommandActionFactory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [934 970]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [690 1725])
+            ("cleanupHandler" function
+               (:parent "CommandHandler"
+                :type "void")
+                nil [1727 1913])
+            ("init" function
+               (:parent "CommandHandler"
+                :arguments 
+                  ( ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1957 1985]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1915 2440])
+            ("handleEvent" function
+               (:parent "CommandHandler"
+                :arguments 
+                  ( ("events" variable (:type "int") (reparse-symbol arg-sub-list) [2491 2515])
+                    ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2523 2551])
+                    ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2559 2584]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [2442 3666])
+            ("newCmdSession" function
+               (:parent "CommandHandler"
+                :arguments 
+                  ( ("socket" variable (:type "int") (reparse-symbol arg-sub-list) [3703 3727])
+                    ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3737 3765]))                  
+                :type "void")
+                nil [3668 4573])
+            ("stopListening" function
+               (:parent "CommandHandler"
+                :type "void")
+                nil [4575 4893]))          
+    :file "CommandHandler.cc"
+    :pointmax 4894
+    :fsize 4893
+    :lastmodtime '(20328 58326)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "CommandSession.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("CommandSession.h" include nil nil [131 158])
+            ("dht/CommandActionFactory.h" include nil nil [159 196])
+            ("dht/CommandAction.h" include nil nil [197 227])
+            ("dht/LogUtils.h" include nil nil [228 253])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [254 284])
+            ("sys/types.h" include (:system-flag t) nil [285 307])
+            ("sys/socket.h" include (:system-flag t) nil [308 331])
+            ("errno.h" include (:system-flag t) nil [332 350])
+            ("string" include (:system-flag t) nil [351 368])
+            ("unistd.h" include (:system-flag t) nil [369 388])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [390 480])
+            ("CommandSession" function
+               (:constructor-flag t
+                :parent "CommandSession"
+                :type ("CommandSession" type (:type "class") nil nil))
+                nil [482 591])
+            ("CommandSession" function
+               (:destructor-flag t
+                :parent "CommandSession"
+                :type "void")
+                nil [593 645])
+            ("init" function
+               (:parent "CommandSession"
+                :arguments 
+                  ( ("sessionSocket" variable (:type "int") (reparse-symbol arg-sub-list) [689 707])
+                    ("actionFactory" variable
+                       (:pointer 1
+                        :type ("CommandActionFactory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [715 751]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [647 1127])
+            ("handleRequest" function
+               (:parent "CommandSession"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1129 2670])
+            ("cleanup" function
+               (:parent "CommandSession"
+                :type "void")
+                nil [2672 2808])
+            ("getfd" function
+               (:parent "CommandSession"
+                :type "int")
+                nil [2810 2933]))          
+    :file "CommandSession.cc"
+    :pointmax 3085
+    :fsize 3084
+    :lastmodtime '(20328 58326)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "DaemonProcess.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/DaemonProcess.h" include nil nil [127 157])
+            ("EventDispatcher.h" include nil nil [158 186])
+            ("dht/EventHandler.h" include nil nil [187 216])
+            ("dht/LogUtils.h" include nil nil [217 242])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [243 273])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [275 365])
+            ("DaemonProcess" function
+               (:constructor-flag t
+                :parent "DaemonProcess"
+                :type ("DaemonProcess" type (:type "class") nil nil))
+                nil [367 424])
+            ("DaemonProcess" function
+               (:destructor-flag t
+                :parent "DaemonProcess"
+                :type "void")
+                nil [426 524])
+            ("init" function
+               (:parent "DaemonProcess"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [526 880])
+            ("addHandler" function
+               (:parent "DaemonProcess"
+                :arguments 
+                  ( ("handler" variable
+                       (:pointer 1
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [929 951]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [882 1301])
+            ("removeHandler" function
+               (:parent "DaemonProcess"
+                :arguments 
+                  ( ("handler" variable
+                       (:pointer 1
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1353 1375]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1303 1633])
+            ("run" function
+               (:parent "DaemonProcess"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1635 1716])
+            ("cleanup" function
+               (:parent "DaemonProcess"
+                :type "void")
+                nil [1718 1819]))          
+    :file "DaemonProcess.cc"
+    :pointmax 1820
+    :fsize 1819
+    :lastmodtime '(20328 58325)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "DaemonRpcHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("dht/DaemonRpcHandler.h" include nil nil [60 93])
+            ("dht/Message.h" include nil nil [94 118])
+            ("dht/DaemonRpcActionFactory.h" include nil nil [119 158])
+            ("EventDispatcher.h" include nil nil [159 187])
+            ("dht/LogUtils.h" include nil nil [188 213])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [214 244])
+            ("errno.h" include (:system-flag t) nil [245 263])
+            ("dht/ActionContext.h" include nil nil [264 294])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [296 386])
+            ("DaemonRpcHandler" function
+               (:constructor-flag t
+                :parent "DaemonRpcHandler"
+                :type ("DaemonRpcHandler" type (:type "class") nil nil))
+                nil [388 477])
+            ("DaemonRpcHandler" function
+               (:destructor-flag t
+                :parent "DaemonRpcHandler"
+                :type "void")
+                nil [479 520])
+            ("initHandler" function
+               (:parent "DaemonRpcHandler"
+                :arguments 
+                  ( ("rpcServer" variable
+                       (:pointer 1
+                        :type ("DaemonRpcServer" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [573 602])
+                    ("actionFactory" variable
+                       (:pointer 1
+                        :type ("DaemonRpcActionFactory" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [632 670]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [522 1140])
+            ("cleanupHandler" function
+               (:parent "DaemonRpcHandler"
+                :type "void")
+                nil [1142 1321])
+            ("init" function
+               (:parent "DaemonRpcHandler"
+                :arguments 
+                  ( ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1367 1395]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1323 1971])
+            ("handleEvent" function
+               (:parent "DaemonRpcHandler"
+                :arguments 
+                  ( ("events" variable (:type "int") (reparse-symbol arg-sub-list) [2024 2048])
+                    ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2066 2094])
+                    ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2112 2137]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1973 2616])
+            ("execute" function
+               (:parent "DaemonRpcHandler"
+                :arguments 
+                  ( ("request" variable
+                       (:reference 1
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2665 2682]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [2618 4157]))          
+    :file "DaemonRpcHandler.cc"
+    :pointmax 4309
+    :fsize 4308
+    :lastmodtime '(20328 58326)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "EventDispatcher.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("EventDispatcher.h" include nil nil [129 157])
+            ("dht/EventHandler.h" include nil nil [158 187])
+            ("EventContext.h" include nil nil [188 213])
+            ("LibEventImpl.h" include nil nil [214 239])
+            ("dht/LogUtils.h" include nil nil [240 265])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [266 296])
+            ("errno.h" include (:system-flag t) nil [297 315])
+            ("event.h" include (:system-flag t) nil [316 334])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [336 426])
+            ("EventDispatcher::EVENT_MASK_CHECK" variable
+               (:constant-flag t
+                :type "int")
+                nil [428 472])
+            ("EventDispatcher::PERIODIC_TIMER" variable
+               (:constant-flag t
+                :type "bool")
+                nil [473 516])
+            ("EventDispatcher::NON_PERIODIC_TIMER" variable
+               (:constant-flag t
+                :type "bool")
+                nil [517 564])
+            ("EventDispatcher" function
+               (:constructor-flag t
+                :parent "EventDispatcher"
+                :type ("EventDispatcher" type (:type "class") nil nil))
+                nil [567 627])
+            ("EventDispatcher" function
+               (:destructor-flag t
+                :parent "EventDispatcher"
+                :type "void")
+                nil [629 772])
+            ("init" function
+               (:parent "EventDispatcher"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [774 1052])
+            ("cleanup" function
+               (:parent "EventDispatcher"
+                :type "void")
+                nil [1054 1155])
+            ("addIOEvent" function
+               (:parent "EventDispatcher"
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [1206 1223])
+                    ("events" variable (:type "int") (reparse-symbol arg-sub-list) [1231 1252])
+                    ("handler" variable
+                       (:reference 1
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1260 1282])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [1290 1315])
+                    ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1323 1345]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1157 3005])
+            ("addTimer" function
+               (:parent "EventDispatcher"
+                :arguments 
+                  ( ("time_ms" variable (:type "int") (reparse-symbol arg-sub-list) [3054 3076])
+                    ("handler" variable
+                       (:reference 1
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3082 3104])
+                    ("periodic" variable (:type "bool") (reparse-symbol arg-sub-list) [3110 3133])
+                    ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3160 3182]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [3007 4743])
+            ("removeIOEvent" function
+               (:parent "EventDispatcher"
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [4797 4814])
+                    ("handler" variable
+                       (:reference 1
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4825 4847]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [4745 5378])
+            ("removeIOEvent" function
+               (:parent "EventDispatcher"
+                :arguments 
+                  ( ("handler" variable
+                       (:reference 1
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5432 5454]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5380 6088])
+            ("removeTimer" function
+               (:parent "EventDispatcher"
+                :arguments 
+                  ( ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6140 6162])
+                    ("handler" variable
+                       (:reference 1
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6192 6214]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [6090 6776])
+            ("removeTimer" function
+               (:parent "EventDispatcher"
+                :arguments 
+                  ( ("handler" variable
+                       (:reference 1
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6828 6850]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [6778 7511])
+            ("remove" function
+               (:parent "EventDispatcher"
+                :arguments 
+                  ( ("handler" variable
+                       (:reference 1
+                        :type ("EventHandler" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7558 7580]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [7513 7738])
+            ("dispatch" function
+               (:parent "EventDispatcher"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [7740 7977]))          
+    :file "EventDispatcher.cc"
+    :pointmax 7978
+    :fsize 7977
+    :lastmodtime '(20328 58326)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "LibEventImpl.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("LibEventImpl.h" include nil nil [129 154])
+            ("dht/EventHandler.h" include nil nil [155 184])
+            ("dht/LogUtils.h" include nil nil [185 210])
+            ("dht/ActionContext.h" include nil nil [211 241])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [242 272])
+            ("errno.h" include (:system-flag t) nil [273 291])
+            ("string" include (:system-flag t) nil [292 309])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [311 401])
+            ("LibEventImpl" function
+               (:constructor-flag t
+                :parent "LibEventImpl"
+                :type ("LibEventImpl" type (:type "class") nil nil))
+                nil [403 487])
+            ("LibEventImpl" function
+               (:destructor-flag t
+                :parent "LibEventImpl"
+                :type "void")
+                nil [489 537])
+            ("init" function
+               (:parent "LibEventImpl"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [539 1087])
+            ("cleanup" function
+               (:parent "LibEventImpl"
+                :type "void")
+                nil [1089 1416])
+            ("getEventContext" function
+               (:pointer 1
+                :parent "LibEventImpl"
+                :type ("EventContext" type (:type "class") nil nil))
+                nil [1418 1499])
+            ("releaseEventContext" function
+               (:parent "LibEventImpl"
+                :arguments 
+                  ( ("eventContext" variable
+                       (:pointer 1
+                        :type ("EventContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1540 1567]))                  
+                :type "void")
+                nil [1501 1976])
+            ("addIOEvent" function
+               (:parent "LibEventImpl"
+                :arguments 
+                  ( ("eventContext" variable
+                       (:pointer 1
+                        :type ("EventContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2024 2051])
+                    ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [2056 2073])
+                    ("events" variable (:type "int") (reparse-symbol arg-sub-list) [2078 2099])
+                    ("timeout_ms" variable (:type "int") (reparse-symbol arg-sub-list) [2104 2129]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1978 3824])
+            ("addTimerEvent" function
+               (:parent "LibEventImpl"
+                :arguments 
+                  ( ("eventContext" variable
+                       (:pointer 1
+                        :type ("EventContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3875 3902])
+                    ("time_ms" variable (:type "int") (reparse-symbol arg-sub-list) [3910 3932])
+                    ("periodic" variable (:type "bool") (reparse-symbol arg-sub-list) [3940 3963]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [3826 5173])
+            ("removeIOEvent" function
+               (:parent "LibEventImpl"
+                :arguments 
+                  ( ("eventContext" variable
+                       (:pointer 1
+                        :type ("EventContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5224 5251]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5175 5927])
+            ("removeTimerEvent" function
+               (:parent "LibEventImpl"
+                :arguments 
+                  ( ("eventContext" variable
+                       (:pointer 1
+                        :type ("EventContext" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5981 6008]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [5929 6081])
+            ("dispatch" function
+               (:parent "LibEventImpl"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [6083 6579])
+            ("ev_callback" function
+               (:parent "LibEventImpl"
+                :arguments 
+                  ( ("fd" variable (:type "int") (reparse-symbol arg-sub-list) [6612 6619])
+                    ("events" variable (:type "short") (reparse-symbol arg-sub-list) [6620 6633])
+                    ("arg" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [6634 6644]))                  
+                :type "void")
+                nil [6581 9589]))          
+    :file "LibEventImpl.cc"
+    :pointmax 9741
+    :fsize 9740
+    :lastmodtime '(20328 58326)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "TimerHandler.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdexcept" include (:system-flag t) nil [60 80])
+            ("dht/TimerHandler.h" include nil nil [82 111])
+            ("dht/Message.h" include nil nil [112 136])
+            ("EventDispatcher.h" include nil nil [137 165])
+            ("dht/LogUtils.h" include nil nil [166 191])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [192 222])
+            ("errno.h" include (:system-flag t) nil [223 241])
+            ("log" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [243 333])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [335 355])
+            ("TimerHandler" function
+               (:constructor-flag t
+                :parent "TimerHandler"
+                :arguments 
+                  ( ("name" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [385 405]))                  
+                :type ("TimerHandler" type (:type "class") nil nil))
+                nil [357 471])
+            ("TimerHandler" function
+               (:destructor-flag t
+                :parent "TimerHandler"
+                :type "void")
+                nil [473 507])
+            ("initHandler" function
+               (:parent "TimerHandler"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [509 908])
+            ("cleanupHandler" function
+               (:parent "TimerHandler"
+                :type "void")
+                nil [910 1142])
+            ("init" function
+               (:parent "TimerHandler"
+                :arguments 
+                  ( ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1184 1212]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1144 1488])
+            ("start" function
+               (:parent "TimerHandler"
+                :arguments 
+                  ( ("periodic" variable (:type "bool") (reparse-symbol arg-sub-list) [1531 1545])
+                    ("msecs" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1546 1561]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [1489 2343])
+            ("stop" function
+               (:parent "TimerHandler"
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [2345 2650])
+            ("handleTimer" function
+               (:parent "TimerHandler"
+                :arguments 
+                  ( ("dispatcher" variable
+                       (:pointer 1
+                        :type ("EventDispatcher" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2700 2729])
+                    ("context" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2730 2744]))                  
+                :type ("FwCode::ResponseCode" type (:type "class") nil nil))
+                nil [2652 2851]))          
+    :file "TimerHandler.cc"
+    :pointmax 3004
+    :fsize 3003
+    :lastmodtime '(20328 58326)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!dht!framework!daemon!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

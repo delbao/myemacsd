@@ -1,0 +1,37 @@
+;; Object utils/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "utils/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AUTOMAKE_OPTIONS" variable (:default-value ("1.2" "foreign" "no-installman" "no-installinfo")) nil [101 161])
+            ("XAR" variable (:default-value ("@XAR@")) nil [242 254])
+            ("AR" variable (:default-value ("$(XAR)")) nil [254 266])
+            ("INCLUDES" variable (:default-value ("-I$.")) nil [267 283])
+            ("INCLUDES" variable (:default-value ("@iocore_include_dirs@")) nil [283 317])
+            ("INCLUDES" variable (:default-value ("@LIBINKTOMI_INCDIR@")) nil [317 349])
+            ("INCLUDES" variable (:default-value ("@TBD_1_INCDIR@")) nil [349 376])
+            ("INCLUDES" variable (:default-value ("@TBD_2_INCDIR@")) nil [376 403])
+            ("INCLUDES" variable (:default-value ("@TBD_3_INCDIR@")) nil [403 430])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/auth/include")) nil [461 502])
+            ("INCLUDES" variable (:default-value ("-I$(top_srcdir)/auth/proxy-compat")) nil [502 548])
+            ("noinst_LIBRARIES" variable (:default-value ("libutil.a")) nil [614 643])
+            ("libutil_a_SOURCES" variable (:default-value ("XML.cc" "AccCrypto.cc" "AccManager.cc")) nil [643 697])
+            ("EXTRA_PROGRAMS" variable (:default-value ("test_xml")) nil [751 789])
+            ("test_xml_SOURCES" variable (:default-value ("test_xml.cc")) nil [790 821])
+            ("test_xml_LDADD" variable (:default-value ("./libutil.a" "$(top_builddir)/../libinktomi++/libinktomi++.a" "@LIBBSDTCP@" "@LIBXML@" "@LIBTHREAD@" "@LIBSOCKET@" "@LIBNSL@" "@LIBRESOLV@" "@LIBRT@" "@LIBDL@" "-lm")) nil [822 997])
+            ("test_crypto_SOURCES" variable (:default-value ("test_crypto.cc")) nil [998 1035])
+            ("test_crypto_LDADD" variable (:default-value ("./libutil.a" "../controller/libcontroller.a" "$(top_builddir)/../libinktomi++/libinktomi++.a" "@LIBBSDTCP@" "@LIBXML@" "@LIBSSL@" "@LIBTHREAD@" "@LIBSOCKET@" "@LIBNSL@" "@LIBRESOLV@" "@LIBRT@" "@LIBDL@" "-lm")) nil [1036 1253])
+            ("clean-local" function nil nil [1254 1313]))          
+    :file "Makefile.am"
+    :pointmax 1313
+    :fsize 1312
+    :lastmodtime '(20632 41392)
+    :unmatched-syntax '((shell-command 1268 . 1312) (bol 1267 . 1267))
+    )
+   )
+  :file "!homes!dbao!yts!1.19!release_1_19!auth!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

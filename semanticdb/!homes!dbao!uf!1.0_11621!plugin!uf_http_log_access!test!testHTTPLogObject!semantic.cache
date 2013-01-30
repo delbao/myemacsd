@@ -1,0 +1,26 @@
+;; Object testHTTPLogObject/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "testHTTPLogObject/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_LDFLAGS" variable (:default-value ("-llog4cxx")) nil [68 91])
+            ("AM_CPPFLAGS" variable (:default-value ("-fno-strict-aliasing" "-D_FILE_OFFSET_BITS=64" "-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/plugin/uf_http_log_access/src" "-I$(top_srcdir)/plugin/uf_http_log_access/test")) nil [91 392])
+            ("check_PROGRAMS" variable (:default-value ("testhttplogobject")) nil [453 488])
+            ("TESTS" variable (:default-value ("$(check_PROGRAMS)")) nil [545 571])
+            ("testhttplogobject_SOURCES" variable (:default-value ("$(top_builddir)/test/CppUnitTestRunner.cc" "TestHTTPLogObject.C")) nil [572 668])
+            ("testhttplogobject_LDFLAGS" variable (:default-value ("-lcppunit" "$(AM_LDFLAGS)" "-llog4cxx" "-lsasl2" "-lcurl")) nil [682 759])
+            ("testhttplogobject_LDFLAGS" variable (:default-value ("-lcppunit" "$(AM_LDFLAGS)" "-llog4cxx")) nil [764 826])
+            ("testhttplogobject_LDADD" variable (:default-value ("$(top_builddir)/plugin/uf_http_log_access/src/libufhttplog.la" "$(top_builddir)/plugin/common/src/libufcommon.la")) nil [832 976]))          
+    :file "Makefile.am"
+    :pointmax 978
+    :fsize 977
+    :lastmodtime '(20629 53851)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!1.0_11621!plugin!uf_http_log_access!test!testHTTPLogObject!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

@@ -1,0 +1,255 @@
+;; Object curltest/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "curltest/"
+  :tables (list 
+   (semanticdb-table "multireq.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1127 1145])
+            ("unistd.h" include (:system-flag t) nil [1146 1165])
+            ("stdlib.h" include (:system-flag t) nil [1166 1185])
+            ("sys/types.h" include (:system-flag t) nil [1186 1208])
+            ("string.h" include (:system-flag t) nil [1209 1228])
+            ("errno.h" include (:system-flag t) nil [1229 1247])
+            ("curl/curl.h" include (:system-flag t) nil [1249 1271])
+            ("curl/multi.h" include (:system-flag t) nil [1272 1295])
+            ("time.h" include (:system-flag t) nil [1297 1314])
+            ("string" include (:system-flag t) nil [1316 1333])
+            ("vector" include (:system-flag t) nil [1334 1351])
+            ("map" include (:system-flag t) nil [1352 1366])
+            ("EPRINT" variable (:constant-flag t) nil [1376 1382])
+            ("IPRINT" variable (:constant-flag t) nil [1501 1507])
+            ("DPRINT" variable (:constant-flag t) nil [1625 1631])
+            ("RETURN_THIS_IF_NOT_CURL_OK" variable (:constant-flag t) nil [1762 1788])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [1973 1993])
+            ("conc" variable
+               (:typemodifiers ("static")
+                :type "unsigned int")
+                nil [1995 2024])
+            ("debug" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [2025 2046])
+            ("operation" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [2047 2083])
+            ("certhdr" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :type "char")
+                nil [2084 2285])
+            ("headers" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("curl_slist" type (:type "class") nil nil))
+                nil [2286 2313])
+            ("desc" type
+               (:members 
+                  ( ("httpStatus" variable (:type "int") (reparse-symbol classsubparts) [2333 2348])
+                    ("postbody" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2353 2374])
+                    ("respbody" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2379 2400])
+                    ("posturl" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2405 2425])
+                    ("postrem" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2430 2445]))                  
+                :type "struct")
+                nil [2315 2448])
+            ("alldesc" variable (:type ("vector" type
+                 (:template-specifier 
+                    ( ("desc" type (:type "struct") nil nil))                    
+                  :type "class")
+                  nil nil)) nil [2450 2481])
+            ("ChMap" variable (:type "int") nil [2521 2527])
+            ("ysys_get_msecs" function (:type "long") nil [2529 2780])
+            ("curlDebugLogger" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("curl" variable
+                       (:pointer 1
+                        :type ("CURL" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [2809 2820])
+                    ("type" variable (:type ("curl_infotype" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2821 2840])
+                    ("data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [2841 2852])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2861 2873])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2874 2884]))                  
+                :type "int")
+                nil [2782 3569])
+            ("curlHeaderWriter" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3602 3612])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3613 3625])
+                    ("nmemb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3626 3639])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3640 3650]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [3571 3757])
+            ("curlResponseBodyReader" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ptr" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3796 3806])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3807 3819])
+                    ("nmemb" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3820 3833])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3834 3844]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [3759 4131])
+            ("curlRequestWriter" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("buf" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4165 4175])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4176 4188])
+                    ("nelem" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4189 4202])
+                    ("ctx" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4203 4213]))                  
+                :type ("size_t" type (:type "class") nil nil))
+                nil [4133 4918])
+            ("addHandles" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mh" variable
+                       (:pointer 1
+                        :type ("CURLM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5793 5803])
+                    ("cmap" variable
+                       (:reference 1
+                        :type ("ChMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5804 5817]))                  
+                :type "int")
+                nil [5771 9296])
+            ("sendRequests" function
+               (:arguments 
+                  ( ("mh" variable
+                       (:pointer 1
+                        :type ("CURLM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9327 9337])
+                    ("cmap" variable
+                       (:reference 1
+                        :type ("ChMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9338 9351]))                  
+                :type "int")
+                nil [9310 9871])
+            ("setTv" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("tv" variable
+                       (:pointer 1
+                        :type ("timeval" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9891 9910])
+                    ("msecs" variable (:type "long") (reparse-symbol arg-sub-list) [9911 9922]))                  
+                :type "void")
+                nil [9873 10007])
+            ("retrieveResponses" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mh" variable
+                       (:pointer 1
+                        :type ("CURLM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10038 10048])
+                    ("cmap" variable
+                       (:reference 1
+                        :type ("ChMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10049 10062])
+                    ("done" variable
+                       (:reference 1
+                        :type "bool")
+                        (reparse-symbol arg-sub-list) [10063 10075]))                  
+                :type "int")
+                nil [10009 11849])
+            ("recvResponses" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("mh" variable
+                       (:pointer 1
+                        :type ("CURLM" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11876 11886])
+                    ("cmap" variable
+                       (:reference 1
+                        :type ("ChMap" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11887 11900]))                  
+                :type "int")
+                nil [11851 16695])
+            ("doRequests" function
+               (:typemodifiers ("static")
+                :type "int")
+                nil [16697 17392])
+            ("setupReqs" function
+               (:typemodifiers ("static")
+                :type "void")
+                nil [17394 19021])
+            ("usage" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("cmd" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19041 19057]))                  
+                :type "void")
+                nil [19023 19140])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [19151 19160])
+                    ("argv" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [19161 19174]))                  
+                :type "int")
+                nil [19142 19945]))          
+    :file "multireq.cc"
+    :pointmax 20097
+    :fsize 20096
+    :lastmodtime '(20328 58304)
+    :unmatched-syntax '((punctuation 2519 . 2520) (punctuation 2517 . 2518) (symbol 2512 . 2516) (STRUCT 2505 . 2511) (punctuation 2503 . 2504) (punctuation 2502 . 2503) (symbol 2497 . 2501) (punctuation 2495 . 2496) (symbol 2491 . 2494) (TYPEDEF 2483 . 2490))
+    :lexical-table 
+        '(("EPRINT" (spp-arg-list ("x_fmt" "x_args...") 1382 . 1400) . 
+              ((symbol "fprintf" 1401 . 1408) (semantic-list "(stderr, \"ERROR:%s:%s:%d:\" x_fmt \"\\n\", __FILE__, __FUNCTION__, __LINE__ , ##x_args)" 1408 . 1491) (punctuation ";" 1491 . 1492)))
+          ("RETURN_THIS_IF_NOT_CURL_OK" (spp-arg-list ("x_rc" "x_rv" "x_id_str") 1788 . 1810) . ((semantic-list "{ \\
+    CURLcode x_cc = (x_rv); \\
+    if (x_cc != CURLE_OK) { \\
+        EPRINT(\"%s:%s\", x_id_str, curl_easy_strerror(x_cc)); \\
+        return x_rc; \\
+    } \\
+}" 1811 . 1970)))
+          ("DPRINT" (spp-arg-list ("x_fmt" "x_args...") 1631 . 1649) . 
+              ((IF "if" 1650 . 1652) (semantic-list "(debug)" 1653 . 1660) (symbol "fprintf" 1661 . 1668) (semantic-list "(stdout, \"DEBUG:%s:%s:%d:\" x_fmt \"\\n\", __FILE__, __FUNCTION__, __LINE__ , ##x_args)" 1668 . 1751) (punctuation ";" 1751 . 1752)))
+          ("IPRINT" (spp-arg-list ("x_fmt" "x_args...") 1507 . 1525) . 
+              ((symbol "fprintf" 1526 . 1533) (semantic-list "(stdout, \"INFO:%s:%s:%d:\" x_fmt \"\\n\", __FILE__, __FUNCTION__, __LINE__ , ##x_args)" 1533 . 1615) (punctuation ";" 1615 . 1616)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!svndev!trunk!dht!controller!src!curltest!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

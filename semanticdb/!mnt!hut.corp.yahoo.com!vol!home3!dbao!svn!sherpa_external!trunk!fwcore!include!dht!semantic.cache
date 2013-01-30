@@ -1,0 +1,2419 @@
+;; Object dht/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "dht/"
+  :tables (list 
+   (semanticdb-table "StringUtilsCore.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__STRING_UTIL_CORE_H" variable (:constant-flag t) nil [166 186])
+            ("iostream" include (:system-flag t) nil [187 206])
+            ("iomanip" include (:system-flag t) nil [207 225])
+            ("sstream" include (:system-flag t) nil [226 244])
+            ("dht/CrCode.h" include (:system-flag t) nil [245 268])
+            ("StringUtilsCore" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [358 365])
+                    ("urlEscape" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("input" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [649 675])
+                            ("output" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [676 697]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [627 698])
+                    ("urlEscape" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("input" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [826 851]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [797 852])
+                    ("urlUnescape" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("input" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1154 1180])
+                            ("output" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1181 1202]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1130 1203])
+                    ("buildTopicName" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1355 1381])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1420 1447]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1321 1448])
+                    ("buildTopicName" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1607 1633])
+                            ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1665 1692])
+                            ("topic" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1724 1744]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1580 1745])
+                    ("parseTopicName" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("topic" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2082 2107])
+                            ("table" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2139 2159])
+                            ("tablet" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2191 2212]))                          
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2055 2213])
+                    ("convertHexStringToUI64" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2584 2609])
+                            ("out" variable
+                               (:reference 1
+                                :type ("uint64_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2610 2624]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2525 2625])
+                    ("convertHexStringToUI32" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2997 3022])
+                            ("out" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3023 3037]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2937 3038])
+                    ("convertUI64ToHexString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("val" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3410 3424]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3367 3425])
+                    ("convertUI32ToHexString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("val" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3788 3806]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3745 3807])
+                    ("convertUI32ToMinimalHexString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("val" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4187 4205]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4137 4206])
+                    ("toPrintable" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("str" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4541 4557])
+                            ("len" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4558 4569]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4510 4570])
+                    ("crcHash" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4756 4773])
+                            ("len" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4774 4787]))                          
+                        :type ("uint32_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4732 4788])
+                    ("toString" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("item" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4919 4926]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [4863 4927])
+                    ("fromString" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("strValue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5273 5301])
+                            ("value" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5339 5348]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [5200 5349])
+                    ("numberToHexString" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5637 5645]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [5568 5646])
+                    ("numberToMinimalHexString" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("std::string" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5908 5916]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [5832 5917])
+                    ("hexStringToNumber" function
+                       (:template 
+                          ( ("T" type (:type "class") nil nil))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil)
+                        :arguments 
+                          ( ("strvalue" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6298 6326])
+                            ("value" variable
+                               (:reference 1
+                                :type ("T" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6370 6379]))                          
+                        :typemodifiers ("static" "inline")
+                        :prototype-flag t)
+                        (reparse-symbol classsubparts) [6219 6380])
+                    ("EMPTY_STRING" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6386 6424]))                  
+                :type "class")
+                nil [333 6427])
+            ("toString" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("std::string" type (:type "class") nil nil)
+                :arguments 
+                  ( ("item" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6490 6497]))                  
+                :parent "StringUtilsCore")
+                nil [6429 6592])
+            ("fromString" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("strValue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6666 6694])
+                    ("value" variable
+                       (:reference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6706 6715]))                  
+                :parent "StringUtilsCore")
+                nil [6594 6955])
+            ("numberToHexString" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("std::string" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7026 7034]))                  
+                :parent "StringUtilsCore")
+                nil [6957 7212])
+            ("numberToMinimalHexString" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("std::string" type (:type "class") nil nil)
+                :arguments 
+                  ( ("value" variable (:type ("T" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7290 7298]))                  
+                :parent "StringUtilsCore")
+                nil [7214 7401])
+            ("hexStringToNumber" function
+               (:template 
+                  ( ("T" type (:type "class") nil nil))                  
+                :type ("CrCode::ResponseCode" type (:type "class") nil nil)
+                :arguments 
+                  ( ("strvalue" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7481 7509])
+                    ("value" variable
+                       (:reference 1
+                        :type ("T" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [7528 7537]))                  
+                :parent "StringUtilsCore")
+                nil [7403 7767]))          
+    :file "StringUtilsCore.h"
+    :pointmax 7927
+    :fsize 7926
+    :lastmodtime '(20550 20334)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__STRING_UTIL_CORE_H")
+          )
+
+    )
+   (semanticdb-table "BrokerMessage.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__BROKERMESSAGE_H__" variable (:constant-flag t) nil [96 115])
+            ("iostream" include (:system-flag t) nil [118 137])
+            ("string" include (:system-flag t) nil [138 155])
+            ("dht/Message.h" include nil nil [157 181])
+            ("dht/StringUtilsCore.h" include nil nil [182 214])
+            ("dht/CompressionUtils.h" include nil nil [215 248])
+            ("dht/CrCode.h" include nil nil [249 272])
+            ("BrokerMessage" type
+               (:prototype t
+                :type "class")
+                nil [384 404])
+            ("<<" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("ostr" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [635 654])
+                    ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [655 680]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [610 681])
+            ("BrokerMessage" type
+               (:superclasses 
+                  ( ("Message" type
+                       (:protection "public"
+                        :type "class")
+                        nil nil))                  
+                :members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [923 930])
+                    ("MessageTrigger" type
+                       (:typedef ("" type
+                             (:members 
+                                ( ("TRIGGER_NONE" variable
+                                     (:constant-flag t
+                                      :default-value (1158 1159)
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1143 1159])
+                                  ("TRIGGER_REQ_SYNC" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1169 1186])
+                                  ("TRIGGER_FORCE_SYNC" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1258 1277])
+                                  ("TRIGGER_GC" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1350 1361])
+                                  ("TRIGGER_USER" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1429 1442])
+                                  ("TRIGGER_REPUB" variable
+                                     (:constant-flag t
+                                      :type "int")
+                                      (reparse-symbol enumsubparts) [1521 1535]))                                
+                              :type "enum")
+                              nil nil)
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [1016 1624])
+                    ("TRIGGER_MAX" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "TRIGGER_REPUB;"
+                        :type ("MessageTrigger" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1696 1752])
+                    ("PUB_TYPE_USER_INPUT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "true;"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1833 1878])
+                    ("PUB_TYPE_SYSTEM_GENERATED" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "false;"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [1963 2015])
+                    ("SET_NOTIFICATION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "true;"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2075 2117])
+                    ("UNSET_NOTIFICATION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "false;"
+                        :type "bool")
+                        (reparse-symbol classsubparts) [2122 2167])
+                    ("CONFLICT_RESOLUTION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2205 2250])
+                    ("MASTERED_BAD_CONFLICT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2300 2347])
+                    ("MERGING_MAJOR_CONFLICT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2415 2463])
+                    ("TestBrokerMessage" friend nil (reparse-symbol classsubparts) [2531 2561])
+                    ("BrokerMessage" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2587 2603])
+                    ("BrokerMessage" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [2613 2638])
+                    ("copy" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2863 2899])
+                    ("attachBody" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3192 3202])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3203 3215])
+                            ("shouldOwn" variable (:type "bool") (reparse-symbol arg-sub-list) [3216 3231])
+                            ("compressionUtils" variable
+                               (:reference 1
+                                :type ("CompressionUtils" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3232 3268])
+                            ("testHookCompFailEnabled" variable (:type "bool") (reparse-symbol arg-sub-list) [3269 3298]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3176 3299])
+                    ("checksumCompare" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("compareWith" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3462 3483]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3425 3484])
+                    ("decompressBodyAndChecksum" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("compressionUtils" variable
+                               (:reference 1
+                                :type ("CompressionUtils" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3826 3862])
+                            ("testHookDecompFailEnabled" variable (:type "bool") (reparse-symbol arg-sub-list) [3863 3894]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3779 3895])
+                    ("deserializeBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4076 4093])
+                            ("bodySize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4094 4110])
+                            ("overallSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4161 4182]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4031 4183])
+                    ("deserializeBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4367 4384])
+                            ("bodySize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4385 4401])
+                            ("overallSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4452 4473])
+                            ("shouldCopy" variable (:type "bool") (reparse-symbol arg-sub-list) [4474 4490]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4322 4491])
+                    ("isApiVersion1OrHigher" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4641 4676])
+                    ("isApiVersion2OrHigher" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [4826 4861])
+                    ("setMessageId" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("smsgId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [4992 5018]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4958 5019])
+                    ("getMessageId" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5067 5108])
+                    ("getTable" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5179 5216])
+                    ("setTable" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5252 5277]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5238 5278])
+                    ("getIndexTable" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5300 5342])
+                    ("setIndexTable" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("table" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5383 5408]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5364 5409])
+                    ("getIndexRecord" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5431 5474])
+                    ("setIndexRecord" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("ixrec" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5516 5541]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5496 5542])
+                    ("getTablet" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5564 5601])
+                    ("setTablet" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("tablet" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5639 5665]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5623 5666])
+                    ("getRecord" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5688 5726])
+                    ("setRecord" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("record" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5767 5793]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5752 5794])
+                    ("getTopic" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5824 5859])
+                    ("setTopic" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("topic" variable
+                               (:constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5895 5919]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5881 5920])
+                    ("getPublisher" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5979 6018])
+                    ("setPublisher" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("publisher" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6088 6117]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6070 6118])
+                    ("setPublishTime" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("hextimestring" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6199 6232]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6179 6233])
+                    ("getPublishTime" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6315 6357])
+                    ("getPublisherRegion" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6410 6544])
+                    ("setPublisherRegion" function
+                       (:arguments 
+                          ( ("region" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6634 6660]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6610 6816])
+                    ("isCompressed" function (:type "bool") (reparse-symbol classsubparts) [6884 7010])
+                    ("setCompressedFlag" function
+                       (:arguments 
+                          ( ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [7086 7097]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7063 7295])
+                    ("getTrigger" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("trigger" variable
+                               (:reference 1
+                                :type ("MessageTrigger" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7380 7404]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7348 7411])
+                    ("setTrigger" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("trigger" variable
+                               (:constant-flag t
+                                :type ("MessageTrigger" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7481 7510]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7465 7511])
+                    ("getChecksum" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7554 7662])
+                    ("setChecksum" function
+                       (:arguments 
+                          ( ("checksum" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7722 7750]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7705 7877])
+                    ("getSUToActivate" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7940 8059])
+                    ("setSUToActivate" function
+                       (:arguments 
+                          ( ("suToActivate" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8086 8119]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8065 8263])
+                    ("getSnapshotID" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8269 8383])
+                    ("setSnapshotID" function
+                       (:arguments 
+                          ( ("snapshotID" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8408 8439]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8389 8575])
+                    ("getSourceSU" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8582 8692])
+                    ("setSourceSU" function
+                       (:arguments 
+                          ( ("sourceSU" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8715 8744]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [8698 8874])
+                    ("getIsStub" function (:type "bool") (reparse-symbol classsubparts) [8880 9000])
+                    ("setIsStub" function
+                       (:arguments 
+                          ( ("isStub" variable (:type "bool") (reparse-symbol arg-sub-list) [9021 9033]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [9006 9229])
+                    ("getDestinationSU" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9235 9355])
+                    ("setDestinationSU" function
+                       (:arguments 
+                          ( ("destinationSU" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9383 9417]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [9361 9562])
+                    ("getDestinationRegion" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9568 9696])
+                    ("setDestinationRegion" function
+                       (:arguments 
+                          ( ("destinationRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [9728 9766]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [9702 9923])
+                    ("getUseSSL" function (:type "bool") (reparse-symbol classsubparts) [9929 10049])
+                    ("setUseSSL" function
+                       (:arguments 
+                          ( ("useSSL" variable (:type "bool") (reparse-symbol arg-sub-list) [10070 10082]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [10055 10277])
+                    ("getCopyRegions" function
+                       (:arguments 
+                          ( ("regions" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10303 10338]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [10283 10420])
+                    ("getCopyRegions" function
+                       (:arguments 
+                          ( ("regions" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10446 10479]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [10426 10561])
+                    ("setCopyRegions" function
+                       (:arguments 
+                          ( ("regions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10587 10628]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [10567 10891])
+                    ("setCopyRegions" function
+                       (:arguments 
+                          ( ("regions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [10917 10956]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [10897 11217])
+                    ("getRecordSequenceId" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11223 11343])
+                    ("setRecordSequenceId" function
+                       (:arguments 
+                          ( ("seqid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11374 11400]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [11349 11531])
+                    ("hasNotification" function (:type "bool") (reparse-symbol classsubparts) [11537 11668])
+                    ("setNotification" function
+                       (:arguments 
+                          ( ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [11695 11706]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [11674 11891])
+                    ("setRepublish" function
+                       (:arguments 
+                          ( ("repubType" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11915 11945]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [11897 12075])
+                    ("getRepublish" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12081 12192])
+                    ("useNewJsonParser" function (:type "bool") (reparse-symbol classsubparts) [12198 12333])
+                    ("setNewJsonParser" function
+                       (:arguments 
+                          ( ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [12361 12372]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12339 12563])
+                    ("isUserInput" function (:type "bool") (reparse-symbol classsubparts) [12569 12694])
+                    ("setUserInput" function
+                       (:arguments 
+                          ( ("value" variable (:type "bool") (reparse-symbol arg-sub-list) [12718 12729]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12700 12910])
+                    ("setClientAppId" function
+                       (:arguments 
+                          ( ("appid" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12936 12962]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12916 13096])
+                    ("getClientAppId" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [13102 13219])
+                    ("setOverrideInfo" function
+                       (:arguments 
+                          ( ("goodRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13617 13647])
+                            ("badRegion" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13648 13677])
+                            ("timestamp" variable (:type ("uint64_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13706 13725])
+                            ("isMajor" variable (:type "bool") (reparse-symbol arg-sub-list) [13725 13738]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13596 14263])
+                    ("getMajorOverrideFlag" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14377 14484])
+                    ("getGoodRegion" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14632 14726])
+                    ("getBadRegion" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14884 14978])
+                    ("getIssueTimestampStr" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15055 15169])
+                    ("setTabletSplitInfo" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("splitId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15382 15409])
+                            ("coordinator" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15409 15440])
+                            ("splitPoint" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15469 15499])
+                            ("listOfRegions" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [15499 15532]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [15358 15533])
+                    ("getSplitId" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15544 15632])
+                    ("getSplitCoordinator" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15638 15744])
+                    ("getSplitPoint" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15750 15844])
+                    ("getSplitListOfRegions" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15850 15962])
+                    ("isProxyMsg" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [15968 16060])
+                    ("setProxyMsgFlag" function (:type "void") (reparse-symbol classsubparts) [16070 16214])
+                    ("setUncertainRecordMarkCounter" function
+                       (:arguments 
+                          ( ("ctr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16341 16364]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [16306 16494])
+                    ("getUncertainRecordMarkCounter" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16500 16628])
+                    ("setRestoreId" function
+                       (:arguments 
+                          ( ("restoreId" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [16725 16754]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [16707 16852])
+                    ("getRestoreId" function
+                       (:constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [16858 16950])
+                    ("clear" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [16956 16977])
+                    ("setRecipients" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("recipients" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17167 17198]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [17148 17199])
+                    ("getRecipients" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17347 17389])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("ostr" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17428 17447])
+                            ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("BrokerMessage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17448 17473]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17396 17474])
+                    ("protected" label nil (reparse-symbol classsubparts) [17476 17486])
+                    ("BrokerMessage" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("bmsg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("BrokerMessage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [17515 17541]))                          
+                        :type ("explicit" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17492 17542])
+                    ("API_VERSION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17548 17585])
+                    ("HEADER_API_VERSION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17590 17634])
+                    ("HEADER_TABLE" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17639 17677])
+                    ("HEADER_TABLET" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17682 17721])
+                    ("HEADER_RECORD" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17726 17765])
+                    ("HEADER_PUBLISHER_REGION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17770 17819])
+                    ("HEADER_PUBLISHER" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17824 17866])
+                    ("HEADER_PUBLISH_TIME" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17871 17916])
+                    ("HEADER_CHECKSUM" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17921 17962])
+                    ("HEADER_COMPRESSED" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [17967 18010])
+                    ("HEADER_TRIGGER" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18015 18055])
+                    ("HEADER_NEW_JSON_PARSER" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18060 18108])
+                    ("HEADER_IS_STUB" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18137 18177])
+                    ("HEADER_RECIPIENTS" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18206 18249])
+                    ("HEADER_INDEX_TABLE" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18254 18298])
+                    ("HEADER_INDEX_RECORD" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18303 18348])
+                    ("HEADER_SU_TO_ACTIVATE" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18389 18436])
+                    ("HEADER_SNAPSHOT_ID" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18441 18485])
+                    ("HEADER_SOURCE_SU" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18490 18532])
+                    ("HEADER_DESTINATION_SU" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18537 18584])
+                    ("HEADER_DESTINATION_REGION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18589 18640])
+                    ("HEADER_COPY_REGIONS" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18645 18690])
+                    ("HEADER_USE_SSL" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18695 18735])
+                    ("HEADER_SEQUENCE_ID" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18794 18838])
+                    ("HEADER_NOTIFICATION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18843 18888])
+                    ("HEADER_NOTIFICATION_PAYLOAD" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18917 18970])
+                    ("HEADER_USER_INPUT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [18975 19018])
+                    ("HEADER_CLIENT_APP_ID" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19122 19168])
+                    ("HEADER_REPUBLISH" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19173 19215])
+                    ("TRUE_STR" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19298 19332])
+                    ("FALSE_STR" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19337 19372])
+                    ("HEADER_GOOD_REGION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19399 19443])
+                    ("HEADER_BAD_REGION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19448 19491])
+                    ("HEADER_IS_MAJOR_OVERRIDE" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19496 19546])
+                    ("HEADER_OVERRIDE_ISSUE_TIMESTAMP" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19551 19608])
+                    ("HEADER_SPLIT_ID" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19637 19678])
+                    ("HEADER_SPLIT_COORDINATOR" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19687 19737])
+                    ("HEADER_SPLIT_POINT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19742 19786])
+                    ("HEADER_SPLIT_LIST_OF_REGIONS" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19791 19845])
+                    ("HEADER_IS_PROXY_EOT" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19850 19895])
+                    ("HEADER_UNCERTAIN_RECORD_MARK_COUNTER" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [19935 19997])
+                    ("HEADER_RESTORE_ID" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20018 20061])
+                    ("getHdrNames" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("hdrNames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [20238 20277]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [20214 20278])
+                    ("getHdrDescriptor" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("desc" variable
+                               (:reference 1
+                                :type ("HeaderDescriptor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20453 20477]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [20424 20478])
+                    ("topic_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [20484 20503])
+                    ("protected" label nil (reparse-symbol classsubparts) [20554 20564])
+                    ("removeHeader" function
+                       (:arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20763 20786]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [20745 20830])
+                    ("private" label nil (reparse-symbol classsubparts) [20833 20841])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("BrokerMessage" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [20876 20897]))                          
+                        :type ("BrokerMessage" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [20851 20898])
+                    ("clearInternal" function
+                       (:prototype-flag t
+                        :type "void")
+                        (reparse-symbol classsubparts) [20957 20978]))                  
+                :type "class")
+                nil [884 20981]))          
+    :file "BrokerMessage.h"
+    :pointmax 21204
+    :fsize 21203
+    :lastmodtime '(20550 20334)
+    :unmatched-syntax '((punctuation 2561 . 2562))
+    :lexical-table 
+        '(("__BROKERMESSAGE_H__")
+          )
+
+    )
+   (semanticdb-table "Message.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__MESSAGE_H__" variable (:constant-flag t) nil [90 103])
+            ("string" include (:system-flag t) nil [105 122])
+            ("map" include (:system-flag t) nil [123 137])
+            ("list" include (:system-flag t) nil [138 153])
+            ("vector" include (:system-flag t) nil [154 171])
+            ("set" include (:system-flag t) nil [172 186])
+            ("iostream" include (:system-flag t) nil [187 206])
+            ("sys/types.h" include (:system-flag t) nil [207 229])
+            ("dht/CrCode.h" include nil nil [231 254])
+            ("dht/UtilityBuffer.h" include (:system-flag t) nil [255 285])
+            ("Message" type
+               (:prototype t
+                :type "class")
+                nil [287 301])
+            ("<<" function
+               (:prototype-flag t
+                :operator-flag t
+                :arguments 
+                  ( ("ostr" variable
+                       (:reference 1
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [527 546])
+                    ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [546 565]))                  
+                :type ("std::ostream" type (:type "class") nil nil))
+                nil [501 566])
+            ("Message" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [665 672])
+                    ("HeaderIterator" type
+                       (:typedef ("std::multimap::iterator" type (:type "class") nil nil)
+                        :superclasses "std::multimap::iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [682 755])
+                    ("HeaderCIterator" type
+                       (:typedef ("std::multimap::const_iterator" type (:type "class") nil nil)
+                        :superclasses "std::multimap::const_iterator"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [760 840])
+                    ("HeaderDescriptor" type
+                       (:typedef ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::pair" type nil nil nil))                                
+                              :type "class")
+                              nil nil)
+                        :superclasses "std::vector"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [845 919])
+                    ("MessageSerializer" friend nil (reparse-symbol classsubparts) [925 955])
+                    ("<<" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :typemodifiers ("friend")
+                        :arguments 
+                          ( ("ostr" variable
+                               (:reference 1
+                                :type ("std::ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [994 1013])
+                            ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1013 1032]))                          
+                        :type ("std::ostream" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [961 1033])
+                    ("TestMessage" friend nil (reparse-symbol classsubparts) [1038 1062])
+                    ("DaemonMessage" friend nil (reparse-symbol classsubparts) [1394 1420])
+                    ("Message" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1427 1437])
+                    ("Message" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1443 1462])
+                    ("calcSerializationSize" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("totalSize" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1687 1707])
+                            ("numHeaders" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1708 1729]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1652 1736])
+                    ("serializeDirect" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2253 2264])
+                            ("size" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2265 2278]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2208 2285])
+                    ("serialize" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [2865 2871])
+                            ("" variable (:type ("data" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2872 2877])
+                            ("size" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2878 2891]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2826 2898])
+                    ("deserialize" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3235 3252])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3253 3265]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3194 3266])
+                    ("deserializeEnvelope" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3743 3760])
+                            ("dataSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3814 3832])
+                            ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [3886 3900])
+                            ("" variable (:type ("bodyData" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3901 3910])
+                            ("bodySize" variable
+                               (:reference 1
+                                :type ("uint32_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [3964 3984]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3694 3985])
+                    ("deserializeBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4497 4514])
+                            ("bodySize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4515 4531])
+                            ("overallSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4582 4603])
+                            ("shouldCopy" variable (:type "bool") (reparse-symbol arg-sub-list) [4604 4620]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4452 4621])
+                    ("deserializeBody" function
+                       (:typemodifiers ("virtual")
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [4774 4791])
+                            ("bodySize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4792 4808])
+                            ("overallSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4858 4879]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4729 4970])
+                    ("copy" function
+                       (:prototype-flag t
+                        :pointer 1
+                        :typemodifiers ("virtual")
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5176 5206])
+                    ("headerBegin" function
+                       (:prototype-flag t
+                        :type ("HeaderCIterator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5355 5391])
+                    ("headerEnd" function
+                       (:prototype-flag t
+                        :type ("HeaderCIterator" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5527 5561])
+                    ("numHeaders" function
+                       (:prototype-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5617 5643])
+                    ("getOperation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5773 5820])
+                    ("setOperation" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("operation" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [5970 6000]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [5944 6001])
+                    ("getPerRequestLog" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6115 6160])
+                    ("setPerRequestLog" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("logstr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6305 6331]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6275 6332])
+                    ("getTestHook" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6436 6476])
+                    ("setTestHook" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("hookstr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6606 6633]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6581 6634])
+                    ("getBrokerTestHook" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [6752 6798])
+                    ("setBrokerTestHook" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("hookstr" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [6941 6968]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [6910 6969])
+                    ("getErrorStack" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [7085 7127])
+                    ("setErrorStack" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("estack" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [7272 7298]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7245 7299])
+                    ("hasResponseCode" function
+                       (:prototype-flag t
+                        :type "bool")
+                        (reparse-symbol classsubparts) [7453 7482])
+                    ("setResponseCode" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("code" variable (:type ("CrCode::ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7684 7710]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [7663 7711])
+                    ("getResponseCode" function
+                       (:prototype-flag t
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8029 8074])
+                    ("setPrefix" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("prefix" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [8339 8365]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8308 8366])
+                    ("getPrefix" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8506 8543])
+                    ("getBodySize" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8644 8679])
+                    ("attachBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [9245 9255])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9255 9267])
+                            ("shouldOwn" variable (:type "bool") (reparse-symbol arg-sub-list) [9267 9282]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [9221 9283])
+                    ("writeBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [9592 9608])
+                            ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9609 9621]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [9553 9622])
+                    ("readBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("buf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [10110 10120])
+                            ("bufSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10120 10135])
+                            ("bodySize" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10135 10152]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10072 10159])
+                    ("readBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("dest" variable
+                               (:reference 1
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [10367 10385]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [10329 10392])
+                    ("getBody" function
+                       (:pointer 1
+                        :typemodifiers ("virtual")
+                        :type "char")
+                        (reparse-symbol classsubparts) [10592 10667])
+                    ("clear" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [10732 10753])
+                    ("clearBody" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [10807 10832])
+                    ("clearHeaders" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [10884 10912])
+                    ("getEnvHdrLen" function (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [11002 11058])
+                    ("deserializeLogMsg" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("data" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [11103 11120])
+                            ("datalen" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11121 11138]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11064 11139])
+                    ("protected" label nil (reparse-symbol classsubparts) [11141 11152])
+                    ("Message" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("serializer" variable
+                               (:pointer 1
+                                :type ("MessageSerializer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [11165 11195]))                          
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11157 11196])
+                    ("HEADER_OPERATION" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11206 11248])
+                    ("HEADER_RESPONSE_CODE" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11253 11299])
+                    ("HEADER_PER_REQUEST_LOG" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11304 11352])
+                    ("HEADER_TEST_HOOK" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11357 11399])
+                    ("HEADER_BROKER_TEST_HOOK" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11404 11453])
+                    ("HEADER_ERR_STACK" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11458 11500])
+                    ("CURRENT_ENCODING_VER" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("uint8_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [11602 11648])
+                    ("getHdrNames" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("hdrNames" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [11949 11988]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [11925 11989])
+                    ("getHdrDescriptor" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("desc" variable
+                               (:reference 1
+                                :type ("HeaderDescriptor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12256 12280]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12227 12281])
+                    ("Message" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("msg" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12304 12323]))                          
+                        :type ("explicit" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12287 12324])
+                    ("getHeader" function
+                       (:prototype-flag t
+                        :constant-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12615 12639]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [12586 12646])
+                    ("getHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [12843 12867])
+                            ("values" variable
+                               (:reference 1
+                                :type ("std::list" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [12868 12899]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [12828 12906])
+                    ("getHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13101 13125])
+                            ("values" variable
+                               (:reference 1
+                                :type ("std::vector" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13126 13159]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13086 13166])
+                    ("getHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13362 13385])
+                            ("values" variable
+                               (:reference 1
+                                :type ("std::set" type
+                                     (:template-specifier 
+                                        ( ("std::string" type nil nil nil))                                        
+                                      :type "class")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [13385 13415]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13347 13423])
+                    ("setHeader" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("name" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13588 13612])
+                            ("value" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13613 13638]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13573 13640])
+                    ("removeHeader" function
+                       (:prototype-flag t
+                        :typemodifiers ("virtual")
+                        :arguments 
+                          ( ("key" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [13813 13836]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [13787 13837])
+                    ("private" label nil (reparse-symbol classsubparts) [13839 13847])
+                    ("data_" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [13852 13864])
+                    ("dataSize_" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [13923 13940])
+                    ("isOwner_" variable (:type "bool") (reparse-symbol classsubparts) [13982 13996])
+                    ("prefix_" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol classsubparts) [14064 14084])
+                    ("headers_" variable (:type ("std::multimap" type
+                         (:template-specifier 
+                            ( ("std::string" type nil nil nil)
+                              ("std::string" type nil nil nil))                            
+                          :type "class")
+                          nil nil)) (reparse-symbol classsubparts) [14353 14401])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("Message" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14495 14505]))                          
+                        :type ("Message" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14476 14506])
+                    ("writeSerialForm" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("destBuf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [14549 14563])
+                            ("totalSize" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14614 14633])
+                            ("numHeaders" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14684 14704]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14512 14711])
+                    ("deserializeHeaders" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buf" variable
+                               (:reference 1
+                                :type ("UtilityBuffer" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [14757 14777])
+                            ("numHeaders" variable (:type ("uint32_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14778 14798]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14717 14799])
+                    ("envHdrLen_" variable
+                       (:typemodifiers ("mutable")
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [14805 14831]))                  
+                :type "class")
+                nil [648 14910]))          
+    :file "Message.h"
+    :pointmax 15126
+    :fsize 15125
+    :lastmodtime '(20550 20334)
+    :unmatched-syntax '((punctuation 3899 . 3900) (punctuation 2870 . 2871) (punctuation 1420 . 1421) (punctuation 1062 . 1063) (punctuation 955 . 956))
+    :lexical-table 
+        '(("__MESSAGE_H__")
+          )
+
+    )
+   (semanticdb-table "CompressionUtils.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__COMPRESSION_H__" variable (:constant-flag t) nil [94 111])
+            ("boost/iostreams/filter/gzip.hpp" include (:system-flag t) nil [113 155])
+            ("boost/iostreams/filtering_stream.hpp" include (:system-flag t) nil [156 203])
+            ("boost/iostreams/copy.hpp" include (:system-flag t) nil [204 239])
+            ("dht/CharArraySink.h" include (:system-flag t) nil [240 270])
+            ("dht/CrCode.h" include (:system-flag t) nil [271 294])
+            ("boost/scoped_array.hpp" include (:system-flag t) nil [295 328])
+            ("MAX_DATA_SIZE" variable
+               (:typemodifiers ("static")
+                :constant-flag t
+                :default-value "((1024 * 1024) + 4096)"
+                :type ("uint64_t" type (:type "class") nil nil))
+                nil [439 500])
+            ("CharBufferAutoPtr" type
+               (:typedef ("boost::scoped_array" type
+                     (:template-specifier 
+                        ( ("char" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "boost::scoped_array"
+                :type "typedef")
+                nil [747 799])
+            ("CompressionUtils" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [826 833])
+                    ("TestBrokerMessage" friend nil (reparse-symbol classsubparts) [838 868])
+                    ("TestCompressionUtils" friend nil (reparse-symbol classsubparts) [874 907])
+                    ("CompressionUtils" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :type ("CompressionUtils" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [953 972])
+                    ("CompressionUtils" function
+                       (:prototype-flag t
+                        :destructor-flag t
+                        :typemodifiers ("virtual")
+                        :type "void")
+                        (reparse-symbol classsubparts) [1012 1040])
+                    ("compress" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1107 1121])
+                            ("preCompressSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1122 1145]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1077 1146])
+                    ("decompress" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("buffer" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1218 1232])
+                            ("preDecompressSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1233 1258]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1186 1259])
+                    ("compressUtilsWrapper" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("input" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("std::string" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1405 1431])
+                            ("outputBuffer" variable
+                               (:reference 1
+                                :type ("CharBufferAutoPtr" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1479 1512])
+                            ("outputLength" variable
+                               (:reference 1
+                                :type ("size_t" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1525 1547])
+                            ("compressFlag" variable (:type "bool") (reparse-symbol arg-sub-list) [1560 1578]))                          
+                        :type ("CrCode::ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1363 1579])
+                    ("getWriteIndex" function
+                       (:prototype-flag t
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1643 1667])
+                    ("readIntoBuffer" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("outBuf" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [1734 1747])
+                            ("outBufSize" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1748 1766]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [1714 1767])
+                    ("private" label nil (reparse-symbol classsubparts) [1772 1780])
+                    ("charArraySink_" variable
+                       (:pointer 1
+                        :type ("CharArraySink" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1790 1820])
+                    ("getCharArraySink" function
+                       (:prototype-flag t
+                        :type ("CharArraySink" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1931 1966])
+                    ("CompressionUtils" function
+                       (:prototype-flag t
+                        :constructor-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("CompressionUtils" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [1989 2007]))                          
+                        :type ("CompressionUtils" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1972 2008])
+                    ("=" function
+                       (:prototype-flag t
+                        :operator-flag t
+                        :arguments 
+                          ( ("" variable
+                               (:reference 1
+                                :type ("CompressionUtils" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2040 2058]))                          
+                        :type ("CompressionUtils" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2013 2059]))                  
+                :type "class")
+                nil [801 2062]))          
+    :file "CompressionUtils.h"
+    :pointmax 2071
+    :fsize 2070
+    :lastmodtime '(20550 20334)
+    :unmatched-syntax '((punctuation 907 . 908) (punctuation 868 . 869))
+    :lexical-table 
+        '(("__COMPRESSION_H__")
+          )
+
+    )
+   (semanticdb-table "CrCode.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__CR_CODE__H" variable (:constant-flag t) nil [89 101])
+            ("string" include (:system-flag t) nil [103 120])
+            ("CrCode" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [182 189])
+                    ("ResponseCode" type
+                       (:typedef ("int")
+                        :superclasses "int"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [195 220])
+                    ("unknownCodeStr" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [226 266])
+                    ("CrOk" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "0"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [694 729])
+                    ("CrBase" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "5000"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [756 796])
+                    ("toString" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("rc" variable (:type ("ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3075 3091]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3047 3092]))                  
+                :type "class")
+                nil [166 3096]))          
+    :file "CrCode.h"
+    :pointmax 3273
+    :fsize 3272
+    :lastmodtime '(20550 20334)
+    :unmatched-syntax '((punctuation 2854 . 2855) (number 2851 . 2854) (punctuation 2849 . 2850) (symbol 2842 . 2848) (punctuation 2840 . 2841) (symbol 2830 . 2839) (symbol 2817 . 2829) (CONST 2811 . 2816) (STATIC 2804 . 2810) (punctuation 2798 . 2799) (number 2795 . 2798) (punctuation 2793 . 2794) (symbol 2786 . 2792) (punctuation 2784 . 2785) (symbol 2770 . 2783) (symbol 2757 . 2769) (CONST 2751 . 2756) (STATIC 2744 . 2750) (punctuation 2738 . 2739) (number 2735 . 2738) (punctuation 2733 . 2734) (symbol 2726 . 2732) (punctuation 2724 . 2725) (symbol 2716 . 2723) (symbol 2703 . 2715) (CONST 2697 . 2702) (STATIC 2690 . 2696) (punctuation 2684 . 2685) (number 2681 . 2684) (punctuation 2679 . 2680) (symbol 2672 . 2678) (punctuation 2670 . 2671) (symbol 2661 . 2669) (symbol 2648 . 2660) (CONST 2642 . 2647) (STATIC 2635 . 2641) (punctuation 2629 . 2630) (number 2626 . 2629) (punctuation 2624 . 2625) (symbol 2617 . 2623) (punctuation 2615 . 2616) (symbol 2596 . 2614) (symbol 2583 . 2595) (CONST 2577 . 2582) (STATIC 2570 . 2576) (punctuation 2564 . 2565) (number 2561 . 2564) (punctuation 2559 . 2560) (symbol 2552 . 2558) (punctuation 2550 . 2551) (symbol 2535 . 2549) (symbol 2522 . 2534) (CONST 2516 . 2521) (STATIC 2509 . 2515) (punctuation 2503 . 2504) (number 2500 . 2503) (punctuation 2498 . 2499) (symbol 2491 . 2497) (punctuation 2489 . 2490) (symbol 2476 . 2488) (symbol 2463 . 2475) (CONST 2457 . 2462) (STATIC 2450 . 2456) (punctuation 2444 . 2445) (number 2441 . 2444) (punctuation 2439 . 2440) (symbol 2432 . 2438) (punctuation 2430 . 2431) (symbol 2416 . 2429) (symbol 2403 . 2415) (CONST 2397 . 2402) (STATIC 2390 . 2396) (punctuation 2329 . 2330) (number 2326 . 2329) (punctuation 2324 . 2325) (symbol 2317 . 2323) (punctuation 2315 . 2316) (symbol 2295 . 2314) (symbol 2282 . 2294) (CONST 2276 . 2281) (STATIC 2269 . 2275) (punctuation 2263 . 2264) (number 2260 . 2263) (punctuation 2258 . 2259) (symbol 2251 . 2257) (punctuation 2249 . 2250) (symbol 2236 . 2248) (symbol 2223 . 2235) (CONST 2217 . 2222) (STATIC 2210 . 2216) (punctuation 2204 . 2205) (number 2201 . 2204) (punctuation 2199 . 2200) (symbol 2192 . 2198) (punctuation 2190 . 2191) (symbol 2176 . 2189) (symbol 2163 . 2175) (CONST 2157 . 2162) (STATIC 2150 . 2156) (punctuation 2144 . 2145) (number 2141 . 2144) (punctuation 2139 . 2140) (symbol 2132 . 2138) (punctuation 2130 . 2131) (symbol 2115 . 2129) (symbol 2102 . 2114) (CONST 2096 . 2101) (STATIC 2089 . 2095) (punctuation 2083 . 2084) (number 2080 . 2083) (punctuation 2078 . 2079) (symbol 2071 . 2077) (punctuation 2069 . 2070) (symbol 2053 . 2068) (symbol 2040 . 2052) (CONST 2034 . 2039) (STATIC 2027 . 2033) (punctuation 2021 . 2022) (number 2018 . 2021) (punctuation 2016 . 2017) (symbol 2009 . 2015) (punctuation 2007 . 2008) (symbol 1990 . 2006) (symbol 1977 . 1989) (CONST 1971 . 1976) (STATIC 1964 . 1970) (punctuation 1958 . 1959) (number 1955 . 1958) (punctuation 1953 . 1954) (symbol 1946 . 1952) (punctuation 1944 . 1945) (symbol 1930 . 1943) (symbol 1917 . 1929) (CONST 1911 . 1916) (STATIC 1904 . 1910) (punctuation 1849 . 1850) (number 1846 . 1849) (punctuation 1844 . 1845) (symbol 1837 . 1843) (punctuation 1835 . 1836) (symbol 1811 . 1834) (symbol 1798 . 1810) (CONST 1792 . 1797) (STATIC 1785 . 1791) (punctuation 1653 . 1654) (number 1651 . 1653) (punctuation 1649 . 1650) (symbol 1642 . 1648) (punctuation 1640 . 1641) (symbol 1623 . 1639) (symbol 1610 . 1622) (CONST 1604 . 1609) (STATIC 1597 . 1603) (punctuation 1554 . 1555) (number 1552 . 1554) (punctuation 1550 . 1551) (symbol 1543 . 1549) (punctuation 1541 . 1542) (symbol 1521 . 1540) (symbol 1508 . 1520) (CONST 1502 . 1507) (STATIC 1495 . 1501) (punctuation 1456 . 1457) (number 1454 . 1456) (punctuation 1452 . 1453) (symbol 1445 . 1451) (punctuation 1443 . 1444) (symbol 1425 . 1442) (symbol 1412 . 1424) (CONST 1406 . 1411) (STATIC 1399 . 1405) (punctuation 1340 . 1341) (number 1339 . 1340) (punctuation 1337 . 1338) (symbol 1330 . 1336) (punctuation 1328 . 1329) (symbol 1313 . 1327) (symbol 1300 . 1312) (CONST 1294 . 1299) (STATIC 1287 . 1293) (punctuation 1281 . 1282) (number 1280 . 1281) (punctuation 1278 . 1279) (symbol 1271 . 1277) (punctuation 1269 . 1270) (symbol 1258 . 1268) (symbol 1245 . 1257) (CONST 1239 . 1244) (STATIC 1232 . 1238) (punctuation 1192 . 1193) (number 1191 . 1192) (punctuation 1189 . 1190) (symbol 1182 . 1188) (punctuation 1180 . 1181) (symbol 1167 . 1179) (symbol 1154 . 1166) (CONST 1148 . 1153) (STATIC 1141 . 1147) (punctuation 1092 . 1093) (number 1091 . 1092) (punctuation 1089 . 1090) (symbol 1082 . 1088) (punctuation 1080 . 1081) (symbol 1068 . 1079) (symbol 1055 . 1067) (CONST 1049 . 1054) (STATIC 1042 . 1048) (punctuation 1008 . 1009) (number 1007 . 1008) (punctuation 1005 . 1006) (symbol 998 . 1004) (punctuation 996 . 997) (symbol 984 . 995) (symbol 971 . 983) (CONST 965 . 970) (STATIC 958 . 964) (punctuation 929 . 930) (number 928 . 929) (punctuation 926 . 927) (symbol 919 . 925) (punctuation 917 . 918) (symbol 904 . 916) (symbol 891 . 903) (CONST 885 . 890) (STATIC 878 . 884) (punctuation 847 . 848) (number 846 . 847) (punctuation 844 . 845) (symbol 837 . 843) (punctuation 835 . 836) (symbol 827 . 834) (symbol 814 . 826) (CONST 808 . 813) (STATIC 801 . 807))
+    :lexical-table 
+        '(("__CR_CODE__H")
+          )
+
+    )
+   (semanticdb-table "WebCode.h"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("__WEB_CODE__H" variable (:constant-flag t) nil [90 103])
+            ("string" include (:system-flag t) nil [105 122])
+            ("WebCode" type
+               (:members 
+                  ( ("public" label nil (reparse-symbol classsubparts) [418 425])
+                    ("ResponseCode" type
+                       (:typedef ("int")
+                        :superclasses "int"
+                        :type "typedef")
+                        (reparse-symbol classsubparts) [430 455])
+                    ("Success" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "200"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [461 501])
+                    ("MovedPermanently" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "301"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [506 555])
+                    ("Redirect" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "302"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [560 601])
+                    ("ForwardToOtherRegion" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "350"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [607 660])
+                    ("BadRequest" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "400"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [666 709])
+                    ("Authorized" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "401"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [714 757])
+                    ("Forbidden" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "403"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [762 804])
+                    ("OperationNotFound" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "404"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [833 883])
+                    ("AuthNeeded" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "407"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [888 931])
+                    ("TableNotFound" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "420"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [936 982])
+                    ("RecordNotFound" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "421"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [987 1034])
+                    ("UnknownJsonKey" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "422"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1039 1086])
+                    ("UnknownField" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "423"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1091 1136])
+                    ("TabletNotFound" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "424"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1141 1188])
+                    ("InvalidData" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "425"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1194 1238])
+                    ("AlreadyExists" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "426"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1354 1400])
+                    ("TestSetFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "427"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1410 1456])
+                    ("TestDeleteFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "428"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1461 1510])
+                    ("TestGetFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "429"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1515 1561])
+                    ("BadState" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "438"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1690 1731])
+                    ("DeleteAliasNotAllowed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "439"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1736 1790])
+                    ("InternalServerError" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "500"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1796 1848])
+                    ("OperationFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "510"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2053 2101])
+                    ("OperationRunning" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "511"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2106 2155])
+                    ("OperationPaused" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "512"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2160 2208])
+                    ("OperationReady" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "513"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2213 2260])
+                    ("StoreFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "530"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2267 2311])
+                    ("RetrieveFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "531"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2316 2363])
+                    ("DeleteFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "532"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2368 2413])
+                    ("DeadLock" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "533"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2418 2459])
+                    ("ServerNotReady" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "536"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2517 2564])
+                    ("StoreUncertain" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "537"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2619 2666])
+                    ("DeleteUncertain" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "538"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2671 2719])
+                    ("RemoteServiceUnavailable" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "540"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2725 2782])
+                    ("SystemBusy" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "541"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2787 2830])
+                    ("DeleteAliasFailed" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "542"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2904 2954])
+                    ("ServiceDown" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "544"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3199 3243])
+                    ("GlobalSuccessLocalFailure" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "545"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3248 3306])
+                    ("TooManyForwards" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "546"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3311 3359])
+                    ("TransientFailure" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "547"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3546 3595])
+                    ("PartialSuccess" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "548"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3844 3891])
+                    ("RetryLater" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "549"
+                        :type ("ResponseCode" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4160 4203])
+                    ("getMessage" function
+                       (:prototype-flag t
+                        :typemodifiers ("static")
+                        :arguments 
+                          ( ("rc" variable (:type ("ResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4309 4325]))                          
+                        :type ("std::string" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [4279 4326]))                  
+                :type "class")
+                nil [402 4330]))          
+    :file "WebCode.h"
+    :pointmax 4340
+    :fsize 4339
+    :lastmodtime '(20550 20334)
+    :unmatched-syntax 'nil
+    :lexical-table 
+        '(("__WEB_CODE__H")
+          )
+
+    )
+   )
+  :file "!mnt!hut.corp.yahoo.com!vol!home3!dbao!svn!sherpa_external!trunk!fwcore!include!dht!semantic.cache"
+  :semantic-tag-version "2.0pre7"
+  :semanticdb-version "2.0pre7"
+  )

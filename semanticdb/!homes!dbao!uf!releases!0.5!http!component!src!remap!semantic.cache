@@ -1,0 +1,29 @@
+;; Object remap/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "remap/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc")) nil [1 85])
+            ("AM_LDFLAGS" variable (:default-value ("-lpcre" "-lcares")) nil [86 114])
+            ("lib_LTLIBRARIES" variable (:default-value ("libufhttpremap.la")) nil [143 199])
+            ("source_files" variable (:default-value ("Tokenizer.C" "URLMapping.C" "URLMappingPathIndex.C" "URLRewrite.C")) nil [199 290])
+            ("libufhttpremap_la_SOURCES" variable (:default-value ("$(source_files)")) nil [290 334])
+            ("libufhttpremap_la_LIBADD" variable (:default-value ("$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la")) nil [334 581])
+            ("libufhttpremap_p_la_SOURCES" variable (:default-value ("$(source_files)")) nil [581 627])
+            ("libufhttpremap_p_la_CFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CFLAGS)")) nil [627 704])
+            ("libufhttpremap_p_la_CXXFLAGS" variable (:default-value ("-pg" "-fprofile-arcs" "-ftest-coverage" "$(AM_CXXFLAGS)")) nil [704 785])
+            ("libufhttpremap_p_la_LDFLAGS" variable (:default-value ("-lgcov" "$(AM_LDFLAGS)")) nil [785 836])
+            ("libufhttpremap_p_la_LIBADD" variable (:default-value ("$(top_builddir)/http/component/src/conf/libufconf_p.la" "$(top_builddir)/http/component/src/parser/libufhttpparser_p.la" "$(top_builddir)/ufcore/src/core/libufcore_p.la" "$(top_builddir)/ufcore/src/util/libufutil_p.la")) nil [836 1093]))          
+    :file "Makefile.am"
+    :pointmax 1093
+    :fsize 1092
+    :lastmodtime '(20625 28886)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!http!component!src!remap!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

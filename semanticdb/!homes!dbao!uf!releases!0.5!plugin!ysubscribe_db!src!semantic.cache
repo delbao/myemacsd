@@ -1,0 +1,24 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables (list 
+   (semanticdb-table "Makefile.am"
+    :major-mode 'makefile-automake-mode
+    :tags 
+        '( ("AM_CPPFLAGS" variable (:default-value ("-I$(top_srcdir)/state_server/inc" "-I$(top_srcdir)/http/state/inc" "-I$(top_srcdir)/http/component/inc" "-I$(top_srcdir)/ufcore/inc" "-I$(top_srcdir)/plugin/common/inc")) nil [1 195])
+            ("pkglibexecdir" variable (:default-value ("$(libexecdir)/$(PACKAGE)")) nil [196 237])
+            ("pkglibexec_LTLIBRARIES" variable (:default-value ("libufysubscribe_db.la")) nil [237 284])
+            ("libufysubscribe_db_la_SOURCES" variable (:default-value ("AclDBPlugin.C" "AclDBPlugin.H" "SherpaDB.C" "SherpaDB.H" "SubscribeDB.C" "SubscribeDB.H" "SubscribeDBPlugin.C" "SubscribeDBPlugin.H")) nil [284 466])
+            ("libufysubscribe_db_la_LDFLAGS" variable (:default-value ("-ljsoncpp" "-lyca" "$(AM_LDFLAGS)")) nil [466 528])
+            ("libufysubscribe_db_la_LIBADD" variable (:default-value ("$(top_builddir)/state_server/src/stateserver/libufstateserver.la" "$(top_builddir)/http/component/src/conf/libufconf.la" "$(top_builddir)/http/component/src/remap/libufhttpremap.la" "$(top_builddir)/http/component/src/parser/libufhttpparser.la" "$(top_builddir)/ufcore/src/core/libufcore.la" "$(top_builddir)/ufcore/src/util/libufutil.la" "$(top_builddir)/plugin/common/src/libufcommon.la")) nil [528 964]))          
+    :file "Makefile.am"
+    :pointmax 964
+    :fsize 963
+    :lastmodtime '(20625 28926)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!homes!dbao!uf!releases!0.5!plugin!ysubscribe_db!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )

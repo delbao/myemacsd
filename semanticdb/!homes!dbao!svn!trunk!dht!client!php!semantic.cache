@@ -1,0 +1,1058 @@
+;; Object php/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "php/"
+  :tables (list 
+   (semanticdb-table "yahoo_dhtapi.cc"
+    :major-mode 'c++-mode
+    :tags 
+        '( ("ext/standard/info.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [403 433])
+            ("SAPI.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [385 402])
+            ("php_ini.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [364 384])
+            ("php.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [347 363])
+            ("C" extern (:members 
+              ( ("php.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [347 363])
+                ("php_ini.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [364 384])
+                ("SAPI.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [385 402])
+                ("ext/standard/info.h" include (:typemodifiers ("extern" "\"C\"")) (reparse-symbol extern-c-contents) [403 433]))              ) nil [285 435])
+            ("string" include (:system-flag t) nil [437 454])
+            ("vector" include (:system-flag t) nil [455 472])
+            ("log4cpp/Category.hh" include (:system-flag t) nil [474 504])
+            ("log4cpp/PropertyConfigurator.hh" include (:system-flag t) nil [505 547])
+            ("dht/ydht.h" include (:system-flag t) nil [549 570])
+            ("stdio.h" include (:system-flag t) nil [571 589])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [591 611])
+            ("SSMAP" type
+               (:typedef ("map" type
+                     (:template-specifier 
+                        ( ("string" type nil nil nil)
+                          ("string" type nil nil nil))                        
+                      :type "class")
+                      nil nil)
+                :superclasses "map"
+                :type "typedef")
+                nil [613 646])
+            ("yahoo_dhtapi.h" include nil nil [687 712])
+            ("le_dhtapi_request" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [775 804])
+            ("le_dhtapi_mrequest" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [808 838])
+            ("le_dhtapi_subreqhandle" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [839 873])
+            ("le_dhtapi_datetime" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [874 904])
+            ("le_dhtapi_RequestParams" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [905 940])
+            ("le_dhtapi_ScanRequest" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [941 974])
+            ("le_dhtapi_MultiRequest" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [975 1009])
+            ("le_dhtapi_MultiRequestParams" variable
+               (:typemodifiers ("static")
+                :type "int")
+                nil [1010 1050])
+            ("lclLogger" variable
+               (:typemodifiers ("static")
+                :type ("log4cpp::Category" type (:type "class") nil nil))
+                nil [1131 1224])
+            ("PHP_DHTAPI_REQUEST_RES_TYPE" variable (:constant-flag t) nil [1304 1331])
+            ("PHP_DHTAPI_REQUEST_PROP_NAME" variable (:constant-flag t) nil [1374 1402])
+            ("PHP_DHTAPI_MREQUEST_RES_TYPE" variable (:constant-flag t) nil [1444 1472])
+            ("PHP_DHTAPI_MREQUEST_PROP_NAME" variable (:constant-flag t) nil [1516 1545])
+            ("PHP_DHTAPI_SUBREQHANDLE_RES_TYPE" variable (:constant-flag t) nil [1588 1620])
+            ("PHP_DHTAPI_SUBREQHANDLE_PROP_NAME" variable (:constant-flag t) nil [1667 1700])
+            ("PHP_DHTAPI_DATETIME_RES_TYPE" variable (:constant-flag t) nil [1746 1774])
+            ("PHP_DHTAPI_DATETIME_PROP_NAME" variable (:constant-flag t) nil [1822 1851])
+            ("PHP_DHTAPI_DEFAULT_ID" variable (:constant-flag t) nil [1898 1919])
+            ("PHP_DHTAPI_REQUEST_PARAMS_RES_TYPE" variable (:constant-flag t) nil [1935 1969])
+            ("PHP_DHTAPI_REQUEST_PARAMS_PROP_NAME" variable (:constant-flag t) nil [2019 2054])
+            ("PHP_DHTAPI_MULTI_REQUEST_PROP_NAME" variable (:constant-flag t) nil [2104 2138])
+            ("PHP_DHTAPI_MULTI_REQUEST_RES_TYPE" variable (:constant-flag t) nil [2186 2219])
+            ("PHP_DHTAPI_MULTI_REQUEST_PARAMS_RES_TYPE" variable (:constant-flag t) nil [2267 2307])
+            ("PHP_DHTAPI_MULTI_REQUEST_PARAMS_PROP_NAME" variable (:constant-flag t) nil [2348 2389])
+            ("PHP_DHTAPI_SCAN_REQUEST_PROP_NAME" variable (:constant-flag t) nil [2431 2464])
+            ("PHP_DHTAPI_SCAN_REQUEST_RES_TYPE" variable (:constant-flag t) nil [2511 2543])
+            ("dht_request_class_entry_ptr" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("zend_class_entry" type (:type "class") nil nil))
+                nil [2657 2710])
+            ("dht_mrequest_class_entry_ptr" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("zend_class_entry" type (:type "class") nil nil))
+                nil [2711 2765])
+            ("dht_subreqhandle_class_entry_ptr" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("zend_class_entry" type (:type "class") nil nil))
+                nil [2766 2824])
+            ("dht_datetime_class_entry_ptr" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("zend_class_entry" type (:type "class") nil nil))
+                nil [2825 2879])
+            ("dht_RequestParams_class_entry_ptr" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("zend_class_entry" type (:type "class") nil nil))
+                nil [2880 2939])
+            ("dht_MultiRequest_class_entry_ptr" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("zend_class_entry" type (:type "class") nil nil))
+                nil [2941 2999])
+            ("dht_MultiRequestParams_class_entry_ptr" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("zend_class_entry" type (:type "class") nil nil))
+                nil [3000 3064])
+            ("dht_ScanRequest_class_entry_ptr" variable
+               (:pointer 1
+                :typemodifiers ("static")
+                :type ("zend_class_entry" type (:type "class") nil nil))
+                nil [3065 3122])
+            ("DHTDateTime" type
+               (:members 
+                  ( ("private" label nil (reparse-symbol classsubparts) [3464 3472])
+                    ("val" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3475 3486])
+                    ("public" label nil (reparse-symbol classsubparts) [3488 3495])
+                    ("DHTDateTime" function
+                       (:constructor-flag t
+                        :type ("DHTDateTime" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3498 3526])
+                    ("DHTDateTime" function
+                       (:constructor-flag t
+                        :arguments 
+                          ( ("val" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3543 3554]))                          
+                        :type ("DHTDateTime" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3531 3571])
+                    ("set" function
+                       (:arguments 
+                          ( ("val" variable (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3585 3596]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3576 3623])
+                    ("get" function (:type ("time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3628 3669]))                  
+                :type "class")
+                nil [3444 3673])
+            ("stashSubreqHandle" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("srh" variable
+                       (:pointer 1
+                        :type ("DHT::SubreqHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3734 3757])
+                    ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3758 3768]))                  
+                :type "void")
+                nil [3704 3769])
+            ("stashDatetime" function
+               (:prototype-flag t
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("dt" variable
+                       (:pointer 1
+                        :type ("DHTDateTime" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3796 3812])
+                    ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3813 3823]))                  
+                :type "void")
+                nil [3770 3824])
+            ("yahoo_dhtapi_functions" variable
+               (:dereference 1
+                :type ("function_entry" type (:type "class") nil nil))
+                nil [3941 4014])
+            ("dht_request_class_functions" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("zend_function_entry" type (:type "class") nil nil))
+                nil [5686 6360])
+            ("dht_mrequest_class_functions" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("zend_function_entry" type (:type "class") nil nil))
+                nil [6406 7050])
+            ("dht_MultiRequest_class_functions" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("zend_function_entry" type (:type "class") nil nil))
+                nil [7100 7711])
+            ("dht_ScanRequest_class_functions" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("zend_function_entry" type (:type "class") nil nil))
+                nil [7760 8183])
+            ("dht_subreqhandle_class_functions" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("zend_function_entry" type (:type "class") nil nil))
+                nil [8234 8763])
+            ("dht_datetime_class_functions" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("zend_function_entry" type (:type "class") nil nil))
+                nil [8809 9009])
+            ("dht_RequestParams_class_functions" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("zend_function_entry" type (:type "class") nil nil))
+                nil [9060 11590])
+            ("dht_MultiRequestParams_class_functions" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :type ("zend_function_entry" type (:type "class") nil nil))
+                nil [11641 13792])
+            ("yahoo_dhtapi_module_entry" variable (:type ("zend_module_entry" type (:type "class") nil nil)) nil [13829 14205])
+            ("C" extern nil nil [14207 14295])
+            ("releaseRequest" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rsrc" variable
+                       (:pointer 1
+                        :type ("zend_rsrc_list_entry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [14527 14563])
+                    ("" variable (:type ("TSRMLS_DC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14554 14564]))                  
+                :type "void")
+                nil [14500 15046])
+            ("releaseMRequest" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rsrc" variable
+                       (:pointer 1
+                        :type ("zend_rsrc_list_entry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15124 15160])
+                    ("" variable (:type ("TSRMLS_DC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15151 15161]))                  
+                :type "void")
+                nil [15096 15650])
+            ("releaseMultiRequest" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rsrc" variable
+                       (:pointer 1
+                        :type ("zend_rsrc_list_entry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15684 15720])
+                    ("" variable (:type ("TSRMLS_DC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15711 15721]))                  
+                :type "void")
+                nil [15652 16163])
+            ("releaseScanRequest" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rsrc" variable
+                       (:pointer 1
+                        :type ("zend_rsrc_list_entry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16196 16232])
+                    ("" variable (:type ("TSRMLS_DC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16223 16233]))                  
+                :type "void")
+                nil [16165 16672])
+            ("releaseSubReqHandle" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rsrc" variable
+                       (:pointer 1
+                        :type ("zend_rsrc_list_entry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16762 16798])
+                    ("" variable (:type ("TSRMLS_DC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16789 16799]))                  
+                :type "void")
+                nil [16730 17295])
+            ("releaseDatetime" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rsrc" variable
+                       (:pointer 1
+                        :type ("zend_rsrc_list_entry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17375 17411])
+                    ("" variable (:type ("TSRMLS_DC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17402 17412]))                  
+                :type "void")
+                nil [17347 17874])
+            ("releaseRequestParams" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rsrc" variable
+                       (:pointer 1
+                        :type ("zend_rsrc_list_entry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17909 17946])
+                    ("" variable (:type ("TSRMLS_DC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17937 17947]))                  
+                :type "void")
+                nil [17876 18361])
+            ("releaseMultiRequestParams" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("rsrc" variable
+                       (:pointer 1
+                        :type ("zend_rsrc_list_entry" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [18401 18437])
+                    ("" variable (:type ("TSRMLS_DC" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18428 18438]))                  
+                :type "void")
+                nil [18363 18888])
+            ("getFieldList" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [19266 19278])
+                    ("flds" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [19279 19310]))                  
+                :type "bool")
+                nil [19241 20011])
+            ("convertPHPDataToDHT" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("value" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20185 20197])
+                    ("data" variable
+                       (:reference 1
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [20198 20214]))                  
+                :type "bool")
+                nil [20153 26751])
+            ("convertStrVecToArray" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("arr" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [26786 26796])
+                    ("fields" variable
+                       (:reference 1
+                        :type ("std::vector" type
+                             (:template-specifier 
+                                ( ("std::string" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [26797 26830]))                  
+                :type "void")
+                nil [26753 27030])
+            ("convertSSMapToAssocArray" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ssMap" variable
+                       (:reference 1
+                        :type ("SSMAP" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27069 27082])
+                    ("array" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27092 27104]))                  
+                :type "void")
+                nil [27032 27403])
+            ("convertDHTDataToPHP" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("data" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("DHT::Data" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27561 27583])
+                    ("ret" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [27584 27594]))                  
+                :type "void")
+                nil [27529 29381])
+            ("PHP_MINIT_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("yahoo_dhtapi" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [29736 29749]))                  
+                :type "int")
+                nil [29717 50908])
+            ("PHP_MSHUTDOWN_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("yahoo_dhtapi" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [50933 50946]))                  
+                :type "int")
+                nil [50910 51095])
+            ("PHP_MINFO_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("yahoo_dhtapi" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51160 51173]))                  
+                :type "int")
+                nil [51141 51398])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_request" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [51599 51611]))                  
+                :type "int")
+                nil [51586 52330])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_mrequest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [52345 52358]))                  
+                :type "int")
+                nil [52332 53094])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53109 53126]))                  
+                :type "int")
+                nil [53096 53906])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_ScanRequest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [53921 53937]))                  
+                :type "int")
+                nil [53908 54710])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_subreq_handle" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54725 54743]))                  
+                :type "int")
+                nil [54712 54947])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_datetime" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [54962 54975]))                  
+                :type "int")
+                nil [54949 55162])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55177 55195]))                  
+                :type "int")
+                nil [55164 55929])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [55944 55967]))                  
+                :type "int")
+                nil [55931 56728])
+            ("getReq" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [56970 56980]))                  
+                :type ("DHT::Request" type (:type "class") nil nil))
+                nil [56942 57859])
+            ("getMReq" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [57930 57940]))                  
+                :type ("DHT::MRequest" type (:type "class") nil nil))
+                nil [57900 58792])
+            ("getMultiRequest" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [58836 58846]))                  
+                :type ("DHT::MultiRequest" type (:type "class") nil nil))
+                nil [58794 59725])
+            ("getScanRequest" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [59767 59777]))                  
+                :type ("DHT::ScanRequest" type (:type "class") nil nil))
+                nil [59727 60650])
+            ("stashSubreqHandle" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("srh" variable
+                       (:pointer 1
+                        :type ("DHT::SubreqHandle" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60759 60782])
+                    ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [60783 60793]))                  
+                :type "void")
+                nil [60729 61243])
+            ("getSubreqHandle" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [61328 61338]))                  
+                :type ("DHT::SubreqHandle" type (:type "class") nil nil))
+                nil [61287 62235])
+            ("stashDatetime" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("dt" variable
+                       (:pointer 1
+                        :type ("DHTDateTime" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62309 62325])
+                    ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62326 62336]))                  
+                :type "void")
+                nil [62283 62742])
+            ("getDateTime" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [62830 62840]))                  
+                :type ("DHTDateTime" type (:type "class") nil nil))
+                nil [62798 63662])
+            ("getRequestParams" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [63708 63718]))                  
+                :type ("DHT::RequestParams" type (:type "class") nil nil))
+                nil [63664 64594])
+            ("getMultiRequestParams" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("obj" variable
+                       (:pointer 1
+                        :type ("zval" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [64650 64660]))                  
+                :type ("DHT::MultiRequestParams" type (:type "class") nil nil))
+                nil [64596 65650])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_request_get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [65897 65913]))                  
+                :type "int")
+                nil [65884 67910])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_request_get_p" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [67925 67943]))                  
+                :type "int")
+                nil [67912 69830])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_request_set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [69899 69915]))                  
+                :type "int")
+                nil [69886 72017])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_request_set_p" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [72032 72050]))                  
+                :type "int")
+                nil [72019 74354])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_request_remove" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [74369 74388]))                  
+                :type "int")
+                nil [74356 77040])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_request_setprop" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [77055 77075]))                  
+                :type "int")
+                nil [77042 78235])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_request_setconfig" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [78250 78272]))                  
+                :type "int")
+                nil [78237 78872])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_request_getResponseHeaders" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [78887 78918]))                  
+                :type "int")
+                nil [78874 79126])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_mrequest_setconfig" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [79141 79164]))                  
+                :type "int")
+                nil [79128 79765])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_mrequest_add_get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [80006 80027]))                  
+                :type "int")
+                nil [79993 82528])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_mrequest_add_set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [82603 82624]))                  
+                :type "int")
+                nil [82590 85315])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_mrequest_add_remove" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [85381 85405]))                  
+                :type "int")
+                nil [85368 88122])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_mrequest_send" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [88178 88196]))                  
+                :type "int")
+                nil [88165 89268])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_mrequest_receive" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [89363 89384]))                  
+                :type "int")
+                nil [89350 91404])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_mrequest_setprop" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [91419 91440]))                  
+                :type "int")
+                nil [91406 92610])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_subreq_get_table" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [92839 92860]))                  
+                :type "int")
+                nil [92826 93132])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_subreq_get_record" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93190 93212]))                  
+                :type "int")
+                nil [93177 93485])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_subreq_get_operation_type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [93640 93670]))                  
+                :type "int")
+                nil [93627 93868])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequest_get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [94052 94073]))                  
+                :type "int")
+                nil [94039 95188])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequest_receive" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [95203 95228]))                  
+                :type "int")
+                nil [95190 96665])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequest_getNotFound" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [96680 96709]))                  
+                :type "int")
+                nil [96667 96841])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequest_getNotTried" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [96856 96885]))                  
+                :type "int")
+                nil [96843 97016])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequest_getErrored" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97031 97059]))                  
+                :type "int")
+                nil [97018 97188])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequest_getResponseCode" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97203 97236]))                  
+                :type "int")
+                nil [97190 97493])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequest_getResponseHeaders" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97508 97544]))                  
+                :type "int")
+                nil [97495 97781])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequest_setProp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [97796 97821]))                  
+                :type "int")
+                nil [97783 98334])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_ScanRequest_setup" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [98518 98540]))                  
+                :type "int")
+                nil [98505 99588])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_ScanRequest_receive" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [99603 99627]))                  
+                :type "int")
+                nil [99590 101056])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_ScanRequest_setProp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [101071 101095]))                  
+                :type "int")
+                nil [101058 101634])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_ScanRequest_setContinuation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [101649 101681]))                  
+                :type "int")
+                nil [101636 102360])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_ScanRequest_getContinuation" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [102375 102407]))                  
+                :type "int")
+                nil [102362 102715])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [102900 102928]))                  
+                :type "int")
+                nil [102887 103058])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_appendField" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [103073 103103]))                  
+                :type "int")
+                nil [103060 103231])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [103246 103274]))                  
+                :type "int")
+                nil [103233 103397])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [103412 103442]))                  
+                :type "int")
+                nil [103399 103571])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setREFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [103599 103629]))                  
+                :type "int")
+                nil [103586 103761])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_appendREField" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [103776 103808]))                  
+                :type "int")
+                nil [103763 103938])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getREFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [103953 103983]))                  
+                :type "int")
+                nil [103940 104108])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearREFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104123 104155]))                  
+                :type "int")
+                nil [104110 104286])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setSeqId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104310 104337]))                  
+                :type "int")
+                nil [104297 104462])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getSeqId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104477 104504]))                  
+                :type "int")
+                nil [104464 104629])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearSeqId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104644 104673]))                  
+                :type "int")
+                nil [104631 104801])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setNotificationPayload" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [104840 104881]))                  
+                :type "int")
+                nil [104827 105020])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getNotificationPayload" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [105035 105076]))                  
+                :type "int")
+                nil [105022 105215])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearNotificationPayload" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [105230 105273]))                  
+                :type "int")
+                nil [105217 105415])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setPredicate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [105431 105462]))                  
+                :type "int")
+                nil [105418 105591])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getPredicate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [105605 105636]))                  
+                :type "int")
+                nil [105592 105765])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearPredicate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [105779 105812]))                  
+                :type "int")
+                nil [105766 105944])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setTableName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [105960 105991]))                  
+                :type "int")
+                nil [105947 106120])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getTableName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [106135 106166]))                  
+                :type "int")
+                nil [106122 106295])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearTableName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [106310 106343]))                  
+                :type "int")
+                nil [106297 106475])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setRecord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [106490 106518]))                  
+                :type "int")
+                nil [106477 106644])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getRecord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [106659 106687]))                  
+                :type "int")
+                nil [106646 106813])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearRecord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [106828 106858]))                  
+                :type "int")
+                nil [106815 106987])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setStartHashKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [107002 107036]))                  
+                :type "int")
+                nil [106989 107478])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getStartHashKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [107493 107527]))                  
+                :type "int")
+                nil [107480 107667])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearStartHashKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [107682 107718]))                  
+                :type "int")
+                nil [107669 107853])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setEndHashKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [107868 107900]))                  
+                :type "int")
+                nil [107855 108340])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getEndHashKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [108355 108387]))                  
+                :type "int")
+                nil [108342 108525])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearEndHashKey" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [108540 108574]))                  
+                :type "int")
+                nil [108527 108707])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setByteLimit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [108723 108754]))                  
+                :type "int")
+                nil [108710 109193])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getByteLimit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [109208 109239]))                  
+                :type "int")
+                nil [109195 109376])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearByteLimit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [109391 109424]))                  
+                :type "int")
+                nil [109378 109556])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_setRecordLimit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [109571 109604]))                  
+                :type "int")
+                nil [109558 110045])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_getRecordLimit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [110060 110093]))                  
+                :type "int")
+                nil [110047 110232])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearRecordLimit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [110247 110282]))                  
+                :type "int")
+                nil [110234 110416])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_RequestParams_clearAll" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [110431 110458]))                  
+                :type "int")
+                nil [110418 110584])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_setFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [110616 110649]))                  
+                :type "int")
+                nil [110603 110793])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_appendField" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [110808 110843]))                  
+                :type "int")
+                nil [110795 110985])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_getFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [111000 111033]))                  
+                :type "int")
+                nil [110987 111170])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_clearFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [111185 111220]))                  
+                :type "int")
+                nil [111172 111363])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_setREFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [111391 111426]))                  
+                :type "int")
+                nil [111378 111572])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_appendREField" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [111587 111624]))                  
+                :type "int")
+                nil [111574 111768])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_getREFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [111783 111818]))                  
+                :type "int")
+                nil [111770 111957])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_clearREFields" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [111972 112009]))                  
+                :type "int")
+                nil [111959 112154])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_setSeqId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [112178 112210]))                  
+                :type "int")
+                nil [112165 112349])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_getSeqId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [112364 112396]))                  
+                :type "int")
+                nil [112351 112535])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_clearSeqId" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [112550 112584]))                  
+                :type "int")
+                nil [112537 112726])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_setNotificationPayload" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [112765 112811]))                  
+                :type "int")
+                nil [112752 112964])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_getNotificationPayload" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [112979 113025]))                  
+                :type "int")
+                nil [112966 113178])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_clearNotificationPayload" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [113193 113241]))                  
+                :type "int")
+                nil [113180 113397])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_setPredicate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [113412 113448]))                  
+                :type "int")
+                nil [113399 113591])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_getPredicate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [113606 113642]))                  
+                :type "int")
+                nil [113593 113785])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_clearPredicate" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [113800 113838]))                  
+                :type "int")
+                nil [113787 113984])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_setTableName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [113999 114035]))                  
+                :type "int")
+                nil [113986 114178])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_getTableName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [114193 114229]))                  
+                :type "int")
+                nil [114180 114372])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_clearTableName" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [114387 114425]))                  
+                :type "int")
+                nil [114374 114571])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_setRecords" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [114586 114620]))                  
+                :type "int")
+                nil [114573 114765])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_appendRecord" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [114780 114816]))                  
+                :type "int")
+                nil [114767 114959])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_getRecords" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [114974 115008]))                  
+                :type "int")
+                nil [114961 115147])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_clearRecords" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [115162 115198]))                  
+                :type "int")
+                nil [115149 115342])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_setRecordLimit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [115357 115395]))                  
+                :type "int")
+                nil [115344 115850])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_getRecordLimit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [115865 115903]))                  
+                :type "int")
+                nil [115852 116056])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_clearRecordLimit" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [116071 116111]))                  
+                :type "int")
+                nil [116058 116259])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_MultiRequestParams_clearAll" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [116274 116306]))                  
+                :type "int")
+                nil [116261 116446])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_datetime_set" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [116631 116648]))                  
+                :type "int")
+                nil [116618 117184])
+            ("PHP_FUNCTION" function
+               (:arguments 
+                  ( ("" variable (:type ("dht_datetime_get" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [117199 117216]))                  
+                :type "int")
+                nil [117186 117739]))          
+    :file "yahoo_dhtapi.cc"
+    :pointmax 117876
+    :fsize 117875
+    :lastmodtime '(20449 26870)
+    :unmatched-syntax '((semantic-list 29502 . 29504) (symbol 29491 . 29502) (semantic-list 29437 . 29488) (symbol 29424 . 29437) (string 29466 . 29468) (string 29438 . 29464) (semantic-list 29419 . 29421) (symbol 29406 . 29419) (semantic-list 5638 . 5640) (symbol 5621 . 5638) (semantic-list 5609 . 5620) (symbol 5596 . 5609) (number 5610 . 5611) (semantic-list 5584 . 5593) (symbol 5571 . 5584) (number 5585 . 5586) (semantic-list 5550 . 5568) (symbol 5537 . 5550) (number 5551 . 5552) (semantic-list 5516 . 5534) (symbol 5497 . 5516) (number 5532 . 5533) (semantic-list 5461 . 5463) (symbol 5444 . 5461) (semantic-list 5432 . 5443) (symbol 5419 . 5432) (number 5433 . 5434) (semantic-list 5407 . 5416) (symbol 5394 . 5407) (number 5408 . 5409) (semantic-list 5380 . 5391) (symbol 5367 . 5380) (number 5381 . 5382) (semantic-list 5354 . 5364) (symbol 5341 . 5354) (number 5355 . 5356) (semantic-list 5322 . 5338) (symbol 5303 . 5322) (number 5336 . 5337) (semantic-list 5270 . 5272) (symbol 5253 . 5270) (semantic-list 5238 . 5252) (symbol 5225 . 5238) (number 5239 . 5240) (semantic-list 5210 . 5222) (symbol 5197 . 5210) (number 5211 . 5212) (semantic-list 5184 . 5194) (symbol 5171 . 5184) (number 5185 . 5186) (semantic-list 5154 . 5168) (symbol 5141 . 5154) (number 5155 . 5156) (semantic-list 5115 . 5138) (symbol 5096 . 5115) (number 5136 . 5137) (semantic-list 5030 . 5032) (symbol 5013 . 5030) (semantic-list 5001 . 5012) (symbol 4988 . 5001) (number 5002 . 5003) (semantic-list 4973 . 4985) (symbol 4960 . 4973) (number 4974 . 4975) (semantic-list 4947 . 4957) (symbol 4934 . 4947) (number 4948 . 4949) (semantic-list 4917 . 4931) (symbol 4904 . 4917) (number 4918 . 4919) (semantic-list 4877 . 4901) (symbol 4858 . 4877) (number 4899 . 4900) (semantic-list 4790 . 4792) (symbol 4773 . 4790) (semantic-list 4760 . 4772) (symbol 4747 . 4760) (number 4761 . 4762) (semantic-list 4731 . 4744) (symbol 4718 . 4731) (number 4732 . 4733) (semantic-list 4704 . 4715) (symbol 4691 . 4704) (number 4705 . 4706) (semantic-list 4671 . 4688) (symbol 4658 . 4671) (number 4672 . 4673) (semantic-list 4637 . 4655) (symbol 4618 . 4637) (number 4653 . 4654) (semantic-list 4552 . 4554) (symbol 4535 . 4552) (semantic-list 4524 . 4534) (symbol 4511 . 4524) (number 4525 . 4526) (semantic-list 4491 . 4508) (symbol 4478 . 4491) (number 4492 . 4493) (semantic-list 4457 . 4475) (symbol 4438 . 4457) (number 4473 . 4474) (semantic-list 4433 . 4435) (symbol 4416 . 4433) (semantic-list 4404 . 4415) (symbol 4391 . 4404) (number 4405 . 4406) (semantic-list 4377 . 4388) (symbol 4364 . 4377) (number 4378 . 4379) (semantic-list 4350 . 4361) (symbol 4337 . 4350) (number 4351 . 4352) (semantic-list 4324 . 4334) (symbol 4311 . 4324) (number 4325 . 4326) (semantic-list 4292 . 4308) (symbol 4273 . 4292) (number 4306 . 4307) (punctuation 3669 . 3670) (punctuation 3623 . 3624) (punctuation 3571 . 3572) (punctuation 3526 . 3527))
+    :lexical-table 
+        '(("PHP_DHTAPI_MREQUEST_RES_TYPE" . ((string "\"PHP_YDHTAPI_MREQ_RESOURCE_TYPE\"" 1475 . 1507)))
+          ("PHP_DHTAPI_MULTI_REQUEST_PARAMS_RES_TYPE" . ((string "\"PHP_YDHTAPI_NRP_RESOURCE_TYPE\"" 2308 . 2339)))
+          ("PHP_DHTAPI_REQUEST_RES_TYPE" . ((string "\"PHP_YDHTAPI_REQ_RESOURCE_TYPE\"" 1334 . 1365)))
+          ("PHP_DHTAPI_REQUEST_PARAMS_RES_TYPE" . ((string "\"PHP_YDHTAPI_REQ_PARAMS_RESOURCE_TYPE\"" 1972 . 2010)))
+          ("PHP_DHTAPI_REQUEST_PROP_NAME" . ((string "\"PHP_YDHTAPI_REQ_PROPERTY_NAME\"" 1404 . 1435)))
+          ("PHP_DHTAPI_DATETIME_PROP_NAME" . ((string "\"PHP_YDHTAPI_DATETIME_PROPERTY_NAME\"" 1853 . 1889)))
+          ("PHP_DHTAPI_MREQUEST_PROP_NAME" . ((string "\"PHP_YDHTAPI_MREQ_PROPERTY_NAME\"" 1547 . 1579)))
+          ("PHP_DHTAPI_DEFAULT_ID" . ((punctuation "-" 1923 . 1924) (number "1" 1924 . 1925)))
+          ("PHP_DHTAPI_MULTI_REQUEST_PROP_NAME" . ((string "\"PHP_YDHTAPI_MULTI_REQUEST_PROP_NAME\"" 2140 . 2177)))
+          ("PHP_DHTAPI_SUBREQHANDLE_PROP_NAME" . ((string "\"PHP_YDHTAPI_SUBREQH_PROPERTY_NAME\"" 1702 . 1737)))
+          ("PHP_DHTAPI_SCAN_REQUEST_RES_TYPE" . ((string "\"PHP_YDHTAPI_SCAN_REQUEST_RES_NAME\"" 2546 . 2581)))
+          ("PHP_DHTAPI_MULTI_REQUEST_PARAMS_PROP_NAME" . ((string "\"PHP_YDHTAPI_NRP_PROPERTY_NAME\"" 2390 . 2421)))
+          ("PHP_DHTAPI_SCAN_REQUEST_PROP_NAME" . ((string "\"PHP_YDHTAPI_SCAN_REQUEST_PROP_NAME\"" 2466 . 2502)))
+          ("PHP_DHTAPI_DATETIME_RES_TYPE" . ((string "\"PHP_YDHTAPI_DATETIME_RESOURCE_TYPE\"" 1777 . 1813)))
+          ("PHP_DHTAPI_MULTI_REQUEST_RES_TYPE" . ((string "\"PHP_YDHTAPI_MULTI_REQUEST_RES_NAME\"" 2222 . 2258)))
+          ("PHP_DHTAPI_SUBREQHANDLE_RES_TYPE" . ((string "\"PHP_YDHTAPI_SUBREQH_RESOURCE_TYPE\"" 1623 . 1658)))
+          ("PHP_DHTAPI_REQUEST_PARAMS_PROP_NAME" . ((string "\"PHP_YDHTAPI_REQ_PARAMS_PROPERTY_NAME\"" 2056 . 2094)))
+          )
+
+    )
+   )
+  :file "!homes!dbao!svn!trunk!dht!client!php!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
