@@ -115,9 +115,10 @@
 (require 'ecb-autoloads)
 
 ;;;;;;;;;;;;;;;;;;;;desktop menu;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'desktop-menu)
-;;(desktop-menu) ;; auto run it at start up
-(global-set-key [(control meta d)] 'desktop-menu) ;; C-X-D for cmd
+;; don't know why it shows "Cannot load " in osx, temporary disable it
+;; (require 'desktop-menu)
+;; (desktop-menu) ;; auto run it at start up
+;; (global-set-key [(control meta d)] 'desktop-menu) ;; C-X-D for cmd
 
 ;;;;;;;;;;;;;;;;;;;;auctex;;;;;;;;;;;;;;;;;;;;
 ;; ACUTeX replaces latex-mode-hook with LaTeX-mode-hook
