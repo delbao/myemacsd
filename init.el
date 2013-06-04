@@ -22,7 +22,7 @@
               '("melpa" . "http://melpa.milkbox.net/packages/")
               'APPEND))
 
-;; add ~/.emacs.d/elpa and its subdir to load path, it's appended to the head to override later ones
+;; add installed package location ~/.emacs.d/elpa and its subdir to load path, it's appended to the head to override later ones
 (let ((default-directory (expand-file-name "elpa/" user-init-dir)))
   (setq load-path
         (append

@@ -50,3 +50,6 @@
 
 ;;(setq gtags-select-buffer-single nil
 ;;       gtags-suggested-key-mapping t)
+
+;; programming mode file association for non default ones
+(add-to-list 'auto-mode-alist '("\\.\\(php\\|inc\\)$" . php-mode))
