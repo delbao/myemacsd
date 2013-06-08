@@ -13,7 +13,7 @@
   "Load a file in current user's configuration directory"
   (load-file (expand-file-name file user-init-dir)))
 
-;; section 1 package management
+;; SECTION I package management
 ;; add emacs package download repo 
 (when (> emacs-major-version 23)
  (require 'package)
@@ -31,6 +31,19 @@
             (copy-sequence (normal-top-level-add-to-load-path '(".")))
             (normal-top-level-add-subdirs-to-load-path)))
          load-path)))
+
+;; SECTION II paths
+(cond
+ ((string-match "darwin" system-configuration)
+  (message "customizing paths for OSX")
+  ;; if Emacs.app is run, get PATH from terminal
+  (if (not (getenv "TERM_PROGRAM"))
+      (let ((path (shell-command-to-string
+                   "$SHELL -cl \"printf %s \\\"\\\$PATH\\\"\"")))
+        (setenv "PATH" path)))
+  (setq exec-path (split-string (getenv "PATH") ":"))
+ )
+)
 
 (load-user-file "appearance.el")
 ;; define path variables
