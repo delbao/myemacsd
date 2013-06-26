@@ -20,14 +20,9 @@
   )
  ((string-match "nt6" system-configuration)
   (message "customizing GNU Emacs for Win NT")
-    ; anything special about Windows begins here 
-
-    ; and ends here
   )
-    ; anything special for the OS ends here
  ((string-match "darwin" system-configuration)
   (message "customizing GNU Emacs for OSX")
-    ; anything special about Windows begins here 
     (add-hook 'c-mode-common-hook          ;; unlike setq, don't forget quote (') before c++-mode-hook
         '(lambda() (ggtags-mode 1)))   ;; get into gtags-mode whenever you get into c++-mode
   )
