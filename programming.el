@@ -4,6 +4,9 @@
 ;;(setq tags-table-list      
 ;;      '("~/svndev/"))
 
+;; enable yasnippet menu globally
+(yas-global-mode 1)
+
 ;;;;;;;;;;;;;;;;;;;;;;; Section 2 GNU Global Tagging;;;;;;;;;;;;;;;;;;;;;;;;;;    
 ;; to use global from Emacs, you need to load the `gtags.el' and execute gtags-mode function in it.
 ;; you need to add it to load-path. for `gtags.el'file.
