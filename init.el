@@ -13,24 +13,7 @@
   "Load a file in current user's configuration directory"
   (load-file (expand-file-name file user-init-dir)))
 
-;; SECTION I package management
-;; add emacs package download repo 
-(when (> emacs-major-version 23)
- (require 'package)
- (package-initialize)
- (add-to-list 'package-archives
-              '("melpa" . "http://melpa.milkbox.net/packages/")
-              'APPEND))
-
-;; add installed package location ~/.emacs.d/elpa and its subdir to load path, it's appended to the head to override later ones
-(let ((default-directory (expand-file-name "elpa/" user-init-dir)))
-  (setq load-path
-        (append
-         (let ((load-path (copy-sequence load-path))) ;; shadow
-           (append 
-            (copy-sequence (normal-top-level-add-to-load-path '(".")))
-            (normal-top-level-add-subdirs-to-load-path)))
-         load-path)))
+(load-user-file "packages.el")
 
 ;; SECTION II paths
 (cond
