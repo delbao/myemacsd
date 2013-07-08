@@ -9,11 +9,6 @@
 (define-key global-map "\C-c`" 'ecb-restore-default-window-sizes)
 (global-set-key [f12] 'compile)
 
-;; quickly find header/cpp matching, c-mode-common-hook is for both c/c++ mode
-(add-hook 'c-mode-common-hook
-  (lambda() 
-    (local-set-key  (kbd "C-c o") 'ff-find-other-file)))
-
 ;; goto-line M-g-g only works in Debian and Ubuntu
 (global-set-key "\C-l" 'goto-line)
 
@@ -26,8 +21,6 @@
 ;;      (windmove-default-keybindings))
 
 ;;;;;;;;;;;; programming special
-;; hookd .h to c++-mode instead of c-mode 
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 ;;(require 'workgroups)
 ;;(setq wg-prefix-key (kbd "C-c w"))
@@ -135,9 +128,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(auto-save-default nil)
- '(c-basic-offset 4)
- '(c-default-style (quote ((c-mode . "linux") (c++-mode . "linux") (java-mode . "java") (awk-mode . "awk"))))
- '(cc-search-directories (quote ("." "/usr/include" "/usr/local/include/*" "../../src" "../include/dht/")))
  '(compilation-scroll-output t)
  '(cua-mode t nil (cua-base))
  '(desktop-file-name-format (quote absolute))
@@ -155,8 +145,7 @@
  '(ecb-tip-of-the-day nil)
  '(ecb-windows-width 0.14)
  '(ff-always-in-other-window t)
- '(fill-column 80)
- '(font-lock-global-modes (quote (not speedbar-mode)))
+;; '(font-lock-global-modes (quote (not speedbar-mode)))
  '(gdb-show-main t)
  '(gtags-select-buffer-single nil)
  '(gtags-suggested-key-mapping t)

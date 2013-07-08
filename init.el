@@ -27,7 +27,7 @@
   (setq exec-path (split-string (getenv "PATH") ":"))
  )
 )
-
+(load-user-file "editing.el")
 (load-user-file "appearance.el")
 ;; define path variables
 ;; (load-user-file "paths.el")

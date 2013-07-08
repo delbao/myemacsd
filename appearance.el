@@ -16,9 +16,3 @@
     (modify-frame-parameters nil '((width . 360) (height . 62) (top + -1024) (left . 1774))) 
   )
  )
-
-
-;; autofill mode enabled automatically for all programming mode and only for comments
-(add-hook 'prog-mode-hook 'turn-on-auto-fill)
-(setq comment-auto-fill-only-comments t)
-(setq-default fill-column 80)
