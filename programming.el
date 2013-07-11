@@ -1,12 +1,15 @@
-;;;;;;;;;;;;;;;;;;;;;;;;Etags;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;; set etags table list
-;;
-;;(setq tags-table-list      
-;;      '("~/svndev/"))
+;;;;;;;;;;;; Section I common features ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; font-lock mode (syntax hightlight) is by default turned on in each major
 ;; programming mode
 ;; (global-font-lock-mode t)
+
+;; programming mode file association for non default ones
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode)) ;; hooked .h to c++-mode instead of c-mode 
+(add-to-list 'auto-mode-alist '("\\.\\(php\\|inc\\)$" . php-mode))
+
+;; cperl-mode replaces perl-mode
+(defalias 'perl-mode 'cperl-mode)
 
 ;;;;;;;;;;;;; Section II hooked features ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; b/c multiple modes can share same features, make this feature-centered
@@ -18,7 +21,6 @@
 (setq-default fill-column 80)
 
 ;; c/c++ mode options, see gnu ccmode manual for detail
-
 ;; passed to c-add-style, variable values in alist
 (setq my-cc-style
   '((c-basic-offset . 4)
@@ -27,8 +29,9 @@
     (cc-search-directories . (("." "/usr/include" "/usr/local/include/*" "../../src" "../include/dht/"))))
 )
 
+;; N.B. php-mode indentation inherits cc-mode
 (add-hook 'c-mode-common-hook
-  (lambda() 
+  (lambda()
     ;; quickly find header/cpp matching
     (local-set-key  (kbd "C-c o") 'ff-find-other-file)
     ;; turn on auto-newline and hungry-delete-key
@@ -38,7 +41,23 @@
   )
 )
 
-;;;;;;;;;;;;;;;;;;;;;;; Section 2 GNU Global Tagging;;;;;;;;;;;;;;;;;;;;;;;;;;    
+;; cperl mode options, see cperl mode manual for detail
+(add-hook 'cperl-mode-hook
+  '(lambda ()
+    (cperl-hairy 1) ;; Turns on most of the CPerlMode options
+    (cperl-toggle-auto-newline)
+  )
+)
+
+;;;;;;;;;;;;; Section III Tagging ;;;;;;;;;;;;;;;;;;;;;;;;;;    
+
+;;;;;;;;;;;;;;;;;;;;;;;;Etags;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; set etags table list
+;;
+;;(setq tags-table-list      
+;;      '("~/svndev/"))
+
+
 ;; to use global from Emacs, you need to load the `gtags.el' and execute gtags-mode function in it.
 ;; you need to add it to load-path. for `gtags.el'file.
 
@@ -57,22 +76,30 @@
   )
  ((string-match "darwin" system-configuration)
   (message "customizing GNU Emacs for OSX")
-    (add-hook 'c-mode-common-hook          ;; unlike setq, don't forget quote (') before c++-mode-hook
-        '(lambda() (ggtags-mode 1)))   ;; get into gtags-mode whenever you get into c++-mode
+    (add-hook 'c-mode-common-hook
+        '(lambda() (ggtags-mode 1)))
   )
  )
 
-(message system-configuration)
+; all the common things for different OS start here
 
-        ; all the common things for different OS start here
-
-
-        ; and end here
+; and end here
 
 ;;(setq gtags-select-buffer-single nil
 ;;       gtags-suggested-key-mapping t)
 
-;; programming mode file association for non default ones
+;;;;;;;;;;;;; Section IV IDE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode)) ;; hooked .h to c++-mode instead of c-mode 
-(add-to-list 'auto-mode-alist '("\\.\\(php\\|inc\\)$" . php-mode))
+;; enable cedet submodes
+(setq semantic-default-submodes '(global-semanticdb-minor-mode))
+
+(semantic-mode)
+
+;; let semanticdb take gtags for these modes
+;; defined in semantic/db-global
+(semanticdb-enable-gnu-global-databases 'c++-mode)
+(semanticdb-enable-gnu-global-databases 'php-mode)
+
+;; Emacs Code Browser (ECB)
+(require 'ecb)
+(setq ecb-auto-activate t)

@@ -97,15 +97,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;CEDET;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; load Cedet which comes with emacs 23
-(require 'cedet)
-(global-ede-mode t)
+;; (require 'cedet)
+;; (global-ede-mode t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;ecb;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; load ecb
 (setq stack-trace-on-error t) ;; prevent error: "Symbol's value as variable is void: stack-trace-on-error"
-;; (add-to-list 'load-path "~/.emacs.d/ecb")
-(require 'ecb)
-(require 'ecb-autoloads)
 
 ;;;;;;;;;;;;;;;;;;;;desktop menu;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; don't know why it shows "Cannot load " in osx, temporary disable it
@@ -137,7 +133,7 @@
  '(desktop-menu-directory "~/.emacs.d/")
  '(desktop-path (quote ("~/.emacs.d/" "~")))
  '(ecb-activate-hook (quote (ecb-eshell-auto-activate-hook)))
- '(ecb-auto-activate nil)
+ ;;'(ecb-auto-activate t)
  '(ecb-before-activate-hook nil)
  '(ecb-layout-window-sizes nil)
  '(ecb-options-version "2.40")
@@ -170,9 +166,6 @@
 
 ;;;;;;; CEDET setting after custom set variables
 
-;; semantic is part of CEDET
-;; (semantic-mode 1)
-
 ;; speedbar
 ;; (global-set-key [(f4)] 'speedbar-get-focus)
 
@@ -182,10 +175,6 @@
 ;; (defun my-c++-mode-keymap ()
 ;;        (define-key c-mode-base-map [(control tab)] 'semantic-ia-complete-symbol-menu))
 
-;; use gtags TAGS in semanticdb
-;; (require 'semantic/db-global)
-;; (semanticdb-enable-gnu-global-databases 'c-mode)
-;; (semanticdb-enable-gnu-global-databases 'c++-mode)
 
 ;;;;;;; Include Setting ;;;;;;;;;;;;;;;;;
 ;;(require 'semantic/bovine/gcc)
