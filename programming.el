@@ -71,7 +71,7 @@
 
     ; and ends here
   )
- ((string-match "nt6" system-configuration)
+ ((string-match "nt" system-configuration) ;; XP=nt5 7=nt6
   (message "customizing GNU Emacs for Win NT")
   )
  ((string-match "darwin" system-configuration)
@@ -80,10 +80,6 @@
         '(lambda() (ggtags-mode 1)))
   )
  )
-
-; all the common things for different OS start here
-
-; and end here
 
 ;;(setq gtags-select-buffer-single nil
 ;;       gtags-suggested-key-mapping t)
@@ -100,6 +96,15 @@
 (semanticdb-enable-gnu-global-databases 'c++-mode)
 (semanticdb-enable-gnu-global-databases 'php-mode)
 
+;; let speedbar work with semantic
+(add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
+
 ;; Emacs Code Browser (ECB)
-(require 'ecb)
-(setq ecb-auto-activate t)
+;; (require 'ecb)
+;; (setq ecb-auto-activate t)
+;; show-or-hide only takes effect after ecb is activated
+;; (setq ecb-major-modes-show-or-hide '((c-mode php-mode) fundamental-mode lisp-interaction-mode))
+;; (setq ecb-add-path-for-not-matching-files '(nil))
+
+;; Due to tramp support issues, disable ECB, use speedbar for code browsing
+;; Speedbar 

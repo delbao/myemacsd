@@ -152,7 +152,7 @@
  '(safe-local-variable-values (quote ((c-file-style . GNU) (Indent . Inktomi4) (c-file-offsets (substatement-open . 0)))))
  '(tramp-default-host "sportspot-dl-vm1.corp.yahoo.com")
  '(tramp-default-method "plink")
- '(tramp-default-proxies-alist (quote (("\\\\`yahoo\\\\.com\\\\'" "nil" "/tunnel:7.194.123.149#808"))))
+ '(tramp-default-proxies-alist (quote (("\\\\yahoo\\\\.com\\\\'" "nil" "/tunnel:7.194.123.149#808"))))
  '(tramp-default-user "dbao")
  '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
  '(uniquify-separator "."))
@@ -166,8 +166,6 @@
 
 ;;;;;;; CEDET setting after custom set variables
 
-;; speedbar
-;; (global-set-key [(f4)] 'speedbar-get-focus)
 
 ;; auto-complete
 ;; (require 'semantic/ia)
