@@ -35,7 +35,7 @@
     ;; quickly find header/cpp matching
     (local-set-key  (kbd "C-c o") 'ff-find-other-file)
     ;; turn on auto-newline and hungry-delete-key
-    (c-toggle-auto-state)
+    (c-toggle-auto-hungry-state)
     ;; call my function to set c/c++ mode default indentation style
     (c-add-style "my-style" my-cc-style t)
   )
