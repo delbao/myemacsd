@@ -15,11 +15,15 @@
 ;; b/c multiple modes can share same features, make this feature-centered
 ;; instead of mode-centered
 
-;; autofill mode enabled automatically for all programming modes and only for comments
-(add-hook 'prog-mode-hook 'turn-on-auto-fill)
-(setq comment-auto-fill-only-comments t)
-(setq-default fill-column 80)
-
+;; all programming modes settings
+(add-hook 'prog-mode-hook 
+    '(lambda()
+      (turn-on-auto-fill) ;; autofill mode
+      (electric-pair-mode t) ;; auto paren complete
+      (setq comment-auto-fill-only-comments t) ;; only autofill comment
+      (setq-default fill-column 80) ;; global default fill column
+    )
+)
 ;; c/c++ mode options, see gnu ccmode manual for detail
 ;; passed to c-add-style, variable values in alist
 (setq my-cc-style
@@ -45,7 +49,8 @@
 (add-hook 'cperl-mode-hook
   '(lambda ()
     (cperl-hairy 1) ;; Turns on most of the CPerlMode options
-    (cperl-toggle-auto-newline)
+    ;; (cperl-auto-newline t)
+    (cperl-auto-newline-after-colon t)
   )
 )
 
