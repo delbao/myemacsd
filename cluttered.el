@@ -146,7 +146,6 @@
  '(gtags-select-buffer-single nil)
  '(gtags-suggested-key-mapping t)
  '(ido-mode (quote both) nil (ido))
- '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(iswitchb-mode t)
  '(safe-local-variable-values (quote ((c-file-style . GNU) (Indent . Inktomi4) (c-file-offsets (substatement-open . 0)))))

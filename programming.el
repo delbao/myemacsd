@@ -18,16 +18,17 @@
 ;; all programming modes settings
 (add-hook 'prog-mode-hook 
     '(lambda()
-      (turn-on-auto-fill) ;; autofill mode
-      (electric-pair-mode t) ;; auto paren complete
-      (setq comment-auto-fill-only-comments t) ;; only autofill comment
-      (setq-default fill-column 80) ;; global default fill column
+      (turn-on-auto-fill) ; autofill mode
+      (electric-pair-mode t) ; auto paren complete
+      (setq comment-auto-fill-only-comments t) ; only autofill comment
+      (setq-default fill-column 80) ; global default fill column
+      (setq-default indent-tabs-mode nil) ; prevent emacs default tab replacing spaces
     )
 )
-;; c/c++ mode options, see gnu ccmode manual for detail
-;; passed to c-add-style, variable values in alist
+; c/c++ mode options, see gnu ccmode manual for detail
+; passed to c-add-style, variable values in alist
 (setq my-cc-style
-  '((c-basic-offset . 4)
+  '((c-basic-offset . tab-width) ;; keep consistent with tab-width 4
     ;; cc mode default style is gnu except for Java and Awk, set others to linux
     (c-default-style . ((java-mode . "java") (awk-mode . "awk") (other . "linux")))
     (cc-search-directories . (("." "/usr/include" "/usr/local/include/*" "../../src" "../include/dht/"))))
@@ -48,10 +49,17 @@
 ;; cperl mode options, see cperl mode manual for detail
 (add-hook 'cperl-mode-hook
   '(lambda ()
-    (cperl-hairy 1) ;; Turns on most of the CPerlMode options
-    ;; (cperl-auto-newline t)
-    (cperl-auto-newline-after-colon t)
-  )
+     (cperl-hairy 1) ;; Turns on most of the CPerlMode options
+     ;; (cperl-auto-newline t)
+     (cperl-auto-newline-after-colon t)
+     (setq cperl-indent-level tab-width); keep cperl mode indent consistent w/
+                                        ; tab-width
+     (setq cperl-continued-statement-offset 0); continued statements don't indent
+                                        ; further
+     (setq cperl-indent-parens-as-block t); also indent parentheses as block
+     (setq cperl-close-paren-offset -4); close parenthese don't indent
+     (setq cperl-tab-always-indent t) ; tab indent in anywhere of the line
+     )
 )
 
 ;;;;;;;;;;;;; Section III Tagging ;;;;;;;;;;;;;;;;;;;;;;;;;;    
