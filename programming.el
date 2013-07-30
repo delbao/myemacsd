@@ -28,7 +28,7 @@
 ; c/c++ mode options, see gnu ccmode manual for detail
 ; passed to c-add-style, variable values in alist
 (setq my-cc-style
-  '((c-basic-offset . tab-width) ;; keep consistent with tab-width 4
+  '('(c-basic-offset . ,tab-width) ;; keep consistent with tab-width 4
     ;; cc mode default style is gnu except for Java and Awk, set others to linux
     (c-default-style . ((java-mode . "java") (awk-mode . "awk") (other . "linux")))
     (cc-search-directories . (("." "/usr/include" "/usr/local/include/*" "../../src" "../include/dht/"))))
