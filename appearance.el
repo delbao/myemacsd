@@ -13,6 +13,6 @@
  ((string-match "darwin" system-configuration)
     (message "customizing GNU Emacs for OSX")
     ;; nil as frame to change init frame (selected-frame) size, can also use (make-frame) to create new frame
-    (modify-frame-parameters nil '((width . 360) (height . 62) (top + -1024) (left . 1774))) 
+    (modify-frame-parameters nil '((width . 360) (height . 62) (top + -1024) (left . 2055))) 
   )
  )

@@ -29,9 +29,8 @@
 ; passed to c-add-style, variable values in alist
 (setq my-cc-style
   '('(c-basic-offset . ,tab-width) ;; keep consistent with tab-width 4
-    ;; cc mode default style is gnu except for Java and Awk, set others to linux
-    (c-default-style . ((java-mode . "java") (awk-mode . "awk") (other . "linux")))
-    (cc-search-directories . (("." "/usr/include" "/usr/local/include/*" "../../src" "../include/dht/"))))
+    ; cc mode default style is gnu except for Java and Awk, set others to linux
+    (c-default-style . ((java-mode . "java") (awk-mode . "awk") (other . "linux"))))
 )
 
 ;; N.B. php-mode indentation inherits cc-mode
@@ -39,6 +38,7 @@
   (lambda()
     ;; quickly find header/cpp matching
     (local-set-key  (kbd "C-c o") 'ff-find-other-file)
+    (setq cc-search-directories '("." "/usr/include/*" "/usr/local/include/*" "../../src/*" "../include/dht/*")) ; add * to include subdir
     ;; turn on auto-newline and hungry-delete-key
     (c-toggle-auto-hungry-state)
     ;; call my function to set c/c++ mode default indentation style
@@ -50,7 +50,7 @@
 (add-hook 'cperl-mode-hook
   '(lambda ()
      (cperl-hairy 1) ;; Turns on most of the CPerlMode options
-     ;; (cperl-auto-newline t)
+     ; (cperl-auto-newline t)
      (cperl-auto-newline-after-colon t)
      (setq cperl-indent-level tab-width); keep cperl mode indent consistent w/
                                         ; tab-width
@@ -71,12 +71,18 @@
 ;;      '("~/svndev/"))
 
 
-;; to use global from Emacs, you need to load the `gtags.el' and execute gtags-mode function in it.
-;; you need to add it to load-path. for `gtags.el'file.
 
 ;; platform dependent setting
 ;; TO-DO make it a callback function or c-like macro
 
+; gtags shortcut reminder
+; M-. ggtags-find-tag
+; M-n and M-p moves to next and previous match
+; M-} and M-{ to next and previous file respectively.
+; M-o toggles between full and abbreviated displays of file names.
+; When you locate the right match, press RET to finish
+; which hides the auxiliary window and exits navigation mode.
+; You can resume the search using M-,. To abort the search press M-*.
 (cond 
  ((string-match "linux" system-configuration)
   (message "customizing GNU Emacs for Linux")
