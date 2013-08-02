@@ -7,3 +7,6 @@
 
 ;; speed bar
 (global-set-key [(f4)] 'speedbar-get-focus)
+
+;; recentf
+(global-set-key [(control f2)] 'recentf-open-files)

@@ -29,11 +29,12 @@
 )
 (load-user-file "editing.el")
 (load-user-file "appearance.el")
+(load-user-file "session.el")
 ;; define path variables
 ;; (load-user-file "paths.el")
 ;; define global keys (specific key map is defined in its own setting but listed in comment for reference)
-(load-user-file "keys.el")
 ;; common programming settings, e.g., tags
 (load-user-file "programming.el")
 ;; no time to refactor yet
 (load-user-file "cluttered.el")
+(load-user-file "keys.el")
