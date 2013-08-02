@@ -25,6 +25,7 @@
       (setq-default indent-tabs-mode nil) ; prevent emacs default tab replacing spaces
     )
 )
+
 ; c/c++ mode options, see gnu ccmode manual for detail
 ; passed to c-add-style, variable values in alist
 (setq my-cc-style
@@ -35,7 +36,7 @@
 
 ;; N.B. php-mode indentation inherits cc-mode
 (add-hook 'c-mode-common-hook
-  (lambda()
+  '(lambda()
     ;; quickly find header/cpp matching
     (local-set-key  (kbd "C-c o") 'ff-find-other-file)
     (setq cc-search-directories '("." "/usr/include/*" "/usr/local/include/*" "../../src/*" "../include/dht/*")) ; add * to include subdir
@@ -49,9 +50,9 @@
 ;; cperl mode options, see cperl mode manual for detail
 (add-hook 'cperl-mode-hook
   '(lambda ()
-     (cperl-hairy 1) ;; Turns on most of the CPerlMode options
-     ; (cperl-auto-newline t)
-     (cperl-auto-newline-after-colon t)
+     (setq cperl-hairy 1) ;; Turns on most of the CPerlMode options
+     ;; (cperl-auto-newline t)
+     (setq cperl-auto-newline-after-colon t)
      (setq cperl-indent-level tab-width); keep cperl mode indent consistent w/
                                         ; tab-width
      (setq cperl-continued-statement-offset 0); continued statements don't indent
@@ -59,7 +60,7 @@
      (setq cperl-indent-parens-as-block t); also indent parentheses as block
      (setq cperl-close-paren-offset -4); close parenthese don't indent
      (setq cperl-tab-always-indent t) ; tab indent in anywhere of the line
-     )
+  )
 )
 
 ;;;;;;;;;;;;; Section III Tagging ;;;;;;;;;;;;;;;;;;;;;;;;;;    
