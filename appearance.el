@@ -9,6 +9,7 @@
     )
  ((string-match "nt6" system-configuration)
     (message "customizing GNU Emacs for Win NT")
+    (modify-frame-parameters nil '((width . 315) (height . 38) (top . 0) (left . -1230)))
     )
  ((string-match "darwin" system-configuration)
     (message "customizing GNU Emacs for OSX")
