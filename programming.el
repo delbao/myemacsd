@@ -19,7 +19,6 @@
 (add-hook 'prog-mode-hook 
     '(lambda()
       (turn-on-auto-fill) ; autofill mode
-      (electric-pair-mode t) ; auto paren complete
       (setq comment-auto-fill-only-comments t) ; only autofill comment
       (setq-default fill-column 80) ; global default fill column
       (setq-default indent-tabs-mode nil) ; prevent emacs default tab replacing spaces
@@ -42,6 +41,7 @@
     (setq cc-search-directories '("." "/usr/include/*" "/usr/local/include/*" "../../src/*" "../include/dht/*")) ; add * to include subdir
     ;; turn on auto-newline and hungry-delete-key
     (c-toggle-auto-hungry-state)
+    (electric-pair-mode t) ; auto paren complete
     ;; call my function to set c/c++ mode default indentation style
     (c-add-style "my-style" my-cc-style t)
   )
