@@ -9,17 +9,25 @@
     )
  ((string-match "nt6" system-configuration)
     (message "customizing GNU Emacs for Win NT")
-    (modify-frame-parameters nil '((width . 315) (height . 38) (top . 0) (left . -1235)))
+    ; comment out : use SI and understand on Win NT
+    ; (modify-frame-parameters nil '((width . 315) (height . 38) (top . 0) (left . -1235)))
     (add-hook 'window-setup-hook ; due to init order
         '(lambda ()
-           (split-window-horizontally 64)
-           (split-window-horizontally 22)
+           (split-window-horizontally)
+            ; send a WM_SYSCOMMAND msg, 61488==SC_MAXIMIZED
+           (w32-send-sys-command 61488) 
            )
         )
  )
  ((string-match "darwin" system-configuration)
     (message "customizing GNU Emacs for OSX")
     ;; nil as frame to change init frame (selected-frame) size, can also use (make-frame) to create new frame
-    (modify-frame-parameters nil '((width . 360) (height . 62) (top + -1024) (left . 2055))) 
-  )
- )
+    (modify-frame-parameters nil '((width . 360) (height . 62) (top + -1024) (left . 1774)))
+    (add-hook 'window-setup-hook
+        '(lambda()
+		   (split-window-horizontally)
+		   (split-window-horizontally)
+		   )
+		)
+	)
+)
