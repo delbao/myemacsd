@@ -113,8 +113,8 @@
 
 ;; let semanticdb take gtags for these modes
 ;; defined in semantic/db-global
-(semanticdb-enable-gnu-global-databases 'c++-mode)
-(semanticdb-enable-gnu-global-databases 'php-mode)
+; (semanticdb-enable-gnu-global-databases 'c++-mode)
+; (semanticdb-enable-gnu-global-databases 'php-mode)
 
 ;; let speedbar work with semantic
 (add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
