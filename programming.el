@@ -76,7 +76,7 @@
 ;; platform dependent setting
 ;; TO-DO make it a callback function or c-like macro
 
-; gtags shortcut reminder
+; ggtags shortcut reminder
 ; M-. ggtags-find-tag
 ; M-n and M-p moves to next and previous match
 ; M-} and M-{ to next and previous file respectively.
