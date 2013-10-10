@@ -119,6 +119,9 @@
 ;; let speedbar work with semantic
 (add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
 
+;; add speedbar extensions
+(speedbar-add-supported-extension '(".php" ".inc"))
+
 ;; Emacs Code Browser (ECB)
 ;; (require 'ecb)
 ;; (setq ecb-auto-activate t)
