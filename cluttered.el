@@ -141,7 +141,6 @@
  '(ecb-tip-of-the-day nil)
  '(ecb-windows-width 0.14)
  '(ff-always-in-other-window t)
-;; '(font-lock-global-modes (quote (not speedbar-mode)))
  '(gdb-show-main t)
  '(gtags-select-buffer-single nil)
  '(gtags-suggested-key-mapping t)

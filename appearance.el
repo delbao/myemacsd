@@ -26,8 +26,11 @@
     (add-hook 'window-setup-hook
         '(lambda()
 		   (split-window-horizontally)
-		   (split-window-horizontally)
 		   )
 		)
 	)
 )
+
+;; turn on linum mode globally, (linum-mode t) is buffer-local
+;; line-number-mode is another mode for line number in modeline, default is enabled
+(global-linum-mode t)

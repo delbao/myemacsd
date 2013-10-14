@@ -116,11 +116,17 @@
 (semanticdb-enable-gnu-global-databases 'c++-mode)
 (semanticdb-enable-gnu-global-databases 'php-mode)
 
-;; let speedbar work with semantic
-(add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
-
-;; add speedbar extensions
-(speedbar-add-supported-extension '(".php" ".inc"))
+(add-hook 'speedbar-load-hook 
+   '(lambda ()
+      ;; let speedbar work with semantic      
+      (require 'semantic/sb)
+      ;; add speedbar extensions
+      (speedbar-add-supported-extension '(".php" ".inc"))
+      ;; turn off linum mode in speedbar window due to conflict, linum-mode is
+      ;; buffer-local
+      (linum-mode -1)
+    )
+)
 
 ;; Emacs Code Browser (ECB)
 ;; (require 'ecb)
