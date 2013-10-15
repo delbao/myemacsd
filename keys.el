@@ -5,8 +5,22 @@
 ;; (global-set-key [(control meta .)] 'gtags-find-rtag) ;; C-M-. find all references of tag
 ;; (global-set-key [(control meta ,)] 'gtags-find-symbol) ;; C-M-, find all usages of symbol
 
+(global-set-key [f12] 'compile)
+
+;; default goto-line key M-g-g is slower to type
+(global-set-key "\C-l" 'goto-line)
+
+;; windmove
+(windmove-default-keybindings 'meta) ;; windmove cua mode default binding meta, 
+                                     ;; the original default is shift+arrow
+                                     ;; which is bind to (save-excursion) lection extension in emacs
+
+;; comment out below so that shift+arrow doesn't kick in
+;; (when (fboundp 'windmove-default-keybindings)
+;;      (windmove-default-keybindings))
+
 ;; speed bar
-(global-set-key [(f4)] 'speedbar-get-focus)
+(global-set-key [(f4)] 'speedbar-get-focus) ;; this also invoke speedbar
 
 ;; recentf
 (global-set-key [(control f2)] 'recentf-open-files)

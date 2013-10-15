@@ -5,21 +5,6 @@
 ;; specific this is a UNIX filesystem and don't translate EOL, Windows-specific: no longer needed with tramp mode
 ;; (add-untranslated-filesystem "Y:")
 
-;;;;;;;;;;;; global key mapping
-(define-key global-map "\C-c`" 'ecb-restore-default-window-sizes)
-(global-set-key [f12] 'compile)
-
-;; goto-line M-g-g only works in Debian and Ubuntu
-(global-set-key "\C-l" 'goto-line)
-
-;; windmove
-(windmove-default-keybindings 'meta) ;; windmove cua mode default binding meta, 
-                                     ;; the original default is shift+arrow which is bind to selection extension in emacs
-
-;; comment out below so that shift+arrow doesn't kick in
-;;(when (fboundp 'windmove-default-keybindings)
-;;      (windmove-default-keybindings))
-
 ;;;;;;;;;;;; programming special
 
 ;;(require 'workgroups)
@@ -132,14 +117,6 @@
  '(desktop-menu-clear t)
  '(desktop-menu-directory "~/.emacs.d/")
  '(desktop-path (quote ("~/.emacs.d/" "~")))
- '(ecb-activate-hook (quote (ecb-eshell-auto-activate-hook)))
- ;;'(ecb-auto-activate t)
- '(ecb-before-activate-hook nil)
- '(ecb-layout-window-sizes nil)
- '(ecb-options-version "2.40")
- '(ecb-process-non-semantic-files nil)
- '(ecb-tip-of-the-day nil)
- '(ecb-windows-width 0.14)
  '(ff-always-in-other-window t)
  '(gdb-show-main t)
  '(gtags-select-buffer-single nil)
@@ -186,8 +163,3 @@
 ;;        (semantic-add-system-include dir 'c++-mode) ;; semantic-add-system-include dir &optional mode add dir as a system include path for the major mode
 ;;      (semantic-add-system-include dir 'c-mode))
 ;;       include-dirs))
-
-;;;;;;; ECB setting after custom set variables
-;; global key for toggle ecb
-(global-set-key [f5] 'ecb-activate)
-(global-set-key [f6] 'ecb-deactivate)
