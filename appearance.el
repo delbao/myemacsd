@@ -22,12 +22,24 @@
  ((string-match "darwin" system-configuration)
     (message "customizing GNU Emacs for OSX")
     ;; nil as frame to change init frame (selected-frame) size, can also use (make-frame) to create new frame
-    (modify-frame-parameters nil '((width . 360) (height . 62) (top + -1024) (left . 1774)))
+    (modify-frame-parameters nil '((width . 360) (height . 62) (top + -1024) (left . 2054)))
+    ;; speedbar window parameter
+	(add-hook 'speedbar-load-hook 
+	   '(lambda ()
+		  (add-to-list 'speedbar-frame-parameters '(top + -1024))
+		  (add-to-list 'speedbar-frame-parameters '(left . 1800))
+		  (add-to-list 'speedbar-frame-parameters '(width . 30)) ;; add to head of alist
+		                                                         ;; to shadow default width
+		)
+	)
     (add-hook 'window-setup-hook
         '(lambda()
-		   (split-window-horizontally)
 		   (split-window-horizontally)
 		   )
 		)
 	)
 )
+
+;; turn on linum mode globally, (linum-mode t) is buffer-local
+;; line-number-mode is another mode for line number in modeline, default is enabled
+(global-linum-mode t)

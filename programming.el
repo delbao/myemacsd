@@ -76,7 +76,7 @@
 ;; platform dependent setting
 ;; TO-DO make it a callback function or c-like macro
 
-; gtags shortcut reminder
+; ggtags shortcut reminder
 ; M-. ggtags-find-tag
 ; M-n and M-p moves to next and previous match
 ; M-} and M-{ to next and previous file respectively.
@@ -116,15 +116,42 @@
 ; (semanticdb-enable-gnu-global-databases 'c++-mode)
 ; (semanticdb-enable-gnu-global-databases 'php-mode)
 
-;; let speedbar work with semantic
-(add-hook 'speedbar-load-hook (lambda () (require 'semantic/sb)))
+;; speedbar mode
+(add-hook 'speedbar-load-hook 
+   '(lambda ()
+      ;; let speedbar work with semantic      
+      (require 'semantic/sb)
+      ;; add speedbar extensions
+      (speedbar-add-supported-extension '(".php" ".inc"))
+    )
+)
+(add-hook 'speedbar-mode-hook
+   '(lambda ()
+      ;; turn off linum mode in speedbar window due to conflict, linum-mode is
+      ;; buffer-local, not working in speedbar-load-hook
+      (linum-mode -1)
+    )
+)
 
-;; Emacs Code Browser (ECB)
+;; Due to tramp support issues, disable ECB, use speedbar for code browsing
+;;;;;; Emacs Code Browser (ECB)
+
 ;; (require 'ecb)
 ;; (setq ecb-auto-activate t)
 ;; show-or-hide only takes effect after ecb is activated
 ;; (setq ecb-major-modes-show-or-hide '((c-mode php-mode) fundamental-mode lisp-interaction-mode))
 ;; (setq ecb-add-path-for-not-matching-files '(nil))
 
-;; Due to tramp support issues, disable ECB, use speedbar for code browsing
-;; Speedbar 
+;; (define-key global-map "\C-c`" 'ecb-restore-default-window-sizes)
+
+;; global key for toggle ecb
+;; (global-set-key [f5] 'ecb-activate)
+;; (global-set-key [f6] 'ecb-deactivate)
+;; '(ecb-activate-hook (quote (ecb-eshell-auto-activate-hook)))
+;; ;;'(ecb-auto-activate t)
+;; '(ecb-before-activate-hook nil)
+;; '(ecb-layout-window-sizes nil)
+;; '(ecb-options-version "2.40")
+;; '(ecb-process-non-(save-excursion )mantic-files nil)
+;; '(ecb-tip-of-the-day nil)
+;; '(ecb-windows-width 0.14)
