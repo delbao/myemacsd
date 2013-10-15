@@ -4,9 +4,13 @@
 ;; programming mode
 ;; (global-font-lock-mode t)
 
+;; generated autoload file powershell-mode-autoload not containing autoload cmd
+(autoload 'powershell-mode "powershell-mode" "Mode PowerShell" t)
+
 ;; programming mode file association for non default ones
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode)) ;; hooked .h to c++-mode instead of c-mode 
 (add-to-list 'auto-mode-alist '("\\.\\(php\\|inc\\)$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.ps[12]?$" . powershell-mode))
 
 ;; cperl-mode replaces perl-mode
 (defalias 'perl-mode 'cperl-mode)
