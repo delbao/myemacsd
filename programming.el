@@ -48,6 +48,8 @@
     (electric-pair-mode t) ; auto paren complete
     ;; call my function to set c/c++ mode default indentation style
     (c-add-style "my-style" my-cc-style t)
+    (paren-toggle-open-paren-context 1) ; adapt mic-paren-mode context for
+                                        ; c-style procedural language
   )
 )
 

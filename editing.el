@@ -20,3 +20,7 @@
         (goto-char beg))
       (sit-for blink-matching-delay))))
 (global-set-key [remap kill-ring-save] 'my-kill-ring-save)
+
+; mic-paren mode depend on show-paren-mode
+; http://www.emacswiki.org/emacs/mic-paren.el
+(paren-activate)
