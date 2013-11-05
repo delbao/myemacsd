@@ -31,3 +31,9 @@
   (define-key global-map [home] 'beginning-of-line)
   (define-key global-map [end] 'end-of-line)
 )
+
+;; buffer-move
+(global-set-key (kbd "<C-M-up>")     'buf-move-up)
+(global-set-key (kbd "<C-M-down>")   'buf-move-down)
+(global-set-key (kbd "<C-M-left>")   'buf-move-left)
+(global-set-key (kbd "<C-M-right>")  'buf-move-right)
