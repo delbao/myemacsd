@@ -20,17 +20,9 @@
  (dolist (pkg my-package-list)
    (unless (package-installed-p pkg)
      (package-install pkg)))
+)
 
  ;; should not manually load all paths in elpa, package-initialize or emacs 
  ;; automatical load will add them to load-path automatically
- ;; add installed package location ~/.emacs.d/elpa and its subdir to
- ;; load path, it's appended to the head to override later ones
- ;; (let ((default-directory (expand-file-name "elpa/" user-init-dir)))
- ;;   (setq load-path
- ;;         (append
- ;;          (let ((load-path (copy-sequence load-path))) ;; shadow
- ;;            (append 
- ;;             (copy-sequence (normal-top-level-add-to-load-path '(".")))
- ;;             (normal-top-level-add-subdirs-to-load-path)))
- ;;          load-path)))
-)
+
+(setq load-path (append load-path (list "~/.emacs.d/")))

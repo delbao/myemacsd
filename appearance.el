@@ -11,9 +11,8 @@
     (message "customizing GNU Emacs for Win NT")
     ; comment out : use SI and understand on Win NT
     ; (modify-frame-parameters nil '((width . 315) (height . 38) (top . 0) (left . -1235)))
-    (add-hook 'window-setup-hook ; due to init order
+     (add-hook 'window-setup-hook ; due to init order
         '(lambda ()
-           (split-window-horizontally)
             ; send a WM_SYSCOMMAND msg, 61488==SC_MAXIMIZED
            (w32-send-sys-command 61488) 
            )
@@ -43,3 +42,17 @@
 ;; turn on linum mode globally, (linum-mode t) is buffer-local
 ;; line-number-mode is another mode for line number in modeline, default is enabled
 (global-linum-mode t)
+
+;; tabbar setting
+(require 'tabbar-setup)
+
+;; tabbar appearance
+(setq tabbar-background-color "#959A79") ;; the color of the tabbar background
+(custom-set-faces
+ '(tabbar-default ((t (:inherit variable-pitch :background "#959A79" :foreground "black" :weight bold))))
+ '(tabbar-button ((t (:inherit tabbar-default :foreground "dark red"))))
+ '(tabbar-button-highlight ((t (:inherit tabbar-default))))
+ '(tabbar-highlight ((t (:underline t))))
+ '(tabbar-selected ((t (:inherit tabbar-default :background "#95CA59"))))
+ '(tabbar-separator ((t (:inherit tabbar-default :background "#95CA59"))))
+ '(tabbar-unselected ((t (:inherit tabbar-default)))))

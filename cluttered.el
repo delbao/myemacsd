@@ -29,56 +29,6 @@
 (define-key ctl-x-map "F" 'resume-revive)
 (define-key ctl-x-map "K" 'wipe)
 
-;;;;;;;;;;;;;;;;;;;;;;tabbar;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
-
-;; ~/tabbar.el
-;; load tabbar package
-;; (load "tabbar" ) 
-;; (autoload 'tabbar-mode "tabbar" "" t)
-;; (add-hook 'c++-mode-hook	  ;; autoload does not auto load the package, just bind a function to a package
-;;	'(lambda() (tabbar-mode 1)))
-(require 'tabbar)
-(tabbar-mode t)
-
-;; redefine tabbar groups
-;; return the list of group names the current buffer belongs to
-(defun tabbar-buffer-groups ()
-  (list
-   (cond
-    ((string-equal "*" (substring (buffer-name) 0 1)) ;; emacs buffers start with "*"
-     "Emacs Buffer"
-    ) 
-    ((string-equal "test" (substring (buffer-name) 0 4))
-     "Test Code"
-    )
-    ((string-equal "Test" (substring (buffer-name) 0 4))
-     "Test Aide"
-    )	
-    ((string-equal "cc" (substring (buffer-name) -2 nil))
-     "Source Code"
-    )
-    ((or (string-equal "h" (substring (buffer-name) -1 nil)) 
-(string-equal "hh" (substring (buffer-name) -2 nil)))
-     "Header File"
-    )
-    ((or (string-equal "pl" (substring (buffer-name) -2 nil)) 
-(string-equal "pm" (substring (buffer-name) -2 nil)))
-     "Perl File"
-    )
-    ((eq major-mode 'dired-mode)
-     "Dired"
-    )
-    (t
-     "Other Buffers"
-    )
-    )))
-
-(setq tabbar-buffer-groups-function 'tabbar-buffer-groups)
-
-;; set key for forward/backward scroll
-(global-set-key [M-s-left] 'tabbar-backward)
-(global-set-key [M-s-right] 'tabbar-forward)
-
 ;;;;;;;;;;;;;;;;;;;;;;;CEDET;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; load Cedet which comes with emacs 23

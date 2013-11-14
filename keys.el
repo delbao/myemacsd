@@ -37,3 +37,9 @@
 (global-set-key (kbd "<C-M-down>")   'buf-move-down)
 (global-set-key (kbd "<C-M-left>")   'buf-move-left)
 (global-set-key (kbd "<C-M-right>")  'buf-move-right)
+
+;; tabbar
+(global-set-key (kbd "C-S-p") 'tabbar-backward-group)
+(global-set-key (kbd "C-S-n") 'tabbar-forward-group)
+(global-set-key (kbd "C-<") 'tabbar-backward)
+(global-set-key (kbd "C->") 'tabbar-forward)
