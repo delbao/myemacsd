@@ -21,7 +21,7 @@
  ((string-match "darwin" system-configuration)
     (message "customizing GNU Emacs for OSX")
     ;; nil as frame to change init frame (selected-frame) size, can also use (make-frame) to create new frame
-    (modify-frame-parameters nil '((width . 360) (height . 62) (top + -1024) (left . 2054)))
+    ;; (modify-frame-parameters nil '((width . 360) (height . 62) (top + -1024) (left . 2054)))
     ;; speedbar window parameter
 	(add-hook 'speedbar-load-hook 
 	   '(lambda ()
@@ -31,12 +31,13 @@
 		                                                         ;; to shadow default width
 		)
 	)
-    (add-hook 'window-setup-hook
-        '(lambda()
-		   (split-window-horizontally)
-		   )
-		)
-	)
+    (setq initial-frame-alist (quote ((fullscreen . maximized))))
+    ;; (add-hook 'window-setup-hook
+    ;;      '(lambda()
+	;;  	   (split-window-horizontally)
+	;;  	   )
+	;;  	)
+	 )
 )
 
 ;; turn on linum mode globally, (linum-mode t) is buffer-local
