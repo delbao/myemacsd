@@ -38,12 +38,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;ecb;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq stack-trace-on-error t) ;; prevent error: "Symbol's value as variable is void: stack-trace-on-error"
 
-;;;;;;;;;;;;;;;;;;;;desktop menu;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; don't know why it shows "Cannot load " in osx, temporary disable it
-;; (require 'desktop-menu)
-;; (desktop-menu) ;; auto run it at start up
-;; (global-set-key [(control meta d)] 'desktop-menu) ;; C-X-D for cmd
-
 ;;;;;;;;;;;;;;;;;;;;auctex;;;;;;;;;;;;;;;;;;;;
 ;; ACUTeX replaces latex-mode-hook with LaTeX-mode-hook
 (add-hook 'LaTeX-mode-hook
@@ -61,12 +55,6 @@
  '(auto-save-default nil)
  '(compilation-scroll-output t)
  '(cua-mode t nil (cua-base))
- '(desktop-file-name-format (quote absolute))
- '(desktop-load-locked-desktop t)
- '(desktop-menu-autosave t)
- '(desktop-menu-clear t)
- '(desktop-menu-directory "~/.emacs.d/")
- '(desktop-path (quote ("~/.emacs.d/" "~")))
  '(ff-always-in-other-window t)
  '(gdb-show-main t)
  '(gtags-select-buffer-single nil)
