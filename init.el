@@ -22,11 +22,12 @@
   ;; if Emacs.app is run, get PATH from terminal
   (if (not (getenv "TERM_PROGRAM"))
       (let ((path (shell-command-to-string
-                   "$SHELL -cl \"printf %s \\\"\\\$PATH\\\"\"")))
+                   "source ~/.bash_profile > /dev/null; printf $PATH")))
         (setenv "PATH" path)))
   (setq exec-path (split-string (getenv "PATH") ":"))
  )
 )
+
 (load-user-file "appearance.el")
 (load-user-file "editing.el")
 (load-user-file "session.el")
