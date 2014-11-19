@@ -9,3 +9,10 @@ Usage:
 for more details.
 
 All commands are available from the `Ggtags' menu in `ggtags-mode'.
+
+NEWS 0.8.7 (2014-11-10):
+
+- New navigation command `ggtags-navigation-start-file'.
+- New variable `ggtags-use-sqlite3' to enable sqlite3 storage.
+
+See full NEWS on https://github.com/leoliu/ggtags#news
