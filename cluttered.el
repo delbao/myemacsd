@@ -7,9 +7,6 @@
 
 ;;;;;;;;;;;; programming special
 
-;;(require 'workgroups)
-;;(setq wg-prefix-key (kbd "C-c w"))
-
 ;; prevent 'Command attempted to use minibuffer while in minibuffer'
 (defun stop-using-minibuffer()
 	"kill the minibuffer"
@@ -17,17 +14,6 @@
 		(abort-recursive-edit)))
 
 (add-hook 'mouse-leave-buffer-hook 'stop-using-minibuffer)
-
-;;;;;;;;;;;;;;;;;;;;;;revive;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-(autoload 'save-current-configuration "revive" "Save status" t)
-(autoload 'resume-revive "revive" "Resume Emacs" t)
-(autoload 'wipe "revive" "Wipe Emacs" t)
-
-;; key binding for revive
-(define-key ctl-x-map "S" 'save-current-configuration)
-(define-key ctl-x-map "F" 'resume-revive)
-(define-key ctl-x-map "K" 'wipe)
 
 ;;;;;;;;;;;;;;;;;;;;;;;CEDET;;;;;;;;;;;;;;;;;;;;;;;;;;
 
