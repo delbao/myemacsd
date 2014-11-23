@@ -7,6 +7,10 @@
 ;;;;;; desktop + bookmark+ for session management ;;;;;;
 (require 'bookmark+)
 
+(setq bmkp-desktop-jump-save-before-flag t)
+(setq bmkp-last-as-first-bookmark-file "~/.emacs.d/bookmarks")
+(add-hook 'kill-emacs-hook 'bmkp-desktop-save-as-last)
+
 ;; use only one desktop
 (setq desktop-path '("~/.emacs.d/"))
 (setq desktop-dirname "~/.emacs.d/")
