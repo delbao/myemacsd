@@ -57,3 +57,18 @@
  '(tabbar-selected ((t (:inherit tabbar-default :background "#95CA59"))))
  '(tabbar-separator ((t (:inherit tabbar-default :background "#95CA59"))))
  '(tabbar-unselected ((t (:inherit tabbar-default)))))
+
+;; set mode line format, mainly to handle which-func-mode
+(setq-default mode-line-format
+              '("-"
+                mode-line-mule-info
+                mode-line-modified
+                mode-line-frame-identification
+                mode-line-buffer-identification
+                " "
+                (vc-mode vc-mode)
+                " "
+                (which-func-mode ("" which-func-format "-"))
+                mode-line-modes
+                (global-mode-string ("-" global-mode-string))
+                "-%-"))

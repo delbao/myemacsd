@@ -1,5 +1,6 @@
-;;;;;;;;;;;; Section I common features ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;; Section I common features ;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;
 ;; font-lock mode (syntax hightlight) is by default turned on in each major
 ;; programming mode
 ;; (global-font-lock-mode t)
@@ -15,6 +16,7 @@
 ;; cperl-mode replaces perl-mode
 (defalias 'perl-mode 'cperl-mode)
 
+;;
 ;;;;;;;;;;;;; Section II hooked features ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; b/c multiple modes can share same features, make this feature-centered
 ;; instead of mode-centered
@@ -25,7 +27,9 @@
       (turn-on-auto-fill) ; autofill mode
       (setq comment-auto-fill-only-comments t) ; only autofill comment
       (setq-default fill-column 80) ; global default fill column
-      (setq-default indent-tabs-mode nil) ; prevent emacs default tab replacing spaces
+      (setq-default indent-tabs-mode nil) ; prevent emacs default tab replacing
+                                        ; spaces
+      (which-func-mode)  ; turn on which-func-mode
     )
 )
 
