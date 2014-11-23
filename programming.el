@@ -117,17 +117,36 @@
 ;;(setq gtags-select-buffer-single nil
 ;;       gtags-suggested-key-mapping t)
 
-;;;;;;;;;;;;; Section IV IDE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;; Section IV IDE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
 
 ;; enable cedet submodes
-(setq semantic-default-submodes '(global-semanticdb-minor-mode))
+(setq semantic-default-submodes 
+      '(global-semanticdb-minor-mode         ; save parsing result in db
+        global-semantic-idle-scheduler-mode  ; parsing the current buffer
+        global-semantic-idle-summary-mode    ; show function signature @caller in minibuffer        
+        global-semantic-highlight-func-mode  ; highlight the function at the cursor
+        global-semantic-idle-local-symbol-highlight-mode ; highlight variables
+                                                         ; of the same name
+        global-semantic-decoration-mode
+        ))
+
+;; DISABLED semantic features
+;; global-semantic-tag-folding-mode      ; not available anymore, use senator version 
+;; global-semantic-idle-breadcrumbs-mode ; don't support modeline yet. headline
+                                         ; can use stickyfunc mode
+;; global-semantic-stickyfunc-mode       ; show function signature in
+                                         ; its definition on header line, but
+                                         ; keep tabbar for now
+;; global-semantic-mru-bookmark-mode
 
 (semantic-mode)
 
 ;; let semanticdb take gtags for these modes
 ;; defined in semantic/db-global
-; (semanticdb-enable-gnu-global-databases 'c++-mode)
-; (semanticdb-enable-gnu-global-databases 'php-mode)
+(semanticdb-enable-gnu-global-databases 'c++-mode)
+(semanticdb-enable-gnu-global-databases 'php-mode)
 
 ;; speedbar mode
 (add-hook 'speedbar-load-hook 
