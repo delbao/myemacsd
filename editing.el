@@ -24,3 +24,9 @@
 ; mic-paren mode depend on show-paren-mode
 ; http://www.emacswiki.org/emacs/mic-paren.el
 (paren-activate)
+
+;;
+;; If set to 'swap (default), the buffers will be exchanged Hide
+;; (i.e. swapped), if set to 'move, the current window is switch back to the
+;; previously displayed buffer (i.e. the buffer is moved).
+(setq buffer-move-behavior 'move)
