@@ -54,6 +54,7 @@
     (define-key keymap "/" 'smart-operator-/)
     (define-key keymap "&" 'smart-operator-&)
     (define-key keymap "|" 'smart-operator-self-insert-command)
+    (define-key keymap "^" 'smart-operator-self-insert-command)
     ;; (define-key keymap "!" 'smart-operator-self-insert-command)
     (define-key keymap ":" 'smart-operator-:)
     (define-key keymap "?" 'smart-operator-?)
@@ -86,7 +87,7 @@
   (smart-operator-insert (string last-command-event)))
 
 (defvar smart-operator-list
-  '("=" "<" ">" "%" "+" "-" "*" "/" "&" "|" "!" ":" "?" "," "."))
+  '("=" "<" ">" "%" "+" "-" "*" "/" "&" "|" "^" "!" ":" "?" "," "."))
 
 (defun smart-operator-insert (op &optional only-where)
   "See `smart-operator-insert-1'."
@@ -231,6 +232,8 @@ so let's not get too insert-happy."
                 (smart-operator-insert "&" 'after))
                ((looking-back "= *")
                 (smart-operator-insert "&" 'before))
+               ((looking-back ", *")
+                (smart-operator-insert "&" 'before))
                (t
                 (smart-operator-insert "&"))))
         (t
@@ -294,6 +297,10 @@ so let's not get too insert-happy."
              (delete-horizontal-space)))
          (smart-operator-insert "-" 'middle)
          (indent-according-to-mode))
+        ((and c-buffer-is-cc-mode (looking-back "[*/%+(><=&^|,] *"))
+         (smart-operator-insert "-" 'before))
+        ((and c-buffer-is-cc-mode (looking-back "\\(return\\) *"))
+         (smart-operator-insert "-" 'before))
         (t
          (smart-operator-insert "-"))))
 
