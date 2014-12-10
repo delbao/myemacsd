@@ -1,5 +1,7 @@
 ;;;;;;;;;;;;;; global editing features ;;;;;;;;;;;;;;;;;;;
 
+(require 'smart-operator)
+
 ; enable yasnippet menu globally
 (yas-global-mode 1)
 

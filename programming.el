@@ -28,8 +28,9 @@
       (setq comment-auto-fill-only-comments t) ; only autofill comment
       (setq-default fill-column 80) ; global default fill column
       (setq-default indent-tabs-mode nil) ; prevent emacs default tab replacing
-                                        ; spaces
+                                          ; spaces
       (which-func-mode)  ; turn on which-func-mode
+      (smart-operator-mode)   ; turn on smart-operator-mode
     )
 )
 
