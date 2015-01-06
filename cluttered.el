@@ -41,7 +41,6 @@
  '(auto-save-default nil)
  '(compilation-scroll-output t)
  '(cua-mode t nil (cua-base))
- '(ff-always-in-other-window t)
  '(gdb-show-main t)
  '(gtags-select-buffer-single nil)
  '(gtags-suggested-key-mapping t)

@@ -43,3 +43,6 @@
 (global-set-key (kbd "C-S-n") 'tabbar-forward-group)
 (global-set-key (kbd "C-<") 'tabbar-backward)
 (global-set-key (kbd "C->") 'tabbar-forward)
+
+;; ff-find-other-file
+(global-set-key [(control c)(?4)(o)] 'ff-find-other-file-in-other-window)

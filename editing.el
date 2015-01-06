@@ -32,3 +32,19 @@
 ;; (i.e. swapped), if set to 'move, the current window is switch back to the
 ;; previously displayed buffer (i.e. the buffer is moved).
 (setq buffer-move-behavior 'move)
+
+;;
+;; define ff-find-other-file-in-other-window to open in other window (key C-c 4 o)
+;; ff-find-other-file only has a setting ff-always-in-other-window to always
+;; open in a new window. define a new function to open in other window so we
+;; have two functions to open either in this window or the other window
+;;
+(defun ff-find-other-file-in-other-window (arg)
+  (interactive "p")
+  (if (= arg 4)
+      (ff-find-other-file)
+    (progn (if (and (= (length (window-list)) 1)(> (frame-width) 150))
+	       (split-window-horizontally))
+      (ff-find-other-file t))))
+
+(global-set-key [(control c)(?4)(o)] 'ff-find-other-file-in-other-window)
