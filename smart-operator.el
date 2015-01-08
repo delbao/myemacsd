@@ -45,26 +45,26 @@
 (defvar smart-operator-mode-map
   (let ((keymap (make-sparse-keymap)))
     (define-key keymap "=" 'smart-operator-self-insert-command)
-    (define-key keymap "<" 'smart-operator-<)
-    (define-key keymap ">" 'smart-operator->)
-    (define-key keymap "%" 'smart-operator-%)
+    ;;(define-key keymap "<" 'smart-operator-<)
+    ;;(define-key keymap ">" 'smart-operator->)
+    ;;(define-key keymap "%" 'smart-operator-%)
     (define-key keymap "+" 'smart-operator-+)
-    (define-key keymap "-" 'smart-operator--)
-    (define-key keymap "*" 'smart-operator-*)
-    (define-key keymap "/" 'smart-operator-/)
-    (define-key keymap "&" 'smart-operator-&)
+    ;;(define-key keymap "-" 'smart-operator--)
+    ;;(define-key keymap "*" 'smart-operator-*)
+    ;;(define-key keymap "/" 'smart-operator-/)
+    ;;(define-key keymap "&" 'smart-operator-&)
     (define-key keymap "|" 'smart-operator-self-insert-command)
     (define-key keymap "^" 'smart-operator-self-insert-command)
-    ;; (define-key keymap "!" 'smart-operator-self-insert-command)
+    ;;(define-key keymap "!" 'smart-operator-self-insert-command)
     (define-key keymap ":" 'smart-operator-:)
-    (define-key keymap "?" 'smart-operator-?)
+    ;;(define-key keymap "?" 'smart-operator-?)
     (define-key keymap "," 'smart-operator-\,)
     (define-key keymap "~" 'smart-operator-~)
-    (define-key keymap "." 'smart-operator-.)
+    ;;(define-key keymap "." 'smart-operator-.)
     keymap)
   "Keymap used my `smart-operator-mode'.")
 
-(defvar smart-operator-double-space-docs t
+(defvar smart-operator-double-space-docs nil
   "Enable double spacing of . in document lines - e,g, type '.' => get '.  '")
 
 (defvar smart-operator-docs t
