@@ -42,8 +42,6 @@
  '(compilation-scroll-output t)
  '(cua-mode t nil (cua-base))
  '(gdb-show-main t)
- '(gtags-select-buffer-single nil)
- '(gtags-suggested-key-mapping t)
  '(ido-mode (quote both) nil (ido))
  '(inhibit-startup-screen t)
  '(iswitchb-mode t)

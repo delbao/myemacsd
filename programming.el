@@ -119,9 +119,6 @@
 (setq ggtags-oversize-limit 1048
       ggtags-auto-jump-to-first-match nil)
 
-;;(setq gtags-select-buffer-single nil
-;;       gtags-suggested-key-mapping t)
-
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;; Section IV IDE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
