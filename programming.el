@@ -135,13 +135,14 @@
         ))
 
 ;; DISABLED semantic features
-;; global-semantic-tag-folding-mode      ; not available anymore, use senator version 
+;; global-semantic-tag-folding-mode       ; not available anymore, use senator version 
 ;; global-semantic-idle-breadcrumbs-mode ; don't support modeline yet. headline
                                          ; can use stickyfunc mode
-;; global-semantic-stickyfunc-mode       ; show function signature in
-                                         ; its definition on header line, but
-                                         ; keep tabbar for now
-;; global-semantic-mru-bookmark-mode
+;; global-semantic-stickyfunc-mode      ; show function signature in
+                                        ; its definition on header line, but
+                                        ; keep tabbar for now
+;; global-semantic-mru-bookmark-mode     ; to allow semantic-mrub-switch-tag (C-x B)
+					 ; not working with official CEDET
 
 (semantic-mode)
 

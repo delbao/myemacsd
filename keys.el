@@ -48,3 +48,10 @@
              (setq cc-search-directories '("." "/usr/include/*" "/usr/local/include/*" "../../src/*" "../include/dht/*")) ; add * to include subdir)
              )
 )
+
+(add-hook 'prog-mode-hook
+          '(lambda()
+             (local-set-key "\C-cj" 'semantic-ia-fast-jump)
+             (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle)
+             )
+)
