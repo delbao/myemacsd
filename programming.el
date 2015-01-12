@@ -45,9 +45,6 @@
 ;; N.B. php-mode indentation inherits cc-mode
 (add-hook 'c-mode-common-hook
   '(lambda()
-    ;; quickly find header/cpp matching
-    (local-set-key  (kbd "C-c o") 'ff-find-other-file)
-    (setq cc-search-directories '("." "/usr/include/*" "/usr/local/include/*" "../../src/*" "../include/dht/*")) ; add * to include subdir
     ;; turn on auto-newline and hungry-delete-key
     (c-toggle-auto-hungry-state)
     (electric-pair-mode t) ; auto paren complete

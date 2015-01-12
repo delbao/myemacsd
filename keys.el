@@ -45,4 +45,11 @@
 (global-set-key (kbd "C->") 'tabbar-forward)
 
 ;; ff-find-other-file
-(global-set-key [(control c)(?4)(o)] 'ff-find-other-file-in-other-window)
+(add-hook 'c-mode-common-hook
+          '(lambda()  
+             ;; quickly find header/cpp matching
+             (local-set-key  (kbd "C-c o") 'ff-find-other-file)
+             (local-set-key  (kbd "C-c 4 o") 'ff-find-other-file-in-other-window)
+             (setq cc-search-directories '("." "/usr/include/*" "/usr/local/include/*" "../../src/*" "../include/dht/*")) ; add * to include subdir)
+             )
+)
