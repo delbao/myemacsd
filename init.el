@@ -36,6 +36,7 @@
 ;; define global keys (specific key map is defined in its own setting but listed in comment for reference)
 ;; common programming settings, e.g., tags
 (load-user-file "programming.el")
+(load-user-file "search.el")
 ;; no time to refactor yet
 (load-user-file "cluttered.el")
 (load-user-file "keys.el")

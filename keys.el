@@ -55,3 +55,5 @@
              (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle)
              )
 )
+
+(global-set-key (kbd "M-s o") 'occur-symbol-at-point)
