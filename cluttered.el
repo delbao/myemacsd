@@ -21,7 +21,6 @@
 ;; (require 'cedet)
 ;; (global-ede-mode t)
 
-;;;;;;;;;;;;;;;;;;;;;;;ecb;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (setq stack-trace-on-error t) ;; prevent error: "Symbol's value as variable is void: stack-trace-on-error"
 
 ;;;;;;;;;;;;;;;;;;;;auctex;;;;;;;;;;;;;;;;;;;;

@@ -119,25 +119,22 @@
     )
 )
 
-;; Due to tramp support issues, disable ECB, use speedbar for code browsing
-;;;;;; Emacs Code Browser (ECB)
+;; Due to tramp support issues, may want to disable ECB, use speedbar for code browsing
+;; Emacs Code Browser (ECB)
 
-;; (require 'ecb)
-;; (setq ecb-auto-activate t)
+(require 'ecb)
+(setq ecb-auto-activate t)
 ;; show-or-hide only takes effect after ecb is activated
-;; (setq ecb-major-modes-show-or-hide '((c-mode php-mode) fundamental-mode lisp-interaction-mode))
-;; (setq ecb-add-path-for-not-matching-files '(nil))
+(setq ecb-major-modes-show-or-hide '((c-mode php-mode) fundamental-mode lisp-interaction-mode))
+(setq ecb-add-path-for-not-matching-files '(nil))
+(setq ecb-options-version "2.40")
 
 ;; (define-key global-map "\C-c`" 'ecb-restore-default-window-sizes)
 
-;; global key for toggle ecb
-;; (global-set-key [f5] 'ecb-activate)
-;; (global-set-key [f6] 'ecb-deactivate)
 ;; '(ecb-activate-hook (quote (ecb-eshell-auto-activate-hook)))
 ;; ;;'(ecb-auto-activate t)
 ;; '(ecb-before-activate-hook nil)
 ;; '(ecb-layout-window-sizes nil)
-;; '(ecb-options-version "2.40")
 ;; '(ecb-process-non-(save-excursion )mantic-files nil)
-;; '(ecb-tip-of-the-day nil)
+(setq ecb-tip-of-the-day nil)
 ;; '(ecb-windows-width 0.14)
