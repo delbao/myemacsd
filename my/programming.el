@@ -31,6 +31,7 @@
                                           ; spaces
       (which-func-mode)  ; turn on which-func-mode
       (smart-operator-mode)   ; turn on smart-operator-mode
+      (hs-minor-mode)
     )
 )
 

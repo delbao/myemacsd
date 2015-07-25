@@ -53,9 +53,11 @@
           '(lambda()
              (local-set-key "\C-cj" 'semantic-ia-fast-jump)
              (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle)
-             )
+             (local-set-key (kbd "C--") 'hs-hide-all)
+             (local-set-key (kbd "C-=") 'hs-show-all)
+             (local-set-key (kbd "C-+") 'hs-toggle-hiding)
+             (local-set-key (kbd "C-\\") 'senator-fold-tag-toggle)
+            )
 )
 
 (global-set-key (kbd "M-s o") 'occur-symbol-at-point)
-
-(global-set-key (kbd "C-=") 'senator-fold-tag-toggle)
