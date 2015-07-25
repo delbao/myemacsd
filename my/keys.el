@@ -57,3 +57,5 @@
 )
 
 (global-set-key (kbd "M-s o") 'occur-symbol-at-point)
+
+(global-set-key (kbd "C-=") 'senator-fold-tag-toggle)

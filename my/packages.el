@@ -25,4 +25,4 @@
  ;; should not manually load all paths in elpa, package-initialize or emacs 
  ;; automatical load will add them to load-path automatically
 
-(setq load-path (append load-path (list "~/.emacs.d/")))
+(setq load-path (append load-path (list "~/.emacs.d/elisp")))

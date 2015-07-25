@@ -1,5 +1,5 @@
 ;; load 'solarized-dark' theme
-(add-to-list 'custom-theme-load-path "~/.emacs.d/emacs-color-theme-solarized")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/elisp/emacs-color-theme-solarized")
 (load-theme 'solarized-dark t)
 
 ;; start up positions and size

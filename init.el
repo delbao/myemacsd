@@ -1,12 +1,7 @@
 ;; base init file to include all other config files
 ;; put common short config here. Can refactor later if the section becomes large
-;; all user defined config files in ~/.emacs.d/
-(defconst user-init-dir
-  (cond ((boundp 'user-emacs-directory)
-         user-emacs-directory)
-        ((boundp 'user-init-directory)
-         user-init-directory)
-        (t "~/.emacs.d/")))
+;; all user defined config files in ~/.emacs.d/my/
+(defconst user-init-dir "~/.emacs.d/my/")
 
 (defun load-user-file (file)
   (interactive "f")
