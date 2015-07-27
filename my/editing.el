@@ -47,4 +47,9 @@
 	       (split-window-horizontally))
       (ff-find-other-file t))))
 
-(global-set-key [(control c)(?4)(o)] 'ff-find-other-file-in-other-window)
+(global-set-key [(control c)(?5)(o)] 'ff-find-other-file-in-other-window)
+
+;; move line or selected region up/down, default binding M-Up/M-Down
+(require 'move-text)
+(move-text-default-bindings)
+

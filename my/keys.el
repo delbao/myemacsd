@@ -6,9 +6,10 @@
 (global-set-key "\C-l" 'goto-line)
 
 ;; windmove
-(windmove-default-keybindings 'meta) ;; windmove cua mode default binding meta, 
+(windmove-default-keybindings 'ctrl) ;; windmove cua mode default binding meta, 
                                      ;; the original default is shift+arrow
-                                     ;; which is bind to (save-excursion) lection extension in emacs
+                                     ;; which is bind to (save-excursion) selection extension in emacs
+                                     ;; new: meta is conflicting with move-text binding 
 
 ;; comment out below so that shift+arrow doesn't kick in
 ;; (when (fboundp 'windmove-default-keybindings)
