@@ -1,5 +1,11 @@
 ;;;;;;;;;;;;;; global editing features ;;;;;;;;;;;;;;;;;;;
 
+;; allow same buffer in multiple frames, instead of switching focus to
+;; already-open buffer
+(setq ido-default-buffer-method 'selected-window)
+(setq ido-enable-flex-matching t)
+(ido-mode (quote both))
+
 (require 'smart-operator)
 
 ; enable yasnippet menu globally
