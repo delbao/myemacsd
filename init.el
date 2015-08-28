@@ -35,3 +35,42 @@
 ;; no time to refactor yet
 (load-user-file "cluttered.el")
 (load-user-file "keys.el")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(auto-save-default nil)
+ '(bmkp-last-as-first-bookmark-file "/Users/dbao/.emacs.d/bookmarks")
+ '(compilation-scroll-output t)
+ '(cua-mode t nil (cua-base))
+ '(gdb-show-main t)
+ '(ido-mode (quote both) nil (ido))
+ '(inhibit-startup-screen t)
+ '(iswitchb-mode t)
+ '(safe-local-variable-values
+   (quote
+    ((c-file-style . GNU)
+     (Indent . Inktomi4)
+     (c-file-offsets
+      (substatement-open . 0)))))
+ '(tramp-default-host "sportspot-dl-vm1.corp.yahoo.com")
+ '(tramp-default-method "plink")
+ '(tramp-default-proxies-alist
+   (quote
+    (("\\\\yahoo\\\\.com\\\\'" "nil" "/tunnel:7.194.123.149#808"))))
+ '(tramp-default-user "dbao")
+ '(uniquify-buffer-name-style (quote post-forward-angle-brackets) nil (uniquify))
+ '(uniquify-separator "."))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(tabbar-button ((t (:inherit tabbar-default :foreground "dark red"))))
+ '(tabbar-button-highlight ((t (:inherit tabbar-default))))
+ '(tabbar-default ((t (:inherit variable-pitch :background "#959A79" :foreground "black" :weight bold))))
+ '(tabbar-highlight ((t (:underline t))))
+ '(tabbar-selected ((t (:inherit tabbar-default :background "#95CA59"))))
+ '(tabbar-separator ((t (:inherit tabbar-default :background "#95CA59"))))
+ '(tabbar-unselected ((t (:inherit tabbar-default)))))
